@@ -1,0 +1,1 @@
+ST-LINK_CLI -ME & ST-LINK_CLI -P .\\build\\stm.hex -V & ST-LINK_CLI -rst
