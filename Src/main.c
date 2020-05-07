@@ -98,7 +98,7 @@ int main(void)
   while (i)
   {
     i++;
-    HAL_Delay(i);
+    g HAL_Delay(100 + i);
     HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
     /* USER CODE END WHILE */
 

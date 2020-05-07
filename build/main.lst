@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccbTlg24.s 			page 1
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccA8OOKj.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccbTlg24.s 			page 1
   30:Src/main.c    **** /* USER CODE END Includes */
   31:Src/main.c    **** 
   32:Src/main.c    **** /* Private typedef -----------------------------------------------------------*/
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccbTlg24.s 			page 2
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccA8OOKj.s 			page 2
 
 
   33:Src/main.c    **** /* USER CODE BEGIN PTD */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccbTlg24.s 			page 1
   87:Src/main.c    ****   /* USER CODE END SysInit */
   88:Src/main.c    **** 
   89:Src/main.c    ****   /* Initialize all configured peripherals */
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccbTlg24.s 			page 3
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccA8OOKj.s 			page 3
 
 
   90:Src/main.c    ****   MX_GPIO_Init();
@@ -132,7 +132,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccbTlg24.s 			page 1
   98:Src/main.c    ****   while (i)
   99:Src/main.c    ****   {
  100:Src/main.c    ****     i++;
- 101:Src/main.c    ****     HAL_Delay(i);
+ 101:Src/main.c    ****     HAL_Delay(100 + i);
  102:Src/main.c    ****     HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
  103:Src/main.c    ****     /* USER CODE END WHILE */
  104:Src/main.c    **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccbTlg24.s 			page 1
   53 0016 0594     		str	r4, [sp, #20]
  118:Src/main.c    **** 
  119:Src/main.c    ****   /** Initializes the CPU, AHB and APB busses clocks 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccbTlg24.s 			page 4
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccA8OOKj.s 			page 4
 
 
  120:Src/main.c    ****   */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccbTlg24.s 			page 1
   91              		.loc 1 136 3 is_stmt 1 view .LVU25
   92              		.loc 1 136 36 is_stmt 0 view .LVU26
   93 003c 4FF48063 		mov	r3, #1024
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccbTlg24.s 			page 5
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccA8OOKj.s 			page 5
 
 
   94 0040 0493     		str	r3, [sp, #16]
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccbTlg24.s 			page 1
  139 000a FFF7FEFF 		bl	MX_GPIO_Init
  140              	.LVL4:
   91:Src/main.c    ****   /* USER CODE BEGIN 2 */
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccbTlg24.s 			page 6
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccA8OOKj.s 			page 6
 
 
  141              		.loc 1 91 3 view .LVU36
@@ -310,21 +310,21 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccbTlg24.s 			page 1
  145              		.loc 1 98 3 view .LVU38
   93:Src/main.c    ****   /* USER CODE END 2 */
  146              		.loc 1 93 7 is_stmt 0 view .LVU39
- 147 0012 0124     		movs	r4, #1
+ 147 0012 0120     		movs	r0, #1
  148              	.LVL6:
  149              	.L4:
   98:Src/main.c    ****   {
  150              		.loc 1 98 9 is_stmt 1 view .LVU40
- 151 0014 44B1     		cbz	r4, .L7
- 100:Src/main.c    ****     HAL_Delay(i);
+ 151 0014 48B1     		cbz	r0, .L7
+ 100:Src/main.c    ****     HAL_Delay(100 + i);
  152              		.loc 1 100 5 view .LVU41
- 100:Src/main.c    ****     HAL_Delay(i);
+ 100:Src/main.c    ****     HAL_Delay(100 + i);
  153              		.loc 1 100 6 is_stmt 0 view .LVU42
- 154 0016 0134     		adds	r4, r4, #1
+ 154 0016 441C     		adds	r4, r0, #1
  155              	.LVL7:
  101:Src/main.c    ****     HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
  156              		.loc 1 101 5 is_stmt 1 view .LVU43
- 157 0018 2046     		mov	r0, r4
+ 157 0018 6530     		adds	r0, r0, #101
  158 001a FFF7FEFF 		bl	HAL_Delay
  159              	.LVL8:
  102:Src/main.c    ****     /* USER CODE END WHILE */
@@ -333,16 +333,16 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccbTlg24.s 			page 1
  162 0020 0248     		ldr	r0, .L8
  163 0022 FFF7FEFF 		bl	HAL_GPIO_TogglePin
  164              	.LVL9:
- 165 0026 F5E7     		b	.L4
- 166              	.L7:
+ 100:Src/main.c    ****     HAL_Delay(100 + i);
+ 165              		.loc 1 100 6 is_stmt 0 view .LVU45
+ 166 0026 2046     		mov	r0, r4
+ 167 0028 F4E7     		b	.L4
+ 168              	.LVL10:
+ 169              	.L7:
  108:Src/main.c    **** 
- 167              		.loc 1 108 1 is_stmt 0 view .LVU45
- 168 0028 0020     		movs	r0, #0
- 169 002a 10BD     		pop	{r4, pc}
- 170              	.LVL10:
- 171              	.L9:
- 108:Src/main.c    **** 
- 172              		.loc 1 108 1 view .LVU46
+ 170              		.loc 1 108 1 view .LVU46
+ 171 002a 10BD     		pop	{r4, pc}
+ 172              	.L9:
  173              		.align	2
  174              	.L8:
  175 002c 00080140 		.word	1073809408
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccbTlg24.s 			page 1
  187              	Error_Handler:
  188              	.LFB67:
  144:Src/main.c    **** 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccbTlg24.s 			page 7
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccA8OOKj.s 			page 7
 
 
  145:Src/main.c    **** /* USER CODE BEGIN 4 */
@@ -387,8 +387,8 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccbTlg24.s 			page 1
  197              	.LFE67:
  199              		.text
  200              	.Letext0:
- 201              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\
- 202              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\
+ 201              		.file 2 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\machine\\_default_ty
+ 202              		.file 3 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_stdint.h"
  203              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
  204              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
  205              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
@@ -401,18 +401,18 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccbTlg24.s 			page 1
  212              		.file 13 "Inc/usart.h"
  213              		.file 14 "Inc/gpio.h"
  214              		.file 15 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccbTlg24.s 			page 8
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccA8OOKj.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\matil\AppData\Local\Temp\ccbTlg24.s:16     .text.SystemClock_Config:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccbTlg24.s:24     .text.SystemClock_Config:00000000 SystemClock_Config
-C:\Users\matil\AppData\Local\Temp\ccbTlg24.s:114    .text.main:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccbTlg24.s:121    .text.main:00000000 main
-C:\Users\matil\AppData\Local\Temp\ccbTlg24.s:175    .text.main:0000002c $d
-C:\Users\matil\AppData\Local\Temp\ccbTlg24.s:180    .text.Error_Handler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccbTlg24.s:187    .text.Error_Handler:00000000 Error_Handler
+C:\Users\Mateusz\AppData\Local\Temp\ccA8OOKj.s:16     .text.SystemClock_Config:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccA8OOKj.s:24     .text.SystemClock_Config:00000000 SystemClock_Config
+C:\Users\Mateusz\AppData\Local\Temp\ccA8OOKj.s:114    .text.main:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccA8OOKj.s:121    .text.main:00000000 main
+C:\Users\Mateusz\AppData\Local\Temp\ccA8OOKj.s:175    .text.main:0000002c $d
+C:\Users\Mateusz\AppData\Local\Temp\ccA8OOKj.s:180    .text.Error_Handler:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccA8OOKj.s:187    .text.Error_Handler:00000000 Error_Handler
 
 UNDEFINED SYMBOLS
 HAL_RCC_OscConfig
