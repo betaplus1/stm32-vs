@@ -11,7 +11,8 @@
       "request": "launch",
       "type": "cortex-debug",
       "servertype": "openocd",
-      "configFiles": ["openocd/scripts/board/st_nucleo_f103rb.cfg"],
+      "configFiles": ["openocd/scripts/board/st_nucleo_g0.cfg"],
+      "searchDir": ["openocd/scripts"],
       "serverpath": "openocd/bin/openocd.exe"
     }
   ]

@@ -1,1 +1,1 @@
-ST-LINK_CLI -rst
+ST-LINK_CLI -c UR -HardRst

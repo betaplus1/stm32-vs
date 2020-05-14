@@ -24,11 +24,13 @@
 #define __MAIN_H
 
 #ifdef __cplusplus
-extern "C" {
+extern "C"
+{
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-#include "stm32f1xx_hal.h"
+#include "stm32g0xx_hal.h"
+#include "stm32g0xx_ll_system.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -47,35 +49,45 @@ extern "C" {
 
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
+#define BYTE_TO_BINARY_PATTERN "%c%c%c%c%c%c%c%c"
+#define BYTE_TO_BINARY(byte)     \
+  (byte & 0x80 ? '1' : '0'),     \
+      (byte & 0x40 ? '1' : '0'), \
+      (byte & 0x20 ? '1' : '0'), \
+      (byte & 0x10 ? '1' : '0'), \
+      (byte & 0x08 ? '1' : '0'), \
+      (byte & 0x04 ? '1' : '0'), \
+      (byte & 0x02 ? '1' : '0'), \
+      (byte & 0x01 ? '1' : '0')
+  /* USER CODE END EM */
 
-/* USER CODE END EM */
-
-/* Exported functions prototypes ---------------------------------------------*/
-void Error_Handler(void);
+  /* Exported functions prototypes ---------------------------------------------*/
+  void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define B1_Pin GPIO_PIN_13
-#define B1_GPIO_Port GPIOC
-#define B1_EXTI_IRQn EXTI15_10_IRQn
-#define USART_TX_Pin GPIO_PIN_2
-#define USART_TX_GPIO_Port GPIOA
-#define USART_RX_Pin GPIO_PIN_3
-#define USART_RX_GPIO_Port GPIOA
-#define LD2_Pin GPIO_PIN_5
-#define LD2_GPIO_Port GPIOA
-#define TMS_Pin GPIO_PIN_13
-#define TMS_GPIO_Port GPIOA
-#define TCK_Pin GPIO_PIN_14
-#define TCK_GPIO_Port GPIOA
-#define SWO_Pin GPIO_PIN_3
-#define SWO_GPIO_Port GPIOB
-/* USER CODE BEGIN Private defines */
+#define LED_PHASE_Pin GPIO_PIN_0
+#define LED_PHASE_GPIO_Port GPIOA
+#define LED_TEMP_Pin GPIO_PIN_1
+#define LED_TEMP_GPIO_Port GPIOA
+#define UART_TX_Pin GPIO_PIN_2
+#define UART_TX_GPIO_Port GPIOA
+#define UART_RX_Pin GPIO_PIN_3
+#define UART_RX_GPIO_Port GPIOA
+#define ADC__SYNC_Pin GPIO_PIN_7
+#define ADC__SYNC_GPIO_Port GPIOA
+#define ADC_MISO_Pin GPIO_PIN_6
+#define ADC_MISO_GPIO_Port GPIOB
+#define ADC_MOSI_Pin GPIO_PIN_7
+#define ADC_MOSI_GPIO_Port GPIOB
+#define ADC_SCK_Pin GPIO_PIN_8
+#define ADC_SCK_GPIO_Port GPIOB
+  /* USER CODE BEGIN Private defines */
 
-/* USER CODE END Private defines */
+  /* USER CODE END Private defines */
 
 #ifdef __cplusplus
 }

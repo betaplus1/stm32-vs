@@ -1,0 +1,377 @@
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cchIfy9R.s 			page 1
+
+
+   1              		.cpu cortex-m0plus
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 0
+  10              		.eabi_attribute 18, 4
+  11              		.file	"lptim.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.MX_LPTIM1_Init,"ax",%progbits
+  16              		.align	1
+  17              		.global	MX_LPTIM1_Init
+  18              		.arch armv6s-m
+  19              		.syntax unified
+  20              		.code	16
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	MX_LPTIM1_Init:
+  25              	.LFB281:
+  26              		.file 1 "Src/lptim.c"
+   1:Src/lptim.c   **** /**
+   2:Src/lptim.c   ****   ******************************************************************************
+   3:Src/lptim.c   ****   * File Name          : LPTIM.c
+   4:Src/lptim.c   ****   * Description        : This file provides code for the configuration
+   5:Src/lptim.c   ****   *                      of the LPTIM instances.
+   6:Src/lptim.c   ****   ******************************************************************************
+   7:Src/lptim.c   ****   * @attention
+   8:Src/lptim.c   ****   *
+   9:Src/lptim.c   ****   * <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
+  10:Src/lptim.c   ****   * All rights reserved.</center></h2>
+  11:Src/lptim.c   ****   *
+  12:Src/lptim.c   ****   * This software component is licensed by ST under BSD 3-Clause license,
+  13:Src/lptim.c   ****   * the "License"; You may not use this file except in compliance with the
+  14:Src/lptim.c   ****   * License. You may obtain a copy of the License at:
+  15:Src/lptim.c   ****   *                        opensource.org/licenses/BSD-3-Clause
+  16:Src/lptim.c   ****   *
+  17:Src/lptim.c   ****   ******************************************************************************
+  18:Src/lptim.c   ****   */
+  19:Src/lptim.c   **** 
+  20:Src/lptim.c   **** /* Includes ------------------------------------------------------------------*/
+  21:Src/lptim.c   **** #include "lptim.h"
+  22:Src/lptim.c   **** 
+  23:Src/lptim.c   **** /* USER CODE BEGIN 0 */
+  24:Src/lptim.c   **** 
+  25:Src/lptim.c   **** /* USER CODE END 0 */
+  26:Src/lptim.c   **** 
+  27:Src/lptim.c   **** LPTIM_HandleTypeDef hlptim1;
+  28:Src/lptim.c   **** 
+  29:Src/lptim.c   **** /* LPTIM1 init function */
+  30:Src/lptim.c   **** void MX_LPTIM1_Init(void)
+  31:Src/lptim.c   **** {
+  27              		.loc 1 31 1 view -0
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cchIfy9R.s 			page 2
+
+
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31 0000 10B5     		push	{r4, lr}
+  32              	.LCFI0:
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 4, -8
+  35              		.cfi_offset 14, -4
+  32:Src/lptim.c   **** 
+  33:Src/lptim.c   ****   hlptim1.Instance = LPTIM1;
+  36              		.loc 1 33 3 view .LVU1
+  37              		.loc 1 33 20 is_stmt 0 view .LVU2
+  38 0002 0B48     		ldr	r0, .L4
+  39 0004 0B4B     		ldr	r3, .L4+4
+  40 0006 0360     		str	r3, [r0]
+  34:Src/lptim.c   ****   hlptim1.Init.Clock.Source = LPTIM_CLOCKSOURCE_APBCLOCK_LPOSC;
+  41              		.loc 1 34 3 is_stmt 1 view .LVU3
+  42              		.loc 1 34 29 is_stmt 0 view .LVU4
+  43 0008 0023     		movs	r3, #0
+  44 000a 4360     		str	r3, [r0, #4]
+  35:Src/lptim.c   ****   hlptim1.Init.Clock.Prescaler = LPTIM_PRESCALER_DIV128;
+  45              		.loc 1 35 3 is_stmt 1 view .LVU5
+  46              		.loc 1 35 32 is_stmt 0 view .LVU6
+  47 000c E022     		movs	r2, #224
+  48 000e 1201     		lsls	r2, r2, #4
+  49 0010 8260     		str	r2, [r0, #8]
+  36:Src/lptim.c   ****   hlptim1.Init.Trigger.Source = LPTIM_TRIGSOURCE_SOFTWARE;
+  50              		.loc 1 36 3 is_stmt 1 view .LVU7
+  51              		.loc 1 36 31 is_stmt 0 view .LVU8
+  52 0012 094A     		ldr	r2, .L4+8
+  53 0014 4261     		str	r2, [r0, #20]
+  37:Src/lptim.c   ****   hlptim1.Init.OutputPolarity = LPTIM_OUTPUTPOLARITY_HIGH;
+  54              		.loc 1 37 3 is_stmt 1 view .LVU9
+  55              		.loc 1 37 31 is_stmt 0 view .LVU10
+  56 0016 0362     		str	r3, [r0, #32]
+  38:Src/lptim.c   ****   hlptim1.Init.UpdateMode = LPTIM_UPDATE_IMMEDIATE;
+  57              		.loc 1 38 3 is_stmt 1 view .LVU11
+  58              		.loc 1 38 27 is_stmt 0 view .LVU12
+  59 0018 4362     		str	r3, [r0, #36]
+  39:Src/lptim.c   ****   hlptim1.Init.CounterSource = LPTIM_COUNTERSOURCE_INTERNAL;
+  60              		.loc 1 39 3 is_stmt 1 view .LVU13
+  61              		.loc 1 39 30 is_stmt 0 view .LVU14
+  62 001a 8362     		str	r3, [r0, #40]
+  40:Src/lptim.c   ****   hlptim1.Init.Input1Source = LPTIM_INPUT1SOURCE_GPIO;
+  63              		.loc 1 40 3 is_stmt 1 view .LVU15
+  64              		.loc 1 40 29 is_stmt 0 view .LVU16
+  65 001c C362     		str	r3, [r0, #44]
+  41:Src/lptim.c   ****   hlptim1.Init.Input2Source = LPTIM_INPUT2SOURCE_GPIO;
+  66              		.loc 1 41 3 is_stmt 1 view .LVU17
+  67              		.loc 1 41 29 is_stmt 0 view .LVU18
+  68 001e 0363     		str	r3, [r0, #48]
+  42:Src/lptim.c   ****   if (HAL_LPTIM_Init(&hlptim1) != HAL_OK)
+  69              		.loc 1 42 3 is_stmt 1 view .LVU19
+  70              		.loc 1 42 7 is_stmt 0 view .LVU20
+  71 0020 FFF7FEFF 		bl	HAL_LPTIM_Init
+  72              	.LVL0:
+  73              		.loc 1 42 6 view .LVU21
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cchIfy9R.s 			page 3
+
+
+  74 0024 0028     		cmp	r0, #0
+  75 0026 00D1     		bne	.L3
+  76              	.L1:
+  43:Src/lptim.c   ****   {
+  44:Src/lptim.c   ****     Error_Handler();
+  45:Src/lptim.c   ****   }
+  46:Src/lptim.c   **** 
+  47:Src/lptim.c   **** }
+  77              		.loc 1 47 1 view .LVU22
+  78              		@ sp needed
+  79 0028 10BD     		pop	{r4, pc}
+  80              	.L3:
+  44:Src/lptim.c   ****   }
+  81              		.loc 1 44 5 is_stmt 1 view .LVU23
+  82 002a FFF7FEFF 		bl	Error_Handler
+  83              	.LVL1:
+  84              		.loc 1 47 1 is_stmt 0 view .LVU24
+  85 002e FBE7     		b	.L1
+  86              	.L5:
+  87              		.align	2
+  88              	.L4:
+  89 0030 00000000 		.word	hlptim1
+  90 0034 007C0040 		.word	1073773568
+  91 0038 FFFF0000 		.word	65535
+  92              		.cfi_endproc
+  93              	.LFE281:
+  95              		.section	.text.HAL_LPTIM_MspInit,"ax",%progbits
+  96              		.align	1
+  97              		.global	HAL_LPTIM_MspInit
+  98              		.syntax unified
+  99              		.code	16
+ 100              		.thumb_func
+ 101              		.fpu softvfp
+ 103              	HAL_LPTIM_MspInit:
+ 104              	.LVL2:
+ 105              	.LFB282:
+  48:Src/lptim.c   **** 
+  49:Src/lptim.c   **** void HAL_LPTIM_MspInit(LPTIM_HandleTypeDef* lptimHandle)
+  50:Src/lptim.c   **** {
+ 106              		.loc 1 50 1 is_stmt 1 view -0
+ 107              		.cfi_startproc
+ 108              		@ args = 0, pretend = 0, frame = 8
+ 109              		@ frame_needed = 0, uses_anonymous_args = 0
+ 110              		.loc 1 50 1 is_stmt 0 view .LVU26
+ 111 0000 00B5     		push	{lr}
+ 112              	.LCFI1:
+ 113              		.cfi_def_cfa_offset 4
+ 114              		.cfi_offset 14, -4
+ 115 0002 83B0     		sub	sp, sp, #12
+ 116              	.LCFI2:
+ 117              		.cfi_def_cfa_offset 16
+  51:Src/lptim.c   **** 
+  52:Src/lptim.c   ****   if(lptimHandle->Instance==LPTIM1)
+ 118              		.loc 1 52 3 is_stmt 1 view .LVU27
+ 119              		.loc 1 52 17 is_stmt 0 view .LVU28
+ 120 0004 0268     		ldr	r2, [r0]
+ 121              		.loc 1 52 5 view .LVU29
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cchIfy9R.s 			page 4
+
+
+ 122 0006 0C4B     		ldr	r3, .L9
+ 123 0008 9A42     		cmp	r2, r3
+ 124 000a 01D0     		beq	.L8
+ 125              	.LVL3:
+ 126              	.L6:
+  53:Src/lptim.c   ****   {
+  54:Src/lptim.c   ****   /* USER CODE BEGIN LPTIM1_MspInit 0 */
+  55:Src/lptim.c   **** 
+  56:Src/lptim.c   ****   /* USER CODE END LPTIM1_MspInit 0 */
+  57:Src/lptim.c   ****     /* LPTIM1 clock enable */
+  58:Src/lptim.c   ****     __HAL_RCC_LPTIM1_CLK_ENABLE();
+  59:Src/lptim.c   **** 
+  60:Src/lptim.c   ****     /* LPTIM1 interrupt Init */
+  61:Src/lptim.c   ****     HAL_NVIC_SetPriority(TIM6_DAC_LPTIM1_IRQn, 0, 0);
+  62:Src/lptim.c   ****     HAL_NVIC_EnableIRQ(TIM6_DAC_LPTIM1_IRQn);
+  63:Src/lptim.c   ****   /* USER CODE BEGIN LPTIM1_MspInit 1 */
+  64:Src/lptim.c   **** 
+  65:Src/lptim.c   ****   /* USER CODE END LPTIM1_MspInit 1 */
+  66:Src/lptim.c   ****   }
+  67:Src/lptim.c   **** }
+ 127              		.loc 1 67 1 view .LVU30
+ 128 000c 03B0     		add	sp, sp, #12
+ 129              		@ sp needed
+ 130 000e 00BD     		pop	{pc}
+ 131              	.LVL4:
+ 132              	.L8:
+  58:Src/lptim.c   **** 
+ 133              		.loc 1 58 5 is_stmt 1 view .LVU31
+ 134              	.LBB2:
+  58:Src/lptim.c   **** 
+ 135              		.loc 1 58 5 view .LVU32
+  58:Src/lptim.c   **** 
+ 136              		.loc 1 58 5 view .LVU33
+ 137 0010 0A4B     		ldr	r3, .L9+4
+ 138 0012 D96B     		ldr	r1, [r3, #60]
+ 139 0014 8022     		movs	r2, #128
+ 140 0016 1206     		lsls	r2, r2, #24
+ 141 0018 0A43     		orrs	r2, r1
+ 142 001a DA63     		str	r2, [r3, #60]
+  58:Src/lptim.c   **** 
+ 143              		.loc 1 58 5 view .LVU34
+ 144 001c DB6B     		ldr	r3, [r3, #60]
+ 145 001e DB0F     		lsrs	r3, r3, #31
+ 146 0020 DB07     		lsls	r3, r3, #31
+ 147 0022 0193     		str	r3, [sp, #4]
+  58:Src/lptim.c   **** 
+ 148              		.loc 1 58 5 view .LVU35
+ 149 0024 019B     		ldr	r3, [sp, #4]
+ 150              	.LBE2:
+  58:Src/lptim.c   **** 
+ 151              		.loc 1 58 5 view .LVU36
+  61:Src/lptim.c   ****     HAL_NVIC_EnableIRQ(TIM6_DAC_LPTIM1_IRQn);
+ 152              		.loc 1 61 5 view .LVU37
+ 153 0026 0022     		movs	r2, #0
+ 154 0028 0021     		movs	r1, #0
+ 155 002a 1120     		movs	r0, #17
+ 156              	.LVL5:
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cchIfy9R.s 			page 5
+
+
+  61:Src/lptim.c   ****     HAL_NVIC_EnableIRQ(TIM6_DAC_LPTIM1_IRQn);
+ 157              		.loc 1 61 5 is_stmt 0 view .LVU38
+ 158 002c FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 159              	.LVL6:
+  62:Src/lptim.c   ****   /* USER CODE BEGIN LPTIM1_MspInit 1 */
+ 160              		.loc 1 62 5 is_stmt 1 view .LVU39
+ 161 0030 1120     		movs	r0, #17
+ 162 0032 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+ 163              	.LVL7:
+ 164              		.loc 1 67 1 is_stmt 0 view .LVU40
+ 165 0036 E9E7     		b	.L6
+ 166              	.L10:
+ 167              		.align	2
+ 168              	.L9:
+ 169 0038 007C0040 		.word	1073773568
+ 170 003c 00100240 		.word	1073876992
+ 171              		.cfi_endproc
+ 172              	.LFE282:
+ 174              		.section	.text.HAL_LPTIM_MspDeInit,"ax",%progbits
+ 175              		.align	1
+ 176              		.global	HAL_LPTIM_MspDeInit
+ 177              		.syntax unified
+ 178              		.code	16
+ 179              		.thumb_func
+ 180              		.fpu softvfp
+ 182              	HAL_LPTIM_MspDeInit:
+ 183              	.LVL8:
+ 184              	.LFB283:
+  68:Src/lptim.c   **** 
+  69:Src/lptim.c   **** void HAL_LPTIM_MspDeInit(LPTIM_HandleTypeDef* lptimHandle)
+  70:Src/lptim.c   **** {
+ 185              		.loc 1 70 1 is_stmt 1 view -0
+ 186              		.cfi_startproc
+ 187              		@ args = 0, pretend = 0, frame = 0
+ 188              		@ frame_needed = 0, uses_anonymous_args = 0
+ 189              		.loc 1 70 1 is_stmt 0 view .LVU42
+ 190 0000 10B5     		push	{r4, lr}
+ 191              	.LCFI3:
+ 192              		.cfi_def_cfa_offset 8
+ 193              		.cfi_offset 4, -8
+ 194              		.cfi_offset 14, -4
+  71:Src/lptim.c   **** 
+  72:Src/lptim.c   ****   if(lptimHandle->Instance==LPTIM1)
+ 195              		.loc 1 72 3 is_stmt 1 view .LVU43
+ 196              		.loc 1 72 17 is_stmt 0 view .LVU44
+ 197 0002 0268     		ldr	r2, [r0]
+ 198              		.loc 1 72 5 view .LVU45
+ 199 0004 064B     		ldr	r3, .L14
+ 200 0006 9A42     		cmp	r2, r3
+ 201 0008 00D0     		beq	.L13
+ 202              	.LVL9:
+ 203              	.L11:
+  73:Src/lptim.c   ****   {
+  74:Src/lptim.c   ****   /* USER CODE BEGIN LPTIM1_MspDeInit 0 */
+  75:Src/lptim.c   **** 
+  76:Src/lptim.c   ****   /* USER CODE END LPTIM1_MspDeInit 0 */
+  77:Src/lptim.c   ****     /* Peripheral clock disable */
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cchIfy9R.s 			page 6
+
+
+  78:Src/lptim.c   ****     __HAL_RCC_LPTIM1_CLK_DISABLE();
+  79:Src/lptim.c   **** 
+  80:Src/lptim.c   ****     /* LPTIM1 interrupt Deinit */
+  81:Src/lptim.c   ****     HAL_NVIC_DisableIRQ(TIM6_DAC_LPTIM1_IRQn);
+  82:Src/lptim.c   ****   /* USER CODE BEGIN LPTIM1_MspDeInit 1 */
+  83:Src/lptim.c   **** 
+  84:Src/lptim.c   ****   /* USER CODE END LPTIM1_MspDeInit 1 */
+  85:Src/lptim.c   ****   }
+  86:Src/lptim.c   **** } 
+ 204              		.loc 1 86 1 view .LVU46
+ 205              		@ sp needed
+ 206 000a 10BD     		pop	{r4, pc}
+ 207              	.LVL10:
+ 208              	.L13:
+  78:Src/lptim.c   **** 
+ 209              		.loc 1 78 5 is_stmt 1 view .LVU47
+ 210 000c 054A     		ldr	r2, .L14+4
+ 211 000e D36B     		ldr	r3, [r2, #60]
+ 212 0010 5B00     		lsls	r3, r3, #1
+ 213 0012 5B08     		lsrs	r3, r3, #1
+ 214 0014 D363     		str	r3, [r2, #60]
+  81:Src/lptim.c   ****   /* USER CODE BEGIN LPTIM1_MspDeInit 1 */
+ 215              		.loc 1 81 5 view .LVU48
+ 216 0016 1120     		movs	r0, #17
+ 217              	.LVL11:
+  81:Src/lptim.c   ****   /* USER CODE BEGIN LPTIM1_MspDeInit 1 */
+ 218              		.loc 1 81 5 is_stmt 0 view .LVU49
+ 219 0018 FFF7FEFF 		bl	HAL_NVIC_DisableIRQ
+ 220              	.LVL12:
+ 221              		.loc 1 86 1 view .LVU50
+ 222 001c F5E7     		b	.L11
+ 223              	.L15:
+ 224 001e C046     		.align	2
+ 225              	.L14:
+ 226 0020 007C0040 		.word	1073773568
+ 227 0024 00100240 		.word	1073876992
+ 228              		.cfi_endproc
+ 229              	.LFE283:
+ 231              		.comm	hlptim1,56,4
+ 232              		.text
+ 233              	.Letext0:
+ 234              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\
+ 235              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\
+ 236              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
+ 237              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
+ 238              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+ 239              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
+ 240              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_lptim.h"
+ 241              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
+ 242              		.file 10 "Inc/lptim.h"
+ 243              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h"
+ 244              		.file 12 "Inc/main.h"
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cchIfy9R.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 lptim.c
+C:\Users\matil\AppData\Local\Temp\cchIfy9R.s:16     .text.MX_LPTIM1_Init:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cchIfy9R.s:24     .text.MX_LPTIM1_Init:00000000 MX_LPTIM1_Init
+C:\Users\matil\AppData\Local\Temp\cchIfy9R.s:89     .text.MX_LPTIM1_Init:00000030 $d
+                            *COM*:00000038 hlptim1
+C:\Users\matil\AppData\Local\Temp\cchIfy9R.s:96     .text.HAL_LPTIM_MspInit:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cchIfy9R.s:103    .text.HAL_LPTIM_MspInit:00000000 HAL_LPTIM_MspInit
+C:\Users\matil\AppData\Local\Temp\cchIfy9R.s:169    .text.HAL_LPTIM_MspInit:00000038 $d
+C:\Users\matil\AppData\Local\Temp\cchIfy9R.s:175    .text.HAL_LPTIM_MspDeInit:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cchIfy9R.s:182    .text.HAL_LPTIM_MspDeInit:00000000 HAL_LPTIM_MspDeInit
+C:\Users\matil\AppData\Local\Temp\cchIfy9R.s:226    .text.HAL_LPTIM_MspDeInit:00000020 $d
+
+UNDEFINED SYMBOLS
+HAL_LPTIM_Init
+Error_Handler
+HAL_NVIC_SetPriority
+HAL_NVIC_EnableIRQ
+HAL_NVIC_DisableIRQ
