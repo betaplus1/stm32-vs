@@ -48,20 +48,21 @@ void MX_SPI2_Init(void)
   {
     Error_Handler();
   }
+
 }
 
-void HAL_SPI_MspInit(SPI_HandleTypeDef *spiHandle)
+void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
 {
 
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-  if (spiHandle->Instance == SPI2)
+  if(spiHandle->Instance==SPI2)
   {
-    /* USER CODE BEGIN SPI2_MspInit 0 */
+  /* USER CODE BEGIN SPI2_MspInit 0 */
 
-    /* USER CODE END SPI2_MspInit 0 */
+  /* USER CODE END SPI2_MspInit 0 */
     /* SPI2 clock enable */
     __HAL_RCC_SPI2_CLK_ENABLE();
-
+  
     __HAL_RCC_GPIOA_CLK_ENABLE();
     __HAL_RCC_GPIOB_CLK_ENABLE();
     /**SPI2 GPIO Configuration    
@@ -84,30 +85,30 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef *spiHandle)
     GPIO_InitStruct.Alternate = GPIO_AF4_SPI2;
     HAL_GPIO_Init(ADC_MISO_GPIO_Port, &GPIO_InitStruct);
 
-    GPIO_InitStruct.Pin = ADC_MOSI_Pin | ADC_SCK_Pin;
+    GPIO_InitStruct.Pin = ADC_MOSI_Pin|ADC_SCK_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
     GPIO_InitStruct.Alternate = GPIO_AF1_SPI2;
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-    /* USER CODE BEGIN SPI2_MspInit 1 */
+  /* USER CODE BEGIN SPI2_MspInit 1 */
 
-    /* USER CODE END SPI2_MspInit 1 */
+  /* USER CODE END SPI2_MspInit 1 */
   }
 }
 
-void HAL_SPI_MspDeInit(SPI_HandleTypeDef *spiHandle)
+void HAL_SPI_MspDeInit(SPI_HandleTypeDef* spiHandle)
 {
 
-  if (spiHandle->Instance == SPI2)
+  if(spiHandle->Instance==SPI2)
   {
-    /* USER CODE BEGIN SPI2_MspDeInit 0 */
+  /* USER CODE BEGIN SPI2_MspDeInit 0 */
 
-    /* USER CODE END SPI2_MspDeInit 0 */
+  /* USER CODE END SPI2_MspDeInit 0 */
     /* Peripheral clock disable */
     __HAL_RCC_SPI2_CLK_DISABLE();
-
+  
     /**SPI2 GPIO Configuration    
     PA8     ------> SPI2_NSS
     PB6     ------> SPI2_MISO
@@ -116,25 +117,15 @@ void HAL_SPI_MspDeInit(SPI_HandleTypeDef *spiHandle)
     */
     HAL_GPIO_DeInit(GPIOA, GPIO_PIN_8);
 
-    HAL_GPIO_DeInit(GPIOB, ADC_MISO_Pin | ADC_MOSI_Pin | ADC_SCK_Pin);
+    HAL_GPIO_DeInit(GPIOB, ADC_MISO_Pin|ADC_MOSI_Pin|ADC_SCK_Pin);
 
-    /* USER CODE BEGIN SPI2_MspDeInit 1 */
+  /* USER CODE BEGIN SPI2_MspDeInit 1 */
 
-    /* USER CODE END SPI2_MspDeInit 1 */
+  /* USER CODE END SPI2_MspDeInit 1 */
   }
-}
+} 
 
 /* USER CODE BEGIN 1 */
-
-uint16_t SPI(uint16_t data)
-{
-  uint8_t txbuffer[2] = {data & 0xf0 >> 8, data & 0x0f};
-  uint8_t rxbuffer[2] = {0};
-
-  HAL_SPI_TransmitReceive(&hspi2, txbuffer, rxbuffer, 2, HAL_MAX_DELAY);
-  uint16_t answer = rxbuffer[0] << 8 & rxbuffer[1];
-  return answer;
-}
 
 /* USER CODE END 1 */
 

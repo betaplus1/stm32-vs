@@ -1,7 +1,26 @@
 {
   "configurations": [
     {
-      "name": "STM32",
+      "name": "STM32_DEBUG",
+      "includePath": [
+        "${workspaceFolder}/Drivers/STM32G0xx_HAL_Driver/Inc",
+        "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32G0xx/Include",
+        "${workspaceFolder}/**"
+      ],
+      "defines": ["STM32G071xx", "_DEBUG"],
+      "windowsSdkVersion": "10.0.17763.0",
+      "compilerPath": "C:/MinGW/bin/gcc.exe",
+      "cStandard": "c11",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "gcc-arm",
+      "browse": {
+        "limitSymbolsToIncludedHeaders": true,
+        "path": ["${workspaceFolder}/Drivers", "${workspaceFolder}/Inc"],
+        "databaseFilename": ""
+      }
+    },
+    {
+      "name": "STM32_BUILD",
       "includePath": [
         "${workspaceFolder}/Drivers/STM32G0xx_HAL_Driver/Inc",
         "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32G0xx/Include",

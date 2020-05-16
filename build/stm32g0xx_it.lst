@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s 			page 1
   30:Src/stm32g0xx_it.c **** /* Private typedef -----------------------------------------------------------*/
   31:Src/stm32g0xx_it.c **** /* USER CODE BEGIN TD */
   32:Src/stm32g0xx_it.c **** 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s 			page 2
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 2
 
 
   33:Src/stm32g0xx_it.c **** /* USER CODE END TD */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s 			page 1
   32              		.loc 1 81 1 view .LVU1
   33              		@ sp needed
   34 0000 7047     		bx	lr
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s 			page 3
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 3
 
 
   35              		.cfi_endproc
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s 			page 1
  102:Src/stm32g0xx_it.c **** {
   72              		.loc 1 102 1 view -0
   73              		.cfi_startproc
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s 			page 4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 4
 
 
   74              		@ args = 0, pretend = 0, frame = 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s 			page 1
  112              	SysTick_Handler:
  113              	.LFB285:
  123:Src/stm32g0xx_it.c **** 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s 			page 5
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 5
 
 
  124:Src/stm32g0xx_it.c **** /**
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s 			page 1
  144              		@ args = 0, pretend = 0, frame = 0
  145              		@ frame_needed = 0, uses_anonymous_args = 0
  146 0000 10B5     		push	{r4, lr}
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s 			page 6
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 6
 
 
  147              	.LCFI1:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s 			page 1
  183              		.global	TIM6_DAC_LPTIM1_IRQHandler
  184              		.syntax unified
  185              		.code	16
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s 			page 7
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 7
 
 
  186              		.thumb_func
@@ -381,88 +381,83 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s 			page 1
  198              		.cfi_offset 4, -8
  199              		.cfi_offset 14, -4
  177:Src/stm32g0xx_it.c ****   /* USER CODE BEGIN TIM6_DAC_LPTIM1_IRQn 0 */
- 178:Src/stm32g0xx_it.c ****   State.timeup++;
+ 178:Src/stm32g0xx_it.c ****   State.uptime++;
  200              		.loc 1 178 3 view .LVU19
  201              		.loc 1 178 8 is_stmt 0 view .LVU20
- 202 0002 074A     		ldr	r2, .L10
+ 202 0002 064A     		ldr	r2, .L10
  203              		.loc 1 178 15 view .LVU21
  204 0004 1368     		ldr	r3, [r2]
  205 0006 0133     		adds	r3, r3, #1
  206 0008 1360     		str	r3, [r2]
- 179:Src/stm32g0xx_it.c ****   TXState();
- 207              		.loc 1 179 3 is_stmt 1 view .LVU22
- 208 000a FFF7FEFF 		bl	TXState
- 209              	.LVL2:
+ 179:Src/stm32g0xx_it.c ****   // TXState();
  180:Src/stm32g0xx_it.c ****   HAL_GPIO_TogglePin(LED_TEMP_GPIO_Port, LED_TEMP_Pin);
- 210              		.loc 1 180 3 view .LVU23
- 211 000e A020     		movs	r0, #160
- 212 0010 0221     		movs	r1, #2
- 213 0012 C005     		lsls	r0, r0, #23
- 214 0014 FFF7FEFF 		bl	HAL_GPIO_TogglePin
- 215              	.LVL3:
+ 207              		.loc 1 180 3 is_stmt 1 view .LVU22
+ 208 000a A020     		movs	r0, #160
+ 209 000c 0221     		movs	r1, #2
+ 210 000e C005     		lsls	r0, r0, #23
+ 211 0010 FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 212              	.LVL2:
  181:Src/stm32g0xx_it.c ****   /* USER CODE END TIM6_DAC_LPTIM1_IRQn 0 */
  182:Src/stm32g0xx_it.c ****   HAL_LPTIM_IRQHandler(&hlptim1);
- 216              		.loc 1 182 3 view .LVU24
- 217 0018 0248     		ldr	r0, .L10+4
- 218 001a FFF7FEFF 		bl	HAL_LPTIM_IRQHandler
- 219              	.LVL4:
+ 213              		.loc 1 182 3 view .LVU23
+ 214 0014 0248     		ldr	r0, .L10+4
+ 215 0016 FFF7FEFF 		bl	HAL_LPTIM_IRQHandler
+ 216              	.LVL3:
  183:Src/stm32g0xx_it.c ****   /* USER CODE BEGIN TIM6_DAC_LPTIM1_IRQn 1 */
  184:Src/stm32g0xx_it.c **** 
  185:Src/stm32g0xx_it.c ****   /* USER CODE END TIM6_DAC_LPTIM1_IRQn 1 */
  186:Src/stm32g0xx_it.c **** }
- 220              		.loc 1 186 1 is_stmt 0 view .LVU25
- 221              		@ sp needed
- 222 001e 10BD     		pop	{r4, pc}
- 223              	.L11:
- 224              		.align	2
- 225              	.L10:
- 226 0020 00000000 		.word	State
- 227 0024 00000000 		.word	hlptim1
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s 			page 8
+ 217              		.loc 1 186 1 is_stmt 0 view .LVU24
+ 218              		@ sp needed
+ 219 001a 10BD     		pop	{r4, pc}
+ 220              	.L11:
+ 221              		.align	2
+ 222              	.L10:
+ 223 001c 00000000 		.word	State
+ 224 0020 00000000 		.word	hlptim1
+ 225              		.cfi_endproc
+ 226              	.LFE288:
+ 228              		.text
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 8
 
 
- 228              		.cfi_endproc
- 229              	.LFE288:
- 231              		.text
- 232              	.Letext0:
- 233              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\
- 234              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\
- 235              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
- 236              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
- 237              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
- 238              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
- 239              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_lptim.h"
- 240              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
- 241              		.file 10 "Inc/state.h"
- 242              		.file 11 "Inc/usart_utils.h"
- 243              		.file 12 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s 			page 9
+ 229              	.Letext0:
+ 230              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\
+ 231              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\
+ 232              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
+ 233              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
+ 234              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+ 235              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
+ 236              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_lptim.h"
+ 237              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
+ 238              		.file 10 "Inc/state.h"
+ 239              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g0xx_it.c
-C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s:16     .text.NMI_Handler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s:24     .text.NMI_Handler:00000000 NMI_Handler
-C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s:39     .text.HardFault_Handler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s:46     .text.HardFault_Handler:00000000 HardFault_Handler
-C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s:63     .text.SVC_Handler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s:70     .text.SVC_Handler:00000000 SVC_Handler
-C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s:84     .text.PendSV_Handler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s:91     .text.PendSV_Handler:00000000 PendSV_Handler
-C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s:105    .text.SysTick_Handler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s:112    .text.SysTick_Handler:00000000 SysTick_Handler
-C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s:133    .text.FLASH_IRQHandler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s:140    .text.FLASH_IRQHandler:00000000 FLASH_IRQHandler
-C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s:161    .text.RCC_IRQHandler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s:168    .text.RCC_IRQHandler:00000000 RCC_IRQHandler
-C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s:182    .text.TIM6_DAC_LPTIM1_IRQHandler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s:189    .text.TIM6_DAC_LPTIM1_IRQHandler:00000000 TIM6_DAC_LPTIM1_IRQHandler
-C:\Users\matil\AppData\Local\Temp\ccdMvk1b.s:226    .text.TIM6_DAC_LPTIM1_IRQHandler:00000020 $d
+C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:16     .text.NMI_Handler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:24     .text.NMI_Handler:00000000 NMI_Handler
+C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:39     .text.HardFault_Handler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:46     .text.HardFault_Handler:00000000 HardFault_Handler
+C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:63     .text.SVC_Handler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:70     .text.SVC_Handler:00000000 SVC_Handler
+C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:84     .text.PendSV_Handler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:91     .text.PendSV_Handler:00000000 PendSV_Handler
+C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:105    .text.SysTick_Handler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:112    .text.SysTick_Handler:00000000 SysTick_Handler
+C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:133    .text.FLASH_IRQHandler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:140    .text.FLASH_IRQHandler:00000000 FLASH_IRQHandler
+C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:161    .text.RCC_IRQHandler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:168    .text.RCC_IRQHandler:00000000 RCC_IRQHandler
+C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:182    .text.TIM6_DAC_LPTIM1_IRQHandler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:189    .text.TIM6_DAC_LPTIM1_IRQHandler:00000000 TIM6_DAC_LPTIM1_IRQHandler
+C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:223    .text.TIM6_DAC_LPTIM1_IRQHandler:0000001c $d
 
 UNDEFINED SYMBOLS
 HAL_IncTick
 HAL_FLASH_IRQHandler
-TXState
 HAL_GPIO_TogglePin
 HAL_LPTIM_IRQHandler
 State

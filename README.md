@@ -25,7 +25,7 @@ Cortex-Debug (vscode addon)
 
    NODE\*,
    NPM\*,
-   GNU Arm Embedded toolchain
+   mingw gcc,
    Make for windows,
    STM32 ST-LINK Utility,
 
@@ -37,8 +37,8 @@ Cortex-Debug (vscode addon)
 
 3. Run "npm install" in project root folder\*.
 
-4. It may be needed to define mcu (ex. "STM32F103xB") in main.c for VSCode IntelliSense to work properly
-   (It is added in makefile but not generated directly to src files what messes up IntelliSenses path)
+4. It may be needed to define mcu (ex. "STM32F103xB") in .vscode/c_cpp_properties.json for VSCode IntelliSense to work properly
+   (It is added in makefile what messes up IntelliSenses path)
 
 5. For debugging: adjust paths in .vscode/launch.json
 
@@ -48,4 +48,6 @@ Cortex-Debug (vscode addon)
 
 1. b) run "make & flash"
 
-1. edit /stm.ioc to setup CubeMX and regenerate project config files.
+1. edit /stm.ioc to setup CubeMX and regenerate project config files -> change flash.bat hex file path accordingly to project name
+
+1. use npm run serial for com port terminal

@@ -19,15 +19,17 @@
     }
   },
   "scripts": {
+    "serial": "serialport-terminal -b 115200",
     "make": "make",
     "upload": "flash",
     "watch-make": "npm-watch make",
     "watch-upload": "npm-watch upload",
-    "watch": "concurrently --kill-others \"npm run watch-make\" \"npm run watch-upload\""
+    "watch": "concurrently --kill-others \"npm run watch-make\" \"npm run watch-upload\" "
   },
   "author": "ML",
   "license": "ISC",
   "dependencies": {
+    "@serialport/terminal": "^9.0.0",
     "concurrently": "^5.2.0",
     "npm-watch": "^0.6.0"
   }

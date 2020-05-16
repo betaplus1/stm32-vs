@@ -24,6 +24,7 @@
 #include "spi.h"
 #include "usart.h"
 #include "gpio.h"
+#include "ADC.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -94,10 +95,13 @@ int main(void)
   MX_USART2_UART_Init();
   MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
+
   HAL_LPTIM_MspInit(&hlptim1);
   HAL_LPTIM_Counter_Start_IT(&hlptim1, 250); // 255 for LSE 250 for LSI for 1s timer
-  HAL_UART_MspInit(&huart2);
   HAL_SPI_MspInit(&hspi2);
+
+  ADC_reset();
+  SERIAL_WRITE(RESET);
 
   /* USER CODE END 2 */
 
@@ -106,7 +110,10 @@ int main(void)
   while (1)
   {
     HAL_Delay(1000);
-    HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
+
+    ADC_SPI_WRITE_8(0x40 + 0x07);
+    // answer16 = ADC_ID();
+    SERIAL_WRITE("ADC ID: %x\n", ADC_SPI_READ_16());
 
     /* USER CODE END WHILE */
 
@@ -179,6 +186,13 @@ void SystemClock_Config(void)
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
+  for (int i = 0; i < 10; i++)
+  {
+    HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
+    HAL_Delay(100);
+  }
+  HAL_GPIO_WritePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin, 0);
+
   /* User can add his own implementation to report the HAL error return state */
 
   /* USER CODE END Error_Handler_Debug */

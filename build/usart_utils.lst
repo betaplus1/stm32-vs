@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccoJKmDq.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc4trNYN.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -47,10 +47,10 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccoJKmDq.s 			page 1
   36              		.cfi_offset 4, -8
   37              		.cfi_offset 14, -4
   38 0002 0100     		movs	r1, r0
-  10:Src/usart_utils.c ****     HAL_UART_Transmit(&huart2, (uint8_t *)s, sizeof s, 100);
+  10:Src/usart_utils.c ****     HAL_UART_Transmit(&huart2, (uint8_t *)s, 100, 100);
   39              		.loc 1 10 5 is_stmt 1 view .LVU2
   40 0004 6423     		movs	r3, #100
-  41 0006 0422     		movs	r2, #4
+  41 0006 6422     		movs	r2, #100
   42 0008 0148     		ldr	r0, .L2
   43              	.LVL1:
   44              		.loc 1 10 5 is_stmt 0 view .LVU3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccoJKmDq.s 			page 1
   46              	.LVL2:
   11:Src/usart_utils.c **** }
   47              		.loc 1 11 1 view .LVU4
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccoJKmDq.s 			page 2
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc4trNYN.s 			page 2
 
 
   48              		@ sp needed
@@ -72,9 +72,10 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccoJKmDq.s 			page 1
   57              		.section	.rodata.TXState.str1.4,"aMS",%progbits,1
   58              		.align	2
   59              	.LC2:
-  60 0000 74696D65 		.ascii	"timeup: %i\012\000"
-  60      75703A20 
-  60      25690A00 
+  60 0000 0D757074 		.ascii	"\015uptime: %i\012\000"
+  60      696D653A 
+  60      2025690A 
+  60      00
   61              		.section	.text.TXState,"ax",%progbits
   62              		.align	1
   63              		.global	TXState
@@ -108,7 +109,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccoJKmDq.s 			page 1
   88 000c 02A8     		add	r0, sp, #8
   89 000e FFF7FEFF 		bl	memset
   90              	.LVL3:
-  16:Src/usart_utils.c ****     sprintf(buff, "timeup: %i\n", State.timeup);
+  16:Src/usart_utils.c ****     sprintf(buff, "\ruptime: %i\n", State.uptime);
   91              		.loc 1 16 5 is_stmt 1 view .LVU8
   92 0012 074B     		ldr	r3, .L5
   93 0014 1A68     		ldr	r2, [r3]
@@ -117,10 +118,10 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccoJKmDq.s 			page 1
   96 001a FFF7FEFF 		bl	sprintf
   97              	.LVL4:
   17:Src/usart_utils.c ****     HAL_UART_Transmit(&huart2, buff, sizeof buff, 100);
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc4trNYN.s 			page 3
+
+
   98              		.loc 1 17 5 view .LVU9
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccoJKmDq.s 			page 3
-
-
   99 001e 6423     		movs	r3, #100
  100 0020 6422     		movs	r2, #100
  101 0022 01A9     		add	r1, sp, #4
@@ -159,18 +160,18 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccoJKmDq.s 			page 1
  134              		.file 16 "Inc/state.h"
  135              		.file 17 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include
  136              		.file 18 "<built-in>"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccoJKmDq.s 			page 4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc4trNYN.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usart_utils.c
-C:\Users\matil\AppData\Local\Temp\ccoJKmDq.s:16     .text.TX:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccoJKmDq.s:24     .text.TX:00000000 TX
-C:\Users\matil\AppData\Local\Temp\ccoJKmDq.s:53     .text.TX:00000010 $d
-C:\Users\matil\AppData\Local\Temp\ccoJKmDq.s:58     .rodata.TXState.str1.4:00000000 $d
-C:\Users\matil\AppData\Local\Temp\ccoJKmDq.s:62     .text.TXState:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccoJKmDq.s:69     .text.TXState:00000000 TXState
-C:\Users\matil\AppData\Local\Temp\ccoJKmDq.s:112    .text.TXState:00000030 $d
+C:\Users\matil\AppData\Local\Temp\cc4trNYN.s:16     .text.TX:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc4trNYN.s:24     .text.TX:00000000 TX
+C:\Users\matil\AppData\Local\Temp\cc4trNYN.s:53     .text.TX:00000010 $d
+C:\Users\matil\AppData\Local\Temp\cc4trNYN.s:58     .rodata.TXState.str1.4:00000000 $d
+C:\Users\matil\AppData\Local\Temp\cc4trNYN.s:62     .text.TXState:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc4trNYN.s:69     .text.TXState:00000000 TXState
+C:\Users\matil\AppData\Local\Temp\cc4trNYN.s:112    .text.TXState:00000030 $d
 
 UNDEFINED SYMBOLS
 HAL_UART_Transmit

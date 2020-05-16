@@ -175,8 +175,8 @@ void RCC_IRQHandler(void)
 void TIM6_DAC_LPTIM1_IRQHandler(void)
 {
   /* USER CODE BEGIN TIM6_DAC_LPTIM1_IRQn 0 */
-  State.timeup++;
-  TXState();
+  State.uptime++;
+  // TXState();
   HAL_GPIO_TogglePin(LED_TEMP_GPIO_Port, LED_TEMP_Pin);
   /* USER CODE END TIM6_DAC_LPTIM1_IRQn 0 */
   HAL_LPTIM_IRQHandler(&hlptim1);

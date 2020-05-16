@@ -1,5 +1,4 @@
-build/stm32g0xx_hal_rtc_ex.o: \
- Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rtc_ex.c \
+build/ADC.o: Src/ADC.c Inc/usart.h Inc/main.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h \
  Inc/stm32g0xx_hal_conf.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h \
@@ -22,10 +21,19 @@ build/stm32g0xx_hal_rtc_ex.o: \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_exti.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h \
+ Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_lptim.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h \
- Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rtc.h \
- Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rtc_ex.h
+ Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h \
+ Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi_ex.h \
+ Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h \
+ Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h \
+ Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_system.h Inc/state.h \
+ Inc/spi.h Inc/ADC.h Inc/usart_utils.h Inc/main.h
+
+Inc/usart.h:
+
+Inc/main.h:
 
 Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:
 
@@ -73,10 +81,28 @@ Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h:
 
 Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash_ex.h:
 
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_lptim.h:
+
 Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr.h:
 
 Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h:
 
-Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rtc.h:
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h:
 
-Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rtc_ex.h:
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi_ex.h:
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h:
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h:
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_system.h:
+
+Inc/state.h:
+
+Inc/spi.h:
+
+Inc/ADC.h:
+
+Inc/usart_utils.h:
+
+Inc/main.h:

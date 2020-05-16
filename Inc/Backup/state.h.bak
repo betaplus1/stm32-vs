@@ -3,7 +3,7 @@
 
 typedef struct state
 {
-    int timeup;
+    int uptime;
 } state;
 
 #endif /* __STATE */

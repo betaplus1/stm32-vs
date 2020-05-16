@@ -32,23 +32,29 @@ extern "C"
 #include "stm32g0xx_hal.h"
 #include "stm32g0xx_ll_system.h"
 
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
+  /* Private includes ----------------------------------------------------------*/
+  /* USER CODE BEGIN Includes */
 
-/* USER CODE END Includes */
+  /* USER CODE END Includes */
 
-/* Exported types ------------------------------------------------------------*/
-/* USER CODE BEGIN ET */
+  /* Exported types ------------------------------------------------------------*/
+  /* USER CODE BEGIN ET */
 
-/* USER CODE END ET */
+  /* USER CODE END ET */
 
-/* Exported constants --------------------------------------------------------*/
-/* USER CODE BEGIN EC */
+  /* Exported constants --------------------------------------------------------*/
+  /* USER CODE BEGIN EC */
 
-/* USER CODE END EC */
+  /* USER CODE END EC */
 
-/* Exported macro ------------------------------------------------------------*/
-/* USER CODE BEGIN EM */
+  /* Exported macro ------------------------------------------------------------*/
+  /* USER CODE BEGIN EM */
+
+#define SERIAL_WRITE(f_, ...)                       \
+  char ___buff[100] = {0};                          \
+  int ___len = sprintf(___buff, f_, ##__VA_ARGS__); \
+  HAL_UART_Transmit(&huart2, ___buff, ___len, 1000);
+
 #define BYTE_TO_BINARY_PATTERN "%c%c%c%c%c%c%c%c"
 #define BYTE_TO_BINARY(byte)     \
   (byte & 0x80 ? '1' : '0'),     \
@@ -77,8 +83,10 @@ extern "C"
 #define UART_TX_GPIO_Port GPIOA
 #define UART_RX_Pin GPIO_PIN_3
 #define UART_RX_GPIO_Port GPIOA
-#define ADC__SYNC_Pin GPIO_PIN_7
-#define ADC__SYNC_GPIO_Port GPIOA
+#define ADC_nError_Pin GPIO_PIN_6
+#define ADC_nError_GPIO_Port GPIOA
+#define ADC_nSYNC_Pin GPIO_PIN_7
+#define ADC_nSYNC_GPIO_Port GPIOA
 #define ADC_MISO_Pin GPIO_PIN_6
 #define ADC_MISO_GPIO_Port GPIOB
 #define ADC_MOSI_Pin GPIO_PIN_7

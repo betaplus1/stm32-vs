@@ -24,6 +24,7 @@
 #include "spi.h"
 #include "usart.h"
 #include "gpio.h"
+#include "ADC.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -94,23 +95,30 @@ int main(void)
   MX_USART2_UART_Init();
   MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
+
   HAL_LPTIM_MspInit(&hlptim1);
   HAL_LPTIM_Counter_Start_IT(&hlptim1, 250); // 255 for LSE 250 for LSI for 1s timer
-  HAL_UART_MspInit(&huart2);
   HAL_SPI_MspInit(&hspi2);
 
+  uint8_t tx[8] = {0xff};
+  HAL_SPI_Transmit(&hspi2, tx, sizeof tx, 100000);
+  // ADC_reset();
+
+  SERIAL_WRITE(RESET);
+
   /* USER CODE END 2 */
-  uint16_t answer = 0;
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
     HAL_Delay(1000);
-    char buff[100] = {0};
-    answer = SPI(0x0047);
-    sprintf(buff, "ADC response: " BYTE_TO_BINARY_PATTERN " " BYTE_TO_BINARY_PATTERN "\n", BYTE_TO_BINARY((uint8_t)(answer & 0xff00 >> 8)), BYTE_TO_BINARY(answer & 0x00ff));
-    HAL_UART_Transmit(&huart2, buff, sizeof buff, 100);
-    HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
+    uint8_t tx[1] = {0x47};
+    uint8_t rxbuffer[2] = {0};
+    HAL_SPI_Transmit(&hspi2, tx, 1, 1000);
+    HAL_SPI_Receive(&hspi2, rxbuffer, 2, 1000);
+
+    SERIAL_WRITE("ADC ID: %x %x\n", rxbuffer[0], rxbuffer[1]);
 
     /* USER CODE END WHILE */
 
@@ -183,6 +191,13 @@ void SystemClock_Config(void)
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
+  for (int i = 0; i < 10; i++)
+  {
+    HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
+    HAL_Delay(100);
+  }
+  HAL_GPIO_WritePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin, 0);
+
   /* User can add his own implementation to report the HAL error return state */
 
   /* USER CODE END Error_Handler_Debug */
