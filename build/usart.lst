@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOyvJKi.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s 			page 1
   30:Src/usart.c   **** 
   31:Src/usart.c   **** void MX_USART2_UART_Init(void)
   32:Src/usart.c   **** {
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s 			page 2
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOyvJKi.s 			page 2
 
 
   27              		.loc 1 32 1 view -0
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s 			page 1
   70              		.loc 1 43 30 is_stmt 0 view .LVU20
   71 0020 4362     		str	r3, [r0, #36]
   44:Src/usart.c   ****   huart2.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s 			page 3
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOyvJKi.s 			page 3
 
 
   72              		.loc 1 44 3 is_stmt 1 view .LVU21
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s 			page 1
   59:Src/usart.c   ****     Error_Handler();
   60:Src/usart.c   ****   }
   61:Src/usart.c   **** 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s 			page 4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOyvJKi.s 			page 4
 
 
   62:Src/usart.c   **** }
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s 			page 1
  160 0000 10B5     		push	{r4, lr}
  161              	.LCFI1:
  162              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s 			page 5
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOyvJKi.s 			page 5
 
 
  163              		.cfi_offset 4, -8
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s 			page 1
  190              		.loc 1 92 1 view .LVU50
  191 001a 10BD     		pop	{r4, pc}
  192              	.LVL12:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s 			page 6
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOyvJKi.s 			page 6
 
 
  193              	.L14:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s 			page 1
  232              		.loc 1 82 5 is_stmt 1 view .LVU65
   82:Src/usart.c   ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
  233              		.loc 1 82 26 is_stmt 0 view .LVU66
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s 			page 7
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOyvJKi.s 			page 7
 
 
  234 0044 0A3B     		subs	r3, r3, #10
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s 			page 1
  280              		.cfi_def_cfa_offset 8
  281              		.cfi_offset 4, -8
  282              		.cfi_offset 14, -4
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s 			page 8
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOyvJKi.s 			page 8
 
 
   96:Src/usart.c   **** 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s 			page 1
  314 0022 C046     		.align	2
  315              	.L20:
  316 0024 00440040 		.word	1073759232
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s 			page 9
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOyvJKi.s 			page 9
 
 
  317 0028 00100240 		.word	1073876992
@@ -502,21 +502,21 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s 			page 1
  336              		.file 13 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h"
  337              		.file 14 "Inc/main.h"
  338              		.file 15 "<built-in>"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s 			page 10
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOyvJKi.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usart.c
-C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s:16     .text.MX_USART2_UART_Init:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s:24     .text.MX_USART2_UART_Init:00000000 MX_USART2_UART_Init
-C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s:139    .text.MX_USART2_UART_Init:00000068 $d
+C:\Users\matil\AppData\Local\Temp\ccOyvJKi.s:16     .text.MX_USART2_UART_Init:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccOyvJKi.s:24     .text.MX_USART2_UART_Init:00000000 MX_USART2_UART_Init
+C:\Users\matil\AppData\Local\Temp\ccOyvJKi.s:139    .text.MX_USART2_UART_Init:00000068 $d
                             *COM*:0000008c huart2
-C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s:145    .text.HAL_UART_MspInit:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s:152    .text.HAL_UART_MspInit:00000000 HAL_UART_MspInit
-C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s:257    .text.HAL_UART_MspInit:0000005c $d
-C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s:263    .text.HAL_UART_MspDeInit:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s:270    .text.HAL_UART_MspDeInit:00000000 HAL_UART_MspDeInit
-C:\Users\matil\AppData\Local\Temp\ccb7fDGV.s:316    .text.HAL_UART_MspDeInit:00000024 $d
+C:\Users\matil\AppData\Local\Temp\ccOyvJKi.s:145    .text.HAL_UART_MspInit:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccOyvJKi.s:152    .text.HAL_UART_MspInit:00000000 HAL_UART_MspInit
+C:\Users\matil\AppData\Local\Temp\ccOyvJKi.s:257    .text.HAL_UART_MspInit:0000005c $d
+C:\Users\matil\AppData\Local\Temp\ccOyvJKi.s:263    .text.HAL_UART_MspDeInit:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccOyvJKi.s:270    .text.HAL_UART_MspDeInit:00000000 HAL_UART_MspDeInit
+C:\Users\matil\AppData\Local\Temp\ccOyvJKi.s:316    .text.HAL_UART_MspDeInit:00000024 $d
 
 UNDEFINED SYMBOLS
 HAL_UART_Init

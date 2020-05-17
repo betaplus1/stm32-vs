@@ -10,7 +10,7 @@ Features automatic build and flash after code change.
 
 NODE\*
 NPM\*
-GNU Arm Embedded Toolchain
+GNU Arm Embedded Toolchain / mingw
 Make for Windows
 STM32CubeMX
 STM32 ST-LINK Utility

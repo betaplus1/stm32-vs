@@ -53,11 +53,7 @@ extern "C"
 #define SERIAL_WRITE(f_, ...)                       \
   char ___buff[100] = {0};                          \
   int ___len = sprintf(___buff, f_, ##__VA_ARGS__); \
-  HAL_UART_Transmit(&huart2, ___buff, ___len, 100);
-
-#define bool _Bool
-#define true 1
-#define false 0
+  HAL_UART_Transmit(&huart2, ___buff, ___len, 1000);
 
 #define BYTE_TO_BINARY_PATTERN "%c%c%c%c%c%c%c%c"
 #define BYTE_TO_BINARY(byte)     \

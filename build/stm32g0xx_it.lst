@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 1
   30:Src/stm32g0xx_it.c **** /* Private typedef -----------------------------------------------------------*/
   31:Src/stm32g0xx_it.c **** /* USER CODE BEGIN TD */
   32:Src/stm32g0xx_it.c **** 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 2
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s 			page 2
 
 
   33:Src/stm32g0xx_it.c **** /* USER CODE END TD */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 1
   32              		.loc 1 81 1 view .LVU1
   33              		@ sp needed
   34 0000 7047     		bx	lr
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 3
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s 			page 3
 
 
   35              		.cfi_endproc
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 1
  102:Src/stm32g0xx_it.c **** {
   72              		.loc 1 102 1 view -0
   73              		.cfi_startproc
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s 			page 4
 
 
   74              		@ args = 0, pretend = 0, frame = 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 1
  112              	SysTick_Handler:
  113              	.LFB285:
  123:Src/stm32g0xx_it.c **** 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 5
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s 			page 5
 
 
  124:Src/stm32g0xx_it.c **** /**
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 1
  144              		@ args = 0, pretend = 0, frame = 0
  145              		@ frame_needed = 0, uses_anonymous_args = 0
  146 0000 10B5     		push	{r4, lr}
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 6
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s 			page 6
 
 
  147              	.LCFI1:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 1
  183              		.global	TIM6_DAC_LPTIM1_IRQHandler
  184              		.syntax unified
  185              		.code	16
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 7
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s 			page 7
 
 
  186              		.thumb_func
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 1
  225              		.cfi_endproc
  226              	.LFE288:
  228              		.text
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 8
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s 			page 8
 
 
  229              	.Letext0:
@@ -432,28 +432,28 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 1
  237              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
  238              		.file 10 "Inc/state.h"
  239              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc8vul4y.s 			page 9
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g0xx_it.c
-C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:16     .text.NMI_Handler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:24     .text.NMI_Handler:00000000 NMI_Handler
-C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:39     .text.HardFault_Handler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:46     .text.HardFault_Handler:00000000 HardFault_Handler
-C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:63     .text.SVC_Handler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:70     .text.SVC_Handler:00000000 SVC_Handler
-C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:84     .text.PendSV_Handler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:91     .text.PendSV_Handler:00000000 PendSV_Handler
-C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:105    .text.SysTick_Handler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:112    .text.SysTick_Handler:00000000 SysTick_Handler
-C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:133    .text.FLASH_IRQHandler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:140    .text.FLASH_IRQHandler:00000000 FLASH_IRQHandler
-C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:161    .text.RCC_IRQHandler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:168    .text.RCC_IRQHandler:00000000 RCC_IRQHandler
-C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:182    .text.TIM6_DAC_LPTIM1_IRQHandler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:189    .text.TIM6_DAC_LPTIM1_IRQHandler:00000000 TIM6_DAC_LPTIM1_IRQHandler
-C:\Users\matil\AppData\Local\Temp\cc8vul4y.s:223    .text.TIM6_DAC_LPTIM1_IRQHandler:0000001c $d
+C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s:16     .text.NMI_Handler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s:24     .text.NMI_Handler:00000000 NMI_Handler
+C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s:39     .text.HardFault_Handler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s:46     .text.HardFault_Handler:00000000 HardFault_Handler
+C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s:63     .text.SVC_Handler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s:70     .text.SVC_Handler:00000000 SVC_Handler
+C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s:84     .text.PendSV_Handler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s:91     .text.PendSV_Handler:00000000 PendSV_Handler
+C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s:105    .text.SysTick_Handler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s:112    .text.SysTick_Handler:00000000 SysTick_Handler
+C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s:133    .text.FLASH_IRQHandler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s:140    .text.FLASH_IRQHandler:00000000 FLASH_IRQHandler
+C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s:161    .text.RCC_IRQHandler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s:168    .text.RCC_IRQHandler:00000000 RCC_IRQHandler
+C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s:182    .text.TIM6_DAC_LPTIM1_IRQHandler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s:189    .text.TIM6_DAC_LPTIM1_IRQHandler:00000000 TIM6_DAC_LPTIM1_IRQHandler
+C:\Users\matil\AppData\Local\Temp\cc4j7CxA.s:223    .text.TIM6_DAC_LPTIM1_IRQHandler:0000001c $d
 
 UNDEFINED SYMBOLS
 HAL_IncTick
