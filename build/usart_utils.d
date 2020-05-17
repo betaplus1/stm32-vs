@@ -28,8 +28,8 @@ build/usart_utils.o: Src/usart_utils.c Inc/usart.h Inc/main.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi_ex.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h \
- Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_system.h Inc/state.h \
- Inc/usart_utils.h
+ Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_system.h Inc/usart.h \
+ Inc/state.h Inc/usart_utils.h
 
 Inc/usart.h:
 
@@ -96,6 +96,8 @@ Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h:
 Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h:
 
 Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_system.h:
+
+Inc/usart.h:
 
 Inc/state.h:
 

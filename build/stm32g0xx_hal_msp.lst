@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccSxHfy9.s 			page 1
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccIFsVBb.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -24,7 +24,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccSxHfy9.s 			page 1
   21              		.thumb_func
   22              		.fpu softvfp
   24              	HAL_MspInit:
-  25              	.LFB281:
+  25              	.LFB284:
   26              		.file 1 "Src/stm32g0xx_hal_msp.c"
    1:Src/stm32g0xx_hal_msp.c **** /* USER CODE BEGIN Header */
    2:Src/stm32g0xx_hal_msp.c **** /**
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccSxHfy9.s 			page 1
   30:Src/stm32g0xx_hal_msp.c **** 
   31:Src/stm32g0xx_hal_msp.c **** /* USER CODE END TD */
   32:Src/stm32g0xx_hal_msp.c **** 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccSxHfy9.s 			page 2
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccIFsVBb.s 			page 2
 
 
   33:Src/stm32g0xx_hal_msp.c **** /* Private define ------------------------------------------------------------*/
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccSxHfy9.s 			page 1
   43 0006 196C     		ldr	r1, [r3, #64]
   44 0008 0122     		movs	r2, #1
   45 000a 1143     		orrs	r1, r2
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccSxHfy9.s 			page 3
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccIFsVBb.s 			page 3
 
 
   46 000c 1964     		str	r1, [r3, #64]
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccSxHfy9.s 			page 1
   89 0042 0420     		movs	r0, #4
   90 0044 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
   91              	.LVL3:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccSxHfy9.s 			page 4
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccIFsVBb.s 			page 4
 
 
   82:Src/stm32g0xx_hal_msp.c **** 
@@ -195,25 +195,32 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccSxHfy9.s 			page 1
   98              	.L2:
   99 004c 00100240 		.word	1073876992
  100              		.cfi_endproc
- 101              	.LFE281:
+ 101              	.LFE284:
  103              		.text
  104              	.Letext0:
- 105              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\
- 106              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\
+ 105              		.file 2 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\machine\\_default_ty
+ 106              		.file 3 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_stdint.h"
  107              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
  108              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
  109              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
- 110              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
- 111              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
- 112              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccSxHfy9.s 			page 5
+ 110              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+ 111              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
+ 112              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
+ 113              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
+ 114              		.file 11 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\lock.h"
+ 115              		.file 12 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_types.h"
+ 116              		.file 13 "c:\\gnu tools arm embedded\\9 2019-q4-major\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\st
+ 117              		.file 14 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\reent.h"
+ 118              		.file 15 "Inc/usart.h"
+ 119              		.file 16 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h"
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccIFsVBb.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g0xx_hal_msp.c
-C:\Users\matil\AppData\Local\Temp\ccSxHfy9.s:16     .text.HAL_MspInit:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccSxHfy9.s:24     .text.HAL_MspInit:00000000 HAL_MspInit
-C:\Users\matil\AppData\Local\Temp\ccSxHfy9.s:99     .text.HAL_MspInit:0000004c $d
+C:\Users\Mateusz\AppData\Local\Temp\ccIFsVBb.s:16     .text.HAL_MspInit:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccIFsVBb.s:24     .text.HAL_MspInit:00000000 HAL_MspInit
+C:\Users\Mateusz\AppData\Local\Temp\ccIFsVBb.s:99     .text.HAL_MspInit:0000004c $d
 
 UNDEFINED SYMBOLS
 HAL_NVIC_SetPriority

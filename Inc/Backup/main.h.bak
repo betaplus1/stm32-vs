@@ -31,10 +31,11 @@ extern "C"
 /* Includes ------------------------------------------------------------------*/
 #include "stm32g0xx_hal.h"
 #include "stm32g0xx_ll_system.h"
+#include "usart.h"
 
-  /* Private includes ----------------------------------------------------------*/
-  /* USER CODE BEGIN Includes */
-
+/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
+#include <stdio.h>
   /* USER CODE END Includes */
 
   /* Exported types ------------------------------------------------------------*/
@@ -50,10 +51,12 @@ extern "C"
   /* Exported macro ------------------------------------------------------------*/
   /* USER CODE BEGIN EM */
 
-#define SERIAL_WRITE(f_, ...)                       \
-  char ___buff[100] = {0};                          \
-  int ___len = sprintf(___buff, f_, ##__VA_ARGS__); \
-  HAL_UART_Transmit(&huart2, ___buff, ___len, 1000);
+#define SERIAL_WRITE(f_, ...)                          \
+  {                                                    \
+    char ___buff[100] = {0};                           \
+    int ___len = sprintf(___buff, f_, ##__VA_ARGS__);  \
+    HAL_UART_Transmit(&huart2, ___buff, ___len, 1000); \
+  }
 
 #define BYTE_TO_BINARY_PATTERN "%c%c%c%c%c%c%c%c"
 #define BYTE_TO_BINARY(byte)     \

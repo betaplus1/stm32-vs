@@ -24,7 +24,8 @@
 #define __MAIN_H
 
 #ifdef __cplusplus
-extern "C" {
+extern "C"
+{
 #endif
 
 /* Includes ------------------------------------------------------------------*/
@@ -33,26 +34,29 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <stdio.h>
+#include "usart.h"
+  /* USER CODE END Includes */
 
-/* USER CODE END Includes */
+  /* Exported types ------------------------------------------------------------*/
+  /* USER CODE BEGIN ET */
 
-/* Exported types ------------------------------------------------------------*/
-/* USER CODE BEGIN ET */
+  /* USER CODE END ET */
 
-/* USER CODE END ET */
+  /* Exported constants --------------------------------------------------------*/
+  /* USER CODE BEGIN EC */
 
-/* Exported constants --------------------------------------------------------*/
-/* USER CODE BEGIN EC */
+  /* USER CODE END EC */
 
-/* USER CODE END EC */
+  /* Exported macro ------------------------------------------------------------*/
+  /* USER CODE BEGIN EM */
 
-/* Exported macro ------------------------------------------------------------*/
-/* USER CODE BEGIN EM */
-
-#define SERIAL_WRITE(f_, ...)                       \
-  char ___buff[100] = {0};                          \
-  int ___len = sprintf(___buff, f_, ##__VA_ARGS__); \
-  HAL_UART_Transmit(&huart2, ___buff, ___len, 1000);
+#define SERIAL_WRITE(f_, ...)                          \
+  {                                                    \
+    char ___buff[100] = {0};                           \
+    int ___len = sprintf(___buff, f_, ##__VA_ARGS__);  \
+    HAL_UART_Transmit(&huart2, ___buff, ___len, 1000); \
+  }
 
 #define BYTE_TO_BINARY_PATTERN "%c%c%c%c%c%c%c%c"
 #define BYTE_TO_BINARY(byte)     \
@@ -64,10 +68,12 @@ extern "C" {
       (byte & 0x04 ? '1' : '0'), \
       (byte & 0x02 ? '1' : '0'), \
       (byte & 0x01 ? '1' : '0')
-/* USER CODE END EM */
 
-/* Exported functions prototypes ---------------------------------------------*/
-void Error_Handler(void);
+#define UART_RX_BUFFER_LENGTH 64
+  /* USER CODE END EM */
+
+  /* Exported functions prototypes ---------------------------------------------*/
+  void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
 
@@ -92,9 +98,9 @@ void Error_Handler(void);
 #define ADC_MOSI_GPIO_Port GPIOB
 #define ADC_SCK_Pin GPIO_PIN_8
 #define ADC_SCK_GPIO_Port GPIOB
-/* USER CODE BEGIN Private defines */
+  /* USER CODE BEGIN Private defines */
 
-/* USER CODE END Private defines */
+  /* USER CODE END Private defines */
 
 #ifdef __cplusplus
 }

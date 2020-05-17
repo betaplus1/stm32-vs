@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccM2yE6f.s 			page 1
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc2TKVeu.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccM2yE6f.s 			page 1
   29:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi_ex.c ****   */
   30:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi_ex.c **** 
   31:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi_ex.c **** /** @defgroup SPIEx SPIEx
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccM2yE6f.s 			page 2
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc2TKVeu.s 			page 2
 
 
   32:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi_ex.c ****   * @brief SPI Extended HAL module driver
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccM2yE6f.s 			page 1
   32              		.loc 1 81 1 is_stmt 0 view .LVU1
   33 0000 10B5     		push	{r4, lr}
   34              	.LCFI0:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccM2yE6f.s 			page 3
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc2TKVeu.s 			page 3
 
 
   35              		.cfi_def_cfa_offset 8
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccM2yE6f.s 			page 1
   78              		.loc 1 91 14 view .LVU20
   79 0020 0320     		movs	r0, #3
   80              	.LVL5:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccM2yE6f.s 			page 4
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc2TKVeu.s 			page 4
 
 
   81              	.L3:
@@ -203,8 +203,8 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccM2yE6f.s 			page 1
   94              	.LFE173:
   96              		.text
   97              	.Letext0:
-  98              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\
-  99              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\
+  98              		.file 2 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\machine\\_default_ty
+  99              		.file 3 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_stdint.h"
  100              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
  101              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
  102              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
@@ -212,12 +212,12 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccM2yE6f.s 			page 1
  104              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
  105              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
  106              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccM2yE6f.s 			page 5
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc2TKVeu.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g0xx_hal_spi_ex.c
-C:\Users\matil\AppData\Local\Temp\ccM2yE6f.s:16     .text.HAL_SPIEx_FlushRxFifo:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccM2yE6f.s:24     .text.HAL_SPIEx_FlushRxFifo:00000000 HAL_SPIEx_FlushRxFifo
+C:\Users\Mateusz\AppData\Local\Temp\cc2TKVeu.s:16     .text.HAL_SPIEx_FlushRxFifo:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\cc2TKVeu.s:24     .text.HAL_SPIEx_FlushRxFifo:00000000 HAL_SPIEx_FlushRxFifo
 
 NO UNDEFINED SYMBOLS

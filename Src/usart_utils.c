@@ -4,15 +4,11 @@
 #include "usart_utils.h"
 
 extern state State;
+extern uint8_t UART_RX_BUFF[UART_RX_BUFFER_LENGTH];
 
-void TX(char *s)
+void RX()
 {
-    HAL_UART_Transmit(&huart2, (uint8_t *)s, 100, 100);
-}
-
-void TXState()
-{
-    char buff[100] = {0};
-    sprintf(buff, "\ruptime: %i\n", State.uptime);
-    HAL_UART_Transmit(&huart2, buff, sizeof buff, 100);
+    SERIAL_WRITE("COMMAND:\n");
+    SERIAL_WRITE(UART_RX_BUFF);
+    SERIAL_WRITE("\n");
 }

@@ -1,4 +1,4 @@
-build/spi.o: Src/spi.c Inc/spi.h Inc/main.h \
+build/dma.o: Src/dma.c Inc/dma.h Inc/main.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h \
  Inc/stm32g0xx_hal_conf.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h \
@@ -28,9 +28,10 @@ build/spi.o: Src/spi.c Inc/spi.h Inc/main.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi_ex.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h \
- Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_system.h Inc/usart.h
+ Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_system.h Inc/usart.h \
+ Inc/main.h Inc/usart_utils.h
 
-Inc/spi.h:
+Inc/dma.h:
 
 Inc/main.h:
 
@@ -97,3 +98,7 @@ Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h:
 Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_system.h:
 
 Inc/usart.h:
+
+Inc/main.h:
+
+Inc/usart_utils.h:

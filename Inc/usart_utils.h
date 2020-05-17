@@ -3,7 +3,6 @@
 
 #define RESET "\rRESET\n"
 
-void TX(char *s);
-void TXState();
+void RX();
 
 #endif /* __USART_UTILS_H */

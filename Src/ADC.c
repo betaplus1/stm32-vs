@@ -21,7 +21,7 @@ uint16_t ADC_SPI_READ_16()
 {
     uint8_t rxbuffer[2] = {0};
     HAL_SPI_Receive(&hspi2, rxbuffer, 2, HAL_MAX_DELAY);
-    uint16_t answer = (((uint16_t)rxbuffer[1]) << 8) | ((uint16_t)rxbuffer[0]);
+    uint16_t answer = (((uint16_t)rxbuffer[0]) << 8) | ((uint16_t)rxbuffer[1]);
     return answer;
 }
 
@@ -29,7 +29,7 @@ uint32_t ADC_SPI_READ_24()
 {
     uint8_t rxbuffer[3] = {0};
     HAL_SPI_Receive(&hspi2, rxbuffer, 3, HAL_MAX_DELAY);
-    uint32_t answer = (((uint32_t)rxbuffer[2]) << 16) | (((uint32_t)rxbuffer[1]) << 8) | ((uint32_t)rxbuffer[0]);
+    uint32_t answer = (((uint32_t)rxbuffer[0]) << 16) | (((uint32_t)rxbuffer[1]) << 8) | ((uint32_t)rxbuffer[2]);
     return answer;
 }
 
@@ -50,9 +50,15 @@ uint8_t ADC_CMD(uint8_t read, uint8_t addr)
 
 uint16_t ADC_ID()
 {
-    ADC_SPI_WRITE_8(0x47);
-    // ADC_CMD(ADC_READ, ID_REG);
+    ADC_CMD(ADC_READ, ADC_ID_REG);
     uint16_t answer = ADC_SPI_READ_16();
+    return answer;
+}
+
+uint32_t ADC_DATA()
+{
+    ADC_CMD(ADC_READ, ADC_DATA_REG);
+    uint32_t answer = ADC_SPI_READ_24();
     return answer;
 }
 

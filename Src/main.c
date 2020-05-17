@@ -20,6 +20,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "dma.h"
 #include "lptim.h"
 #include "spi.h"
 #include "usart.h"
@@ -48,6 +49,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+uint8_t volatile UART_RX_BUFF[UART_RX_BUFFER_LENGTH] = {0};
 
 /* USER CODE END PV */
 
@@ -90,6 +92,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_LPTIM1_Init();
   MX_USART2_UART_Init();
   MX_SPI2_Init();
@@ -98,12 +101,11 @@ int main(void)
   HAL_LPTIM_MspInit(&hlptim1);
   HAL_LPTIM_Counter_Start_IT(&hlptim1, 250); // 255 for LSE 250 for LSI for 1s timer
   HAL_SPI_MspInit(&hspi2);
-
   ADC_reset();
-  // uint8_t tx[8] = {0xff};
-  // HAL_SPI_Transmit(&hspi2, tx, sizeof tx, 100000);
 
   SERIAL_WRITE(RESET);
+
+  HAL_UART_Receive_DMA(&huart2, UART_RX_BUFF, UART_RX_BUFFER_LENGTH);
 
   /* USER CODE END 2 */
 
@@ -112,9 +114,6 @@ int main(void)
   while (1)
   {
     HAL_Delay(1000);
-
-    SERIAL_WRITE("ADC ID: %x\n", ADC_ID());
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

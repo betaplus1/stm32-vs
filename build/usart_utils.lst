@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccsZvRaS.s 			page 1
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccBqIKPS.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -33,34 +33,35 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccsZvRaS.s 			page 1
    4:Src/usart_utils.c **** #include "usart_utils.h"
    5:Src/usart_utils.c **** 
    6:Src/usart_utils.c **** extern state State;
-   7:Src/usart_utils.c **** 
-   8:Src/usart_utils.c **** void TX(char *s)
-   9:Src/usart_utils.c **** {
-  28              		.loc 1 9 1 view -0
+   7:Src/usart_utils.c **** extern uint8_t UART_RX_BUFF[UART_RX_BUFFER_LENGTH];
+   8:Src/usart_utils.c **** 
+   9:Src/usart_utils.c **** void TX(char *s)
+  10:Src/usart_utils.c **** {
+  28              		.loc 1 10 1 view -0
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
   31              		@ frame_needed = 0, uses_anonymous_args = 0
-  32              		.loc 1 9 1 is_stmt 0 view .LVU1
+  32              		.loc 1 10 1 is_stmt 0 view .LVU1
   33 0000 10B5     		push	{r4, lr}
   34              	.LCFI0:
   35              		.cfi_def_cfa_offset 8
   36              		.cfi_offset 4, -8
   37              		.cfi_offset 14, -4
   38 0002 0100     		movs	r1, r0
-  10:Src/usart_utils.c ****     HAL_UART_Transmit(&huart2, (uint8_t *)s, 100, 100);
-  39              		.loc 1 10 5 is_stmt 1 view .LVU2
+  11:Src/usart_utils.c ****     HAL_UART_Transmit(&huart2, (uint8_t *)s, 100, 100);
+  39              		.loc 1 11 5 is_stmt 1 view .LVU2
   40 0004 6423     		movs	r3, #100
   41 0006 6422     		movs	r2, #100
   42 0008 0148     		ldr	r0, .L2
   43              	.LVL1:
-  44              		.loc 1 10 5 is_stmt 0 view .LVU3
+  44              		.loc 1 11 5 is_stmt 0 view .LVU3
   45 000a FFF7FEFF 		bl	HAL_UART_Transmit
   46              	.LVL2:
-  11:Src/usart_utils.c **** }
-  47              		.loc 1 11 1 view .LVU4
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccsZvRaS.s 			page 2
+  12:Src/usart_utils.c **** }
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccBqIKPS.s 			page 2
 
 
+  47              		.loc 1 12 1 view .LVU4
   48              		@ sp needed
   49 000e 10BD     		pop	{r4, pc}
   50              	.L3:
@@ -85,10 +86,10 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccsZvRaS.s 			page 1
   67              		.fpu softvfp
   69              	TXState:
   70              	.LFB285:
-  12:Src/usart_utils.c **** 
-  13:Src/usart_utils.c **** void TXState()
-  14:Src/usart_utils.c **** {
-  71              		.loc 1 14 1 is_stmt 1 view -0
+  13:Src/usart_utils.c **** 
+  14:Src/usart_utils.c **** void TXState()
+  15:Src/usart_utils.c **** {
+  71              		.loc 1 15 1 is_stmt 1 view -0
   72              		.cfi_startproc
   73              		@ args = 0, pretend = 0, frame = 104
   74              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -99,9 +100,9 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccsZvRaS.s 			page 1
   79 0002 9BB0     		sub	sp, sp, #108
   80              	.LCFI2:
   81              		.cfi_def_cfa_offset 112
-  15:Src/usart_utils.c ****     char buff[100] = {0};
-  82              		.loc 1 15 5 view .LVU6
-  83              		.loc 1 15 10 is_stmt 0 view .LVU7
+  16:Src/usart_utils.c ****     char buff[100] = {0};
+  82              		.loc 1 16 5 view .LVU6
+  83              		.loc 1 16 10 is_stmt 0 view .LVU7
   84 0004 0023     		movs	r3, #0
   85 0006 0193     		str	r3, [sp, #4]
   86 0008 6022     		movs	r2, #96
@@ -109,27 +110,27 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccsZvRaS.s 			page 1
   88 000c 02A8     		add	r0, sp, #8
   89 000e FFF7FEFF 		bl	memset
   90              	.LVL3:
-  16:Src/usart_utils.c ****     sprintf(buff, "\ruptime: %i\n", State.uptime);
-  91              		.loc 1 16 5 is_stmt 1 view .LVU8
+  17:Src/usart_utils.c ****     sprintf(buff, "\ruptime: %i\n", State.uptime);
+  91              		.loc 1 17 5 is_stmt 1 view .LVU8
   92 0012 074B     		ldr	r3, .L5
   93 0014 1A68     		ldr	r2, [r3]
   94 0016 0749     		ldr	r1, .L5+4
   95 0018 01A8     		add	r0, sp, #4
   96 001a FFF7FEFF 		bl	sprintf
   97              	.LVL4:
-  17:Src/usart_utils.c ****     HAL_UART_Transmit(&huart2, buff, sizeof buff, 100);
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccsZvRaS.s 			page 3
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccBqIKPS.s 			page 3
 
 
-  98              		.loc 1 17 5 view .LVU9
+  18:Src/usart_utils.c ****     HAL_UART_Transmit(&huart2, buff, sizeof buff, 100);
+  98              		.loc 1 18 5 view .LVU9
   99 001e 6423     		movs	r3, #100
  100 0020 6422     		movs	r2, #100
  101 0022 01A9     		add	r1, sp, #4
  102 0024 0448     		ldr	r0, .L5+8
  103 0026 FFF7FEFF 		bl	HAL_UART_Transmit
  104              	.LVL5:
-  18:Src/usart_utils.c **** }...
- 105              		.loc 1 18 1 is_stmt 0 view .LVU10
+  19:Src/usart_utils.c **** }
+ 105              		.loc 1 19 1 is_stmt 0 view .LVU10
  106 002a 1BB0     		add	sp, sp, #108
  107              		@ sp needed
  108 002c 00BD     		pop	{pc}
@@ -141,37 +142,170 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccsZvRaS.s 			page 1
  114 0038 00000000 		.word	huart2
  115              		.cfi_endproc
  116              	.LFE285:
- 118              		.text
- 119              	.Letext0:
- 120              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\
- 121              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\
- 122              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
- 123              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
- 124              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
- 125              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
- 126              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
- 127              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
- 128              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
- 129              		.file 11 "Inc/usart.h"
- 130              		.file 12 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include
- 131              		.file 13 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include
- 132              		.file 14 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\lib\\gcc\\arm-none-eab
- 133              		.file 15 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include
- 134              		.file 16 "Inc/state.h"
- 135              		.file 17 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include
- 136              		.file 18 "<built-in>"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccsZvRaS.s 			page 4
+ 118              		.section	.rodata.RX.str1.4,"aMS",%progbits,1
+ 119              		.align	2
+ 120              	.LC5:
+ 121 0000 434F4D4D 		.ascii	"COMMAND:\012\000"
+ 121      414E443A 
+ 121      0A00
+ 122              		.section	.text.RX,"ax",%progbits
+ 123              		.align	1
+ 124              		.global	RX
+ 125              		.syntax unified
+ 126              		.code	16
+ 127              		.thumb_func
+ 128              		.fpu softvfp
+ 130              	RX:
+ 131              	.LFB286:
+  20:Src/usart_utils.c **** 
+  21:Src/usart_utils.c **** void RX()
+  22:Src/usart_utils.c **** {
+ 132              		.loc 1 22 1 is_stmt 1 view -0
+ 133              		.cfi_startproc
+ 134              		@ args = 0, pretend = 0, frame = 104
+ 135              		@ frame_needed = 0, uses_anonymous_args = 0
+ 136 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 137              	.LCFI3:
+ 138              		.cfi_def_cfa_offset 20
+ 139              		.cfi_offset 4, -20
+ 140              		.cfi_offset 5, -16
+ 141              		.cfi_offset 6, -12
+ 142              		.cfi_offset 7, -8
+ 143              		.cfi_offset 14, -4
+ 144 0002 9BB0     		sub	sp, sp, #108
+ 145              	.LCFI4:
+ 146              		.cfi_def_cfa_offset 128
+ 147              	.LBB2:
+  23:Src/usart_utils.c ****     SERIAL_WRITE("COMMAND:\n");
+ 148              		.loc 1 23 5 view .LVU12
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccBqIKPS.s 			page 4
+
+
+ 149 0004 01AC     		add	r4, sp, #4
+ 150 0006 0027     		movs	r7, #0
+ 151 0008 6022     		movs	r2, #96
+ 152 000a 0021     		movs	r1, #0
+ 153 000c 02A8     		add	r0, sp, #8
+ 154 000e FFF7FEFF 		bl	memset
+ 155              	.LVL6:
+ 156              		.loc 1 23 5 view .LVU13
+ 157 0012 174B     		ldr	r3, .L8
+ 158 0014 2200     		movs	r2, r4
+ 159 0016 03CB     		ldmia	r3!, {r0, r1}
+ 160 0018 03C2     		stmia	r2!, {r0, r1}
+ 161 001a 1B88     		ldrh	r3, [r3]
+ 162 001c 1380     		strh	r3, [r2]
+ 163              	.LVL7:
+ 164              		.loc 1 23 5 view .LVU14
+ 165 001e FA26     		movs	r6, #250
+ 166 0020 B600     		lsls	r6, r6, #2
+ 167 0022 144D     		ldr	r5, .L8+4
+ 168 0024 3300     		movs	r3, r6
+ 169 0026 0922     		movs	r2, #9
+ 170 0028 2100     		movs	r1, r4
+ 171 002a 2800     		movs	r0, r5
+ 172 002c FFF7FEFF 		bl	HAL_UART_Transmit
+ 173              	.LVL8:
+ 174              	.LBE2:
+ 175              		.loc 1 23 31 view .LVU15
+ 176              	.LBB3:
+  24:Src/usart_utils.c ****     SERIAL_WRITE(UART_RX_BUFF);
+ 177              		.loc 1 24 5 view .LVU16
+ 178 0030 0197     		str	r7, [sp, #4]
+ 179 0032 6022     		movs	r2, #96
+ 180 0034 0021     		movs	r1, #0
+ 181 0036 02A8     		add	r0, sp, #8
+ 182 0038 FFF7FEFF 		bl	memset
+ 183              	.LVL9:
+ 184              		.loc 1 24 5 view .LVU17
+ 185 003c 0E49     		ldr	r1, .L8+8
+ 186 003e 2000     		movs	r0, r4
+ 187 0040 FFF7FEFF 		bl	sprintf
+ 188              	.LVL10:
+ 189              		.loc 1 24 5 view .LVU18
+ 190 0044 82B2     		uxth	r2, r0
+ 191 0046 3300     		movs	r3, r6
+ 192 0048 2100     		movs	r1, r4
+ 193 004a 2800     		movs	r0, r5
+ 194              	.LVL11:
+ 195              		.loc 1 24 5 is_stmt 0 view .LVU19
+ 196 004c FFF7FEFF 		bl	HAL_UART_Transmit
+ 197              	.LVL12:
+ 198              	.LBE3:
+ 199              		.loc 1 24 31 is_stmt 1 view .LVU20
+ 200              	.LBB4:
+  25:Src/usart_utils.c ****     SERIAL_WRITE("\n");
+ 201              		.loc 1 25 5 view .LVU21
+ 202 0050 0197     		str	r7, [sp, #4]
+ 203 0052 6022     		movs	r2, #96
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccBqIKPS.s 			page 5
+
+
+ 204 0054 0021     		movs	r1, #0
+ 205 0056 02A8     		add	r0, sp, #8
+ 206 0058 FFF7FEFF 		bl	memset
+ 207              	.LVL13:
+ 208              		.loc 1 25 5 view .LVU22
+ 209 005c 0A23     		movs	r3, #10
+ 210 005e 2380     		strh	r3, [r4]
+ 211              	.LVL14:
+ 212              		.loc 1 25 5 view .LVU23
+ 213 0060 3300     		movs	r3, r6
+ 214 0062 0122     		movs	r2, #1
+ 215 0064 2100     		movs	r1, r4
+ 216 0066 2800     		movs	r0, r5
+ 217 0068 FFF7FEFF 		bl	HAL_UART_Transmit
+ 218              	.LVL15:
+ 219              	.LBE4:
+ 220              		.loc 1 25 23 view .LVU24
+  26:Src/usart_utils.c **** }...
+ 221              		.loc 1 26 1 is_stmt 0 view .LVU25
+ 222 006c 1BB0     		add	sp, sp, #108
+ 223              		@ sp needed
+ 224 006e F0BD     		pop	{r4, r5, r6, r7, pc}
+ 225              	.L9:
+ 226              		.align	2
+ 227              	.L8:
+ 228 0070 00000000 		.word	.LC5
+ 229 0074 00000000 		.word	huart2
+ 230 0078 00000000 		.word	UART_RX_BUFF
+ 231              		.cfi_endproc
+ 232              	.LFE286:
+ 234              		.text
+ 235              	.Letext0:
+ 236              		.file 2 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\machine\\_default_ty
+ 237              		.file 3 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 238              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
+ 239              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
+ 240              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+ 241              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+ 242              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
+ 243              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
+ 244              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
+ 245              		.file 11 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\lock.h"
+ 246              		.file 12 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_types.h"
+ 247              		.file 13 "c:\\gnu tools arm embedded\\9 2019-q4-major\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\st
+ 248              		.file 14 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\reent.h"
+ 249              		.file 15 "Inc/usart.h"
+ 250              		.file 16 "Inc/state.h"
+ 251              		.file 17 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\stdio.h"
+ 252              		.file 18 "<built-in>"
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccBqIKPS.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usart_utils.c
-C:\Users\matil\AppData\Local\Temp\ccsZvRaS.s:16     .text.TX:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccsZvRaS.s:24     .text.TX:00000000 TX
-C:\Users\matil\AppData\Local\Temp\ccsZvRaS.s:53     .text.TX:00000010 $d
-C:\Users\matil\AppData\Local\Temp\ccsZvRaS.s:58     .rodata.TXState.str1.4:00000000 $d
-C:\Users\matil\AppData\Local\Temp\ccsZvRaS.s:62     .text.TXState:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccsZvRaS.s:69     .text.TXState:00000000 TXState
-C:\Users\matil\AppData\Local\Temp\ccsZvRaS.s:112    .text.TXState:00000030 $d
+C:\Users\Mateusz\AppData\Local\Temp\ccBqIKPS.s:16     .text.TX:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccBqIKPS.s:24     .text.TX:00000000 TX
+C:\Users\Mateusz\AppData\Local\Temp\ccBqIKPS.s:53     .text.TX:00000010 $d
+C:\Users\Mateusz\AppData\Local\Temp\ccBqIKPS.s:58     .rodata.TXState.str1.4:00000000 $d
+C:\Users\Mateusz\AppData\Local\Temp\ccBqIKPS.s:62     .text.TXState:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccBqIKPS.s:69     .text.TXState:00000000 TXState
+C:\Users\Mateusz\AppData\Local\Temp\ccBqIKPS.s:112    .text.TXState:00000030 $d
+C:\Users\Mateusz\AppData\Local\Temp\ccBqIKPS.s:119    .rodata.RX.str1.4:00000000 $d
+C:\Users\Mateusz\AppData\Local\Temp\ccBqIKPS.s:123    .text.RX:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccBqIKPS.s:130    .text.RX:00000000 RX
+C:\Users\Mateusz\AppData\Local\Temp\ccBqIKPS.s:228    .text.RX:00000070 $d
 
 UNDEFINED SYMBOLS
 HAL_UART_Transmit
@@ -179,3 +313,4 @@ huart2
 memset
 sprintf
 State
+UART_RX_BUFF
