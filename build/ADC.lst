@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s 			page 1
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s 			page 1
   13:Src/ADC.c     ****     uint8_t txbuffer[1] = {data};
   44              		.loc 1 13 5 is_stmt 1 view .LVU2
   45              		.loc 1 13 13 is_stmt 0 view .LVU3
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s 			page 2
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s 			page 2
 
 
   46 0004 03A9     		add	r1, sp, #12
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s 			page 1
   94              		.cfi_startproc
   95              		@ args = 0, pretend = 0, frame = 8
   96              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s 			page 3
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s 			page 3
 
 
   97 0000 10B5     		push	{r4, lr}
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s 			page 1
  148              	ADC_SPI_READ_24:
  149              	.LFB286:
   27:Src/ADC.c     **** 
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s 			page 4
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s 			page 4
 
 
   28:Src/ADC.c     **** uint32_t ADC_SPI_READ_24()
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s 			page 1
  197              		@ sp needed
  198 002e 10BD     		pop	{r4, pc}
  199              	.L9:
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s 			page 5
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s 			page 5
 
 
  200              		.align	2
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s 			page 1
  248              		.loc 1 42 1 is_stmt 0 view .LVU44
  249 001e 03B0     		add	sp, sp, #12
  250              		@ sp needed
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s 			page 6
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s 			page 6
 
 
  251 0020 00BD     		pop	{pc}
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s 			page 1
  301              		.section	.text.ADC_ID,"ax",%progbits
  302              		.align	1
  303              		.global	ADC_ID
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s 			page 7
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s 			page 7
 
 
  304              		.syntax unified
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s 			page 1
  351              	.LCFI10:
  352              		.cfi_def_cfa_offset 8
  353              		.cfi_offset 4, -8
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s 			page 8
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s 			page 8
 
 
  354              		.cfi_offset 14, -4
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s 			page 1
  401 0010 6946     		mov	r1, sp
  402 0012 0348     		ldr	r0, .L17+4
  403 0014 FFF7FEFF 		bl	HAL_SPI_Transmit
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s 			page 9
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s 			page 9
 
 
  404              	.LVL19:
@@ -519,34 +519,34 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s 			page 1
  439              		.file 16 "Inc/usart.h"
  440              		.file 17 "Inc/state.h"
  441              		.file 18 "Inc/spi.h"
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s 			page 10
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ADC.c
-C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s:16     .rodata.ADC_SPI_WRITE_8.str1.4:00000000 $d
-C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s:20     .text.ADC_SPI_WRITE_8:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s:28     .text.ADC_SPI_WRITE_8:00000000 ADC_SPI_WRITE_8
-C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s:78     .text.ADC_SPI_WRITE_8:00000028 $d
-C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s:84     .text.ADC_SPI_READ_16:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s:91     .text.ADC_SPI_READ_16:00000000 ADC_SPI_READ_16
-C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s:136    .text.ADC_SPI_READ_16:00000024 $d
-C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s:141    .text.ADC_SPI_READ_24:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s:148    .text.ADC_SPI_READ_24:00000000 ADC_SPI_READ_24
-C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s:202    .text.ADC_SPI_READ_24:00000030 $d
-C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s:208    .text.ADC_SPI_READ_8:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s:215    .text.ADC_SPI_READ_8:00000000 ADC_SPI_READ_8
-C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s:255    .text.ADC_SPI_READ_8:00000024 $d
-C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s:261    .text.ADC_CMD:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s:268    .text.ADC_CMD:00000000 ADC_CMD
-C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s:302    .text.ADC_ID:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s:309    .text.ADC_ID:00000000 ADC_ID
-C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s:337    .text.ADC_DATA:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s:344    .text.ADC_DATA:00000000 ADC_DATA
-C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s:372    .text.ADC_reset:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s:379    .text.ADC_reset:00000000 ADC_reset
-C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s:412    .text.ADC_reset:0000001c $d
-C:\Users\Mateusz\AppData\Local\Temp\ccfsvz9M.s:418    .rodata:00000000 $d
+C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s:16     .rodata.ADC_SPI_WRITE_8.str1.4:00000000 $d
+C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s:20     .text.ADC_SPI_WRITE_8:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s:28     .text.ADC_SPI_WRITE_8:00000000 ADC_SPI_WRITE_8
+C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s:78     .text.ADC_SPI_WRITE_8:00000028 $d
+C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s:84     .text.ADC_SPI_READ_16:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s:91     .text.ADC_SPI_READ_16:00000000 ADC_SPI_READ_16
+C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s:136    .text.ADC_SPI_READ_16:00000024 $d
+C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s:141    .text.ADC_SPI_READ_24:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s:148    .text.ADC_SPI_READ_24:00000000 ADC_SPI_READ_24
+C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s:202    .text.ADC_SPI_READ_24:00000030 $d
+C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s:208    .text.ADC_SPI_READ_8:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s:215    .text.ADC_SPI_READ_8:00000000 ADC_SPI_READ_8
+C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s:255    .text.ADC_SPI_READ_8:00000024 $d
+C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s:261    .text.ADC_CMD:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s:268    .text.ADC_CMD:00000000 ADC_CMD
+C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s:302    .text.ADC_ID:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s:309    .text.ADC_ID:00000000 ADC_ID
+C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s:337    .text.ADC_DATA:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s:344    .text.ADC_DATA:00000000 ADC_DATA
+C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s:372    .text.ADC_reset:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s:379    .text.ADC_reset:00000000 ADC_reset
+C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s:412    .text.ADC_reset:0000001c $d
+C:\Users\Mateusz\AppData\Local\Temp\cczeoyAQ.s:418    .rodata:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_SPI_TransmitReceive

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s 			page 1
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s 			page 1
   30:Src/stm32g0xx_it.c **** /* Private typedef -----------------------------------------------------------*/
   31:Src/stm32g0xx_it.c **** /* USER CODE BEGIN TD */
   32:Src/stm32g0xx_it.c **** 
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s 			page 2
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s 			page 2
 
 
   33:Src/stm32g0xx_it.c **** /* USER CODE END TD */
@@ -77,7 +77,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s 			page 1
   46:Src/stm32g0xx_it.c **** /* USER CODE BEGIN PV */
   47:Src/stm32g0xx_it.c **** extern state State;
   48:Src/stm32g0xx_it.c **** extern uint8_t UART_RX_INDEX;
-  49:Src/stm32g0xx_it.c **** extern uint8_t UART_RX_BUFF[10];
+  49:Src/stm32g0xx_it.c **** extern uint8_t UART_RX_BUFF[UART_RX_BUFFER_LENGTH];
   50:Src/stm32g0xx_it.c **** /* USER CODE END PV */
   51:Src/stm32g0xx_it.c **** 
   52:Src/stm32g0xx_it.c **** /* Private function prototypes -----------------------------------------------*/
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s 			page 1
   82:Src/stm32g0xx_it.c **** 
   83:Src/stm32g0xx_it.c ****   /* USER CODE END NonMaskableInt_IRQn 1 */
   84:Src/stm32g0xx_it.c **** }
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s 			page 3
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s 			page 3
 
 
   32              		.loc 1 84 1 view .LVU1
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s 			page 1
  102:Src/stm32g0xx_it.c ****   * @brief This function handles System service call via SWI instruction.
  103:Src/stm32g0xx_it.c ****   */
  104:Src/stm32g0xx_it.c **** void SVC_Handler(void)
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s 			page 4
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s 			page 4
 
 
  105:Src/stm32g0xx_it.c **** {
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s 			page 1
  108              		.code	16
  109              		.thumb_func
  110              		.fpu softvfp
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s 			page 5
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s 			page 5
 
 
  112              	SysTick_Handler:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s 			page 1
  152:Src/stm32g0xx_it.c **** {
  142              		.loc 1 152 1 is_stmt 1 view -0
  143              		.cfi_startproc
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s 			page 6
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s 			page 6
 
 
  144              		@ args = 0, pretend = 0, frame = 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s 			page 1
  179              	.LFE290:
  181              		.section	.text.DMA1_Channel1_IRQHandler,"ax",%progbits
  182              		.align	1
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s 			page 7
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s 			page 7
 
 
  183              		.global	DMA1_Channel1_IRQHandler
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s 			page 1
  190:Src/stm32g0xx_it.c ****   * @brief This function handles TIM6, DAC1 and LPTIM1 interrupts (LPTIM1 interrupt through EXTI li
  191:Src/stm32g0xx_it.c ****   */
  192:Src/stm32g0xx_it.c **** void TIM6_DAC_LPTIM1_IRQHandler(void)
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s 			page 8
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s 			page 8
 
 
  193:Src/stm32g0xx_it.c **** {
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s 			page 1
  270              	.LFB293:
  203:Src/stm32g0xx_it.c **** 
  204:Src/stm32g0xx_it.c **** /**
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s 			page 9
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s 			page 9
 
 
  205:Src/stm32g0xx_it.c ****   * @brief This function handles USART2 global interrupt / USART2 wake-up interrupt through EXTI li
@@ -487,90 +487,151 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s 			page 1
  208:Src/stm32g0xx_it.c **** {
  271              		.loc 1 208 1 is_stmt 1 view -0
  272              		.cfi_startproc
- 273              		@ args = 0, pretend = 0, frame = 0
+ 273              		@ args = 0, pretend = 0, frame = 104
  274              		@ frame_needed = 0, uses_anonymous_args = 0
- 275 0000 10B5     		push	{r4, lr}
+ 275 0000 F0B5     		push	{r4, r5, r6, r7, lr}
  276              	.LCFI4:
- 277              		.cfi_def_cfa_offset 8
- 278              		.cfi_offset 4, -8
- 279              		.cfi_offset 14, -4
+ 277              		.cfi_def_cfa_offset 20
+ 278              		.cfi_offset 4, -20
+ 279              		.cfi_offset 5, -16
+ 280              		.cfi_offset 6, -12
+ 281              		.cfi_offset 7, -8
+ 282              		.cfi_offset 14, -4
+ 283 0002 9BB0     		sub	sp, sp, #108
+ 284              	.LCFI5:
+ 285              		.cfi_def_cfa_offset 128
+ 286              	.LBB2:
  209:Src/stm32g0xx_it.c ****   /* USER CODE BEGIN USART2_IRQn 0 */
- 210:Src/stm32g0xx_it.c **** 
- 211:Src/stm32g0xx_it.c ****   /* USER CODE END USART2_IRQn 0 */
- 212:Src/stm32g0xx_it.c ****   HAL_UART_IRQHandler(&huart2);
- 280              		.loc 1 212 3 view .LVU29
- 281 0002 044C     		ldr	r4, .L16
- 282 0004 2000     		movs	r0, r4
- 283 0006 FFF7FEFF 		bl	HAL_UART_IRQHandler
- 284              	.LVL5:
- 213:Src/stm32g0xx_it.c **** 
- 214:Src/stm32g0xx_it.c ****   /* USER CODE BEGIN USART2_IRQn 1 */
- 215:Src/stm32g0xx_it.c ****   IDLE_UART_IRQHandler(&huart2);
- 285              		.loc 1 215 3 view .LVU30
- 286 000a 2000     		movs	r0, r4
- 287 000c FFF7FEFF 		bl	IDLE_UART_IRQHandler
- 288              	.LVL6:
- 216:Src/stm32g0xx_it.c ****   /* USER CODE END USART2_IRQn 1 */
- 217:Src/stm32g0xx_it.c **** }
- 289              		.loc 1 217 1 is_stmt 0 view .LVU31
- 290              		@ sp needed
- 291 0010 10BD     		pop	{r4, pc}
- 292              	.L17:
- 293 0012 C046     		.align	2
- 294              	.L16:
- 295 0014 00000000 		.word	huart2
- 296              		.cfi_endproc
- 297              	.LFE293:
- 299              		.text
- 300              	.Letext0:
- 301              		.file 2 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\machine\\_default_ty
- 302              		.file 3 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_stdint.h"
- 303              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
- 304              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
- 305              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
- 306              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
- 307              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
- 308              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_lptim.h"
- 309              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
- 310              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
- 311              		.file 12 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\lock.h"
- 312              		.file 13 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_types.h"
- 313              		.file 14 "c:\\gnu tools arm embedded\\9 2019-q4-major\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\st
- 314              		.file 15 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\reent.h"
- 315              		.file 16 "Inc/usart.h"
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s 			page 10
+ 210:Src/stm32g0xx_it.c ****   SERIAL_WRITE(UART_RX_BUFF)
+ 287              		.loc 1 210 3 view .LVU29
+ 288 0004 01AD     		add	r5, sp, #4
+ 289 0006 0027     		movs	r7, #0
+ 290 0008 0197     		str	r7, [sp, #4]
+ 291 000a 6022     		movs	r2, #96
+ 292 000c 0021     		movs	r1, #0
+ 293 000e 02A8     		add	r0, sp, #8
+ 294 0010 FFF7FEFF 		bl	memset
+ 295              	.LVL5:
+ 296              		.loc 1 210 3 view .LVU30
+ 297 0014 1149     		ldr	r1, .L16
+ 298 0016 2800     		movs	r0, r5
+ 299 0018 FFF7FEFF 		bl	sprintf
+ 300              	.LVL6:
+ 301              		.loc 1 210 3 view .LVU31
+ 302 001c FA26     		movs	r6, #250
+ 303 001e B600     		lsls	r6, r6, #2
+ 304 0020 82B2     		uxth	r2, r0
+ 305 0022 0F4C     		ldr	r4, .L16+4
+ 306 0024 3300     		movs	r3, r6
+ 307 0026 2900     		movs	r1, r5
+ 308 0028 2000     		movs	r0, r4
+ 309              	.LVL7:
+ 310              		.loc 1 210 3 is_stmt 0 view .LVU32
+ 311 002a FFF7FEFF 		bl	HAL_UART_Transmit
+ 312              	.LVL8:
+ 313              	.LBE2:
+ 314              	.LBB3:
+ 211:Src/stm32g0xx_it.c ****   SERIAL_WRITE("\n")
+ 315              		.loc 1 211 3 is_stmt 1 view .LVU33
+ 316 002e 0197     		str	r7, [sp, #4]
+ 317 0030 6022     		movs	r2, #96
+ 318 0032 0021     		movs	r1, #0
+ 319 0034 02A8     		add	r0, sp, #8
+ 320 0036 FFF7FEFF 		bl	memset
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s 			page 10
 
 
- 316              		.file 17 "Inc/state.h"
- 317              		.file 18 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s 			page 11
+ 321              	.LVL9:
+ 322              		.loc 1 211 3 view .LVU34
+ 323 003a 0A23     		movs	r3, #10
+ 324 003c 2B80     		strh	r3, [r5]
+ 325              	.LVL10:
+ 326              		.loc 1 211 3 view .LVU35
+ 327 003e 3300     		movs	r3, r6
+ 328 0040 0122     		movs	r2, #1
+ 329 0042 2900     		movs	r1, r5
+ 330 0044 2000     		movs	r0, r4
+ 331 0046 FFF7FEFF 		bl	HAL_UART_Transmit
+ 332              	.LVL11:
+ 333              	.LBE3:
+ 212:Src/stm32g0xx_it.c ****   /* USER CODE END USART2_IRQn 0 */
+ 213:Src/stm32g0xx_it.c ****   HAL_UART_IRQHandler(&huart2);
+ 334              		.loc 1 213 3 view .LVU36
+ 335 004a 2000     		movs	r0, r4
+ 336 004c FFF7FEFF 		bl	HAL_UART_IRQHandler
+ 337              	.LVL12:
+ 214:Src/stm32g0xx_it.c **** 
+ 215:Src/stm32g0xx_it.c ****   /* USER CODE BEGIN USART2_IRQn 1 */
+ 216:Src/stm32g0xx_it.c ****   IDLE_UART_IRQHandler(&huart2);
+ 338              		.loc 1 216 3 view .LVU37
+ 339 0050 2000     		movs	r0, r4
+ 340 0052 FFF7FEFF 		bl	IDLE_UART_IRQHandler
+ 341              	.LVL13:
+ 217:Src/stm32g0xx_it.c ****   /* USER CODE END USART2_IRQn 1 */
+ 218:Src/stm32g0xx_it.c **** }
+ 342              		.loc 1 218 1 is_stmt 0 view .LVU38
+ 343 0056 1BB0     		add	sp, sp, #108
+ 344              		@ sp needed
+ 345 0058 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 346              	.L17:
+ 347 005a C046     		.align	2
+ 348              	.L16:
+ 349 005c 00000000 		.word	UART_RX_BUFF
+ 350 0060 00000000 		.word	huart2
+ 351              		.cfi_endproc
+ 352              	.LFE293:
+ 354              		.text
+ 355              	.Letext0:
+ 356              		.file 2 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\machine\\_default_ty
+ 357              		.file 3 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 358              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
+ 359              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
+ 360              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+ 361              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+ 362              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
+ 363              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_lptim.h"
+ 364              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
+ 365              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
+ 366              		.file 12 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\lock.h"
+ 367              		.file 13 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_types.h"
+ 368              		.file 14 "c:\\gnu tools arm embedded\\9 2019-q4-major\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\st
+ 369              		.file 15 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\reent.h"
+ 370              		.file 16 "Inc/usart.h"
+ 371              		.file 17 "Inc/state.h"
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s 			page 11
+
+
+ 372              		.file 18 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\stdio.h"
+ 373              		.file 19 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
+ 374              		.file 20 "<built-in>"
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g0xx_it.c
-C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s:16     .text.NMI_Handler:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s:24     .text.NMI_Handler:00000000 NMI_Handler
-C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s:39     .text.HardFault_Handler:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s:46     .text.HardFault_Handler:00000000 HardFault_Handler
-C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s:63     .text.SVC_Handler:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s:70     .text.SVC_Handler:00000000 SVC_Handler
-C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s:84     .text.PendSV_Handler:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s:91     .text.PendSV_Handler:00000000 PendSV_Handler
-C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s:105    .text.SysTick_Handler:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s:112    .text.SysTick_Handler:00000000 SysTick_Handler
-C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s:133    .text.FLASH_IRQHandler:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s:140    .text.FLASH_IRQHandler:00000000 FLASH_IRQHandler
-C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s:161    .text.RCC_IRQHandler:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s:168    .text.RCC_IRQHandler:00000000 RCC_IRQHandler
-C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s:182    .text.DMA1_Channel1_IRQHandler:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s:189    .text.DMA1_Channel1_IRQHandler:00000000 DMA1_Channel1_IRQHandler
-C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s:210    .text.DMA1_Channel1_IRQHandler:0000000c $d
-C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s:215    .text.TIM6_DAC_LPTIM1_IRQHandler:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s:222    .text.TIM6_DAC_LPTIM1_IRQHandler:00000000 TIM6_DAC_LPTIM1_IRQHandler
-C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s:256    .text.TIM6_DAC_LPTIM1_IRQHandler:0000001c $d
-C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s:262    .text.USART2_IRQHandler:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s:269    .text.USART2_IRQHandler:00000000 USART2_IRQHandler
-C:\Users\Mateusz\AppData\Local\Temp\ccnOrXm9.s:295    .text.USART2_IRQHandler:00000014 $d
+C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s:16     .text.NMI_Handler:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s:24     .text.NMI_Handler:00000000 NMI_Handler
+C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s:39     .text.HardFault_Handler:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s:46     .text.HardFault_Handler:00000000 HardFault_Handler
+C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s:63     .text.SVC_Handler:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s:70     .text.SVC_Handler:00000000 SVC_Handler
+C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s:84     .text.PendSV_Handler:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s:91     .text.PendSV_Handler:00000000 PendSV_Handler
+C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s:105    .text.SysTick_Handler:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s:112    .text.SysTick_Handler:00000000 SysTick_Handler
+C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s:133    .text.FLASH_IRQHandler:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s:140    .text.FLASH_IRQHandler:00000000 FLASH_IRQHandler
+C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s:161    .text.RCC_IRQHandler:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s:168    .text.RCC_IRQHandler:00000000 RCC_IRQHandler
+C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s:182    .text.DMA1_Channel1_IRQHandler:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s:189    .text.DMA1_Channel1_IRQHandler:00000000 DMA1_Channel1_IRQHandler
+C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s:210    .text.DMA1_Channel1_IRQHandler:0000000c $d
+C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s:215    .text.TIM6_DAC_LPTIM1_IRQHandler:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s:222    .text.TIM6_DAC_LPTIM1_IRQHandler:00000000 TIM6_DAC_LPTIM1_IRQHandler
+C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s:256    .text.TIM6_DAC_LPTIM1_IRQHandler:0000001c $d
+C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s:262    .text.USART2_IRQHandler:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s:269    .text.USART2_IRQHandler:00000000 USART2_IRQHandler
+C:\Users\Mateusz\AppData\Local\Temp\cceuFymx.s:349    .text.USART2_IRQHandler:0000005c $d
 
 UNDEFINED SYMBOLS
 HAL_IncTick
@@ -581,6 +642,10 @@ HAL_GPIO_TogglePin
 HAL_LPTIM_IRQHandler
 State
 hlptim1
+memset
+sprintf
+HAL_UART_Transmit
 HAL_UART_IRQHandler
 IDLE_UART_IRQHandler
+UART_RX_BUFF
 huart2

@@ -30,7 +30,7 @@
 /*----------------------------------------------------------------------------*/
 
 /* USER CODE BEGIN 1 */
-extern uint8_t UART_RX_BUFF[10];
+extern uint8_t UART_RX_BUFF[UART_RX_BUFFER_LENGTH];
 /* USER CODE END 1 */
 
 /** 
@@ -51,7 +51,7 @@ void MX_DMA_Init(void)
 /* USER CODE BEGIN 2 */
 HAL_UART_RxCpltCallback()
 {
-  RX();
+  UART_PARSE(UART_RX_BUFF);
   for (int i = UART_RX_BUFFER_LENGTH; i >= 0; i--)
   {
     UART_RX_BUFF[i] = '\0';

@@ -21,6 +21,7 @@
 #include "usart.h"
 
 /* USER CODE BEGIN 0 */
+#include "usart_utils.h"
 extern uint8_t UART_RX_BUFF[UART_RX_BUFFER_LENGTH];
 /* USER CODE END 0 */
 
@@ -144,26 +145,43 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef *uartHandle)
 
 void CHECK_IF_END()
 {
-  uint8_t flag = 0;
+  uint8_t returnflag = 0;
+  uint8_t backspaceflag = 0;
   int i = 0;
   for (i; i < UART_RX_BUFFER_LENGTH; i++)
   {
     if (UART_RX_BUFF[i] == 13)
     {
       UART_RX_BUFF[i] = '\0';
-      flag = 1;
+      returnflag = 1;
+      break;
+    }
+    if (UART_RX_BUFF[i] == 8)
+    {
+      UART_RX_BUFF[i] = '\0';
+      backspaceflag = 1;
       break;
     }
   }
-  if (flag)
+  if (returnflag)
   {
-    RX();
+    UART_PARSE(UART_RX_BUFF);
     HAL_UART_DMAStop(&huart2);
     for (i; i >= 0; i--)
     {
       UART_RX_BUFF[i] = '\0';
     }
     HAL_UART_Receive_DMA(&huart2, UART_RX_BUFF, UART_RX_BUFFER_LENGTH);
+  }
+  else if (backspaceflag)
+  {
+    HAL_UART_DMAStop(&huart2);
+    for (i; i >= 0; i--)
+    {
+      UART_RX_BUFF[i] = '\0';
+    }
+    HAL_UART_Receive_DMA(&huart2, UART_RX_BUFF, UART_RX_BUFFER_LENGTH);
+    SERIAL_WRITE("\n")
   }
 }
 

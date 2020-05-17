@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5mnnBb.s 			page 1
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,10 +58,10 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5mnnBb.s 			page 1
   30:Src/dma.c     **** /*----------------------------------------------------------------------------*/
   31:Src/dma.c     **** 
   32:Src/dma.c     **** /* USER CODE BEGIN 1 */
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5mnnBb.s 			page 2
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s 			page 2
 
 
-  33:Src/dma.c     **** extern uint8_t UART_RX_BUFF[10];
+  33:Src/dma.c     **** extern uint8_t UART_RX_BUFF[UART_RX_BUFFER_LENGTH];
   34:Src/dma.c     **** /* USER CODE END 1 */
   35:Src/dma.c     **** 
   36:Src/dma.c     **** /** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5mnnBb.s 			page 1
   49:Src/dma.c     **** }
   65              		.loc 1 49 1 is_stmt 0 view .LVU9
   66 0026 03B0     		add	sp, sp, #12
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5mnnBb.s 			page 3
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s 			page 3
 
 
   67              		@ sp needed
@@ -151,88 +151,89 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5mnnBb.s 			page 1
   92              		.cfi_def_cfa_offset 8
   93              		.cfi_offset 4, -8
   94              		.cfi_offset 14, -4
-  54:Src/dma.c     ****   RX();
+  54:Src/dma.c     ****   UART_PARSE(UART_RX_BUFF);
   95              		.loc 1 54 3 view .LVU11
-  96 0002 FFF7FEFF 		bl	RX
-  97              	.LVL2:
+  96 0002 0648     		ldr	r0, .L8
+  97 0004 FFF7FEFF 		bl	UART_PARSE
+  98              	.LVL2:
   55:Src/dma.c     ****   for (int i = UART_RX_BUFFER_LENGTH; i >= 0; i--)
-  98              		.loc 1 55 3 view .LVU12
-  99              	.LBB3:
- 100              		.loc 1 55 8 view .LVU13
- 101              		.loc 1 55 12 is_stmt 0 view .LVU14
- 102 0006 4023     		movs	r3, #64
- 103              	.LVL3:
- 104              	.L5:
- 105              		.loc 1 55 39 is_stmt 1 discriminator 1 view .LVU15
- 106              		.loc 1 55 3 is_stmt 0 discriminator 1 view .LVU16
- 107 0008 002B     		cmp	r3, #0
- 108 000a 04DB     		blt	.L7
+  99              		.loc 1 55 3 view .LVU12
+ 100              	.LBB3:
+ 101              		.loc 1 55 8 view .LVU13
+ 102              		.loc 1 55 12 is_stmt 0 view .LVU14
+ 103 0008 4023     		movs	r3, #64
+ 104              	.LVL3:
+ 105              	.L5:
+ 106              		.loc 1 55 39 is_stmt 1 discriminator 1 view .LVU15
+ 107              		.loc 1 55 3 is_stmt 0 discriminator 1 view .LVU16
+ 108 000a 002B     		cmp	r3, #0
+ 109 000c 04DB     		blt	.L7
   56:Src/dma.c     ****   {
   57:Src/dma.c     ****     UART_RX_BUFF[i] = '\0';
- 109              		.loc 1 57 5 is_stmt 1 discriminator 3 view .LVU17
- 110              		.loc 1 57 21 is_stmt 0 discriminator 3 view .LVU18
- 111 000c 024A     		ldr	r2, .L8
- 112 000e 0021     		movs	r1, #0
- 113 0010 D154     		strb	r1, [r2, r3]
+ 110              		.loc 1 57 5 is_stmt 1 discriminator 3 view .LVU17
+ 111              		.loc 1 57 21 is_stmt 0 discriminator 3 view .LVU18
+ 112 000e 034A     		ldr	r2, .L8
+ 113 0010 0021     		movs	r1, #0
+ 114 0012 D154     		strb	r1, [r2, r3]
   55:Src/dma.c     ****   for (int i = UART_RX_BUFFER_LENGTH; i >= 0; i--)
- 114              		.loc 1 55 47 is_stmt 1 discriminator 3 view .LVU19
+ 115              		.loc 1 55 47 is_stmt 1 discriminator 3 view .LVU19
   55:Src/dma.c     ****   for (int i = UART_RX_BUFFER_LENGTH; i >= 0; i--)
- 115              		.loc 1 55 48 is_stmt 0 discriminator 3 view .LVU20
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5mnnBb.s 			page 4
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s 			page 4
 
 
- 116 0012 013B     		subs	r3, r3, #1
- 117              	.LVL4:
+ 116              		.loc 1 55 48 is_stmt 0 discriminator 3 view .LVU20
+ 117 0014 013B     		subs	r3, r3, #1
+ 118              	.LVL4:
   55:Src/dma.c     ****   for (int i = UART_RX_BUFFER_LENGTH; i >= 0; i--)
- 118              		.loc 1 55 48 discriminator 3 view .LVU21
- 119 0014 F8E7     		b	.L5
- 120              	.L7:
+ 119              		.loc 1 55 48 discriminator 3 view .LVU21
+ 120 0016 F8E7     		b	.L5
+ 121              	.L7:
   55:Src/dma.c     ****   for (int i = UART_RX_BUFFER_LENGTH; i >= 0; i--)
- 121              		.loc 1 55 48 discriminator 3 view .LVU22
- 122              	.LBE3:
+ 122              		.loc 1 55 48 discriminator 3 view .LVU22
+ 123              	.LBE3:
   58:Src/dma.c     ****   }
   59:Src/dma.c     **** }
- 123              		.loc 1 59 1 view .LVU23
- 124              		@ sp needed
- 125 0016 10BD     		pop	{r4, pc}
- 126              	.L9:
- 127              		.align	2
- 128              	.L8:
- 129 0018 00000000 		.word	UART_RX_BUFF
- 130              		.cfi_endproc
- 131              	.LFE285:
- 133              		.text
- 134              	.Letext0:
- 135              		.file 2 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\machine\\_default_ty
- 136              		.file 3 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_stdint.h"
- 137              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
- 138              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
- 139              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
- 140              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
- 141              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
- 142              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
- 143              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
- 144              		.file 11 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\lock.h"
- 145              		.file 12 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_types.h"
- 146              		.file 13 "c:\\gnu tools arm embedded\\9 2019-q4-major\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\st
- 147              		.file 14 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\reent.h"
- 148              		.file 15 "Inc/usart.h"
- 149              		.file 16 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h"
- 150              		.file 17 "Inc/usart_utils.h"
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5mnnBb.s 			page 5
+ 124              		.loc 1 59 1 view .LVU23
+ 125              		@ sp needed
+ 126 0018 10BD     		pop	{r4, pc}
+ 127              	.L9:
+ 128 001a C046     		.align	2
+ 129              	.L8:
+ 130 001c 00000000 		.word	UART_RX_BUFF
+ 131              		.cfi_endproc
+ 132              	.LFE285:
+ 134              		.text
+ 135              	.Letext0:
+ 136              		.file 2 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\machine\\_default_ty
+ 137              		.file 3 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 138              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
+ 139              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
+ 140              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+ 141              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+ 142              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
+ 143              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
+ 144              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
+ 145              		.file 11 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\lock.h"
+ 146              		.file 12 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_types.h"
+ 147              		.file 13 "c:\\gnu tools arm embedded\\9 2019-q4-major\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\st
+ 148              		.file 14 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\reent.h"
+ 149              		.file 15 "Inc/usart.h"
+ 150              		.file 16 "Inc/usart_utils.h"
+ 151              		.file 17 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h"
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 dma.c
-C:\Users\Mateusz\AppData\Local\Temp\cc5mnnBb.s:16     .text.MX_DMA_Init:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\cc5mnnBb.s:24     .text.MX_DMA_Init:00000000 MX_DMA_Init
-C:\Users\Mateusz\AppData\Local\Temp\cc5mnnBb.s:72     .text.MX_DMA_Init:0000002c $d
-C:\Users\Mateusz\AppData\Local\Temp\cc5mnnBb.s:77     .text.HAL_UART_RxCpltCallback:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\cc5mnnBb.s:84     .text.HAL_UART_RxCpltCallback:00000000 HAL_UART_RxCpltCallback
-C:\Users\Mateusz\AppData\Local\Temp\cc5mnnBb.s:129    .text.HAL_UART_RxCpltCallback:00000018 $d
+C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s:16     .text.MX_DMA_Init:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s:24     .text.MX_DMA_Init:00000000 MX_DMA_Init
+C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s:72     .text.MX_DMA_Init:0000002c $d
+C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s:77     .text.HAL_UART_RxCpltCallback:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s:84     .text.HAL_UART_RxCpltCallback:00000000 HAL_UART_RxCpltCallback
+C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s:130    .text.HAL_UART_RxCpltCallback:0000001c $d
 
 UNDEFINED SYMBOLS
 HAL_NVIC_SetPriority
 HAL_NVIC_EnableIRQ
-RX
+UART_PARSE
 UART_RX_BUFF

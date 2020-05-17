@@ -46,7 +46,7 @@
 /* USER CODE BEGIN PV */
 extern state State;
 extern uint8_t UART_RX_INDEX;
-extern uint8_t UART_RX_BUFF[10];
+extern uint8_t UART_RX_BUFF[UART_RX_BUFFER_LENGTH];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -207,7 +207,8 @@ void TIM6_DAC_LPTIM1_IRQHandler(void)
 void USART2_IRQHandler(void)
 {
   /* USER CODE BEGIN USART2_IRQn 0 */
-
+  SERIAL_WRITE(UART_RX_BUFF)
+  SERIAL_WRITE("\n")
   /* USER CODE END USART2_IRQn 0 */
   HAL_UART_IRQHandler(&huart2);
 

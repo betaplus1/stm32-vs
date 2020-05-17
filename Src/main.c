@@ -50,7 +50,7 @@
 
 /* USER CODE BEGIN PV */
 uint8_t volatile UART_RX_BUFF[UART_RX_BUFFER_LENGTH] = {0};
-
+uint8_t volatile COMMAND = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -113,7 +113,26 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    HAL_Delay(1000);
+    if (COMMAND == cmd_blink)
+    {
+      for (int i = 0; i < 10; i++)
+      {
+        HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
+        HAL_Delay(100);
+      }
+      COMMAND = 0;
+    }
+    else if (COMMAND == cmd_adc_id)
+    {
+      SERIAL_WRITE("ADC ID: %x\n", ADC_ID());
+      COMMAND = 0;
+    }
+    else if (COMMAND == cmd_adc_reset)
+    {
+      SERIAL_WRITE("ADC RESET\n");
+      ADC_reset();
+      COMMAND = 0;
+    }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
