@@ -9,12 +9,9 @@ extern uint8_t COMMAND;
 
 void UART_PARSE(uint8_t buffer[UART_RX_BUFFER_LENGTH])
 {
-    SERIAL_WRITE("[UART_PARSE]: ");
-    SERIAL_WRITE(buffer);
     SERIAL_WRITE(" => ");
     if (strcmp(buffer, "blink") == 0)
     {
-        SERIAL_WRITE("ok");
         COMMAND = cmd_blink;
     }
     else if (strcmp(buffer, "adc id") == 0)
@@ -25,8 +22,16 @@ void UART_PARSE(uint8_t buffer[UART_RX_BUFFER_LENGTH])
     {
         COMMAND = cmd_adc_reset;
     }
+    else if (strcmp(buffer, "adc debug") == 0)
+    {
+        COMMAND = cmd_adc_debug;
+    }
+    else if (strcmp(buffer, "adc data") == 0)
+    {
+        COMMAND = cmd_adc_data;
+    }
     else
     {
-        SERIAL_WRITE("undefined\n");
+        COMMAND = cmd_undefined;
     }
 }

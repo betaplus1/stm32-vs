@@ -68,7 +68,7 @@ extern UART_HandleTypeDef huart2;
 /* USER CODE END EV */
 
 /******************************************************************************/
-/*           Cortex-M0+ Processor Interruption and Exception Handlers          */
+/*           Cortex-M0+ Processor Interruption and Exception Handlers          */ 
 /******************************************************************************/
 /**
   * @brief This function handles Non maskable interrupt.
@@ -207,11 +207,8 @@ void TIM6_DAC_LPTIM1_IRQHandler(void)
 void USART2_IRQHandler(void)
 {
   /* USER CODE BEGIN USART2_IRQn 0 */
-  SERIAL_WRITE(UART_RX_BUFF)
-  SERIAL_WRITE("\n")
   /* USER CODE END USART2_IRQn 0 */
   HAL_UART_IRQHandler(&huart2);
-
   /* USER CODE BEGIN USART2_IRQn 1 */
   IDLE_UART_IRQHandler(&huart2);
   /* USER CODE END USART2_IRQn 1 */

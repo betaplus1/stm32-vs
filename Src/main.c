@@ -1,21 +1,21 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
-  * All rights reserved.</center></h2>
-  *
-  * This software component is licensed by ST under BSD 3-Clause license,
-  * the "License"; You may not use this file except in compliance with the
-  * License. You may obtain a copy of the License at:
-  *                        opensource.org/licenses/BSD-3-Clause
-  *
-  ******************************************************************************
-  */
+	******************************************************************************
+	* @file           : main.c
+	* @brief          : Main program body
+	******************************************************************************
+	* @attention
+	*
+	* <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
+	* All rights reserved.</center></h2>
+	*
+	* This software component is licensed by ST under BSD 3-Clause license,
+	* the "License"; You may not use this file except in compliance with the
+	* License. You may obtain a copy of the License at:
+	*                        opensource.org/licenses/BSD-3-Clause
+	*
+	******************************************************************************
+	*/
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
@@ -28,6 +28,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "ADC.h"
 #include "state.h"
 #include "usart_utils.h"
 /* USER CODE END Includes */
@@ -51,6 +52,8 @@
 /* USER CODE BEGIN PV */
 uint8_t volatile UART_RX_BUFF[UART_RX_BUFFER_LENGTH] = {0};
 uint8_t volatile COMMAND = 0;
+state State = {0};
+uint8_t error = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -61,7 +64,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-state State = {0};
+
 /* USER CODE END 0 */
 
 /**
@@ -107,34 +110,27 @@ int main(void)
 
   HAL_UART_Receive_DMA(&huart2, UART_RX_BUFF, UART_RX_BUFFER_LENGTH);
 
+  // ADC_CMD(ADC_WRITE, ADC_CHx_REG(0));
+  // ADC_SPI_WRITE_16(0b1000000011110110);
+  // ADC_CMD(ADC_WRITE, ADC_SETUPCONx_REG(0));
+  // ADC_SPI_WRITE_16(0b0000000000000000);
+  HAL_Delay(1000);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    if (COMMAND == cmd_blink)
-    {
-      for (int i = 0; i < 10; i++)
-      {
-        HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
-        HAL_Delay(100);
-      }
-      COMMAND = 0;
-    }
-    else if (COMMAND == cmd_adc_id)
-    {
-      SERIAL_WRITE("ADC ID: %x\n", ADC_ID());
-      COMMAND = 0;
-    }
-    else if (COMMAND == cmd_adc_reset)
-    {
-      SERIAL_WRITE("ADC RESET\n");
-      ADC_reset();
-      COMMAND = 0;
-    }
+    error = cmd();
     /* USER CODE END WHILE */
+    // ADC_CMD(ADC_READ, ADC_DATA_REG);
+    // int64_t volatile temp = (int64_t)ADC_SPI_READ_24();
+    // int64_t volatile tempc = -45 - (175 / 8) + (1750 * ((temp * 1000) / 0xffffff)) / 80000;
+    // SERIAL_WRITE("TEMPERATURE RAW: 0x%06x\n", temp);
+    // SERIAL_WRITE("TEMPERATURE *C: %d\n", tempc);
+    SERIAL_WRITE("ADC ID : %x\n", ADC_ID());
 
+    HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -228,7 +224,7 @@ void assert_failed(uint8_t *file, uint32_t line)
 {
   /* USER CODE BEGIN 6 */
   /* User can add his own implementation to report the file name and line number,
-     tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+		 tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s 			page 1
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccYJJt8W.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s 			page 1
   30:Src/dma.c     **** /*----------------------------------------------------------------------------*/
   31:Src/dma.c     **** 
   32:Src/dma.c     **** /* USER CODE BEGIN 1 */
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s 			page 2
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccYJJt8W.s 			page 2
 
 
   33:Src/dma.c     **** extern uint8_t UART_RX_BUFF[UART_RX_BUFFER_LENGTH];
@@ -67,7 +67,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s 			page 1
   36:Src/dma.c     **** /** 
   37:Src/dma.c     ****   * Enable DMA controller clock
   38:Src/dma.c     ****   */
-  39:Src/dma.c     **** void MX_DMA_Init(void)
+  39:Src/dma.c     **** void MX_DMA_Init(void) 
   40:Src/dma.c     **** {
   27              		.loc 1 40 1 view -0
   28              		.cfi_startproc
@@ -115,12 +115,13 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s 			page 1
   62 0020 0920     		movs	r0, #9
   63 0022 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
   64              	.LVL1:
-  49:Src/dma.c     **** }
-  65              		.loc 1 49 1 is_stmt 0 view .LVU9
+  49:Src/dma.c     **** 
+  50:Src/dma.c     **** }
+  65              		.loc 1 50 1 is_stmt 0 view .LVU9
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccYJJt8W.s 			page 3
+
+
   66 0026 03B0     		add	sp, sp, #12
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s 			page 3
-
-
   67              		@ sp needed
   68 0028 00BD     		pop	{pc}
   69              	.L3:
@@ -138,11 +139,11 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s 			page 1
   82              		.fpu softvfp
   84              	HAL_UART_RxCpltCallback:
   85              	.LFB285:
-  50:Src/dma.c     **** 
-  51:Src/dma.c     **** /* USER CODE BEGIN 2 */
-  52:Src/dma.c     **** HAL_UART_RxCpltCallback()
-  53:Src/dma.c     **** {
-  86              		.loc 1 53 1 is_stmt 1 view -0
+  51:Src/dma.c     **** 
+  52:Src/dma.c     **** /* USER CODE BEGIN 2 */
+  53:Src/dma.c     **** HAL_UART_RxCpltCallback()
+  54:Src/dma.c     **** {
+  86              		.loc 1 54 1 is_stmt 1 view -0
   87              		.cfi_startproc
   88              		@ args = 0, pretend = 0, frame = 0
   89              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -151,49 +152,49 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s 			page 1
   92              		.cfi_def_cfa_offset 8
   93              		.cfi_offset 4, -8
   94              		.cfi_offset 14, -4
-  54:Src/dma.c     ****   UART_PARSE(UART_RX_BUFF);
-  95              		.loc 1 54 3 view .LVU11
+  55:Src/dma.c     ****   UART_PARSE(UART_RX_BUFF);
+  95              		.loc 1 55 3 view .LVU11
   96 0002 0648     		ldr	r0, .L8
   97 0004 FFF7FEFF 		bl	UART_PARSE
   98              	.LVL2:
-  55:Src/dma.c     ****   for (int i = UART_RX_BUFFER_LENGTH; i >= 0; i--)
-  99              		.loc 1 55 3 view .LVU12
+  56:Src/dma.c     ****   for (int i = UART_RX_BUFFER_LENGTH; i >= 0; i--)
+  99              		.loc 1 56 3 view .LVU12
  100              	.LBB3:
- 101              		.loc 1 55 8 view .LVU13
- 102              		.loc 1 55 12 is_stmt 0 view .LVU14
+ 101              		.loc 1 56 8 view .LVU13
+ 102              		.loc 1 56 12 is_stmt 0 view .LVU14
  103 0008 4023     		movs	r3, #64
  104              	.LVL3:
  105              	.L5:
- 106              		.loc 1 55 39 is_stmt 1 discriminator 1 view .LVU15
- 107              		.loc 1 55 3 is_stmt 0 discriminator 1 view .LVU16
+ 106              		.loc 1 56 39 is_stmt 1 discriminator 1 view .LVU15
+ 107              		.loc 1 56 3 is_stmt 0 discriminator 1 view .LVU16
  108 000a 002B     		cmp	r3, #0
  109 000c 04DB     		blt	.L7
-  56:Src/dma.c     ****   {
-  57:Src/dma.c     ****     UART_RX_BUFF[i] = '\0';
- 110              		.loc 1 57 5 is_stmt 1 discriminator 3 view .LVU17
- 111              		.loc 1 57 21 is_stmt 0 discriminator 3 view .LVU18
+  57:Src/dma.c     ****   {
+  58:Src/dma.c     ****     UART_RX_BUFF[i] = '\0';
+ 110              		.loc 1 58 5 is_stmt 1 discriminator 3 view .LVU17
+ 111              		.loc 1 58 21 is_stmt 0 discriminator 3 view .LVU18
  112 000e 034A     		ldr	r2, .L8
  113 0010 0021     		movs	r1, #0
  114 0012 D154     		strb	r1, [r2, r3]
-  55:Src/dma.c     ****   for (int i = UART_RX_BUFFER_LENGTH; i >= 0; i--)
- 115              		.loc 1 55 47 is_stmt 1 discriminator 3 view .LVU19
-  55:Src/dma.c     ****   for (int i = UART_RX_BUFFER_LENGTH; i >= 0; i--)
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s 			page 4
+  56:Src/dma.c     ****   for (int i = UART_RX_BUFFER_LENGTH; i >= 0; i--)
+ 115              		.loc 1 56 47 is_stmt 1 discriminator 3 view .LVU19
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccYJJt8W.s 			page 4
 
 
- 116              		.loc 1 55 48 is_stmt 0 discriminator 3 view .LVU20
+  56:Src/dma.c     ****   for (int i = UART_RX_BUFFER_LENGTH; i >= 0; i--)
+ 116              		.loc 1 56 48 is_stmt 0 discriminator 3 view .LVU20
  117 0014 013B     		subs	r3, r3, #1
  118              	.LVL4:
-  55:Src/dma.c     ****   for (int i = UART_RX_BUFFER_LENGTH; i >= 0; i--)
- 119              		.loc 1 55 48 discriminator 3 view .LVU21
+  56:Src/dma.c     ****   for (int i = UART_RX_BUFFER_LENGTH; i >= 0; i--)
+ 119              		.loc 1 56 48 discriminator 3 view .LVU21
  120 0016 F8E7     		b	.L5
  121              	.L7:
-  55:Src/dma.c     ****   for (int i = UART_RX_BUFFER_LENGTH; i >= 0; i--)
- 122              		.loc 1 55 48 discriminator 3 view .LVU22
+  56:Src/dma.c     ****   for (int i = UART_RX_BUFFER_LENGTH; i >= 0; i--)
+ 122              		.loc 1 56 48 discriminator 3 view .LVU22
  123              	.LBE3:
-  58:Src/dma.c     ****   }
-  59:Src/dma.c     **** }
- 124              		.loc 1 59 1 view .LVU23
+  59:Src/dma.c     ****   }
+  60:Src/dma.c     **** }
+ 124              		.loc 1 60 1 view .LVU23
  125              		@ sp needed
  126 0018 10BD     		pop	{r4, pc}
  127              	.L9:
@@ -220,17 +221,17 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s 			page 1
  149              		.file 15 "Inc/usart.h"
  150              		.file 16 "Inc/usart_utils.h"
  151              		.file 17 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h"
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s 			page 5
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccYJJt8W.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 dma.c
-C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s:16     .text.MX_DMA_Init:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s:24     .text.MX_DMA_Init:00000000 MX_DMA_Init
-C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s:72     .text.MX_DMA_Init:0000002c $d
-C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s:77     .text.HAL_UART_RxCpltCallback:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s:84     .text.HAL_UART_RxCpltCallback:00000000 HAL_UART_RxCpltCallback
-C:\Users\Mateusz\AppData\Local\Temp\ccjqxxwg.s:130    .text.HAL_UART_RxCpltCallback:0000001c $d
+C:\Users\Mateusz\AppData\Local\Temp\ccYJJt8W.s:16     .text.MX_DMA_Init:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccYJJt8W.s:24     .text.MX_DMA_Init:00000000 MX_DMA_Init
+C:\Users\Mateusz\AppData\Local\Temp\ccYJJt8W.s:72     .text.MX_DMA_Init:0000002c $d
+C:\Users\Mateusz\AppData\Local\Temp\ccYJJt8W.s:77     .text.HAL_UART_RxCpltCallback:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccYJJt8W.s:84     .text.HAL_UART_RxCpltCallback:00000000 HAL_UART_RxCpltCallback
+C:\Users\Mateusz\AppData\Local\Temp\ccYJJt8W.s:130    .text.HAL_UART_RxCpltCallback:0000001c $d
 
 UNDEFINED SYMBOLS
 HAL_NVIC_SetPriority

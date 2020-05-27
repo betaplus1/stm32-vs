@@ -22,6 +22,7 @@
 
 /* USER CODE BEGIN 0 */
 #include "main.h"
+#include "usart_utils.h"
 /* USER CODE END 0 */
 
 /*----------------------------------------------------------------------------*/
@@ -29,13 +30,13 @@
 /*----------------------------------------------------------------------------*/
 
 /* USER CODE BEGIN 1 */
-extern uint8_t UART_RX_BUFF[10];
+extern uint8_t UART_RX_BUFF[UART_RX_BUFFER_LENGTH];
 /* USER CODE END 1 */
 
 /** 
   * Enable DMA controller clock
   */
-void MX_DMA_Init(void)
+void MX_DMA_Init(void) 
 {
 
   /* DMA controller clock enable */
@@ -45,14 +46,17 @@ void MX_DMA_Init(void)
   /* DMA1_Channel1_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
+
 }
 
 /* USER CODE BEGIN 2 */
 HAL_UART_RxCpltCallback()
 {
-  SERIAL_WRITE(UART_RX_BUFF);
-  SERIAL_WRITE("\n");
-  HAL_UART_Receive_DMA(&huart2, UART_RX_BUFF, 10);
+  UART_PARSE(UART_RX_BUFF);
+  for (int i = UART_RX_BUFFER_LENGTH; i >= 0; i--)
+  {
+    UART_RX_BUFF[i] = '\0';
+  }
 }
 /* USER CODE END 2 */
 

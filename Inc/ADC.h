@@ -12,11 +12,14 @@
 #define ADC_DATA_REG 0x04
 #define ADC_GPIO_REG 0x06
 #define ADC_ID_REG 0x07
-#define ADC_CHx_REG(i) ((0 <= i <= 15) ? (0x10 + i) : null)
-#define ADC_SETUPCONx_REG(i) ((0 <= i <= 7) ? (0x20 + i) : null)
-#define ADC_FILTCONx_REG(i) ((0 <= i <= 7) ? (0x28 + i) : null)
-#define ADC_OFFSETx_REG(i) ((0 <= i <= 7) ? (0x30 + i) : null)
-#define ADC_GAINx_REG(i) ((0 <= i <= 7) ? (0x38 + i) : null)
+#define ADC_CHx_REG(i) ((0 <= i <= 15) ? (0x10 + i) : NULL)
+#define ADC_SETUPCONx_REG(i) ((0 <= i <= 7) ? (0x20 + i) : NULL)
+#define ADC_FILTCONx_REG(i) ((0 <= i <= 7) ? (0x28 + i) : NULL)
+#define ADC_OFFSETx_REG(i) ((0 <= i <= 7) ? (0x30 + i) : NULL)
+#define ADC_GAINx_REG(i) ((0 <= i <= 7) ? (0x38 + i) : NULL)
+
+
+
 
 void ADC_reset();
 uint8_t ADC_SPI_READ_8();

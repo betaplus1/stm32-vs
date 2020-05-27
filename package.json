@@ -19,7 +19,8 @@
     }
   },
   "scripts": {
-    "serial": "serialport-terminal -b 115200 --no-echo ",
+    "serial": "serialport-terminal -b 115200 --no-echo",
+    "serial-echo": "serialport-terminal -b 115200",
     "make": "make",
     "upload": "flash",
     "watch-make": "npm-watch make",

@@ -46,7 +46,7 @@
 /* USER CODE BEGIN PV */
 extern state State;
 extern uint8_t UART_RX_INDEX;
-extern uint8_t UART_RX_BUFF[10];
+extern uint8_t UART_RX_BUFF[UART_RX_BUFFER_LENGTH];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -68,7 +68,7 @@ extern UART_HandleTypeDef huart2;
 /* USER CODE END EV */
 
 /******************************************************************************/
-/*           Cortex-M0+ Processor Interruption and Exception Handlers          */
+/*           Cortex-M0+ Processor Interruption and Exception Handlers          */ 
 /******************************************************************************/
 /**
   * @brief This function handles Non maskable interrupt.
@@ -193,7 +193,6 @@ void TIM6_DAC_LPTIM1_IRQHandler(void)
 {
   /* USER CODE BEGIN TIM6_DAC_LPTIM1_IRQn 0 */
   State.uptime++;
-  // TXState();
   HAL_GPIO_TogglePin(LED_TEMP_GPIO_Port, LED_TEMP_Pin);
   /* USER CODE END TIM6_DAC_LPTIM1_IRQn 0 */
   HAL_LPTIM_IRQHandler(&hlptim1);
@@ -208,12 +207,10 @@ void TIM6_DAC_LPTIM1_IRQHandler(void)
 void USART2_IRQHandler(void)
 {
   /* USER CODE BEGIN USART2_IRQn 0 */
-  SERIAL_WRITE("USART2_IRQHandler")
-
   /* USER CODE END USART2_IRQn 0 */
   HAL_UART_IRQHandler(&huart2);
   /* USER CODE BEGIN USART2_IRQn 1 */
-
+  IDLE_UART_IRQHandler(&huart2);
   /* USER CODE END USART2_IRQn 1 */
 }
 

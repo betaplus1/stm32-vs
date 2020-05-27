@@ -17,6 +17,17 @@ uint8_t ADC_SPI_WRITE_8(uint8_t data)
     return answer;
 }
 
+uint8_t ADC_SPI_WRITE_16(uint16_t data)
+{
+    uint8_t txbuffer[2] = {
+        (uint8_t)((data & 0xff00) >> 8),
+        (uint8_t)((data & 0x00ff))};
+    uint8_t rxbuffer[2] = {0};
+    HAL_SPI_TransmitReceive(&hspi2, txbuffer, rxbuffer, 2, HAL_MAX_DELAY);
+    uint8_t answer = rxbuffer[0];
+    return answer;
+}
+
 uint16_t ADC_SPI_READ_16()
 {
     uint8_t rxbuffer[2] = {0};
@@ -65,5 +76,5 @@ uint32_t ADC_DATA()
 void ADC_reset()
 {
     uint8_t tx[8] = {0xff};
-    HAL_SPI_Transmit(&hspi2, tx, sizeof tx, 100000);
+    HAL_SPI_Transmit(&hspi2, tx, sizeof tx, HAL_MAX_DELAY);
 };

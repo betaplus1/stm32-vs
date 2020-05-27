@@ -48,21 +48,20 @@ void MX_SPI2_Init(void)
   {
     Error_Handler();
   }
-
 }
 
-void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
+void HAL_SPI_MspInit(SPI_HandleTypeDef *spiHandle)
 {
 
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-  if(spiHandle->Instance==SPI2)
+  if (spiHandle->Instance == SPI2)
   {
-  /* USER CODE BEGIN SPI2_MspInit 0 */
+    /* USER CODE BEGIN SPI2_MspInit 0 */
 
-  /* USER CODE END SPI2_MspInit 0 */
+    /* USER CODE END SPI2_MspInit 0 */
     /* SPI2 clock enable */
     __HAL_RCC_SPI2_CLK_ENABLE();
-  
+
     __HAL_RCC_GPIOB_CLK_ENABLE();
     /**SPI2 GPIO Configuration    
     PB6     ------> SPI2_MISO
@@ -76,42 +75,42 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
     GPIO_InitStruct.Alternate = GPIO_AF4_SPI2;
     HAL_GPIO_Init(ADC_MISO_GPIO_Port, &GPIO_InitStruct);
 
-    GPIO_InitStruct.Pin = ADC_MOSI_Pin|ADC_SCK_Pin;
+    GPIO_InitStruct.Pin = ADC_MOSI_Pin | ADC_SCK_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
     GPIO_InitStruct.Alternate = GPIO_AF1_SPI2;
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /* USER CODE BEGIN SPI2_MspInit 1 */
+    /* USER CODE BEGIN SPI2_MspInit 1 */
 
-  /* USER CODE END SPI2_MspInit 1 */
+    /* USER CODE END SPI2_MspInit 1 */
   }
 }
 
-void HAL_SPI_MspDeInit(SPI_HandleTypeDef* spiHandle)
+void HAL_SPI_MspDeInit(SPI_HandleTypeDef *spiHandle)
 {
 
-  if(spiHandle->Instance==SPI2)
+  if (spiHandle->Instance == SPI2)
   {
-  /* USER CODE BEGIN SPI2_MspDeInit 0 */
+    /* USER CODE BEGIN SPI2_MspDeInit 0 */
 
-  /* USER CODE END SPI2_MspDeInit 0 */
+    /* USER CODE END SPI2_MspDeInit 0 */
     /* Peripheral clock disable */
     __HAL_RCC_SPI2_CLK_DISABLE();
-  
+
     /**SPI2 GPIO Configuration    
     PB6     ------> SPI2_MISO
     PB7     ------> SPI2_MOSI
     PB8     ------> SPI2_SCK 
     */
-    HAL_GPIO_DeInit(GPIOB, ADC_MISO_Pin|ADC_MOSI_Pin|ADC_SCK_Pin);
+    HAL_GPIO_DeInit(GPIOB, ADC_MISO_Pin | ADC_MOSI_Pin | ADC_SCK_Pin);
 
-  /* USER CODE BEGIN SPI2_MspDeInit 1 */
+    /* USER CODE BEGIN SPI2_MspDeInit 1 */
 
-  /* USER CODE END SPI2_MspDeInit 1 */
+    /* USER CODE END SPI2_MspDeInit 1 */
   }
-} 
+}
 
 /* USER CODE BEGIN 1 */
 
