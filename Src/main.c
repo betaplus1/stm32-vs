@@ -103,6 +103,7 @@ int main(void)
 
   HAL_LPTIM_MspInit(&hlptim1);
   HAL_LPTIM_Counter_Start_IT(&hlptim1, 250); // 255 for LSE 250 for LSI for 1s timer
+  HAL_GPIO_WritePin(ADC_nSYNC_GPIO_Port, ADC_nSYNC_Pin, 1);
   HAL_SPI_MspInit(&hspi2);
   ADC_reset();
 
@@ -110,10 +111,10 @@ int main(void)
 
   HAL_UART_Receive_DMA(&huart2, UART_RX_BUFF, UART_RX_BUFFER_LENGTH);
 
-  // ADC_CMD(ADC_WRITE, ADC_CHx_REG(0));
-  // ADC_SPI_WRITE_16(0b1000000011110110);
-  // ADC_CMD(ADC_WRITE, ADC_SETUPCONx_REG(0));
-  // ADC_SPI_WRITE_16(0b0000000000000000);
+  ADC_CMD(ADC_WRITE, ADC_CHx_REG(0));
+  ADC_SPI_WRITE_16(0b1000000011110110);
+  ADC_CMD(ADC_WRITE, ADC_SETUPCONx_REG(0));
+  ADC_SPI_WRITE_16(0b0000000000000000);
   HAL_Delay(1000);
   /* USER CODE END 2 */
 
@@ -123,13 +124,15 @@ int main(void)
   {
     error = cmd();
     /* USER CODE END WHILE */
-    // ADC_CMD(ADC_READ, ADC_DATA_REG);
-    // int64_t volatile temp = (int64_t)ADC_SPI_READ_24();
-    // int64_t volatile tempc = -45 - (175 / 8) + (1750 * ((temp * 1000) / 0xffffff)) / 80000;
-    // SERIAL_WRITE("TEMPERATURE RAW: 0x%06x\n", temp);
-    // SERIAL_WRITE("TEMPERATURE *C: %d\n", tempc);
-    SERIAL_WRITE("ADC ID : %x\n", ADC_ID());
-
+    HAL_GPIO_WritePin(ADC_nSYNC_GPIO_Port, ADC_nSYNC_Pin, 0);
+    ADC_CMD(ADC_READ, ADC_DATA_REG);
+    uint64_t data = (uint64_t)ADC_SPI_READ_24();
+    uint64_t voltage_mv = (data * 1000 / 0xffffff);
+    int64_t tempc = -45000 + (175000 * (1000 * voltage_mv / 3300) / 80) - (1750 / 80);
+    SERIAL_WRITE("TEMPERATURE RAW: 0x%06x\n", data);
+    SERIAL_WRITE("TEMPERATURE *C: %i\n", tempc);
+    // SERIAL_WRITE("ADC ID : %x\n", ADC_ID());
+    HAL_GPIO_WritePin(ADC_nSYNC_GPIO_Port, ADC_nSYNC_Pin, 1);
     HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
   }

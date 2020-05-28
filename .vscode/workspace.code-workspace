@@ -1,18 +1,7 @@
 {
-  "folders": [
-    {
-      "path": ".."
-    }
-  ],
-  "settings": {
-    "files.associations": {
-      "main.h": "c",
-      "stm32g0xx_hal.h": "c",
-      "stm32g0xx_hal_conf.h": "c",
-      "stm32g0xx_hal_rcc.h": "c",
-      "stm32g0xx_hal_def.h": "c",
-      "stm32g0xx.h": "c",
-      "cstddef": "c"
-    }
-  }
+	"folders": [
+		{
+			"path": ".."
+		}
+	]
 }

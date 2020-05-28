@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccoqwoEQ.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s 			page 1
   30:Src/spi.c     **** void MX_SPI2_Init(void)
   31:Src/spi.c     **** {
   27              		.loc 1 31 1 view -0
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s 			page 2
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccoqwoEQ.s 			page 2
 
 
   28              		.cfi_startproc
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s 			page 1
   72              		.loc 1 41 23 is_stmt 0 view .LVU18
   73 0028 0362     		str	r3, [r0, #32]
   42:Src/spi.c     ****   hspi2.Init.TIMode = SPI_TIMODE_DISABLE;
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s 			page 3
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccoqwoEQ.s 			page 3
 
 
   74              		.loc 1 42 3 is_stmt 1 view .LVU19
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s 			page 1
  119              		.syntax unified
  120              		.code	16
  121              		.thumb_func
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s 			page 4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccoqwoEQ.s 			page 4
 
 
  122              		.fpu softvfp
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s 			page 1
   68:Src/spi.c     ****     PB7     ------> SPI2_MOSI
   69:Src/spi.c     ****     PB8     ------> SPI2_SCK 
   70:Src/spi.c     ****     */
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s 			page 5
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccoqwoEQ.s 			page 5
 
 
   71:Src/spi.c     ****     GPIO_InitStruct.Pin = ADC_MISO_Pin;
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s 			page 1
   65:Src/spi.c     ****     /**SPI2 GPIO Configuration    
  188              		.loc 1 65 5 view .LVU52
  189 0030 5A6B     		ldr	r2, [r3, #52]
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s 			page 6
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccoqwoEQ.s 			page 6
 
 
  190 0032 0225     		movs	r5, #2
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s 			page 1
   78:Src/spi.c     ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
  228              		.loc 1 78 25 is_stmt 0 view .LVU69
  229 005a C023     		movs	r3, #192
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s 			page 7
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccoqwoEQ.s 			page 7
 
 
  230 005c 5B00     		lsls	r3, r3, #1
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s 			page 1
  274              		.cfi_startproc
  275              		@ args = 0, pretend = 0, frame = 0
  276              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s 			page 8
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccoqwoEQ.s 			page 8
 
 
  277              		.loc 1 92 1 is_stmt 0 view .LVU81
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s 			page 1
  107:Src/spi.c     **** 
  308              		.loc 1 107 5 is_stmt 0 view .LVU88
  309 001c FFF7FEFF 		bl	HAL_GPIO_DeInit
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s 			page 9
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccoqwoEQ.s 			page 9
 
 
  310              	.LVL14:
@@ -496,8 +496,8 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s 			page 1
  323              		.comm	hspi2,100,4
  324              		.text
  325              	.Letext0:
- 326              		.file 2 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\machine\\_default_ty
- 327              		.file 3 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 326              		.file 2 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 327              		.file 3 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_stdint.h"
  328              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
  329              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
  330              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
@@ -507,29 +507,29 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s 			page 1
  334              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
  335              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
  336              		.file 12 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
- 337              		.file 13 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\lock.h"
- 338              		.file 14 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_types.h"
- 339              		.file 15 "c:\\gnu tools arm embedded\\9 2019-q4-major\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\st
- 340              		.file 16 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\reent.h"
+ 337              		.file 13 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\lock.h"
+ 338              		.file 14 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_types.h"
+ 339              		.file 15 "c:\\gnu tools arm embedded\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\stddef.h"
+ 340              		.file 16 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\reent.h"
  341              		.file 17 "Inc/usart.h"
  342              		.file 18 "Inc/spi.h"
  343              		.file 19 "Inc/main.h"
  344              		.file 20 "<built-in>"
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s 			page 10
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccoqwoEQ.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 spi.c
-C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s:16     .text.MX_SPI2_Init:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s:24     .text.MX_SPI2_Init:00000000 MX_SPI2_Init
-C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s:111    .text.MX_SPI2_Init:00000048 $d
+C:\Users\matil\AppData\Local\Temp\ccoqwoEQ.s:16     .text.MX_SPI2_Init:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccoqwoEQ.s:24     .text.MX_SPI2_Init:00000000 MX_SPI2_Init
+C:\Users\matil\AppData\Local\Temp\ccoqwoEQ.s:111    .text.MX_SPI2_Init:00000048 $d
                             *COM*:00000064 hspi2
-C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s:117    .text.HAL_SPI_MspInit:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s:124    .text.HAL_SPI_MspInit:00000000 HAL_SPI_MspInit
-C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s:256    .text.HAL_SPI_MspInit:00000078 $d
-C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s:263    .text.HAL_SPI_MspDeInit:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s:270    .text.HAL_SPI_MspDeInit:00000000 HAL_SPI_MspDeInit
-C:\Users\Mateusz\AppData\Local\Temp\ccVigmmF.s:316    .text.HAL_SPI_MspDeInit:00000024 $d
+C:\Users\matil\AppData\Local\Temp\ccoqwoEQ.s:117    .text.HAL_SPI_MspInit:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccoqwoEQ.s:124    .text.HAL_SPI_MspInit:00000000 HAL_SPI_MspInit
+C:\Users\matil\AppData\Local\Temp\ccoqwoEQ.s:256    .text.HAL_SPI_MspInit:00000078 $d
+C:\Users\matil\AppData\Local\Temp\ccoqwoEQ.s:263    .text.HAL_SPI_MspDeInit:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccoqwoEQ.s:270    .text.HAL_SPI_MspDeInit:00000000 HAL_SPI_MspDeInit
+C:\Users\matil\AppData\Local\Temp\ccoqwoEQ.s:316    .text.HAL_SPI_MspDeInit:00000024 $d
 
 UNDEFINED SYMBOLS
 HAL_SPI_Init
