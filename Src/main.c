@@ -105,16 +105,17 @@ int main(void)
   HAL_LPTIM_Counter_Start_IT(&hlptim1, 250); // 255 for LSE 250 for LSI for 1s timer
   HAL_GPIO_WritePin(ADC_nSYNC_GPIO_Port, ADC_nSYNC_Pin, 1);
   HAL_SPI_MspInit(&hspi2);
+  HAL_Delay(500);
   ADC_reset();
-
+  HAL_Delay(20);
   SERIAL_WRITE(RESET);
 
   HAL_UART_Receive_DMA(&huart2, UART_RX_BUFF, UART_RX_BUFFER_LENGTH);
 
-  ADC_CMD(ADC_WRITE, ADC_CHx_REG(0));
-  ADC_SPI_WRITE_16(0b1000000011110110);
+  ADC_CMD(ADC_WRITE, ADC_CHx_REG(7));
+  ADC_SPI_WRITE_16(ADC_CH_EN + ADC_AINPOS(7) + ADC_AINNEG);
   ADC_CMD(ADC_WRITE, ADC_SETUPCONx_REG(0));
-  ADC_SPI_WRITE_16(0b0000000000000000);
+  ADC_SPI_WRITE_16(ADC_SETUP_BI_UNIPOLAR0 + ADC_SETUP_REF_BUF + ADC_SETUP_AIN_BUF);
   HAL_Delay(1000);
   /* USER CODE END 2 */
 
@@ -127,11 +128,11 @@ int main(void)
     HAL_GPIO_WritePin(ADC_nSYNC_GPIO_Port, ADC_nSYNC_Pin, 0);
     ADC_CMD(ADC_READ, ADC_DATA_REG);
     uint64_t data = (uint64_t)ADC_SPI_READ_24();
-    uint64_t voltage_mv = (data * 1000 / 0xffffff);
-    int64_t tempc = -45000 + (175000 * (1000 * voltage_mv / 3300) / 80) - (1750 / 80);
-    SERIAL_WRITE("TEMPERATURE RAW: 0x%06x\n", data);
-    SERIAL_WRITE("TEMPERATURE *C: %i\n", tempc);
-    // SERIAL_WRITE("ADC ID : %x\n", ADC_ID());
+    uint64_t voltage_uV = ((data * 1800000) / 0xffffff);
+    int64_t tempc = -45000000 - 175000000 / 8 + 17500 * voltage_uV / 264;
+    SERIAL_WRITE("TEMPERATURE: %i.", tempc / 1000000); //-66.875 to +52.443 C
+    SERIAL_WRITE("%i *C\n", (tempc / 1000) % 1000);    //-66.875 to +52.443 C
+
     HAL_GPIO_WritePin(ADC_nSYNC_GPIO_Port, ADC_nSYNC_Pin, 1);
     HAL_Delay(1000);
     /* USER CODE BEGIN 3 */

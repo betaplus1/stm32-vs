@@ -5,6 +5,16 @@
 #define ADC_WRITE 0
 #define ADC_READ 0x40
 
+#define ADC_CH_EN 0x8000
+#define ADC_AINPOS(i) ((0 <= i <= 15) ? (i << 5) : NULL)
+#define ADC_AINNEG 0b10110
+
+#define ADC_SETUP_BI_UNIPOLAR0 0
+#define ADC_SETUP_REF_BUF 0xC00
+#define ADC_SETUP_AIN_BUF 0x300
+
+
+
 #define ADC_STATUS_REG 0x00
 #define ADC_MODE_REG 0x01
 #define ADC_INTERFACE_REG 0x02
@@ -17,9 +27,6 @@
 #define ADC_FILTCONx_REG(i) ((0 <= i <= 7) ? (0x28 + i) : NULL)
 #define ADC_OFFSETx_REG(i) ((0 <= i <= 7) ? (0x30 + i) : NULL)
 #define ADC_GAINx_REG(i) ((0 <= i <= 7) ? (0x38 + i) : NULL)
-
-
-
 
 void ADC_reset();
 uint8_t ADC_SPI_READ_8();

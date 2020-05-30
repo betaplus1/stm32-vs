@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 1
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 1
   30:Src/usart.c   **** 
   31:Src/usart.c   **** /* USART2 init function */
   32:Src/usart.c   **** 
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 2
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s 			page 2
 
 
   33:Src/usart.c   **** void MX_USART2_UART_Init(void)
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 1
   45:Src/usart.c   ****   huart2.Init.ClockPrescaler = UART_PRESCALER_DIV1;
   69              		.loc 1 45 3 is_stmt 1 view .LVU19
   70              		.loc 1 45 30 is_stmt 0 view .LVU20
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 3
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s 			page 3
 
 
   71 0020 4362     		str	r3, [r0, #36]
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 1
  111              	.L1:
   60:Src/usart.c   ****   {
   61:Src/usart.c   ****     Error_Handler();
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 4
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s 			page 4
 
 
   62:Src/usart.c   ****   }
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 1
  158              		@ frame_needed = 0, uses_anonymous_args = 0
  159              		.loc 1 67 1 is_stmt 0 view .LVU42
  160 0000 30B5     		push	{r4, r5, lr}
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 5
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s 			page 5
 
 
  161              	.LCFI1:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 1
   97:Src/usart.c   ****     hdma_usart2_rx.Init.PeriphDataAlignment = DMA_PDATAALIGN_BYTE;
   98:Src/usart.c   ****     hdma_usart2_rx.Init.MemDataAlignment = DMA_MDATAALIGN_BYTE;
   99:Src/usart.c   ****     hdma_usart2_rx.Init.Mode = DMA_CIRCULAR;
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 6
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s 			page 6
 
 
  100:Src/usart.c   ****     hdma_usart2_rx.Init.Priority = DMA_PRIORITY_LOW;
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 1
  215              		.loc 1 78 5 view .LVU58
  216 0030 596B     		ldr	r1, [r3, #52]
  217 0032 0122     		movs	r2, #1
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 7
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s 			page 7
 
 
  218 0034 1143     		orrs	r1, r2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 1
  256 005e 0360     		str	r3, [r0]
   93:Src/usart.c   ****     hdma_usart2_rx.Init.Direction = DMA_PERIPH_TO_MEMORY;
  257              		.loc 1 93 5 is_stmt 1 view .LVU75
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 8
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s 			page 8
 
 
   93:Src/usart.c   ****     hdma_usart2_rx.Init.Direction = DMA_PERIPH_TO_MEMORY;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 1
  106:Src/usart.c   **** 
  293              		.loc 1 106 5 view .LVU95
  294 007e 0C4B     		ldr	r3, .L17+8
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 9
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s 			page 9
 
 
  295 0080 A367     		str	r3, [r4, #120]
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 1
  116:Src/usart.c   **** 
  117:Src/usart.c   **** void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
  118:Src/usart.c   **** {
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 10
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s 			page 10
 
 
  345              		.loc 1 118 1 view -0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 1
  373 0010 D36B     		ldr	r3, [r2, #60]
  374 0012 0949     		ldr	r1, .L22+8
  375 0014 0B40     		ands	r3, r1
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 11
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s 			page 11
 
 
  376 0016 D363     		str	r3, [r2, #60]
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 1
  421              		.loc 1 148 1 is_stmt 1 view -0
  422              		.cfi_startproc
  423              		@ args = 0, pretend = 0, frame = 104
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 12
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s 			page 12
 
 
  424              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 1
  464              		.loc 1 161 9 is_stmt 1 discriminator 2 view .LVU129
  465              		.loc 1 161 25 is_stmt 0 discriminator 2 view .LVU130
  466 001c 304B     		ldr	r3, .L36
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 13
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s 			page 13
 
 
  467 001e 0022     		movs	r2, #0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 1
  496              		.loc 1 153 5 is_stmt 1 view .LVU141
  153:Src/usart.c   ****     {
  497              		.loc 1 153 21 is_stmt 0 view .LVU142
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 14
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s 			page 14
 
 
  498 0038 294B     		ldr	r3, .L36
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 1
  538 006a 2800     		movs	r0, r5
  539 006c FFF7FEFF 		bl	HAL_UART_Receive_DMA
  540              	.LVL35:
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 15
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s 			page 15
 
 
  175:Src/usart.c   ****     }
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 1
  591 00b6 2000     		movs	r0, r4
  592 00b8 FFF7FEFF 		bl	HAL_UART_Transmit
  593              	.LVL42:
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 16
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s 			page 16
 
 
  594              	.LBE5:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 1
  642              		.syntax unified
  643              		.code	16
  644              		.thumb_func
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 17
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s 			page 17
 
 
  645              		.fpu softvfp
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 1
  684 0018 F8D0     		beq	.L38
  685              	.L40:
  192:Src/usart.c   ****       CHECK_IF_END();
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 18
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s 			page 18
 
 
  686              		.loc 1 192 7 is_stmt 1 view .LVU184
@@ -1063,30 +1063,30 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 1
  725              		.file 20 "Inc/main.h"
  726              		.file 21 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h"
  727              		.file 22 "<built-in>"
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s 			page 19
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s 			page 19
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usart.c
-C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s:16     .text.MX_USART2_UART_Init:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s:24     .text.MX_USART2_UART_Init:00000000 MX_USART2_UART_Init
-C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s:139    .text.MX_USART2_UART_Init:00000068 $d
+C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s:16     .text.MX_USART2_UART_Init:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s:24     .text.MX_USART2_UART_Init:00000000 MX_USART2_UART_Init
+C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s:139    .text.MX_USART2_UART_Init:00000068 $d
                             *COM*:0000008c huart2
-C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s:145    .text.HAL_UART_MspInit:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s:152    .text.HAL_UART_MspInit:00000000 HAL_UART_MspInit
-C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s:326    .text.HAL_UART_MspInit:000000a8 $d
+C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s:145    .text.HAL_UART_MspInit:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s:152    .text.HAL_UART_MspInit:00000000 HAL_UART_MspInit
+C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s:326    .text.HAL_UART_MspInit:000000a8 $d
                             *COM*:0000005c hdma_usart2_rx
-C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s:335    .text.HAL_UART_MspDeInit:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s:342    .text.HAL_UART_MspDeInit:00000000 HAL_UART_MspDeInit
-C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s:398    .text.HAL_UART_MspDeInit:00000030 $d
-C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s:405    .rodata.CHECK_IF_END.str1.4:00000000 $d
-C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s:412    .text.CHECK_IF_END:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s:419    .text.CHECK_IF_END:00000000 CHECK_IF_END
-C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s:628    .text.CHECK_IF_END:000000e0 $d
-C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s:636    .rodata.IDLE_UART_IRQHandler.str1.4:00000000 $d
-C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s:640    .text.IDLE_UART_IRQHandler:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s:647    .text.IDLE_UART_IRQHandler:00000000 IDLE_UART_IRQHandler
-C:\Users\Mateusz\AppData\Local\Temp\cc0x8sDT.s:697    .text.IDLE_UART_IRQHandler:00000024 $d
+C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s:335    .text.HAL_UART_MspDeInit:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s:342    .text.HAL_UART_MspDeInit:00000000 HAL_UART_MspDeInit
+C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s:398    .text.HAL_UART_MspDeInit:00000030 $d
+C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s:405    .rodata.CHECK_IF_END.str1.4:00000000 $d
+C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s:412    .text.CHECK_IF_END:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s:419    .text.CHECK_IF_END:00000000 CHECK_IF_END
+C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s:628    .text.CHECK_IF_END:000000e0 $d
+C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s:636    .rodata.IDLE_UART_IRQHandler.str1.4:00000000 $d
+C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s:640    .text.IDLE_UART_IRQHandler:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s:647    .text.IDLE_UART_IRQHandler:00000000 IDLE_UART_IRQHandler
+C:\Users\Mateusz\AppData\Local\Temp\ccXrpb9a.s:697    .text.IDLE_UART_IRQHandler:00000024 $d
 
 UNDEFINED SYMBOLS
 HAL_UART_Init
