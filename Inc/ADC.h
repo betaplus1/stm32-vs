@@ -1,6 +1,9 @@
 #ifndef __ADC_H
 #define __ADC_H
 #include "main.h"
+#include "gpio.h"
+
+#define ADC_DATA_READY !HAL_GPIO_ReadPin(ADC_MISO_GPIO_Port, ADC_MISO_Pin)
 
 #define ADC_WRITE 0
 #define ADC_READ 0x40
@@ -12,8 +15,6 @@
 #define ADC_SETUP_BI_UNIPOLAR0 0
 #define ADC_SETUP_REF_BUF 0xC00
 #define ADC_SETUP_AIN_BUF 0x300
-
-
 
 #define ADC_STATUS_REG 0x00
 #define ADC_MODE_REG 0x01

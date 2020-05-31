@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
   36      5F434845 
   36      434B5F52 
   36      45473A09 
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 2
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 2
 
 
   36      09307825 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
   60      4E25695F 
   60      5245473A 
   60      09093078 
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 3
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 3
 
 
   61 0162 0000     		.align	2
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
  103 001a 9F46     		mov	pc, r3
  104              		.section	.rodata.cmd,"a",%progbits
  105              		.align	2
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 4
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 4
 
 
  106              	.L5:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
   55:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_DATA_REG);
   56:Src/cmd.c     ****         SERIAL_WRITE("\tADC_DATA_REG:\t\t0x%06x\n", ADC_SPI_READ_24());
   57:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_GPIO_REG);
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 5
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 5
 
 
   58:Src/cmd.c     ****         SERIAL_WRITE("\tADC_GPIO_REG:\t\t0x%04x\n", ADC_SPI_READ_16());
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
  136 003c 1180     		strh	r1, [r2]
  137 003e 9B78     		ldrb	r3, [r3, #2]
  138 0040 9370     		strb	r3, [r2, #2]
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 6
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 6
 
 
  139              	.LVL1:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
  185 007e FFF7FEFF 		bl	memset
  186              	.LVL8:
   16:Src/cmd.c     ****         for (int i = 0; i < 10; i++)
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 7
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 7
 
 
  187              		.loc 1 16 9 view .LVU17
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
  229              	.L8:
   17:Src/cmd.c     ****         {
  230              		.loc 1 17 34 discriminator 3 view .LVU30
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 8
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 8
 
 
  231              	.LBE4:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
  271              	.L4:
   32:Src/cmd.c     ****         SERIAL_WRITE("0x%06x\n", ADC_SPI_READ_24());
  272              		.loc 1 32 9 is_stmt 1 view .LVU39
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 9
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 9
 
 
  273 00e2 0421     		movs	r1, #4
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
  317 011c 6022     		movs	r2, #96
  318 011e 0021     		movs	r1, #0
  319 0120 02A8     		add	r0, sp, #8
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 10
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 10
 
 
  320 0122 FFF7FEFF 		bl	memset
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
  364              		.loc 1 46 9 view .LVU59
  365 015e 904B     		ldr	r3, .L27+28
  366 0160 2200     		movs	r2, r4
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 11
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 11
 
 
  367 0162 23CB     		ldmia	r3!, {r0, r1, r5}
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
   49:Src/cmd.c     ****         SERIAL_WRITE("\tADC_MODE_REG:\t\t0x%04x\n", ADC_SPI_READ_16());
  414              		.loc 1 49 9 view .LVU67
  415 01aa 0121     		movs	r1, #1
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 12
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 12
 
 
  416 01ac 4020     		movs	r0, #64
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
  463 01f6 FFF7FEFF 		bl	sprintf
  464              	.LVL48:
   52:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_CHECK_REG);
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 13
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 13
 
 
  465              		.loc 1 52 9 view .LVU75
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
  511              	.LBB13:
   56:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_GPIO_REG);
  512              		.loc 1 56 9 view .LVU84
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 14
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 14
 
 
  513 023c 0197     		str	r7, [sp, #4]
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
  559              		.loc 1 58 9 view .LVU92
  560 0284 3300     		movs	r3, r6
  561 0286 1722     		movs	r2, #23
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 15
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 15
 
 
  562 0288 2100     		movs	r1, r4
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
  606              	.L14:
   63:Src/cmd.c     ****             SERIAL_WRITE("\tADC_CH%i_REG:\t\t0x%04x\n", i, ADC_SPI_READ_16());
  607              		.loc 1 63 13 is_stmt 1 discriminator 3 view .LVU103
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 16
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 16
 
 
   63:Src/cmd.c     ****             SERIAL_WRITE("\tADC_CH%i_REG:\t\t0x%04x\n", i, ADC_SPI_READ_16());
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
   61:Src/cmd.c     ****         {
  652              		.loc 1 61 9 is_stmt 0 discriminator 1 view .LVU114
  653 02fc 0E2C     		cmp	r4, #14
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 17
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 17
 
 
  654 02fe E0DD     		ble	.L14
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
  699              	.LVL85:
  700              	.LBE19:
   69:Src/cmd.c     ****         }
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 18
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 18
 
 
  701              		.loc 1 69 82 discriminator 3 view .LVU124
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
  743 0368 2200     		movs	r2, r4
  744 036a 1749     		ldr	r1, .L27+68
  745 036c 01A8     		add	r0, sp, #4
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 19
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 19
 
 
  746 036e FFF7FEFF 		bl	sprintf
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
  793              	.L19:
   76:Src/cmd.c     ****         {
  794              		.loc 1 76 25 is_stmt 1 discriminator 1 view .LVU144
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 20
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 20
 
 
   76:Src/cmd.c     ****         {
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
  838              		.loc 1 76 33 is_stmt 0 discriminator 3 view .LVU155
  839 040a 0134     		adds	r4, r4, #1
  840              	.LVL103:
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 21
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 21
 
 
   76:Src/cmd.c     ****         {
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
  884 0440 82B2     		uxth	r2, r0
  885 0442 9B00     		lsls	r3, r3, #2
  886 0444 01A9     		add	r1, sp, #4
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 22
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 22
 
 
  887 0446 0548     		ldr	r0, .L29+4
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
  932              		.file 11 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\lock.h"
  933              		.file 12 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_types.h"
  934              		.file 13 "c:\\gnu tools arm embedded\\9 2019-q4-major\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\st
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 23
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 23
 
 
  935              		.file 14 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\reent.h"
@@ -1327,18 +1327,18 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 1
  938              		.file 17 "Inc/ADC.h"
  939              		.file 18 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\stdio.h"
  940              		.file 19 "<built-in>"
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s 			page 24
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 24
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 cmd.c
-C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s:16     .rodata.cmd.str1.4:00000000 $d
-C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s:65     .text.cmd:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s:73     .text.cmd:00000000 cmd
-C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s:105    .rodata.cmd:00000000 $d
-C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s:767    .text.cmd:00000384 $d
-C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s:791    .text.cmd:000003cc $t
-C:\Users\Mateusz\AppData\Local\Temp\ccARFatB.s:914    .text.cmd:00000458 $d
+C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s:16     .rodata.cmd.str1.4:00000000 $d
+C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s:65     .text.cmd:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s:73     .text.cmd:00000000 cmd
+C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s:105    .rodata.cmd:00000000 $d
+C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s:767    .text.cmd:00000384 $d
+C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s:791    .text.cmd:000003cc $t
+C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s:914    .text.cmd:00000458 $d
 
 UNDEFINED SYMBOLS
 memset

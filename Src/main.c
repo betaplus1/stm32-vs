@@ -112,11 +112,19 @@ int main(void)
 
   HAL_UART_Receive_DMA(&huart2, UART_RX_BUFF, UART_RX_BUFFER_LENGTH);
 
-  ADC_CMD(ADC_WRITE, ADC_CHx_REG(7));
-  ADC_SPI_WRITE_16(ADC_CH_EN + ADC_AINPOS(7) + ADC_AINNEG);
+  for (int i = 0; i < 16; i++)
+  {
+    ADC_CMD(ADC_WRITE, ADC_CHx_REG(i));
+    ADC_SPI_WRITE_16(ADC_CH_EN + ADC_AINPOS(i) + ADC_AINNEG);
+  }
+
   ADC_CMD(ADC_WRITE, ADC_SETUPCONx_REG(0));
   ADC_SPI_WRITE_16(ADC_SETUP_BI_UNIPOLAR0 + ADC_SETUP_REF_BUF + ADC_SETUP_AIN_BUF);
+  ADC_CMD(ADC_WRITE, ADC_FILTCONx_REG(0));
+  ADC_SPI_WRITE_16(0b10010);
   HAL_Delay(1000);
+
+  int currentChannel = 16;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -124,17 +132,29 @@ int main(void)
   while (1)
   {
     error = cmd();
-    /* USER CODE END WHILE */
-    HAL_GPIO_WritePin(ADC_nSYNC_GPIO_Port, ADC_nSYNC_Pin, 0);
-    ADC_CMD(ADC_READ, ADC_DATA_REG);
-    uint64_t data = (uint64_t)ADC_SPI_READ_24();
-    uint64_t voltage_uV = ((data * 1800000) / 0xffffff);
-    int64_t tempc = -45000000 - 175000000 / 8 + 17500 * voltage_uV / 264;
-    SERIAL_WRITE("TEMPERATURE: %i.", tempc / 1000000); //-66.875 to +52.443 C
-    SERIAL_WRITE("%i *C\n", (tempc / 1000) % 1000);    //-66.875 to +52.443 C
+    if (currentChannel == 16)
+    {
+      HAL_GPIO_WritePin(ADC_nSYNC_GPIO_Port, ADC_nSYNC_Pin, 0);
+      HAL_Delay(1);
+      HAL_GPIO_WritePin(ADC_nSYNC_GPIO_Port, ADC_nSYNC_Pin, 1);
+      currentChannel = 0;
+    }
 
-    HAL_GPIO_WritePin(ADC_nSYNC_GPIO_Port, ADC_nSYNC_Pin, 1);
-    HAL_Delay(1000);
+    if (ADC_DATA_READY)
+    {
+      ADC_CMD(ADC_READ, ADC_DATA_REG);
+      uint64_t data = (uint64_t)ADC_SPI_READ_24();
+      uint64_t voltage_uV = ((data * 1800000) / 0xffffff);
+      int64_t tempc = -45000000 - 175000000 / 8 + 17500 * voltage_uV / 264;
+      SERIAL_WRITE("[%i]\t", currentChannel);
+      SERIAL_WRITE("%10i uV\n", voltage_uV);
+      // SERIAL_WRITE("TEMPERATURE: %i.", tempc / 1000000); //-66.875 to +52.443 C
+      // SERIAL_WRITE("%03u *C\n", (tempc / 1000) % 1000);  //-66.875 to +52.443 C
+      currentChannel++;
+    }
+
+    /* USER CODE END WHILE */
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

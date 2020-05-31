@@ -29,7 +29,7 @@ build/ADC.o: Src/ADC.c Inc/usart.h Inc/main.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_system.h Inc/usart.h \
- Inc/state.h Inc/spi.h Inc/ADC.h Inc/usart_utils.h Inc/main.h
+ Inc/state.h Inc/spi.h Inc/ADC.h Inc/gpio.h Inc/usart_utils.h Inc/main.h
 
 Inc/usart.h:
 
@@ -104,6 +104,8 @@ Inc/state.h:
 Inc/spi.h:
 
 Inc/ADC.h:
+
+Inc/gpio.h:
 
 Inc/usart_utils.h:
 
