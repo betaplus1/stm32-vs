@@ -73,8 +73,61 @@ uint32_t ADC_DATA()
     return answer;
 }
 
+void ADC_update()
+{
+    if (State.ADC_Channel == ADC_DEFAULT_CH)
+    {
+        HAL_GPIO_WritePin(ADC_nSYNC_GPIO_Port, ADC_nSYNC_Pin, 0);
+        HAL_Delay(1);
+        HAL_GPIO_WritePin(ADC_nSYNC_GPIO_Port, ADC_nSYNC_Pin, 1);
+        State.ADC_Channel = 0;
+    }
+
+    if (ADC_DATA_READY)
+    {
+        ADC_CMD(ADC_READ, ADC_DATA_REG);
+        State.ADC_Values[State.ADC_Channel] = (uint32_t)ADC_SPI_READ_24();
+        if (State.ADC_Channel == ADC_T_CH)
+        {
+            uint64_t voltage_uV = (((uint64_t)State.ADC_Values[ADC_T_CH] * 1800000) / 0xffffff);
+            State.temperature = -45000000 - 175000000 / 8 + 17500 * voltage_uV / 264;
+        }
+        State.ADC_Channel++;
+    }
+}
+
+void ADC_config()
+{
+    for (int i = 0; i < 16; i++)
+    {
+        ADC_CMD(ADC_WRITE, ADC_CHx_REG(i));
+        ADC_SPI_WRITE_16(ADC_CH_EN + ADC_AINPOS(i) + ADC_AINNEG);
+    }
+
+    ADC_CMD(ADC_WRITE, ADC_SETUPCONx_REG(0));
+    ADC_SPI_WRITE_16(ADC_SETUP_BI_UNIPOLAR0 + ADC_SETUP_REF_BUF + ADC_SETUP_AIN_BUF);
+    ADC_CMD(ADC_WRITE, ADC_FILTCONx_REG(0));
+    ADC_SPI_WRITE_16(ADC_SPS_16);
+    State.ADC_Channel = ADC_DEFAULT_CH;
+}
+
 void ADC_reset()
 {
-    uint8_t tx[8] = {0xff};
-    HAL_SPI_Transmit(&hspi2, tx, sizeof tx, HAL_MAX_DELAY);
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+    GPIO_InitStruct.Pin = ADC_MOSI_Pin | ADC_SCK_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+    HAL_GPIO_WritePin(ADC_MOSI_GPIO_Port, ADC_MOSI_Pin, 1);
+    for (int i = 0; i < 200; i++)
+    {
+        HAL_GPIO_TogglePin(ADC_SCK_GPIO_Port, ADC_SCK_Pin);
+        HAL_Delay(1);
+    }
+    HAL_SPI_MspInit(&hspi2);
+
+    // uint8_t tx[16] = {0xff};
+    // HAL_SPI_Transmit(&hspi2, tx, sizeof tx, HAL_MAX_DELAY);
 };

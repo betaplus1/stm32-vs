@@ -46,7 +46,6 @@
 /* USER CODE BEGIN PV */
 extern state State;
 extern uint8_t UART_RX_INDEX;
-extern uint8_t UART_RX_BUFF[UART_RX_BUFFER_LENGTH];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/

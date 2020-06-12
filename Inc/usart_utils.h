@@ -9,6 +9,8 @@
 #define cmd_adc_reset 3
 #define cmd_adc_debug 4
 #define cmd_adc_data 5
+#define cmd_adc_values 6
+#define cmd_temperature 7
 
 void UART_PARSE(uint8_t buffer[UART_RX_BUFFER_LENGTH]);
 #endif /* __USART_UTILS_H */

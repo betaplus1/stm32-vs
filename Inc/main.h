@@ -53,7 +53,7 @@ extern "C"
 
 #define SERIAL_WRITE(f_, ...)                                     \
 	{                                                             \
-		char ___buff[100] = {0};                                  \
+		uint8_t ___buff[100] = {0};                               \
 		int ___len = sprintf((char *)___buff, f_, ##__VA_ARGS__); \
 		HAL_UART_Transmit(&huart2, ___buff, ___len, 1000);        \
 	}
@@ -70,6 +70,9 @@ extern "C"
 		(byte & 0x01 ? '1' : '0')
 
 #define UART_RX_BUFFER_LENGTH 64
+#define LPTIM_PRESCALER_1s_LSE 255
+#define LPTIM_PRESCALER_1s_LSI 250
+
 	/* USER CODE END EM */
 
 	/* Exported functions prototypes ---------------------------------------------*/
@@ -92,6 +95,18 @@ extern "C"
 #define ADC_nError_GPIO_Port GPIOA
 #define ADC_nSYNC_Pin GPIO_PIN_7
 #define ADC_nSYNC_GPIO_Port GPIOA
+#define DAC_nLOAD_Pin GPIO_PIN_0
+#define DAC_nLOAD_GPIO_Port GPIOB
+#define DAC_nRESET_Pin GPIO_PIN_6
+#define DAC_nRESET_GPIO_Port GPIOC
+#define DAC_nSYNC_Pin GPIO_PIN_15
+#define DAC_nSYNC_GPIO_Port GPIOA
+#define DAC_SCK_Pin GPIO_PIN_3
+#define DAC_SCK_GPIO_Port GPIOB
+#define DAC_MISO_Pin GPIO_PIN_4
+#define DAC_MISO_GPIO_Port GPIOB
+#define DAC_MOSI_Pin GPIO_PIN_5
+#define DAC_MOSI_GPIO_Port GPIOB
 #define ADC_MISO_Pin GPIO_PIN_6
 #define ADC_MISO_GPIO_Port GPIOB
 #define ADC_MOSI_Pin GPIO_PIN_7

@@ -22,7 +22,9 @@
 
 /* USER CODE BEGIN 0 */
 #include "usart_utils.h"
-extern uint8_t UART_RX_BUFF[UART_RX_BUFFER_LENGTH];
+#include "state.h"
+
+extern state State;
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart2;
@@ -150,28 +152,28 @@ void CHECK_IF_END()
   int i = 0;
   for (i; i < UART_RX_BUFFER_LENGTH; i++)
   {
-    if (UART_RX_BUFF[i] == 13)
+    if (State.UART_RX_BUFF[i] == 13)
     {
       flag = 0;
-      UART_RX_BUFF[i] = '\0';
-      UART_PARSE(UART_RX_BUFF);
+      State.UART_RX_BUFF[i] = '\0';
+      UART_PARSE(State.UART_RX_BUFF);
       HAL_UART_DMAStop(&huart2);
       for (i; i >= 0; i--)
       {
-        UART_RX_BUFF[i] = '\0';
+        State.UART_RX_BUFF[i] = '\0';
       }
-      HAL_UART_Receive_DMA(&huart2, UART_RX_BUFF, UART_RX_BUFFER_LENGTH);
+      HAL_UART_Receive_DMA(&huart2, State.UART_RX_BUFF, UART_RX_BUFFER_LENGTH);
       break;
     }
-    else if (UART_RX_BUFF[i] == 8)
+    else if (State.UART_RX_BUFF[i] == 8)
     {
-      UART_RX_BUFF[i] = '\0';
+      State.UART_RX_BUFF[i] = '\0';
       if (i > 0)
       {
-        UART_RX_BUFF[i - 1] = '\0';
+        State.UART_RX_BUFF[i - 1] = '\0';
       }
       HAL_UART_DMAStop(&huart2);
-      HAL_UART_Receive_DMA(&huart2, UART_RX_BUFF + i - 1, UART_RX_BUFFER_LENGTH - i);
+      HAL_UART_Receive_DMA(&huart2, State.UART_RX_BUFF + i - 1, UART_RX_BUFFER_LENGTH - i);
       break;
     }
   }
@@ -179,7 +181,7 @@ void CHECK_IF_END()
   {
     SERIAL_WRITE("%c[100D", 27);
     SERIAL_WRITE("%c[2K", 27);
-    SERIAL_WRITE(UART_RX_BUFF);
+    SERIAL_WRITE(State.UART_RX_BUFF);
   }
 }
 
@@ -187,7 +189,7 @@ void IDLE_UART_IRQHandler(UART_HandleTypeDef *huart)
 {
   if (USART2 == huart2.Instance) //Determine whether it is serial port 1
   {
-    if (RESET != __HAL_UART_GET_FLAG(&huart2, UART_FLAG_IDLE)) //Judging whether it is idle interruption
+    if (__HAL_UART_GET_FLAG(&huart2, UART_FLAG_IDLE)) //Judging whether it is idle interruption
     {
       __HAL_UART_CLEAR_IDLEFLAG(&huart2); //Clear idle interrupt sign (otherwise it will continue to enter interrupt)
       CHECK_IF_END();

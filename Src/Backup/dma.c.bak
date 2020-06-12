@@ -23,6 +23,7 @@
 /* USER CODE BEGIN 0 */
 #include "main.h"
 #include "usart_utils.h"
+#include "state.h"
 /* USER CODE END 0 */
 
 /*----------------------------------------------------------------------------*/
@@ -30,7 +31,7 @@
 /*----------------------------------------------------------------------------*/
 
 /* USER CODE BEGIN 1 */
-extern uint8_t UART_RX_BUFF[UART_RX_BUFFER_LENGTH];
+extern state State;
 /* USER CODE END 1 */
 
 /** 
@@ -52,10 +53,10 @@ void MX_DMA_Init(void)
 /* USER CODE BEGIN 2 */
 HAL_UART_RxCpltCallback()
 {
-  UART_PARSE(UART_RX_BUFF);
+  UART_PARSE(State.UART_RX_BUFF);
   for (int i = UART_RX_BUFFER_LENGTH; i >= 0; i--)
   {
-    UART_RX_BUFF[i] = '\0';
+    State.UART_RX_BUFF[i] = '\0';
   }
 }
 /* USER CODE END 2 */

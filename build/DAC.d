@@ -1,4 +1,4 @@
-build/dma.o: Src/dma.c Inc/dma.h Inc/main.h \
+build/DAC.o: Src/DAC.c Inc/usart.h Inc/main.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h \
  Inc/stm32g0xx_hal_conf.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h \
@@ -29,9 +29,9 @@ build/dma.o: Src/dma.c Inc/dma.h Inc/main.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_system.h Inc/usart.h \
- Inc/main.h Inc/usart_utils.h Inc/state.h
+ Inc/state.h Inc/spi.h Inc/DAC.h Inc/gpio.h Inc/usart_utils.h Inc/main.h
 
-Inc/dma.h:
+Inc/usart.h:
 
 Inc/main.h:
 
@@ -99,8 +99,14 @@ Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_system.h:
 
 Inc/usart.h:
 
-Inc/main.h:
+Inc/state.h:
+
+Inc/spi.h:
+
+Inc/DAC.h:
+
+Inc/gpio.h:
 
 Inc/usart_utils.h:
 
-Inc/state.h:
+Inc/main.h:

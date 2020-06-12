@@ -4,42 +4,48 @@
 #include "usart_utils.h"
 #include "ADC.h"
 
-extern uint8_t COMMAND;
+extern state State;
 
 uint8_t cmd()
 {
-    switch (COMMAND)
+    if (State.cmd)
+    {
+        HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
+        HAL_Delay(100);
+        HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
+    }
+    switch (State.cmd)
     {
     case cmd_blink:
     {
-        COMMAND = 0;
+        State.cmd = 0;
         SERIAL_WRITE("ok\n");
         for (int i = 0; i < 10; i++)
         {
             HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
             HAL_Delay(100);
         }
-        return 0;
+        break;
     }
     case cmd_adc_id:
     {
         SERIAL_WRITE("0x%06x\n", ADC_ID());
-        COMMAND = 0;
-        return 0;
+        State.cmd = 0;
+        break;
     }
     case cmd_adc_data:
     {
         ADC_CMD(ADC_READ, ADC_DATA_REG);
         SERIAL_WRITE("0x%06x\n", ADC_SPI_READ_24());
-        COMMAND = 0;
-        return 0;
+        State.cmd = 0;
+        break;
     }
     case cmd_adc_reset:
     {
         SERIAL_WRITE("ADC RESET\n");
         ADC_reset();
-        COMMAND = 0;
-        return 0;
+        State.cmd = 0;
+        break;
     }
     case cmd_adc_debug:
     {
@@ -83,22 +89,37 @@ uint8_t cmd()
             ADC_CMD(ADC_READ, ADC_GAINx_REG(i));
             SERIAL_WRITE("\tADC_GAIN%i_REG:\t\t0x%04x\n", i, ADC_SPI_READ_24());
         }
-        COMMAND = 0;
-        return 0;
+        State.cmd = 0;
+        break;
+    }
+    case cmd_adc_values:
+    {
+        for (int i = 0; i < 16; i++)
+        {
+            uint64_t voltage_uV = (((uint64_t)State.ADC_Values[i] * 1800000) / 0xffffff);
+            SERIAL_WRITE("[%i]\t", i);
+            SERIAL_WRITE("%10i uV\t\t", voltage_uV);
+            SERIAL_WRITE("0x%06x\n", State.ADC_Values[i]);
+        }
+        State.cmd = 0;
+        break;
+    }
+    case cmd_temperature:
+    {
+        SERIAL_WRITE("%i.", State.temperature / 1000000);             //-66.875 to +52.443 C
+        SERIAL_WRITE("%03u *C\n", (State.temperature / 1000) % 1000); //-66.875 to +52.443 C
+        State.cmd = 0;
+        break;
     }
     case cmd_undefined:
     {
-        COMMAND = 0;
+        State.cmd = 0;
         SERIAL_WRITE("undefined\n");
-        HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
-        HAL_Delay(100);
-        HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
-        HAL_Delay(100);
-        return 0;
+        break;
     }
     default:
     {
-        return 0;
+        break;
     }
     }
 }

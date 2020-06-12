@@ -9,7 +9,10 @@
         "Src"
       ],
       "clearBuffer": true,
-      "extensions": "c"
+      "extensions": [
+        "c",
+        "h"
+      ]
     },
     "upload": {
       "patterns": [
@@ -21,7 +24,7 @@
   "scripts": {
     "serial": "serialport-terminal -b 115200 --no-echo",
     "serial-echo": "serialport-terminal -b 115200",
-    "make": "make",
+    "make": "cls & make",
     "upload": "flash",
     "watch-make": "npm-watch make",
     "watch-upload": "npm-watch upload",

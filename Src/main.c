@@ -29,8 +29,10 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "ADC.h"
+#include "DAC.h"
 #include "state.h"
 #include "usart_utils.h"
+#include "cmd.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -50,10 +52,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-uint8_t volatile UART_RX_BUFF[UART_RX_BUFFER_LENGTH] = {0};
-uint8_t volatile COMMAND = 0;
 state State = {0};
-uint8_t error = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -99,59 +98,44 @@ int main(void)
   MX_LPTIM1_Init();
   MX_USART2_UART_Init();
   MX_SPI2_Init();
+  MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
 
   HAL_LPTIM_MspInit(&hlptim1);
-  HAL_LPTIM_Counter_Start_IT(&hlptim1, 250); // 255 for LSE 250 for LSI for 1s timer
-  HAL_GPIO_WritePin(ADC_nSYNC_GPIO_Port, ADC_nSYNC_Pin, 1);
+  HAL_LPTIM_Counter_Start_IT(&hlptim1, LPTIM_PRESCALER_1s_LSI);
   HAL_SPI_MspInit(&hspi2);
-  HAL_Delay(500);
-  ADC_reset();
-  HAL_Delay(20);
+  HAL_SPI_MspInit(&hspi1);
+
   SERIAL_WRITE(RESET);
 
-  HAL_UART_Receive_DMA(&huart2, UART_RX_BUFF, UART_RX_BUFFER_LENGTH);
+  ADC_reset();
+  ADC_config();
+  HAL_UART_Receive_DMA(&huart2, State.UART_RX_BUFF, UART_RX_BUFFER_LENGTH);
 
-  for (int i = 0; i < 16; i++)
-  {
-    ADC_CMD(ADC_WRITE, ADC_CHx_REG(i));
-    ADC_SPI_WRITE_16(ADC_CH_EN + ADC_AINPOS(i) + ADC_AINNEG);
-  }
-
-  ADC_CMD(ADC_WRITE, ADC_SETUPCONx_REG(0));
-  ADC_SPI_WRITE_16(ADC_SETUP_BI_UNIPOLAR0 + ADC_SETUP_REF_BUF + ADC_SETUP_AIN_BUF);
-  ADC_CMD(ADC_WRITE, ADC_FILTCONx_REG(0));
-  ADC_SPI_WRITE_16(0b10010);
-  HAL_Delay(1000);
-
-  int currentChannel = 16;
   /* USER CODE END 2 */
+  HAL_GPIO_WritePin(DAC_nSYNC_GPIO_Port, DAC_nSYNC_Pin, 1);
+  HAL_GPIO_WritePin(DAC_nLOAD_GPIO_Port, DAC_nLOAD_Pin, 1);
+  HAL_GPIO_WritePin(DAC_nRESET_GPIO_Port, DAC_nRESET_Pin, 0);
+  HAL_Delay(100);
+  HAL_GPIO_WritePin(DAC_nRESET_GPIO_Port, DAC_nRESET_Pin, 1);
+  HAL_Delay(1);
+  HAL_GPIO_WritePin(DAC_nSYNC_GPIO_Port, DAC_nSYNC_Pin, 0);
+  DAC_SPI_WRITE_24(DAC_WRITE_AND_UPDATE_ALL + 0xf000);
+  HAL_GPIO_WritePin(DAC_nSYNC_GPIO_Port, DAC_nSYNC_Pin, 1);
+  HAL_Delay(1);
+  HAL_GPIO_WritePin(DAC_nLOAD_GPIO_Port, DAC_nLOAD_Pin, 0);
+  HAL_Delay(1);
+  HAL_GPIO_WritePin(DAC_nLOAD_GPIO_Port, DAC_nLOAD_Pin, 1);
+  SERIAL_WRITE("%06x\n", DAC_WRITE_AND_UPDATE_ALL + 0xf000);
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    error = cmd();
-    if (currentChannel == 16)
-    {
-      HAL_GPIO_WritePin(ADC_nSYNC_GPIO_Port, ADC_nSYNC_Pin, 0);
-      HAL_Delay(1);
-      HAL_GPIO_WritePin(ADC_nSYNC_GPIO_Port, ADC_nSYNC_Pin, 1);
-      currentChannel = 0;
-    }
+    // DAC_TEST();
 
-    if (ADC_DATA_READY)
-    {
-      ADC_CMD(ADC_READ, ADC_DATA_REG);
-      uint64_t data = (uint64_t)ADC_SPI_READ_24();
-      uint64_t voltage_uV = ((data * 1800000) / 0xffffff);
-      int64_t tempc = -45000000 - 175000000 / 8 + 17500 * voltage_uV / 264;
-      SERIAL_WRITE("[%i]\t", currentChannel);
-      SERIAL_WRITE("%10i uV\n", voltage_uV);
-      // SERIAL_WRITE("TEMPERATURE: %i.", tempc / 1000000); //-66.875 to +52.443 C
-      // SERIAL_WRITE("%03u *C\n", (tempc / 1000) % 1000);  //-66.875 to +52.443 C
-      currentChannel++;
-    }
+    cmd();
+    ADC_update();
 
     /* USER CODE END WHILE */
 

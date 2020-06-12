@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 1
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 1
   36      5F434845 
   36      434B5F52 
   36      45473A09 
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 2
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 2
 
 
   36      09307825 
@@ -118,1233 +118,1579 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 1
   60      4E25695F 
   60      5245473A 
   60      09093078 
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 3
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 3
 
 
-  61 0162 0000     		.align	2
-  62              	.LC33:
-  63 0164 756E6465 		.ascii	"undefined\012\000"
-  63      66696E65 
-  63      640A00
-  64              		.section	.text.cmd,"ax",%progbits
-  65              		.align	1
-  66              		.global	cmd
-  67              		.arch armv6s-m
-  68              		.syntax unified
-  69              		.code	16
-  70              		.thumb_func
-  71              		.fpu softvfp
-  73              	cmd:
-  74              	.LFB284:
-  75              		.file 1 "Src/cmd.c"
+  61              		.global	__aeabi_lmul
+  62              		.global	__aeabi_uldivmod
+  63 0162 0000     		.align	2
+  64              	.LC33:
+  65 0164 5B25695D 		.ascii	"[%i]\011\000"
+  65      0900
+  66 016a 0000     		.align	2
+  67              	.LC35:
+  68 016c 25313069 		.ascii	"%10i uV\011\011\000"
+  68      20755609 
+  68      0900
+  69              		.global	__aeabi_idiv
+  70 0176 0000     		.align	2
+  71              	.LC37:
+  72 0178 25692E00 		.ascii	"%i.\000"
+  73              		.global	__aeabi_idivmod
+  74              		.align	2
+  75              	.LC39:
+  76 017c 25303375 		.ascii	"%03u *C\012\000"
+  76      202A430A 
+  76      00
+  77 0185 000000   		.align	2
+  78              	.LC41:
+  79 0188 756E6465 		.ascii	"undefined\012\000"
+  79      66696E65 
+  79      640A00
+  80              		.section	.text.cmd,"ax",%progbits
+  81              		.align	1
+  82              		.global	cmd
+  83              		.arch armv6s-m
+  84              		.syntax unified
+  85              		.code	16
+  86              		.thumb_func
+  87              		.fpu softvfp
+  89              	cmd:
+  90              	.LFB284:
+  91              		.file 1 "Src/cmd.c"
    1:Src/cmd.c     **** #include "usart.h"
    2:Src/cmd.c     **** #include <stdio.h>
    3:Src/cmd.c     **** #include "state.h"
    4:Src/cmd.c     **** #include "usart_utils.h"
    5:Src/cmd.c     **** #include "ADC.h"
    6:Src/cmd.c     **** 
-   7:Src/cmd.c     **** extern uint8_t COMMAND;
+   7:Src/cmd.c     **** extern state State;
    8:Src/cmd.c     **** 
    9:Src/cmd.c     **** uint8_t cmd()
   10:Src/cmd.c     **** {
-  76              		.loc 1 10 1 view -0
-  77              		.cfi_startproc
-  78              		@ args = 0, pretend = 0, frame = 104
-  79              		@ frame_needed = 0, uses_anonymous_args = 0
-  80 0000 F0B5     		push	{r4, r5, r6, r7, lr}
-  81              	.LCFI0:
-  82              		.cfi_def_cfa_offset 20
-  83              		.cfi_offset 4, -20
-  84              		.cfi_offset 5, -16
-  85              		.cfi_offset 6, -12
-  86              		.cfi_offset 7, -8
-  87              		.cfi_offset 14, -4
-  88 0002 9BB0     		sub	sp, sp, #108
-  89              	.LCFI1:
-  90              		.cfi_def_cfa_offset 128
-  11:Src/cmd.c     ****     switch (COMMAND)
-  91              		.loc 1 11 5 view .LVU1
-  92 0004 DF4B     		ldr	r3, .L27
-  93 0006 1B78     		ldrb	r3, [r3]
-  94 0008 052B     		cmp	r3, #5
-  95 000a 07D8     		bhi	.L2
-  96 000c 002B     		cmp	r3, #0
-  97 000e 65D0     		beq	.L3
-  98 0010 052B     		cmp	r3, #5
-  99 0012 63D8     		bhi	.L3
- 100 0014 9B00     		lsls	r3, r3, #2
- 101 0016 DC4A     		ldr	r2, .L27+4
- 102 0018 D358     		ldr	r3, [r2, r3]
- 103 001a 9F46     		mov	pc, r3
- 104              		.section	.rodata.cmd,"a",%progbits
- 105              		.align	2
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 4
+  92              		.loc 1 10 1 view -0
+  93              		.cfi_startproc
+  94              		@ args = 0, pretend = 0, frame = 104
+  95              		@ frame_needed = 0, uses_anonymous_args = 0
+  96 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  97              	.LCFI0:
+  98              		.cfi_def_cfa_offset 20
+  99              		.cfi_offset 4, -20
+ 100              		.cfi_offset 5, -16
+ 101              		.cfi_offset 6, -12
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 4
 
 
- 106              	.L5:
- 107 0000 DC000000 		.word	.L3
- 108 0004 72000000 		.word	.L9
- 109 0008 AE000000 		.word	.L8
- 110 000c 1A010000 		.word	.L7
- 111 0010 50010000 		.word	.L6
- 112 0014 E2000000 		.word	.L4
- 113              		.section	.text.cmd
- 114              	.L2:
- 115 001c FF2B     		cmp	r3, #255
- 116 001e 5DD1     		bne	.L3
+ 102              		.cfi_offset 7, -8
+ 103              		.cfi_offset 14, -4
+ 104 0002 D646     		mov	lr, r10
+ 105 0004 4F46     		mov	r7, r9
+ 106 0006 4646     		mov	r6, r8
+ 107 0008 C0B5     		push	{r6, r7, lr}
+ 108              	.LCFI1:
+ 109              		.cfi_def_cfa_offset 32
+ 110              		.cfi_offset 8, -32
+ 111              		.cfi_offset 9, -28
+ 112              		.cfi_offset 10, -24
+ 113 000a 9AB0     		sub	sp, sp, #104
+ 114              	.LCFI2:
+ 115              		.cfi_def_cfa_offset 136
+  11:Src/cmd.c     ****     if (State.cmd)
+ 116              		.loc 1 11 5 view .LVU1
+ 117              		.loc 1 11 14 is_stmt 0 view .LVU2
+ 118 000c E54A     		ldr	r2, .L30
+ 119 000e 4D23     		movs	r3, #77
+ 120 0010 D35C     		ldrb	r3, [r2, r3]
+ 121              		.loc 1 11 8 view .LVU3
+ 122 0012 002B     		cmp	r3, #0
+ 123 0014 0CD1     		bne	.L28
+ 124              	.L2:
   12:Src/cmd.c     ****     {
-  13:Src/cmd.c     ****     case cmd_blink:
-  14:Src/cmd.c     ****     {
-  15:Src/cmd.c     ****         COMMAND = 0;
-  16:Src/cmd.c     ****         SERIAL_WRITE("ok\n");
-  17:Src/cmd.c     ****         for (int i = 0; i < 10; i++)
-  18:Src/cmd.c     ****         {
-  19:Src/cmd.c     ****             HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
-  20:Src/cmd.c     ****             HAL_Delay(100);
-  21:Src/cmd.c     ****         }
-  22:Src/cmd.c     ****         return 0;
-  23:Src/cmd.c     ****     }
-  24:Src/cmd.c     ****     case cmd_adc_id:
-  25:Src/cmd.c     ****     {
-  26:Src/cmd.c     ****         SERIAL_WRITE("0x%06x\n", ADC_ID());
-  27:Src/cmd.c     ****         COMMAND = 0;
-  28:Src/cmd.c     ****         return 0;
+  13:Src/cmd.c     ****         HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
+  14:Src/cmd.c     ****         HAL_Delay(100);
+  15:Src/cmd.c     ****         HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
+  16:Src/cmd.c     ****     }
+  17:Src/cmd.c     ****     switch (State.cmd)
+ 125              		.loc 1 17 5 is_stmt 1 view .LVU4
+ 126              		.loc 1 17 18 is_stmt 0 view .LVU5
+ 127 0016 E34A     		ldr	r2, .L30
+ 128 0018 4D23     		movs	r3, #77
+ 129 001a D35C     		ldrb	r3, [r2, r3]
+ 130              		.loc 1 17 5 view .LVU6
+ 131 001c 072B     		cmp	r3, #7
+ 132 001e 15D8     		bhi	.L3
+ 133 0020 002B     		cmp	r3, #0
+ 134 0022 64D0     		beq	.L4
+ 135 0024 072B     		cmp	r3, #7
+ 136 0026 62D8     		bhi	.L4
+ 137 0028 9B00     		lsls	r3, r3, #2
+ 138 002a DF4A     		ldr	r2, .L30+4
+ 139 002c D358     		ldr	r3, [r2, r3]
+ 140 002e 9F46     		mov	pc, r3
+ 141              		.section	.rodata.cmd,"a",%progbits
+ 142              		.align	2
+ 143              	.L6:
+ 144 0000 EE000000 		.word	.L4
+ 145 0004 82000000 		.word	.L12
+ 146 0008 BE000000 		.word	.L11
+ 147 000c 34010000 		.word	.L10
+ 148 0010 6C010000 		.word	.L9
+ 149 0014 FA000000 		.word	.L8
+ 150 0018 76040000 		.word	.L27
+ 151 001c 22050000 		.word	.L5
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 5
+
+
+ 152              		.section	.text.cmd
+ 153              	.L28:
+  13:Src/cmd.c     ****         HAL_Delay(100);
+ 154              		.loc 1 13 9 is_stmt 1 view .LVU7
+ 155 0030 A024     		movs	r4, #160
+ 156 0032 E405     		lsls	r4, r4, #23
+ 157 0034 0121     		movs	r1, #1
+ 158 0036 2000     		movs	r0, r4
+ 159 0038 FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 160              	.LVL0:
+  14:Src/cmd.c     ****         HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
+ 161              		.loc 1 14 9 view .LVU8
+ 162 003c 6420     		movs	r0, #100
+ 163 003e FFF7FEFF 		bl	HAL_Delay
+ 164              	.LVL1:
+  15:Src/cmd.c     ****     }
+ 165              		.loc 1 15 9 view .LVU9
+ 166 0042 0121     		movs	r1, #1
+ 167 0044 2000     		movs	r0, r4
+ 168 0046 FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 169              	.LVL2:
+ 170 004a E4E7     		b	.L2
+ 171              	.L3:
+ 172              		.loc 1 17 5 is_stmt 0 view .LVU10
+ 173 004c FF2B     		cmp	r3, #255
+ 174 004e 4ED1     		bne	.L4
+  18:Src/cmd.c     ****     {
+  19:Src/cmd.c     ****     case cmd_blink:
+  20:Src/cmd.c     ****     {
+  21:Src/cmd.c     ****         State.cmd = 0;
+  22:Src/cmd.c     ****         SERIAL_WRITE("ok\n");
+  23:Src/cmd.c     ****         for (int i = 0; i < 10; i++)
+  24:Src/cmd.c     ****         {
+  25:Src/cmd.c     ****             HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
+  26:Src/cmd.c     ****             HAL_Delay(100);
+  27:Src/cmd.c     ****         }
+  28:Src/cmd.c     ****         break;
   29:Src/cmd.c     ****     }
-  30:Src/cmd.c     ****     case cmd_adc_data:
+  30:Src/cmd.c     ****     case cmd_adc_id:
   31:Src/cmd.c     ****     {
-  32:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_DATA_REG);
-  33:Src/cmd.c     ****         SERIAL_WRITE("0x%06x\n", ADC_SPI_READ_24());
-  34:Src/cmd.c     ****         COMMAND = 0;
-  35:Src/cmd.c     ****         return 0;
-  36:Src/cmd.c     ****     }
-  37:Src/cmd.c     ****     case cmd_adc_reset:
-  38:Src/cmd.c     ****     {
-  39:Src/cmd.c     ****         SERIAL_WRITE("ADC RESET\n");
-  40:Src/cmd.c     ****         ADC_reset();
-  41:Src/cmd.c     ****         COMMAND = 0;
-  42:Src/cmd.c     ****         return 0;
-  43:Src/cmd.c     ****     }
-  44:Src/cmd.c     ****     case cmd_adc_debug:
-  45:Src/cmd.c     ****     {
-  46:Src/cmd.c     ****         SERIAL_WRITE("ADC DEBUG:\n\n");
-  47:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_STATUS_REG);
-  48:Src/cmd.c     ****         SERIAL_WRITE("\tADC_STATUS_REG:\t\t0x%02x\n", ADC_SPI_READ_8());
-  49:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_MODE_REG);
-  50:Src/cmd.c     ****         SERIAL_WRITE("\tADC_MODE_REG:\t\t0x%04x\n", ADC_SPI_READ_16());
-  51:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_INTERFACE_REG);
-  52:Src/cmd.c     ****         SERIAL_WRITE("\tADC_INTERFACE_REG:\t0x%04x\n", ADC_SPI_READ_16());
-  53:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_CHECK_REG);
-  54:Src/cmd.c     ****         SERIAL_WRITE("\tADC_CHECK_REG:\t\t0x%06x\n", ADC_SPI_READ_24());
-  55:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_DATA_REG);
-  56:Src/cmd.c     ****         SERIAL_WRITE("\tADC_DATA_REG:\t\t0x%06x\n", ADC_SPI_READ_24());
-  57:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_GPIO_REG);
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 5
+  32:Src/cmd.c     ****         SERIAL_WRITE("0x%06x\n", ADC_ID());
+  33:Src/cmd.c     ****         State.cmd = 0;
+  34:Src/cmd.c     ****         break;
+  35:Src/cmd.c     ****     }
+  36:Src/cmd.c     ****     case cmd_adc_data:
+  37:Src/cmd.c     ****     {
+  38:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_DATA_REG);
+  39:Src/cmd.c     ****         SERIAL_WRITE("0x%06x\n", ADC_SPI_READ_24());
+  40:Src/cmd.c     ****         State.cmd = 0;
+  41:Src/cmd.c     ****         break;
+  42:Src/cmd.c     ****     }
+  43:Src/cmd.c     ****     case cmd_adc_reset:
+  44:Src/cmd.c     ****     {
+  45:Src/cmd.c     ****         SERIAL_WRITE("ADC RESET\n");
+  46:Src/cmd.c     ****         ADC_reset();
+  47:Src/cmd.c     ****         State.cmd = 0;
+  48:Src/cmd.c     ****         break;
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 6
 
 
-  58:Src/cmd.c     ****         SERIAL_WRITE("\tADC_GPIO_REG:\t\t0x%04x\n", ADC_SPI_READ_16());
-  59:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_ID_REG);
-  60:Src/cmd.c     ****         SERIAL_WRITE("\tADC_ID_REG:\t\t0x%04x\n", ADC_SPI_READ_16());
-  61:Src/cmd.c     ****         for (int i = 0; i < 15; i++)
-  62:Src/cmd.c     ****         {
-  63:Src/cmd.c     ****             ADC_CMD(ADC_READ, ADC_CHx_REG(i));
-  64:Src/cmd.c     ****             SERIAL_WRITE("\tADC_CH%i_REG:\t\t0x%04x\n", i, ADC_SPI_READ_16());
-  65:Src/cmd.c     ****         }
-  66:Src/cmd.c     ****         for (int i = 0; i < 7; i++)
+  49:Src/cmd.c     ****     }
+  50:Src/cmd.c     ****     case cmd_adc_debug:
+  51:Src/cmd.c     ****     {
+  52:Src/cmd.c     ****         SERIAL_WRITE("ADC DEBUG:\n\n");
+  53:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_STATUS_REG);
+  54:Src/cmd.c     ****         SERIAL_WRITE("\tADC_STATUS_REG:\t\t0x%02x\n", ADC_SPI_READ_8());
+  55:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_MODE_REG);
+  56:Src/cmd.c     ****         SERIAL_WRITE("\tADC_MODE_REG:\t\t0x%04x\n", ADC_SPI_READ_16());
+  57:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_INTERFACE_REG);
+  58:Src/cmd.c     ****         SERIAL_WRITE("\tADC_INTERFACE_REG:\t0x%04x\n", ADC_SPI_READ_16());
+  59:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_CHECK_REG);
+  60:Src/cmd.c     ****         SERIAL_WRITE("\tADC_CHECK_REG:\t\t0x%06x\n", ADC_SPI_READ_24());
+  61:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_DATA_REG);
+  62:Src/cmd.c     ****         SERIAL_WRITE("\tADC_DATA_REG:\t\t0x%06x\n", ADC_SPI_READ_24());
+  63:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_GPIO_REG);
+  64:Src/cmd.c     ****         SERIAL_WRITE("\tADC_GPIO_REG:\t\t0x%04x\n", ADC_SPI_READ_16());
+  65:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_ID_REG);
+  66:Src/cmd.c     ****         SERIAL_WRITE("\tADC_ID_REG:\t\t0x%04x\n", ADC_SPI_READ_16());
+  67:Src/cmd.c     ****         for (int i = 0; i < 15; i++)
+  68:Src/cmd.c     ****         {
+  69:Src/cmd.c     ****             ADC_CMD(ADC_READ, ADC_CHx_REG(i));
+  70:Src/cmd.c     ****             SERIAL_WRITE("\tADC_CH%i_REG:\t\t0x%04x\n", i, ADC_SPI_READ_16());
+  71:Src/cmd.c     ****         }
+  72:Src/cmd.c     ****         for (int i = 0; i < 7; i++)
+  73:Src/cmd.c     ****         {
+  74:Src/cmd.c     ****             ADC_CMD(ADC_READ, ADC_SETUPCONx_REG(i));
+  75:Src/cmd.c     ****             SERIAL_WRITE("\tADC_SETUPCON%i_REG:\t0x%04x\n", i, ADC_SPI_READ_16());
+  76:Src/cmd.c     ****         }
+  77:Src/cmd.c     ****         for (int i = 0; i < 7; i++)
+  78:Src/cmd.c     ****         {
+  79:Src/cmd.c     ****             ADC_CMD(ADC_READ, ADC_FILTCONx_REG(i));
+  80:Src/cmd.c     ****             SERIAL_WRITE("\tADC_FILTCON%i_REG:\t0x%04x\n", i, ADC_SPI_READ_16());
+  81:Src/cmd.c     ****         }
+  82:Src/cmd.c     ****         for (int i = 0; i < 7; i++)
+  83:Src/cmd.c     ****         {
+  84:Src/cmd.c     ****             ADC_CMD(ADC_READ, ADC_OFFSETx_REG(i));
+  85:Src/cmd.c     ****             SERIAL_WRITE("\tADC_OFFSET%i_REG:\t0x%04x\n", i, ADC_SPI_READ_24());
+  86:Src/cmd.c     ****         }
+  87:Src/cmd.c     ****         for (int i = 0; i < 7; i++)
+  88:Src/cmd.c     ****         {
+  89:Src/cmd.c     ****             ADC_CMD(ADC_READ, ADC_GAINx_REG(i));
+  90:Src/cmd.c     ****             SERIAL_WRITE("\tADC_GAIN%i_REG:\t\t0x%04x\n", i, ADC_SPI_READ_24());
+  91:Src/cmd.c     ****         }
+  92:Src/cmd.c     ****         State.cmd = 0;
+  93:Src/cmd.c     ****         break;
+  94:Src/cmd.c     ****     }
+  95:Src/cmd.c     ****     case cmd_adc_values:
+  96:Src/cmd.c     ****     {
+  97:Src/cmd.c     ****         for (int i = 0; i < 16; i++)
+  98:Src/cmd.c     ****         {
+  99:Src/cmd.c     ****             uint64_t voltage_uV = (((uint64_t)State.ADC_Values[i] * 1800000) / 0xffffff);
+ 100:Src/cmd.c     ****             SERIAL_WRITE("[%i]\t", i);
+ 101:Src/cmd.c     ****             SERIAL_WRITE("%10i uV\t\t", voltage_uV);
+ 102:Src/cmd.c     ****             SERIAL_WRITE("0x%06x\n", State.ADC_Values[i]);
+ 103:Src/cmd.c     ****         }
+ 104:Src/cmd.c     ****         State.cmd = 0;
+ 105:Src/cmd.c     ****         break;
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 7
+
+
+ 106:Src/cmd.c     ****     }
+ 107:Src/cmd.c     ****     case cmd_temperature:
+ 108:Src/cmd.c     ****     {
+ 109:Src/cmd.c     ****         SERIAL_WRITE("%i.", State.temperature / 1000000);             //-66.875 to +52.443 C
+ 110:Src/cmd.c     ****         SERIAL_WRITE("%03u *C\n", (State.temperature / 1000) % 1000); //-66.875 to +52.443 C
+ 111:Src/cmd.c     ****         State.cmd = 0;
+ 112:Src/cmd.c     ****         break;
+ 113:Src/cmd.c     ****     }
+ 114:Src/cmd.c     ****     case cmd_undefined:
+ 115:Src/cmd.c     ****     {
+ 116:Src/cmd.c     ****         State.cmd = 0;
+ 175              		.loc 1 116 9 is_stmt 1 view .LVU11
+ 176              		.loc 1 116 19 is_stmt 0 view .LVU12
+ 177 0050 D44A     		ldr	r2, .L30
+ 178 0052 4D23     		movs	r3, #77
+ 179 0054 0021     		movs	r1, #0
+ 180 0056 D154     		strb	r1, [r2, r3]
+ 181              	.LBB2:
+ 117:Src/cmd.c     ****         SERIAL_WRITE("undefined\n");
+ 182              		.loc 1 117 9 is_stmt 1 view .LVU13
+ 183 0058 01AC     		add	r4, sp, #4
+ 184 005a 6022     		movs	r2, #96
+ 185 005c 02A8     		add	r0, sp, #8
+ 186 005e FFF7FEFF 		bl	memset
+ 187              	.LVL3:
+ 188              		.loc 1 117 9 view .LVU14
+ 189 0062 D24B     		ldr	r3, .L30+8
+ 190 0064 2200     		movs	r2, r4
+ 191 0066 03CB     		ldmia	r3!, {r0, r1}
+ 192 0068 03C2     		stmia	r2!, {r0, r1}
+ 193 006a 1988     		ldrh	r1, [r3]
+ 194 006c 1180     		strh	r1, [r2]
+ 195 006e 9B78     		ldrb	r3, [r3, #2]
+ 196 0070 9370     		strb	r3, [r2, #2]
+ 197              	.LVL4:
+ 198              		.loc 1 117 9 view .LVU15
+ 199 0072 FA23     		movs	r3, #250
+ 200 0074 9B00     		lsls	r3, r3, #2
+ 201 0076 0A22     		movs	r2, #10
+ 202 0078 2100     		movs	r1, r4
+ 203 007a CD48     		ldr	r0, .L30+12
+ 204 007c FFF7FEFF 		bl	HAL_UART_Transmit
+ 205              	.LVL5:
+ 206              	.LBE2:
+ 207              		.loc 1 117 36 view .LVU16
+ 118:Src/cmd.c     ****         break;
+ 208              		.loc 1 118 9 view .LVU17
+ 209 0080 35E0     		b	.L4
+ 210              	.LVL6:
+ 211              	.L12:
+  21:Src/cmd.c     ****         SERIAL_WRITE("ok\n");
+ 212              		.loc 1 21 9 view .LVU18
+  21:Src/cmd.c     ****         SERIAL_WRITE("ok\n");
+ 213              		.loc 1 21 19 is_stmt 0 view .LVU19
+ 214 0082 C84A     		ldr	r2, .L30
+ 215 0084 4D23     		movs	r3, #77
+ 216 0086 0021     		movs	r1, #0
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 8
+
+
+ 217 0088 D154     		strb	r1, [r2, r3]
+ 218              	.LBB3:
+  22:Src/cmd.c     ****         for (int i = 0; i < 10; i++)
+ 219              		.loc 1 22 9 is_stmt 1 view .LVU20
+ 220 008a 6022     		movs	r2, #96
+ 221 008c 02A8     		add	r0, sp, #8
+ 222 008e FFF7FEFF 		bl	memset
+ 223              	.LVL7:
+  22:Src/cmd.c     ****         for (int i = 0; i < 10; i++)
+ 224              		.loc 1 22 9 view .LVU21
+ 225 0092 C84B     		ldr	r3, .L30+16
+ 226 0094 0193     		str	r3, [sp, #4]
+ 227              	.LVL8:
+  22:Src/cmd.c     ****         for (int i = 0; i < 10; i++)
+ 228              		.loc 1 22 9 view .LVU22
+ 229 0096 FA23     		movs	r3, #250
+ 230 0098 9B00     		lsls	r3, r3, #2
+ 231 009a 0322     		movs	r2, #3
+ 232 009c 01A9     		add	r1, sp, #4
+ 233 009e C448     		ldr	r0, .L30+12
+ 234 00a0 FFF7FEFF 		bl	HAL_UART_Transmit
+ 235              	.LVL9:
+ 236              	.LBE3:
+  22:Src/cmd.c     ****         for (int i = 0; i < 10; i++)
+ 237              		.loc 1 22 29 view .LVU23
+  23:Src/cmd.c     ****         {
+ 238              		.loc 1 23 9 view .LVU24
+ 239              	.LBB4:
+  23:Src/cmd.c     ****         {
+ 240              		.loc 1 23 14 view .LVU25
+  23:Src/cmd.c     ****         {
+ 241              		.loc 1 23 18 is_stmt 0 view .LVU26
+ 242 00a4 0024     		movs	r4, #0
+ 243              	.LVL10:
+ 244              	.L14:
+  23:Src/cmd.c     ****         {
+ 245              		.loc 1 23 25 is_stmt 1 discriminator 1 view .LVU27
+  23:Src/cmd.c     ****         {
+ 246              		.loc 1 23 9 is_stmt 0 discriminator 1 view .LVU28
+ 247 00a6 092C     		cmp	r4, #9
+ 248 00a8 21DC     		bgt	.L4
+  25:Src/cmd.c     ****             HAL_Delay(100);
+ 249              		.loc 1 25 13 is_stmt 1 discriminator 3 view .LVU29
+ 250 00aa A020     		movs	r0, #160
+ 251 00ac 0121     		movs	r1, #1
+ 252 00ae C005     		lsls	r0, r0, #23
+ 253 00b0 FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 254              	.LVL11:
+  26:Src/cmd.c     ****         }
+ 255              		.loc 1 26 13 discriminator 3 view .LVU30
+ 256 00b4 6420     		movs	r0, #100
+ 257 00b6 FFF7FEFF 		bl	HAL_Delay
+ 258              	.LVL12:
+  23:Src/cmd.c     ****         {
+ 259              		.loc 1 23 33 discriminator 3 view .LVU31
+  23:Src/cmd.c     ****         {
+ 260              		.loc 1 23 34 is_stmt 0 discriminator 3 view .LVU32
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 9
+
+
+ 261 00ba 0134     		adds	r4, r4, #1
+ 262              	.LVL13:
+  23:Src/cmd.c     ****         {
+ 263              		.loc 1 23 34 discriminator 3 view .LVU33
+ 264 00bc F3E7     		b	.L14
+ 265              	.LVL14:
+ 266              	.L11:
+  23:Src/cmd.c     ****         {
+ 267              		.loc 1 23 34 discriminator 3 view .LVU34
+ 268              	.LBE4:
+ 269              	.LBB5:
+  32:Src/cmd.c     ****         State.cmd = 0;
+ 270              		.loc 1 32 9 is_stmt 1 view .LVU35
+ 271 00be 0024     		movs	r4, #0
+ 272 00c0 0194     		str	r4, [sp, #4]
+ 273 00c2 6022     		movs	r2, #96
+ 274 00c4 0021     		movs	r1, #0
+ 275 00c6 02A8     		add	r0, sp, #8
+ 276 00c8 FFF7FEFF 		bl	memset
+ 277              	.LVL15:
+  32:Src/cmd.c     ****         State.cmd = 0;
+ 278              		.loc 1 32 9 view .LVU36
+ 279 00cc FFF7FEFF 		bl	ADC_ID
+ 280              	.LVL16:
+ 281 00d0 0200     		movs	r2, r0
+ 282 00d2 B949     		ldr	r1, .L30+20
+ 283 00d4 01A8     		add	r0, sp, #4
+ 284 00d6 FFF7FEFF 		bl	sprintf
+ 285              	.LVL17:
+  32:Src/cmd.c     ****         State.cmd = 0;
+ 286              		.loc 1 32 9 view .LVU37
+ 287 00da FA23     		movs	r3, #250
+ 288 00dc 9B00     		lsls	r3, r3, #2
+ 289 00de 0922     		movs	r2, #9
+ 290 00e0 01A9     		add	r1, sp, #4
+ 291 00e2 B348     		ldr	r0, .L30+12
+ 292 00e4 FFF7FEFF 		bl	HAL_UART_Transmit
+ 293              	.LVL18:
+ 294              	.LBE5:
+  32:Src/cmd.c     ****         State.cmd = 0;
+ 295              		.loc 1 32 43 view .LVU38
+  33:Src/cmd.c     ****         break;
+ 296              		.loc 1 33 9 view .LVU39
+  33:Src/cmd.c     ****         break;
+ 297              		.loc 1 33 19 is_stmt 0 view .LVU40
+ 298 00e8 AE4A     		ldr	r2, .L30
+ 299 00ea 4D23     		movs	r3, #77
+ 300 00ec D454     		strb	r4, [r2, r3]
+  34:Src/cmd.c     ****     }
+ 301              		.loc 1 34 9 is_stmt 1 view .LVU41
+ 302              	.LVL19:
+ 303              	.L4:
+ 119:Src/cmd.c     ****     }
+ 120:Src/cmd.c     ****     default:
+ 121:Src/cmd.c     ****     {
+ 122:Src/cmd.c     ****         break;
+ 123:Src/cmd.c     ****     }
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 10
+
+
+ 124:Src/cmd.c     ****     }
+ 125:Src/cmd.c     **** }
+ 304              		.loc 1 125 1 is_stmt 0 view .LVU42
+ 305 00ee 1AB0     		add	sp, sp, #104
+ 306              		@ sp needed
+ 307 00f0 1CBC     		pop	{r2, r3, r4}
+ 308 00f2 9046     		mov	r8, r2
+ 309 00f4 9946     		mov	r9, r3
+ 310 00f6 A246     		mov	r10, r4
+ 311 00f8 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 312              	.L8:
+  38:Src/cmd.c     ****         SERIAL_WRITE("0x%06x\n", ADC_SPI_READ_24());
+ 313              		.loc 1 38 9 is_stmt 1 view .LVU43
+ 314 00fa 0421     		movs	r1, #4
+ 315 00fc 4020     		movs	r0, #64
+ 316 00fe FFF7FEFF 		bl	ADC_CMD
+ 317              	.LVL20:
+ 318              	.LBB6:
+  39:Src/cmd.c     ****         State.cmd = 0;
+ 319              		.loc 1 39 9 view .LVU44
+ 320 0102 0024     		movs	r4, #0
+ 321 0104 0194     		str	r4, [sp, #4]
+ 322 0106 6022     		movs	r2, #96
+ 323 0108 0021     		movs	r1, #0
+ 324 010a 02A8     		add	r0, sp, #8
+ 325 010c FFF7FEFF 		bl	memset
+ 326              	.LVL21:
+  39:Src/cmd.c     ****         State.cmd = 0;
+ 327              		.loc 1 39 9 view .LVU45
+ 328 0110 FFF7FEFF 		bl	ADC_SPI_READ_24
+ 329              	.LVL22:
+ 330 0114 0200     		movs	r2, r0
+ 331 0116 A849     		ldr	r1, .L30+20
+ 332 0118 01A8     		add	r0, sp, #4
+ 333 011a FFF7FEFF 		bl	sprintf
+ 334              	.LVL23:
+  39:Src/cmd.c     ****         State.cmd = 0;
+ 335              		.loc 1 39 9 view .LVU46
+ 336 011e FA23     		movs	r3, #250
+ 337 0120 82B2     		uxth	r2, r0
+ 338 0122 9B00     		lsls	r3, r3, #2
+ 339 0124 01A9     		add	r1, sp, #4
+ 340 0126 A248     		ldr	r0, .L30+12
+ 341              	.LVL24:
+  39:Src/cmd.c     ****         State.cmd = 0;
+ 342              		.loc 1 39 9 is_stmt 0 view .LVU47
+ 343 0128 FFF7FEFF 		bl	HAL_UART_Transmit
+ 344              	.LVL25:
+ 345              	.LBE6:
+  39:Src/cmd.c     ****         State.cmd = 0;
+ 346              		.loc 1 39 52 is_stmt 1 view .LVU48
+  40:Src/cmd.c     ****         break;
+ 347              		.loc 1 40 9 view .LVU49
+  40:Src/cmd.c     ****         break;
+ 348              		.loc 1 40 19 is_stmt 0 view .LVU50
+ 349 012c 9D4A     		ldr	r2, .L30
+ 350 012e 4D23     		movs	r3, #77
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 11
+
+
+ 351 0130 D454     		strb	r4, [r2, r3]
+  41:Src/cmd.c     ****     }
+ 352              		.loc 1 41 9 is_stmt 1 view .LVU51
+ 353 0132 DCE7     		b	.L4
+ 354              	.L10:
+ 355              	.LBB7:
+  45:Src/cmd.c     ****         ADC_reset();
+ 356              		.loc 1 45 9 view .LVU52
+ 357 0134 01AC     		add	r4, sp, #4
+ 358 0136 6022     		movs	r2, #96
+ 359 0138 0021     		movs	r1, #0
+ 360 013a 02A8     		add	r0, sp, #8
+ 361 013c FFF7FEFF 		bl	memset
+ 362              	.LVL26:
+  45:Src/cmd.c     ****         ADC_reset();
+ 363              		.loc 1 45 9 view .LVU53
+ 364 0140 9E4B     		ldr	r3, .L30+24
+ 365 0142 2200     		movs	r2, r4
+ 366 0144 03CB     		ldmia	r3!, {r0, r1}
+ 367 0146 03C2     		stmia	r2!, {r0, r1}
+ 368 0148 1988     		ldrh	r1, [r3]
+ 369 014a 1180     		strh	r1, [r2]
+ 370 014c 9B78     		ldrb	r3, [r3, #2]
+ 371 014e 9370     		strb	r3, [r2, #2]
+ 372              	.LVL27:
+  45:Src/cmd.c     ****         ADC_reset();
+ 373              		.loc 1 45 9 view .LVU54
+ 374 0150 FA23     		movs	r3, #250
+ 375 0152 9B00     		lsls	r3, r3, #2
+ 376 0154 0A22     		movs	r2, #10
+ 377 0156 2100     		movs	r1, r4
+ 378 0158 9548     		ldr	r0, .L30+12
+ 379 015a FFF7FEFF 		bl	HAL_UART_Transmit
+ 380              	.LVL28:
+ 381              	.LBE7:
+  45:Src/cmd.c     ****         ADC_reset();
+ 382              		.loc 1 45 36 view .LVU55
+  46:Src/cmd.c     ****         State.cmd = 0;
+ 383              		.loc 1 46 9 view .LVU56
+ 384 015e FFF7FEFF 		bl	ADC_reset
+ 385              	.LVL29:
+  47:Src/cmd.c     ****         break;
+ 386              		.loc 1 47 9 view .LVU57
+  47:Src/cmd.c     ****         break;
+ 387              		.loc 1 47 19 is_stmt 0 view .LVU58
+ 388 0162 0021     		movs	r1, #0
+ 389 0164 8F4A     		ldr	r2, .L30
+ 390 0166 4D23     		movs	r3, #77
+ 391 0168 D154     		strb	r1, [r2, r3]
+  48:Src/cmd.c     ****     }
+ 392              		.loc 1 48 9 is_stmt 1 view .LVU59
+ 393 016a C0E7     		b	.L4
+ 394              	.LVL30:
+ 395              	.L9:
+ 396              	.LBB8:
+  52:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_STATUS_REG);
+ 397              		.loc 1 52 9 view .LVU60
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 12
+
+
+ 398 016c 01AC     		add	r4, sp, #4
+ 399 016e 0027     		movs	r7, #0
+ 400 0170 6022     		movs	r2, #96
+ 401 0172 0021     		movs	r1, #0
+ 402 0174 02A8     		add	r0, sp, #8
+ 403 0176 FFF7FEFF 		bl	memset
+ 404              	.LVL31:
+  52:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_STATUS_REG);
+ 405              		.loc 1 52 9 view .LVU61
+ 406 017a 914B     		ldr	r3, .L30+28
+ 407 017c 2200     		movs	r2, r4
+ 408 017e 23CB     		ldmia	r3!, {r0, r1, r5}
+ 409 0180 23C2     		stmia	r2!, {r0, r1, r5}
+ 410 0182 1B78     		ldrb	r3, [r3]
+ 411 0184 1370     		strb	r3, [r2]
+ 412              	.LVL32:
+  52:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_STATUS_REG);
+ 413              		.loc 1 52 9 view .LVU62
+ 414 0186 FA26     		movs	r6, #250
+ 415 0188 B600     		lsls	r6, r6, #2
+ 416 018a 894D     		ldr	r5, .L30+12
+ 417 018c 3300     		movs	r3, r6
+ 418 018e 0C22     		movs	r2, #12
+ 419 0190 2100     		movs	r1, r4
+ 420 0192 2800     		movs	r0, r5
+ 421 0194 FFF7FEFF 		bl	HAL_UART_Transmit
+ 422              	.LVL33:
+ 423              	.LBE8:
+  52:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_STATUS_REG);
+ 424              		.loc 1 52 39 view .LVU63
+  53:Src/cmd.c     ****         SERIAL_WRITE("\tADC_STATUS_REG:\t\t0x%02x\n", ADC_SPI_READ_8());
+ 425              		.loc 1 53 9 view .LVU64
+ 426 0198 0021     		movs	r1, #0
+ 427 019a 4020     		movs	r0, #64
+ 428 019c FFF7FEFF 		bl	ADC_CMD
+ 429              	.LVL34:
+ 430              	.LBB9:
+  54:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_MODE_REG);
+ 431              		.loc 1 54 9 view .LVU65
+ 432 01a0 0197     		str	r7, [sp, #4]
+ 433 01a2 6022     		movs	r2, #96
+ 434 01a4 0021     		movs	r1, #0
+ 435 01a6 02A8     		add	r0, sp, #8
+ 436 01a8 FFF7FEFF 		bl	memset
+ 437              	.LVL35:
+  54:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_MODE_REG);
+ 438              		.loc 1 54 9 view .LVU66
+ 439 01ac FFF7FEFF 		bl	ADC_SPI_READ_8
+ 440              	.LVL36:
+ 441 01b0 0200     		movs	r2, r0
+ 442 01b2 8449     		ldr	r1, .L30+32
+ 443 01b4 2000     		movs	r0, r4
+ 444 01b6 FFF7FEFF 		bl	sprintf
+ 445              	.LVL37:
+  54:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_MODE_REG);
+ 446              		.loc 1 54 9 view .LVU67
+ 447 01ba 3300     		movs	r3, r6
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 13
+
+
+ 448 01bc 1722     		movs	r2, #23
+ 449 01be 2100     		movs	r1, r4
+ 450 01c0 2800     		movs	r0, r5
+ 451 01c2 FFF7FEFF 		bl	HAL_UART_Transmit
+ 452              	.LVL38:
+ 453              	.LBE9:
+  54:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_MODE_REG);
+ 454              		.loc 1 54 72 view .LVU68
+  55:Src/cmd.c     ****         SERIAL_WRITE("\tADC_MODE_REG:\t\t0x%04x\n", ADC_SPI_READ_16());
+ 455              		.loc 1 55 9 view .LVU69
+ 456 01c6 0121     		movs	r1, #1
+ 457 01c8 4020     		movs	r0, #64
+ 458 01ca FFF7FEFF 		bl	ADC_CMD
+ 459              	.LVL39:
+ 460              	.LBB10:
+  56:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_INTERFACE_REG);
+ 461              		.loc 1 56 9 view .LVU70
+ 462 01ce 0197     		str	r7, [sp, #4]
+ 463 01d0 6022     		movs	r2, #96
+ 464 01d2 0021     		movs	r1, #0
+ 465 01d4 02A8     		add	r0, sp, #8
+ 466 01d6 FFF7FEFF 		bl	memset
+ 467              	.LVL40:
+  56:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_INTERFACE_REG);
+ 468              		.loc 1 56 9 view .LVU71
+ 469 01da FFF7FEFF 		bl	ADC_SPI_READ_16
+ 470              	.LVL41:
+ 471 01de 0200     		movs	r2, r0
+ 472 01e0 7949     		ldr	r1, .L30+36
+ 473 01e2 2000     		movs	r0, r4
+ 474 01e4 FFF7FEFF 		bl	sprintf
+ 475              	.LVL42:
+  56:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_INTERFACE_REG);
+ 476              		.loc 1 56 9 view .LVU72
+ 477 01e8 3300     		movs	r3, r6
+ 478 01ea 1722     		movs	r2, #23
+ 479 01ec 2100     		movs	r1, r4
+ 480 01ee 2800     		movs	r0, r5
+ 481 01f0 FFF7FEFF 		bl	HAL_UART_Transmit
+ 482              	.LVL43:
+ 483              	.LBE10:
+  56:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_INTERFACE_REG);
+ 484              		.loc 1 56 71 view .LVU73
+  57:Src/cmd.c     ****         SERIAL_WRITE("\tADC_INTERFACE_REG:\t0x%04x\n", ADC_SPI_READ_16());
+ 485              		.loc 1 57 9 view .LVU74
+ 486 01f4 0221     		movs	r1, #2
+ 487 01f6 4020     		movs	r0, #64
+ 488 01f8 FFF7FEFF 		bl	ADC_CMD
+ 489              	.LVL44:
+ 490              	.LBB11:
+  58:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_CHECK_REG);
+ 491              		.loc 1 58 9 view .LVU75
+ 492 01fc 0197     		str	r7, [sp, #4]
+ 493 01fe 6022     		movs	r2, #96
+ 494 0200 0021     		movs	r1, #0
+ 495 0202 02A8     		add	r0, sp, #8
+ 496 0204 FFF7FEFF 		bl	memset
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 14
+
+
+ 497              	.LVL45:
+  58:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_CHECK_REG);
+ 498              		.loc 1 58 9 view .LVU76
+ 499 0208 FFF7FEFF 		bl	ADC_SPI_READ_16
+ 500              	.LVL46:
+ 501 020c 0200     		movs	r2, r0
+ 502 020e 6F49     		ldr	r1, .L30+40
+ 503 0210 2000     		movs	r0, r4
+ 504 0212 FFF7FEFF 		bl	sprintf
+ 505              	.LVL47:
+  58:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_CHECK_REG);
+ 506              		.loc 1 58 9 view .LVU77
+ 507 0216 3300     		movs	r3, r6
+ 508 0218 1B22     		movs	r2, #27
+ 509 021a 2100     		movs	r1, r4
+ 510 021c 2800     		movs	r0, r5
+ 511 021e FFF7FEFF 		bl	HAL_UART_Transmit
+ 512              	.LVL48:
+ 513              	.LBE11:
+  58:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_CHECK_REG);
+ 514              		.loc 1 58 74 view .LVU78
+  59:Src/cmd.c     ****         SERIAL_WRITE("\tADC_CHECK_REG:\t\t0x%06x\n", ADC_SPI_READ_24());
+ 515              		.loc 1 59 9 view .LVU79
+ 516 0222 0321     		movs	r1, #3
+ 517 0224 4020     		movs	r0, #64
+ 518 0226 FFF7FEFF 		bl	ADC_CMD
+ 519              	.LVL49:
+ 520              	.LBB12:
+  60:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_DATA_REG);
+ 521              		.loc 1 60 9 view .LVU80
+ 522 022a 0197     		str	r7, [sp, #4]
+ 523 022c 6022     		movs	r2, #96
+ 524 022e 0021     		movs	r1, #0
+ 525 0230 02A8     		add	r0, sp, #8
+ 526 0232 FFF7FEFF 		bl	memset
+ 527              	.LVL50:
+  60:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_DATA_REG);
+ 528              		.loc 1 60 9 view .LVU81
+ 529 0236 FFF7FEFF 		bl	ADC_SPI_READ_24
+ 530              	.LVL51:
+ 531 023a 0200     		movs	r2, r0
+ 532 023c 6449     		ldr	r1, .L30+44
+ 533 023e 2000     		movs	r0, r4
+ 534 0240 FFF7FEFF 		bl	sprintf
+ 535              	.LVL52:
+  60:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_DATA_REG);
+ 536              		.loc 1 60 9 view .LVU82
+ 537 0244 82B2     		uxth	r2, r0
+ 538 0246 3300     		movs	r3, r6
+ 539 0248 2100     		movs	r1, r4
+ 540 024a 2800     		movs	r0, r5
+ 541              	.LVL53:
+  60:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_DATA_REG);
+ 542              		.loc 1 60 9 is_stmt 0 view .LVU83
+ 543 024c FFF7FEFF 		bl	HAL_UART_Transmit
+ 544              	.LVL54:
+ 545              	.LBE12:
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 15
+
+
+  60:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_DATA_REG);
+ 546              		.loc 1 60 72 is_stmt 1 view .LVU84
+  61:Src/cmd.c     ****         SERIAL_WRITE("\tADC_DATA_REG:\t\t0x%06x\n", ADC_SPI_READ_24());
+ 547              		.loc 1 61 9 view .LVU85
+ 548 0250 0421     		movs	r1, #4
+ 549 0252 4020     		movs	r0, #64
+ 550 0254 FFF7FEFF 		bl	ADC_CMD
+ 551              	.LVL55:
+ 552              	.LBB13:
+  62:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_GPIO_REG);
+ 553              		.loc 1 62 9 view .LVU86
+ 554 0258 0197     		str	r7, [sp, #4]
+ 555 025a 6022     		movs	r2, #96
+ 556 025c 0021     		movs	r1, #0
+ 557 025e 02A8     		add	r0, sp, #8
+ 558 0260 FFF7FEFF 		bl	memset
+ 559              	.LVL56:
+  62:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_GPIO_REG);
+ 560              		.loc 1 62 9 view .LVU87
+ 561 0264 FFF7FEFF 		bl	ADC_SPI_READ_24
+ 562              	.LVL57:
+ 563 0268 0200     		movs	r2, r0
+ 564 026a 5A49     		ldr	r1, .L30+48
+ 565 026c 2000     		movs	r0, r4
+ 566 026e FFF7FEFF 		bl	sprintf
+ 567              	.LVL58:
+  62:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_GPIO_REG);
+ 568              		.loc 1 62 9 view .LVU88
+ 569 0272 82B2     		uxth	r2, r0
+ 570 0274 3300     		movs	r3, r6
+ 571 0276 2100     		movs	r1, r4
+ 572 0278 2800     		movs	r0, r5
+ 573              	.LVL59:
+  62:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_GPIO_REG);
+ 574              		.loc 1 62 9 is_stmt 0 view .LVU89
+ 575 027a FFF7FEFF 		bl	HAL_UART_Transmit
+ 576              	.LVL60:
+ 577              	.LBE13:
+  62:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_GPIO_REG);
+ 578              		.loc 1 62 71 is_stmt 1 view .LVU90
+  63:Src/cmd.c     ****         SERIAL_WRITE("\tADC_GPIO_REG:\t\t0x%04x\n", ADC_SPI_READ_16());
+ 579              		.loc 1 63 9 view .LVU91
+ 580 027e 0621     		movs	r1, #6
+ 581 0280 4020     		movs	r0, #64
+ 582 0282 FFF7FEFF 		bl	ADC_CMD
+ 583              	.LVL61:
+ 584              	.LBB14:
+  64:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_ID_REG);
+ 585              		.loc 1 64 9 view .LVU92
+ 586 0286 0197     		str	r7, [sp, #4]
+ 587 0288 6022     		movs	r2, #96
+ 588 028a 0021     		movs	r1, #0
+ 589 028c 02A8     		add	r0, sp, #8
+ 590 028e FFF7FEFF 		bl	memset
+ 591              	.LVL62:
+  64:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_ID_REG);
+ 592              		.loc 1 64 9 view .LVU93
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 16
+
+
+ 593 0292 FFF7FEFF 		bl	ADC_SPI_READ_16
+ 594              	.LVL63:
+ 595 0296 0200     		movs	r2, r0
+ 596 0298 4F49     		ldr	r1, .L30+52
+ 597 029a 2000     		movs	r0, r4
+ 598 029c FFF7FEFF 		bl	sprintf
+ 599              	.LVL64:
+  64:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_ID_REG);
+ 600              		.loc 1 64 9 view .LVU94
+ 601 02a0 3300     		movs	r3, r6
+ 602 02a2 1722     		movs	r2, #23
+ 603 02a4 2100     		movs	r1, r4
+ 604 02a6 2800     		movs	r0, r5
+ 605 02a8 FFF7FEFF 		bl	HAL_UART_Transmit
+ 606              	.LVL65:
+ 607              	.LBE14:
+  64:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_ID_REG);
+ 608              		.loc 1 64 71 view .LVU95
+  65:Src/cmd.c     ****         SERIAL_WRITE("\tADC_ID_REG:\t\t0x%04x\n", ADC_SPI_READ_16());
+ 609              		.loc 1 65 9 view .LVU96
+ 610 02ac 0721     		movs	r1, #7
+ 611 02ae 4020     		movs	r0, #64
+ 612 02b0 FFF7FEFF 		bl	ADC_CMD
+ 613              	.LVL66:
+ 614              	.LBB15:
+  66:Src/cmd.c     ****         for (int i = 0; i < 15; i++)
+ 615              		.loc 1 66 9 view .LVU97
+ 616 02b4 0197     		str	r7, [sp, #4]
+ 617 02b6 6022     		movs	r2, #96
+ 618 02b8 0021     		movs	r1, #0
+ 619 02ba 02A8     		add	r0, sp, #8
+ 620 02bc FFF7FEFF 		bl	memset
+ 621              	.LVL67:
+  66:Src/cmd.c     ****         for (int i = 0; i < 15; i++)
+ 622              		.loc 1 66 9 view .LVU98
+ 623 02c0 FFF7FEFF 		bl	ADC_SPI_READ_16
+ 624              	.LVL68:
+ 625 02c4 0200     		movs	r2, r0
+ 626 02c6 4549     		ldr	r1, .L30+56
+ 627 02c8 2000     		movs	r0, r4
+ 628 02ca FFF7FEFF 		bl	sprintf
+ 629              	.LVL69:
+  66:Src/cmd.c     ****         for (int i = 0; i < 15; i++)
+ 630              		.loc 1 66 9 view .LVU99
+ 631 02ce 3300     		movs	r3, r6
+ 632 02d0 1522     		movs	r2, #21
+ 633 02d2 2100     		movs	r1, r4
+ 634 02d4 2800     		movs	r0, r5
+ 635 02d6 FFF7FEFF 		bl	HAL_UART_Transmit
+ 636              	.LVL70:
+ 637              	.LBE15:
+  66:Src/cmd.c     ****         for (int i = 0; i < 15; i++)
+ 638              		.loc 1 66 69 view .LVU100
   67:Src/cmd.c     ****         {
-  68:Src/cmd.c     ****             ADC_CMD(ADC_READ, ADC_SETUPCONx_REG(i));
-  69:Src/cmd.c     ****             SERIAL_WRITE("\tADC_SETUPCON%i_REG:\t0x%04x\n", i, ADC_SPI_READ_16());
+ 639              		.loc 1 67 9 view .LVU101
+ 640              	.LBB16:
+  67:Src/cmd.c     ****         {
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 17
+
+
+ 641              		.loc 1 67 14 view .LVU102
+  67:Src/cmd.c     ****         {
+ 642              		.loc 1 67 18 is_stmt 0 view .LVU103
+ 643 02da 0024     		movs	r4, #0
+  67:Src/cmd.c     ****         {
+ 644              		.loc 1 67 9 view .LVU104
+ 645 02dc 1CE0     		b	.L16
+ 646              	.LVL71:
+ 647              	.L17:
+  69:Src/cmd.c     ****             SERIAL_WRITE("\tADC_CH%i_REG:\t\t0x%04x\n", i, ADC_SPI_READ_16());
+ 648              		.loc 1 69 13 is_stmt 1 discriminator 3 view .LVU105
+  69:Src/cmd.c     ****             SERIAL_WRITE("\tADC_CH%i_REG:\t\t0x%04x\n", i, ADC_SPI_READ_16());
+ 649              		.loc 1 69 31 is_stmt 0 discriminator 3 view .LVU106
+ 650 02de 2100     		movs	r1, r4
+ 651 02e0 1031     		adds	r1, r1, #16
+  69:Src/cmd.c     ****             SERIAL_WRITE("\tADC_CH%i_REG:\t\t0x%04x\n", i, ADC_SPI_READ_16());
+ 652              		.loc 1 69 13 discriminator 3 view .LVU107
+ 653 02e2 C9B2     		uxtb	r1, r1
+ 654 02e4 4020     		movs	r0, #64
+ 655 02e6 FFF7FEFF 		bl	ADC_CMD
+ 656              	.LVL72:
+ 657              	.LBB17:
   70:Src/cmd.c     ****         }
-  71:Src/cmd.c     ****         for (int i = 0; i < 7; i++)
+ 658              		.loc 1 70 13 is_stmt 1 discriminator 3 view .LVU108
+ 659 02ea 0023     		movs	r3, #0
+ 660 02ec 0193     		str	r3, [sp, #4]
+ 661 02ee 6022     		movs	r2, #96
+ 662 02f0 0021     		movs	r1, #0
+ 663 02f2 02A8     		add	r0, sp, #8
+ 664 02f4 FFF7FEFF 		bl	memset
+ 665              	.LVL73:
+  70:Src/cmd.c     ****         }
+ 666              		.loc 1 70 13 discriminator 3 view .LVU109
+ 667 02f8 FFF7FEFF 		bl	ADC_SPI_READ_16
+ 668              	.LVL74:
+ 669 02fc 0300     		movs	r3, r0
+ 670 02fe 2200     		movs	r2, r4
+ 671 0300 3749     		ldr	r1, .L30+60
+ 672 0302 01A8     		add	r0, sp, #4
+ 673 0304 FFF7FEFF 		bl	sprintf
+ 674              	.LVL75:
+  70:Src/cmd.c     ****         }
+ 675              		.loc 1 70 13 discriminator 3 view .LVU110
+ 676 0308 FA23     		movs	r3, #250
+ 677 030a 82B2     		uxth	r2, r0
+ 678 030c 9B00     		lsls	r3, r3, #2
+ 679 030e 01A9     		add	r1, sp, #4
+ 680 0310 2748     		ldr	r0, .L30+12
+ 681              	.LVL76:
+  70:Src/cmd.c     ****         }
+ 682              		.loc 1 70 13 is_stmt 0 discriminator 3 view .LVU111
+ 683 0312 FFF7FEFF 		bl	HAL_UART_Transmit
+ 684              	.LVL77:
+ 685              	.LBE17:
+  70:Src/cmd.c     ****         }
+ 686              		.loc 1 70 78 is_stmt 1 discriminator 3 view .LVU112
+  67:Src/cmd.c     ****         {
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 18
+
+
+ 687              		.loc 1 67 33 discriminator 3 view .LVU113
+  67:Src/cmd.c     ****         {
+ 688              		.loc 1 67 34 is_stmt 0 discriminator 3 view .LVU114
+ 689 0316 0134     		adds	r4, r4, #1
+ 690              	.LVL78:
+ 691              	.L16:
+  67:Src/cmd.c     ****         {
+ 692              		.loc 1 67 25 is_stmt 1 discriminator 1 view .LVU115
+  67:Src/cmd.c     ****         {
+ 693              		.loc 1 67 9 is_stmt 0 discriminator 1 view .LVU116
+ 694 0318 0E2C     		cmp	r4, #14
+ 695 031a E0DD     		ble	.L17
+ 696              	.LBE16:
+ 697              	.LBB18:
   72:Src/cmd.c     ****         {
-  73:Src/cmd.c     ****             ADC_CMD(ADC_READ, ADC_FILTCONx_REG(i));
-  74:Src/cmd.c     ****             SERIAL_WRITE("\tADC_FILTCON%i_REG:\t0x%04x\n", i, ADC_SPI_READ_16());
+ 698              		.loc 1 72 18 view .LVU117
+ 699 031c 0024     		movs	r4, #0
+ 700              	.LVL79:
+  72:Src/cmd.c     ****         {
+ 701              		.loc 1 72 18 view .LVU118
+ 702 031e 1CE0     		b	.L18
+ 703              	.LVL80:
+ 704              	.L19:
+  74:Src/cmd.c     ****             SERIAL_WRITE("\tADC_SETUPCON%i_REG:\t0x%04x\n", i, ADC_SPI_READ_16());
+ 705              		.loc 1 74 13 is_stmt 1 discriminator 3 view .LVU119
+  74:Src/cmd.c     ****             SERIAL_WRITE("\tADC_SETUPCON%i_REG:\t0x%04x\n", i, ADC_SPI_READ_16());
+ 706              		.loc 1 74 31 is_stmt 0 discriminator 3 view .LVU120
+ 707 0320 2100     		movs	r1, r4
+ 708 0322 2031     		adds	r1, r1, #32
+  74:Src/cmd.c     ****             SERIAL_WRITE("\tADC_SETUPCON%i_REG:\t0x%04x\n", i, ADC_SPI_READ_16());
+ 709              		.loc 1 74 13 discriminator 3 view .LVU121
+ 710 0324 C9B2     		uxtb	r1, r1
+ 711 0326 4020     		movs	r0, #64
+ 712 0328 FFF7FEFF 		bl	ADC_CMD
+ 713              	.LVL81:
+ 714              	.LBB19:
   75:Src/cmd.c     ****         }
-  76:Src/cmd.c     ****         for (int i = 0; i < 7; i++)
+ 715              		.loc 1 75 13 is_stmt 1 discriminator 3 view .LVU122
+ 716 032c 0023     		movs	r3, #0
+ 717 032e 0193     		str	r3, [sp, #4]
+ 718 0330 6022     		movs	r2, #96
+ 719 0332 0021     		movs	r1, #0
+ 720 0334 02A8     		add	r0, sp, #8
+ 721 0336 FFF7FEFF 		bl	memset
+ 722              	.LVL82:
+  75:Src/cmd.c     ****         }
+ 723              		.loc 1 75 13 discriminator 3 view .LVU123
+ 724 033a FFF7FEFF 		bl	ADC_SPI_READ_16
+ 725              	.LVL83:
+ 726 033e 0300     		movs	r3, r0
+ 727 0340 2200     		movs	r2, r4
+ 728 0342 2849     		ldr	r1, .L30+64
+ 729 0344 01A8     		add	r0, sp, #4
+ 730 0346 FFF7FEFF 		bl	sprintf
+ 731              	.LVL84:
+  75:Src/cmd.c     ****         }
+ 732              		.loc 1 75 13 discriminator 3 view .LVU124
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 19
+
+
+ 733 034a FA23     		movs	r3, #250
+ 734 034c 9B00     		lsls	r3, r3, #2
+ 735 034e 1B22     		movs	r2, #27
+ 736 0350 01A9     		add	r1, sp, #4
+ 737 0352 1748     		ldr	r0, .L30+12
+ 738 0354 FFF7FEFF 		bl	HAL_UART_Transmit
+ 739              	.LVL85:
+ 740              	.LBE19:
+  75:Src/cmd.c     ****         }
+ 741              		.loc 1 75 82 discriminator 3 view .LVU125
+  72:Src/cmd.c     ****         {
+ 742              		.loc 1 72 32 discriminator 3 view .LVU126
+  72:Src/cmd.c     ****         {
+ 743              		.loc 1 72 33 is_stmt 0 discriminator 3 view .LVU127
+ 744 0358 0134     		adds	r4, r4, #1
+ 745              	.LVL86:
+ 746              	.L18:
+  72:Src/cmd.c     ****         {
+ 747              		.loc 1 72 25 is_stmt 1 discriminator 1 view .LVU128
+  72:Src/cmd.c     ****         {
+ 748              		.loc 1 72 9 is_stmt 0 discriminator 1 view .LVU129
+ 749 035a 062C     		cmp	r4, #6
+ 750 035c E0DD     		ble	.L19
+ 751              	.LBE18:
+ 752              	.LBB20:
   77:Src/cmd.c     ****         {
-  78:Src/cmd.c     ****             ADC_CMD(ADC_READ, ADC_OFFSETx_REG(i));
-  79:Src/cmd.c     ****             SERIAL_WRITE("\tADC_OFFSET%i_REG:\t0x%04x\n", i, ADC_SPI_READ_24());
+ 753              		.loc 1 77 18 view .LVU130
+ 754 035e 0024     		movs	r4, #0
+ 755              	.LVL87:
+  77:Src/cmd.c     ****         {
+ 756              		.loc 1 77 18 view .LVU131
+ 757 0360 1CE0     		b	.L20
+ 758              	.LVL88:
+ 759              	.L21:
+  79:Src/cmd.c     ****             SERIAL_WRITE("\tADC_FILTCON%i_REG:\t0x%04x\n", i, ADC_SPI_READ_16());
+ 760              		.loc 1 79 13 is_stmt 1 discriminator 3 view .LVU132
+  79:Src/cmd.c     ****             SERIAL_WRITE("\tADC_FILTCON%i_REG:\t0x%04x\n", i, ADC_SPI_READ_16());
+ 761              		.loc 1 79 31 is_stmt 0 discriminator 3 view .LVU133
+ 762 0362 2100     		movs	r1, r4
+ 763 0364 2831     		adds	r1, r1, #40
+  79:Src/cmd.c     ****             SERIAL_WRITE("\tADC_FILTCON%i_REG:\t0x%04x\n", i, ADC_SPI_READ_16());
+ 764              		.loc 1 79 13 discriminator 3 view .LVU134
+ 765 0366 C9B2     		uxtb	r1, r1
+ 766 0368 4020     		movs	r0, #64
+ 767 036a FFF7FEFF 		bl	ADC_CMD
+ 768              	.LVL89:
+ 769              	.LBB21:
   80:Src/cmd.c     ****         }
-  81:Src/cmd.c     ****         for (int i = 0; i < 7; i++)
+ 770              		.loc 1 80 13 is_stmt 1 discriminator 3 view .LVU135
+ 771 036e 0023     		movs	r3, #0
+ 772 0370 0193     		str	r3, [sp, #4]
+ 773 0372 6022     		movs	r2, #96
+ 774 0374 0021     		movs	r1, #0
+ 775 0376 02A8     		add	r0, sp, #8
+ 776 0378 FFF7FEFF 		bl	memset
+ 777              	.LVL90:
+  80:Src/cmd.c     ****         }
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 20
+
+
+ 778              		.loc 1 80 13 discriminator 3 view .LVU136
+ 779 037c FFF7FEFF 		bl	ADC_SPI_READ_16
+ 780              	.LVL91:
+ 781 0380 0300     		movs	r3, r0
+ 782 0382 2200     		movs	r2, r4
+ 783 0384 1849     		ldr	r1, .L30+68
+ 784 0386 01A8     		add	r0, sp, #4
+ 785 0388 FFF7FEFF 		bl	sprintf
+ 786              	.LVL92:
+  80:Src/cmd.c     ****         }
+ 787              		.loc 1 80 13 discriminator 3 view .LVU137
+ 788 038c FA23     		movs	r3, #250
+ 789 038e 9B00     		lsls	r3, r3, #2
+ 790 0390 1A22     		movs	r2, #26
+ 791 0392 01A9     		add	r1, sp, #4
+ 792 0394 0648     		ldr	r0, .L30+12
+ 793 0396 FFF7FEFF 		bl	HAL_UART_Transmit
+ 794              	.LVL93:
+ 795              	.LBE21:
+  80:Src/cmd.c     ****         }
+ 796              		.loc 1 80 81 discriminator 3 view .LVU138
+  77:Src/cmd.c     ****         {
+ 797              		.loc 1 77 32 discriminator 3 view .LVU139
+  77:Src/cmd.c     ****         {
+ 798              		.loc 1 77 33 is_stmt 0 discriminator 3 view .LVU140
+ 799 039a 0134     		adds	r4, r4, #1
+ 800              	.LVL94:
+ 801              	.L20:
+  77:Src/cmd.c     ****         {
+ 802              		.loc 1 77 25 is_stmt 1 discriminator 1 view .LVU141
+  77:Src/cmd.c     ****         {
+ 803              		.loc 1 77 9 is_stmt 0 discriminator 1 view .LVU142
+ 804 039c 062C     		cmp	r4, #6
+ 805 039e E0DD     		ble	.L21
+ 806              	.LBE20:
+ 807              	.LBB22:
   82:Src/cmd.c     ****         {
-  83:Src/cmd.c     ****             ADC_CMD(ADC_READ, ADC_GAINx_REG(i));
-  84:Src/cmd.c     ****             SERIAL_WRITE("\tADC_GAIN%i_REG:\t\t0x%04x\n", i, ADC_SPI_READ_24());
+ 808              		.loc 1 82 18 view .LVU143
+ 809 03a0 0024     		movs	r4, #0
+ 810              	.LVL95:
+  82:Src/cmd.c     ****         {
+ 811              		.loc 1 82 18 view .LVU144
+ 812 03a2 40E0     		b	.L22
+ 813              	.L31:
+ 814              		.align	2
+ 815              	.L30:
+ 816 03a4 00000000 		.word	State
+ 817 03a8 00000000 		.word	.L6
+ 818 03ac 88010000 		.word	.LC41
+ 819 03b0 00000000 		.word	huart2
+ 820 03b4 6F6B0A00 		.word	682863
+ 821 03b8 00000000 		.word	.LC3
+ 822 03bc 08000000 		.word	.LC5
+ 823 03c0 14000000 		.word	.LC7
+ 824 03c4 24000000 		.word	.LC9
+ 825 03c8 40000000 		.word	.LC11
+ 826 03cc 58000000 		.word	.LC13
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 21
+
+
+ 827 03d0 74000000 		.word	.LC15
+ 828 03d4 90000000 		.word	.LC17
+ 829 03d8 A8000000 		.word	.LC19
+ 830 03dc C0000000 		.word	.LC21
+ 831 03e0 D8000000 		.word	.LC23
+ 832 03e4 F0000000 		.word	.LC25
+ 833 03e8 10010000 		.word	.LC27
+ 834              	.LVL96:
+ 835              	.L23:
+  84:Src/cmd.c     ****             SERIAL_WRITE("\tADC_OFFSET%i_REG:\t0x%04x\n", i, ADC_SPI_READ_24());
+ 836              		.loc 1 84 13 is_stmt 1 discriminator 3 view .LVU145
+  84:Src/cmd.c     ****             SERIAL_WRITE("\tADC_OFFSET%i_REG:\t0x%04x\n", i, ADC_SPI_READ_24());
+ 837              		.loc 1 84 31 is_stmt 0 discriminator 3 view .LVU146
+ 838 03ec 2100     		movs	r1, r4
+ 839 03ee 3031     		adds	r1, r1, #48
+  84:Src/cmd.c     ****             SERIAL_WRITE("\tADC_OFFSET%i_REG:\t0x%04x\n", i, ADC_SPI_READ_24());
+ 840              		.loc 1 84 13 discriminator 3 view .LVU147
+ 841 03f0 C9B2     		uxtb	r1, r1
+ 842 03f2 4020     		movs	r0, #64
+ 843 03f4 FFF7FEFF 		bl	ADC_CMD
+ 844              	.LVL97:
+ 845              	.LBB23:
   85:Src/cmd.c     ****         }
-  86:Src/cmd.c     ****         COMMAND = 0;
-  87:Src/cmd.c     ****         return 0;
-  88:Src/cmd.c     ****     }
-  89:Src/cmd.c     ****     case cmd_undefined:
-  90:Src/cmd.c     ****     {
-  91:Src/cmd.c     ****         COMMAND = 0;
- 117              		.loc 1 91 9 view .LVU2
- 118              		.loc 1 91 17 is_stmt 0 view .LVU3
- 119 0020 D84B     		ldr	r3, .L27
- 120 0022 0022     		movs	r2, #0
- 121 0024 1A70     		strb	r2, [r3]
- 122              	.LBB2:
-  92:Src/cmd.c     ****         SERIAL_WRITE("undefined\n");
- 123              		.loc 1 92 9 is_stmt 1 view .LVU4
- 124 0026 01AC     		add	r4, sp, #4
- 125 0028 6032     		adds	r2, r2, #96
- 126 002a 0021     		movs	r1, #0
- 127 002c 02A8     		add	r0, sp, #8
- 128 002e FFF7FEFF 		bl	memset
- 129              	.LVL0:
- 130              		.loc 1 92 9 view .LVU5
- 131 0032 D64B     		ldr	r3, .L27+8
- 132 0034 2200     		movs	r2, r4
- 133 0036 03CB     		ldmia	r3!, {r0, r1}
- 134 0038 03C2     		stmia	r2!, {r0, r1}
- 135 003a 1988     		ldrh	r1, [r3]
- 136 003c 1180     		strh	r1, [r2]
- 137 003e 9B78     		ldrb	r3, [r3, #2]
- 138 0040 9370     		strb	r3, [r2, #2]
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 6
+ 846              		.loc 1 85 13 is_stmt 1 discriminator 3 view .LVU148
+ 847 03f8 0023     		movs	r3, #0
+ 848 03fa 0193     		str	r3, [sp, #4]
+ 849 03fc 6022     		movs	r2, #96
+ 850 03fe 0021     		movs	r1, #0
+ 851 0400 02A8     		add	r0, sp, #8
+ 852 0402 FFF7FEFF 		bl	memset
+ 853              	.LVL98:
+  85:Src/cmd.c     ****         }
+ 854              		.loc 1 85 13 discriminator 3 view .LVU149
+ 855 0406 FFF7FEFF 		bl	ADC_SPI_READ_24
+ 856              	.LVL99:
+ 857 040a 0300     		movs	r3, r0
+ 858 040c 2200     		movs	r2, r4
+ 859 040e 5F49     		ldr	r1, .L32
+ 860 0410 01A8     		add	r0, sp, #4
+ 861 0412 FFF7FEFF 		bl	sprintf
+ 862              	.LVL100:
+  85:Src/cmd.c     ****         }
+ 863              		.loc 1 85 13 discriminator 3 view .LVU150
+ 864 0416 FA23     		movs	r3, #250
+ 865 0418 82B2     		uxth	r2, r0
+ 866 041a 9B00     		lsls	r3, r3, #2
+ 867 041c 01A9     		add	r1, sp, #4
+ 868 041e 5C48     		ldr	r0, .L32+4
+ 869              	.LVL101:
+  85:Src/cmd.c     ****         }
+ 870              		.loc 1 85 13 is_stmt 0 discriminator 3 view .LVU151
+ 871 0420 FFF7FEFF 		bl	HAL_UART_Transmit
+ 872              	.LVL102:
+ 873              	.LBE23:
+  85:Src/cmd.c     ****         }
+ 874              		.loc 1 85 80 is_stmt 1 discriminator 3 view .LVU152
+  82:Src/cmd.c     ****         {
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 22
 
 
- 139              	.LVL1:
- 140              		.loc 1 92 9 view .LVU6
- 141 0042 FA23     		movs	r3, #250
- 142 0044 9B00     		lsls	r3, r3, #2
- 143 0046 0A22     		movs	r2, #10
- 144 0048 2100     		movs	r1, r4
- 145 004a D148     		ldr	r0, .L27+12
- 146 004c FFF7FEFF 		bl	HAL_UART_Transmit
- 147              	.LVL2:
- 148              	.LBE2:
- 149              		.loc 1 92 36 view .LVU7
-  93:Src/cmd.c     ****         HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
- 150              		.loc 1 93 9 view .LVU8
- 151 0050 A024     		movs	r4, #160
- 152 0052 E405     		lsls	r4, r4, #23
- 153 0054 0121     		movs	r1, #1
- 154 0056 2000     		movs	r0, r4
- 155 0058 FFF7FEFF 		bl	HAL_GPIO_TogglePin
- 156              	.LVL3:
-  94:Src/cmd.c     ****         HAL_Delay(100);
- 157              		.loc 1 94 9 view .LVU9
- 158 005c 6420     		movs	r0, #100
- 159 005e FFF7FEFF 		bl	HAL_Delay
- 160              	.LVL4:
-  95:Src/cmd.c     ****         HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
- 161              		.loc 1 95 9 view .LVU10
- 162 0062 0121     		movs	r1, #1
- 163 0064 2000     		movs	r0, r4
- 164 0066 FFF7FEFF 		bl	HAL_GPIO_TogglePin
- 165              	.LVL5:
-  96:Src/cmd.c     ****         HAL_Delay(100);
- 166              		.loc 1 96 9 view .LVU11
- 167 006a 6420     		movs	r0, #100
- 168 006c FFF7FEFF 		bl	HAL_Delay
- 169              	.LVL6:
-  97:Src/cmd.c     ****         return 0;
- 170              		.loc 1 97 9 view .LVU12
- 171              		.loc 1 97 16 is_stmt 0 view .LVU13
- 172 0070 34E0     		b	.L3
- 173              	.LVL7:
- 174              	.L9:
-  15:Src/cmd.c     ****         SERIAL_WRITE("ok\n");
- 175              		.loc 1 15 9 is_stmt 1 view .LVU14
-  15:Src/cmd.c     ****         SERIAL_WRITE("ok\n");
- 176              		.loc 1 15 17 is_stmt 0 view .LVU15
- 177 0072 C44B     		ldr	r3, .L27
- 178 0074 0022     		movs	r2, #0
- 179 0076 1A70     		strb	r2, [r3]
- 180              	.LBB3:
-  16:Src/cmd.c     ****         for (int i = 0; i < 10; i++)
- 181              		.loc 1 16 9 is_stmt 1 view .LVU16
- 182 0078 6032     		adds	r2, r2, #96
- 183 007a 0021     		movs	r1, #0
- 184 007c 02A8     		add	r0, sp, #8
- 185 007e FFF7FEFF 		bl	memset
- 186              	.LVL8:
-  16:Src/cmd.c     ****         for (int i = 0; i < 10; i++)
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 7
+ 875              		.loc 1 82 32 discriminator 3 view .LVU153
+  82:Src/cmd.c     ****         {
+ 876              		.loc 1 82 33 is_stmt 0 discriminator 3 view .LVU154
+ 877 0424 0134     		adds	r4, r4, #1
+ 878              	.LVL103:
+ 879              	.L22:
+  82:Src/cmd.c     ****         {
+ 880              		.loc 1 82 25 is_stmt 1 discriminator 1 view .LVU155
+  82:Src/cmd.c     ****         {
+ 881              		.loc 1 82 9 is_stmt 0 discriminator 1 view .LVU156
+ 882 0426 062C     		cmp	r4, #6
+ 883 0428 E0DD     		ble	.L23
+ 884              	.LBE22:
+ 885              	.LBB24:
+  87:Src/cmd.c     ****         {
+ 886              		.loc 1 87 18 view .LVU157
+ 887 042a 0024     		movs	r4, #0
+ 888              	.LVL104:
+  87:Src/cmd.c     ****         {
+ 889              		.loc 1 87 18 view .LVU158
+ 890 042c 1CE0     		b	.L24
+ 891              	.LVL105:
+ 892              	.L25:
+  89:Src/cmd.c     ****             SERIAL_WRITE("\tADC_GAIN%i_REG:\t\t0x%04x\n", i, ADC_SPI_READ_24());
+ 893              		.loc 1 89 13 is_stmt 1 discriminator 3 view .LVU159
+  89:Src/cmd.c     ****             SERIAL_WRITE("\tADC_GAIN%i_REG:\t\t0x%04x\n", i, ADC_SPI_READ_24());
+ 894              		.loc 1 89 31 is_stmt 0 discriminator 3 view .LVU160
+ 895 042e 2100     		movs	r1, r4
+ 896 0430 3831     		adds	r1, r1, #56
+  89:Src/cmd.c     ****             SERIAL_WRITE("\tADC_GAIN%i_REG:\t\t0x%04x\n", i, ADC_SPI_READ_24());
+ 897              		.loc 1 89 13 discriminator 3 view .LVU161
+ 898 0432 C9B2     		uxtb	r1, r1
+ 899 0434 4020     		movs	r0, #64
+ 900 0436 FFF7FEFF 		bl	ADC_CMD
+ 901              	.LVL106:
+ 902              	.LBB25:
+  90:Src/cmd.c     ****         }
+ 903              		.loc 1 90 13 is_stmt 1 discriminator 3 view .LVU162
+ 904 043a 0023     		movs	r3, #0
+ 905 043c 0193     		str	r3, [sp, #4]
+ 906 043e 6022     		movs	r2, #96
+ 907 0440 0021     		movs	r1, #0
+ 908 0442 02A8     		add	r0, sp, #8
+ 909 0444 FFF7FEFF 		bl	memset
+ 910              	.LVL107:
+  90:Src/cmd.c     ****         }
+ 911              		.loc 1 90 13 discriminator 3 view .LVU163
+ 912 0448 FFF7FEFF 		bl	ADC_SPI_READ_24
+ 913              	.LVL108:
+ 914 044c 0300     		movs	r3, r0
+ 915 044e 2200     		movs	r2, r4
+ 916 0450 5049     		ldr	r1, .L32+8
+ 917 0452 01A8     		add	r0, sp, #4
+ 918 0454 FFF7FEFF 		bl	sprintf
+ 919              	.LVL109:
+  90:Src/cmd.c     ****         }
+ 920              		.loc 1 90 13 discriminator 3 view .LVU164
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 23
 
 
- 187              		.loc 1 16 9 view .LVU17
- 188 0082 C44B     		ldr	r3, .L27+16
- 189 0084 0193     		str	r3, [sp, #4]
- 190              	.LVL9:
-  16:Src/cmd.c     ****         for (int i = 0; i < 10; i++)
- 191              		.loc 1 16 9 view .LVU18
- 192 0086 FA23     		movs	r3, #250
- 193 0088 9B00     		lsls	r3, r3, #2
- 194 008a 0322     		movs	r2, #3
- 195 008c 01A9     		add	r1, sp, #4
- 196 008e C048     		ldr	r0, .L27+12
- 197 0090 FFF7FEFF 		bl	HAL_UART_Transmit
- 198              	.LVL10:
- 199              	.LBE3:
-  16:Src/cmd.c     ****         for (int i = 0; i < 10; i++)
- 200              		.loc 1 16 29 view .LVU19
-  17:Src/cmd.c     ****         {
- 201              		.loc 1 17 9 view .LVU20
- 202              	.LBB4:
-  17:Src/cmd.c     ****         {
- 203              		.loc 1 17 14 view .LVU21
-  17:Src/cmd.c     ****         {
- 204              		.loc 1 17 18 is_stmt 0 view .LVU22
- 205 0094 0024     		movs	r4, #0
- 206              	.LVL11:
- 207              	.L11:
-  17:Src/cmd.c     ****         {
- 208              		.loc 1 17 25 is_stmt 1 discriminator 1 view .LVU23
-  17:Src/cmd.c     ****         {
- 209              		.loc 1 17 9 is_stmt 0 discriminator 1 view .LVU24
- 210 0096 092C     		cmp	r4, #9
- 211 0098 20DC     		bgt	.L3
-  19:Src/cmd.c     ****             HAL_Delay(100);
- 212              		.loc 1 19 13 is_stmt 1 discriminator 3 view .LVU25
- 213 009a A020     		movs	r0, #160
- 214 009c 0121     		movs	r1, #1
- 215 009e C005     		lsls	r0, r0, #23
- 216 00a0 FFF7FEFF 		bl	HAL_GPIO_TogglePin
- 217              	.LVL12:
-  20:Src/cmd.c     ****         }
- 218              		.loc 1 20 13 discriminator 3 view .LVU26
- 219 00a4 6420     		movs	r0, #100
- 220 00a6 FFF7FEFF 		bl	HAL_Delay
- 221              	.LVL13:
-  17:Src/cmd.c     ****         {
- 222              		.loc 1 17 33 discriminator 3 view .LVU27
-  17:Src/cmd.c     ****         {
- 223              		.loc 1 17 34 is_stmt 0 discriminator 3 view .LVU28
- 224 00aa 0134     		adds	r4, r4, #1
- 225              	.LVL14:
-  17:Src/cmd.c     ****         {
- 226              		.loc 1 17 34 discriminator 3 view .LVU29
- 227 00ac F3E7     		b	.L11
- 228              	.LVL15:
- 229              	.L8:
-  17:Src/cmd.c     ****         {
- 230              		.loc 1 17 34 discriminator 3 view .LVU30
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 8
+ 921 0458 FA23     		movs	r3, #250
+ 922 045a 82B2     		uxth	r2, r0
+ 923 045c 9B00     		lsls	r3, r3, #2
+ 924 045e 01A9     		add	r1, sp, #4
+ 925 0460 4B48     		ldr	r0, .L32+4
+ 926              	.LVL110:
+  90:Src/cmd.c     ****         }
+ 927              		.loc 1 90 13 is_stmt 0 discriminator 3 view .LVU165
+ 928 0462 FFF7FEFF 		bl	HAL_UART_Transmit
+ 929              	.LVL111:
+ 930              	.LBE25:
+  90:Src/cmd.c     ****         }
+ 931              		.loc 1 90 80 is_stmt 1 discriminator 3 view .LVU166
+  87:Src/cmd.c     ****         {
+ 932              		.loc 1 87 32 discriminator 3 view .LVU167
+  87:Src/cmd.c     ****         {
+ 933              		.loc 1 87 33 is_stmt 0 discriminator 3 view .LVU168
+ 934 0466 0134     		adds	r4, r4, #1
+ 935              	.LVL112:
+ 936              	.L24:
+  87:Src/cmd.c     ****         {
+ 937              		.loc 1 87 25 is_stmt 1 discriminator 1 view .LVU169
+  87:Src/cmd.c     ****         {
+ 938              		.loc 1 87 9 is_stmt 0 discriminator 1 view .LVU170
+ 939 0468 062C     		cmp	r4, #6
+ 940 046a E0DD     		ble	.L25
+ 941              	.LBE24:
+  92:Src/cmd.c     ****         break;
+ 942              		.loc 1 92 9 is_stmt 1 view .LVU171
+  92:Src/cmd.c     ****         break;
+ 943              		.loc 1 92 19 is_stmt 0 view .LVU172
+ 944 046c 4A4A     		ldr	r2, .L32+12
+ 945 046e 4D23     		movs	r3, #77
+ 946 0470 0021     		movs	r1, #0
+ 947 0472 D154     		strb	r1, [r2, r3]
+  93:Src/cmd.c     ****     }
+ 948              		.loc 1 93 9 is_stmt 1 view .LVU173
+ 949 0474 3BE6     		b	.L4
+ 950              	.LVL113:
+ 951              	.L27:
+  17:Src/cmd.c     ****     {
+ 952              		.loc 1 17 5 is_stmt 0 view .LVU174
+ 953 0476 0024     		movs	r4, #0
+ 954              	.L7:
+ 955              	.LVL114:
+ 956              	.LBB26:
+  97:Src/cmd.c     ****         {
+ 957              		.loc 1 97 25 is_stmt 1 discriminator 1 view .LVU175
+  97:Src/cmd.c     ****         {
+ 958              		.loc 1 97 9 is_stmt 0 discriminator 1 view .LVU176
+ 959 0478 0F2C     		cmp	r4, #15
+ 960 047a 4DDC     		bgt	.L29
+ 961              	.LBB27:
+  99:Src/cmd.c     ****             SERIAL_WRITE("[%i]\t", i);
+ 962              		.loc 1 99 13 is_stmt 1 discriminator 3 view .LVU177
+  99:Src/cmd.c     ****             SERIAL_WRITE("[%i]\t", i);
+ 963              		.loc 1 99 63 is_stmt 0 discriminator 3 view .LVU178
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 24
 
 
- 231              	.LBE4:
- 232              	.LBB5:
-  26:Src/cmd.c     ****         COMMAND = 0;
- 233              		.loc 1 26 9 is_stmt 1 view .LVU31
- 234 00ae 0024     		movs	r4, #0
- 235 00b0 0194     		str	r4, [sp, #4]
- 236 00b2 6022     		movs	r2, #96
- 237 00b4 0021     		movs	r1, #0
- 238 00b6 02A8     		add	r0, sp, #8
- 239 00b8 FFF7FEFF 		bl	memset
- 240              	.LVL16:
-  26:Src/cmd.c     ****         COMMAND = 0;
- 241              		.loc 1 26 9 view .LVU32
- 242 00bc FFF7FEFF 		bl	ADC_ID
- 243              	.LVL17:
- 244 00c0 0200     		movs	r2, r0
- 245 00c2 B549     		ldr	r1, .L27+20
- 246 00c4 01A8     		add	r0, sp, #4
- 247 00c6 FFF7FEFF 		bl	sprintf
- 248              	.LVL18:
-  26:Src/cmd.c     ****         COMMAND = 0;
- 249              		.loc 1 26 9 view .LVU33
- 250 00ca FA23     		movs	r3, #250
- 251 00cc 9B00     		lsls	r3, r3, #2
- 252 00ce 0922     		movs	r2, #9
- 253 00d0 01A9     		add	r1, sp, #4
- 254 00d2 AF48     		ldr	r0, .L27+12
- 255 00d4 FFF7FEFF 		bl	HAL_UART_Transmit
- 256              	.LVL19:
- 257              	.LBE5:
-  26:Src/cmd.c     ****         COMMAND = 0;
- 258              		.loc 1 26 43 view .LVU34
-  27:Src/cmd.c     ****         return 0;
- 259              		.loc 1 27 9 view .LVU35
-  27:Src/cmd.c     ****         return 0;
- 260              		.loc 1 27 17 is_stmt 0 view .LVU36
- 261 00d8 AA4B     		ldr	r3, .L27
- 262 00da 1C70     		strb	r4, [r3]
-  28:Src/cmd.c     ****     }
- 263              		.loc 1 28 9 is_stmt 1 view .LVU37
- 264              	.LVL20:
- 265              	.L3:
-  98:Src/cmd.c     ****     }
-  99:Src/cmd.c     ****     default:
- 100:Src/cmd.c     ****     {
- 101:Src/cmd.c     ****         return 0;
- 102:Src/cmd.c     ****     }
- 103:Src/cmd.c     ****     }
- 104:Src/cmd.c     **** }
- 266              		.loc 1 104 1 is_stmt 0 view .LVU38
- 267 00dc 0020     		movs	r0, #0
- 268 00de 1BB0     		add	sp, sp, #108
- 269              		@ sp needed
- 270 00e0 F0BD     		pop	{r4, r5, r6, r7, pc}
- 271              	.L4:
-  32:Src/cmd.c     ****         SERIAL_WRITE("0x%06x\n", ADC_SPI_READ_24());
- 272              		.loc 1 32 9 is_stmt 1 view .LVU39
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 9
+ 964 047c A51C     		adds	r5, r4, #2
+ 965 047e AD00     		lsls	r5, r5, #2
+ 966 0480 454B     		ldr	r3, .L32+12
+ 967 0482 5D19     		adds	r5, r3, r5
+  99:Src/cmd.c     ****             SERIAL_WRITE("[%i]\t", i);
+ 968              		.loc 1 99 37 discriminator 3 view .LVU179
+ 969 0484 0023     		movs	r3, #0
+ 970 0486 9846     		mov	r8, r3
+  99:Src/cmd.c     ****             SERIAL_WRITE("[%i]\t", i);
+ 971              		.loc 1 99 67 discriminator 3 view .LVU180
+ 972 0488 444A     		ldr	r2, .L32+16
+ 973 048a 0023     		movs	r3, #0
+ 974 048c 6868     		ldr	r0, [r5, #4]
+ 975 048e 0021     		movs	r1, #0
+ 976 0490 FFF7FEFF 		bl	__aeabi_lmul
+ 977              	.LVL115:
+  99:Src/cmd.c     ****             SERIAL_WRITE("[%i]\t", i);
+ 978              		.loc 1 99 22 discriminator 3 view .LVU181
+ 979 0494 424A     		ldr	r2, .L32+20
+ 980 0496 0023     		movs	r3, #0
+ 981 0498 FFF7FEFF 		bl	__aeabi_uldivmod
+ 982              	.LVL116:
+ 983 049c 8246     		mov	r10, r0
+ 984 049e 8946     		mov	r9, r1
+ 985              	.LVL117:
+ 986              	.LBB28:
+ 100:Src/cmd.c     ****             SERIAL_WRITE("%10i uV\t\t", voltage_uV);
+ 987              		.loc 1 100 13 is_stmt 1 discriminator 3 view .LVU182
+ 988 04a0 4346     		mov	r3, r8
+ 989 04a2 0193     		str	r3, [sp, #4]
+ 990 04a4 6022     		movs	r2, #96
+ 991 04a6 0021     		movs	r1, #0
+ 992              	.LVL118:
+ 100:Src/cmd.c     ****             SERIAL_WRITE("%10i uV\t\t", voltage_uV);
+ 993              		.loc 1 100 13 is_stmt 0 discriminator 3 view .LVU183
+ 994 04a8 02A8     		add	r0, sp, #8
+ 995              	.LVL119:
+ 100:Src/cmd.c     ****             SERIAL_WRITE("%10i uV\t\t", voltage_uV);
+ 996              		.loc 1 100 13 discriminator 3 view .LVU184
+ 997 04aa FFF7FEFF 		bl	memset
+ 998              	.LVL120:
+ 100:Src/cmd.c     ****             SERIAL_WRITE("%10i uV\t\t", voltage_uV);
+ 999              		.loc 1 100 13 is_stmt 1 discriminator 3 view .LVU185
+ 1000 04ae 2200     		movs	r2, r4
+ 1001 04b0 3C49     		ldr	r1, .L32+24
+ 1002 04b2 01A8     		add	r0, sp, #4
+ 1003 04b4 FFF7FEFF 		bl	sprintf
+ 1004              	.LVL121:
+ 100:Src/cmd.c     ****             SERIAL_WRITE("%10i uV\t\t", voltage_uV);
+ 1005              		.loc 1 100 13 discriminator 3 view .LVU186
+ 1006 04b8 FA27     		movs	r7, #250
+ 1007 04ba BF00     		lsls	r7, r7, #2
+ 1008 04bc 82B2     		uxth	r2, r0
+ 1009 04be 344E     		ldr	r6, .L32+4
+ 1010 04c0 3B00     		movs	r3, r7
+ 1011 04c2 01A9     		add	r1, sp, #4
+ 1012 04c4 3000     		movs	r0, r6
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 25
 
 
- 273 00e2 0421     		movs	r1, #4
- 274 00e4 4020     		movs	r0, #64
- 275 00e6 FFF7FEFF 		bl	ADC_CMD
- 276              	.LVL21:
- 277              	.LBB6:
-  33:Src/cmd.c     ****         COMMAND = 0;
- 278              		.loc 1 33 9 view .LVU40
- 279 00ea 0024     		movs	r4, #0
- 280 00ec 0194     		str	r4, [sp, #4]
- 281 00ee 6022     		movs	r2, #96
- 282 00f0 0021     		movs	r1, #0
- 283 00f2 02A8     		add	r0, sp, #8
- 284 00f4 FFF7FEFF 		bl	memset
- 285              	.LVL22:
-  33:Src/cmd.c     ****         COMMAND = 0;
- 286              		.loc 1 33 9 view .LVU41
- 287 00f8 FFF7FEFF 		bl	ADC_SPI_READ_24
- 288              	.LVL23:
- 289 00fc 0200     		movs	r2, r0
- 290 00fe A649     		ldr	r1, .L27+20
- 291 0100 01A8     		add	r0, sp, #4
- 292 0102 FFF7FEFF 		bl	sprintf
- 293              	.LVL24:
-  33:Src/cmd.c     ****         COMMAND = 0;
- 294              		.loc 1 33 9 view .LVU42
- 295 0106 FA23     		movs	r3, #250
- 296 0108 82B2     		uxth	r2, r0
- 297 010a 9B00     		lsls	r3, r3, #2
- 298 010c 01A9     		add	r1, sp, #4
- 299 010e A048     		ldr	r0, .L27+12
- 300              	.LVL25:
-  33:Src/cmd.c     ****         COMMAND = 0;
- 301              		.loc 1 33 9 is_stmt 0 view .LVU43
- 302 0110 FFF7FEFF 		bl	HAL_UART_Transmit
- 303              	.LVL26:
- 304              	.LBE6:
-  33:Src/cmd.c     ****         COMMAND = 0;
- 305              		.loc 1 33 52 is_stmt 1 view .LVU44
-  34:Src/cmd.c     ****         return 0;
- 306              		.loc 1 34 9 view .LVU45
-  34:Src/cmd.c     ****         return 0;
- 307              		.loc 1 34 17 is_stmt 0 view .LVU46
- 308 0114 9B4B     		ldr	r3, .L27
- 309 0116 1C70     		strb	r4, [r3]
-  35:Src/cmd.c     ****     }
- 310              		.loc 1 35 9 is_stmt 1 view .LVU47
-  35:Src/cmd.c     ****     }
- 311              		.loc 1 35 16 is_stmt 0 view .LVU48
- 312 0118 E0E7     		b	.L3
- 313              	.L7:
- 314              	.LBB7:
-  39:Src/cmd.c     ****         ADC_reset();
- 315              		.loc 1 39 9 is_stmt 1 view .LVU49
- 316 011a 01AC     		add	r4, sp, #4
- 317 011c 6022     		movs	r2, #96
- 318 011e 0021     		movs	r1, #0
- 319 0120 02A8     		add	r0, sp, #8
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 10
+ 1013              	.LVL122:
+ 100:Src/cmd.c     ****             SERIAL_WRITE("%10i uV\t\t", voltage_uV);
+ 1014              		.loc 1 100 13 is_stmt 0 discriminator 3 view .LVU187
+ 1015 04c6 FFF7FEFF 		bl	HAL_UART_Transmit
+ 1016              	.LVL123:
+ 1017              	.LBE28:
+ 100:Src/cmd.c     ****             SERIAL_WRITE("%10i uV\t\t", voltage_uV);
+ 1018              		.loc 1 100 38 is_stmt 1 discriminator 3 view .LVU188
+ 1019              	.LBB29:
+ 101:Src/cmd.c     ****             SERIAL_WRITE("0x%06x\n", State.ADC_Values[i]);
+ 1020              		.loc 1 101 13 discriminator 3 view .LVU189
+ 1021 04ca 4346     		mov	r3, r8
+ 1022 04cc 0193     		str	r3, [sp, #4]
+ 1023 04ce 6022     		movs	r2, #96
+ 1024 04d0 0021     		movs	r1, #0
+ 1025 04d2 02A8     		add	r0, sp, #8
+ 1026 04d4 FFF7FEFF 		bl	memset
+ 1027              	.LVL124:
+ 101:Src/cmd.c     ****             SERIAL_WRITE("0x%06x\n", State.ADC_Values[i]);
+ 1028              		.loc 1 101 13 discriminator 3 view .LVU190
+ 1029 04d8 5246     		mov	r2, r10
+ 1030 04da 4B46     		mov	r3, r9
+ 1031 04dc 3249     		ldr	r1, .L32+28
+ 1032 04de 01A8     		add	r0, sp, #4
+ 1033 04e0 FFF7FEFF 		bl	sprintf
+ 1034              	.LVL125:
+ 101:Src/cmd.c     ****             SERIAL_WRITE("0x%06x\n", State.ADC_Values[i]);
+ 1035              		.loc 1 101 13 discriminator 3 view .LVU191
+ 1036 04e4 3B00     		movs	r3, r7
+ 1037 04e6 0F22     		movs	r2, #15
+ 1038 04e8 01A9     		add	r1, sp, #4
+ 1039 04ea 3000     		movs	r0, r6
+ 1040 04ec FFF7FEFF 		bl	HAL_UART_Transmit
+ 1041              	.LVL126:
+ 1042              	.LBE29:
+ 101:Src/cmd.c     ****             SERIAL_WRITE("0x%06x\n", State.ADC_Values[i]);
+ 1043              		.loc 1 101 52 discriminator 3 view .LVU192
+ 1044              	.LBB30:
+ 102:Src/cmd.c     ****         }
+ 1045              		.loc 1 102 13 discriminator 3 view .LVU193
+ 1046 04f0 4346     		mov	r3, r8
+ 1047 04f2 0193     		str	r3, [sp, #4]
+ 1048 04f4 6022     		movs	r2, #96
+ 1049 04f6 0021     		movs	r1, #0
+ 1050 04f8 02A8     		add	r0, sp, #8
+ 1051 04fa FFF7FEFF 		bl	memset
+ 1052              	.LVL127:
+ 102:Src/cmd.c     ****         }
+ 1053              		.loc 1 102 13 discriminator 3 view .LVU194
+ 1054 04fe 6A68     		ldr	r2, [r5, #4]
+ 1055 0500 2A49     		ldr	r1, .L32+32
+ 1056 0502 01A8     		add	r0, sp, #4
+ 1057 0504 FFF7FEFF 		bl	sprintf
+ 1058              	.LVL128:
+ 102:Src/cmd.c     ****         }
+ 1059              		.loc 1 102 13 discriminator 3 view .LVU195
+ 1060 0508 82B2     		uxth	r2, r0
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 26
 
 
- 320 0122 FFF7FEFF 		bl	memset
- 321              	.LVL27:
-  39:Src/cmd.c     ****         ADC_reset();
- 322              		.loc 1 39 9 view .LVU50
- 323 0126 9D4B     		ldr	r3, .L27+24
- 324 0128 2200     		movs	r2, r4
- 325 012a 03CB     		ldmia	r3!, {r0, r1}
- 326 012c 03C2     		stmia	r2!, {r0, r1}
- 327 012e 1988     		ldrh	r1, [r3]
- 328 0130 1180     		strh	r1, [r2]
- 329 0132 9B78     		ldrb	r3, [r3, #2]
- 330 0134 9370     		strb	r3, [r2, #2]
- 331              	.LVL28:
-  39:Src/cmd.c     ****         ADC_reset();
- 332              		.loc 1 39 9 view .LVU51
- 333 0136 FA23     		movs	r3, #250
- 334 0138 9B00     		lsls	r3, r3, #2
- 335 013a 0A22     		movs	r2, #10
- 336 013c 2100     		movs	r1, r4
- 337 013e 9448     		ldr	r0, .L27+12
- 338 0140 FFF7FEFF 		bl	HAL_UART_Transmit
- 339              	.LVL29:
- 340              	.LBE7:
-  39:Src/cmd.c     ****         ADC_reset();
- 341              		.loc 1 39 36 view .LVU52
-  40:Src/cmd.c     ****         COMMAND = 0;
- 342              		.loc 1 40 9 view .LVU53
- 343 0144 FFF7FEFF 		bl	ADC_reset
- 344              	.LVL30:
-  41:Src/cmd.c     ****         return 0;
- 345              		.loc 1 41 9 view .LVU54
-  41:Src/cmd.c     ****         return 0;
- 346              		.loc 1 41 17 is_stmt 0 view .LVU55
- 347 0148 0022     		movs	r2, #0
- 348 014a 8E4B     		ldr	r3, .L27
- 349 014c 1A70     		strb	r2, [r3]
-  42:Src/cmd.c     ****     }
- 350              		.loc 1 42 9 is_stmt 1 view .LVU56
-  42:Src/cmd.c     ****     }
- 351              		.loc 1 42 16 is_stmt 0 view .LVU57
- 352 014e C5E7     		b	.L3
- 353              	.LVL31:
- 354              	.L6:
- 355              	.LBB8:
-  46:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_STATUS_REG);
- 356              		.loc 1 46 9 is_stmt 1 view .LVU58
- 357 0150 01AC     		add	r4, sp, #4
- 358 0152 0027     		movs	r7, #0
- 359 0154 6022     		movs	r2, #96
- 360 0156 0021     		movs	r1, #0
- 361 0158 02A8     		add	r0, sp, #8
- 362 015a FFF7FEFF 		bl	memset
- 363              	.LVL32:
-  46:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_STATUS_REG);
- 364              		.loc 1 46 9 view .LVU59
- 365 015e 904B     		ldr	r3, .L27+28
- 366 0160 2200     		movs	r2, r4
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 11
+ 1061 050a 3B00     		movs	r3, r7
+ 1062 050c 01A9     		add	r1, sp, #4
+ 1063 050e 3000     		movs	r0, r6
+ 1064              	.LVL129:
+ 102:Src/cmd.c     ****         }
+ 1065              		.loc 1 102 13 is_stmt 0 discriminator 3 view .LVU196
+ 1066 0510 FFF7FEFF 		bl	HAL_UART_Transmit
+ 1067              	.LVL130:
+ 1068              	.LBE30:
+ 102:Src/cmd.c     ****         }
+ 1069              		.loc 1 102 58 is_stmt 1 discriminator 3 view .LVU197
+ 1070              	.LBE27:
+  97:Src/cmd.c     ****         {
+ 1071              		.loc 1 97 33 discriminator 3 view .LVU198
+  97:Src/cmd.c     ****         {
+ 1072              		.loc 1 97 34 is_stmt 0 discriminator 3 view .LVU199
+ 1073 0514 0134     		adds	r4, r4, #1
+ 1074              	.LVL131:
+  97:Src/cmd.c     ****         {
+ 1075              		.loc 1 97 34 discriminator 3 view .LVU200
+ 1076 0516 AFE7     		b	.L7
+ 1077              	.LVL132:
+ 1078              	.L29:
+  97:Src/cmd.c     ****         {
+ 1079              		.loc 1 97 34 discriminator 3 view .LVU201
+ 1080              	.LBE26:
+ 104:Src/cmd.c     ****         break;
+ 1081              		.loc 1 104 9 is_stmt 1 view .LVU202
+ 104:Src/cmd.c     ****         break;
+ 1082              		.loc 1 104 19 is_stmt 0 view .LVU203
+ 1083 0518 1F4A     		ldr	r2, .L32+12
+ 1084 051a 4D23     		movs	r3, #77
+ 1085 051c 0021     		movs	r1, #0
+ 1086 051e D154     		strb	r1, [r2, r3]
+ 105:Src/cmd.c     ****     }
+ 1087              		.loc 1 105 9 is_stmt 1 view .LVU204
+ 1088 0520 E5E5     		b	.L4
+ 1089              	.LVL133:
+ 1090              	.L5:
+ 1091              	.LBB31:
+ 109:Src/cmd.c     ****         SERIAL_WRITE("%03u *C\n", (State.temperature / 1000) % 1000); //-66.875 to +52.443 C
+ 1092              		.loc 1 109 9 view .LVU205
+ 1093 0522 0026     		movs	r6, #0
+ 1094 0524 0196     		str	r6, [sp, #4]
+ 1095 0526 6022     		movs	r2, #96
+ 1096 0528 0021     		movs	r1, #0
+ 1097 052a 02A8     		add	r0, sp, #8
+ 1098 052c FFF7FEFF 		bl	memset
+ 1099              	.LVL134:
+ 109:Src/cmd.c     ****         SERIAL_WRITE("%03u *C\n", (State.temperature / 1000) % 1000); //-66.875 to +52.443 C
+ 1100              		.loc 1 109 9 view .LVU206
+ 1101 0530 194D     		ldr	r5, .L32+12
+ 1102 0532 1F49     		ldr	r1, .L32+36
+ 1103 0534 6868     		ldr	r0, [r5, #4]
+ 1104 0536 FFF7FEFF 		bl	__aeabi_idiv
+ 1105              	.LVL135:
+ 1106 053a 0200     		movs	r2, r0
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 27
 
 
- 367 0162 23CB     		ldmia	r3!, {r0, r1, r5}
- 368 0164 23C2     		stmia	r2!, {r0, r1, r5}
- 369 0166 1B78     		ldrb	r3, [r3]
- 370 0168 1370     		strb	r3, [r2]
- 371              	.LVL33:
-  46:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_STATUS_REG);
- 372              		.loc 1 46 9 view .LVU60
- 373 016a FA26     		movs	r6, #250
- 374 016c B600     		lsls	r6, r6, #2
- 375 016e 884D     		ldr	r5, .L27+12
- 376 0170 3300     		movs	r3, r6
- 377 0172 0C22     		movs	r2, #12
- 378 0174 2100     		movs	r1, r4
- 379 0176 2800     		movs	r0, r5
- 380 0178 FFF7FEFF 		bl	HAL_UART_Transmit
- 381              	.LVL34:
- 382              	.LBE8:
-  46:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_STATUS_REG);
- 383              		.loc 1 46 39 view .LVU61
-  47:Src/cmd.c     ****         SERIAL_WRITE("\tADC_STATUS_REG:\t\t0x%02x\n", ADC_SPI_READ_8());
- 384              		.loc 1 47 9 view .LVU62
- 385 017c 0021     		movs	r1, #0
- 386 017e 4020     		movs	r0, #64
- 387 0180 FFF7FEFF 		bl	ADC_CMD
- 388              	.LVL35:
- 389              	.LBB9:
-  48:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_MODE_REG);
- 390              		.loc 1 48 9 view .LVU63
- 391 0184 0197     		str	r7, [sp, #4]
- 392 0186 6022     		movs	r2, #96
- 393 0188 0021     		movs	r1, #0
- 394 018a 02A8     		add	r0, sp, #8
- 395 018c FFF7FEFF 		bl	memset
- 396              	.LVL36:
-  48:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_MODE_REG);
- 397              		.loc 1 48 9 view .LVU64
- 398 0190 FFF7FEFF 		bl	ADC_SPI_READ_8
- 399              	.LVL37:
- 400 0194 0200     		movs	r2, r0
- 401 0196 8349     		ldr	r1, .L27+32
- 402 0198 2000     		movs	r0, r4
- 403 019a FFF7FEFF 		bl	sprintf
- 404              	.LVL38:
-  48:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_MODE_REG);
- 405              		.loc 1 48 9 view .LVU65
- 406 019e 3300     		movs	r3, r6
- 407 01a0 1722     		movs	r2, #23
- 408 01a2 2100     		movs	r1, r4
- 409 01a4 2800     		movs	r0, r5
- 410 01a6 FFF7FEFF 		bl	HAL_UART_Transmit
- 411              	.LVL39:
- 412              	.LBE9:
-  48:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_MODE_REG);
- 413              		.loc 1 48 72 view .LVU66
-  49:Src/cmd.c     ****         SERIAL_WRITE("\tADC_MODE_REG:\t\t0x%04x\n", ADC_SPI_READ_16());
- 414              		.loc 1 49 9 view .LVU67
- 415 01aa 0121     		movs	r1, #1
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 12
+ 1107 053c 1D49     		ldr	r1, .L32+40
+ 1108 053e 01A8     		add	r0, sp, #4
+ 1109 0540 FFF7FEFF 		bl	sprintf
+ 1110              	.LVL136:
+ 109:Src/cmd.c     ****         SERIAL_WRITE("%03u *C\n", (State.temperature / 1000) % 1000); //-66.875 to +52.443 C
+ 1111              		.loc 1 109 9 view .LVU207
+ 1112 0544 FA24     		movs	r4, #250
+ 1113 0546 A400     		lsls	r4, r4, #2
+ 1114 0548 82B2     		uxth	r2, r0
+ 1115 054a 114F     		ldr	r7, .L32+4
+ 1116 054c 2300     		movs	r3, r4
+ 1117 054e 01A9     		add	r1, sp, #4
+ 1118 0550 3800     		movs	r0, r7
+ 1119              	.LVL137:
+ 109:Src/cmd.c     ****         SERIAL_WRITE("%03u *C\n", (State.temperature / 1000) % 1000); //-66.875 to +52.443 C
+ 1120              		.loc 1 109 9 is_stmt 0 view .LVU208
+ 1121 0552 FFF7FEFF 		bl	HAL_UART_Transmit
+ 1122              	.LVL138:
+ 1123              	.LBE31:
+ 109:Src/cmd.c     ****         SERIAL_WRITE("%03u *C\n", (State.temperature / 1000) % 1000); //-66.875 to +52.443 C
+ 1124              		.loc 1 109 57 is_stmt 1 view .LVU209
+ 1125              	.LBB32:
+ 110:Src/cmd.c     ****         State.cmd = 0;
+ 1126              		.loc 1 110 9 view .LVU210
+ 1127 0556 0196     		str	r6, [sp, #4]
+ 1128 0558 6022     		movs	r2, #96
+ 1129 055a 0021     		movs	r1, #0
+ 1130 055c 02A8     		add	r0, sp, #8
+ 1131 055e FFF7FEFF 		bl	memset
+ 1132              	.LVL139:
+ 110:Src/cmd.c     ****         State.cmd = 0;
+ 1133              		.loc 1 110 9 view .LVU211
+ 1134 0562 2100     		movs	r1, r4
+ 1135 0564 6868     		ldr	r0, [r5, #4]
+ 1136 0566 FFF7FEFF 		bl	__aeabi_idiv
+ 1137              	.LVL140:
+ 1138 056a 2100     		movs	r1, r4
+ 1139 056c FFF7FEFF 		bl	__aeabi_idivmod
+ 1140              	.LVL141:
+ 1141 0570 0A00     		movs	r2, r1
+ 1142 0572 1149     		ldr	r1, .L32+44
+ 1143 0574 01A8     		add	r0, sp, #4
+ 1144 0576 FFF7FEFF 		bl	sprintf
+ 1145              	.LVL142:
+ 110:Src/cmd.c     ****         State.cmd = 0;
+ 1146              		.loc 1 110 9 view .LVU212
+ 1147 057a 82B2     		uxth	r2, r0
+ 1148 057c 2300     		movs	r3, r4
+ 1149 057e 01A9     		add	r1, sp, #4
+ 1150 0580 3800     		movs	r0, r7
+ 1151              	.LVL143:
+ 110:Src/cmd.c     ****         State.cmd = 0;
+ 1152              		.loc 1 110 9 is_stmt 0 view .LVU213
+ 1153 0582 FFF7FEFF 		bl	HAL_UART_Transmit
+ 1154              	.LVL144:
+ 1155              	.LBE32:
+ 110:Src/cmd.c     ****         State.cmd = 0;
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 28
 
 
- 416 01ac 4020     		movs	r0, #64
- 417 01ae FFF7FEFF 		bl	ADC_CMD
- 418              	.LVL40:
- 419              	.LBB10:
-  50:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_INTERFACE_REG);
- 420              		.loc 1 50 9 view .LVU68
- 421 01b2 0197     		str	r7, [sp, #4]
- 422 01b4 6022     		movs	r2, #96
- 423 01b6 0021     		movs	r1, #0
- 424 01b8 02A8     		add	r0, sp, #8
- 425 01ba FFF7FEFF 		bl	memset
- 426              	.LVL41:
-  50:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_INTERFACE_REG);
- 427              		.loc 1 50 9 view .LVU69
- 428 01be FFF7FEFF 		bl	ADC_SPI_READ_16
- 429              	.LVL42:
- 430 01c2 0200     		movs	r2, r0
- 431 01c4 7849     		ldr	r1, .L27+36
- 432 01c6 2000     		movs	r0, r4
- 433 01c8 FFF7FEFF 		bl	sprintf
- 434              	.LVL43:
-  50:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_INTERFACE_REG);
- 435              		.loc 1 50 9 view .LVU70
- 436 01cc 3300     		movs	r3, r6
- 437 01ce 1722     		movs	r2, #23
- 438 01d0 2100     		movs	r1, r4
- 439 01d2 2800     		movs	r0, r5
- 440 01d4 FFF7FEFF 		bl	HAL_UART_Transmit
- 441              	.LVL44:
- 442              	.LBE10:
-  50:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_INTERFACE_REG);
- 443              		.loc 1 50 71 view .LVU71
-  51:Src/cmd.c     ****         SERIAL_WRITE("\tADC_INTERFACE_REG:\t0x%04x\n", ADC_SPI_READ_16());
- 444              		.loc 1 51 9 view .LVU72
- 445 01d8 0221     		movs	r1, #2
- 446 01da 4020     		movs	r0, #64
- 447 01dc FFF7FEFF 		bl	ADC_CMD
- 448              	.LVL45:
- 449              	.LBB11:
-  52:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_CHECK_REG);
- 450              		.loc 1 52 9 view .LVU73
- 451 01e0 0197     		str	r7, [sp, #4]
- 452 01e2 6022     		movs	r2, #96
- 453 01e4 0021     		movs	r1, #0
- 454 01e6 02A8     		add	r0, sp, #8
- 455 01e8 FFF7FEFF 		bl	memset
- 456              	.LVL46:
-  52:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_CHECK_REG);
- 457              		.loc 1 52 9 view .LVU74
- 458 01ec FFF7FEFF 		bl	ADC_SPI_READ_16
- 459              	.LVL47:
- 460 01f0 0200     		movs	r2, r0
- 461 01f2 6E49     		ldr	r1, .L27+40
- 462 01f4 2000     		movs	r0, r4
- 463 01f6 FFF7FEFF 		bl	sprintf
- 464              	.LVL48:
-  52:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_CHECK_REG);
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 13
-
-
- 465              		.loc 1 52 9 view .LVU75
- 466 01fa 3300     		movs	r3, r6
- 467 01fc 1B22     		movs	r2, #27
- 468 01fe 2100     		movs	r1, r4
- 469 0200 2800     		movs	r0, r5
- 470 0202 FFF7FEFF 		bl	HAL_UART_Transmit
- 471              	.LVL49:
- 472              	.LBE11:
-  52:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_CHECK_REG);
- 473              		.loc 1 52 74 view .LVU76
-  53:Src/cmd.c     ****         SERIAL_WRITE("\tADC_CHECK_REG:\t\t0x%06x\n", ADC_SPI_READ_24());
- 474              		.loc 1 53 9 view .LVU77
- 475 0206 0321     		movs	r1, #3
- 476 0208 4020     		movs	r0, #64
- 477 020a FFF7FEFF 		bl	ADC_CMD
- 478              	.LVL50:
- 479              	.LBB12:
-  54:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_DATA_REG);
- 480              		.loc 1 54 9 view .LVU78
- 481 020e 0197     		str	r7, [sp, #4]
- 482 0210 6022     		movs	r2, #96
- 483 0212 0021     		movs	r1, #0
- 484 0214 02A8     		add	r0, sp, #8
- 485 0216 FFF7FEFF 		bl	memset
- 486              	.LVL51:
-  54:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_DATA_REG);
- 487              		.loc 1 54 9 view .LVU79
- 488 021a FFF7FEFF 		bl	ADC_SPI_READ_24
- 489              	.LVL52:
- 490 021e 0200     		movs	r2, r0
- 491 0220 6349     		ldr	r1, .L27+44
- 492 0222 2000     		movs	r0, r4
- 493 0224 FFF7FEFF 		bl	sprintf
- 494              	.LVL53:
-  54:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_DATA_REG);
- 495              		.loc 1 54 9 view .LVU80
- 496 0228 82B2     		uxth	r2, r0
- 497 022a 3300     		movs	r3, r6
- 498 022c 2100     		movs	r1, r4
- 499 022e 2800     		movs	r0, r5
- 500              	.LVL54:
-  54:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_DATA_REG);
- 501              		.loc 1 54 9 is_stmt 0 view .LVU81
- 502 0230 FFF7FEFF 		bl	HAL_UART_Transmit
- 503              	.LVL55:
- 504              	.LBE12:
-  54:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_DATA_REG);
- 505              		.loc 1 54 72 is_stmt 1 view .LVU82
-  55:Src/cmd.c     ****         SERIAL_WRITE("\tADC_DATA_REG:\t\t0x%06x\n", ADC_SPI_READ_24());
- 506              		.loc 1 55 9 view .LVU83
- 507 0234 0421     		movs	r1, #4
- 508 0236 4020     		movs	r0, #64
- 509 0238 FFF7FEFF 		bl	ADC_CMD
- 510              	.LVL56:
- 511              	.LBB13:
-  56:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_GPIO_REG);
- 512              		.loc 1 56 9 view .LVU84
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 14
-
-
- 513 023c 0197     		str	r7, [sp, #4]
- 514 023e 6022     		movs	r2, #96
- 515 0240 0021     		movs	r1, #0
- 516 0242 02A8     		add	r0, sp, #8
- 517 0244 FFF7FEFF 		bl	memset
- 518              	.LVL57:
-  56:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_GPIO_REG);
- 519              		.loc 1 56 9 view .LVU85
- 520 0248 FFF7FEFF 		bl	ADC_SPI_READ_24
- 521              	.LVL58:
- 522 024c 0200     		movs	r2, r0
- 523 024e 5949     		ldr	r1, .L27+48
- 524 0250 2000     		movs	r0, r4
- 525 0252 FFF7FEFF 		bl	sprintf
- 526              	.LVL59:
-  56:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_GPIO_REG);
- 527              		.loc 1 56 9 view .LVU86
- 528 0256 82B2     		uxth	r2, r0
- 529 0258 3300     		movs	r3, r6
- 530 025a 2100     		movs	r1, r4
- 531 025c 2800     		movs	r0, r5
- 532              	.LVL60:
-  56:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_GPIO_REG);
- 533              		.loc 1 56 9 is_stmt 0 view .LVU87
- 534 025e FFF7FEFF 		bl	HAL_UART_Transmit
- 535              	.LVL61:
- 536              	.LBE13:
-  56:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_GPIO_REG);
- 537              		.loc 1 56 71 is_stmt 1 view .LVU88
-  57:Src/cmd.c     ****         SERIAL_WRITE("\tADC_GPIO_REG:\t\t0x%04x\n", ADC_SPI_READ_16());
- 538              		.loc 1 57 9 view .LVU89
- 539 0262 0621     		movs	r1, #6
- 540 0264 4020     		movs	r0, #64
- 541 0266 FFF7FEFF 		bl	ADC_CMD
- 542              	.LVL62:
- 543              	.LBB14:
-  58:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_ID_REG);
- 544              		.loc 1 58 9 view .LVU90
- 545 026a 0197     		str	r7, [sp, #4]
- 546 026c 6022     		movs	r2, #96
- 547 026e 0021     		movs	r1, #0
- 548 0270 02A8     		add	r0, sp, #8
- 549 0272 FFF7FEFF 		bl	memset
- 550              	.LVL63:
-  58:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_ID_REG);
- 551              		.loc 1 58 9 view .LVU91
- 552 0276 FFF7FEFF 		bl	ADC_SPI_READ_16
- 553              	.LVL64:
- 554 027a 0200     		movs	r2, r0
- 555 027c 4E49     		ldr	r1, .L27+52
- 556 027e 2000     		movs	r0, r4
- 557 0280 FFF7FEFF 		bl	sprintf
- 558              	.LVL65:
-  58:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_ID_REG);
- 559              		.loc 1 58 9 view .LVU92
- 560 0284 3300     		movs	r3, r6
- 561 0286 1722     		movs	r2, #23
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 15
-
-
- 562 0288 2100     		movs	r1, r4
- 563 028a 2800     		movs	r0, r5
- 564 028c FFF7FEFF 		bl	HAL_UART_Transmit
- 565              	.LVL66:
- 566              	.LBE14:
-  58:Src/cmd.c     ****         ADC_CMD(ADC_READ, ADC_ID_REG);
- 567              		.loc 1 58 71 view .LVU93
-  59:Src/cmd.c     ****         SERIAL_WRITE("\tADC_ID_REG:\t\t0x%04x\n", ADC_SPI_READ_16());
- 568              		.loc 1 59 9 view .LVU94
- 569 0290 0721     		movs	r1, #7
- 570 0292 4020     		movs	r0, #64
- 571 0294 FFF7FEFF 		bl	ADC_CMD
- 572              	.LVL67:
- 573              	.LBB15:
-  60:Src/cmd.c     ****         for (int i = 0; i < 15; i++)
- 574              		.loc 1 60 9 view .LVU95
- 575 0298 0197     		str	r7, [sp, #4]
- 576 029a 6022     		movs	r2, #96
- 577 029c 0021     		movs	r1, #0
- 578 029e 02A8     		add	r0, sp, #8
- 579 02a0 FFF7FEFF 		bl	memset
- 580              	.LVL68:
-  60:Src/cmd.c     ****         for (int i = 0; i < 15; i++)
- 581              		.loc 1 60 9 view .LVU96
- 582 02a4 FFF7FEFF 		bl	ADC_SPI_READ_16
- 583              	.LVL69:
- 584 02a8 0200     		movs	r2, r0
- 585 02aa 4449     		ldr	r1, .L27+56
- 586 02ac 2000     		movs	r0, r4
- 587 02ae FFF7FEFF 		bl	sprintf
- 588              	.LVL70:
-  60:Src/cmd.c     ****         for (int i = 0; i < 15; i++)
- 589              		.loc 1 60 9 view .LVU97
- 590 02b2 3300     		movs	r3, r6
- 591 02b4 1522     		movs	r2, #21
- 592 02b6 2100     		movs	r1, r4
- 593 02b8 2800     		movs	r0, r5
- 594 02ba FFF7FEFF 		bl	HAL_UART_Transmit
- 595              	.LVL71:
- 596              	.LBE15:
-  60:Src/cmd.c     ****         for (int i = 0; i < 15; i++)
- 597              		.loc 1 60 69 view .LVU98
-  61:Src/cmd.c     ****         {
- 598              		.loc 1 61 9 view .LVU99
- 599              	.LBB16:
-  61:Src/cmd.c     ****         {
- 600              		.loc 1 61 14 view .LVU100
-  61:Src/cmd.c     ****         {
- 601              		.loc 1 61 18 is_stmt 0 view .LVU101
- 602 02be 0024     		movs	r4, #0
-  61:Src/cmd.c     ****         {
- 603              		.loc 1 61 9 view .LVU102
- 604 02c0 1CE0     		b	.L13
- 605              	.LVL72:
- 606              	.L14:
-  63:Src/cmd.c     ****             SERIAL_WRITE("\tADC_CH%i_REG:\t\t0x%04x\n", i, ADC_SPI_READ_16());
- 607              		.loc 1 63 13 is_stmt 1 discriminator 3 view .LVU103
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 16
-
-
-  63:Src/cmd.c     ****             SERIAL_WRITE("\tADC_CH%i_REG:\t\t0x%04x\n", i, ADC_SPI_READ_16());
- 608              		.loc 1 63 31 is_stmt 0 discriminator 3 view .LVU104
- 609 02c2 2100     		movs	r1, r4
- 610 02c4 1031     		adds	r1, r1, #16
-  63:Src/cmd.c     ****             SERIAL_WRITE("\tADC_CH%i_REG:\t\t0x%04x\n", i, ADC_SPI_READ_16());
- 611              		.loc 1 63 13 discriminator 3 view .LVU105
- 612 02c6 C9B2     		uxtb	r1, r1
- 613 02c8 4020     		movs	r0, #64
- 614 02ca FFF7FEFF 		bl	ADC_CMD
- 615              	.LVL73:
- 616              	.LBB17:
-  64:Src/cmd.c     ****         }
- 617              		.loc 1 64 13 is_stmt 1 discriminator 3 view .LVU106
- 618 02ce 0023     		movs	r3, #0
- 619 02d0 0193     		str	r3, [sp, #4]
- 620 02d2 6022     		movs	r2, #96
- 621 02d4 0021     		movs	r1, #0
- 622 02d6 02A8     		add	r0, sp, #8
- 623 02d8 FFF7FEFF 		bl	memset
- 624              	.LVL74:
-  64:Src/cmd.c     ****         }
- 625              		.loc 1 64 13 discriminator 3 view .LVU107
- 626 02dc FFF7FEFF 		bl	ADC_SPI_READ_16
- 627              	.LVL75:
- 628 02e0 0300     		movs	r3, r0
- 629 02e2 2200     		movs	r2, r4
- 630 02e4 3649     		ldr	r1, .L27+60
- 631 02e6 01A8     		add	r0, sp, #4
- 632 02e8 FFF7FEFF 		bl	sprintf
- 633              	.LVL76:
-  64:Src/cmd.c     ****         }
- 634              		.loc 1 64 13 discriminator 3 view .LVU108
- 635 02ec FA23     		movs	r3, #250
- 636 02ee 82B2     		uxth	r2, r0
- 637 02f0 9B00     		lsls	r3, r3, #2
- 638 02f2 01A9     		add	r1, sp, #4
- 639 02f4 2648     		ldr	r0, .L27+12
- 640              	.LVL77:
-  64:Src/cmd.c     ****         }
- 641              		.loc 1 64 13 is_stmt 0 discriminator 3 view .LVU109
- 642 02f6 FFF7FEFF 		bl	HAL_UART_Transmit
- 643              	.LVL78:
- 644              	.LBE17:
-  64:Src/cmd.c     ****         }
- 645              		.loc 1 64 78 is_stmt 1 discriminator 3 view .LVU110
-  61:Src/cmd.c     ****         {
- 646              		.loc 1 61 33 discriminator 3 view .LVU111
-  61:Src/cmd.c     ****         {
- 647              		.loc 1 61 34 is_stmt 0 discriminator 3 view .LVU112
- 648 02fa 0134     		adds	r4, r4, #1
- 649              	.LVL79:
- 650              	.L13:
-  61:Src/cmd.c     ****         {
- 651              		.loc 1 61 25 is_stmt 1 discriminator 1 view .LVU113
-  61:Src/cmd.c     ****         {
- 652              		.loc 1 61 9 is_stmt 0 discriminator 1 view .LVU114
- 653 02fc 0E2C     		cmp	r4, #14
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 17
-
-
- 654 02fe E0DD     		ble	.L14
- 655              	.LBE16:
- 656              	.LBB18:
-  66:Src/cmd.c     ****         {
- 657              		.loc 1 66 18 view .LVU115
- 658 0300 0024     		movs	r4, #0
- 659              	.LVL80:
- 660              	.L15:
-  66:Src/cmd.c     ****         {
- 661              		.loc 1 66 25 is_stmt 1 discriminator 1 view .LVU116
-  66:Src/cmd.c     ****         {
- 662              		.loc 1 66 9 is_stmt 0 discriminator 1 view .LVU117
- 663 0302 062C     		cmp	r4, #6
- 664 0304 1DDC     		bgt	.L23
-  68:Src/cmd.c     ****             SERIAL_WRITE("\tADC_SETUPCON%i_REG:\t0x%04x\n", i, ADC_SPI_READ_16());
- 665              		.loc 1 68 13 is_stmt 1 discriminator 3 view .LVU118
-  68:Src/cmd.c     ****             SERIAL_WRITE("\tADC_SETUPCON%i_REG:\t0x%04x\n", i, ADC_SPI_READ_16());
- 666              		.loc 1 68 31 is_stmt 0 discriminator 3 view .LVU119
- 667 0306 2100     		movs	r1, r4
- 668 0308 2031     		adds	r1, r1, #32
-  68:Src/cmd.c     ****             SERIAL_WRITE("\tADC_SETUPCON%i_REG:\t0x%04x\n", i, ADC_SPI_READ_16());
- 669              		.loc 1 68 13 discriminator 3 view .LVU120
- 670 030a C9B2     		uxtb	r1, r1
- 671 030c 4020     		movs	r0, #64
- 672 030e FFF7FEFF 		bl	ADC_CMD
- 673              	.LVL81:
- 674              	.LBB19:
-  69:Src/cmd.c     ****         }
- 675              		.loc 1 69 13 is_stmt 1 discriminator 3 view .LVU121
- 676 0312 0023     		movs	r3, #0
- 677 0314 0193     		str	r3, [sp, #4]
- 678 0316 6022     		movs	r2, #96
- 679 0318 0021     		movs	r1, #0
- 680 031a 02A8     		add	r0, sp, #8
- 681 031c FFF7FEFF 		bl	memset
- 682              	.LVL82:
-  69:Src/cmd.c     ****         }
- 683              		.loc 1 69 13 discriminator 3 view .LVU122
- 684 0320 FFF7FEFF 		bl	ADC_SPI_READ_16
- 685              	.LVL83:
- 686 0324 0300     		movs	r3, r0
- 687 0326 2200     		movs	r2, r4
- 688 0328 2649     		ldr	r1, .L27+64
- 689 032a 01A8     		add	r0, sp, #4
- 690 032c FFF7FEFF 		bl	sprintf
- 691              	.LVL84:
-  69:Src/cmd.c     ****         }
- 692              		.loc 1 69 13 discriminator 3 view .LVU123
- 693 0330 FA23     		movs	r3, #250
- 694 0332 9B00     		lsls	r3, r3, #2
- 695 0334 1B22     		movs	r2, #27
- 696 0336 01A9     		add	r1, sp, #4
- 697 0338 1548     		ldr	r0, .L27+12
- 698 033a FFF7FEFF 		bl	HAL_UART_Transmit
- 699              	.LVL85:
- 700              	.LBE19:
-  69:Src/cmd.c     ****         }
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 18
-
-
- 701              		.loc 1 69 82 discriminator 3 view .LVU124
-  66:Src/cmd.c     ****         {
- 702              		.loc 1 66 32 discriminator 3 view .LVU125
-  66:Src/cmd.c     ****         {
- 703              		.loc 1 66 33 is_stmt 0 discriminator 3 view .LVU126
- 704 033e 0134     		adds	r4, r4, #1
- 705              	.LVL86:
-  66:Src/cmd.c     ****         {
- 706              		.loc 1 66 33 discriminator 3 view .LVU127
- 707 0340 DFE7     		b	.L15
- 708              	.LVL87:
- 709              	.L23:
-  66:Src/cmd.c     ****         {
- 710              		.loc 1 66 33 discriminator 3 view .LVU128
- 711              	.LBE18:
- 712              	.LBB20:
-  71:Src/cmd.c     ****         {
- 713              		.loc 1 71 18 view .LVU129
- 714 0342 0024     		movs	r4, #0
- 715              	.LVL88:
- 716              	.L17:
-  71:Src/cmd.c     ****         {
- 717              		.loc 1 71 25 is_stmt 1 discriminator 1 view .LVU130
-  71:Src/cmd.c     ****         {
- 718              		.loc 1 71 9 is_stmt 0 discriminator 1 view .LVU131
- 719 0344 062C     		cmp	r4, #6
- 720 0346 41DC     		bgt	.L24
-  73:Src/cmd.c     ****             SERIAL_WRITE("\tADC_FILTCON%i_REG:\t0x%04x\n", i, ADC_SPI_READ_16());
- 721              		.loc 1 73 13 is_stmt 1 discriminator 3 view .LVU132
-  73:Src/cmd.c     ****             SERIAL_WRITE("\tADC_FILTCON%i_REG:\t0x%04x\n", i, ADC_SPI_READ_16());
- 722              		.loc 1 73 31 is_stmt 0 discriminator 3 view .LVU133
- 723 0348 2100     		movs	r1, r4
- 724 034a 2831     		adds	r1, r1, #40
-  73:Src/cmd.c     ****             SERIAL_WRITE("\tADC_FILTCON%i_REG:\t0x%04x\n", i, ADC_SPI_READ_16());
- 725              		.loc 1 73 13 discriminator 3 view .LVU134
- 726 034c C9B2     		uxtb	r1, r1
- 727 034e 4020     		movs	r0, #64
- 728 0350 FFF7FEFF 		bl	ADC_CMD
- 729              	.LVL89:
- 730              	.LBB21:
-  74:Src/cmd.c     ****         }
- 731              		.loc 1 74 13 is_stmt 1 discriminator 3 view .LVU135
- 732 0354 0023     		movs	r3, #0
- 733 0356 0193     		str	r3, [sp, #4]
- 734 0358 6022     		movs	r2, #96
- 735 035a 0021     		movs	r1, #0
- 736 035c 02A8     		add	r0, sp, #8
- 737 035e FFF7FEFF 		bl	memset
- 738              	.LVL90:
-  74:Src/cmd.c     ****         }
- 739              		.loc 1 74 13 discriminator 3 view .LVU136
- 740 0362 FFF7FEFF 		bl	ADC_SPI_READ_16
- 741              	.LVL91:
- 742 0366 0300     		movs	r3, r0
- 743 0368 2200     		movs	r2, r4
- 744 036a 1749     		ldr	r1, .L27+68
- 745 036c 01A8     		add	r0, sp, #4
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 19
-
-
- 746 036e FFF7FEFF 		bl	sprintf
- 747              	.LVL92:
-  74:Src/cmd.c     ****         }
- 748              		.loc 1 74 13 discriminator 3 view .LVU137
- 749 0372 FA23     		movs	r3, #250
- 750 0374 9B00     		lsls	r3, r3, #2
- 751 0376 1A22     		movs	r2, #26
- 752 0378 01A9     		add	r1, sp, #4
- 753 037a 0548     		ldr	r0, .L27+12
- 754 037c FFF7FEFF 		bl	HAL_UART_Transmit
- 755              	.LVL93:
- 756              	.LBE21:
-  74:Src/cmd.c     ****         }
- 757              		.loc 1 74 81 discriminator 3 view .LVU138
-  71:Src/cmd.c     ****         {
- 758              		.loc 1 71 32 discriminator 3 view .LVU139
-  71:Src/cmd.c     ****         {
- 759              		.loc 1 71 33 is_stmt 0 discriminator 3 view .LVU140
- 760 0380 0134     		adds	r4, r4, #1
- 761              	.LVL94:
-  71:Src/cmd.c     ****         {
- 762              		.loc 1 71 33 discriminator 3 view .LVU141
- 763 0382 DFE7     		b	.L17
- 764              	.L28:
- 765              		.align	2
- 766              	.L27:
- 767 0384 00000000 		.word	COMMAND
- 768 0388 00000000 		.word	.L5
- 769 038c 64010000 		.word	.LC33
- 770 0390 00000000 		.word	huart2
- 771 0394 6F6B0A00 		.word	682863
- 772 0398 00000000 		.word	.LC3
- 773 039c 08000000 		.word	.LC5
- 774 03a0 14000000 		.word	.LC7
- 775 03a4 24000000 		.word	.LC9
- 776 03a8 40000000 		.word	.LC11
- 777 03ac 58000000 		.word	.LC13
- 778 03b0 74000000 		.word	.LC15
- 779 03b4 90000000 		.word	.LC17
- 780 03b8 A8000000 		.word	.LC19
- 781 03bc C0000000 		.word	.LC21
- 782 03c0 D8000000 		.word	.LC23
- 783 03c4 F0000000 		.word	.LC25
- 784 03c8 10010000 		.word	.LC27
- 785              	.LVL95:
- 786              	.L24:
-  71:Src/cmd.c     ****         {
- 787              		.loc 1 71 33 discriminator 3 view .LVU142
- 788              	.LBE20:
- 789              	.LBB22:
-  76:Src/cmd.c     ****         {
- 790              		.loc 1 76 18 view .LVU143
- 791 03cc 0024     		movs	r4, #0
- 792              	.LVL96:
- 793              	.L19:
-  76:Src/cmd.c     ****         {
- 794              		.loc 1 76 25 is_stmt 1 discriminator 1 view .LVU144
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 20
-
-
-  76:Src/cmd.c     ****         {
- 795              		.loc 1 76 9 is_stmt 0 discriminator 1 view .LVU145
- 796 03ce 062C     		cmp	r4, #6
- 797 03d0 1DDC     		bgt	.L25
-  78:Src/cmd.c     ****             SERIAL_WRITE("\tADC_OFFSET%i_REG:\t0x%04x\n", i, ADC_SPI_READ_24());
- 798              		.loc 1 78 13 is_stmt 1 discriminator 3 view .LVU146
-  78:Src/cmd.c     ****             SERIAL_WRITE("\tADC_OFFSET%i_REG:\t0x%04x\n", i, ADC_SPI_READ_24());
- 799              		.loc 1 78 31 is_stmt 0 discriminator 3 view .LVU147
- 800 03d2 2100     		movs	r1, r4
- 801 03d4 3031     		adds	r1, r1, #48
-  78:Src/cmd.c     ****             SERIAL_WRITE("\tADC_OFFSET%i_REG:\t0x%04x\n", i, ADC_SPI_READ_24());
- 802              		.loc 1 78 13 discriminator 3 view .LVU148
- 803 03d6 C9B2     		uxtb	r1, r1
- 804 03d8 4020     		movs	r0, #64
- 805 03da FFF7FEFF 		bl	ADC_CMD
- 806              	.LVL97:
- 807              	.LBB23:
-  79:Src/cmd.c     ****         }
- 808              		.loc 1 79 13 is_stmt 1 discriminator 3 view .LVU149
- 809 03de 0023     		movs	r3, #0
- 810 03e0 0193     		str	r3, [sp, #4]
- 811 03e2 6022     		movs	r2, #96
- 812 03e4 0021     		movs	r1, #0
- 813 03e6 02A8     		add	r0, sp, #8
- 814 03e8 FFF7FEFF 		bl	memset
- 815              	.LVL98:
-  79:Src/cmd.c     ****         }
- 816              		.loc 1 79 13 discriminator 3 view .LVU150
- 817 03ec FFF7FEFF 		bl	ADC_SPI_READ_24
- 818              	.LVL99:
- 819 03f0 0300     		movs	r3, r0
- 820 03f2 2200     		movs	r2, r4
- 821 03f4 1849     		ldr	r1, .L29
- 822 03f6 01A8     		add	r0, sp, #4
- 823 03f8 FFF7FEFF 		bl	sprintf
- 824              	.LVL100:
-  79:Src/cmd.c     ****         }
- 825              		.loc 1 79 13 discriminator 3 view .LVU151
- 826 03fc FA23     		movs	r3, #250
- 827 03fe 82B2     		uxth	r2, r0
- 828 0400 9B00     		lsls	r3, r3, #2
- 829 0402 01A9     		add	r1, sp, #4
- 830 0404 1548     		ldr	r0, .L29+4
- 831              	.LVL101:
-  79:Src/cmd.c     ****         }
- 832              		.loc 1 79 13 is_stmt 0 discriminator 3 view .LVU152
- 833 0406 FFF7FEFF 		bl	HAL_UART_Transmit
- 834              	.LVL102:
- 835              	.LBE23:
-  79:Src/cmd.c     ****         }
- 836              		.loc 1 79 80 is_stmt 1 discriminator 3 view .LVU153
-  76:Src/cmd.c     ****         {
- 837              		.loc 1 76 32 discriminator 3 view .LVU154
-  76:Src/cmd.c     ****         {
- 838              		.loc 1 76 33 is_stmt 0 discriminator 3 view .LVU155
- 839 040a 0134     		adds	r4, r4, #1
- 840              	.LVL103:
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 21
-
-
-  76:Src/cmd.c     ****         {
- 841              		.loc 1 76 33 discriminator 3 view .LVU156
- 842 040c DFE7     		b	.L19
- 843              	.L25:
-  76:Src/cmd.c     ****         {
- 844              		.loc 1 76 33 discriminator 3 view .LVU157
- 845              	.LBE22:
- 846              	.LBB24:
-  81:Src/cmd.c     ****         {
- 847              		.loc 1 81 18 view .LVU158
- 848 040e 0024     		movs	r4, #0
- 849              	.LVL104:
- 850              	.L21:
-  81:Src/cmd.c     ****         {
- 851              		.loc 1 81 25 is_stmt 1 discriminator 1 view .LVU159
-  81:Src/cmd.c     ****         {
- 852              		.loc 1 81 9 is_stmt 0 discriminator 1 view .LVU160
- 853 0410 062C     		cmp	r4, #6
- 854 0412 1DDC     		bgt	.L26
-  83:Src/cmd.c     ****             SERIAL_WRITE("\tADC_GAIN%i_REG:\t\t0x%04x\n", i, ADC_SPI_READ_24());
- 855              		.loc 1 83 13 is_stmt 1 discriminator 3 view .LVU161
-  83:Src/cmd.c     ****             SERIAL_WRITE("\tADC_GAIN%i_REG:\t\t0x%04x\n", i, ADC_SPI_READ_24());
- 856              		.loc 1 83 31 is_stmt 0 discriminator 3 view .LVU162
- 857 0414 2100     		movs	r1, r4
- 858 0416 3831     		adds	r1, r1, #56
-  83:Src/cmd.c     ****             SERIAL_WRITE("\tADC_GAIN%i_REG:\t\t0x%04x\n", i, ADC_SPI_READ_24());
- 859              		.loc 1 83 13 discriminator 3 view .LVU163
- 860 0418 C9B2     		uxtb	r1, r1
- 861 041a 4020     		movs	r0, #64
- 862 041c FFF7FEFF 		bl	ADC_CMD
- 863              	.LVL105:
- 864              	.LBB25:
-  84:Src/cmd.c     ****         }
- 865              		.loc 1 84 13 is_stmt 1 discriminator 3 view .LVU164
- 866 0420 0023     		movs	r3, #0
- 867 0422 0193     		str	r3, [sp, #4]
- 868 0424 6022     		movs	r2, #96
- 869 0426 0021     		movs	r1, #0
- 870 0428 02A8     		add	r0, sp, #8
- 871 042a FFF7FEFF 		bl	memset
- 872              	.LVL106:
-  84:Src/cmd.c     ****         }
- 873              		.loc 1 84 13 discriminator 3 view .LVU165
- 874 042e FFF7FEFF 		bl	ADC_SPI_READ_24
- 875              	.LVL107:
- 876 0432 0300     		movs	r3, r0
- 877 0434 2200     		movs	r2, r4
- 878 0436 0A49     		ldr	r1, .L29+8
- 879 0438 01A8     		add	r0, sp, #4
- 880 043a FFF7FEFF 		bl	sprintf
- 881              	.LVL108:
-  84:Src/cmd.c     ****         }
- 882              		.loc 1 84 13 discriminator 3 view .LVU166
- 883 043e FA23     		movs	r3, #250
- 884 0440 82B2     		uxth	r2, r0
- 885 0442 9B00     		lsls	r3, r3, #2
- 886 0444 01A9     		add	r1, sp, #4
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 22
-
-
- 887 0446 0548     		ldr	r0, .L29+4
- 888              	.LVL109:
-  84:Src/cmd.c     ****         }
- 889              		.loc 1 84 13 is_stmt 0 discriminator 3 view .LVU167
- 890 0448 FFF7FEFF 		bl	HAL_UART_Transmit
- 891              	.LVL110:
- 892              	.LBE25:
-  84:Src/cmd.c     ****         }
- 893              		.loc 1 84 80 is_stmt 1 discriminator 3 view .LVU168
-  81:Src/cmd.c     ****         {
- 894              		.loc 1 81 32 discriminator 3 view .LVU169
-  81:Src/cmd.c     ****         {
- 895              		.loc 1 81 33 is_stmt 0 discriminator 3 view .LVU170
- 896 044c 0134     		adds	r4, r4, #1
- 897              	.LVL111:
-  81:Src/cmd.c     ****         {
- 898              		.loc 1 81 33 discriminator 3 view .LVU171
- 899 044e DFE7     		b	.L21
- 900              	.L26:
-  81:Src/cmd.c     ****         {
- 901              		.loc 1 81 33 discriminator 3 view .LVU172
- 902              	.LBE24:
-  86:Src/cmd.c     ****         return 0;
- 903              		.loc 1 86 9 is_stmt 1 view .LVU173
-  86:Src/cmd.c     ****         return 0;
- 904              		.loc 1 86 17 is_stmt 0 view .LVU174
- 905 0450 044B     		ldr	r3, .L29+12
- 906 0452 0022     		movs	r2, #0
- 907 0454 1A70     		strb	r2, [r3]
-  87:Src/cmd.c     ****     }
- 908              		.loc 1 87 9 is_stmt 1 view .LVU175
-  87:Src/cmd.c     ****     }
- 909              		.loc 1 87 16 is_stmt 0 view .LVU176
- 910 0456 41E6     		b	.L3
- 911              	.L30:
- 912              		.align	2
- 913              	.L29:
- 914 0458 2C010000 		.word	.LC29
- 915 045c 00000000 		.word	huart2
- 916 0460 48010000 		.word	.LC31
- 917 0464 00000000 		.word	COMMAND
- 918              		.cfi_endproc
- 919              	.LFE284:
- 921              		.text
- 922              	.Letext0:
- 923              		.file 2 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\machine\\_default_ty
- 924              		.file 3 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_stdint.h"
- 925              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
- 926              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
- 927              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
- 928              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
- 929              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
- 930              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
- 931              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
- 932              		.file 11 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\lock.h"
- 933              		.file 12 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_types.h"
- 934              		.file 13 "c:\\gnu tools arm embedded\\9 2019-q4-major\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\st
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 23
-
-
- 935              		.file 14 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\reent.h"
- 936              		.file 15 "Inc/usart.h"
- 937              		.file 16 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
- 938              		.file 17 "Inc/ADC.h"
- 939              		.file 18 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\stdio.h"
- 940              		.file 19 "<built-in>"
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s 			page 24
+ 1156              		.loc 1 110 69 is_stmt 1 view .LVU214
+ 111:Src/cmd.c     ****         break;
+ 1157              		.loc 1 111 9 view .LVU215
+ 111:Src/cmd.c     ****         break;
+ 1158              		.loc 1 111 19 is_stmt 0 view .LVU216
+ 1159 0586 4D23     		movs	r3, #77
+ 1160 0588 EE54     		strb	r6, [r5, r3]
+ 112:Src/cmd.c     ****     }
+ 1161              		.loc 1 112 9 is_stmt 1 view .LVU217
+ 1162 058a B0E5     		b	.L4
+ 1163              	.L33:
+ 1164              		.align	2
+ 1165              	.L32:
+ 1166 058c 2C010000 		.word	.LC29
+ 1167 0590 00000000 		.word	huart2
+ 1168 0594 48010000 		.word	.LC31
+ 1169 0598 00000000 		.word	State
+ 1170 059c 40771B00 		.word	1800000
+ 1171 05a0 FFFFFF00 		.word	16777215
+ 1172 05a4 64010000 		.word	.LC33
+ 1173 05a8 6C010000 		.word	.LC35
+ 1174 05ac 00000000 		.word	.LC3
+ 1175 05b0 40420F00 		.word	1000000
+ 1176 05b4 78010000 		.word	.LC37
+ 1177 05b8 7C010000 		.word	.LC39
+ 1178              		.cfi_endproc
+ 1179              	.LFE284:
+ 1181              		.text
+ 1182              	.Letext0:
+ 1183              		.file 2 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\machine\\_default_ty
+ 1184              		.file 3 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 1185              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
+ 1186              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
+ 1187              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+ 1188              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+ 1189              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
+ 1190              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
+ 1191              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
+ 1192              		.file 11 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\lock.h"
+ 1193              		.file 12 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_types.h"
+ 1194              		.file 13 "c:\\gnu tools arm embedded\\9 2019-q4-major\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\st
+ 1195              		.file 14 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\reent.h"
+ 1196              		.file 15 "Inc/usart.h"
+ 1197              		.file 16 "Inc/state.h"
+ 1198              		.file 17 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
+ 1199              		.file 18 "Inc/ADC.h"
+ 1200              		.file 19 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\stdio.h"
+ 1201              		.file 20 "<built-in>"
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s 			page 29
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 cmd.c
-C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s:16     .rodata.cmd.str1.4:00000000 $d
-C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s:65     .text.cmd:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s:73     .text.cmd:00000000 cmd
-C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s:105    .rodata.cmd:00000000 $d
-C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s:767    .text.cmd:00000384 $d
-C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s:791    .text.cmd:000003cc $t
-C:\Users\Mateusz\AppData\Local\Temp\cc5qcOrf.s:914    .text.cmd:00000458 $d
+C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s:16     .rodata.cmd.str1.4:00000000 $d
+C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s:81     .text.cmd:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s:89     .text.cmd:00000000 cmd
+C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s:142    .rodata.cmd:00000000 $d
+C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s:816    .text.cmd:000003a4 $d
+C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s:838    .text.cmd:000003ec $t
+C:\Users\Mateusz\AppData\Local\Temp\ccvJJhJh.s:1166   .text.cmd:0000058c $d
 
 UNDEFINED SYMBOLS
-memset
-HAL_UART_Transmit
+__aeabi_lmul
+__aeabi_uldivmod
+__aeabi_idiv
+__aeabi_idivmod
 HAL_GPIO_TogglePin
 HAL_Delay
+memset
+HAL_UART_Transmit
 ADC_ID
 sprintf
 ADC_CMD
@@ -1352,5 +1698,5 @@ ADC_SPI_READ_24
 ADC_reset
 ADC_SPI_READ_8
 ADC_SPI_READ_16
-COMMAND
+State
 huart2
