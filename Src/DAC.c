@@ -17,21 +17,33 @@ void DAC_SPI_WRITE_24(uint32_t data)
     HAL_SPI_Transmit(&hspi1, txbuffer, 3, HAL_MAX_DELAY);
 }
 
-void DAC_TEST()
+void DAC_reset()
 {
+    HAL_GPIO_WritePin(DAC_nSYNC_GPIO_Port, DAC_nSYNC_Pin, 1);
     HAL_GPIO_WritePin(DAC_nLOAD_GPIO_Port, DAC_nLOAD_Pin, 1);
-    for (int i = 0; i <= 0xffff; i += 1000)
-    {
+    HAL_GPIO_WritePin(DAC_nRESET_GPIO_Port, DAC_nRESET_Pin, 0);
+    HAL_Delay(10);
+    HAL_GPIO_WritePin(DAC_nRESET_GPIO_Port, DAC_nRESET_Pin, 1);
+}
 
-        HAL_GPIO_WritePin(DAC_nSYNC_GPIO_Port, DAC_nSYNC_Pin, 1);
-        HAL_Delay(1);
-        HAL_GPIO_WritePin(DAC_nSYNC_GPIO_Port, DAC_nSYNC_Pin, 0);
-        DAC_SPI_WRITE_24(DAC_WRITE_AND_UPDATE + i);
-        HAL_GPIO_WritePin(DAC_nLOAD_GPIO_Port, DAC_nLOAD_Pin, 0);
-        HAL_Delay(1);
-        HAL_GPIO_WritePin(DAC_nLOAD_GPIO_Port, DAC_nLOAD_Pin, 1);
-        SERIAL_WRITE("%06x\n", DAC_WRITE_AND_UPDATE + i)
-        // HAL_GPIO_WritePin(DAC_nLOAD_GPIO_Port, DAC_nLOAD_Pin, 1);
-        HAL_Delay(100);
+void DAC_cmd(uint32_t data)
+{
+    HAL_GPIO_WritePin(DAC_nSYNC_GPIO_Port, DAC_nSYNC_Pin, 0);
+    DAC_SPI_WRITE_24(data);
+    HAL_GPIO_WritePin(DAC_nSYNC_GPIO_Port, DAC_nSYNC_Pin, 1);
+    HAL_Delay(1);
+    HAL_GPIO_WritePin(DAC_nLOAD_GPIO_Port, DAC_nLOAD_Pin, 0);
+    HAL_Delay(1);
+    HAL_GPIO_WritePin(DAC_nLOAD_GPIO_Port, DAC_nLOAD_Pin, 1);
+}
+
+void DAC_test()
+{
+    for (int i = 0; i <= 5; i++)
+    {
+        DAC_cmd(DAC_CH(1) + DAC_WRITE + 26214 * i / 2);
+        SERIAL_WRITE("[1]\t%i mV\t\t", 2500 * 26214 * i / 2 / 0xffff);
+        SERIAL_WRITE("0x%04x\n", 26214 * i / 2);
+        HAL_Delay(500);
     }
 }

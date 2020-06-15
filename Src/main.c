@@ -112,31 +112,15 @@ int main(void)
   ADC_config();
   HAL_UART_Receive_DMA(&huart2, State.UART_RX_BUFF, UART_RX_BUFFER_LENGTH);
 
+  DAC_reset();
   /* USER CODE END 2 */
-  HAL_GPIO_WritePin(DAC_nSYNC_GPIO_Port, DAC_nSYNC_Pin, 1);
-  HAL_GPIO_WritePin(DAC_nLOAD_GPIO_Port, DAC_nLOAD_Pin, 1);
-  HAL_GPIO_WritePin(DAC_nRESET_GPIO_Port, DAC_nRESET_Pin, 0);
-  HAL_Delay(100);
-  HAL_GPIO_WritePin(DAC_nRESET_GPIO_Port, DAC_nRESET_Pin, 1);
-  HAL_Delay(1);
-  HAL_GPIO_WritePin(DAC_nSYNC_GPIO_Port, DAC_nSYNC_Pin, 0);
-  DAC_SPI_WRITE_24(DAC_WRITE_AND_UPDATE_ALL + 0xf000);
-  HAL_GPIO_WritePin(DAC_nSYNC_GPIO_Port, DAC_nSYNC_Pin, 1);
-  HAL_Delay(1);
-  HAL_GPIO_WritePin(DAC_nLOAD_GPIO_Port, DAC_nLOAD_Pin, 0);
-  HAL_Delay(1);
-  HAL_GPIO_WritePin(DAC_nLOAD_GPIO_Port, DAC_nLOAD_Pin, 1);
-  SERIAL_WRITE("%06x\n", DAC_WRITE_AND_UPDATE_ALL + 0xf000);
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    // DAC_TEST();
-
     cmd();
     ADC_update();
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

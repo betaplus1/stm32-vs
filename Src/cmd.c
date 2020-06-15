@@ -3,7 +3,7 @@
 #include "state.h"
 #include "usart_utils.h"
 #include "ADC.h"
-
+#include "DAC.h"
 extern state State;
 
 uint8_t cmd()
@@ -108,6 +108,13 @@ uint8_t cmd()
     {
         SERIAL_WRITE("%i.", State.temperature / 1000000);             //-66.875 to +52.443 C
         SERIAL_WRITE("%03u *C\n", (State.temperature / 1000) % 1000); //-66.875 to +52.443 C
+        State.cmd = 0;
+        break;
+    }
+    case cmd_dac_test:
+    {
+        SERIAL_WRITE("\n");
+        DAC_test();
         State.cmd = 0;
         break;
     }

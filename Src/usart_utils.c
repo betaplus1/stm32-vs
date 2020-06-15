@@ -37,6 +37,10 @@ void UART_PARSE(uint8_t buffer[UART_RX_BUFFER_LENGTH])
     {
         State.cmd = cmd_temperature;
     }
+    else if (strcmp(buffer, "dac test") == 0)
+    {
+        State.cmd = cmd_dac_test;
+    }
     else
     {
         State.cmd = cmd_undefined;

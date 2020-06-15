@@ -3,7 +3,7 @@
 #include "main.h"
 #include "gpio.h"
 
-#define DAC_CH(i) ((0 <= i <= 7) ? i << 16 : NULL)
+#define DAC_CH(i) ((0 <= i < 8) ? i << 16 : 0)
 #define DAC_WRITE 0x100000                //C3:C0: 0 0 0 1 Write to Input Register n where n = 1 to 8, depending on the DAC selected from the address bits in Table 11 (dependent on LDAC)
 #define DAC_UPDATE 0x20000                //C3:C0: 0 0 1 0 Update DAC Register n with contents of Input Register n
 #define DAC_WRITE_AND_UPDATE 0x300000     //C3:C0: 0 0 1 1 Write to and update DAC Channel n
@@ -16,6 +16,8 @@
 #define DAC_WRITE_AND_UPDATE_ALL 0xa00000 //C3:C0: 1 0 1 0 Update all channels of the input register simultaneously with the input data
 #define DAC_UPDATE_ALL 0xb00000           //C3:C0: 1 0 1 1 Update all channels of the DAC register and input register simultaneously with the input data
 
+void DAC_cmd(uint32_t data);
+void DAC_reset();
 void DAC_SPI_WRITE_24(uint32_t data);
-void DAC_TEST();
+void DAC_test();
 #endif /* __DAC_H */

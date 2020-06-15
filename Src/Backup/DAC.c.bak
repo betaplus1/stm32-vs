@@ -19,12 +19,19 @@ void DAC_SPI_WRITE_24(uint32_t data)
 
 void DAC_TEST()
 {
-    for (int i = 0; i <= 0xfff; i += 1)
+    HAL_GPIO_WritePin(DAC_nLOAD_GPIO_Port, DAC_nLOAD_Pin, 1);
+    for (int i = 0; i <= 0xffff; i += 1000)
     {
-        DAC_SPI_WRITE_24(DAC_WRITE_AND_UPDATE + DAC_CH(1) + i);
-        SERIAL_WRITE("%i\n", i)
+
+        HAL_GPIO_WritePin(DAC_nSYNC_GPIO_Port, DAC_nSYNC_Pin, 1);
+        HAL_Delay(1);
+        HAL_GPIO_WritePin(DAC_nSYNC_GPIO_Port, DAC_nSYNC_Pin, 0);
+        DAC_SPI_WRITE_24(DAC_WRITE_AND_UPDATE + i);
         HAL_GPIO_WritePin(DAC_nLOAD_GPIO_Port, DAC_nLOAD_Pin, 0);
         HAL_Delay(1);
         HAL_GPIO_WritePin(DAC_nLOAD_GPIO_Port, DAC_nLOAD_Pin, 1);
+        SERIAL_WRITE("%06x\n", DAC_WRITE_AND_UPDATE + i)
+        // HAL_GPIO_WritePin(DAC_nLOAD_GPIO_Port, DAC_nLOAD_Pin, 1);
+        HAL_Delay(100);
     }
 }

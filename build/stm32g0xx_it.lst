@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s 			page 1
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s 			page 1
   30:Src/stm32g0xx_it.c **** /* Private typedef -----------------------------------------------------------*/
   31:Src/stm32g0xx_it.c **** /* USER CODE BEGIN TD */
   32:Src/stm32g0xx_it.c **** 
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s 			page 2
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s 			page 2
 
 
   33:Src/stm32g0xx_it.c **** /* USER CODE END TD */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s 			page 1
   82:Src/stm32g0xx_it.c ****   /* USER CODE END NonMaskableInt_IRQn 1 */
   83:Src/stm32g0xx_it.c **** }
   32              		.loc 1 83 1 view .LVU1
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s 			page 3
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s 			page 3
 
 
   33              		@ sp needed
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s 			page 1
  102:Src/stm32g0xx_it.c ****   */
  103:Src/stm32g0xx_it.c **** void SVC_Handler(void)
  104:Src/stm32g0xx_it.c **** {
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s 			page 4
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s 			page 4
 
 
   72              		.loc 1 104 1 view -0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s 			page 1
  109              		.thumb_func
  110              		.fpu softvfp
  112              	SysTick_Handler:
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s 			page 5
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s 			page 5
 
 
  113              	.LFB288:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s 			page 1
  142              		.loc 1 151 1 is_stmt 1 view -0
  143              		.cfi_startproc
  144              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s 			page 6
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s 			page 6
 
 
  145              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s 			page 1
  181              		.section	.text.DMA1_Channel1_IRQHandler,"ax",%progbits
  182              		.align	1
  183              		.global	DMA1_Channel1_IRQHandler
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s 			page 7
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s 			page 7
 
 
  184              		.syntax unified
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s 			page 1
  190:Src/stm32g0xx_it.c ****   */
  191:Src/stm32g0xx_it.c **** void TIM6_DAC_LPTIM1_IRQHandler(void)
  192:Src/stm32g0xx_it.c **** {
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s 			page 8
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s 			page 8
 
 
  224              		.loc 1 192 1 is_stmt 1 view -0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s 			page 1
  202:Src/stm32g0xx_it.c **** 
  203:Src/stm32g0xx_it.c **** /**
  204:Src/stm32g0xx_it.c ****   * @brief This function handles USART2 global interrupt / USART2 wake-up interrupt through EXTI li
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s 			page 9
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s 			page 9
 
 
  205:Src/stm32g0xx_it.c ****   */
@@ -537,34 +537,34 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s 			page 1
  315              		.file 16 "Inc/usart.h"
  316              		.file 17 "Inc/state.h"
  317              		.file 18 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s 			page 10
+ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g0xx_it.c
-C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s:16     .text.NMI_Handler:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s:24     .text.NMI_Handler:00000000 NMI_Handler
-C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s:39     .text.HardFault_Handler:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s:46     .text.HardFault_Handler:00000000 HardFault_Handler
-C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s:63     .text.SVC_Handler:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s:70     .text.SVC_Handler:00000000 SVC_Handler
-C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s:84     .text.PendSV_Handler:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s:91     .text.PendSV_Handler:00000000 PendSV_Handler
-C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s:105    .text.SysTick_Handler:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s:112    .text.SysTick_Handler:00000000 SysTick_Handler
-C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s:133    .text.FLASH_IRQHandler:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s:140    .text.FLASH_IRQHandler:00000000 FLASH_IRQHandler
-C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s:161    .text.RCC_IRQHandler:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s:168    .text.RCC_IRQHandler:00000000 RCC_IRQHandler
-C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s:182    .text.DMA1_Channel1_IRQHandler:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s:189    .text.DMA1_Channel1_IRQHandler:00000000 DMA1_Channel1_IRQHandler
-C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s:210    .text.DMA1_Channel1_IRQHandler:0000000c $d
-C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s:215    .text.TIM6_DAC_LPTIM1_IRQHandler:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s:222    .text.TIM6_DAC_LPTIM1_IRQHandler:00000000 TIM6_DAC_LPTIM1_IRQHandler
-C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s:256    .text.TIM6_DAC_LPTIM1_IRQHandler:0000001c $d
-C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s:262    .text.USART2_IRQHandler:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s:269    .text.USART2_IRQHandler:00000000 USART2_IRQHandler
-C:\Users\Mateusz\AppData\Local\Temp\ccF7oMPq.s:295    .text.USART2_IRQHandler:00000014 $d
+C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s:16     .text.NMI_Handler:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s:24     .text.NMI_Handler:00000000 NMI_Handler
+C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s:39     .text.HardFault_Handler:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s:46     .text.HardFault_Handler:00000000 HardFault_Handler
+C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s:63     .text.SVC_Handler:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s:70     .text.SVC_Handler:00000000 SVC_Handler
+C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s:84     .text.PendSV_Handler:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s:91     .text.PendSV_Handler:00000000 PendSV_Handler
+C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s:105    .text.SysTick_Handler:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s:112    .text.SysTick_Handler:00000000 SysTick_Handler
+C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s:133    .text.FLASH_IRQHandler:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s:140    .text.FLASH_IRQHandler:00000000 FLASH_IRQHandler
+C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s:161    .text.RCC_IRQHandler:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s:168    .text.RCC_IRQHandler:00000000 RCC_IRQHandler
+C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s:182    .text.DMA1_Channel1_IRQHandler:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s:189    .text.DMA1_Channel1_IRQHandler:00000000 DMA1_Channel1_IRQHandler
+C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s:210    .text.DMA1_Channel1_IRQHandler:0000000c $d
+C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s:215    .text.TIM6_DAC_LPTIM1_IRQHandler:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s:222    .text.TIM6_DAC_LPTIM1_IRQHandler:00000000 TIM6_DAC_LPTIM1_IRQHandler
+C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s:256    .text.TIM6_DAC_LPTIM1_IRQHandler:0000001c $d
+C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s:262    .text.USART2_IRQHandler:00000000 $t
+C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s:269    .text.USART2_IRQHandler:00000000 USART2_IRQHandler
+C:\Users\Mateusz\AppData\Local\Temp\ccDo62aC.s:295    .text.USART2_IRQHandler:00000014 $d
 
 UNDEFINED SYMBOLS
 HAL_IncTick
