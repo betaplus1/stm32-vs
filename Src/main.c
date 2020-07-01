@@ -113,12 +113,16 @@ int main(void)
   HAL_UART_Receive_DMA(&huart2, State.UART_RX_BUFF, UART_RX_BUFFER_LENGTH);
 
   DAC_reset();
+  // DAC_cmd(DAC_POWER + 0b11);
+  // DAC_cmd(DAC_POWER + 0b0101);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    DAC_test();
     cmd();
     ADC_update();
     /* USER CODE END WHILE */

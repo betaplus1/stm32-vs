@@ -39,11 +39,17 @@ void DAC_cmd(uint32_t data)
 
 void DAC_test()
 {
-    for (int i = 0; i <= 5; i++)
+    for (int i = 0; i <= 0xffff; i += 0xffff / 5)
     {
-        DAC_cmd(DAC_CH(1) + DAC_WRITE + 26214 * i / 2);
-        SERIAL_WRITE("[1]\t%i mV\t\t", 2500 * 26214 * i / 2 / 0xffff);
-        SERIAL_WRITE("0x%04x\n", 26214 * i / 2);
-        HAL_Delay(500);
+        DAC_cmd(DAC_CH(0) + DAC_WRITE + (uint32_t)(i));
+        DAC_cmd(DAC_CH(1) + DAC_WRITE + (uint32_t)(i));
+        DAC_cmd(DAC_CH(2) + DAC_WRITE + (uint32_t)(i));
+        DAC_cmd(DAC_CH(3) + DAC_WRITE + (uint32_t)(i));
+        DAC_cmd(DAC_CH(4) + DAC_WRITE + (uint32_t)(i));
+        DAC_cmd(DAC_CH(5) + DAC_WRITE + (uint32_t)(i));
+        DAC_cmd(DAC_CH(6) + DAC_WRITE + (uint32_t)(i));
+        DAC_cmd(DAC_CH(7) + DAC_WRITE + (uint32_t)(i));
+        SERIAL_WRITE("0x%04x\n", i);
+        HAL_Delay(1000);
     }
 }
