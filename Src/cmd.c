@@ -11,8 +11,6 @@ uint8_t cmd()
     if (State.cmd)
     {
         HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
-        HAL_Delay(100);
-        HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
     }
     switch (State.cmd)
     {

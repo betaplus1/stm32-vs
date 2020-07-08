@@ -122,9 +122,9 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    DAC_test();
+    // DAC_test();
     cmd();
-    ADC_update();
+    ADC_update(); // TODO: Przepisać na przerwania albo zmienić tryb bo przy delayu ~~ 100ms transmisja się wywala
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
