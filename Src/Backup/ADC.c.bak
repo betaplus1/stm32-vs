@@ -75,6 +75,8 @@ uint32_t ADC_DATA()
 
 void ADC_update()
 {
+    ADC_DATA_READY_EXTI_deInit();
+    HAL_SPI_MspInit(&hspi2);
     if (State.ADC_Channel == ADC_DEFAULT_CH)
     {
         HAL_GPIO_WritePin(ADC_nSYNC_GPIO_Port, ADC_nSYNC_Pin, 0);
@@ -82,11 +84,15 @@ void ADC_update()
         HAL_GPIO_WritePin(ADC_nSYNC_GPIO_Port, ADC_nSYNC_Pin, 1);
         State.ADC_Channel = 0;
     }
-
-    if (ADC_DATA_READY)
+    else
     {
         ADC_CMD(ADC_READ, ADC_DATA_REG);
         State.ADC_Values[State.ADC_Channel] = (uint32_t)ADC_SPI_READ_24();
+
+        uint64_t voltage_uV = (((uint64_t)State.ADC_Values[State.ADC_Channel] * 1800000) / 0xffffff);
+        SERIAL_WRITE("CH[%i]:\t", State.ADC_Channel)
+        SERIAL_WRITE("%u \n", voltage_uV)
+
         if (State.ADC_Channel == ADC_T_CH)
         {
             uint64_t voltage_uV = (((uint64_t)State.ADC_Values[ADC_T_CH] * 1800000) / 0xffffff);
@@ -94,6 +100,9 @@ void ADC_update()
         }
         State.ADC_Channel++;
     }
+
+    HAL_SPI_MspDeInit(&hspi2);
+    ADC_DATA_READY_EXTI_Init();
 }
 
 void ADC_config()

@@ -24,10 +24,6 @@ void UART_PARSE(uint8_t buffer[UART_RX_BUFFER_LENGTH])
     {
         State.cmd = cmd_adc_debug;
     }
-    else if (strcmp(buffer, "adc data") == 0)
-    {
-        State.cmd = cmd_adc_data;
-    }
     else if (strcmp(buffer, "adc values") == 0)
     {
         SERIAL_WRITE("\n");
@@ -40,6 +36,10 @@ void UART_PARSE(uint8_t buffer[UART_RX_BUFFER_LENGTH])
     else if (strcmp(buffer, "dac test") == 0)
     {
         State.cmd = cmd_dac_test;
+    }
+    else if (strcmp(buffer, "rf") == 0)
+    {
+        State.cmd = cmd_rf_state;
     }
     else
     {

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccSOxg6f.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpf5ETt.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccSOxg6f.s 			page 1
   30:Src/dma.c     **** /* Configure DMA                                                              */
   31:Src/dma.c     **** /*----------------------------------------------------------------------------*/
   32:Src/dma.c     **** 
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccSOxg6f.s 			page 2
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpf5ETt.s 			page 2
 
 
   33:Src/dma.c     **** /* USER CODE BEGIN 1 */
@@ -68,7 +68,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccSOxg6f.s 			page 1
   37:Src/dma.c     **** /** 
   38:Src/dma.c     ****   * Enable DMA controller clock
   39:Src/dma.c     ****   */
-  40:Src/dma.c     **** void MX_DMA_Init(void) 
+  40:Src/dma.c     **** void MX_DMA_Init(void)
   41:Src/dma.c     **** {
   27              		.loc 1 41 1 view -0
   28              		.cfi_startproc
@@ -116,12 +116,11 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccSOxg6f.s 			page 1
   62 0020 0920     		movs	r0, #9
   63 0022 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
   64              	.LVL1:
-  50:Src/dma.c     **** 
-  51:Src/dma.c     **** }
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccSOxg6f.s 			page 3
+  50:Src/dma.c     **** }
+  65              		.loc 1 50 1 is_stmt 0 view .LVU9
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpf5ETt.s 			page 3
 
 
-  65              		.loc 1 51 1 is_stmt 0 view .LVU9
   66 0026 03B0     		add	sp, sp, #12
   67              		@ sp needed
   68 0028 00BD     		pop	{pc}
@@ -131,115 +130,33 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccSOxg6f.s 			page 1
   72 002c 00100240 		.word	1073876992
   73              		.cfi_endproc
   74              	.LFE284:
-  76              		.section	.text.HAL_UART_RxCpltCallback,"ax",%progbits
-  77              		.align	1
-  78              		.global	HAL_UART_RxCpltCallback
-  79              		.syntax unified
-  80              		.code	16
-  81              		.thumb_func
-  82              		.fpu softvfp
-  84              	HAL_UART_RxCpltCallback:
-  85              	.LFB285:
-  52:Src/dma.c     **** 
-  53:Src/dma.c     **** /* USER CODE BEGIN 2 */
-  54:Src/dma.c     **** HAL_UART_RxCpltCallback()
-  55:Src/dma.c     **** {
-  86              		.loc 1 55 1 is_stmt 1 view -0
-  87              		.cfi_startproc
-  88              		@ args = 0, pretend = 0, frame = 0
-  89              		@ frame_needed = 0, uses_anonymous_args = 0
-  90 0000 10B5     		push	{r4, lr}
-  91              	.LCFI2:
-  92              		.cfi_def_cfa_offset 8
-  93              		.cfi_offset 4, -8
-  94              		.cfi_offset 14, -4
-  56:Src/dma.c     ****   UART_PARSE(State.UART_RX_BUFF);
-  95              		.loc 1 56 3 view .LVU11
-  96 0002 0748     		ldr	r0, .L8
-  97 0004 FFF7FEFF 		bl	UART_PARSE
-  98              	.LVL2:
-  57:Src/dma.c     ****   for (int i = UART_RX_BUFFER_LENGTH; i >= 0; i--)
-  99              		.loc 1 57 3 view .LVU12
- 100              	.LBB3:
- 101              		.loc 1 57 8 view .LVU13
- 102              		.loc 1 57 12 is_stmt 0 view .LVU14
- 103 0008 4022     		movs	r2, #64
- 104              	.LVL3:
- 105              	.L5:
- 106              		.loc 1 57 39 is_stmt 1 discriminator 1 view .LVU15
- 107              		.loc 1 57 3 is_stmt 0 discriminator 1 view .LVU16
- 108 000a 002A     		cmp	r2, #0
- 109 000c 06DB     		blt	.L7
-  58:Src/dma.c     ****   {
-  59:Src/dma.c     ****     State.UART_RX_BUFF[i] = '\0';
- 110              		.loc 1 59 5 is_stmt 1 discriminator 3 view .LVU17
- 111              		.loc 1 59 27 is_stmt 0 discriminator 3 view .LVU18
- 112 000e 054B     		ldr	r3, .L8+4
- 113 0010 9B18     		adds	r3, r3, r2
- 114 0012 4E33     		adds	r3, r3, #78
- 115 0014 0021     		movs	r1, #0
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccSOxg6f.s 			page 4
-
-
- 116 0016 1970     		strb	r1, [r3]
-  57:Src/dma.c     ****   for (int i = UART_RX_BUFFER_LENGTH; i >= 0; i--)
- 117              		.loc 1 57 47 is_stmt 1 discriminator 3 view .LVU19
-  57:Src/dma.c     ****   for (int i = UART_RX_BUFFER_LENGTH; i >= 0; i--)
- 118              		.loc 1 57 48 is_stmt 0 discriminator 3 view .LVU20
- 119 0018 013A     		subs	r2, r2, #1
- 120              	.LVL4:
-  57:Src/dma.c     ****   for (int i = UART_RX_BUFFER_LENGTH; i >= 0; i--)
- 121              		.loc 1 57 48 discriminator 3 view .LVU21
- 122 001a F6E7     		b	.L5
- 123              	.L7:
-  57:Src/dma.c     ****   for (int i = UART_RX_BUFFER_LENGTH; i >= 0; i--)
- 124              		.loc 1 57 48 discriminator 3 view .LVU22
- 125              	.LBE3:
-  60:Src/dma.c     ****   }
-  61:Src/dma.c     **** }
- 126              		.loc 1 61 1 view .LVU23
- 127              		@ sp needed
- 128 001c 10BD     		pop	{r4, pc}
- 129              	.L9:
- 130 001e C046     		.align	2
- 131              	.L8:
- 132 0020 4E000000 		.word	State+78
- 133 0024 00000000 		.word	State
- 134              		.cfi_endproc
- 135              	.LFE285:
- 137              		.text
- 138              	.Letext0:
- 139              		.file 2 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\machine\\_default_ty
- 140              		.file 3 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_stdint.h"
- 141              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
- 142              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
- 143              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
- 144              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
- 145              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
- 146              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
- 147              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
- 148              		.file 11 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\lock.h"
- 149              		.file 12 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_types.h"
- 150              		.file 13 "c:\\gnu tools arm embedded\\9 2019-q4-major\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\st
- 151              		.file 14 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\reent.h"
- 152              		.file 15 "Inc/usart.h"
- 153              		.file 16 "Inc/state.h"
- 154              		.file 17 "Inc/usart_utils.h"
- 155              		.file 18 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h"
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccSOxg6f.s 			page 5
+  76              		.text
+  77              	.Letext0:
+  78              		.file 2 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\machine\\_default_types.h"
+  79              		.file 3 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_stdint.h"
+  80              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
+  81              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
+  82              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+  83              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+  84              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
+  85              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
+  86              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
+  87              		.file 11 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\lock.h"
+  88              		.file 12 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_types.h"
+  89              		.file 13 "c:\\gnu tools arm embedded\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\stddef.h"
+  90              		.file 14 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\reent.h"
+  91              		.file 15 "Inc/usart.h"
+  92              		.file 16 "Inc/state.h"
+  93              		.file 17 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h"
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpf5ETt.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 dma.c
-C:\Users\Mateusz\AppData\Local\Temp\ccSOxg6f.s:16     .text.MX_DMA_Init:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccSOxg6f.s:24     .text.MX_DMA_Init:00000000 MX_DMA_Init
-C:\Users\Mateusz\AppData\Local\Temp\ccSOxg6f.s:72     .text.MX_DMA_Init:0000002c $d
-C:\Users\Mateusz\AppData\Local\Temp\ccSOxg6f.s:77     .text.HAL_UART_RxCpltCallback:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccSOxg6f.s:84     .text.HAL_UART_RxCpltCallback:00000000 HAL_UART_RxCpltCallback
-C:\Users\Mateusz\AppData\Local\Temp\ccSOxg6f.s:132    .text.HAL_UART_RxCpltCallback:00000020 $d
+C:\Users\matil\AppData\Local\Temp\ccpf5ETt.s:16     .text.MX_DMA_Init:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccpf5ETt.s:24     .text.MX_DMA_Init:00000000 MX_DMA_Init
+C:\Users\matil\AppData\Local\Temp\ccpf5ETt.s:72     .text.MX_DMA_Init:0000002c $d
 
 UNDEFINED SYMBOLS
 HAL_NVIC_SetPriority
 HAL_NVIC_EnableIRQ
-UART_PARSE
-State

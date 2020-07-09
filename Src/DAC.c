@@ -52,4 +52,16 @@ void DAC_test()
         SERIAL_WRITE("0x%04x\n", i);
         HAL_Delay(1000);
     }
-}
+};
+
+void DAC_test_val(uint32_t val)
+{
+    DAC_cmd(DAC_CH(0) + DAC_WRITE + val);
+    DAC_cmd(DAC_CH(1) + DAC_WRITE + val);
+    DAC_cmd(DAC_CH(2) + DAC_WRITE + val);
+    DAC_cmd(DAC_CH(3) + DAC_WRITE + val);
+    DAC_cmd(DAC_CH(4) + DAC_WRITE + val);
+    DAC_cmd(DAC_CH(5) + DAC_WRITE + val);
+    DAC_cmd(DAC_CH(6) + DAC_WRITE + val);
+    DAC_cmd(DAC_CH(7) + DAC_WRITE + val);
+};

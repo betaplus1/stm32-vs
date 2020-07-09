@@ -16,8 +16,22 @@
 #define DAC_WRITE_AND_UPDATE_ALL 0xa00000 //C3:C0: 1 0 1 0 Update all channels of the input register simultaneously with the input data
 #define DAC_UPDATE_ALL 0xb00000           //C3:C0: 1 0 1 1 Update all channels of the DAC register and input register simultaneously with the input data
 
+#define RF_PS_704_OFFSET DAC_CH(6)
+#define RF_PS_704_FINE DAC_CH(7)
+
+#define RF_PS_352_OFFSET DAC_CH(4)
+#define RF_PS_352_FINE DAC_CH(5)
+
+#define RF_ATT_704_OFFSET DAC_CH(0)
+#define RF_ATT_704_FINE DAC_CH(1)
+
+#define RF_ATT_352_OFFSET DAC_CH(3)
+#define RF_ATT_352_FINE DAC_CH(2)
+
 void DAC_cmd(uint32_t data);
 void DAC_reset();
 void DAC_SPI_WRITE_24(uint32_t data);
 void DAC_test();
+void DAC_test_val(uint32_t);
+
 #endif /* __DAC_H */

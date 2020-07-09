@@ -1,7 +1,7 @@
 [PreviousGenFiles]
-HeaderPath=E:/Local/PRL_PDC/stm32-vs/Inc
+HeaderPath=D:/Source/stm32-vs/Inc
 HeaderFiles=gpio.h;usart.h;stm32f1xx_it.h;stm32f1xx_hal_conf.h;main.h;stm32g0xx_it.h;stm32g0xx_hal_conf.h;rtc.h;lptim.h;spi.h;dma.h;
-SourcePath=E:/Local/PRL_PDC/stm32-vs/Src
+SourcePath=D:/Source/stm32-vs/Src
 SourceFiles=gpio.c;usart.c;stm32f1xx_it.c;stm32f1xx_hal_msp.c;main.c;stm32g0xx_it.c;stm32g0xx_hal_msp.c;rtc.c;lptim.c;spi.c;dma.c;
 
 [PreviousLibFiles]

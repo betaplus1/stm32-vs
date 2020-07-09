@@ -28,16 +28,42 @@
 #define ADC_OFFSETx_REG(i) ((0 <= i <= 7) ? (0x30 + i) : NULL)
 #define ADC_GAINx_REG(i) ((0 <= i <= 7) ? (0x38 + i) : NULL)
 
-#define ADC_DEFAULT_CH 16
+#define ADC_PD0_Power_CH 12  // MO352 vs FREQDIV MO704(/2)
+#define ADC_PD0_Phase_CH 11  // MO352 vs MO704(/2)
+#define ADC_PD1_Power_CH 5   // MO704 vs AMP704
+#define ADC_PD1_Phase_CH 6   // MO704 vs AMP704
+#define ADC_PD2_Power_CH 1   // MO704 vs STUB704
+#define ADC_PD2_Phase_CH 0   // MO704 vs STUB704
+#define ADC_PD3_Power_CH 13  // MO352 vs AMP352
+#define ADC_PD3_Phase_CH 14  // MO352 vs AMP352
+#define ADC_PD4_Power_CH 3   // MO352 vs STUB352
+#define ADC_PD4_Phase_CH 2   // MO352 vs STUB352
+#define ADC_PWD0_Power_CH 4  // MO704P
+#define ADC_PWD1_Power_CH 10 // AMP704P
+#define ADC_PWD2_Power_CH 9  // AMP352P
+#define ADC_PWD3_Power_CH 15 // MO352P
 #define ADC_T_CH 7
+#define ADC_RH_CH 8
+#define ADC_DEFAULT_CH 16
+
+#define RF_REL_POWER_MO352_MOFREQDIV352 12 // MO352 vs FREQDIV MO704(/2)
+#define RF_PHASE_MO352_MOFREQDIV352 11     // MO352 vs MO704(/2)
+#define RF_REL_POWER_MO704_AMP704 5        // MO704 vs AMP704
+#define RF_PHASE_MO704_AMP704 6            // MO704 vs AMP704
+#define RF_REL_POWER_MO704_STUB704 1       // MO704 vs STUB704
+#define RF_PHASE_MO704_STUB704 0           // MO704 vs STUB704
+#define RF_REL_POWER_MO352_AMP352 13       // MO352 vs AMP352
+#define RF_PHASE_MO352_AMP352 14           // MO352 vs AMP352
+#define RF_REL_POWER_MO352_STUB352         // MO352 vs STUB352
+#define RF_PHASE_MO352_STUB352 2           // MO352 vs STUB352
+#define RF_POWER_MO704 4                   // MO704P
+#define RF_POWER_AMP704 10                 // AMP704P
+#define RF_POWER_AMP352 9                  // AMP352P
+#define RF_POWER_MO352 15                  // MO352P
+
 typedef enum
 {
     ADC_SPS_31250 = 0, //  31250 Sps
-    // ADC_SPS_31250 = 1 ,//  31250 Sps
-    // ADC_SPS_31250 = 2 ,//  31250 Sps
-    // ADC_SPS_31250 = 3 ,//  31250 Sps
-    // ADC_SPS_31250 = 4 ,//  31250 Sps
-    // ADC_SPS_31250 = 5 ,//  31250 Sps
     ADC_SPS_15625 = 6, //  15625 Sps
     ADC_SPS_10417 = 7, //  10417 Sps
     ADC_SPS_5208 = 8,  //  5208 Sps

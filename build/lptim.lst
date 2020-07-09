@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccux93Es.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s 			page 1
   30:Src/lptim.c   **** void MX_LPTIM1_Init(void)
   31:Src/lptim.c   **** {
   27              		.loc 1 31 1 view -0
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s 			page 2
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccux93Es.s 			page 2
 
 
   28              		.cfi_startproc
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s 			page 1
   71 0020 FFF7FEFF 		bl	HAL_LPTIM_Init
   72              	.LVL0:
   73              		.loc 1 42 6 view .LVU21
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s 			page 3
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccux93Es.s 			page 3
 
 
   74 0024 0028     		cmp	r0, #0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s 			page 1
  119              		.loc 1 52 17 is_stmt 0 view .LVU28
  120 0004 0268     		ldr	r2, [r0]
  121              		.loc 1 52 5 view .LVU29
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s 			page 4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccux93Es.s 			page 4
 
 
  122 0006 0C4B     		ldr	r3, .L9
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s 			page 1
  154 0028 0021     		movs	r1, #0
  155 002a 1120     		movs	r0, #17
  156              	.LVL5:
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s 			page 5
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccux93Es.s 			page 5
 
 
   61:Src/lptim.c   ****     HAL_NVIC_EnableIRQ(TIM6_DAC_LPTIM1_IRQn);
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s 			page 1
   75:Src/lptim.c   **** 
   76:Src/lptim.c   ****   /* USER CODE END LPTIM1_MspDeInit 0 */
   77:Src/lptim.c   ****     /* Peripheral clock disable */
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s 			page 6
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccux93Es.s 			page 6
 
 
   78:Src/lptim.c   ****     __HAL_RCC_LPTIM1_CLK_DISABLE();
@@ -342,8 +342,8 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s 			page 1
  231              		.comm	hlptim1,56,4
  232              		.text
  233              	.Letext0:
- 234              		.file 2 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\machine\\_default_ty
- 235              		.file 3 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 234              		.file 2 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 235              		.file 3 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_stdint.h"
  236              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
  237              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
  238              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
@@ -352,32 +352,32 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s 			page 1
  241              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_lptim.h"
  242              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
  243              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
- 244              		.file 12 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\lock.h"
- 245              		.file 13 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_types.h"
- 246              		.file 14 "c:\\gnu tools arm embedded\\9 2019-q4-major\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\st
- 247              		.file 15 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\reent.h"
+ 244              		.file 12 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\lock.h"
+ 245              		.file 13 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_types.h"
+ 246              		.file 14 "c:\\gnu tools arm embedded\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\stddef.h"
+ 247              		.file 15 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\reent.h"
  248              		.file 16 "Inc/usart.h"
  249              		.file 17 "Inc/lptim.h"
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s 			page 7
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccux93Es.s 			page 7
 
 
  250              		.file 18 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h"
  251              		.file 19 "Inc/main.h"
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s 			page 8
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccux93Es.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 lptim.c
-C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s:16     .text.MX_LPTIM1_Init:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s:24     .text.MX_LPTIM1_Init:00000000 MX_LPTIM1_Init
-C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s:89     .text.MX_LPTIM1_Init:00000030 $d
+C:\Users\matil\AppData\Local\Temp\ccux93Es.s:16     .text.MX_LPTIM1_Init:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccux93Es.s:24     .text.MX_LPTIM1_Init:00000000 MX_LPTIM1_Init
+C:\Users\matil\AppData\Local\Temp\ccux93Es.s:89     .text.MX_LPTIM1_Init:00000030 $d
                             *COM*:00000038 hlptim1
-C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s:96     .text.HAL_LPTIM_MspInit:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s:103    .text.HAL_LPTIM_MspInit:00000000 HAL_LPTIM_MspInit
-C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s:169    .text.HAL_LPTIM_MspInit:00000038 $d
-C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s:175    .text.HAL_LPTIM_MspDeInit:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s:182    .text.HAL_LPTIM_MspDeInit:00000000 HAL_LPTIM_MspDeInit
-C:\Users\Mateusz\AppData\Local\Temp\ccfmOSnj.s:226    .text.HAL_LPTIM_MspDeInit:00000020 $d
+C:\Users\matil\AppData\Local\Temp\ccux93Es.s:96     .text.HAL_LPTIM_MspInit:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccux93Es.s:103    .text.HAL_LPTIM_MspInit:00000000 HAL_LPTIM_MspInit
+C:\Users\matil\AppData\Local\Temp\ccux93Es.s:169    .text.HAL_LPTIM_MspInit:00000038 $d
+C:\Users\matil\AppData\Local\Temp\ccux93Es.s:175    .text.HAL_LPTIM_MspDeInit:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccux93Es.s:182    .text.HAL_LPTIM_MspDeInit:00000000 HAL_LPTIM_MspDeInit
+C:\Users\matil\AppData\Local\Temp\ccux93Es.s:226    .text.HAL_LPTIM_MspDeInit:00000020 $d
 
 UNDEFINED SYMBOLS
 HAL_LPTIM_Init

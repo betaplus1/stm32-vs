@@ -112,32 +112,19 @@ int main(void)
   ADC_config();
   HAL_UART_Receive_DMA(&huart2, State.UART_RX_BUFF, UART_RX_BUFFER_LENGTH);
 
-  HAL_GPIO_WritePin(DAC_nSYNC_GPIO_Port, DAC_nSYNC_Pin, 1);
-  HAL_GPIO_WritePin(DAC_nSYNC_GPIO_Port, DAC_nSYNC_Pin, 1);
-  HAL_GPIO_WritePin(DAC_nLOAD_GPIO_Port, DAC_nLOAD_Pin, 1);
+  DAC_reset();
+  // DAC_cmd(DAC_POWER + 0b11);
+  // DAC_cmd(DAC_POWER + 0b0101);
 
-  HAL_GPIO_WritePin(DAC_nRESET_GPIO_Port, DAC_nRESET_Pin, 0);
-  HAL_Delay(100);
-  HAL_GPIO_WritePin(DAC_nRESET_GPIO_Port, DAC_nRESET_Pin, 1);
-
-  HAL_GPIO_WritePin(DAC_nSYNC_GPIO_Port, DAC_nSYNC_Pin, 0);
-  DAC_SPI_WRITE_24(DAC_CH(1) + DAC_WRITE + 0xffffff);
-  HAL_GPIO_WritePin(DAC_nSYNC_GPIO_Port, DAC_nSYNC_Pin, 1);
-  HAL_Delay(1);
-  HAL_GPIO_WritePin(DAC_nLOAD_GPIO_Port, DAC_nLOAD_Pin, 0);
-  HAL_Delay(1);
-  HAL_GPIO_WritePin(DAC_nLOAD_GPIO_Port, DAC_nLOAD_Pin, 1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  DAC_cmd(RF_PS_704_OFFSET + DAC_WRITE + 0xffff);
+  ADC_update();
   while (1)
   {
-    // DAC_TEST();
-
     cmd();
-    ADC_update();
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

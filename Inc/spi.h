@@ -42,6 +42,9 @@ void MX_SPI2_Init(void);
 
 /* USER CODE BEGIN Prototypes */
 
+  void ADC_DATA_READY_EXTI_Init(void);
+  void ADC_DATA_READY_EXTI_deInit(void);
+
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus

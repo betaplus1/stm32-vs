@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s 			page 1
   42 0004 030C     		lsrs	r3, r0, #16
   13:Src/DAC.c     ****     uint8_t txbuffer[3] = {
   43              		.loc 1 13 13 view .LVU4
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s 			page 2
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s 			page 2
 
 
   44 0006 01A9     		add	r1, sp, #4
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s 			page 1
   91 0002 8021     		movs	r1, #128
   92 0004 A020     		movs	r0, #160
   93 0006 0122     		movs	r2, #1
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s 			page 3
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s 			page 3
 
 
   94 0008 0902     		lsls	r1, r1, #8
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s 			page 1
   30:Src/DAC.c     **** {
  143              		.loc 1 30 1 is_stmt 1 view -0
  144              		.cfi_startproc
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s 			page 4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s 			page 4
 
 
  145              		@ args = 0, pretend = 0, frame = 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s 			page 1
  193 003a FFF7FEFF 		bl	HAL_Delay
  194              	.LVL16:
   37:Src/DAC.c     ****     HAL_GPIO_WritePin(DAC_nLOAD_GPIO_Port, DAC_nLOAD_Pin, 1);
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s 			page 5
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s 			page 5
 
 
  195              		.loc 1 37 5 view .LVU27
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s 			page 1
  245              	.L11:
  246              		.loc 1 42 21 is_stmt 1 discriminator 1 view .LVU33
  247              		.loc 1 42 5 is_stmt 0 discriminator 1 view .LVU34
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s 			page 6
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s 			page 6
 
 
  248 0006 8023     		movs	r3, #128
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s 			page 1
   51:Src/DAC.c     ****         DAC_cmd(DAC_CH(7) + DAC_WRITE + (uint32_t)(i));
  294              		.loc 1 51 9 discriminator 3 view .LVU42
  295 0054 B823     		movs	r3, #184
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s 			page 7
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s 			page 7
 
 
  296 0056 5B03     		lsls	r3, r3, #13
@@ -414,11 +414,11 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s 			page 1
  340              		.loc 1 42 36 discriminator 3 view .LVU51
  341              	.LBE2:
   54:Src/DAC.c     ****     }
-  55:Src/DAC.c     **** }...
+  55:Src/DAC.c     **** };
  342              		.loc 1 55 1 view .LVU52
  343 0094 1BB0     		add	sp, sp, #108
  344              		@ sp needed
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s 			page 8
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s 			page 8
 
 
  345              	.LVL34:
@@ -432,46 +432,144 @@ ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s 			page 1
  353 00a0 33330000 		.word	13107
  354              		.cfi_endproc
  355              	.LFE287:
- 357              		.text
- 358              	.Letext0:
- 359              		.file 2 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\machine\\_default_ty
- 360              		.file 3 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_stdint.h"
- 361              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
- 362              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
- 363              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
- 364              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
- 365              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
- 366              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
- 367              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
- 368              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
- 369              		.file 12 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\lock.h"
- 370              		.file 13 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\_types.h"
- 371              		.file 14 "c:\\gnu tools arm embedded\\9 2019-q4-major\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\st
- 372              		.file 15 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\sys\\reent.h"
- 373              		.file 16 "Inc/usart.h"
- 374              		.file 17 "Inc/state.h"
- 375              		.file 18 "Inc/spi.h"
- 376              		.file 19 "c:\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\\stdio.h"
- 377              		.file 20 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
- 378              		.file 21 "<built-in>"
-ARM GAS  C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s 			page 9
+ 357              		.section	.text.DAC_test_val,"ax",%progbits
+ 358              		.align	1
+ 359              		.global	DAC_test_val
+ 360              		.syntax unified
+ 361              		.code	16
+ 362              		.thumb_func
+ 363              		.fpu softvfp
+ 365              	DAC_test_val:
+ 366              	.LVL35:
+ 367              	.LFB288:
+  56:Src/DAC.c     **** 
+  57:Src/DAC.c     **** void DAC_test_val(uint32_t val)
+  58:Src/DAC.c     **** {
+ 368              		.loc 1 58 1 is_stmt 1 view -0
+ 369              		.cfi_startproc
+ 370              		@ args = 0, pretend = 0, frame = 0
+ 371              		@ frame_needed = 0, uses_anonymous_args = 0
+ 372              		.loc 1 58 1 is_stmt 0 view .LVU55
+ 373 0000 10B5     		push	{r4, lr}
+ 374              	.LCFI6:
+ 375              		.cfi_def_cfa_offset 8
+ 376              		.cfi_offset 4, -8
+ 377              		.cfi_offset 14, -4
+ 378 0002 0400     		movs	r4, r0
+  59:Src/DAC.c     ****     DAC_cmd(DAC_CH(0) + DAC_WRITE + val);
+ 379              		.loc 1 59 5 is_stmt 1 view .LVU56
+ 380 0004 8023     		movs	r3, #128
+ 381 0006 5B03     		lsls	r3, r3, #13
+ 382 0008 C018     		adds	r0, r0, r3
+ 383              	.LVL36:
+ 384              		.loc 1 59 5 is_stmt 0 view .LVU57
+ 385 000a FFF7FEFF 		bl	DAC_cmd
+ 386              	.LVL37:
+  60:Src/DAC.c     ****     DAC_cmd(DAC_CH(1) + DAC_WRITE + val);
+ 387              		.loc 1 60 5 is_stmt 1 view .LVU58
+ 388 000e 8823     		movs	r3, #136
+ 389 0010 5B03     		lsls	r3, r3, #13
+ 390 0012 E018     		adds	r0, r4, r3
+ 391 0014 FFF7FEFF 		bl	DAC_cmd
+ 392              	.LVL38:
+  61:Src/DAC.c     ****     DAC_cmd(DAC_CH(2) + DAC_WRITE + val);
+ 393              		.loc 1 61 5 view .LVU59
+ 394 0018 9023     		movs	r3, #144
+ 395 001a 5B03     		lsls	r3, r3, #13
+ 396 001c E018     		adds	r0, r4, r3
+ 397 001e FFF7FEFF 		bl	DAC_cmd
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s 			page 9
+
+
+ 398              	.LVL39:
+  62:Src/DAC.c     ****     DAC_cmd(DAC_CH(3) + DAC_WRITE + val);
+ 399              		.loc 1 62 5 view .LVU60
+ 400 0022 9823     		movs	r3, #152
+ 401 0024 5B03     		lsls	r3, r3, #13
+ 402 0026 E018     		adds	r0, r4, r3
+ 403 0028 FFF7FEFF 		bl	DAC_cmd
+ 404              	.LVL40:
+  63:Src/DAC.c     ****     DAC_cmd(DAC_CH(4) + DAC_WRITE + val);
+ 405              		.loc 1 63 5 view .LVU61
+ 406 002c A023     		movs	r3, #160
+ 407 002e 5B03     		lsls	r3, r3, #13
+ 408 0030 E018     		adds	r0, r4, r3
+ 409 0032 FFF7FEFF 		bl	DAC_cmd
+ 410              	.LVL41:
+  64:Src/DAC.c     ****     DAC_cmd(DAC_CH(5) + DAC_WRITE + val);
+ 411              		.loc 1 64 5 view .LVU62
+ 412 0036 A823     		movs	r3, #168
+ 413 0038 5B03     		lsls	r3, r3, #13
+ 414 003a E018     		adds	r0, r4, r3
+ 415 003c FFF7FEFF 		bl	DAC_cmd
+ 416              	.LVL42:
+  65:Src/DAC.c     ****     DAC_cmd(DAC_CH(6) + DAC_WRITE + val);
+ 417              		.loc 1 65 5 view .LVU63
+ 418 0040 B023     		movs	r3, #176
+ 419 0042 5B03     		lsls	r3, r3, #13
+ 420 0044 E018     		adds	r0, r4, r3
+ 421 0046 FFF7FEFF 		bl	DAC_cmd
+ 422              	.LVL43:
+  66:Src/DAC.c     ****     DAC_cmd(DAC_CH(7) + DAC_WRITE + val);
+ 423              		.loc 1 66 5 view .LVU64
+ 424 004a B823     		movs	r3, #184
+ 425 004c 5B03     		lsls	r3, r3, #13
+ 426 004e E018     		adds	r0, r4, r3
+ 427 0050 FFF7FEFF 		bl	DAC_cmd
+ 428              	.LVL44:
+  67:Src/DAC.c     **** };...
+ 429              		.loc 1 67 1 is_stmt 0 view .LVU65
+ 430              		@ sp needed
+ 431              	.LVL45:
+ 432              		.loc 1 67 1 view .LVU66
+ 433 0054 10BD     		pop	{r4, pc}
+ 434              		.cfi_endproc
+ 435              	.LFE288:
+ 437              		.text
+ 438              	.Letext0:
+ 439              		.file 2 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 440              		.file 3 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 441              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
+ 442              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
+ 443              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+ 444              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+ 445              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
+ 446              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
+ 447              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
+ 448              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
+ 449              		.file 12 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\lock.h"
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s 			page 10
+
+
+ 450              		.file 13 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_types.h"
+ 451              		.file 14 "c:\\gnu tools arm embedded\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\stddef.h"
+ 452              		.file 15 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\reent.h"
+ 453              		.file 16 "Inc/usart.h"
+ 454              		.file 17 "Inc/state.h"
+ 455              		.file 18 "Inc/spi.h"
+ 456              		.file 19 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\stdio.h"
+ 457              		.file 20 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
+ 458              		.file 21 "<built-in>"
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 DAC.c
-C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s:16     .text.DAC_SPI_WRITE_24:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s:24     .text.DAC_SPI_WRITE_24:00000000 DAC_SPI_WRITE_24
-C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s:67     .text.DAC_SPI_WRITE_24:00000020 $d
-C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s:72     .text.DAC_reset:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s:79     .text.DAC_reset:00000000 DAC_reset
-C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s:127    .text.DAC_reset:00000038 $d
-C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s:133    .text.DAC_cmd:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s:140    .text.DAC_cmd:00000000 DAC_cmd
-C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s:207    .text.DAC_cmd:0000004c $d
-C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s:212    .rodata.DAC_test.str1.4:00000000 $d
-C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s:216    .text.DAC_test:00000000 $t
-C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s:223    .text.DAC_test:00000000 DAC_test
-C:\Users\Mateusz\AppData\Local\Temp\cc3JgXlU.s:351    .text.DAC_test:00000098 $d
+C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s:16     .text.DAC_SPI_WRITE_24:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s:24     .text.DAC_SPI_WRITE_24:00000000 DAC_SPI_WRITE_24
+C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s:67     .text.DAC_SPI_WRITE_24:00000020 $d
+C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s:72     .text.DAC_reset:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s:79     .text.DAC_reset:00000000 DAC_reset
+C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s:127    .text.DAC_reset:00000038 $d
+C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s:133    .text.DAC_cmd:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s:140    .text.DAC_cmd:00000000 DAC_cmd
+C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s:207    .text.DAC_cmd:0000004c $d
+C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s:212    .rodata.DAC_test.str1.4:00000000 $d
+C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s:216    .text.DAC_test:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s:223    .text.DAC_test:00000000 DAC_test
+C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s:351    .text.DAC_test:00000098 $d
+C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s:358    .text.DAC_test_val:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccqO8S9Z.s:365    .text.DAC_test_val:00000000 DAC_test_val
 
 UNDEFINED SYMBOLS
 HAL_SPI_Transmit

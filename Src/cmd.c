@@ -6,12 +6,9 @@
 #include "DAC.h"
 extern state State;
 
-uint8_t cmd()
+void cmd()
 {
-    if (State.cmd)
-    {
-        HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
-    }
+    HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
     switch (State.cmd)
     {
     case cmd_blink:
@@ -114,6 +111,28 @@ uint8_t cmd()
         SERIAL_WRITE("\n");
         DAC_test();
         State.cmd = 0;
+        break;
+    }
+    case cmd_rf_state:
+    {
+        SERIAL_WRITE("\n")
+        State.cmd = 0;
+
+        uint64_t voltage_uV = (((uint64_t)State.ADC_Values[ADC_PD2_Phase_CH] * 1800000) / 0xffffff);
+        SERIAL_WRITE("ADC_PD2_Phase_CH:\t\t");
+        SERIAL_WRITE("%10lu uV\t\t\n", voltage_uV);
+
+        voltage_uV = (((uint64_t)State.ADC_Values[ADC_PD2_Power_CH] * 1800000) / 0xffffff);
+        SERIAL_WRITE("ADC_PD2_Power_CH:\t\t");
+        SERIAL_WRITE("%10lu uV\t\t\n", voltage_uV);
+
+        // voltage_uV = (((uint64_t)State.ADC_Values[ADC_PD2_Phase_CH] * 1800000) / 0xffffff);
+        // SERIAL_WRITE("PD2 Phase:\t\t");
+        // SERIAL_WRITE("%10lu uV\t\t\n", voltage_uV);
+
+        // voltage_uV = (((uint64_t)State.ADC_Values[ADC_PD2_Power_CH] * 1800000) / 0xffffff);
+        // SERIAL_WRITE("PD2 Power:\t\t");
+        // SERIAL_WRITE("%10lu uV\t\t\n", voltage_uV);
         break;
     }
     case cmd_undefined:

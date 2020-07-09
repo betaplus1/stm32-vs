@@ -89,7 +89,6 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -113,18 +112,27 @@ int main(void)
   HAL_UART_Receive_DMA(&huart2, State.UART_RX_BUFF, UART_RX_BUFFER_LENGTH);
 
   DAC_reset();
-  // DAC_cmd(DAC_POWER + 0b11);
-  // DAC_cmd(DAC_POWER + 0b0101);
+
+  //PRIORITY OVERRIDES:
+  HAL_InitTick(0);
+  HAL_NVIC_SetPriority(EXTI4_15_IRQn, 1, 0);
+  HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 2, 0);
+  HAL_NVIC_SetPriority(TIM6_DAC_LPTIM1_IRQn, 2, 0);
+  HAL_NVIC_SetPriority(SPI2_IRQn, 2, 0);
+  HAL_NVIC_SetPriority(USART2_IRQn, 2, 0);
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  DAC_cmd(RF_PS_704_OFFSET + DAC_WRITE + 0xffff);
+  ADC_update();
   while (1)
   {
-    // DAC_test();
-    cmd();
-    ADC_update(); // TODO: Przepisać na przerwania albo zmienić tryb bo przy delayu ~~ 100ms transmisja się wywala
+    if (State.cmd)
+    {
+      cmd();
+    }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
