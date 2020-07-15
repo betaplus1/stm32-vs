@@ -1,4 +1,4 @@
-build/cmd.o: Src/cmd.c Inc/usart.h Inc/main.h \
+build/Filter.o: Src/Filter.c Inc/usart.h Inc/main.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h \
  Inc/stm32g0xx_hal_conf.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h \

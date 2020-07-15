@@ -30,7 +30,8 @@ build/main.o: Src/main.c Inc/main.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_system.h Inc/usart.h \
  Inc/main.h Inc/dma.h Inc/lptim.h Inc/spi.h Inc/usart.h Inc/gpio.h \
- Inc/ADC.h Inc/gpio.h Inc/DAC.h Inc/state.h Inc/usart_utils.h Inc/cmd.h
+ Inc/ADC.h Inc/gpio.h Inc/DAC.h Inc/state.h Inc/usart_utils.h Inc/cmd.h \
+ Inc/Filter.h
 
 Inc/main.h:
 
@@ -121,3 +122,5 @@ Inc/state.h:
 Inc/usart_utils.h:
 
 Inc/cmd.h:
+
+Inc/Filter.h:

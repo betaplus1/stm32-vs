@@ -33,6 +33,7 @@
 #include "state.h"
 #include "usart_utils.h"
 #include "cmd.h"
+#include "Filter.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -132,7 +133,11 @@ int main(void)
     if (State.cmd)
     {
       cmd();
-    }
+    };
+    if (State.ADC_Updated)
+    {
+      Filter();
+    };
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

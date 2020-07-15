@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc1GKeY3.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 1
   43              		.section	.text.UART_PARSE,"ax",%progbits
   44              		.align	1
   45              		.global	UART_PARSE
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 2
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc1GKeY3.s 			page 2
 
 
   46              		.arch armv6s-m
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 1
   91 0020 0422     		movs	r2, #4
   92 0022 2900     		movs	r1, r5
   93 0024 3948     		ldr	r0, .L12+4
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 3
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc1GKeY3.s 			page 3
 
 
   94 0026 FFF7FEFF 		bl	HAL_UART_Transmit
@@ -141,7 +141,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 1
  108              		.loc 1 13 9 is_stmt 1 view .LVU10
  109              		.loc 1 13 19 is_stmt 0 view .LVU11
  110 0036 374A     		ldr	r2, .L12+12
- 111 0038 4D23     		movs	r3, #77
+ 111 0038 374B     		ldr	r3, .L12+16
  112 003a 0121     		movs	r1, #1
  113 003c D154     		strb	r1, [r2, r3]
  114              	.LVL6:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 1
   41:Src/usart_utils.c ****     {
   42:Src/usart_utils.c ****         State.cmd = cmd_rf_state;
   43:Src/usart_utils.c ****     }
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc1GKeY3.s 			page 4
 
 
   44:Src/usart_utils.c ****     else
@@ -197,7 +197,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 1
  125              		.loc 1 15 10 is_stmt 1 view .LVU14
   15:Src/usart_utils.c ****     else if (strcmp(buffer, "adc id") == 0)
  126              		.loc 1 15 14 is_stmt 0 view .LVU15
- 127 0042 3549     		ldr	r1, .L12+16
+ 127 0042 3649     		ldr	r1, .L12+20
  128 0044 2000     		movs	r0, r4
  129 0046 FFF7FEFF 		bl	strcmp
  130              	.LVL8:
@@ -210,7 +210,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 1
   17:Src/usart_utils.c ****         State.cmd = cmd_adc_id;
  135              		.loc 1 17 19 is_stmt 0 view .LVU18
  136 004e 314A     		ldr	r2, .L12+12
- 137 0050 4D23     		movs	r3, #77
+ 137 0050 314B     		ldr	r3, .L12+16
  138 0052 0221     		movs	r1, #2
  139 0054 D154     		strb	r1, [r2, r3]
  140 0056 F2E7     		b	.L1
@@ -219,7 +219,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 1
  142              		.loc 1 19 10 is_stmt 1 view .LVU19
   19:Src/usart_utils.c ****     else if (strcmp(buffer, "adc reset") == 0)
  143              		.loc 1 19 14 is_stmt 0 view .LVU20
- 144 0058 3049     		ldr	r1, .L12+20
+ 144 0058 3149     		ldr	r1, .L12+24
  145 005a 2000     		movs	r0, r4
  146 005c FFF7FEFF 		bl	strcmp
  147              	.LVL9:
@@ -232,19 +232,19 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 1
   21:Src/usart_utils.c ****         State.cmd = cmd_adc_reset;
  152              		.loc 1 21 19 is_stmt 0 view .LVU23
  153 0064 2B4A     		ldr	r2, .L12+12
- 154 0066 4D23     		movs	r3, #77
+ 154 0066 2C4B     		ldr	r3, .L12+16
  155 0068 0321     		movs	r1, #3
  156 006a D154     		strb	r1, [r2, r3]
  157 006c E7E7     		b	.L1
  158              	.L5:
   23:Src/usart_utils.c ****     else if (strcmp(buffer, "adc debug") == 0)
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 5
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc1GKeY3.s 			page 5
 
 
  159              		.loc 1 23 10 is_stmt 1 view .LVU24
   23:Src/usart_utils.c ****     else if (strcmp(buffer, "adc debug") == 0)
  160              		.loc 1 23 14 is_stmt 0 view .LVU25
- 161 006e 2C49     		ldr	r1, .L12+24
+ 161 006e 2D49     		ldr	r1, .L12+28
  162 0070 2000     		movs	r0, r4
  163 0072 FFF7FEFF 		bl	strcmp
  164              	.LVL10:
@@ -257,7 +257,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 1
   25:Src/usart_utils.c ****         State.cmd = cmd_adc_debug;
  169              		.loc 1 25 19 is_stmt 0 view .LVU28
  170 007a 264A     		ldr	r2, .L12+12
- 171 007c 4D23     		movs	r3, #77
+ 171 007c 264B     		ldr	r3, .L12+16
  172 007e 0421     		movs	r1, #4
  173 0080 D154     		strb	r1, [r2, r3]
  174 0082 DCE7     		b	.L1
@@ -266,7 +266,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 1
  176              		.loc 1 27 10 is_stmt 1 view .LVU29
   27:Src/usart_utils.c ****     else if (strcmp(buffer, "adc values") == 0)
  177              		.loc 1 27 14 is_stmt 0 view .LVU30
- 178 0084 2749     		ldr	r1, .L12+28
+ 178 0084 2849     		ldr	r1, .L12+32
  179 0086 2000     		movs	r0, r4
  180 0088 FFF7FEFF 		bl	strcmp
  181              	.LVL11:
@@ -278,7 +278,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 1
  185              		.loc 1 32 10 is_stmt 1 view .LVU32
   32:Src/usart_utils.c ****     else if (strcmp(buffer, "temp") == 0)
  186              		.loc 1 32 14 is_stmt 0 view .LVU33
- 187 0090 2549     		ldr	r1, .L12+32
+ 187 0090 2649     		ldr	r1, .L12+36
  188 0092 2000     		movs	r0, r4
  189 0094 FFF7FEFF 		bl	strcmp
  190              	.LVL12:
@@ -291,14 +291,14 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 1
   34:Src/usart_utils.c ****         State.cmd = cmd_temperature;
  195              		.loc 1 34 19 is_stmt 0 view .LVU36
  196 009c 1D4A     		ldr	r2, .L12+12
- 197 009e 4D23     		movs	r3, #77
+ 197 009e 1E4B     		ldr	r3, .L12+16
  198 00a0 0721     		movs	r1, #7
  199 00a2 D154     		strb	r1, [r2, r3]
  200 00a4 CBE7     		b	.L1
  201              	.L11:
  202              	.LBB4:
   29:Src/usart_utils.c ****         SERIAL_WRITE("\n");
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 6
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc1GKeY3.s 			page 6
 
 
  203              		.loc 1 29 9 is_stmt 1 view .LVU37
@@ -335,7 +335,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 1
   30:Src/usart_utils.c ****         State.cmd = cmd_adc_values;
  229              		.loc 1 30 19 is_stmt 0 view .LVU43
  230 00c8 124A     		ldr	r2, .L12+12
- 231 00ca 4D23     		movs	r3, #77
+ 231 00ca 134B     		ldr	r3, .L12+16
  232 00cc 0621     		movs	r1, #6
  233 00ce D154     		strb	r1, [r2, r3]
  234 00d0 B5E7     		b	.L1
@@ -345,7 +345,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 1
  237              		.loc 1 36 10 is_stmt 1 view .LVU44
   36:Src/usart_utils.c ****     else if (strcmp(buffer, "dac test") == 0)
  238              		.loc 1 36 14 is_stmt 0 view .LVU45
- 239 00d2 1649     		ldr	r1, .L12+36
+ 239 00d2 1749     		ldr	r1, .L12+40
  240 00d4 2000     		movs	r0, r4
  241 00d6 FFF7FEFF 		bl	strcmp
  242              	.LVL18:
@@ -358,10 +358,10 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 1
   38:Src/usart_utils.c ****         State.cmd = cmd_dac_test;
  247              		.loc 1 38 19 is_stmt 0 view .LVU48
  248 00de 0D4A     		ldr	r2, .L12+12
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 7
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc1GKeY3.s 			page 7
 
 
- 249 00e0 4D23     		movs	r3, #77
+ 249 00e0 0D4B     		ldr	r3, .L12+16
  250 00e2 0821     		movs	r1, #8
  251 00e4 D154     		strb	r1, [r2, r3]
  252 00e6 AAE7     		b	.L1
@@ -370,7 +370,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 1
  254              		.loc 1 40 10 is_stmt 1 view .LVU49
   40:Src/usart_utils.c ****     else if (strcmp(buffer, "rf") == 0)
  255              		.loc 1 40 14 is_stmt 0 view .LVU50
- 256 00e8 1149     		ldr	r1, .L12+40
+ 256 00e8 1249     		ldr	r1, .L12+44
  257 00ea 2000     		movs	r0, r4
  258 00ec FFF7FEFF 		bl	strcmp
  259              	.LVL19:
@@ -383,7 +383,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 1
   42:Src/usart_utils.c ****         State.cmd = cmd_rf_state;
  264              		.loc 1 42 19 is_stmt 0 view .LVU53
  265 00f4 074A     		ldr	r2, .L12+12
- 266 00f6 4D23     		movs	r3, #77
+ 266 00f6 084B     		ldr	r3, .L12+16
  267 00f8 0921     		movs	r1, #9
  268 00fa D154     		strb	r1, [r2, r3]
  269 00fc 9FE7     		b	.L1
@@ -393,7 +393,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 1
   46:Src/usart_utils.c ****         State.cmd = cmd_undefined;
  272              		.loc 1 46 19 is_stmt 0 view .LVU55
  273 00fe 054A     		ldr	r2, .L12+12
- 274 0100 4D23     		movs	r3, #77
+ 274 0100 054B     		ldr	r3, .L12+16
  275 0102 FF21     		movs	r1, #255
  276 0104 D154     		strb	r1, [r2, r3]
  277              	.LBE5:
@@ -406,45 +406,46 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 1
  284 010c 00000000 		.word	huart2
  285 0110 08000000 		.word	.LC3
  286 0114 00000000 		.word	State
- 287 0118 10000000 		.word	.LC6
- 288 011c 18000000 		.word	.LC8
- 289 0120 24000000 		.word	.LC10
- 290 0124 30000000 		.word	.LC12
- 291 0128 3C000000 		.word	.LC14
- 292 012c 44000000 		.word	.LC16
- 293 0130 50000000 		.word	.LC18
- 294              		.cfi_endproc
- 295              	.LFE284:
- 297              		.text
- 298              	.Letext0:
- 299              		.file 2 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\machine\\_default_types.h"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 8
+ 287 0118 8F040000 		.word	1167
+ 288 011c 10000000 		.word	.LC6
+ 289 0120 18000000 		.word	.LC8
+ 290 0124 24000000 		.word	.LC10
+ 291 0128 30000000 		.word	.LC12
+ 292 012c 3C000000 		.word	.LC14
+ 293 0130 44000000 		.word	.LC16
+ 294 0134 50000000 		.word	.LC18
+ 295              		.cfi_endproc
+ 296              	.LFE284:
+ 298              		.text
+ 299              	.Letext0:
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc1GKeY3.s 			page 8
 
 
- 300              		.file 3 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_stdint.h"
- 301              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
- 302              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
- 303              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
- 304              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
- 305              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
- 306              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
- 307              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
- 308              		.file 11 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\lock.h"
- 309              		.file 12 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_types.h"
- 310              		.file 13 "c:\\gnu tools arm embedded\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\stddef.h"
- 311              		.file 14 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\reent.h"
- 312              		.file 15 "Inc/usart.h"
- 313              		.file 16 "Inc/state.h"
- 314              		.file 17 "<built-in>"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s 			page 9
+ 300              		.file 2 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 301              		.file 3 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 302              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
+ 303              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
+ 304              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+ 305              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+ 306              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
+ 307              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
+ 308              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
+ 309              		.file 11 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\lock.h"
+ 310              		.file 12 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_types.h"
+ 311              		.file 13 "c:\\gnu tools arm embedded\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\stddef.h"
+ 312              		.file 14 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\reent.h"
+ 313              		.file 15 "Inc/usart.h"
+ 314              		.file 16 "Inc/state.h"
+ 315              		.file 17 "<built-in>"
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc1GKeY3.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usart_utils.c
-C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s:16     .rodata.UART_PARSE.str1.4:00000000 $d
-C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s:44     .text.UART_PARSE:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s:52     .text.UART_PARSE:00000000 UART_PARSE
-C:\Users\matil\AppData\Local\Temp\ccJsRb4V.s:283    .text.UART_PARSE:00000108 $d
+C:\Users\matil\AppData\Local\Temp\cc1GKeY3.s:16     .rodata.UART_PARSE.str1.4:00000000 $d
+C:\Users\matil\AppData\Local\Temp\cc1GKeY3.s:44     .text.UART_PARSE:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc1GKeY3.s:52     .text.UART_PARSE:00000000 UART_PARSE
+C:\Users\matil\AppData\Local\Temp\cc1GKeY3.s:283    .text.UART_PARSE:00000108 $d
 
 UNDEFINED SYMBOLS
 memset

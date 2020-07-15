@@ -3,6 +3,7 @@
 #include "state.h"
 #include "usart_utils.h"
 #include "ADC.h"
+#include "spi.h"
 #include "DAC.h"
 extern state State;
 
@@ -28,22 +29,24 @@ void cmd()
         State.cmd = 0;
         break;
     }
-    case cmd_adc_data:
-    {
-        ADC_CMD(ADC_READ, ADC_DATA_REG);
-        SERIAL_WRITE("0x%06x\n", ADC_SPI_READ_24());
-        State.cmd = 0;
-        break;
-    }
-    case cmd_adc_reset:
-    {
-        SERIAL_WRITE("ADC RESET\n");
-        ADC_reset();
-        State.cmd = 0;
-        break;
-    }
+    // case cmd_adc_data:
+    // {
+    //     ADC_CMD(ADC_READ, ADC_DATA_REG);
+    //     SERIAL_WRITE("0x%06x\n", ADC_SPI_READ_24());
+    //     State.cmd = 0;
+    //     break;
+    // }
+    // case cmd_adc_reset:
+    // {
+    //     SERIAL_WRITE("ADC RESET\n");
+    //     ADC_reset();
+    //     State.cmd = 0;
+    //     break;
+    // }
     case cmd_adc_debug:
     {
+        ADC_DATA_READY_EXTI_deInit();
+        HAL_SPI_MspInit(&hspi2);
         SERIAL_WRITE("ADC DEBUG:\n\n");
         ADC_CMD(ADC_READ, ADC_STATUS_REG);
         SERIAL_WRITE("\tADC_STATUS_REG:\t\t0x%02x\n", ADC_SPI_READ_8());
@@ -85,6 +88,8 @@ void cmd()
             SERIAL_WRITE("\tADC_GAIN%i_REG:\t\t0x%04x\n", i, ADC_SPI_READ_24());
         }
         State.cmd = 0;
+        HAL_SPI_MspDeInit(&hspi2);
+        ADC_DATA_READY_EXTI_Init();
         break;
     }
     case cmd_adc_values:

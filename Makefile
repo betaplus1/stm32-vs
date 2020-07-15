@@ -59,6 +59,7 @@ Src/system_stm32g0xx.c \
 Src/lptim.c \
 Src/usart.c \
 Src/cmd.c \
+Src/Filter.c \
 Src/usart_utils.c \
 Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_lptim.c \
 Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart.c \

@@ -62,16 +62,11 @@ uint8_t ADC_CMD(uint8_t read, uint8_t addr)
 uint16_t ADC_ID()
 {
     ADC_DATA_READY_EXTI_deInit();
-    HAL_Delay(1);
     HAL_SPI_MspInit(&hspi2);
-    HAL_Delay(1);
     ADC_CMD(ADC_READ, ADC_ID_REG);
     uint16_t answer = ADC_SPI_READ_16();
-    HAL_Delay(1);
     HAL_SPI_MspDeInit(&hspi2);
-    HAL_Delay(1);
     ADC_DATA_READY_EXTI_Init();
-    HAL_Delay(1);
     return answer;
 }
 
@@ -85,9 +80,7 @@ uint32_t ADC_DATA()
 void ADC_update()
 {
     ADC_DATA_READY_EXTI_deInit();
-    HAL_Delay(1);
     HAL_SPI_MspInit(&hspi2);
-    HAL_Delay(1);
     if (State.ADC_Channel == ADC_DEFAULT_CH)
     {
         HAL_GPIO_WritePin(ADC_nSYNC_GPIO_Port, ADC_nSYNC_Pin, 0);
@@ -102,8 +95,8 @@ void ADC_update()
 
         ADC_CMD(ADC_READ, ADC_DATA_REG);
         State.ADC_Values[State.ADC_Channel] = (uint32_t)ADC_SPI_READ_24();
-
-        uint64_t voltage_uV = (((uint64_t)State.ADC_Values[State.ADC_Channel] * 1800000) / 0xffffff);
+        // ADC_SPI_READ_24();
+        // State.ADC_Values[State.ADC_Channel] = 100;
 
         if (State.ADC_Channel == ADC_T_CH)
         {
@@ -111,11 +104,12 @@ void ADC_update()
             State.temperature = -45000000 - 175000000 / 8 + 17500 * voltage_uV / 264;
         }
     }
-    HAL_Delay(1);
+    if (State.ADC_Channel == 15)
+    {
+        State.ADC_Updated = 1;
+    }
     HAL_SPI_MspDeInit(&hspi2);
-    HAL_Delay(1);
     ADC_DATA_READY_EXTI_Init();
-    HAL_Delay(1);
 }
 
 void ADC_config()
