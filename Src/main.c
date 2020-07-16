@@ -126,7 +126,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  DAC_cmd(RF_PS_704_OFFSET + DAC_WRITE + 0xffff);
+  DAC_cmd(RF_PS_704_OFFSET + DAC_WRITE + 0xfffa);
   ADC_update();
   while (1)
   {

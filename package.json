@@ -18,14 +18,15 @@
       "patterns": [
         "build"
       ],
-      "extensions": "hex"
+      "extensions": "bin",
+      "delay":5000
     }
   },
   "scripts": {
     "serial": "serialport-terminal -b 115200 --no-echo",
     "serial-echo": "serialport-terminal -b 115200",
     "make": "cls & make",
-    "upload": "flash",
+    "upload": "bash flash",
     "watch-make": "npm-watch make",
     "watch-upload": "npm-watch upload",
     "watch": "concurrently --kill-others \"npm run watch-make\" \"npm run watch-upload\" "
