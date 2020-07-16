@@ -1,0 +1,541 @@
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s 			page 1
+
+
+   1              		.cpu cortex-m0plus
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 0
+  10              		.eabi_attribute 18, 4
+  11              		.file	"PID.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.global	__aeabi_lmul
+  16              		.global	__aeabi_uldivmod
+  17              		.section	.text.Voltage,"ax",%progbits
+  18              		.align	1
+  19              		.global	Voltage
+  20              		.arch armv6s-m
+  21              		.syntax unified
+  22              		.code	16
+  23              		.thumb_func
+  24              		.fpu softvfp
+  26              	Voltage:
+  27              	.LVL0:
+  28              	.LFB284:
+  29              		.file 1 "Src/PID.c"
+   1:Src/PID.c     **** #include "usart.h"
+   2:Src/PID.c     **** #include <stdio.h>
+   3:Src/PID.c     **** #include "state.h"
+   4:Src/PID.c     **** #include "usart_utils.h"
+   5:Src/PID.c     **** #include "ADC.h"
+   6:Src/PID.c     **** #include "spi.h"
+   7:Src/PID.c     **** #include "DAC.h"
+   8:Src/PID.c     **** 
+   9:Src/PID.c     **** extern state State;
+  10:Src/PID.c     **** 
+  11:Src/PID.c     **** //Returns voltage in [uV] measured by adc channel ADC_CH.
+  12:Src/PID.c     **** uint64_t Voltage(uint8_t ADC_CH)
+  13:Src/PID.c     **** {
+  30              		.loc 1 13 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		.loc 1 13 1 is_stmt 0 view .LVU1
+  35 0000 10B5     		push	{r4, lr}
+  36              	.LCFI0:
+  37              		.cfi_def_cfa_offset 8
+  38              		.cfi_offset 4, -8
+  39              		.cfi_offset 14, -4
+  14:Src/PID.c     ****     return (((uint64_t)State.ADC_ValuesFiltered[ADC_CH] * 1800000) / 0xffffff);
+  40              		.loc 1 14 5 is_stmt 1 view .LVU2
+  41              		.loc 1 14 48 is_stmt 0 view .LVU3
+  42 0002 1330     		adds	r0, r0, #19
+  43              	.LVL1:
+  44              		.loc 1 14 48 view .LVU4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s 			page 2
+
+
+  45 0004 FF30     		adds	r0, r0, #255
+  46 0006 8000     		lsls	r0, r0, #2
+  47 0008 064B     		ldr	r3, .L2
+  48 000a 1818     		adds	r0, r3, r0
+  49 000c 4068     		ldr	r0, [r0, #4]
+  50              		.loc 1 14 57 view .LVU5
+  51 000e 064A     		ldr	r2, .L2+4
+  52 0010 0023     		movs	r3, #0
+  53 0012 0021     		movs	r1, #0
+  54 0014 FFF7FEFF 		bl	__aeabi_lmul
+  55              	.LVL2:
+  56              		.loc 1 14 68 view .LVU6
+  57 0018 044A     		ldr	r2, .L2+8
+  58 001a 0023     		movs	r3, #0
+  59 001c FFF7FEFF 		bl	__aeabi_uldivmod
+  60              	.LVL3:
+  15:Src/PID.c     **** }
+  61              		.loc 1 15 1 view .LVU7
+  62              		@ sp needed
+  63 0020 10BD     		pop	{r4, pc}
+  64              	.L3:
+  65 0022 C046     		.align	2
+  66              	.L2:
+  67 0024 00000000 		.word	State
+  68 0028 40771B00 		.word	1800000
+  69 002c FFFFFF00 		.word	16777215
+  70              		.cfi_endproc
+  71              	.LFE284:
+  73              		.section	.text.Phase,"ax",%progbits
+  74              		.align	1
+  75              		.global	Phase
+  76              		.syntax unified
+  77              		.code	16
+  78              		.thumb_func
+  79              		.fpu softvfp
+  81              	Phase:
+  82              	.LVL4:
+  83              	.LFB285:
+  16:Src/PID.c     **** 
+  17:Src/PID.c     **** //Returns Phase absolute value in [deg e-3] measured by adc channel ADC_CH.
+  18:Src/PID.c     **** uint64_t Phase(uint8_t ADC_CH)
+  19:Src/PID.c     **** {
+  84              		.loc 1 19 1 is_stmt 1 view -0
+  85              		.cfi_startproc
+  86              		@ args = 0, pretend = 0, frame = 0
+  87              		@ frame_needed = 0, uses_anonymous_args = 0
+  88              		.loc 1 19 1 is_stmt 0 view .LVU9
+  89 0000 10B5     		push	{r4, lr}
+  90              	.LCFI1:
+  91              		.cfi_def_cfa_offset 8
+  92              		.cfi_offset 4, -8
+  93              		.cfi_offset 14, -4
+  20:Src/PID.c     ****     return 180000 - Voltage(ADC_CH) / 10;
+  94              		.loc 1 20 5 is_stmt 1 view .LVU10
+  95              		.loc 1 20 21 is_stmt 0 view .LVU11
+  96 0002 FFF7FEFF 		bl	Voltage
+  97              	.LVL5:
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s 			page 3
+
+
+  98              		.loc 1 20 37 view .LVU12
+  99 0006 0A22     		movs	r2, #10
+ 100 0008 0023     		movs	r3, #0
+ 101 000a FFF7FEFF 		bl	__aeabi_uldivmod
+ 102              	.LVL6:
+ 103              		.loc 1 20 19 view .LVU13
+ 104 000e 034A     		ldr	r2, .L5
+ 105 0010 0023     		movs	r3, #0
+ 106 0012 121A     		subs	r2, r2, r0
+ 107 0014 8B41     		sbcs	r3, r3, r1
+ 108 0016 1000     		movs	r0, r2
+ 109 0018 1900     		movs	r1, r3
+  21:Src/PID.c     **** };
+ 110              		.loc 1 21 1 view .LVU14
+ 111              		@ sp needed
+ 112 001a 10BD     		pop	{r4, pc}
+ 113              	.L6:
+ 114              		.align	2
+ 115              	.L5:
+ 116 001c 20BF0200 		.word	180000
+ 117              		.cfi_endproc
+ 118              	.LFE285:
+ 120              		.section	.text.Temperature,"ax",%progbits
+ 121              		.align	1
+ 122              		.global	Temperature
+ 123              		.syntax unified
+ 124              		.code	16
+ 125              		.thumb_func
+ 126              		.fpu softvfp
+ 128              	Temperature:
+ 129              	.LVL7:
+ 130              	.LFB286:
+  22:Src/PID.c     **** 
+  23:Src/PID.c     **** //Returns Temperature in [deg C e-3] measured by adc channel ADC_CH.
+  24:Src/PID.c     **** int64_t Temperature(uint8_t ADC_CH)
+  25:Src/PID.c     **** {
+ 131              		.loc 1 25 1 is_stmt 1 view -0
+ 132              		.cfi_startproc
+ 133              		@ args = 0, pretend = 0, frame = 0
+ 134              		@ frame_needed = 0, uses_anonymous_args = 0
+ 135              		.loc 1 25 1 is_stmt 0 view .LVU16
+ 136 0000 10B5     		push	{r4, lr}
+ 137              	.LCFI2:
+ 138              		.cfi_def_cfa_offset 8
+ 139              		.cfi_offset 4, -8
+ 140              		.cfi_offset 14, -4
+  26:Src/PID.c     ****     return -45000000 - 175000000 / 8 + 17500 * Voltage(ADC_T_CH) / 264;
+ 141              		.loc 1 26 5 is_stmt 1 view .LVU17
+ 142              		.loc 1 26 48 is_stmt 0 view .LVU18
+ 143 0002 0720     		movs	r0, #7
+ 144              	.LVL8:
+ 145              		.loc 1 26 48 view .LVU19
+ 146 0004 FFF7FEFF 		bl	Voltage
+ 147              	.LVL9:
+ 148              		.loc 1 26 46 view .LVU20
+ 149 0008 074A     		ldr	r2, .L8
+ 150 000a 0023     		movs	r3, #0
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s 			page 4
+
+
+ 151 000c FFF7FEFF 		bl	__aeabi_lmul
+ 152              	.LVL10:
+ 153              		.loc 1 26 66 view .LVU21
+ 154 0010 8422     		movs	r2, #132
+ 155 0012 5200     		lsls	r2, r2, #1
+ 156 0014 0023     		movs	r3, #0
+ 157 0016 FFF7FEFF 		bl	__aeabi_uldivmod
+ 158              	.LVL11:
+ 159              		.loc 1 26 38 view .LVU22
+ 160 001a 044A     		ldr	r2, .L8+4
+ 161 001c 0123     		movs	r3, #1
+ 162 001e 5B42     		rsbs	r3, r3, #0
+ 163 0020 8018     		adds	r0, r0, r2
+ 164 0022 5941     		adcs	r1, r1, r3
+  27:Src/PID.c     **** };
+ 165              		.loc 1 27 1 view .LVU23
+ 166              		@ sp needed
+ 167 0024 10BD     		pop	{r4, pc}
+ 168              	.L9:
+ 169 0026 C046     		.align	2
+ 170              	.L8:
+ 171 0028 5C440000 		.word	17500
+ 172 002c 889103FC 		.word	-66875000
+ 173              		.cfi_endproc
+ 174              	.LFE286:
+ 176              		.section	.text.Relative_Power,"ax",%progbits
+ 177              		.align	1
+ 178              		.global	Relative_Power
+ 179              		.syntax unified
+ 180              		.code	16
+ 181              		.thumb_func
+ 182              		.fpu softvfp
+ 184              	Relative_Power:
+ 185              	.LVL12:
+ 186              	.LFB287:
+  28:Src/PID.c     **** 
+  29:Src/PID.c     **** //Returns Relative Power in [dB e-3] measured by adc channel ADC_CH.
+  30:Src/PID.c     **** int64_t Relative_Power(uint8_t ADC_CH)
+  31:Src/PID.c     **** {
+ 187              		.loc 1 31 1 is_stmt 1 view -0
+ 188              		.cfi_startproc
+ 189              		@ args = 0, pretend = 0, frame = 0
+ 190              		@ frame_needed = 0, uses_anonymous_args = 0
+ 191              		.loc 1 31 1 is_stmt 0 view .LVU25
+ 192 0000 10B5     		push	{r4, lr}
+ 193              	.LCFI3:
+ 194              		.cfi_def_cfa_offset 8
+ 195              		.cfi_offset 4, -8
+ 196              		.cfi_offset 14, -4
+  32:Src/PID.c     ****     return (Voltage(ADC_CH) / 30) - 30000;
+ 197              		.loc 1 32 5 is_stmt 1 view .LVU26
+ 198              		.loc 1 32 13 is_stmt 0 view .LVU27
+ 199 0002 FFF7FEFF 		bl	Voltage
+ 200              	.LVL13:
+ 201              		.loc 1 32 29 view .LVU28
+ 202 0006 1E22     		movs	r2, #30
+ 203 0008 0023     		movs	r3, #0
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s 			page 5
+
+
+ 204 000a FFF7FEFF 		bl	__aeabi_uldivmod
+ 205              	.LVL14:
+ 206              		.loc 1 32 35 view .LVU29
+ 207 000e 034A     		ldr	r2, .L11
+ 208 0010 0123     		movs	r3, #1
+ 209 0012 5B42     		rsbs	r3, r3, #0
+ 210 0014 8018     		adds	r0, r0, r2
+ 211 0016 5941     		adcs	r1, r1, r3
+  33:Src/PID.c     **** };
+ 212              		.loc 1 33 1 view .LVU30
+ 213              		@ sp needed
+ 214 0018 10BD     		pop	{r4, pc}
+ 215              	.L12:
+ 216 001a C046     		.align	2
+ 217              	.L11:
+ 218 001c D08AFFFF 		.word	-30000
+ 219              		.cfi_endproc
+ 220              	.LFE287:
+ 222              		.global	__aeabi_ldivmod
+ 223              		.section	.text.RMS_Power,"ax",%progbits
+ 224              		.align	1
+ 225              		.global	RMS_Power
+ 226              		.syntax unified
+ 227              		.code	16
+ 228              		.thumb_func
+ 229              		.fpu softvfp
+ 231              	RMS_Power:
+ 232              	.LVL15:
+ 233              	.LFB288:
+  34:Src/PID.c     **** //Returns Power in [dBm  e-3] measured by adc channel ADC_CH.
+  35:Src/PID.c     **** int64_t RMS_Power(uint8_t ADC_CH)
+  36:Src/PID.c     **** {
+ 234              		.loc 1 36 1 is_stmt 1 view -0
+ 235              		.cfi_startproc
+ 236              		@ args = 0, pretend = 0, frame = 128
+ 237              		@ frame_needed = 0, uses_anonymous_args = 0
+ 238              		.loc 1 36 1 is_stmt 0 view .LVU32
+ 239 0000 10B5     		push	{r4, lr}
+ 240              	.LCFI4:
+ 241              		.cfi_def_cfa_offset 8
+ 242              		.cfi_offset 4, -8
+ 243              		.cfi_offset 14, -4
+ 244 0002 A0B0     		sub	sp, sp, #128
+ 245              	.LCFI5:
+ 246              		.cfi_def_cfa_offset 136
+ 247 0004 0400     		movs	r4, r0
+  37:Src/PID.c     ****     const int64_t cal[16] = {0, 0, 0, 0, 399874, 0, 0, 0, 0, 448454, 427524, 0, 0, 0, 0, 408285}; /
+ 248              		.loc 1 37 5 is_stmt 1 view .LVU33
+ 249              		.loc 1 37 19 is_stmt 0 view .LVU34
+ 250 0006 8022     		movs	r2, #128
+ 251 0008 0B49     		ldr	r1, .L14
+ 252 000a 6846     		mov	r0, sp
+ 253              	.LVL16:
+ 254              		.loc 1 37 19 view .LVU35
+ 255 000c FFF7FEFF 		bl	memcpy
+ 256              	.LVL17:
+  38:Src/PID.c     ****     return (int64_t)(Voltage(ADC_CH) - cal[ADC_CH]) / 20 - 65000;
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s 			page 6
+
+
+ 257              		.loc 1 38 5 is_stmt 1 view .LVU36
+ 258              		.loc 1 38 22 is_stmt 0 view .LVU37
+ 259 0010 2000     		movs	r0, r4
+ 260 0012 FFF7FEFF 		bl	Voltage
+ 261              	.LVL18:
+ 262              		.loc 1 38 43 view .LVU38
+ 263 0016 E400     		lsls	r4, r4, #3
+ 264 0018 6C44     		add	r4, r4, sp
+ 265 001a 2268     		ldr	r2, [r4]
+ 266 001c 6368     		ldr	r3, [r4, #4]
+ 267              		.loc 1 38 38 view .LVU39
+ 268 001e 801A     		subs	r0, r0, r2
+ 269 0020 9941     		sbcs	r1, r1, r3
+ 270              		.loc 1 38 53 view .LVU40
+ 271 0022 1422     		movs	r2, #20
+ 272 0024 0023     		movs	r3, #0
+ 273 0026 FFF7FEFF 		bl	__aeabi_ldivmod
+ 274              	.LVL19:
+ 275              		.loc 1 38 58 view .LVU41
+ 276 002a 044A     		ldr	r2, .L14+4
+ 277 002c 0123     		movs	r3, #1
+ 278 002e 5B42     		rsbs	r3, r3, #0
+ 279 0030 8018     		adds	r0, r0, r2
+ 280 0032 5941     		adcs	r1, r1, r3
+  39:Src/PID.c     **** };
+ 281              		.loc 1 39 1 view .LVU42
+ 282 0034 20B0     		add	sp, sp, #128
+ 283              		@ sp needed
+ 284 0036 10BD     		pop	{r4, pc}
+ 285              	.L15:
+ 286              		.align	2
+ 287              	.L14:
+ 288 0038 00000000 		.word	.LC0
+ 289 003c 1802FFFF 		.word	-65000
+ 290              		.cfi_endproc
+ 291              	.LFE288:
+ 293              		.section	.text.PID,"ax",%progbits
+ 294              		.align	1
+ 295              		.global	PID
+ 296              		.syntax unified
+ 297              		.code	16
+ 298              		.thumb_func
+ 299              		.fpu softvfp
+ 301              	PID:
+ 302              	.LFB289:
+  40:Src/PID.c     **** 
+  41:Src/PID.c     **** void PID()
+  42:Src/PID.c     **** {
+ 303              		.loc 1 42 1 is_stmt 1 view -0
+ 304              		.cfi_startproc
+ 305              		@ args = 0, pretend = 0, frame = 0
+ 306              		@ frame_needed = 0, uses_anonymous_args = 0
+ 307              		@ link register save eliminated.
+  43:Src/PID.c     ****     PID352();
+ 308              		.loc 1 43 5 view .LVU44
+  44:Src/PID.c     ****     PID704();
+ 309              		.loc 1 44 5 view .LVU45
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s 			page 7
+
+
+  45:Src/PID.c     **** }
+ 310              		.loc 1 45 1 is_stmt 0 view .LVU46
+ 311              		@ sp needed
+ 312 0000 7047     		bx	lr
+ 313              		.cfi_endproc
+ 314              	.LFE289:
+ 316              		.section	.text.PID352,"ax",%progbits
+ 317              		.align	1
+ 318              		.global	PID352
+ 319              		.syntax unified
+ 320              		.code	16
+ 321              		.thumb_func
+ 322              		.fpu softvfp
+ 324              	PID352:
+ 325              	.LFB290:
+  46:Src/PID.c     **** void PID352()
+  47:Src/PID.c     **** {
+ 326              		.loc 1 47 1 is_stmt 1 view -0
+ 327              		.cfi_startproc
+ 328              		@ args = 0, pretend = 0, frame = 0
+ 329              		@ frame_needed = 0, uses_anonymous_args = 0
+ 330              		@ link register save eliminated.
+  48:Src/PID.c     ****     int P = 1000;
+ 331              		.loc 1 48 5 view .LVU48
+ 332              	.LVL20:
+  49:Src/PID.c     ****     int I = 10000;
+ 333              		.loc 1 49 5 view .LVU49
+  50:Src/PID.c     ****     int T = 1;
+ 334              		.loc 1 50 5 view .LVU50
+  51:Src/PID.c     ****     int output = 0;
+ 335              		.loc 1 51 5 view .LVU51
+  52:Src/PID.c     ****     int P_error = 0;
+ 336              		.loc 1 52 5 view .LVU52
+  53:Src/PID.c     ****     int I_error = 0;
+ 337              		.loc 1 53 5 view .LVU53
+  54:Src/PID.c     **** 
+  55:Src/PID.c     ****     // int PD1 = State.
+  56:Src/PID.c     **** 
+  57:Src/PID.c     ****     // p_Error1 = (-(PD1.value_volts_mean100) +  PD2.value_volts_mean100) - (1.019) # PD1+ PD2+
+  58:Src/PID.c     ****     // i_Error1 = i_Error1 + (p_Error1*dt1)
+  59:Src/PID.c     ****     // if(time.process_time()<36000): PID_output1 = PID_output1 +(Kp1 * p_Error1 +(Ki1 * i_Error1))
+  60:Src/PID.c     ****     // PS704.update(int(PID_output1))
+  61:Src/PID.c     **** }
+ 338              		.loc 1 61 1 is_stmt 0 view .LVU54
+ 339              		@ sp needed
+ 340 0000 7047     		bx	lr
+ 341              		.cfi_endproc
+ 342              	.LFE290:
+ 344              		.section	.text.PID704,"ax",%progbits
+ 345              		.align	1
+ 346              		.global	PID704
+ 347              		.syntax unified
+ 348              		.code	16
+ 349              		.thumb_func
+ 350              		.fpu softvfp
+ 352              	PID704:
+ 353              	.LFB291:
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s 			page 8
+
+
+  62:Src/PID.c     **** void PID704()
+  63:Src/PID.c     **** {
+ 354              		.loc 1 63 1 is_stmt 1 view -0
+ 355              		.cfi_startproc
+ 356              		@ args = 0, pretend = 0, frame = 0
+ 357              		@ frame_needed = 0, uses_anonymous_args = 0
+ 358              		@ link register save eliminated.
+  64:Src/PID.c     ****     int P = 1000;
+ 359              		.loc 1 64 5 view .LVU56
+ 360              	.LVL21:
+  65:Src/PID.c     ****     int I = 10000;
+ 361              		.loc 1 65 5 view .LVU57
+  66:Src/PID.c     ****     int T = 1;
+ 362              		.loc 1 66 5 view .LVU58
+  67:Src/PID.c     ****     int output = 0;
+ 363              		.loc 1 67 5 view .LVU59
+  68:Src/PID.c     ****     int P_error = 0;
+ 364              		.loc 1 68 5 view .LVU60
+  69:Src/PID.c     ****     int I_error = 0;
+ 365              		.loc 1 69 5 view .LVU61
+  70:Src/PID.c     **** }
+ 366              		.loc 1 70 1 is_stmt 0 view .LVU62
+ 367              		@ sp needed
+ 368 0000 7047     		bx	lr
+ 369              		.cfi_endproc
+ 370              	.LFE291:
+ 372              		.section	.rodata
+ 373              		.align	3
+ 374              	.LC0:
+ 375 0000 00000000 		.word	0
+ 376 0004 00000000 		.word	0
+ 377 0008 00000000 		.word	0
+ 378 000c 00000000 		.word	0
+ 379 0010 00000000 		.word	0
+ 380 0014 00000000 		.word	0
+ 381 0018 00000000 		.word	0
+ 382 001c 00000000 		.word	0
+ 383 0020 021A0600 		.word	399874
+ 384 0024 00000000 		.word	0
+ 385 0028 00000000 		.word	0
+ 386 002c 00000000 		.word	0
+ 387 0030 00000000 		.word	0
+ 388 0034 00000000 		.word	0
+ 389 0038 00000000 		.word	0
+ 390 003c 00000000 		.word	0
+ 391 0040 00000000 		.word	0
+ 392 0044 00000000 		.word	0
+ 393 0048 C6D70600 		.word	448454
+ 394 004c 00000000 		.word	0
+ 395 0050 04860600 		.word	427524
+ 396 0054 00000000 		.word	0
+ 397 0058 00000000 		.word	0
+ 398 005c 00000000 		.word	0
+ 399 0060 00000000 		.word	0
+ 400 0064 00000000 		.word	0
+ 401 0068 00000000 		.word	0
+ 402 006c 00000000 		.word	0
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s 			page 9
+
+
+ 403 0070 00000000 		.word	0
+ 404 0074 00000000 		.word	0
+ 405 0078 DD3A0600 		.word	408285
+ 406 007c 00000000 		.word	0
+ 407              		.text
+ 408              	.Letext0:
+ 409              		.file 2 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 410              		.file 3 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 411              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
+ 412              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
+ 413              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+ 414              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+ 415              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
+ 416              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
+ 417              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
+ 418              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
+ 419              		.file 12 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\lock.h"
+ 420              		.file 13 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_types.h"
+ 421              		.file 14 "c:\\gnu tools arm embedded\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\stddef.h"
+ 422              		.file 15 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\reent.h"
+ 423              		.file 16 "Inc/usart.h"
+ 424              		.file 17 "Inc/state.h"
+ 425              		.file 18 "Inc/spi.h"
+ 426              		.file 19 "<built-in>"
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s 			page 10
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 PID.c
+C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s:18     .text.Voltage:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s:26     .text.Voltage:00000000 Voltage
+C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s:67     .text.Voltage:00000024 $d
+C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s:74     .text.Phase:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s:81     .text.Phase:00000000 Phase
+C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s:116    .text.Phase:0000001c $d
+C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s:121    .text.Temperature:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s:128    .text.Temperature:00000000 Temperature
+C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s:171    .text.Temperature:00000028 $d
+C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s:177    .text.Relative_Power:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s:184    .text.Relative_Power:00000000 Relative_Power
+C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s:218    .text.Relative_Power:0000001c $d
+C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s:224    .text.RMS_Power:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s:231    .text.RMS_Power:00000000 RMS_Power
+C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s:288    .text.RMS_Power:00000038 $d
+C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s:294    .text.PID:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s:301    .text.PID:00000000 PID
+C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s:317    .text.PID352:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s:324    .text.PID352:00000000 PID352
+C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s:345    .text.PID704:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s:352    .text.PID704:00000000 PID704
+C:\Users\matil\AppData\Local\Temp\ccDUGgoB.s:373    .rodata:00000000 $d
+
+UNDEFINED SYMBOLS
+__aeabi_lmul
+__aeabi_uldivmod
+State
+__aeabi_ldivmod
+memcpy

@@ -28,27 +28,27 @@ void Filter() //Simple moving average filter for all 16 adc channels
         State.ADC_ValuesFiltered[x] = acc[x] / FilterLength; //calculate average
     }
 
-    State.ADC_Filter_Iteration++;                                       //count filter passes to know
-    State.ADC_Filter_Valid = State.ADC_Filter_Iteration > FilterLength; //when data is not corrupted by initial zeros
+    State.ADC_Filter_Iteration++;                                                                 //count filter passes to know
+    State.ADC_Filter_Valid = State.ADC_Filter_Iteration > FilterLength || State.ADC_Filter_Valid; //when data is not corrupted by initial zeros
 
-    //Output:                                                 //Uncomment to test
-    SERIAL_WRITE("Filtered:\n");                              //
-    for (int x = 0; x < 16; x++)                              //
-    {                                                         //
-        SERIAL_WRITE("%u\t", State.ADC_ValuesFiltered[x])     //
-    }                                                         //
-    SERIAL_WRITE("\nRaw:\n");                                 //
-    for (int x = 0; x < 16; x++)                              //
-    {                                                         //
-        SERIAL_WRITE("%u\t", State.ADC_Values[x])             //
-    }                                                         //
-    if (State.ADC_Filter_Valid)                               //
-    {                                                         //
-        SERIAL_WRITE("\n");                                   //
-        SERIAL_WRITE("\n");                                   //
-    }                                                         //
-    else                                                      //
-    {                                                         //
-        SERIAL_WRITE("\nFilter contains initial zeros!\n\n"); //
-    }                                                         //
+    // //Output:                                                 //Uncomment to test
+    // SERIAL_WRITE("Filtered:\n");                              //
+    // for (int x = 0; x < 16; x++)                              //
+    // {                                                         //
+    //     SERIAL_WRITE("%u\t", State.ADC_ValuesFiltered[x])     //
+    // }                                                         //
+    // SERIAL_WRITE("\nRaw:\n");                                 //
+    // for (int x = 0; x < 16; x++)                              //
+    // {                                                         //
+    //     SERIAL_WRITE("%u\t", State.ADC_Values[x])             //
+    // }                                                         //
+    // if (State.ADC_Filter_Valid)                               //
+    // {                                                         //
+    //     SERIAL_WRITE("\n");                                   //
+    //     SERIAL_WRITE("\n");                                   //
+    // }                                                         //
+    // else                                                      //
+    // {                                                         //
+    //     SERIAL_WRITE("\nFilter contains initial zeros!\n\n"); //
+    // }                                                         //
 }

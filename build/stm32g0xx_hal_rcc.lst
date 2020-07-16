@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
   30:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****           (if the application needs higher frequency/performance)
   31:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****       (+) Configure the System clock frequency and Flash settings
   32:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****       (+) Configure the AHB and APB busses prescalers
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 2
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 2
 
 
   33:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****       (+) Enable the clock for the peripheral(s) to be used
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
   87:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** #define MCO1_GPIO_PORT        GPIOA
   88:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** #define MCO1_PIN              GPIO_PIN_8
   89:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 3
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 3
 
 
   90:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** #define RCC_PLL_OSCSOURCE_CONFIG(__HAL_RCC_PLLSOURCE__) \
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  144:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****              exception vector.
  145:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** 
  146:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****          (+) MCO (microcontroller clock output): used to output LSI, HSI, LSE, HSE or
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 4
 
 
  147:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****              main PLL clock (through a configurable prescaler) on PA8 pin.
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  201:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   *            - CSS, MCO1 OFF
  202:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   *            - All interrupts disabled
  203:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   * @note   This function does not modify the configuration of the
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 5
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 5
 
 
  204:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   *            - Peripheral clocks
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
   63              		.loc 1 221 10 is_stmt 0 view .LVU10
   64 001c FFF7FEFF 		bl	HAL_GetTick
   65              	.LVL3:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 6
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 6
 
 
   66              		.loc 1 221 24 view .LVU11
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  268:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** 
  269:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   /* Clear all flags */
  270:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   RCC->CICR = 0xFFFFFFFFu;
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 7
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 7
 
 
  271:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  237:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   {
  105              		.loc 1 237 9 view .LVU25
  106 0042 1A42     		tst	r2, r3
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 8
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 8
 
 
  107 0044 07D0     		beq	.L13
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  145              		.loc 1 257 5 is_stmt 1 view .LVU41
  257:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****     {
  146              		.loc 1 257 10 is_stmt 0 view .LVU42
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 9
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 9
 
 
  147 006c FFF7FEFF 		bl	HAL_GetTick
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  186              		.loc 1 278 12 view .LVU57
  187 009c 0120     		movs	r0, #1
  188 009e C3E7     		b	.L3
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 10
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 10
 
 
  189              	.L16:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  227              		.loc 1 302 3 is_stmt 1 view .LVU60
  303:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   uint32_t temp_sysclksrc;
  228              		.loc 1 303 3 view .LVU61
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 11
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 11
 
 
  304:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   uint32_t temp_pllckcfg;
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  261              	.L20:
  262              		.loc 1 325 88 discriminator 3 view .LVU77
  263 0022 082B     		cmp	r3, #8
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 12
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 12
 
 
  264 0024 26D0     		beq	.L21
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  339:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****       {
  340:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****         /* Get Start Tick*/
  341:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****         tickstart = HAL_GetTick();
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 13
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 13
 
 
  305              		.loc 1 341 9 is_stmt 1 view .LVU89
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  347 0078 9B03     		lsls	r3, r3, #14
  348 007a 03D5     		bpl	.L19
  327:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****       {
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 14
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 14
 
 
  349              		.loc 1 327 52 discriminator 1 view .LVU107
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  373              		.loc 1 378 5 is_stmt 1 view .LVU116
  374              		.loc 1 378 21 is_stmt 0 view .LVU117
  375 0092 D168     		ldr	r1, [r2, #12]
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 15
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 15
 
 
  376              		.loc 1 378 19 view .LVU118
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  416              		.loc 1 392 9 is_stmt 1 view .LVU129
  417              		.loc 1 392 12 is_stmt 0 view .LVU130
  418 00c0 002B     		cmp	r3, #0
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 16
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 16
 
 
  419 00c2 0DD1     		bne	.L36
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  411:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****       if (RCC_OscInitStruct->HSIState != RCC_HSI_OFF)
  412:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****       {
  413:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****         /* Configure the HSI16 division factor */
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 17
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 17
 
 
  414:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****         __HAL_RCC_HSI_CONFIG(RCC_OscInitStruct->HSIDiv);
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  460:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****     if (__HAL_RCC_GET_SYSCLK_SOURCE() == RCC_CFGR_SWS_LSI)
  463              		.loc 1 460 5 view .LVU144
  464              		.loc 1 460 9 is_stmt 0 view .LVU145
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 18
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 18
 
 
  465 00f6 884B     		ldr	r3, .L117
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  499 0120 6BD4     		bmi	.L42
  481:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****         {
  482:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****           if ((HAL_GetTick() - tickstart) > LSI_TIMEOUT_VALUE)
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 19
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 19
 
 
  500              		.loc 1 482 11 is_stmt 1 view .LVU156
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  545 0156 FFF7FEFF 		bl	HAL_GetTick
  546              	.LVL39:
  355:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 20
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 20
 
 
  547              		.loc 1 355 21 view .LVU168
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  586              		.loc 1 414 9 is_stmt 1 view .LVU183
  587 017e 664A     		ldr	r2, .L117
  588              	.LVL44:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 21
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 21
 
 
  414:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** 
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  629 01ae 0320     		movs	r0, #3
  427:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****           }
  630              		.loc 1 427 20 view .LVU198
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 22
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 22
 
 
  631 01b0 61E1     		b	.L18
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  673              	.LVL54:
  445:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****           {
  674              		.loc 1 445 30 view .LVU211
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 23
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 23
 
 
  675 01e0 401B     		subs	r0, r0, r5
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  508:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   if (((RCC_OscInitStruct->OscillatorType) & RCC_OSCILLATORTYPE_LSE) == RCC_OSCILLATORTYPE_LSE)
  699              		.loc 1 508 3 is_stmt 1 view .LVU219
  700              		.loc 1 508 6 is_stmt 0 view .LVU220
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 24
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 24
 
 
  701 01fa 2368     		ldr	r3, [r4]
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  734 021e 0143     		orrs	r1, r0
  735 0220 D163     		str	r1, [r2, #60]
  736              		.loc 1 529 9 view .LVU232
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 25
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 25
 
 
  737 0222 D36B     		ldr	r3, [r2, #60]
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  769 0242 0121     		movs	r1, #1
  770 0244 8A43     		bics	r2, r1
  771 0246 DA65     		str	r2, [r3, #92]
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 26
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 26
 
 
  772              		.loc 1 551 7 discriminator 5 view .LVU244
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  813              	.L44:
  814              		.loc 1 564 20 view .LVU259
  815              	.LBE4:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 27
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 27
 
 
  491:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** 
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  518:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****       {
  856              		.loc 1 518 10 view .LVU274
  857 029e 9B07     		lsls	r3, r3, #30
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 28
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 28
 
 
  858 02a0 52D5     		bpl	.L49
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  899 02ce 801B     		subs	r0, r0, r6
  543:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****           {
  900              		.loc 1 543 14 view .LVU288
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 29
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 29
 
 
  901 02d0 0228     		cmp	r0, #2
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  941              		.loc 1 574 15 view .LVU298
  942 0302 9B07     		lsls	r3, r3, #30
  943 0304 1ED5     		bpl	.L61
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 30
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 30
 
 
  575:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****         {
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  980              		.loc 1 592 3 is_stmt 1 view .LVU307
  593:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** 
  594:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   if (RCC_OscInitStruct->PLL.PLLState != RCC_PLL_NONE)
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 31
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 31
 
 
  981              		.loc 1 594 3 view .LVU308
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  628:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****                              RCC_OscInitStruct->PLL.PLLM,
  629:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****                              RCC_OscInitStruct->PLL.PLLN,
  630:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****                              RCC_OscInitStruct->PLL.PLLP,
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 32
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 32
 
 
  631:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** #if defined(RCC_PLLQ_SUPPORT)
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  669:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****         tickstart = HAL_GetTick();
  1018              		.loc 1 669 9 view .LVU319
  1019              		.loc 1 669 21 is_stmt 0 view .LVU320
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 33
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 33
 
 
  1020 037a FFF7FEFF 		bl	HAL_GetTick
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  605:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** #if defined(RCC_PLLQ_SUPPORT)
  1062              		.loc 1 605 9 view .LVU335
  607:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** #endif
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 34
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 34
 
 
  1063              		.loc 1 607 9 view .LVU336
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  1103 03ce 1940     		ands	r1, r3
  1104 03d0 236A     		ldr	r3, [r4, #32]
  1105 03d2 606A     		ldr	r0, [r4, #36]
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 35
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 35
 
 
  1106 03d4 0343     		orrs	r3, r0
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  1149              		.loc 1 648 30 view .LVU361
  1150 0412 001B     		subs	r0, r0, r4
  648:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****           {
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 36
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 36
 
 
  1151              		.loc 1 648 14 view .LVU362
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  1171              		.loc 1 691 9 is_stmt 1 view .LVU368
  691:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****         if((READ_BIT(temp_pllckcfg, RCC_PLLCFGR_PLLSRC) != RCC_OscInitStruct->PLL.PLLSource) ||
  1172              		.loc 1 691 23 is_stmt 0 view .LVU369
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 37
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 37
 
 
  1173 0428 204B     		ldr	r3, .L119
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  1215 0462 8B42     		cmp	r3, r1
  1216 0464 1DD1     		bne	.L97
  699:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****         {
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 38
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 38
 
 
  1217              		.loc 1 699 13 view .LVU382
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  1261              	.L88:
  706:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** }
  1262              		.loc 1 706 10 view .LVU394
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 39
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 39
 
 
  1263 048a 0020     		movs	r0, #0
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  711:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   *         parameters in the RCC_ClkInitStruct.
  712:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   * @param  RCC_ClkInitStruct  pointer to a @ref RCC_ClkInitTypeDef structure that
  713:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   *         contains the configuration information for the RCC peripheral.
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 40
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 40
 
 
  714:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   * @param  FLatency  FLASH Latency
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  768:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****     /* Program the new number of wait states to the LATENCY bits in the FLASH_ACR register */
  769:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****     __HAL_FLASH_SET_LATENCY(FLatency);
  770:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 41
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 41
 
 
  771:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****     /* Check that the new number of wait states is taken into account to access the Flash
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  825:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****       /* Check the HSI ready flag */
  826:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****       if (READ_BIT(RCC->CR, RCC_CR_HSIRDY) == 0U)
  827:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****       {
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 42
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 42
 
 
  828:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****         return HAL_ERROR;
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  882:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   /*-------------------------- PCLK1 Configuration ---------------------------*/
  883:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   if (((RCC_ClkInitStruct->ClockType) & RCC_CLOCKTYPE_PCLK1) == RCC_CLOCKTYPE_PCLK1)
  884:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   {
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 43
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 43
 
 
  885:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****     assert_param(IS_RCC_PCLK(RCC_ClkInitStruct->APB1CLKDivider));
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  939:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   *            @arg @ref RCC_MCODIV_16  division by 16 applied to MCO clock
  940:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   *            @arg @ref RCC_MCODIV_32  division by 32 applied to MCO clock
  941:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   *            @arg @ref RCC_MCODIV_64  division by 64 applied to MCO clock
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 44
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 44
 
 
  942:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   *            @arg @ref RCC_MCODIV_128  division by 128 applied to MCO clock
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  1350              		.loc 1 958 3 view .LVU410
  1351 0018 009B     		ldr	r3, [sp]
  1352              	.LBE8:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 45
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 45
 
 
  1353              		.loc 1 958 3 view .LVU411
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  1395              		@ sp needed
  1396              	.LVL104:
  1397              		.loc 1 970 1 view .LVU428
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 46
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 46
 
 
  1398 0046 70BD     		pop	{r4, r5, r6, pc}
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
 1007:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   */
 1008:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** uint32_t HAL_RCC_GetSysClockFreq(void)
 1009:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** {
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 47
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 47
 
 
  1418              		.loc 1 1009 1 is_stmt 1 view -0
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
 1030:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****     /* PLL_VCO = ((HSE_VALUE or HSI_VALUE)/ PLLM) * PLLN
 1031:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****     SYSCLK = PLL_VCO / PLLR
 1032:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****     */
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 48
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 48
 
 
 1033:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****     pllsource = (RCC->PLLCFGR & RCC_PLLCFGR_PLLSRC);
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  1467 0028 204B     		ldr	r3, .L136
  1468 002a 9A68     		ldr	r2, [r3, #8]
  1469 002c 3823     		movs	r3, #56
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 49
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 49
 
 
  1470 002e 1340     		ands	r3, r2
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  1509              		.loc 1 1034 17 is_stmt 0 view .LVU460
  1510 0058 D268     		ldr	r2, [r2, #12]
 1034:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 50
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 50
 
 
  1511              		.loc 1 1034 47 view .LVU461
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
 1048:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   }
  1551              		.loc 1 1048 18 view .LVU476
  1552 0084 C9E7     		b	.L124
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 51
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 51
 
 
  1553              	.LVL115:
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  1599              		.syntax unified
  1600              		.code	16
  1601              		.thumb_func
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 52
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 52
 
 
  1602              		.fpu softvfp
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  1644              		.loc 1 785 6 view .LVU498
  1645 001a 9A07     		lsls	r2, r3, #30
  1646 001c 0ED5     		bpl	.L143
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 53
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 53
 
 
  789:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****     {
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  1686              		.loc 1 823 13 is_stmt 0 view .LVU513
  1687 004c 002B     		cmp	r3, #0
  1688 004e 3FD1     		bne	.L149
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 54
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 54
 
 
  826:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****       {
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  777:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****       {
  1729              		.loc 1 777 7 is_stmt 1 view .LVU528
  777:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****       {
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 55
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 55
 
 
  1730              		.loc 1 777 12 is_stmt 0 view .LVU529
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  1772 00aa 1A40     		ands	r2, r3
  854:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****     {
  1773              		.loc 1 854 78 view .LVU542
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 56
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 56
 
 
  1774 00ac 6368     		ldr	r3, [r4, #4]
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  1813              		.loc 1 844 10 view .LVU557
  1814 00d8 9207     		lsls	r2, r2, #30
  1815 00da DAD4     		bmi	.L147
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 57
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 57
 
 
  846:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****       }
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  890:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** 
  1857              		.loc 1 890 22 is_stmt 0 view .LVU571
  1858 010c FFF7FEFF 		bl	HAL_RCC_GetSysClockFreq
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 58
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 58
 
 
  1859              	.LVL131:
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  1901              		.loc 1 871 5 view .LVU583
  871:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** 
  1902              		.loc 1 871 17 is_stmt 0 view .LVU584
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 59
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 59
 
 
  1903 0140 FFF7FEFF 		bl	HAL_GetTick
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  1944              	.L173:
  1945 016a C046     		.align	2
  1946              	.L172:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 60
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 60
 
 
  1947 016c 00200240 		.word	1073881088
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  1991              		.code	16
  1992              		.thumb_func
  1993              		.fpu softvfp
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 61
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 61
 
 
  1995              	HAL_RCC_GetPCLK1Freq:
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
   26:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** #endif
   27:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** 
   28:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** /* Includes ------------------------------------------------------------------*/
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 62
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 62
 
 
   29:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** #include "stm32g0xx.h"
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
   83:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** /**
   84:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   * @}
   85:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   */
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 63
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 63
 
 
   86:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** 
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  140:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** /** @defgroup RCC_LL_EC_GET_FLAG Get Flags Defines
  141:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   * @brief    Flags defines which can be used with LL_RCC_ReadReg function
  142:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   * @{
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 64
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 64
 
 
  143:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   */
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  197:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   */
  198:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** #define LL_RCC_SYS_CLKSOURCE_HSI           0x00000000U                        /*!< HSI selection as
  199:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** #define LL_RCC_SYS_CLKSOURCE_HSE           RCC_CFGR_SW_0                      /*!< HSE selection as
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 65
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 65
 
 
  200:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** #define LL_RCC_SYS_CLKSOURCE_PLL           RCC_CFGR_SW_1                      /*!< PLL selection as
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  254:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** #define LL_RCC_HSI_DIV_16                 RCC_CR_HSIDIV_2                            /*!< HSI divid
  255:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** #define LL_RCC_HSI_DIV_32                 (RCC_CR_HSIDIV_2 | RCC_CR_HSIDIV_0)        /*!< HSI divid
  256:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** #define LL_RCC_HSI_DIV_64                 (RCC_CR_HSIDIV_2 | RCC_CR_HSIDIV_1)        /*!< HSI divid
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 66
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 66
 
 
  257:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** #define LL_RCC_HSI_DIV_128                RCC_CR_HSIDIV                              /*!< HSI divid
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  311:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** #define LL_RCC_USART2_CLKSOURCE_HSI        ((RCC_CCIPR_USART2SEL << 16U) | RCC_CCIPR_USART2SEL_1)  
  312:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** #define LL_RCC_USART2_CLKSOURCE_LSE        ((RCC_CCIPR_USART2SEL << 16U) | RCC_CCIPR_USART2SEL)    
  313:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** /**
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 67
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 67
 
 
  314:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   * @}
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  368:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** #define LL_RCC_TIM15_CLKSOURCE_PCLK1       (RCC_CCIPR_TIM15SEL  | (0x00000000U >> 16U))          /*
  369:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** #define LL_RCC_TIM15_CLKSOURCE_PLL         (RCC_CCIPR_TIM15SEL  | (RCC_CCIPR_TIM15SEL >> 16U))   /*
  370:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** /**
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 68
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 68
 
 
  371:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   * @}
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  425:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** /**
  426:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   * @}
  427:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   */
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 69
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 69
 
 
  428:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** #endif /* RNG */
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  482:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** #endif /* RCC_CCIPR_TIM15SEL */
  483:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** /**
  484:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   * @}
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 70
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 70
 
 
  485:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   */
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  539:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** #define LL_RCC_RTC_CLKSOURCE_LSE           RCC_BDCR_RTCSEL_0       /*!< LSE oscillator clock used a
  540:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** #define LL_RCC_RTC_CLKSOURCE_LSI           RCC_BDCR_RTCSEL_1       /*!< LSI oscillator clock used a
  541:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** #define LL_RCC_RTC_CLKSOURCE_HSE_DIV32     RCC_BDCR_RTCSEL         /*!< HSE oscillator clock divide
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 71
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 71
 
 
  542:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** /**
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  596:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** #define LL_RCC_PLLP_DIV_9                  (RCC_PLLCFGR_PLLP_3)                                    
  597:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** #define LL_RCC_PLLP_DIV_10                 (RCC_PLLCFGR_PLLP_0|RCC_PLLCFGR_PLLP_3)                 
  598:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** #define LL_RCC_PLLP_DIV_11                 (RCC_PLLCFGR_PLLP_1|RCC_PLLCFGR_PLLP_3)                 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 72
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 72
 
 
  599:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** #define LL_RCC_PLLP_DIV_12                 (RCC_PLLCFGR_PLLP_0|RCC_PLLCFGR_PLLP_1|RCC_PLLCFGR_PLLP_
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  653:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** /**
  654:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   * @brief  Write a value in RCC register
  655:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   * @param  __REG__ Register to be written
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 73
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 73
 
 
  656:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   * @param  __VALUE__ Value to be written in the register
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  710:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_2
  711:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_3
  712:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_4
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 74
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 74
 
 
  713:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_5
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  767:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_7
  768:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLM_DIV_8
  769:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   * @param  __PLLN__ Between Min_Data = 8 and Max_Data = 86
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 75
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 75
 
 
  770:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   * @param  __PLLP__ This parameter can be one of the following values:
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  824:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLQ_DIV_2
  825:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLQ_DIV_3
  826:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLQ_DIV_4
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 76
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 76
 
 
  827:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLQ_DIV_5
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  881:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   * @param  __PLLQ__ This parameter can be one of the following values:
  882:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLQ_DIV_2
  883:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLQ_DIV_3
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 77
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 77
 
 
  884:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   *         @arg @ref LL_RCC_PLLQ_DIV_4
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  938:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   */
  939:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** #define __LL_RCC_CALC_HSI_FREQ(__HSIDIV__) (HSI_VALUE / (1U << ((__HSIDIV__)>> RCC_CR_HSIDIV_Pos)))
  940:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 78
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 78
 
 
  941:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** /**
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  995:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   SET_BIT(RCC->CR, RCC_CR_HSEON);
  996:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** }
  997:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 79
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 79
 
 
  998:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** /**
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
 1052:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** __STATIC_INLINE uint32_t LL_RCC_HSI_IsEnabledInStopMode(void)
 1053:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** {
 1054:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   return ((READ_BIT(RCC->CR, RCC_CR_HSIKERON) == (RCC_CR_HSIKERON)) ? 1UL : 0UL);
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 80
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 80
 
 
 1055:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** }
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
 1109:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** {
 1110:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   MODIFY_REG(RCC->ICSCR, RCC_ICSCR_HSITRIM, Value << RCC_ICSCR_HSITRIM_Pos);
 1111:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** }
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 81
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 81
 
 
 1112:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** 
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
 1166:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** __STATIC_INLINE void LL_RCC_LSE_DisableBypass(void)
 1167:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** {
 1168:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   CLEAR_BIT(RCC->BDCR, RCC_BDCR_LSEBYP);
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 82
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 82
 
 
 1169:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** }
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
 1223:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** /**
 1224:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   * @brief  Check if LSE oscillator Ready
 1225:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   * @rmtoll BDCR         LSERDY        LL_RCC_LSE_IsReady
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 83
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 83
 
 
 1226:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   * @retval State of bit (1 or 0).
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
 1280:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** 
 1281:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** /**
 1282:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   * @}
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 84
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 84
 
 
 1283:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   */
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
 1337:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** 
 1338:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h **** /** @defgroup RCC_LL_EF_System System
 1339:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   * @{
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 85
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 85
 
 
 1340:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   */
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
 1394:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   * @brief  Set APB1 prescaler
 1395:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   * @rmtoll CFGR         PPRE         LL_RCC_SetAPB1Prescaler
 1396:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   * @param  Prescaler This parameter can be one of the following values:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 86
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 86
 
 
 1397:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   *         @arg @ref LL_RCC_APB1_DIV_1
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
 1451:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   * @retval Returned value can be one of the following values:
 1452:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   *         @arg @ref LL_RCC_APB1_DIV_1
 1453:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   *         @arg @ref LL_RCC_APB1_DIV_2
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 87
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 87
 
 
 1454:Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_rcc.h ****   *         @arg @ref LL_RCC_APB1_DIV_4
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
 1099:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   */
 1100:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** void HAL_RCC_GetOscConfig(RCC_OscInitTypeDef  *RCC_OscInitStruct)
 1101:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** {
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 88
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 88
 
 
  2054              		.loc 1 1101 1 is_stmt 1 view -0
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
 1126:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****     RCC_OscInitStruct->HSIState = RCC_HSI_ON;
  2084              		.loc 1 1126 5 is_stmt 1 view .LVU623
  2085              		.loc 1 1126 33 is_stmt 0 view .LVU624
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 89
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 89
 
 
  2086 001a 8023     		movs	r3, #128
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
 1147:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****     RCC_OscInitStruct->LSEState = RCC_LSE_OFF;
 1148:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   }
 1149:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 90
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 90
 
 
 1150:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   /* Get the LSI configuration -----------------------------------------------*/
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
 1171:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   RCC_OscInitStruct->PLL.PLLM = (RCC->PLLCFGR & RCC_PLLCFGR_PLLM);
  2153              		.loc 1 1171 3 is_stmt 1 view .LVU652
  2154              		.loc 1 1171 37 is_stmt 0 view .LVU653
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 91
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 91
 
 
  2155 0062 D968     		ldr	r1, [r3, #12]
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
 1114:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   {
  2201              		.loc 1 1114 16 is_stmt 0 view .LVU674
  2202 0092 0F4B     		ldr	r3, .L193
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 92
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 92
 
 
  2203 0094 1B68     		ldr	r3, [r3]
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  2243 00c0 BEE7     		b	.L187
  2244              	.L189:
 1157:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   }
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 93
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 93
 
 
  2245              		.loc 1 1157 5 is_stmt 1 view .LVU689
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  2285              		.loc 1 1191 3 is_stmt 1 view .LVU695
 1192:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   assert_param(pFLatency != (void *)NULL);
  2286              		.loc 1 1192 3 view .LVU696
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 94
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 94
 
 
 1193:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** 
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
 1209:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** }
  2325              		.loc 1 1209 1 view .LVU715
  2326              		@ sp needed
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 95
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 95
 
 
  2327 002a 30BD     		pop	{r4, r5, pc}
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  2369              		.align	1
  2370              		.global	HAL_RCC_EnableLSECSS
  2371              		.syntax unified
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 96
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 96
 
 
  2372              		.code	16
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
 1245:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   * @note   The Clock Security System can only be cleared by reset otherwise.
 1246:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   * @retval None
 1247:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   */
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 97
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 97
 
 
 1248:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c **** void HAL_RCC_DisableLSECSS(void)
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
 1273:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   if ((itflag & RCC_CIFR_LSECSSF) != 0x00u)
 1274:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   {
 1275:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****     /* RCC Clock Security System interrupt user callback */
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 98
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 98
 
 
 1276:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****     HAL_RCC_LSECSSCallback();
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  2472              		.section	.text.HAL_RCC_NMI_IRQHandler,"ax",%progbits
  2473              		.align	1
  2474              		.global	HAL_RCC_NMI_IRQHandler
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 99
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 99
 
 
  2475              		.syntax unified
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  2518              	.LVL147:
  2519              	.L212:
 1269:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.c ****   }
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 100
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 100
 
 
  2520              		.loc 1 1269 5 is_stmt 1 view .LVU741
@@ -5971,56 +5971,56 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 1
  2546              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
  2547              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
  2548              		.file 12 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 101
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 101
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g0xx_hal_rcc.c
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:16     .text.HAL_RCC_DeInit:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:24     .text.HAL_RCC_DeInit:00000000 HAL_RCC_DeInit
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:192    .text.HAL_RCC_DeInit:000000a0 $d
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:201    .text.HAL_RCC_OscConfig:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:208    .text.HAL_RCC_OscConfig:00000000 HAL_RCC_OscConfig
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:960    .text.HAL_RCC_OscConfig:00000318 $d
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:974    .text.HAL_RCC_OscConfig:00000344 $t
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:1294   .text.HAL_RCC_OscConfig:000004ac $d
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:1303   .text.HAL_RCC_MCOConfig:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:1310   .text.HAL_RCC_MCOConfig:00000000 HAL_RCC_MCOConfig
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:1402   .text.HAL_RCC_MCOConfig:00000048 $d
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:1409   .text.HAL_RCC_GetSysClockFreq:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:1416   .text.HAL_RCC_GetSysClockFreq:00000000 HAL_RCC_GetSysClockFreq
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:1590   .text.HAL_RCC_GetSysClockFreq:000000ac $d
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:1597   .text.HAL_RCC_ClockConfig:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:1604   .text.HAL_RCC_ClockConfig:00000000 HAL_RCC_ClockConfig
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:1947   .text.HAL_RCC_ClockConfig:0000016c $d
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:1959   .text.HAL_RCC_GetHCLKFreq:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:1966   .text.HAL_RCC_GetHCLKFreq:00000000 HAL_RCC_GetHCLKFreq
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:1983   .text.HAL_RCC_GetHCLKFreq:00000008 $d
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:1988   .text.HAL_RCC_GetPCLK1Freq:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:1995   .text.HAL_RCC_GetPCLK1Freq:00000000 HAL_RCC_GetPCLK1Freq
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:2038   .text.HAL_RCC_GetPCLK1Freq:00000020 $d
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:2044   .text.HAL_RCC_GetOscConfig:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:2051   .text.HAL_RCC_GetOscConfig:00000000 HAL_RCC_GetOscConfig
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:2259   .text.HAL_RCC_GetOscConfig:000000d0 $d
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:2264   .text.HAL_RCC_GetClockConfig:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:2271   .text.HAL_RCC_GetClockConfig:00000000 HAL_RCC_GetClockConfig
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:2331   .text.HAL_RCC_GetClockConfig:0000002c $d
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:2337   .text.HAL_RCC_EnableCSS:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:2344   .text.HAL_RCC_EnableCSS:00000000 HAL_RCC_EnableCSS
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:2364   .text.HAL_RCC_EnableCSS:00000010 $d
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:2369   .text.HAL_RCC_EnableLSECSS:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:2376   .text.HAL_RCC_EnableLSECSS:00000000 HAL_RCC_EnableLSECSS
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:2395   .text.HAL_RCC_EnableLSECSS:0000000c $d
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:2400   .text.HAL_RCC_DisableLSECSS:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:2407   .text.HAL_RCC_DisableLSECSS:00000000 HAL_RCC_DisableLSECSS
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:2426   .text.HAL_RCC_DisableLSECSS:0000000c $d
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:2431   .text.HAL_RCC_CSSCallback:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:2438   .text.HAL_RCC_CSSCallback:00000000 HAL_RCC_CSSCallback
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:2452   .text.HAL_RCC_LSECSSCallback:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:2459   .text.HAL_RCC_LSECSSCallback:00000000 HAL_RCC_LSECSSCallback
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:2473   .text.HAL_RCC_NMI_IRQHandler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:2480   .text.HAL_RCC_NMI_IRQHandler:00000000 HAL_RCC_NMI_IRQHandler
-C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s:2533   .text.HAL_RCC_NMI_IRQHandler:00000024 $d
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:16     .text.HAL_RCC_DeInit:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:24     .text.HAL_RCC_DeInit:00000000 HAL_RCC_DeInit
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:192    .text.HAL_RCC_DeInit:000000a0 $d
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:201    .text.HAL_RCC_OscConfig:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:208    .text.HAL_RCC_OscConfig:00000000 HAL_RCC_OscConfig
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:960    .text.HAL_RCC_OscConfig:00000318 $d
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:974    .text.HAL_RCC_OscConfig:00000344 $t
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:1294   .text.HAL_RCC_OscConfig:000004ac $d
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:1303   .text.HAL_RCC_MCOConfig:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:1310   .text.HAL_RCC_MCOConfig:00000000 HAL_RCC_MCOConfig
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:1402   .text.HAL_RCC_MCOConfig:00000048 $d
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:1409   .text.HAL_RCC_GetSysClockFreq:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:1416   .text.HAL_RCC_GetSysClockFreq:00000000 HAL_RCC_GetSysClockFreq
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:1590   .text.HAL_RCC_GetSysClockFreq:000000ac $d
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:1597   .text.HAL_RCC_ClockConfig:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:1604   .text.HAL_RCC_ClockConfig:00000000 HAL_RCC_ClockConfig
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:1947   .text.HAL_RCC_ClockConfig:0000016c $d
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:1959   .text.HAL_RCC_GetHCLKFreq:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:1966   .text.HAL_RCC_GetHCLKFreq:00000000 HAL_RCC_GetHCLKFreq
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:1983   .text.HAL_RCC_GetHCLKFreq:00000008 $d
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:1988   .text.HAL_RCC_GetPCLK1Freq:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:1995   .text.HAL_RCC_GetPCLK1Freq:00000000 HAL_RCC_GetPCLK1Freq
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:2038   .text.HAL_RCC_GetPCLK1Freq:00000020 $d
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:2044   .text.HAL_RCC_GetOscConfig:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:2051   .text.HAL_RCC_GetOscConfig:00000000 HAL_RCC_GetOscConfig
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:2259   .text.HAL_RCC_GetOscConfig:000000d0 $d
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:2264   .text.HAL_RCC_GetClockConfig:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:2271   .text.HAL_RCC_GetClockConfig:00000000 HAL_RCC_GetClockConfig
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:2331   .text.HAL_RCC_GetClockConfig:0000002c $d
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:2337   .text.HAL_RCC_EnableCSS:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:2344   .text.HAL_RCC_EnableCSS:00000000 HAL_RCC_EnableCSS
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:2364   .text.HAL_RCC_EnableCSS:00000010 $d
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:2369   .text.HAL_RCC_EnableLSECSS:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:2376   .text.HAL_RCC_EnableLSECSS:00000000 HAL_RCC_EnableLSECSS
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:2395   .text.HAL_RCC_EnableLSECSS:0000000c $d
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:2400   .text.HAL_RCC_DisableLSECSS:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:2407   .text.HAL_RCC_DisableLSECSS:00000000 HAL_RCC_DisableLSECSS
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:2426   .text.HAL_RCC_DisableLSECSS:0000000c $d
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:2431   .text.HAL_RCC_CSSCallback:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:2438   .text.HAL_RCC_CSSCallback:00000000 HAL_RCC_CSSCallback
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:2452   .text.HAL_RCC_LSECSSCallback:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:2459   .text.HAL_RCC_LSECSSCallback:00000000 HAL_RCC_LSECSSCallback
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:2473   .text.HAL_RCC_NMI_IRQHandler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:2480   .text.HAL_RCC_NMI_IRQHandler:00000000 HAL_RCC_NMI_IRQHandler
+C:\Users\matil\AppData\Local\Temp\cc80sydI.s:2533   .text.HAL_RCC_NMI_IRQHandler:00000024 $d
 
 UNDEFINED SYMBOLS
 HAL_GetTick
@@ -6031,6 +6031,6 @@ HAL_GPIO_Init
 __aeabi_uidiv
 AHBPrescTable
 APBPrescTable
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccrkmlv9.s 			page 102
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc80sydI.s 			page 102
 
 

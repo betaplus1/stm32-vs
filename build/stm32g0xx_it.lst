@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 1
   30:Src/stm32g0xx_it.c **** /* Private typedef -----------------------------------------------------------*/
   31:Src/stm32g0xx_it.c **** /* USER CODE BEGIN TD */
   32:Src/stm32g0xx_it.c **** 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 2
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s 			page 2
 
 
   33:Src/stm32g0xx_it.c **** /* USER CODE END TD */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 1
   82:Src/stm32g0xx_it.c **** 
   83:Src/stm32g0xx_it.c ****   /* USER CODE END NonMaskableInt_IRQn 1 */
   84:Src/stm32g0xx_it.c **** }
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 3
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s 			page 3
 
 
   32              		.loc 1 84 1 view .LVU1
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 1
  102:Src/stm32g0xx_it.c ****   * @brief This function handles System service call via SWI instruction.
  103:Src/stm32g0xx_it.c ****   */
  104:Src/stm32g0xx_it.c **** void SVC_Handler(void)
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s 			page 4
 
 
  105:Src/stm32g0xx_it.c **** {
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 1
  108              		.code	16
  109              		.thumb_func
  110              		.fpu softvfp
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 5
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s 			page 5
 
 
  112              	SysTick_Handler:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 1
  152:Src/stm32g0xx_it.c **** {
  142              		.loc 1 152 1 is_stmt 1 view -0
  143              		.cfi_startproc
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 6
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s 			page 6
 
 
  144              		@ args = 0, pretend = 0, frame = 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 1
  179              	.LFE290:
  181              		.section	.text.EXTI4_15_IRQHandler,"ax",%progbits
  182              		.align	1
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 7
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s 			page 7
 
 
  183              		.global	EXTI4_15_IRQHandler
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 1
  220              		.loc 1 193 1 is_stmt 1 view -0
  221              		.cfi_startproc
  222              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 8
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s 			page 8
 
 
  223              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 1
  263              		.loc 1 209 8 is_stmt 0 view .LVU26
  264 0002 064A     		ldr	r2, .L14
  265              		.loc 1 209 15 view .LVU27
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 9
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s 			page 9
 
 
  266 0004 1368     		ldr	r3, [r2]
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 1
  223:Src/stm32g0xx_it.c ****   /* USER CODE BEGIN SPI2_IRQn 0 */
  224:Src/stm32g0xx_it.c **** 
  225:Src/stm32g0xx_it.c ****   /* USER CODE END SPI2_IRQn 0 */
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 10
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s 			page 10
 
 
  226:Src/stm32g0xx_it.c ****   HAL_SPI_IRQHandler(&hspi2);
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 1
  349 000c FFF7FEFF 		bl	IDLE_UART_IRQHandler
  350              	.LVL8:
  242:Src/stm32g0xx_it.c ****   /* USER CODE END USART2_IRQn 1 */
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 11
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s 			page 11
 
 
  243:Src/stm32g0xx_it.c **** }
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 1
  396              	.LVL12:
  250:Src/stm32g0xx_it.c ****   }
  397              		.loc 1 250 5 is_stmt 0 view .LVU44
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 12
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s 			page 12
 
 
  398              	.LBE2:
@@ -686,41 +686,41 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 1
  421              		.file 17 "Inc/usart.h"
  422              		.file 18 "Inc/state.h"
  423              		.file 19 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s 			page 13
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g0xx_it.c
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:16     .text.NMI_Handler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:24     .text.NMI_Handler:00000000 NMI_Handler
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:39     .text.HardFault_Handler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:46     .text.HardFault_Handler:00000000 HardFault_Handler
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:63     .text.SVC_Handler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:70     .text.SVC_Handler:00000000 SVC_Handler
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:84     .text.PendSV_Handler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:91     .text.PendSV_Handler:00000000 PendSV_Handler
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:105    .text.SysTick_Handler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:112    .text.SysTick_Handler:00000000 SysTick_Handler
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:133    .text.FLASH_IRQHandler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:140    .text.FLASH_IRQHandler:00000000 FLASH_IRQHandler
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:161    .text.RCC_IRQHandler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:168    .text.RCC_IRQHandler:00000000 RCC_IRQHandler
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:182    .text.EXTI4_15_IRQHandler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:189    .text.EXTI4_15_IRQHandler:00000000 EXTI4_15_IRQHandler
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:211    .text.DMA1_Channel1_IRQHandler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:218    .text.DMA1_Channel1_IRQHandler:00000000 DMA1_Channel1_IRQHandler
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:239    .text.DMA1_Channel1_IRQHandler:0000000c $d
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:244    .text.TIM6_DAC_LPTIM1_IRQHandler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:251    .text.TIM6_DAC_LPTIM1_IRQHandler:00000000 TIM6_DAC_LPTIM1_IRQHandler
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:285    .text.TIM6_DAC_LPTIM1_IRQHandler:0000001c $d
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:291    .text.SPI2_IRQHandler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:298    .text.SPI2_IRQHandler:00000000 SPI2_IRQHandler
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:319    .text.SPI2_IRQHandler:0000000c $d
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:324    .text.USART2_IRQHandler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:331    .text.USART2_IRQHandler:00000000 USART2_IRQHandler
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:357    .text.USART2_IRQHandler:00000014 $d
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:362    .text.HAL_GPIO_EXTI_Falling_Callback:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccU9LeVt.s:369    .text.HAL_GPIO_EXTI_Falling_Callback:00000000 HAL_GPIO_EXTI_Falling_Callback
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:16     .text.NMI_Handler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:24     .text.NMI_Handler:00000000 NMI_Handler
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:39     .text.HardFault_Handler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:46     .text.HardFault_Handler:00000000 HardFault_Handler
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:63     .text.SVC_Handler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:70     .text.SVC_Handler:00000000 SVC_Handler
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:84     .text.PendSV_Handler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:91     .text.PendSV_Handler:00000000 PendSV_Handler
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:105    .text.SysTick_Handler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:112    .text.SysTick_Handler:00000000 SysTick_Handler
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:133    .text.FLASH_IRQHandler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:140    .text.FLASH_IRQHandler:00000000 FLASH_IRQHandler
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:161    .text.RCC_IRQHandler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:168    .text.RCC_IRQHandler:00000000 RCC_IRQHandler
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:182    .text.EXTI4_15_IRQHandler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:189    .text.EXTI4_15_IRQHandler:00000000 EXTI4_15_IRQHandler
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:211    .text.DMA1_Channel1_IRQHandler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:218    .text.DMA1_Channel1_IRQHandler:00000000 DMA1_Channel1_IRQHandler
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:239    .text.DMA1_Channel1_IRQHandler:0000000c $d
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:244    .text.TIM6_DAC_LPTIM1_IRQHandler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:251    .text.TIM6_DAC_LPTIM1_IRQHandler:00000000 TIM6_DAC_LPTIM1_IRQHandler
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:285    .text.TIM6_DAC_LPTIM1_IRQHandler:0000001c $d
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:291    .text.SPI2_IRQHandler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:298    .text.SPI2_IRQHandler:00000000 SPI2_IRQHandler
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:319    .text.SPI2_IRQHandler:0000000c $d
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:324    .text.USART2_IRQHandler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:331    .text.USART2_IRQHandler:00000000 USART2_IRQHandler
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:357    .text.USART2_IRQHandler:00000014 $d
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:362    .text.HAL_GPIO_EXTI_Falling_Callback:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccTSpXKD.s:369    .text.HAL_GPIO_EXTI_Falling_Callback:00000000 HAL_GPIO_EXTI_Falling_Callback
 
 UNDEFINED SYMBOLS
 HAL_IncTick

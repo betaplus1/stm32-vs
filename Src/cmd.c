@@ -5,6 +5,8 @@
 #include "ADC.h"
 #include "spi.h"
 #include "DAC.h"
+#include "PID.h"
+#include <stdlib.h>
 extern state State;
 
 void cmd()
@@ -120,24 +122,64 @@ void cmd()
     }
     case cmd_rf_state:
     {
-        SERIAL_WRITE("\n")
+        SERIAL_WRITE("\n\n\n\n\n")
+        SERIAL_WRITE("PD0 Phase:\t\t");
+        SERIAL_WRITE("%3i.", Phase(ADC_PD0_Phase_CH) / 1000);
+        SERIAL_WRITE("%03lu deg\t\t\n", Phase(ADC_PD0_Phase_CH) % 1000);
+
+        SERIAL_WRITE("PD1 Phase:\t\t");
+        SERIAL_WRITE("%3i.", Phase(ADC_PD1_Phase_CH) / 1000);
+        SERIAL_WRITE("%03lu deg\t\t\n", Phase(ADC_PD1_Phase_CH) % 1000);
+
+        SERIAL_WRITE("PD2 Phase:\t\t");
+        SERIAL_WRITE("%3i.", Phase(ADC_PD2_Phase_CH) / 1000);
+        SERIAL_WRITE("%03lu deg\t\t\n", Phase(ADC_PD2_Phase_CH) % 1000);
+
+        SERIAL_WRITE("PD3 Phase:\t\t");
+        SERIAL_WRITE("%3i.", Phase(ADC_PD3_Phase_CH) / 1000);
+        SERIAL_WRITE("%03lu deg\t\t\n", Phase(ADC_PD3_Phase_CH) % 1000);
+
+        SERIAL_WRITE("PD4 Phase:\t\t");
+        SERIAL_WRITE("%3i.", Phase(ADC_PD4_Phase_CH) / 1000);
+        SERIAL_WRITE("%03lu deg\t\t\n", Phase(ADC_PD4_Phase_CH) % 1000);
+
+        SERIAL_WRITE("PD0 Rel Power:\t\t");
+        SERIAL_WRITE("%3li.", Relative_Power(ADC_PD0_Power_CH) / 1000);
+        SERIAL_WRITE("%03u dB\t\t\n", abs(Relative_Power(ADC_PD0_Power_CH)) % 1000);
+
+        SERIAL_WRITE("PD1 Rel Power:\t\t");
+        SERIAL_WRITE("%3li.", Relative_Power(ADC_PD1_Power_CH) / 1000);
+        SERIAL_WRITE("%03u dB\t\t\n", abs(Relative_Power(ADC_PD1_Power_CH)) % 1000);
+
+        SERIAL_WRITE("PD2 Rel Power:\t\t");
+        SERIAL_WRITE("%3li.", Relative_Power(ADC_PD2_Power_CH) / 1000);
+        SERIAL_WRITE("%03u dB\t\t\n", abs(Relative_Power(ADC_PD2_Power_CH)) % 1000);
+
+        SERIAL_WRITE("PD3 Rel Power:\t\t");
+        SERIAL_WRITE("%3li.", Relative_Power(ADC_PD3_Power_CH) / 1000);
+        SERIAL_WRITE("%03u dB\t\t\n", abs(Relative_Power(ADC_PD3_Power_CH)) % 1000);
+
+        SERIAL_WRITE("PD4 Rel Power:\t\t");
+        SERIAL_WRITE("%3li.", Relative_Power(ADC_PD4_Power_CH) / 1000);
+        SERIAL_WRITE("%03u dB\t\t\n", abs(Relative_Power(ADC_PD4_Power_CH)) % 1000);
+
+        SERIAL_WRITE("PWD0 Power:\t\t");
+        SERIAL_WRITE("%3li.", RMS_Power(ADC_PWD0_Power_CH) / 1000);
+        SERIAL_WRITE("%03u dB\t\t\n", abs(RMS_Power(ADC_PWD0_Power_CH)) % 1000);
+
+        SERIAL_WRITE("PWD1 Power:\t\t");
+        SERIAL_WRITE("%3li.", RMS_Power(ADC_PWD1_Power_CH) / 1000);
+        SERIAL_WRITE("%03u dB\t\t\n", abs(RMS_Power(ADC_PWD1_Power_CH)) % 1000);
+
+        SERIAL_WRITE("PWD2 Power:\t\t");
+        SERIAL_WRITE("%3li.", RMS_Power(ADC_PWD2_Power_CH) / 1000);
+        SERIAL_WRITE("%03u dB\t\t\n", abs(RMS_Power(ADC_PWD2_Power_CH)) % 1000);
+
+        SERIAL_WRITE("PWD3 Power:\t\t");
+        SERIAL_WRITE("%3li.", RMS_Power(ADC_PWD3_Power_CH) / 1000);
+        SERIAL_WRITE("%03u dB\t\t\n", abs(RMS_Power(ADC_PWD3_Power_CH)) % 1000);
         State.cmd = 0;
 
-        uint64_t voltage_uV = (((uint64_t)State.ADC_Values[ADC_PD2_Phase_CH] * 1800000) / 0xffffff);
-        SERIAL_WRITE("ADC_PD2_Phase_CH:\t\t");
-        SERIAL_WRITE("%10lu uV\t\t\n", voltage_uV);
-
-        voltage_uV = (((uint64_t)State.ADC_Values[ADC_PD2_Power_CH] * 1800000) / 0xffffff);
-        SERIAL_WRITE("ADC_PD2_Power_CH:\t\t");
-        SERIAL_WRITE("%10lu uV\t\t\n", voltage_uV);
-
-        // voltage_uV = (((uint64_t)State.ADC_Values[ADC_PD2_Phase_CH] * 1800000) / 0xffffff);
-        // SERIAL_WRITE("PD2 Phase:\t\t");
-        // SERIAL_WRITE("%10lu uV\t\t\n", voltage_uV);
-
-        // voltage_uV = (((uint64_t)State.ADC_Values[ADC_PD2_Power_CH] * 1800000) / 0xffffff);
-        // SERIAL_WRITE("PD2 Power:\t\t");
-        // SERIAL_WRITE("%10lu uV\t\t\n", voltage_uV);
         break;
     }
     case cmd_undefined:

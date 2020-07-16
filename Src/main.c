@@ -137,6 +137,10 @@ int main(void)
     if (State.ADC_Updated)
     {
       Filter();
+      if (State.ADC_Filter_Valid || 1)
+      {
+        PID();
+      }
     };
     /* USER CODE END WHILE */
 
