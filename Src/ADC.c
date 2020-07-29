@@ -114,6 +114,7 @@ void ADC_update()
 
 void ADC_config()
 {
+
     for (int i = 0; i < 16; i++)
     {
         ADC_CMD(ADC_WRITE, ADC_CHx_REG(i));
@@ -123,7 +124,7 @@ void ADC_config()
     ADC_CMD(ADC_WRITE, ADC_SETUPCONx_REG(0));
     ADC_SPI_WRITE_16(ADC_SETUP_BI_UNIPOLAR0 + ADC_SETUP_REF_BUF + ADC_SETUP_AIN_BUF);
     ADC_CMD(ADC_WRITE, ADC_FILTCONx_REG(0));
-    ADC_SPI_WRITE_16(ADC_SPS_16);
+    ADC_SPI_WRITE_16(ADC_SPS);
     State.ADC_Channel = ADC_DEFAULT_CH;
 }
 

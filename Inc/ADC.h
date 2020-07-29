@@ -23,10 +23,10 @@
 #define ADC_GPIO_REG 0x06
 #define ADC_ID_REG 0x07
 #define ADC_CHx_REG(i) ((0 <= i <= 15) ? (0x10 + i) : NULL)
-#define ADC_SETUPCONx_REG(i) ((0 <= i <= 7) ? (0x20 + i) : NULL)
-#define ADC_FILTCONx_REG(i) ((0 <= i <= 7) ? (0x28 + i) : NULL)
-#define ADC_OFFSETx_REG(i) ((0 <= i <= 7) ? (0x30 + i) : NULL)
-#define ADC_GAINx_REG(i) ((0 <= i <= 7) ? (0x38 + i) : NULL)
+#define ADC_SETUPCONx_REG(i) ((0 <= i  && i <= 7) ? (0x20 + i) : NULL)
+#define ADC_FILTCONx_REG(i) ((0 <= i  && i <= 7) ? (0x28 + i) : NULL)
+#define ADC_OFFSETx_REG(i) ((0 <= i  && i <= 7) ? (0x30 + i) : NULL)
+#define ADC_GAINx_REG(i) ((0 <= i  && i <= 7) ? (0x38 + i) : NULL)
 
 #define ADC_PD0_Power_CH 12  // MO352 vs FREQDIV MO704(/2)
 #define ADC_PD0_Phase_CH 11  // MO352 vs MO704(/2)

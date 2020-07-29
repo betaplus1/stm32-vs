@@ -20,16 +20,27 @@
       ],
       "extensions": "bin",
       "delay": 1000
+    },
+    "upload-linux": {
+      "patterns": [
+        "build"
+      ],
+      "extensions": "bin",
+      "delay": 5000
     }
   },
   "scripts": {
     "serial": "serialport-terminal -b 115200 --no-echo",
     "serial-echo": "serialport-terminal -b 115200",
-    "make": "cls & make",
+    "make": "make",
     "upload": "flash",
+    "upload-linux": "bash flash",
     "watch-make": "npm-watch make",
+    "watch-make-linux": "npm-watch make",
     "watch-upload": "npm-watch upload",
-    "watch": "concurrently --kill-others \"npm run watch-make\" \"npm run watch-upload\" "
+    "watch-upload-linux": "npm-watch upload-linux",
+    "watch": "concurrently --kill-others \"npm run watch-make\" \"npm run watch-upload\" ",
+    "watch-linux": "concurrently --kill-others \"npm run watch-make-linux\" \"npm run watch-upload-linux\" "  
   },
   "author": "ML",
   "license": "ISC",

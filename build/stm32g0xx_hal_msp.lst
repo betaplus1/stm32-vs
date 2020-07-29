@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc3rjXOZ.s 			page 1
+ARM GAS  /tmp/ccnlKTQT.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -18,14 +18,13 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc3rjXOZ.s 			page 1
   15              		.section	.text.HAL_MspInit,"ax",%progbits
   16              		.align	1
   17              		.global	HAL_MspInit
-  18              		.arch armv6s-m
-  19              		.syntax unified
-  20              		.code	16
-  21              		.thumb_func
-  22              		.fpu softvfp
-  24              	HAL_MspInit:
-  25              	.LFB284:
-  26              		.file 1 "Src/stm32g0xx_hal_msp.c"
+  18              		.syntax unified
+  19              		.code	16
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	HAL_MspInit:
+  24              	.LFB284:
+  25              		.file 1 "Src/stm32g0xx_hal_msp.c"
    1:Src/stm32g0xx_hal_msp.c **** /* USER CODE BEGIN Header */
    2:Src/stm32g0xx_hal_msp.c **** /**
    3:Src/stm32g0xx_hal_msp.c ****   ******************************************************************************
@@ -58,10 +57,10 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc3rjXOZ.s 			page 1
   30:Src/stm32g0xx_hal_msp.c **** 
   31:Src/stm32g0xx_hal_msp.c **** /* USER CODE END TD */
   32:Src/stm32g0xx_hal_msp.c **** 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc3rjXOZ.s 			page 2
-
-
   33:Src/stm32g0xx_hal_msp.c **** /* Private define ------------------------------------------------------------*/
+ARM GAS  /tmp/ccnlKTQT.s 			page 2
+
+
   34:Src/stm32g0xx_hal_msp.c **** /* USER CODE BEGIN Define */
   35:Src/stm32g0xx_hal_msp.c ****  
   36:Src/stm32g0xx_hal_msp.c **** /* USER CODE END Define */
@@ -94,133 +93,123 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc3rjXOZ.s 			page 1
   63:Src/stm32g0xx_hal_msp.c ****   */
   64:Src/stm32g0xx_hal_msp.c **** void HAL_MspInit(void)
   65:Src/stm32g0xx_hal_msp.c **** {
-  27              		.loc 1 65 1 view -0
-  28              		.cfi_startproc
-  29              		@ args = 0, pretend = 0, frame = 8
-  30              		@ frame_needed = 0, uses_anonymous_args = 0
-  31 0000 00B5     		push	{lr}
-  32              	.LCFI0:
-  33              		.cfi_def_cfa_offset 4
-  34              		.cfi_offset 14, -4
-  35 0002 83B0     		sub	sp, sp, #12
-  36              	.LCFI1:
-  37              		.cfi_def_cfa_offset 16
+  26              		.loc 1 65 0
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 8
+  29              		@ frame_needed = 0, uses_anonymous_args = 0
+  30 0000 00B5     		push	{lr}
+  31              	.LCFI0:
+  32              		.cfi_def_cfa_offset 4
+  33              		.cfi_offset 14, -4
+  34 0002 83B0     		sub	sp, sp, #12
+  35              	.LCFI1:
+  36              		.cfi_def_cfa_offset 16
+  37              	.LBB2:
   66:Src/stm32g0xx_hal_msp.c ****   /* USER CODE BEGIN MspInit 0 */
   67:Src/stm32g0xx_hal_msp.c **** 
   68:Src/stm32g0xx_hal_msp.c ****   /* USER CODE END MspInit 0 */
   69:Src/stm32g0xx_hal_msp.c **** 
   70:Src/stm32g0xx_hal_msp.c ****   __HAL_RCC_SYSCFG_CLK_ENABLE();
-  38              		.loc 1 70 3 view .LVU1
-  39              	.LBB2:
-  40              		.loc 1 70 3 view .LVU2
-  41              		.loc 1 70 3 view .LVU3
-  42 0004 114B     		ldr	r3, .L2
-  43 0006 196C     		ldr	r1, [r3, #64]
-  44 0008 0122     		movs	r2, #1
-  45 000a 1143     		orrs	r1, r2
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc3rjXOZ.s 			page 3
+  38              		.loc 1 70 0
+  39 0004 114B     		ldr	r3, .L2
+  40 0006 196C     		ldr	r1, [r3, #64]
+  41 0008 0122     		movs	r2, #1
+  42 000a 1143     		orrs	r1, r2
+  43 000c 1964     		str	r1, [r3, #64]
+  44 000e 196C     		ldr	r1, [r3, #64]
+  45 0010 0A40     		ands	r2, r1
+ARM GAS  /tmp/ccnlKTQT.s 			page 3
 
 
-  46 000c 1964     		str	r1, [r3, #64]
-  47              		.loc 1 70 3 view .LVU4
-  48 000e 196C     		ldr	r1, [r3, #64]
-  49 0010 0A40     		ands	r2, r1
-  50 0012 0092     		str	r2, [sp]
-  51              		.loc 1 70 3 view .LVU5
-  52 0014 009A     		ldr	r2, [sp]
-  53              	.LBE2:
-  54              		.loc 1 70 3 view .LVU6
+  46 0012 0092     		str	r2, [sp]
+  47 0014 009A     		ldr	r2, [sp]
+  48              	.LBE2:
+  49              	.LBB3:
   71:Src/stm32g0xx_hal_msp.c ****   __HAL_RCC_PWR_CLK_ENABLE();
-  55              		.loc 1 71 3 view .LVU7
-  56              	.LBB3:
-  57              		.loc 1 71 3 view .LVU8
-  58              		.loc 1 71 3 view .LVU9
-  59 0016 DA6B     		ldr	r2, [r3, #60]
-  60 0018 8021     		movs	r1, #128
-  61 001a 4905     		lsls	r1, r1, #21
-  62 001c 0A43     		orrs	r2, r1
-  63 001e DA63     		str	r2, [r3, #60]
-  64              		.loc 1 71 3 view .LVU10
-  65 0020 DB6B     		ldr	r3, [r3, #60]
-  66 0022 0B40     		ands	r3, r1
-  67 0024 0193     		str	r3, [sp, #4]
-  68              		.loc 1 71 3 view .LVU11
-  69 0026 019B     		ldr	r3, [sp, #4]
-  70              	.LBE3:
-  71              		.loc 1 71 3 view .LVU12
+  50              		.loc 1 71 0
+  51 0016 DA6B     		ldr	r2, [r3, #60]
+  52 0018 8021     		movs	r1, #128
+  53 001a 4905     		lsls	r1, r1, #21
+  54 001c 0A43     		orrs	r2, r1
+  55 001e DA63     		str	r2, [r3, #60]
+  56 0020 DB6B     		ldr	r3, [r3, #60]
+  57 0022 0B40     		ands	r3, r1
+  58 0024 0193     		str	r3, [sp, #4]
+  59 0026 019B     		ldr	r3, [sp, #4]
+  60              	.LBE3:
   72:Src/stm32g0xx_hal_msp.c **** 
   73:Src/stm32g0xx_hal_msp.c ****   /* System interrupt init*/
   74:Src/stm32g0xx_hal_msp.c **** 
   75:Src/stm32g0xx_hal_msp.c ****   /* Peripheral interrupt init */
   76:Src/stm32g0xx_hal_msp.c ****   /* FLASH_IRQn interrupt configuration */
   77:Src/stm32g0xx_hal_msp.c ****   HAL_NVIC_SetPriority(FLASH_IRQn, 0, 0);
-  72              		.loc 1 77 3 view .LVU13
-  73 0028 0022     		movs	r2, #0
-  74 002a 0021     		movs	r1, #0
-  75 002c 0320     		movs	r0, #3
-  76 002e FFF7FEFF 		bl	HAL_NVIC_SetPriority
-  77              	.LVL0:
+  61              		.loc 1 77 0
+  62 0028 0022     		movs	r2, #0
+  63 002a 0021     		movs	r1, #0
+  64 002c 0320     		movs	r0, #3
+  65 002e FFF7FEFF 		bl	HAL_NVIC_SetPriority
+  66              	.LVL0:
   78:Src/stm32g0xx_hal_msp.c ****   HAL_NVIC_EnableIRQ(FLASH_IRQn);
-  78              		.loc 1 78 3 view .LVU14
-  79 0032 0320     		movs	r0, #3
-  80 0034 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
-  81              	.LVL1:
+  67              		.loc 1 78 0
+  68 0032 0320     		movs	r0, #3
+  69 0034 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+  70              	.LVL1:
   79:Src/stm32g0xx_hal_msp.c ****   /* RCC_IRQn interrupt configuration */
   80:Src/stm32g0xx_hal_msp.c ****   HAL_NVIC_SetPriority(RCC_IRQn, 0, 0);
-  82              		.loc 1 80 3 view .LVU15
-  83 0038 0022     		movs	r2, #0
-  84 003a 0021     		movs	r1, #0
-  85 003c 0420     		movs	r0, #4
-  86 003e FFF7FEFF 		bl	HAL_NVIC_SetPriority
-  87              	.LVL2:
+  71              		.loc 1 80 0
+  72 0038 0022     		movs	r2, #0
+  73 003a 0021     		movs	r1, #0
+  74 003c 0420     		movs	r0, #4
+  75 003e FFF7FEFF 		bl	HAL_NVIC_SetPriority
+  76              	.LVL2:
   81:Src/stm32g0xx_hal_msp.c ****   HAL_NVIC_EnableIRQ(RCC_IRQn);
-  88              		.loc 1 81 3 view .LVU16
-  89 0042 0420     		movs	r0, #4
-  90 0044 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
-  91              	.LVL3:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc3rjXOZ.s 			page 4
-
-
+  77              		.loc 1 81 0
+  78 0042 0420     		movs	r0, #4
+  79 0044 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+  80              	.LVL3:
   82:Src/stm32g0xx_hal_msp.c **** 
   83:Src/stm32g0xx_hal_msp.c ****   /* USER CODE BEGIN MspInit 1 */
   84:Src/stm32g0xx_hal_msp.c **** 
   85:Src/stm32g0xx_hal_msp.c ****   /* USER CODE END MspInit 1 */
   86:Src/stm32g0xx_hal_msp.c **** }
-  92              		.loc 1 86 1 is_stmt 0 view .LVU17
-  93 0048 03B0     		add	sp, sp, #12
-  94              		@ sp needed
-  95 004a 00BD     		pop	{pc}
-  96              	.L3:
-  97              		.align	2
-  98              	.L2:
-  99 004c 00100240 		.word	1073876992
- 100              		.cfi_endproc
- 101              	.LFE284:
- 103              		.text
- 104              	.Letext0:
- 105              		.file 2 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\machine\\_default_types.h"
- 106              		.file 3 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_stdint.h"
- 107              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
- 108              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
- 109              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
- 110              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
- 111              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
- 112              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
- 113              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
- 114              		.file 11 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\lock.h"
- 115              		.file 12 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_types.h"
- 116              		.file 13 "c:\\gnu tools arm embedded\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\stddef.h"
- 117              		.file 14 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\reent.h"
- 118              		.file 15 "Inc/usart.h"
- 119              		.file 16 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc3rjXOZ.s 			page 5
+  81              		.loc 1 86 0
+  82 0048 03B0     		add	sp, sp, #12
+  83              		@ sp needed
+  84 004a 00BD     		pop	{pc}
+  85              	.L3:
+  86              		.align	2
+ARM GAS  /tmp/ccnlKTQT.s 			page 4
+
+
+  87              	.L2:
+  88 004c 00100240 		.word	1073876992
+  89              		.cfi_endproc
+  90              	.LFE284:
+  92              		.text
+  93              	.Letext0:
+  94              		.file 2 "/usr/include/newlib/machine/_default_types.h"
+  95              		.file 3 "/usr/include/newlib/sys/_stdint.h"
+  96              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
+  97              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
+  98              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+  99              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+ 100              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
+ 101              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
+ 102              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
+ 103              		.file 11 "/usr/include/newlib/sys/lock.h"
+ 104              		.file 12 "/usr/include/newlib/sys/_types.h"
+ 105              		.file 13 "/usr/lib/gcc/arm-none-eabi/7.3.1/include/stddef.h"
+ 106              		.file 14 "/usr/include/newlib/sys/reent.h"
+ 107              		.file 15 "Inc/usart.h"
+ 108              		.file 16 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h"
+ARM GAS  /tmp/ccnlKTQT.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g0xx_hal_msp.c
-C:\Users\matil\AppData\Local\Temp\cc3rjXOZ.s:16     .text.HAL_MspInit:00000000 $t
-C:\Users\matil\AppData\Local\Temp\cc3rjXOZ.s:24     .text.HAL_MspInit:00000000 HAL_MspInit
-C:\Users\matil\AppData\Local\Temp\cc3rjXOZ.s:99     .text.HAL_MspInit:0000004c $d
+     /tmp/ccnlKTQT.s:16     .text.HAL_MspInit:00000000 $t
+     /tmp/ccnlKTQT.s:23     .text.HAL_MspInit:00000000 HAL_MspInit
+     /tmp/ccnlKTQT.s:88     .text.HAL_MspInit:0000004c $d
 
 UNDEFINED SYMBOLS
 HAL_NVIC_SetPriority
