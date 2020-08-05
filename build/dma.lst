@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccQZib0S.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccx41NZo.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -18,13 +18,14 @@ ARM GAS  /tmp/ccQZib0S.s 			page 1
   15              		.section	.text.MX_DMA_Init,"ax",%progbits
   16              		.align	1
   17              		.global	MX_DMA_Init
-  18              		.syntax unified
-  19              		.code	16
-  20              		.thumb_func
-  21              		.fpu softvfp
-  23              	MX_DMA_Init:
-  24              	.LFB284:
-  25              		.file 1 "Src/dma.c"
+  18              		.arch armv6s-m
+  19              		.syntax unified
+  20              		.code	16
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	MX_DMA_Init:
+  25              	.LFB284:
+  26              		.file 1 "Src/dma.c"
    1:Src/dma.c     **** /**
    2:Src/dma.c     ****   ******************************************************************************
    3:Src/dma.c     ****   * File Name          : dma.c
@@ -57,10 +58,10 @@ ARM GAS  /tmp/ccQZib0S.s 			page 1
   30:Src/dma.c     **** /* Configure DMA                                                              */
   31:Src/dma.c     **** /*----------------------------------------------------------------------------*/
   32:Src/dma.c     **** 
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccx41NZo.s 			page 2
+
+
   33:Src/dma.c     **** /* USER CODE BEGIN 1 */
-ARM GAS  /tmp/ccQZib0S.s 			page 2
-
-
   34:Src/dma.c     **** extern state State;
   35:Src/dma.c     **** /* USER CODE END 1 */
   36:Src/dma.c     **** 
@@ -69,87 +70,92 @@ ARM GAS  /tmp/ccQZib0S.s 			page 1
   39:Src/dma.c     ****   */
   40:Src/dma.c     **** void MX_DMA_Init(void)
   41:Src/dma.c     **** {
-  26              		.loc 1 41 0
-  27              		.cfi_startproc
-  28              		@ args = 0, pretend = 0, frame = 8
-  29              		@ frame_needed = 0, uses_anonymous_args = 0
-  30 0000 00B5     		push	{lr}
-  31              	.LCFI0:
-  32              		.cfi_def_cfa_offset 4
-  33              		.cfi_offset 14, -4
-  34 0002 83B0     		sub	sp, sp, #12
-  35              	.LCFI1:
-  36              		.cfi_def_cfa_offset 16
-  37              	.LBB2:
+  27              		.loc 1 41 1 view -0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 8
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31 0000 00B5     		push	{lr}
+  32              	.LCFI0:
+  33              		.cfi_def_cfa_offset 4
+  34              		.cfi_offset 14, -4
+  35 0002 83B0     		sub	sp, sp, #12
+  36              	.LCFI1:
+  37              		.cfi_def_cfa_offset 16
   42:Src/dma.c     **** 
   43:Src/dma.c     ****   /* DMA controller clock enable */
   44:Src/dma.c     ****   __HAL_RCC_DMA1_CLK_ENABLE();
-  38              		.loc 1 44 0
-  39 0004 094A     		ldr	r2, .L2
-  40 0006 916B     		ldr	r1, [r2, #56]
-  41 0008 0123     		movs	r3, #1
-  42 000a 1943     		orrs	r1, r3
-  43 000c 9163     		str	r1, [r2, #56]
-  44 000e 926B     		ldr	r2, [r2, #56]
-  45 0010 1340     		ands	r3, r2
-  46 0012 0193     		str	r3, [sp, #4]
-  47 0014 019B     		ldr	r3, [sp, #4]
-  48              	.LBE2:
+  38              		.loc 1 44 3 view .LVU1
+  39              	.LBB2:
+  40              		.loc 1 44 3 view .LVU2
+  41              		.loc 1 44 3 view .LVU3
+  42 0004 094A     		ldr	r2, .L2
+  43 0006 916B     		ldr	r1, [r2, #56]
+  44 0008 0123     		movs	r3, #1
+  45 000a 1943     		orrs	r1, r3
+  46 000c 9163     		str	r1, [r2, #56]
+  47              		.loc 1 44 3 view .LVU4
+  48 000e 926B     		ldr	r2, [r2, #56]
+  49 0010 1340     		ands	r3, r2
+  50 0012 0193     		str	r3, [sp, #4]
+  51              		.loc 1 44 3 view .LVU5
+  52 0014 019B     		ldr	r3, [sp, #4]
+  53              	.LBE2:
+  54              		.loc 1 44 3 view .LVU6
   45:Src/dma.c     **** 
   46:Src/dma.c     ****   /* DMA interrupt init */
   47:Src/dma.c     ****   /* DMA1_Channel1_IRQn interrupt configuration */
   48:Src/dma.c     ****   HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 0, 0);
-  49              		.loc 1 48 0
-  50 0016 0022     		movs	r2, #0
-  51 0018 0021     		movs	r1, #0
-  52 001a 0920     		movs	r0, #9
-  53 001c FFF7FEFF 		bl	HAL_NVIC_SetPriority
-  54              	.LVL0:
+  55              		.loc 1 48 3 view .LVU7
+  56 0016 0022     		movs	r2, #0
+  57 0018 0021     		movs	r1, #0
+  58 001a 0920     		movs	r0, #9
+  59 001c FFF7FEFF 		bl	HAL_NVIC_SetPriority
+  60              	.LVL0:
   49:Src/dma.c     ****   HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
-  55              		.loc 1 49 0
-  56 0020 0920     		movs	r0, #9
-  57 0022 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
-  58              	.LVL1:
+  61              		.loc 1 49 3 view .LVU8
+  62 0020 0920     		movs	r0, #9
+  63 0022 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+  64              	.LVL1:
   50:Src/dma.c     **** }
-  59              		.loc 1 50 0
-  60 0026 03B0     		add	sp, sp, #12
-  61              		@ sp needed
-  62 0028 00BD     		pop	{pc}
-  63              	.L3:
-  64 002a C046     		.align	2
-  65              	.L2:
-ARM GAS  /tmp/ccQZib0S.s 			page 3
+  65              		.loc 1 50 1 is_stmt 0 view .LVU9
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccx41NZo.s 			page 3
 
 
-  66 002c 00100240 		.word	1073876992
-  67              		.cfi_endproc
-  68              	.LFE284:
-  70              		.text
-  71              	.Letext0:
-  72              		.file 2 "/usr/include/newlib/machine/_default_types.h"
-  73              		.file 3 "/usr/include/newlib/sys/_stdint.h"
-  74              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
-  75              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
-  76              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
-  77              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
-  78              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
-  79              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
-  80              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
-  81              		.file 11 "/usr/include/newlib/sys/lock.h"
-  82              		.file 12 "/usr/include/newlib/sys/_types.h"
-  83              		.file 13 "/usr/lib/gcc/arm-none-eabi/7.3.1/include/stddef.h"
-  84              		.file 14 "/usr/include/newlib/sys/reent.h"
-  85              		.file 15 "Inc/usart.h"
-  86              		.file 16 "Inc/state.h"
-  87              		.file 17 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h"
-ARM GAS  /tmp/ccQZib0S.s 			page 4
+  66 0026 03B0     		add	sp, sp, #12
+  67              		@ sp needed
+  68 0028 00BD     		pop	{pc}
+  69              	.L3:
+  70 002a C046     		.align	2
+  71              	.L2:
+  72 002c 00100240 		.word	1073876992
+  73              		.cfi_endproc
+  74              	.LFE284:
+  76              		.text
+  77              	.Letext0:
+  78              		.file 2 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\machine\\_default_types.h"
+  79              		.file 3 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_stdint.h"
+  80              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
+  81              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
+  82              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+  83              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+  84              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
+  85              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
+  86              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
+  87              		.file 11 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\lock.h"
+  88              		.file 12 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_types.h"
+  89              		.file 13 "c:\\gnu tools arm embedded\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\stddef.h"
+  90              		.file 14 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\reent.h"
+  91              		.file 15 "Inc/usart.h"
+  92              		.file 16 "Inc/state.h"
+  93              		.file 17 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h"
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccx41NZo.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 dma.c
-     /tmp/ccQZib0S.s:16     .text.MX_DMA_Init:00000000 $t
-     /tmp/ccQZib0S.s:23     .text.MX_DMA_Init:00000000 MX_DMA_Init
-     /tmp/ccQZib0S.s:66     .text.MX_DMA_Init:0000002c $d
+C:\Users\matil\AppData\Local\Temp\ccx41NZo.s:16     .text.MX_DMA_Init:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccx41NZo.s:24     .text.MX_DMA_Init:00000000 MX_DMA_Init
+C:\Users\matil\AppData\Local\Temp\ccx41NZo.s:72     .text.MX_DMA_Init:0000002c $d
 
 UNDEFINED SYMBOLS
 HAL_NVIC_SetPriority

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccAldI4y.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccMK72ad.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -18,13 +18,15 @@ ARM GAS  /tmp/ccAldI4y.s 			page 1
   15              		.section	.text.DAC_SPI_WRITE_24,"ax",%progbits
   16              		.align	1
   17              		.global	DAC_SPI_WRITE_24
-  18              		.syntax unified
-  19              		.code	16
-  20              		.thumb_func
-  21              		.fpu softvfp
-  23              	DAC_SPI_WRITE_24:
-  24              	.LFB284:
-  25              		.file 1 "Src/DAC.c"
+  18              		.arch armv6s-m
+  19              		.syntax unified
+  20              		.code	16
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	DAC_SPI_WRITE_24:
+  25              	.LVL0:
+  26              	.LFB284:
+  27              		.file 1 "Src/DAC.c"
    1:Src/DAC.c     **** #include "usart.h"
    2:Src/DAC.c     **** #include <stdio.h>
    3:Src/DAC.c     **** #include "state.h"
@@ -37,512 +39,537 @@ ARM GAS  /tmp/ccAldI4y.s 			page 1
   10:Src/DAC.c     **** 
   11:Src/DAC.c     **** void DAC_SPI_WRITE_24(uint32_t data)
   12:Src/DAC.c     **** {
-  26              		.loc 1 12 0
-  27              		.cfi_startproc
-  28              		@ args = 0, pretend = 0, frame = 8
-  29              		@ frame_needed = 0, uses_anonymous_args = 0
-  30              	.LVL0:
-  31 0000 00B5     		push	{lr}
-  32              	.LCFI0:
-  33              		.cfi_def_cfa_offset 4
-  34              		.cfi_offset 14, -4
-  35 0002 83B0     		sub	sp, sp, #12
-  36              	.LCFI1:
-  37              		.cfi_def_cfa_offset 16
+  28              		.loc 1 12 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 8
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		.loc 1 12 1 is_stmt 0 view .LVU1
+  33 0000 00B5     		push	{lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 4
+  36              		.cfi_offset 14, -4
+  37 0002 83B0     		sub	sp, sp, #12
+  38              	.LCFI1:
+  39              		.cfi_def_cfa_offset 16
   13:Src/DAC.c     ****     uint8_t txbuffer[3] = {
+  40              		.loc 1 13 5 is_stmt 1 view .LVU2
   14:Src/DAC.c     ****         (uint8_t)((data & 0xff0000) >> 16),
-  38              		.loc 1 14 0
-  39 0004 030C     		lsrs	r3, r0, #16
+  41              		.loc 1 14 37 is_stmt 0 view .LVU3
+  42 0004 030C     		lsrs	r3, r0, #16
   13:Src/DAC.c     ****     uint8_t txbuffer[3] = {
-  40              		.loc 1 13 0
-  41 0006 01A9     		add	r1, sp, #4
-  42 0008 0B70     		strb	r3, [r1]
+  43              		.loc 1 13 13 view .LVU4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccMK72ad.s 			page 2
+
+
+  44 0006 01A9     		add	r1, sp, #4
+  45 0008 0B70     		strb	r3, [r1]
   15:Src/DAC.c     ****         (uint8_t)((data & 0xff00) >> 8),
-ARM GAS  /tmp/ccAldI4y.s 			page 2
-
-
-  43              		.loc 1 15 0
-  44 000a 030A     		lsrs	r3, r0, #8
+  46              		.loc 1 15 35 view .LVU5
+  47 000a 030A     		lsrs	r3, r0, #8
   13:Src/DAC.c     ****     uint8_t txbuffer[3] = {
-  45              		.loc 1 13 0
-  46 000c 4B70     		strb	r3, [r1, #1]
-  47 000e 8870     		strb	r0, [r1, #2]
+  48              		.loc 1 13 13 view .LVU6
+  49 000c 4B70     		strb	r3, [r1, #1]
+  50 000e 8870     		strb	r0, [r1, #2]
   16:Src/DAC.c     ****         (uint8_t)((data & 0xff))};
   17:Src/DAC.c     ****     HAL_SPI_Transmit(&hspi1, txbuffer, 3, HAL_MAX_DELAY);
-  48              		.loc 1 17 0
-  49 0010 0123     		movs	r3, #1
-  50 0012 5B42     		rsbs	r3, r3, #0
-  51 0014 0322     		movs	r2, #3
-  52 0016 0248     		ldr	r0, .L2
-  53              	.LVL1:
-  54 0018 FFF7FEFF 		bl	HAL_SPI_Transmit
-  55              	.LVL2:
+  51              		.loc 1 17 5 is_stmt 1 view .LVU7
+  52 0010 0123     		movs	r3, #1
+  53 0012 5B42     		rsbs	r3, r3, #0
+  54 0014 0322     		movs	r2, #3
+  55 0016 0248     		ldr	r0, .L2
+  56              	.LVL1:
+  57              		.loc 1 17 5 is_stmt 0 view .LVU8
+  58 0018 FFF7FEFF 		bl	HAL_SPI_Transmit
+  59              	.LVL2:
   18:Src/DAC.c     **** }
-  56              		.loc 1 18 0
-  57 001c 03B0     		add	sp, sp, #12
-  58              		@ sp needed
-  59 001e 00BD     		pop	{pc}
-  60              	.L3:
-  61              		.align	2
-  62              	.L2:
-  63 0020 00000000 		.word	hspi1
-  64              		.cfi_endproc
-  65              	.LFE284:
-  67              		.section	.text.DAC_reset,"ax",%progbits
-  68              		.align	1
-  69              		.global	DAC_reset
-  70              		.syntax unified
-  71              		.code	16
-  72              		.thumb_func
-  73              		.fpu softvfp
-  75              	DAC_reset:
-  76              	.LFB285:
+  60              		.loc 1 18 1 view .LVU9
+  61 001c 03B0     		add	sp, sp, #12
+  62              		@ sp needed
+  63 001e 00BD     		pop	{pc}
+  64              	.L3:
+  65              		.align	2
+  66              	.L2:
+  67 0020 00000000 		.word	hspi1
+  68              		.cfi_endproc
+  69              	.LFE284:
+  71              		.section	.text.DAC_reset,"ax",%progbits
+  72              		.align	1
+  73              		.global	DAC_reset
+  74              		.syntax unified
+  75              		.code	16
+  76              		.thumb_func
+  77              		.fpu softvfp
+  79              	DAC_reset:
+  80              	.LFB285:
   19:Src/DAC.c     **** 
   20:Src/DAC.c     **** void DAC_reset()
   21:Src/DAC.c     **** {
-  77              		.loc 1 21 0
-  78              		.cfi_startproc
-  79              		@ args = 0, pretend = 0, frame = 0
-  80              		@ frame_needed = 0, uses_anonymous_args = 0
-  81 0000 10B5     		push	{r4, lr}
-  82              	.LCFI2:
-  83              		.cfi_def_cfa_offset 8
-  84              		.cfi_offset 4, -8
-  85              		.cfi_offset 14, -4
+  81              		.loc 1 21 1 is_stmt 1 view -0
+  82              		.cfi_startproc
+  83              		@ args = 0, pretend = 0, frame = 0
+  84              		@ frame_needed = 0, uses_anonymous_args = 0
+  85 0000 10B5     		push	{r4, lr}
+  86              	.LCFI2:
+  87              		.cfi_def_cfa_offset 8
+  88              		.cfi_offset 4, -8
+  89              		.cfi_offset 14, -4
   22:Src/DAC.c     ****     HAL_GPIO_WritePin(DAC_nSYNC_GPIO_Port, DAC_nSYNC_Pin, 1);
-  86              		.loc 1 22 0
-  87 0002 8021     		movs	r1, #128
-  88 0004 A020     		movs	r0, #160
-  89 0006 0122     		movs	r2, #1
-  90 0008 0902     		lsls	r1, r1, #8
-  91 000a C005     		lsls	r0, r0, #23
-  92 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
-  93              	.LVL3:
-ARM GAS  /tmp/ccAldI4y.s 			page 3
+  90              		.loc 1 22 5 view .LVU11
+  91 0002 8021     		movs	r1, #128
+  92 0004 A020     		movs	r0, #160
+  93 0006 0122     		movs	r2, #1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccMK72ad.s 			page 3
 
 
+  94 0008 0902     		lsls	r1, r1, #8
+  95 000a C005     		lsls	r0, r0, #23
+  96 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
+  97              	.LVL3:
   23:Src/DAC.c     ****     HAL_GPIO_WritePin(DAC_nLOAD_GPIO_Port, DAC_nLOAD_Pin, 1);
-  94              		.loc 1 23 0
-  95 0010 0122     		movs	r2, #1
-  96 0012 0121     		movs	r1, #1
-  97 0014 0848     		ldr	r0, .L5
-  98 0016 FFF7FEFF 		bl	HAL_GPIO_WritePin
-  99              	.LVL4:
+  98              		.loc 1 23 5 view .LVU12
+  99 0010 0122     		movs	r2, #1
+ 100 0012 0121     		movs	r1, #1
+ 101 0014 0848     		ldr	r0, .L5
+ 102 0016 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 103              	.LVL4:
   24:Src/DAC.c     ****     HAL_GPIO_WritePin(DAC_nRESET_GPIO_Port, DAC_nRESET_Pin, 0);
- 100              		.loc 1 24 0
- 101 001a 084C     		ldr	r4, .L5+4
- 102 001c 0022     		movs	r2, #0
- 103 001e 4021     		movs	r1, #64
- 104 0020 2000     		movs	r0, r4
- 105 0022 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 106              	.LVL5:
+ 104              		.loc 1 24 5 view .LVU13
+ 105 001a 084C     		ldr	r4, .L5+4
+ 106 001c 0022     		movs	r2, #0
+ 107 001e 4021     		movs	r1, #64
+ 108 0020 2000     		movs	r0, r4
+ 109 0022 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 110              	.LVL5:
   25:Src/DAC.c     ****     HAL_Delay(10);
- 107              		.loc 1 25 0
- 108 0026 0A20     		movs	r0, #10
- 109 0028 FFF7FEFF 		bl	HAL_Delay
- 110              	.LVL6:
+ 111              		.loc 1 25 5 view .LVU14
+ 112 0026 0A20     		movs	r0, #10
+ 113 0028 FFF7FEFF 		bl	HAL_Delay
+ 114              	.LVL6:
   26:Src/DAC.c     ****     HAL_GPIO_WritePin(DAC_nRESET_GPIO_Port, DAC_nRESET_Pin, 1);
- 111              		.loc 1 26 0
- 112 002c 0122     		movs	r2, #1
- 113 002e 4021     		movs	r1, #64
- 114 0030 2000     		movs	r0, r4
- 115 0032 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 116              	.LVL7:
+ 115              		.loc 1 26 5 view .LVU15
+ 116 002c 0122     		movs	r2, #1
+ 117 002e 4021     		movs	r1, #64
+ 118 0030 2000     		movs	r0, r4
+ 119 0032 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 120              	.LVL7:
   27:Src/DAC.c     **** }
- 117              		.loc 1 27 0
- 118              		@ sp needed
- 119 0036 10BD     		pop	{r4, pc}
- 120              	.L6:
- 121              		.align	2
- 122              	.L5:
- 123 0038 00040050 		.word	1342178304
- 124 003c 00080050 		.word	1342179328
- 125              		.cfi_endproc
- 126              	.LFE285:
- 128              		.section	.text.DAC_cmd,"ax",%progbits
- 129              		.align	1
- 130              		.global	DAC_cmd
- 131              		.syntax unified
- 132              		.code	16
- 133              		.thumb_func
- 134              		.fpu softvfp
- 136              	DAC_cmd:
- 137              	.LFB286:
+ 121              		.loc 1 27 1 is_stmt 0 view .LVU16
+ 122              		@ sp needed
+ 123 0036 10BD     		pop	{r4, pc}
+ 124              	.L6:
+ 125              		.align	2
+ 126              	.L5:
+ 127 0038 00040050 		.word	1342178304
+ 128 003c 00080050 		.word	1342179328
+ 129              		.cfi_endproc
+ 130              	.LFE285:
+ 132              		.section	.text.DAC_cmd,"ax",%progbits
+ 133              		.align	1
+ 134              		.global	DAC_cmd
+ 135              		.syntax unified
+ 136              		.code	16
+ 137              		.thumb_func
+ 138              		.fpu softvfp
+ 140              	DAC_cmd:
+ 141              	.LVL8:
+ 142              	.LFB286:
   28:Src/DAC.c     **** 
   29:Src/DAC.c     **** void DAC_cmd(uint32_t data)
   30:Src/DAC.c     **** {
- 138              		.loc 1 30 0
- 139              		.cfi_startproc
- 140              		@ args = 0, pretend = 0, frame = 0
- 141              		@ frame_needed = 0, uses_anonymous_args = 0
- 142              	.LVL8:
- 143 0000 70B5     		push	{r4, r5, r6, lr}
- 144              	.LCFI3:
-ARM GAS  /tmp/ccAldI4y.s 			page 4
+ 143              		.loc 1 30 1 is_stmt 1 view -0
+ 144              		.cfi_startproc
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccMK72ad.s 			page 4
 
 
- 145              		.cfi_def_cfa_offset 16
- 146              		.cfi_offset 4, -16
- 147              		.cfi_offset 5, -12
- 148              		.cfi_offset 6, -8
- 149              		.cfi_offset 14, -4
- 150 0002 0600     		movs	r6, r0
+ 145              		@ args = 0, pretend = 0, frame = 0
+ 146              		@ frame_needed = 0, uses_anonymous_args = 0
+ 147              		.loc 1 30 1 is_stmt 0 view .LVU18
+ 148 0000 70B5     		push	{r4, r5, r6, lr}
+ 149              	.LCFI3:
+ 150              		.cfi_def_cfa_offset 16
+ 151              		.cfi_offset 4, -16
+ 152              		.cfi_offset 5, -12
+ 153              		.cfi_offset 6, -8
+ 154              		.cfi_offset 14, -4
+ 155 0002 0400     		movs	r4, r0
   31:Src/DAC.c     ****     HAL_GPIO_WritePin(DAC_nSYNC_GPIO_Port, DAC_nSYNC_Pin, 0);
- 151              		.loc 1 31 0
- 152 0004 8025     		movs	r5, #128
- 153 0006 2D02     		lsls	r5, r5, #8
- 154 0008 A024     		movs	r4, #160
- 155 000a E405     		lsls	r4, r4, #23
- 156 000c 0022     		movs	r2, #0
- 157 000e 2900     		movs	r1, r5
- 158 0010 2000     		movs	r0, r4
- 159              	.LVL9:
- 160 0012 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 161              	.LVL10:
+ 156              		.loc 1 31 5 is_stmt 1 view .LVU19
+ 157 0004 8026     		movs	r6, #128
+ 158 0006 3602     		lsls	r6, r6, #8
+ 159 0008 A025     		movs	r5, #160
+ 160 000a ED05     		lsls	r5, r5, #23
+ 161 000c 0022     		movs	r2, #0
+ 162 000e 3100     		movs	r1, r6
+ 163 0010 2800     		movs	r0, r5
+ 164              	.LVL9:
+ 165              		.loc 1 31 5 is_stmt 0 view .LVU20
+ 166 0012 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 167              	.LVL10:
   32:Src/DAC.c     ****     DAC_SPI_WRITE_24(data);
- 162              		.loc 1 32 0
- 163 0016 3000     		movs	r0, r6
- 164 0018 FFF7FEFF 		bl	DAC_SPI_WRITE_24
- 165              	.LVL11:
+ 168              		.loc 1 32 5 is_stmt 1 view .LVU21
+ 169 0016 2000     		movs	r0, r4
+ 170 0018 FFF7FEFF 		bl	DAC_SPI_WRITE_24
+ 171              	.LVL11:
   33:Src/DAC.c     ****     HAL_GPIO_WritePin(DAC_nSYNC_GPIO_Port, DAC_nSYNC_Pin, 1);
- 166              		.loc 1 33 0
- 167 001c 0122     		movs	r2, #1
- 168 001e 2900     		movs	r1, r5
- 169 0020 2000     		movs	r0, r4
- 170 0022 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 171              	.LVL12:
+ 172              		.loc 1 33 5 view .LVU22
+ 173 001c 0122     		movs	r2, #1
+ 174 001e 3100     		movs	r1, r6
+ 175 0020 2800     		movs	r0, r5
+ 176 0022 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 177              	.LVL12:
   34:Src/DAC.c     ****     HAL_Delay(1);
- 172              		.loc 1 34 0
- 173 0026 0120     		movs	r0, #1
- 174 0028 FFF7FEFF 		bl	HAL_Delay
- 175              	.LVL13:
+ 178              		.loc 1 34 5 view .LVU23
+ 179 0026 0120     		movs	r0, #1
+ 180 0028 FFF7FEFF 		bl	HAL_Delay
+ 181              	.LVL13:
   35:Src/DAC.c     ****     HAL_GPIO_WritePin(DAC_nLOAD_GPIO_Port, DAC_nLOAD_Pin, 0);
- 176              		.loc 1 35 0
- 177 002c 074C     		ldr	r4, .L8
- 178 002e 0022     		movs	r2, #0
- 179 0030 0121     		movs	r1, #1
- 180 0032 2000     		movs	r0, r4
- 181 0034 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 182              	.LVL14:
+ 182              		.loc 1 35 5 view .LVU24
+ 183 002c 074C     		ldr	r4, .L8
+ 184              	.LVL14:
+ 185              		.loc 1 35 5 is_stmt 0 view .LVU25
+ 186 002e 0022     		movs	r2, #0
+ 187 0030 0121     		movs	r1, #1
+ 188 0032 2000     		movs	r0, r4
+ 189 0034 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 190              	.LVL15:
   36:Src/DAC.c     ****     HAL_Delay(1);
- 183              		.loc 1 36 0
- 184 0038 0120     		movs	r0, #1
- 185 003a FFF7FEFF 		bl	HAL_Delay
- 186              	.LVL15:
+ 191              		.loc 1 36 5 is_stmt 1 view .LVU26
+ 192 0038 0120     		movs	r0, #1
+ 193 003a FFF7FEFF 		bl	HAL_Delay
+ 194              	.LVL16:
   37:Src/DAC.c     ****     HAL_GPIO_WritePin(DAC_nLOAD_GPIO_Port, DAC_nLOAD_Pin, 1);
- 187              		.loc 1 37 0
- 188 003e 0122     		movs	r2, #1
- 189 0040 0121     		movs	r1, #1
- 190 0042 2000     		movs	r0, r4
- 191 0044 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 192              	.LVL16:
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccMK72ad.s 			page 5
+
+
+ 195              		.loc 1 37 5 view .LVU27
+ 196 003e 0122     		movs	r2, #1
+ 197 0040 0121     		movs	r1, #1
+ 198 0042 2000     		movs	r0, r4
+ 199 0044 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 200              	.LVL17:
   38:Src/DAC.c     **** }
- 193              		.loc 1 38 0
-ARM GAS  /tmp/ccAldI4y.s 			page 5
-
-
- 194              		@ sp needed
- 195              	.LVL17:
- 196 0048 70BD     		pop	{r4, r5, r6, pc}
- 197              	.L9:
- 198 004a C046     		.align	2
- 199              	.L8:
- 200 004c 00040050 		.word	1342178304
- 201              		.cfi_endproc
- 202              	.LFE286:
- 204              		.section	.text.DAC_test,"ax",%progbits
- 205              		.align	1
- 206              		.global	DAC_test
- 207              		.syntax unified
- 208              		.code	16
- 209              		.thumb_func
- 210              		.fpu softvfp
- 212              	DAC_test:
- 213              	.LFB287:
+ 201              		.loc 1 38 1 is_stmt 0 view .LVU28
+ 202              		@ sp needed
+ 203 0048 70BD     		pop	{r4, r5, r6, pc}
+ 204              	.L9:
+ 205 004a C046     		.align	2
+ 206              	.L8:
+ 207 004c 00040050 		.word	1342178304
+ 208              		.cfi_endproc
+ 209              	.LFE286:
+ 211              		.section	.rodata.DAC_test.str1.4,"aMS",%progbits,1
+ 212              		.align	2
+ 213              	.LC1:
+ 214 0000 30782530 		.ascii	"0x%04x\012\000"
+ 214      34780A00 
+ 215              		.section	.text.DAC_test,"ax",%progbits
+ 216              		.align	1
+ 217              		.global	DAC_test
+ 218              		.syntax unified
+ 219              		.code	16
+ 220              		.thumb_func
+ 221              		.fpu softvfp
+ 223              	DAC_test:
+ 224              	.LFB287:
   39:Src/DAC.c     **** 
   40:Src/DAC.c     **** void DAC_test()
   41:Src/DAC.c     **** {
- 214              		.loc 1 41 0
- 215              		.cfi_startproc
- 216              		@ args = 0, pretend = 0, frame = 104
- 217              		@ frame_needed = 0, uses_anonymous_args = 0
- 218 0000 30B5     		push	{r4, r5, lr}
- 219              	.LCFI4:
- 220              		.cfi_def_cfa_offset 12
- 221              		.cfi_offset 4, -12
- 222              		.cfi_offset 5, -8
- 223              		.cfi_offset 14, -4
- 224 0002 9BB0     		sub	sp, sp, #108
- 225              	.LCFI5:
- 226              		.cfi_def_cfa_offset 120
- 227              	.LVL18:
- 228              	.LBB2:
+ 225              		.loc 1 41 1 is_stmt 1 view -0
+ 226              		.cfi_startproc
+ 227              		@ args = 0, pretend = 0, frame = 104
+ 228              		@ frame_needed = 0, uses_anonymous_args = 0
+ 229 0000 30B5     		push	{r4, r5, lr}
+ 230              	.LCFI4:
+ 231              		.cfi_def_cfa_offset 12
+ 232              		.cfi_offset 4, -12
+ 233              		.cfi_offset 5, -8
+ 234              		.cfi_offset 14, -4
+ 235 0002 9BB0     		sub	sp, sp, #108
+ 236              	.LCFI5:
+ 237              		.cfi_def_cfa_offset 120
   42:Src/DAC.c     ****     for (int i = 0; i <= 0xffff; i += 0xffff / 5)
- 229              		.loc 1 42 0
- 230 0004 0024     		movs	r4, #0
- 231 0006 3FE0     		b	.L11
- 232              	.LVL19:
- 233              	.L12:
+ 238              		.loc 1 42 5 view .LVU30
+ 239              	.LBB2:
+ 240              		.loc 1 42 10 view .LVU31
+ 241              	.LVL18:
+ 242              		.loc 1 42 14 is_stmt 0 view .LVU32
+ 243 0004 0024     		movs	r4, #0
+ 244              	.LVL19:
+ 245              	.L11:
+ 246              		.loc 1 42 21 is_stmt 1 discriminator 1 view .LVU33
+ 247              		.loc 1 42 5 is_stmt 0 discriminator 1 view .LVU34
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccMK72ad.s 			page 6
+
+
+ 248 0006 8023     		movs	r3, #128
+ 249 0008 5B02     		lsls	r3, r3, #9
+ 250 000a 9C42     		cmp	r4, r3
+ 251 000c 42DA     		bge	.L13
   43:Src/DAC.c     ****     {
   44:Src/DAC.c     ****         DAC_cmd(DAC_CH(0) + DAC_WRITE + (uint32_t)(i));
- 234              		.loc 1 44 0 discriminator 3
- 235 0008 8023     		movs	r3, #128
- 236 000a 5B03     		lsls	r3, r3, #13
- 237 000c E018     		adds	r0, r4, r3
- 238 000e FFF7FEFF 		bl	DAC_cmd
- 239              	.LVL20:
+ 252              		.loc 1 44 9 is_stmt 1 discriminator 3 view .LVU35
+ 253 000e 8023     		movs	r3, #128
+ 254 0010 5B03     		lsls	r3, r3, #13
+ 255 0012 E018     		adds	r0, r4, r3
+ 256 0014 FFF7FEFF 		bl	DAC_cmd
+ 257              	.LVL20:
   45:Src/DAC.c     ****         DAC_cmd(DAC_CH(1) + DAC_WRITE + (uint32_t)(i));
- 240              		.loc 1 45 0 discriminator 3
- 241 0012 8823     		movs	r3, #136
- 242 0014 5B03     		lsls	r3, r3, #13
- 243 0016 E018     		adds	r0, r4, r3
- 244 0018 FFF7FEFF 		bl	DAC_cmd
- 245              	.LVL21:
-ARM GAS  /tmp/ccAldI4y.s 			page 6
-
-
+ 258              		.loc 1 45 9 discriminator 3 view .LVU36
+ 259 0018 8823     		movs	r3, #136
+ 260 001a 5B03     		lsls	r3, r3, #13
+ 261 001c E018     		adds	r0, r4, r3
+ 262 001e FFF7FEFF 		bl	DAC_cmd
+ 263              	.LVL21:
   46:Src/DAC.c     ****         DAC_cmd(DAC_CH(2) + DAC_WRITE + (uint32_t)(i));
- 246              		.loc 1 46 0 discriminator 3
- 247 001c 9023     		movs	r3, #144
- 248 001e 5B03     		lsls	r3, r3, #13
- 249 0020 E018     		adds	r0, r4, r3
- 250 0022 FFF7FEFF 		bl	DAC_cmd
- 251              	.LVL22:
+ 264              		.loc 1 46 9 discriminator 3 view .LVU37
+ 265 0022 9023     		movs	r3, #144
+ 266 0024 5B03     		lsls	r3, r3, #13
+ 267 0026 E018     		adds	r0, r4, r3
+ 268 0028 FFF7FEFF 		bl	DAC_cmd
+ 269              	.LVL22:
   47:Src/DAC.c     ****         DAC_cmd(DAC_CH(3) + DAC_WRITE + (uint32_t)(i));
- 252              		.loc 1 47 0 discriminator 3
- 253 0026 9823     		movs	r3, #152
- 254 0028 5B03     		lsls	r3, r3, #13
- 255 002a E018     		adds	r0, r4, r3
- 256 002c FFF7FEFF 		bl	DAC_cmd
- 257              	.LVL23:
+ 270              		.loc 1 47 9 discriminator 3 view .LVU38
+ 271 002c 9823     		movs	r3, #152
+ 272 002e 5B03     		lsls	r3, r3, #13
+ 273 0030 E018     		adds	r0, r4, r3
+ 274 0032 FFF7FEFF 		bl	DAC_cmd
+ 275              	.LVL23:
   48:Src/DAC.c     ****         DAC_cmd(DAC_CH(4) + DAC_WRITE + (uint32_t)(i));
- 258              		.loc 1 48 0 discriminator 3
- 259 0030 A023     		movs	r3, #160
- 260 0032 5B03     		lsls	r3, r3, #13
- 261 0034 E018     		adds	r0, r4, r3
- 262 0036 FFF7FEFF 		bl	DAC_cmd
- 263              	.LVL24:
+ 276              		.loc 1 48 9 discriminator 3 view .LVU39
+ 277 0036 A023     		movs	r3, #160
+ 278 0038 5B03     		lsls	r3, r3, #13
+ 279 003a E018     		adds	r0, r4, r3
+ 280 003c FFF7FEFF 		bl	DAC_cmd
+ 281              	.LVL24:
   49:Src/DAC.c     ****         DAC_cmd(DAC_CH(5) + DAC_WRITE + (uint32_t)(i));
- 264              		.loc 1 49 0 discriminator 3
- 265 003a A823     		movs	r3, #168
- 266 003c 5B03     		lsls	r3, r3, #13
- 267 003e E018     		adds	r0, r4, r3
- 268 0040 FFF7FEFF 		bl	DAC_cmd
- 269              	.LVL25:
+ 282              		.loc 1 49 9 discriminator 3 view .LVU40
+ 283 0040 A823     		movs	r3, #168
+ 284 0042 5B03     		lsls	r3, r3, #13
+ 285 0044 E018     		adds	r0, r4, r3
+ 286 0046 FFF7FEFF 		bl	DAC_cmd
+ 287              	.LVL25:
   50:Src/DAC.c     ****         DAC_cmd(DAC_CH(6) + DAC_WRITE + (uint32_t)(i));
- 270              		.loc 1 50 0 discriminator 3
- 271 0044 B023     		movs	r3, #176
- 272 0046 5B03     		lsls	r3, r3, #13
- 273 0048 E018     		adds	r0, r4, r3
- 274 004a FFF7FEFF 		bl	DAC_cmd
- 275              	.LVL26:
+ 288              		.loc 1 50 9 discriminator 3 view .LVU41
+ 289 004a B023     		movs	r3, #176
+ 290 004c 5B03     		lsls	r3, r3, #13
+ 291 004e E018     		adds	r0, r4, r3
+ 292 0050 FFF7FEFF 		bl	DAC_cmd
+ 293              	.LVL26:
   51:Src/DAC.c     ****         DAC_cmd(DAC_CH(7) + DAC_WRITE + (uint32_t)(i));
- 276              		.loc 1 51 0 discriminator 3
- 277 004e B823     		movs	r3, #184
- 278 0050 5B03     		lsls	r3, r3, #13
- 279 0052 E018     		adds	r0, r4, r3
- 280 0054 FFF7FEFF 		bl	DAC_cmd
- 281              	.LVL27:
- 282              	.LBB3:
+ 294              		.loc 1 51 9 discriminator 3 view .LVU42
+ 295 0054 B823     		movs	r3, #184
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccMK72ad.s 			page 7
+
+
+ 296 0056 5B03     		lsls	r3, r3, #13
+ 297 0058 E018     		adds	r0, r4, r3
+ 298 005a FFF7FEFF 		bl	DAC_cmd
+ 299              	.LVL27:
+ 300              	.LBB3:
   52:Src/DAC.c     ****         SERIAL_WRITE("0x%04x\n", i);
- 283              		.loc 1 52 0 discriminator 3
- 284 0058 6422     		movs	r2, #100
- 285 005a 0021     		movs	r1, #0
- 286 005c 01A8     		add	r0, sp, #4
- 287 005e FFF7FEFF 		bl	memset
- 288              	.LVL28:
- 289 0062 2200     		movs	r2, r4
- 290 0064 0B49     		ldr	r1, .L13
- 291 0066 01A8     		add	r0, sp, #4
- 292 0068 FFF7FEFF 		bl	sprintf
- 293              	.LVL29:
- 294 006c FA25     		movs	r5, #250
- 295 006e AD00     		lsls	r5, r5, #2
-ARM GAS  /tmp/ccAldI4y.s 			page 7
-
-
- 296 0070 82B2     		uxth	r2, r0
- 297 0072 2B00     		movs	r3, r5
- 298 0074 01A9     		add	r1, sp, #4
- 299 0076 0848     		ldr	r0, .L13+4
- 300              	.LVL30:
- 301 0078 FFF7FEFF 		bl	HAL_UART_Transmit
- 302              	.LVL31:
- 303              	.LBE3:
+ 301              		.loc 1 52 9 discriminator 3 view .LVU43
+ 302 005e 0023     		movs	r3, #0
+ 303 0060 0193     		str	r3, [sp, #4]
+ 304 0062 6022     		movs	r2, #96
+ 305 0064 0021     		movs	r1, #0
+ 306 0066 02A8     		add	r0, sp, #8
+ 307 0068 FFF7FEFF 		bl	memset
+ 308              	.LVL28:
+ 309              		.loc 1 52 9 discriminator 3 view .LVU44
+ 310 006c 2200     		movs	r2, r4
+ 311 006e 0A49     		ldr	r1, .L14
+ 312 0070 01A8     		add	r0, sp, #4
+ 313 0072 FFF7FEFF 		bl	sprintf
+ 314              	.LVL29:
+ 315              		.loc 1 52 9 discriminator 3 view .LVU45
+ 316 0076 FA25     		movs	r5, #250
+ 317 0078 AD00     		lsls	r5, r5, #2
+ 318 007a 2B00     		movs	r3, r5
+ 319 007c 0722     		movs	r2, #7
+ 320 007e 01A9     		add	r1, sp, #4
+ 321 0080 0648     		ldr	r0, .L14+4
+ 322 0082 FFF7FEFF 		bl	HAL_UART_Transmit
+ 323              	.LVL30:
+ 324              	.LBE3:
+ 325              		.loc 1 52 36 discriminator 3 view .LVU46
   53:Src/DAC.c     ****         HAL_Delay(1000);
- 304              		.loc 1 53 0 discriminator 3
- 305 007c 2800     		movs	r0, r5
- 306 007e FFF7FEFF 		bl	HAL_Delay
- 307              	.LVL32:
+ 326              		.loc 1 53 9 discriminator 3 view .LVU47
+ 327 0086 2800     		movs	r0, r5
+ 328 0088 FFF7FEFF 		bl	HAL_Delay
+ 329              	.LVL31:
   42:Src/DAC.c     ****     {
- 308              		.loc 1 42 0 discriminator 3
- 309 0082 064B     		ldr	r3, .L13+8
- 310 0084 9C46     		mov	ip, r3
- 311 0086 6444     		add	r4, r4, ip
- 312              	.LVL33:
- 313              	.L11:
+ 330              		.loc 1 42 34 discriminator 3 view .LVU48
   42:Src/DAC.c     ****     {
- 314              		.loc 1 42 0 is_stmt 0 discriminator 1
- 315 0088 054B     		ldr	r3, .L13+12
- 316 008a 9C42     		cmp	r4, r3
- 317 008c BCDD     		ble	.L12
- 318              	.LBE2:
+ 331              		.loc 1 42 36 is_stmt 0 discriminator 3 view .LVU49
+ 332 008c 044B     		ldr	r3, .L14+8
+ 333 008e 9C46     		mov	ip, r3
+ 334 0090 6444     		add	r4, r4, ip
+ 335              	.LVL32:
+  42:Src/DAC.c     ****     {
+ 336              		.loc 1 42 36 discriminator 3 view .LVU50
+ 337 0092 B8E7     		b	.L11
+ 338              	.LVL33:
+ 339              	.L13:
+  42:Src/DAC.c     ****     {
+ 340              		.loc 1 42 36 discriminator 3 view .LVU51
+ 341              	.LBE2:
   54:Src/DAC.c     ****     }
   55:Src/DAC.c     **** };
- 319              		.loc 1 55 0 is_stmt 1
- 320 008e 1BB0     		add	sp, sp, #108
- 321              		@ sp needed
- 322              	.LVL34:
- 323 0090 30BD     		pop	{r4, r5, pc}
- 324              	.L14:
- 325 0092 C046     		.align	2
- 326              	.L13:
- 327 0094 00000000 		.word	.LC1
- 328 0098 00000000 		.word	huart2
- 329 009c 33330000 		.word	13107
- 330 00a0 FFFF0000 		.word	65535
- 331              		.cfi_endproc
- 332              	.LFE287:
- 334              		.section	.text.DAC_test_val,"ax",%progbits
- 335              		.align	1
- 336              		.global	DAC_test_val
- 337              		.syntax unified
- 338              		.code	16
- 339              		.thumb_func
- 340              		.fpu softvfp
- 342              	DAC_test_val:
- 343              	.LFB288:
+ 342              		.loc 1 55 1 view .LVU52
+ 343 0094 1BB0     		add	sp, sp, #108
+ 344              		@ sp needed
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccMK72ad.s 			page 8
+
+
+ 345              	.LVL34:
+ 346              		.loc 1 55 1 view .LVU53
+ 347 0096 30BD     		pop	{r4, r5, pc}
+ 348              	.L15:
+ 349              		.align	2
+ 350              	.L14:
+ 351 0098 00000000 		.word	.LC1
+ 352 009c 00000000 		.word	huart2
+ 353 00a0 33330000 		.word	13107
+ 354              		.cfi_endproc
+ 355              	.LFE287:
+ 357              		.section	.text.DAC_test_val,"ax",%progbits
+ 358              		.align	1
+ 359              		.global	DAC_test_val
+ 360              		.syntax unified
+ 361              		.code	16
+ 362              		.thumb_func
+ 363              		.fpu softvfp
+ 365              	DAC_test_val:
+ 366              	.LVL35:
+ 367              	.LFB288:
   56:Src/DAC.c     **** 
   57:Src/DAC.c     **** void DAC_test_val(uint32_t val)
   58:Src/DAC.c     **** {
- 344              		.loc 1 58 0
- 345              		.cfi_startproc
- 346              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccAldI4y.s 			page 8
-
-
- 347              		@ frame_needed = 0, uses_anonymous_args = 0
- 348              	.LVL35:
- 349 0000 10B5     		push	{r4, lr}
- 350              	.LCFI6:
- 351              		.cfi_def_cfa_offset 8
- 352              		.cfi_offset 4, -8
- 353              		.cfi_offset 14, -4
- 354 0002 0400     		movs	r4, r0
+ 368              		.loc 1 58 1 is_stmt 1 view -0
+ 369              		.cfi_startproc
+ 370              		@ args = 0, pretend = 0, frame = 0
+ 371              		@ frame_needed = 0, uses_anonymous_args = 0
+ 372              		.loc 1 58 1 is_stmt 0 view .LVU55
+ 373 0000 10B5     		push	{r4, lr}
+ 374              	.LCFI6:
+ 375              		.cfi_def_cfa_offset 8
+ 376              		.cfi_offset 4, -8
+ 377              		.cfi_offset 14, -4
+ 378 0002 0400     		movs	r4, r0
   59:Src/DAC.c     ****     DAC_cmd(DAC_CH(0) + DAC_WRITE + val);
- 355              		.loc 1 59 0
- 356 0004 8023     		movs	r3, #128
- 357 0006 5B03     		lsls	r3, r3, #13
- 358 0008 C018     		adds	r0, r0, r3
- 359              	.LVL36:
- 360 000a FFF7FEFF 		bl	DAC_cmd
- 361              	.LVL37:
+ 379              		.loc 1 59 5 is_stmt 1 view .LVU56
+ 380 0004 8023     		movs	r3, #128
+ 381 0006 5B03     		lsls	r3, r3, #13
+ 382 0008 C018     		adds	r0, r0, r3
+ 383              	.LVL36:
+ 384              		.loc 1 59 5 is_stmt 0 view .LVU57
+ 385 000a FFF7FEFF 		bl	DAC_cmd
+ 386              	.LVL37:
   60:Src/DAC.c     ****     DAC_cmd(DAC_CH(1) + DAC_WRITE + val);
- 362              		.loc 1 60 0
- 363 000e 8823     		movs	r3, #136
- 364 0010 5B03     		lsls	r3, r3, #13
- 365 0012 E018     		adds	r0, r4, r3
- 366 0014 FFF7FEFF 		bl	DAC_cmd
- 367              	.LVL38:
+ 387              		.loc 1 60 5 is_stmt 1 view .LVU58
+ 388 000e 8823     		movs	r3, #136
+ 389 0010 5B03     		lsls	r3, r3, #13
+ 390 0012 E018     		adds	r0, r4, r3
+ 391 0014 FFF7FEFF 		bl	DAC_cmd
+ 392              	.LVL38:
   61:Src/DAC.c     ****     DAC_cmd(DAC_CH(2) + DAC_WRITE + val);
- 368              		.loc 1 61 0
- 369 0018 9023     		movs	r3, #144
- 370 001a 5B03     		lsls	r3, r3, #13
- 371 001c E018     		adds	r0, r4, r3
- 372 001e FFF7FEFF 		bl	DAC_cmd
- 373              	.LVL39:
+ 393              		.loc 1 61 5 view .LVU59
+ 394 0018 9023     		movs	r3, #144
+ 395 001a 5B03     		lsls	r3, r3, #13
+ 396 001c E018     		adds	r0, r4, r3
+ 397 001e FFF7FEFF 		bl	DAC_cmd
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccMK72ad.s 			page 9
+
+
+ 398              	.LVL39:
   62:Src/DAC.c     ****     DAC_cmd(DAC_CH(3) + DAC_WRITE + val);
- 374              		.loc 1 62 0
- 375 0022 9823     		movs	r3, #152
- 376 0024 5B03     		lsls	r3, r3, #13
- 377 0026 E018     		adds	r0, r4, r3
- 378 0028 FFF7FEFF 		bl	DAC_cmd
- 379              	.LVL40:
+ 399              		.loc 1 62 5 view .LVU60
+ 400 0022 9823     		movs	r3, #152
+ 401 0024 5B03     		lsls	r3, r3, #13
+ 402 0026 E018     		adds	r0, r4, r3
+ 403 0028 FFF7FEFF 		bl	DAC_cmd
+ 404              	.LVL40:
   63:Src/DAC.c     ****     DAC_cmd(DAC_CH(4) + DAC_WRITE + val);
- 380              		.loc 1 63 0
- 381 002c A023     		movs	r3, #160
- 382 002e 5B03     		lsls	r3, r3, #13
- 383 0030 E018     		adds	r0, r4, r3
- 384 0032 FFF7FEFF 		bl	DAC_cmd
- 385              	.LVL41:
+ 405              		.loc 1 63 5 view .LVU61
+ 406 002c A023     		movs	r3, #160
+ 407 002e 5B03     		lsls	r3, r3, #13
+ 408 0030 E018     		adds	r0, r4, r3
+ 409 0032 FFF7FEFF 		bl	DAC_cmd
+ 410              	.LVL41:
   64:Src/DAC.c     ****     DAC_cmd(DAC_CH(5) + DAC_WRITE + val);
- 386              		.loc 1 64 0
- 387 0036 A823     		movs	r3, #168
- 388 0038 5B03     		lsls	r3, r3, #13
- 389 003a E018     		adds	r0, r4, r3
- 390 003c FFF7FEFF 		bl	DAC_cmd
- 391              	.LVL42:
+ 411              		.loc 1 64 5 view .LVU62
+ 412 0036 A823     		movs	r3, #168
+ 413 0038 5B03     		lsls	r3, r3, #13
+ 414 003a E018     		adds	r0, r4, r3
+ 415 003c FFF7FEFF 		bl	DAC_cmd
+ 416              	.LVL42:
   65:Src/DAC.c     ****     DAC_cmd(DAC_CH(6) + DAC_WRITE + val);
- 392              		.loc 1 65 0
- 393 0040 B023     		movs	r3, #176
- 394 0042 5B03     		lsls	r3, r3, #13
- 395 0044 E018     		adds	r0, r4, r3
- 396 0046 FFF7FEFF 		bl	DAC_cmd
-ARM GAS  /tmp/ccAldI4y.s 			page 9
-
-
- 397              	.LVL43:
+ 417              		.loc 1 65 5 view .LVU63
+ 418 0040 B023     		movs	r3, #176
+ 419 0042 5B03     		lsls	r3, r3, #13
+ 420 0044 E018     		adds	r0, r4, r3
+ 421 0046 FFF7FEFF 		bl	DAC_cmd
+ 422              	.LVL43:
   66:Src/DAC.c     ****     DAC_cmd(DAC_CH(7) + DAC_WRITE + val);
- 398              		.loc 1 66 0
- 399 004a B823     		movs	r3, #184
- 400 004c 5B03     		lsls	r3, r3, #13
- 401 004e E018     		adds	r0, r4, r3
- 402 0050 FFF7FEFF 		bl	DAC_cmd
- 403              	.LVL44:
+ 423              		.loc 1 66 5 view .LVU64
+ 424 004a B823     		movs	r3, #184
+ 425 004c 5B03     		lsls	r3, r3, #13
+ 426 004e E018     		adds	r0, r4, r3
+ 427 0050 FFF7FEFF 		bl	DAC_cmd
+ 428              	.LVL44:
   67:Src/DAC.c     **** };...
- 404              		.loc 1 67 0
- 405              		@ sp needed
- 406              	.LVL45:
- 407 0054 10BD     		pop	{r4, pc}
- 408              		.cfi_endproc
- 409              	.LFE288:
- 411              		.section	.rodata.DAC_test.str1.4,"aMS",%progbits,1
- 412              		.align	2
- 413              	.LC1:
- 414 0000 30782530 		.ascii	"0x%04x\012\000"
- 414      34780A00 
- 415              		.text
- 416              	.Letext0:
- 417              		.file 2 "/usr/include/newlib/machine/_default_types.h"
- 418              		.file 3 "/usr/include/newlib/sys/_stdint.h"
- 419              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
- 420              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
- 421              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
- 422              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
- 423              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
- 424              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
- 425              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
- 426              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
- 427              		.file 12 "/usr/include/newlib/sys/lock.h"
- 428              		.file 13 "/usr/include/newlib/sys/_types.h"
- 429              		.file 14 "/usr/lib/gcc/arm-none-eabi/7.3.1/include/stddef.h"
- 430              		.file 15 "/usr/include/newlib/sys/reent.h"
- 431              		.file 16 "Inc/usart.h"
- 432              		.file 17 "Inc/state.h"
- 433              		.file 18 "Inc/spi.h"
- 434              		.file 19 "/usr/include/newlib/stdio.h"
- 435              		.file 20 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
- 436              		.file 21 "<built-in>"
-ARM GAS  /tmp/ccAldI4y.s 			page 10
+ 429              		.loc 1 67 1 is_stmt 0 view .LVU65
+ 430              		@ sp needed
+ 431              	.LVL45:
+ 432              		.loc 1 67 1 view .LVU66
+ 433 0054 10BD     		pop	{r4, pc}
+ 434              		.cfi_endproc
+ 435              	.LFE288:
+ 437              		.text
+ 438              	.Letext0:
+ 439              		.file 2 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 440              		.file 3 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 441              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
+ 442              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
+ 443              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+ 444              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+ 445              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
+ 446              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
+ 447              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
+ 448              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
+ 449              		.file 12 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\lock.h"
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccMK72ad.s 			page 10
+
+
+ 450              		.file 13 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_types.h"
+ 451              		.file 14 "c:\\gnu tools arm embedded\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\stddef.h"
+ 452              		.file 15 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\reent.h"
+ 453              		.file 16 "Inc/usart.h"
+ 454              		.file 17 "Inc/state.h"
+ 455              		.file 18 "Inc/spi.h"
+ 456              		.file 19 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\stdio.h"
+ 457              		.file 20 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
+ 458              		.file 21 "<built-in>"
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccMK72ad.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 DAC.c
-     /tmp/ccAldI4y.s:16     .text.DAC_SPI_WRITE_24:00000000 $t
-     /tmp/ccAldI4y.s:23     .text.DAC_SPI_WRITE_24:00000000 DAC_SPI_WRITE_24
-     /tmp/ccAldI4y.s:63     .text.DAC_SPI_WRITE_24:00000020 $d
-     /tmp/ccAldI4y.s:68     .text.DAC_reset:00000000 $t
-     /tmp/ccAldI4y.s:75     .text.DAC_reset:00000000 DAC_reset
-     /tmp/ccAldI4y.s:123    .text.DAC_reset:00000038 $d
-     /tmp/ccAldI4y.s:129    .text.DAC_cmd:00000000 $t
-     /tmp/ccAldI4y.s:136    .text.DAC_cmd:00000000 DAC_cmd
-     /tmp/ccAldI4y.s:200    .text.DAC_cmd:0000004c $d
-     /tmp/ccAldI4y.s:205    .text.DAC_test:00000000 $t
-     /tmp/ccAldI4y.s:212    .text.DAC_test:00000000 DAC_test
-     /tmp/ccAldI4y.s:327    .text.DAC_test:00000094 $d
-     /tmp/ccAldI4y.s:335    .text.DAC_test_val:00000000 $t
-     /tmp/ccAldI4y.s:342    .text.DAC_test_val:00000000 DAC_test_val
-     /tmp/ccAldI4y.s:412    .rodata.DAC_test.str1.4:00000000 $d
+C:\Users\matil\AppData\Local\Temp\ccMK72ad.s:16     .text.DAC_SPI_WRITE_24:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccMK72ad.s:24     .text.DAC_SPI_WRITE_24:00000000 DAC_SPI_WRITE_24
+C:\Users\matil\AppData\Local\Temp\ccMK72ad.s:67     .text.DAC_SPI_WRITE_24:00000020 $d
+C:\Users\matil\AppData\Local\Temp\ccMK72ad.s:72     .text.DAC_reset:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccMK72ad.s:79     .text.DAC_reset:00000000 DAC_reset
+C:\Users\matil\AppData\Local\Temp\ccMK72ad.s:127    .text.DAC_reset:00000038 $d
+C:\Users\matil\AppData\Local\Temp\ccMK72ad.s:133    .text.DAC_cmd:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccMK72ad.s:140    .text.DAC_cmd:00000000 DAC_cmd
+C:\Users\matil\AppData\Local\Temp\ccMK72ad.s:207    .text.DAC_cmd:0000004c $d
+C:\Users\matil\AppData\Local\Temp\ccMK72ad.s:212    .rodata.DAC_test.str1.4:00000000 $d
+C:\Users\matil\AppData\Local\Temp\ccMK72ad.s:216    .text.DAC_test:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccMK72ad.s:223    .text.DAC_test:00000000 DAC_test
+C:\Users\matil\AppData\Local\Temp\ccMK72ad.s:351    .text.DAC_test:00000098 $d
+C:\Users\matil\AppData\Local\Temp\ccMK72ad.s:358    .text.DAC_test_val:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccMK72ad.s:365    .text.DAC_test_val:00000000 DAC_test_val
 
 UNDEFINED SYMBOLS
 HAL_SPI_Transmit

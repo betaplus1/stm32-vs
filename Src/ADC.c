@@ -97,12 +97,6 @@ void ADC_update()
         State.ADC_Values[State.ADC_Channel] = (uint32_t)ADC_SPI_READ_24();
         // ADC_SPI_READ_24();
         // State.ADC_Values[State.ADC_Channel] = 100;
-
-        if (State.ADC_Channel == ADC_T_CH)
-        {
-            uint64_t voltage_uV = (((uint64_t)State.ADC_Values[ADC_T_CH] * 1800000) / 0xffffff);
-            State.temperature = -45000000 - 175000000 / 8 + 17500 * voltage_uV / 264;
-        }
     }
     if (State.ADC_Channel == 15)
     {
@@ -124,7 +118,7 @@ void ADC_config()
     ADC_CMD(ADC_WRITE, ADC_SETUPCONx_REG(0));
     ADC_SPI_WRITE_16(ADC_SETUP_BI_UNIPOLAR0 + ADC_SETUP_REF_BUF + ADC_SETUP_AIN_BUF);
     ADC_CMD(ADC_WRITE, ADC_FILTCONx_REG(0));
-    ADC_SPI_WRITE_16(ADC_SPS);
+    ADC_SPI_WRITE_16(ADC_SPS_200);
     State.ADC_Channel = ADC_DEFAULT_CH;
 }
 

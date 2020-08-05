@@ -108,8 +108,8 @@ void cmd()
     }
     case cmd_temperature:
     {
-        SERIAL_WRITE("%i.", State.temperature / 1000000);             //-66.875 to +52.443 C
-        SERIAL_WRITE("%03u *C\n", (State.temperature / 1000) % 1000); //-66.875 to +52.443 C
+        SERIAL_WRITE("%i.", Temperature() / 1000000);             //-66.875 to +52.443 C
+        SERIAL_WRITE("%03u *C\n", (Temperature() / 1000) % 1000); //-66.875 to +52.443 C
         State.cmd = 0;
         break;
     }
@@ -143,41 +143,41 @@ void cmd()
         SERIAL_WRITE("%3i.", Phase(ADC_PD4_Phase_CH) / 1000);
         SERIAL_WRITE("%03lu deg\t\t\n", Phase(ADC_PD4_Phase_CH) % 1000);
 
-        // SERIAL_WRITE("PD0 Rel Power:\t\t");
-        // SERIAL_WRITE("%3li.", Relative_Power(ADC_PD0_Power_CH) / 1000);
-        // SERIAL_WRITE("%03u dB\t\t\n", abs(Relative_Power(ADC_PD0_Power_CH)) % 1000);
+        SERIAL_WRITE("PD0 Rel Power:\t\t");
+        SERIAL_WRITE("%3li.", Relative_Power(ADC_PD0_Power_CH) / 1000);
+        SERIAL_WRITE("%03u dB\t\t\n", abs(Relative_Power(ADC_PD0_Power_CH)) % 1000);
 
-        // SERIAL_WRITE("PD1 Rel Power:\t\t");
-        // SERIAL_WRITE("%3li.", Relative_Power(ADC_PD1_Power_CH) / 1000);
-        // SERIAL_WRITE("%03u dB\t\t\n", abs(Relative_Power(ADC_PD1_Power_CH)) % 1000);
+        SERIAL_WRITE("PD1 Rel Power:\t\t");
+        SERIAL_WRITE("%3li.", Relative_Power(ADC_PD1_Power_CH) / 1000);
+        SERIAL_WRITE("%03u dB\t\t\n", abs(Relative_Power(ADC_PD1_Power_CH)) % 1000);
 
-        // SERIAL_WRITE("PD2 Rel Power:\t\t");
-        // SERIAL_WRITE("%3li.", Relative_Power(ADC_PD2_Power_CH) / 1000);
-        // SERIAL_WRITE("%03u dB\t\t\n", abs(Relative_Power(ADC_PD2_Power_CH)) % 1000);
+        SERIAL_WRITE("PD2 Rel Power:\t\t");
+        SERIAL_WRITE("%3li.", Relative_Power(ADC_PD2_Power_CH) / 1000);
+        SERIAL_WRITE("%03u dB\t\t\n", abs(Relative_Power(ADC_PD2_Power_CH)) % 1000);
 
-        // SERIAL_WRITE("PD3 Rel Power:\t\t");
-        // SERIAL_WRITE("%3li.", Relative_Power(ADC_PD3_Power_CH) / 1000);
-        // SERIAL_WRITE("%03u dB\t\t\n", abs(Relative_Power(ADC_PD3_Power_CH)) % 1000);
+        SERIAL_WRITE("PD3 Rel Power:\t\t");
+        SERIAL_WRITE("%3li.", Relative_Power(ADC_PD3_Power_CH) / 1000);
+        SERIAL_WRITE("%03u dB\t\t\n", abs(Relative_Power(ADC_PD3_Power_CH)) % 1000);
 
-        // SERIAL_WRITE("PD4 Rel Power:\t\t");
-        // SERIAL_WRITE("%3li.", Relative_Power(ADC_PD4_Power_CH) / 1000);
-        // SERIAL_WRITE("%03u dB\t\t\n", abs(Relative_Power(ADC_PD4_Power_CH)) % 1000);
+        SERIAL_WRITE("PD4 Rel Power:\t\t");
+        SERIAL_WRITE("%3li.", Relative_Power(ADC_PD4_Power_CH) / 1000);
+        SERIAL_WRITE("%03u dB\t\t\n", abs(Relative_Power(ADC_PD4_Power_CH)) % 1000);
 
-        // SERIAL_WRITE("PWD0 Power:\t\t");
-        // SERIAL_WRITE("%3li.", RMS_Power(ADC_PWD0_Power_CH) / 1000);
-        // SERIAL_WRITE("%03u dBm\t\t\n", abs(RMS_Power(ADC_PWD0_Power_CH)) % 1000);
+        SERIAL_WRITE("PWD0 Power:\t\t");
+        SERIAL_WRITE("%3li.", RMS_Power(ADC_PWD0_Power_CH) / 1000);
+        SERIAL_WRITE("%03u dBm\t\t\n", abs(RMS_Power(ADC_PWD0_Power_CH)) % 1000);
 
-        // SERIAL_WRITE("PWD1 Power:\t\t");
-        // SERIAL_WRITE("%3li.", RMS_Power(ADC_PWD1_Power_CH) / 1000);
-        // SERIAL_WRITE("%03u dBm\t\t\n", abs(RMS_Power(ADC_PWD1_Power_CH)) % 1000);
+        SERIAL_WRITE("PWD1 Power:\t\t");
+        SERIAL_WRITE("%3li.", RMS_Power(ADC_PWD1_Power_CH) / 1000);
+        SERIAL_WRITE("%03u dBm\t\t\n", abs(RMS_Power(ADC_PWD1_Power_CH)) % 1000);
 
-        // SERIAL_WRITE("PWD2 Power:\t\t");
-        // SERIAL_WRITE("%3li.", RMS_Power(ADC_PWD2_Power_CH) / 1000);
-        // SERIAL_WRITE("%03u dBm\t\t\n", abs(RMS_Power(ADC_PWD2_Power_CH)) % 1000);
+        SERIAL_WRITE("PWD2 Power:\t\t");
+        SERIAL_WRITE("%3li.", RMS_Power(ADC_PWD2_Power_CH) / 1000);
+        SERIAL_WRITE("%03u dBm\t\t\n", abs(RMS_Power(ADC_PWD2_Power_CH)) % 1000);
 
-        // SERIAL_WRITE("PWD3 Power:\t\t");
-        // SERIAL_WRITE("%3li.", RMS_Power(ADC_PWD3_Power_CH) / 1000);
-        // SERIAL_WRITE("%03u dBm\t\t\n", abs(RMS_Power(ADC_PWD3_Power_CH)) % 1000);
+        SERIAL_WRITE("PWD3 Power:\t\t");
+        SERIAL_WRITE("%3li.", RMS_Power(ADC_PWD3_Power_CH) / 1000);
+        SERIAL_WRITE("%03u dBm\t\t\n", abs(RMS_Power(ADC_PWD3_Power_CH)) % 1000);
         State.cmd = 0;
 
         break;

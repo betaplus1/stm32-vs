@@ -126,17 +126,16 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  DAC_cmd(RF_PS_704_OFFSET + DAC_WRITE + 0xfffa);
+
+  DAC_cmd(RF_ATT_352_FINE + DAC_WRITE + 0xffff);
+  DAC_cmd(RF_ATT_352_OFFSET + DAC_WRITE + 0xffff);
+  DAC_cmd(RF_ATT_704_FINE + DAC_WRITE + 0xffff);
+  DAC_cmd(RF_ATT_704_OFFSET + DAC_WRITE + 0xffff);
+
   ADC_update();
   PID_Init();
   Calib();
 
-    // ADC_DATA_READY_EXTI_deInit();
-    // HAL_SPI_MspInit(&hspi2);
-    // ADC_CMD(ADC_WRITE, ADC_FILTCONx_REG(0));
-    // ADC_SPI_WRITE_16(ADC_SPS_16);
-    // HAL_SPI_MspDeInit(&hspi2);
-    // ADC_DATA_READY_EXTI_Init();
   uint32_t counter = 0;
   while (1)
   {
@@ -145,35 +144,39 @@ int main(void)
       cmd();
     };
     if (State.ADC_Updated)
-    { 
+    {
       counter++;
-      Filter();      
-      PID();
-      if(counter%10 == 1){
+      Filter();
+
+      if (counter % (FilterLength) == 0)
+      {
+        if (State.ADC_Filter_Valid)
+        {
+          PID();
+        }
+
         SERIAL_WRITE("\n\n")
-        SERIAL_WRITE("PD1 %i\n",State.PD1_Slope);
-        SERIAL_WRITE("PD2 %i\n",State.PD2_Slope);
-        SERIAL_WRITE("PD3 %i\n",State.PD3_Slope);
-        SERIAL_WRITE("PD4 %i\n",State.PD4_Slope);
-        SERIAL_WRITE("PID_352_P_error %i\n",State.PID_352_P_error);
-        SERIAL_WRITE("PID_704_P_error %i\n",State.PID_704_P_error);
-  
-        // SERIAL_WRITE("PD0 Phase:\t\t");
-        // SERIAL_WRITE("%3i.", Phase(ADC_PD0_Phase_CH) / 1000);
-        // SERIAL_WRITE("%03li deg\t\t\n", Phase(ADC_PD0_Phase_CH) % 1000);
-        SERIAL_WRITE("PD1+PD2 SETPOINT: %li\n",State.PD1_PD2_SetPoint);
-             SERIAL_WRITE("PID 704 Output: %li\n",State.PID_704_Output);
+        // SERIAL_WRITE("PD1 %i\n", State.PD1_Slope);
+        // SERIAL_WRITE("PD2 %i\n", State.PD2_Slope);
+        // SERIAL_WRITE("PD3 %i\n", State.PD3_Slope);
+        // SERIAL_WRITE("PD4 %i\n", State.PD4_Slope);
+
+        SERIAL_WRITE("PD1+PD2 SETPOINT: %li\n", State.PD1_PD2_SetPoint);
+        SERIAL_WRITE("PID 704 Output: %li\n", State.PID_704_Output);
+        SERIAL_WRITE("PID_704_P_error %i\n", State.PID_704_P_error);
+
         SERIAL_WRITE("PD1 Phase:\t\t");
         SERIAL_WRITE("%3i.", Phase(ADC_PD1_Phase_CH) / 1000);
         SERIAL_WRITE("%03li deg\t\t\n", Phase(ADC_PD1_Phase_CH) % 1000);
 
         SERIAL_WRITE("PD2 Phase:\t\t");
         SERIAL_WRITE("%3i.", Phase(ADC_PD2_Phase_CH) / 1000);
-        SERIAL_WRITE("%03li deg\t\t\n", Phase(ADC_PD2_Phase_CH) % 1000);
+        SERIAL_WRITE("%03li deg\t\t\n\n", Phase(ADC_PD2_Phase_CH) % 1000);
 
-        SERIAL_WRITE("PD3+PD4 SETPOINT: %li\n",State.PD3_PD4_SetPoint);
-        SERIAL_WRITE("PID 352 Output: %li\n",State.PID_352_Output);
-   
+        SERIAL_WRITE("PD3+PD4 SETPOINT: %li\n", State.PD3_PD4_SetPoint);
+        SERIAL_WRITE("PID 352 Output: %li\n", State.PID_352_Output);
+        SERIAL_WRITE("PID_352_P_error %i\n", State.PID_352_P_error);
+
         SERIAL_WRITE("PD3 Phase:\t\t");
         SERIAL_WRITE("%3i.", Phase(ADC_PD3_Phase_CH) / 1000);
         SERIAL_WRITE("%03li deg\t\t\n", Phase(ADC_PD3_Phase_CH) % 1000);

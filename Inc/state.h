@@ -1,12 +1,12 @@
 #ifndef __STATE
 #define __STATE
 
-#define FilterLength 1
+#define FilterLength 16
 typedef struct state
 {
     int uptime;
     long int temperature;
-    
+
     uint8_t error;
     uint8_t cmd;
     uint8_t UART_RX_BUFF[UART_RX_BUFFER_LENGTH];
@@ -24,20 +24,20 @@ typedef struct state
     int8_t PD3_Slope;
     int8_t PD4_Slope;
     int64_t PD1_PD2_SetPoint;
-    int64_t PD1_PD2_Offset;
+    uint32_t PD1_PD2_Offset; //offset dac value
     int64_t PD1_PD2_MSE;
     int64_t PD3_PD4_SetPoint;
-    int64_t PD3_PD4_Offset;
+    uint32_t PD3_PD4_Offset; //offset dac value
     int64_t PD3_PD4_MSE;
 
-    int64_t PID_352_Output;
+    uint32_t PID_352_Output;
     int64_t PID_352_P;
     int64_t PID_352_I;
     int64_t PID_352_T;
     int64_t PID_352_P_error;
     int64_t PID_352_I_error;
 
-    int64_t PID_704_Output;
+    uint32_t PID_704_Output;
     int64_t PID_704_P;
     int64_t PID_704_I;
     int64_t PID_704_T;

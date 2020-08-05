@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccH7iQ9o.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -20,13 +20,15 @@ ARM GAS  /tmp/ccH7iQ9o.s 			page 1
   17              		.section	.text.Voltage,"ax",%progbits
   18              		.align	1
   19              		.global	Voltage
-  20              		.syntax unified
-  21              		.code	16
-  22              		.thumb_func
-  23              		.fpu softvfp
-  25              	Voltage:
-  26              	.LFB284:
-  27              		.file 1 "Src/PID.c"
+  20              		.arch armv6s-m
+  21              		.syntax unified
+  22              		.code	16
+  23              		.thumb_func
+  24              		.fpu softvfp
+  26              	Voltage:
+  27              	.LVL0:
+  28              	.LFB284:
+  29              		.file 1 "Src/PID.c"
    1:Src/PID.c     **** #include "usart.h"
    2:Src/PID.c     **** #include <stdio.h>
    3:Src/PID.c     **** #include "state.h"
@@ -40,2016 +42,2500 @@ ARM GAS  /tmp/ccH7iQ9o.s 			page 1
   11:Src/PID.c     **** //Returns voltage in [uV] measured by adc channel ADC_CH.
   12:Src/PID.c     **** uint64_t Voltage(uint8_t ADC_CH)
   13:Src/PID.c     **** {
-  28              		.loc 1 13 0
-  29              		.cfi_startproc
-  30              		@ args = 0, pretend = 0, frame = 0
-  31              		@ frame_needed = 0, uses_anonymous_args = 0
-  32              	.LVL0:
-  33 0000 10B5     		push	{r4, lr}
-  34              	.LCFI0:
-  35              		.cfi_def_cfa_offset 8
-  36              		.cfi_offset 4, -8
-  37              		.cfi_offset 14, -4
+  30              		.loc 1 13 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		.loc 1 13 1 is_stmt 0 view .LVU1
+  35 0000 10B5     		push	{r4, lr}
+  36              	.LCFI0:
+  37              		.cfi_def_cfa_offset 8
+  38              		.cfi_offset 4, -8
+  39              		.cfi_offset 14, -4
   14:Src/PID.c     ****     return (((uint64_t)State.ADC_ValuesFiltered[ADC_CH] * 1800000) / 0xffffff);
-  38              		.loc 1 14 0
-  39 0002 3230     		adds	r0, r0, #50
-  40              	.LVL1:
-  41 0004 8000     		lsls	r0, r0, #2
-  42 0006 064B     		ldr	r3, .L2
-  43 0008 1818     		adds	r0, r3, r0
-  44 000a 4068     		ldr	r0, [r0, #4]
-ARM GAS  /tmp/ccH7iQ9o.s 			page 2
+  40              		.loc 1 14 5 is_stmt 1 view .LVU2
+  41              		.loc 1 14 48 is_stmt 0 view .LVU3
+  42 0002 2330     		adds	r0, r0, #35
+  43              	.LVL1:
+  44              		.loc 1 14 48 view .LVU4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 2
 
 
-  45 000c 054A     		ldr	r2, .L2+4
-  46 000e 0023     		movs	r3, #0
-  47 0010 0021     		movs	r1, #0
-  48 0012 FFF7FEFF 		bl	__aeabi_lmul
-  49              	.LVL2:
-  50 0016 044A     		ldr	r2, .L2+8
-  51 0018 0023     		movs	r3, #0
-  52 001a FFF7FEFF 		bl	__aeabi_uldivmod
-  53              	.LVL3:
+  45 0004 FF30     		adds	r0, r0, #255
+  46 0006 8000     		lsls	r0, r0, #2
+  47 0008 064B     		ldr	r3, .L2
+  48 000a 1818     		adds	r0, r3, r0
+  49 000c 4068     		ldr	r0, [r0, #4]
+  50              		.loc 1 14 57 view .LVU5
+  51 000e 064A     		ldr	r2, .L2+4
+  52 0010 0023     		movs	r3, #0
+  53 0012 0021     		movs	r1, #0
+  54 0014 FFF7FEFF 		bl	__aeabi_lmul
+  55              	.LVL2:
+  56              		.loc 1 14 68 view .LVU6
+  57 0018 044A     		ldr	r2, .L2+8
+  58 001a 0023     		movs	r3, #0
+  59 001c FFF7FEFF 		bl	__aeabi_uldivmod
+  60              	.LVL3:
   15:Src/PID.c     **** };
-  54              		.loc 1 15 0
-  55              		@ sp needed
-  56 001e 10BD     		pop	{r4, pc}
-  57              	.L3:
-  58              		.align	2
-  59              	.L2:
-  60 0020 00000000 		.word	State
-  61 0024 40771B00 		.word	1800000
-  62 0028 FFFFFF00 		.word	16777215
-  63              		.cfi_endproc
-  64              	.LFE284:
-  66              		.section	.text.Phase,"ax",%progbits
-  67              		.align	1
-  68              		.global	Phase
-  69              		.syntax unified
-  70              		.code	16
-  71              		.thumb_func
-  72              		.fpu softvfp
-  74              	Phase:
-  75              	.LFB285:
+  61              		.loc 1 15 1 view .LVU7
+  62              		@ sp needed
+  63 0020 10BD     		pop	{r4, pc}
+  64              	.L3:
+  65 0022 C046     		.align	2
+  66              	.L2:
+  67 0024 00000000 		.word	State
+  68 0028 40771B00 		.word	1800000
+  69 002c FFFFFF00 		.word	16777215
+  70              		.cfi_endproc
+  71              	.LFE284:
+  73              		.section	.text.Phase,"ax",%progbits
+  74              		.align	1
+  75              		.global	Phase
+  76              		.syntax unified
+  77              		.code	16
+  78              		.thumb_func
+  79              		.fpu softvfp
+  81              	Phase:
+  82              	.LVL4:
+  83              	.LFB285:
   16:Src/PID.c     **** 
   17:Src/PID.c     **** //Returns Phase absolute value in [deg e-3] measured by adc channel ADC_CH.
   18:Src/PID.c     **** uint64_t Phase(uint8_t ADC_CH)
   19:Src/PID.c     **** {
-  76              		.loc 1 19 0
-  77              		.cfi_startproc
-  78              		@ args = 0, pretend = 0, frame = 0
-  79              		@ frame_needed = 0, uses_anonymous_args = 0
-  80              	.LVL4:
-  81 0000 10B5     		push	{r4, lr}
-  82              	.LCFI1:
-  83              		.cfi_def_cfa_offset 8
-  84              		.cfi_offset 4, -8
-  85              		.cfi_offset 14, -4
-  20:Src/PID.c     ****     return(180000 - Voltage(ADC_CH) / 10);
-  86              		.loc 1 20 0
-  87 0002 FFF7FEFF 		bl	Voltage
-  88              	.LVL5:
-  89 0006 0A22     		movs	r2, #10
-  90 0008 0023     		movs	r3, #0
-  91 000a FFF7FEFF 		bl	__aeabi_uldivmod
-  92              	.LVL6:
-  93 000e 034A     		ldr	r2, .L5
-  94 0010 0023     		movs	r3, #0
-  95 0012 121A     		subs	r2, r2, r0
-  96 0014 8B41     		sbcs	r3, r3, r1
-  97 0016 1000     		movs	r0, r2
-ARM GAS  /tmp/ccH7iQ9o.s 			page 3
+  84              		.loc 1 19 1 is_stmt 1 view -0
+  85              		.cfi_startproc
+  86              		@ args = 0, pretend = 0, frame = 0
+  87              		@ frame_needed = 0, uses_anonymous_args = 0
+  88              		.loc 1 19 1 is_stmt 0 view .LVU9
+  89 0000 10B5     		push	{r4, lr}
+  90              	.LCFI1:
+  91              		.cfi_def_cfa_offset 8
+  92              		.cfi_offset 4, -8
+  93              		.cfi_offset 14, -4
+  20:Src/PID.c     ****     return (180000 - Voltage(ADC_CH) / 10);
+  94              		.loc 1 20 5 is_stmt 1 view .LVU10
+  95              		.loc 1 20 22 is_stmt 0 view .LVU11
+  96 0002 FFF7FEFF 		bl	Voltage
+  97              	.LVL5:
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 3
 
 
-  98 0018 1900     		movs	r1, r3
+  98              		.loc 1 20 38 view .LVU12
+  99 0006 0A22     		movs	r2, #10
+ 100 0008 0023     		movs	r3, #0
+ 101 000a FFF7FEFF 		bl	__aeabi_uldivmod
+ 102              	.LVL6:
+ 103              		.loc 1 20 20 view .LVU13
+ 104 000e 034A     		ldr	r2, .L5
+ 105 0010 0023     		movs	r3, #0
+ 106 0012 121A     		subs	r2, r2, r0
+ 107 0014 8B41     		sbcs	r3, r3, r1
+ 108 0016 1000     		movs	r0, r2
+ 109 0018 1900     		movs	r1, r3
   21:Src/PID.c     **** };
-  99              		.loc 1 21 0
- 100              		@ sp needed
- 101 001a 10BD     		pop	{r4, pc}
- 102              	.L6:
- 103              		.align	2
- 104              	.L5:
- 105 001c 20BF0200 		.word	180000
- 106              		.cfi_endproc
- 107              	.LFE285:
- 109              		.section	.text.Temperature,"ax",%progbits
- 110              		.align	1
- 111              		.global	Temperature
- 112              		.syntax unified
- 113              		.code	16
- 114              		.thumb_func
- 115              		.fpu softvfp
- 117              	Temperature:
- 118              	.LFB286:
+ 110              		.loc 1 21 1 view .LVU14
+ 111              		@ sp needed
+ 112 001a 10BD     		pop	{r4, pc}
+ 113              	.L6:
+ 114              		.align	2
+ 115              	.L5:
+ 116 001c 20BF0200 		.word	180000
+ 117              		.cfi_endproc
+ 118              	.LFE285:
+ 120              		.section	.text.Temperature,"ax",%progbits
+ 121              		.align	1
+ 122              		.global	Temperature
+ 123              		.syntax unified
+ 124              		.code	16
+ 125              		.thumb_func
+ 126              		.fpu softvfp
+ 128              	Temperature:
+ 129              	.LFB286:
   22:Src/PID.c     **** 
-  23:Src/PID.c     **** //Returns Temperature in [deg C e-3] measured by adc channel ADC_CH.
-  24:Src/PID.c     **** int64_t Temperature(uint8_t ADC_CH)
+  23:Src/PID.c     **** //Returns Temperature in [deg C e-3] measured by adc thermometer channel.
+  24:Src/PID.c     **** int64_t Temperature()
   25:Src/PID.c     **** {
- 119              		.loc 1 25 0
- 120              		.cfi_startproc
- 121              		@ args = 0, pretend = 0, frame = 0
- 122              		@ frame_needed = 0, uses_anonymous_args = 0
- 123              	.LVL7:
- 124 0000 10B5     		push	{r4, lr}
- 125              	.LCFI2:
- 126              		.cfi_def_cfa_offset 8
- 127              		.cfi_offset 4, -8
- 128              		.cfi_offset 14, -4
-  26:Src/PID.c     ****     return(-45000000 - 175000000 / 8 + 17500 * Voltage(ADC_T_CH) / 264);
- 129              		.loc 1 26 0
- 130 0002 0720     		movs	r0, #7
- 131              	.LVL8:
- 132 0004 FFF7FEFF 		bl	Voltage
- 133              	.LVL9:
- 134 0008 074A     		ldr	r2, .L8
- 135 000a 0023     		movs	r3, #0
- 136 000c FFF7FEFF 		bl	__aeabi_lmul
- 137              	.LVL10:
- 138 0010 8422     		movs	r2, #132
- 139 0012 5200     		lsls	r2, r2, #1
- 140 0014 0023     		movs	r3, #0
- 141 0016 FFF7FEFF 		bl	__aeabi_uldivmod
- 142              	.LVL11:
- 143 001a 044A     		ldr	r2, .L8+4
- 144 001c 0123     		movs	r3, #1
- 145 001e 5B42     		rsbs	r3, r3, #0
- 146 0020 8018     		adds	r0, r0, r2
- 147 0022 5941     		adcs	r1, r1, r3
+ 130              		.loc 1 25 1 is_stmt 1 view -0
+ 131              		.cfi_startproc
+ 132              		@ args = 0, pretend = 0, frame = 0
+ 133              		@ frame_needed = 0, uses_anonymous_args = 0
+ 134 0000 10B5     		push	{r4, lr}
+ 135              	.LCFI2:
+ 136              		.cfi_def_cfa_offset 8
+ 137              		.cfi_offset 4, -8
+ 138              		.cfi_offset 14, -4
+  26:Src/PID.c     ****     return (-45000000 - 175000000 / 8 + 17500 * Voltage(ADC_T_CH) / 264);
+ 139              		.loc 1 26 5 view .LVU16
+ 140              		.loc 1 26 49 is_stmt 0 view .LVU17
+ 141 0002 0720     		movs	r0, #7
+ 142 0004 FFF7FEFF 		bl	Voltage
+ 143              	.LVL7:
+ 144              		.loc 1 26 47 view .LVU18
+ 145 0008 074A     		ldr	r2, .L8
+ 146 000a 0023     		movs	r3, #0
+ 147 000c FFF7FEFF 		bl	__aeabi_lmul
+ 148              	.LVL8:
+ 149              		.loc 1 26 67 view .LVU19
+ 150 0010 8422     		movs	r2, #132
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 4
+
+
+ 151 0012 5200     		lsls	r2, r2, #1
+ 152 0014 0023     		movs	r3, #0
+ 153 0016 FFF7FEFF 		bl	__aeabi_uldivmod
+ 154              	.LVL9:
+ 155              		.loc 1 26 39 view .LVU20
+ 156 001a 044A     		ldr	r2, .L8+4
+ 157 001c 0123     		movs	r3, #1
+ 158 001e 5B42     		rsbs	r3, r3, #0
+ 159 0020 8018     		adds	r0, r0, r2
+ 160 0022 5941     		adcs	r1, r1, r3
   27:Src/PID.c     **** };
- 148              		.loc 1 27 0
- 149              		@ sp needed
-ARM GAS  /tmp/ccH7iQ9o.s 			page 4
-
-
- 150 0024 10BD     		pop	{r4, pc}
- 151              	.L9:
- 152 0026 C046     		.align	2
- 153              	.L8:
- 154 0028 5C440000 		.word	17500
- 155 002c 889103FC 		.word	-66875000
- 156              		.cfi_endproc
- 157              	.LFE286:
- 159              		.section	.text.Relative_Power,"ax",%progbits
- 160              		.align	1
- 161              		.global	Relative_Power
- 162              		.syntax unified
- 163              		.code	16
- 164              		.thumb_func
- 165              		.fpu softvfp
- 167              	Relative_Power:
- 168              	.LFB287:
+ 161              		.loc 1 27 1 view .LVU21
+ 162              		@ sp needed
+ 163 0024 10BD     		pop	{r4, pc}
+ 164              	.L9:
+ 165 0026 C046     		.align	2
+ 166              	.L8:
+ 167 0028 5C440000 		.word	17500
+ 168 002c 889103FC 		.word	-66875000
+ 169              		.cfi_endproc
+ 170              	.LFE286:
+ 172              		.section	.text.Relative_Power,"ax",%progbits
+ 173              		.align	1
+ 174              		.global	Relative_Power
+ 175              		.syntax unified
+ 176              		.code	16
+ 177              		.thumb_func
+ 178              		.fpu softvfp
+ 180              	Relative_Power:
+ 181              	.LVL10:
+ 182              	.LFB287:
   28:Src/PID.c     **** 
   29:Src/PID.c     **** //Returns Relative Power in [dB e-3] measured by adc channel ADC_CH.
   30:Src/PID.c     **** int64_t Relative_Power(uint8_t ADC_CH)
   31:Src/PID.c     **** {
- 169              		.loc 1 31 0
- 170              		.cfi_startproc
- 171              		@ args = 0, pretend = 0, frame = 0
- 172              		@ frame_needed = 0, uses_anonymous_args = 0
- 173              	.LVL12:
- 174 0000 10B5     		push	{r4, lr}
- 175              	.LCFI3:
- 176              		.cfi_def_cfa_offset 8
- 177              		.cfi_offset 4, -8
- 178              		.cfi_offset 14, -4
-  32:Src/PID.c     ****     return((Voltage(ADC_CH) / 30) - 30000);
- 179              		.loc 1 32 0
- 180 0002 FFF7FEFF 		bl	Voltage
- 181              	.LVL13:
- 182 0006 1E22     		movs	r2, #30
- 183 0008 0023     		movs	r3, #0
- 184 000a FFF7FEFF 		bl	__aeabi_uldivmod
- 185              	.LVL14:
- 186 000e 034A     		ldr	r2, .L11
- 187 0010 0123     		movs	r3, #1
- 188 0012 5B42     		rsbs	r3, r3, #0
- 189 0014 8018     		adds	r0, r0, r2
- 190 0016 5941     		adcs	r1, r1, r3
+ 183              		.loc 1 31 1 is_stmt 1 view -0
+ 184              		.cfi_startproc
+ 185              		@ args = 0, pretend = 0, frame = 0
+ 186              		@ frame_needed = 0, uses_anonymous_args = 0
+ 187              		.loc 1 31 1 is_stmt 0 view .LVU23
+ 188 0000 10B5     		push	{r4, lr}
+ 189              	.LCFI3:
+ 190              		.cfi_def_cfa_offset 8
+ 191              		.cfi_offset 4, -8
+ 192              		.cfi_offset 14, -4
+  32:Src/PID.c     ****     return ((Voltage(ADC_CH) / 30) - 30000);
+ 193              		.loc 1 32 5 is_stmt 1 view .LVU24
+ 194              		.loc 1 32 14 is_stmt 0 view .LVU25
+ 195 0002 FFF7FEFF 		bl	Voltage
+ 196              	.LVL11:
+ 197              		.loc 1 32 30 view .LVU26
+ 198 0006 1E22     		movs	r2, #30
+ 199 0008 0023     		movs	r3, #0
+ 200 000a FFF7FEFF 		bl	__aeabi_uldivmod
+ 201              	.LVL12:
+ 202              		.loc 1 32 36 view .LVU27
+ 203 000e 034A     		ldr	r2, .L11
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 5
+
+
+ 204 0010 0123     		movs	r3, #1
+ 205 0012 5B42     		rsbs	r3, r3, #0
+ 206 0014 8018     		adds	r0, r0, r2
+ 207 0016 5941     		adcs	r1, r1, r3
   33:Src/PID.c     **** };
- 191              		.loc 1 33 0
- 192              		@ sp needed
- 193 0018 10BD     		pop	{r4, pc}
- 194              	.L12:
- 195 001a C046     		.align	2
- 196              	.L11:
- 197 001c D08AFFFF 		.word	-30000
- 198              		.cfi_endproc
- 199              	.LFE287:
- 201              		.global	__aeabi_ldivmod
- 202              		.section	.text.RMS_Power,"ax",%progbits
- 203              		.align	1
-ARM GAS  /tmp/ccH7iQ9o.s 			page 5
-
-
- 204              		.global	RMS_Power
- 205              		.syntax unified
- 206              		.code	16
- 207              		.thumb_func
- 208              		.fpu softvfp
- 210              	RMS_Power:
- 211              	.LFB288:
+ 208              		.loc 1 33 1 view .LVU28
+ 209              		@ sp needed
+ 210 0018 10BD     		pop	{r4, pc}
+ 211              	.L12:
+ 212 001a C046     		.align	2
+ 213              	.L11:
+ 214 001c D08AFFFF 		.word	-30000
+ 215              		.cfi_endproc
+ 216              	.LFE287:
+ 218              		.global	__aeabi_ldivmod
+ 219              		.section	.text.RMS_Power,"ax",%progbits
+ 220              		.align	1
+ 221              		.global	RMS_Power
+ 222              		.syntax unified
+ 223              		.code	16
+ 224              		.thumb_func
+ 225              		.fpu softvfp
+ 227              	RMS_Power:
+ 228              	.LVL13:
+ 229              	.LFB288:
   34:Src/PID.c     **** //Returns Power in [dBm  e-3] measured by adc channel ADC_CH.
   35:Src/PID.c     **** int64_t RMS_Power(uint8_t ADC_CH)
   36:Src/PID.c     **** {
- 212              		.loc 1 36 0
- 213              		.cfi_startproc
- 214              		@ args = 0, pretend = 0, frame = 128
- 215              		@ frame_needed = 0, uses_anonymous_args = 0
- 216              	.LVL15:
- 217 0000 10B5     		push	{r4, lr}
- 218              	.LCFI4:
- 219              		.cfi_def_cfa_offset 8
- 220              		.cfi_offset 4, -8
- 221              		.cfi_offset 14, -4
- 222 0002 A0B0     		sub	sp, sp, #128
- 223              	.LCFI5:
- 224              		.cfi_def_cfa_offset 136
- 225 0004 0400     		movs	r4, r0
+ 230              		.loc 1 36 1 is_stmt 1 view -0
+ 231              		.cfi_startproc
+ 232              		@ args = 0, pretend = 0, frame = 128
+ 233              		@ frame_needed = 0, uses_anonymous_args = 0
+ 234              		.loc 1 36 1 is_stmt 0 view .LVU30
+ 235 0000 10B5     		push	{r4, lr}
+ 236              	.LCFI4:
+ 237              		.cfi_def_cfa_offset 8
+ 238              		.cfi_offset 4, -8
+ 239              		.cfi_offset 14, -4
+ 240 0002 A0B0     		sub	sp, sp, #128
+ 241              	.LCFI5:
+ 242              		.cfi_def_cfa_offset 136
+ 243 0004 0400     		movs	r4, r0
   37:Src/PID.c     ****     const int64_t cal[16] = {0, 0, 0, 0, 399874, 0, 0, 0, 0, 448454, 427524, 0, 0, 0, 0, 408285}; /
- 226              		.loc 1 37 0
- 227 0006 8022     		movs	r2, #128
- 228 0008 0B49     		ldr	r1, .L14
- 229 000a 6846     		mov	r0, sp
- 230              	.LVL16:
- 231 000c FFF7FEFF 		bl	memcpy
- 232              	.LVL17:
+ 244              		.loc 1 37 5 is_stmt 1 view .LVU31
+ 245              		.loc 1 37 19 is_stmt 0 view .LVU32
+ 246 0006 8022     		movs	r2, #128
+ 247 0008 0B49     		ldr	r1, .L14
+ 248 000a 6846     		mov	r0, sp
+ 249              	.LVL14:
+ 250              		.loc 1 37 19 view .LVU33
+ 251 000c FFF7FEFF 		bl	memcpy
+ 252              	.LVL15:
   38:Src/PID.c     ****     return (int64_t)(Voltage(ADC_CH) - cal[ADC_CH]) / 20 - 65000;
- 233              		.loc 1 38 0
- 234 0010 2000     		movs	r0, r4
- 235 0012 FFF7FEFF 		bl	Voltage
- 236              	.LVL18:
- 237 0016 E300     		lsls	r3, r4, #3
- 238 0018 6B44     		add	r3, r3, sp
- 239 001a 1A68     		ldr	r2, [r3]
- 240 001c 5B68     		ldr	r3, [r3, #4]
- 241 001e 801A     		subs	r0, r0, r2
- 242 0020 9941     		sbcs	r1, r1, r3
- 243 0022 1422     		movs	r2, #20
- 244 0024 0023     		movs	r3, #0
- 245 0026 FFF7FEFF 		bl	__aeabi_ldivmod
- 246              	.LVL19:
- 247 002a 044A     		ldr	r2, .L14+4
- 248 002c 0123     		movs	r3, #1
- 249 002e 5B42     		rsbs	r3, r3, #0
- 250 0030 8018     		adds	r0, r0, r2
- 251 0032 5941     		adcs	r1, r1, r3
+ 253              		.loc 1 38 5 is_stmt 1 view .LVU34
+ 254              		.loc 1 38 22 is_stmt 0 view .LVU35
+ 255 0010 2000     		movs	r0, r4
+ 256 0012 FFF7FEFF 		bl	Voltage
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 6
+
+
+ 257              	.LVL16:
+ 258              		.loc 1 38 43 view .LVU36
+ 259 0016 E400     		lsls	r4, r4, #3
+ 260 0018 6C44     		add	r4, r4, sp
+ 261 001a 2268     		ldr	r2, [r4]
+ 262 001c 6368     		ldr	r3, [r4, #4]
+ 263              		.loc 1 38 38 view .LVU37
+ 264 001e 801A     		subs	r0, r0, r2
+ 265 0020 9941     		sbcs	r1, r1, r3
+ 266              		.loc 1 38 53 view .LVU38
+ 267 0022 1422     		movs	r2, #20
+ 268 0024 0023     		movs	r3, #0
+ 269 0026 FFF7FEFF 		bl	__aeabi_ldivmod
+ 270              	.LVL17:
+ 271              		.loc 1 38 58 view .LVU39
+ 272 002a 044A     		ldr	r2, .L14+4
+ 273 002c 0123     		movs	r3, #1
+ 274 002e 5B42     		rsbs	r3, r3, #0
+ 275 0030 8018     		adds	r0, r0, r2
+ 276 0032 5941     		adcs	r1, r1, r3
   39:Src/PID.c     **** };
- 252              		.loc 1 39 0
- 253 0034 20B0     		add	sp, sp, #128
- 254              		@ sp needed
- 255 0036 10BD     		pop	{r4, pc}
-ARM GAS  /tmp/ccH7iQ9o.s 			page 6
+ 277              		.loc 1 39 1 view .LVU40
+ 278 0034 20B0     		add	sp, sp, #128
+ 279              		@ sp needed
+ 280 0036 10BD     		pop	{r4, pc}
+ 281              	.L15:
+ 282              		.align	2
+ 283              	.L14:
+ 284 0038 00000000 		.word	.LC0
+ 285 003c 1802FFFF 		.word	-65000
+ 286              		.cfi_endproc
+ 287              	.LFE288:
+ 289              		.section	.rodata.Calib.str1.4,"aMS",%progbits,1
+ 290              		.align	2
+ 291              	.LC4:
+ 292 0000 50686173 		.ascii	"Phase1: %lu\012\000"
+ 292      65313A20 
+ 292      256C750A 
+ 292      00
+ 293 000d 000000   		.align	2
+ 294              	.LC7:
+ 295 0010 50686173 		.ascii	"Phase2: %lu\012\000"
+ 295      65323A20 
+ 295      256C750A 
+ 295      00
+ 296 001d 000000   		.align	2
+ 297              	.LC9:
+ 298 0020 6572726F 		.ascii	"error1: %li\012\000"
+ 298      72313A20 
+ 298      256C690A 
+ 298      00
+ 299 002d 000000   		.align	2
+ 300              	.LC11:
+ 301 0030 6572726F 		.ascii	"error2: %li\012\000"
+ 301      72323A20 
+ 301      256C690A 
+ 301      00
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 7
 
 
- 256              	.L15:
- 257              		.align	2
- 258              	.L14:
- 259 0038 00000000 		.word	.LC0
- 260 003c 1802FFFF 		.word	-65000
- 261              		.cfi_endproc
- 262              	.LFE288:
- 264              		.section	.text.Calib,"ax",%progbits
- 265              		.align	1
- 266              		.global	Calib
- 267              		.syntax unified
- 268              		.code	16
- 269              		.thumb_func
- 270              		.fpu softvfp
- 272              	Calib:
- 273              	.LFB289:
+ 302 003d 000000   		.align	2
+ 303              	.LC13:
+ 304 0040 4D534537 		.ascii	"MSE704: %li\012\012\000"
+ 304      30343A20 
+ 304      256C690A 
+ 304      0A00
+ 305 004e 0000     		.align	2
+ 306              	.LC15:
+ 307 0050 5044312B 		.ascii	"PD1+PD2 SETPOINT: %li\012\000"
+ 307      50443220 
+ 307      53455450 
+ 307      4F494E54 
+ 307      3A20256C 
+ 308 0067 00       		.align	2
+ 309              	.LC17:
+ 310 0068 50443120 		.ascii	"PD1 SLOPE: %i\012\000"
+ 310      534C4F50 
+ 310      453A2025 
+ 310      690A00
+ 311 0077 00       		.align	2
+ 312              	.LC19:
+ 313 0078 50443220 		.ascii	"PD2 SLOPE: %i\012\000"
+ 313      534C4F50 
+ 313      453A2025 
+ 313      690A00
+ 314 0087 00       		.align	2
+ 315              	.LC21:
+ 316 0088 50533730 		.ascii	"PS704 OFFSET: %u\012\000"
+ 316      34204F46 
+ 316      46534554 
+ 316      3A202575 
+ 316      0A00
+ 317 009a 0000     		.align	2
+ 318              	.LC23:
+ 319 009c 50686173 		.ascii	"Phase3: %lu\012\000"
+ 319      65333A20 
+ 319      256C750A 
+ 319      00
+ 320 00a9 000000   		.align	2
+ 321              	.LC25:
+ 322 00ac 50686173 		.ascii	"Phase4: %lu\012\000"
+ 322      65343A20 
+ 322      256C750A 
+ 322      00
+ 323 00b9 000000   		.align	2
+ 324              	.LC27:
+ 325 00bc 6572726F 		.ascii	"error3: %li\012\000"
+ 325      72333A20 
+ 325      256C690A 
+ 325      00
+ 326 00c9 000000   		.align	2
+ 327              	.LC29:
+ 328 00cc 4D534533 		.ascii	"MSE352: %li\012\012\000"
+ 328      35323A20 
+ 328      256C690A 
+ 328      0A00
+ 329 00da 0000     		.align	2
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 8
+
+
+ 330              	.LC31:
+ 331 00dc 5044332B 		.ascii	"PD3+PD4 SETPOINT: %li\012\000"
+ 331      50443420 
+ 331      53455450 
+ 331      4F494E54 
+ 331      3A20256C 
+ 332 00f3 00       		.align	2
+ 333              	.LC33:
+ 334 00f4 50443320 		.ascii	"PD3 SLOPE: %i\012\000"
+ 334      534C4F50 
+ 334      453A2025 
+ 334      690A00
+ 335 0103 00       		.align	2
+ 336              	.LC35:
+ 337 0104 50443420 		.ascii	"PD4 SLOPE: %i\012\000"
+ 337      534C4F50 
+ 337      453A2025 
+ 337      690A00
+ 338 0113 00       		.align	2
+ 339              	.LC37:
+ 340 0114 50533335 		.ascii	"PS352 OFFSET: %u\012\000"
+ 340      32204F46 
+ 340      46534554 
+ 340      3A202575 
+ 340      0A00
+ 341              		.section	.text.Calib,"ax",%progbits
+ 342              		.align	1
+ 343              		.global	Calib
+ 344              		.syntax unified
+ 345              		.code	16
+ 346              		.thumb_func
+ 347              		.fpu softvfp
+ 349              	Calib:
+ 350              	.LFB289:
   40:Src/PID.c     **** 
   41:Src/PID.c     **** //Determines optimal setpoints of Phase shifters and detectors slope.
-  42:Src/PID.c     **** void Calib(){
- 274              		.loc 1 42 0
- 275              		.cfi_startproc
- 276              		@ args = 0, pretend = 0, frame = 136
- 277              		@ frame_needed = 0, uses_anonymous_args = 0
- 278 0000 F0B5     		push	{r4, r5, r6, r7, lr}
- 279              	.LCFI6:
- 280              		.cfi_def_cfa_offset 20
- 281              		.cfi_offset 4, -20
- 282              		.cfi_offset 5, -16
- 283              		.cfi_offset 6, -12
- 284              		.cfi_offset 7, -8
- 285              		.cfi_offset 14, -4
- 286 0002 DE46     		mov	lr, fp
- 287 0004 5746     		mov	r7, r10
- 288 0006 4E46     		mov	r6, r9
- 289 0008 4546     		mov	r5, r8
- 290 000a E0B5     		push	{r5, r6, r7, lr}
- 291              	.LCFI7:
- 292              		.cfi_def_cfa_offset 36
- 293              		.cfi_offset 8, -36
- 294              		.cfi_offset 9, -32
- 295              		.cfi_offset 10, -28
- 296              		.cfi_offset 11, -24
- 297 000c A3B0     		sub	sp, sp, #140
- 298              	.LCFI8:
- 299              		.cfi_def_cfa_offset 176
-  43:Src/PID.c     ****     //704
-  44:Src/PID.c     ****     DAC_cmd(RF_PS_704_OFFSET + DAC_WRITE + 0); 
- 300              		.loc 1 44 0
- 301 000e B020     		movs	r0, #176
- 302 0010 4003     		lsls	r0, r0, #13
- 303 0012 FFF7FEFF 		bl	DAC_cmd
- 304              	.LVL20:
-  45:Src/PID.c     ****     DAC_cmd(RF_PS_704_FINE + DAC_WRITE + 0x7fff);    
- 305              		.loc 1 45 0
- 306 0016 B748     		ldr	r0, .L45
- 307 0018 FFF7FEFF 		bl	DAC_cmd
- 308              	.LVL21:
-ARM GAS  /tmp/ccH7iQ9o.s 			page 7
+  42:Src/PID.c     **** void Calib()
+  43:Src/PID.c     **** {
+ 351              		.loc 1 43 1 is_stmt 1 view -0
+ 352              		.cfi_startproc
+ 353              		@ args = 0, pretend = 0, frame = 152
+ 354              		@ frame_needed = 0, uses_anonymous_args = 0
+ 355 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 356              	.LCFI6:
+ 357              		.cfi_def_cfa_offset 20
+ 358              		.cfi_offset 4, -20
+ 359              		.cfi_offset 5, -16
+ 360              		.cfi_offset 6, -12
+ 361              		.cfi_offset 7, -8
+ 362              		.cfi_offset 14, -4
+ 363 0002 DE46     		mov	lr, fp
+ 364 0004 5746     		mov	r7, r10
+ 365 0006 4E46     		mov	r6, r9
+ 366 0008 4546     		mov	r5, r8
+ 367 000a E0B5     		push	{r5, r6, r7, lr}
+ 368              	.LCFI7:
+ 369              		.cfi_def_cfa_offset 36
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 9
 
 
-  46:Src/PID.c     ****     State.PD1_PD2_MSE =16200000000;
- 309              		.loc 1 46 0
- 310 001c B64B     		ldr	r3, .L45+4
- 311 001e 2933     		adds	r3, r3, #41
- 312 0020 FF33     		adds	r3, r3, #255
- 313 0022 B648     		ldr	r0, .L45+8
- 314 0024 0321     		movs	r1, #3
- 315 0026 1860     		str	r0, [r3]
- 316 0028 5960     		str	r1, [r3, #4]
- 317              	.LVL22:
- 318              	.LBB2:
-  47:Src/PID.c     ****     uint64_t prevPhase1 = 0;
-  48:Src/PID.c     ****     uint64_t prevPhase2 = 0;
-  49:Src/PID.c     ****     for(int PS = 0;PS<0xffff;PS+=0x0700){
- 319              		.loc 1 49 0
- 320 002a 0023     		movs	r3, #0
- 321 002c 9946     		mov	r9, r3
- 322              	.LBE2:
-  48:Src/PID.c     ****     for(int PS = 0;PS<0xffff;PS+=0x0700){
- 323              		.loc 1 48 0
- 324 002e 0793     		str	r3, [sp, #28]
- 325 0030 9B46     		mov	fp, r3
-  47:Src/PID.c     ****     uint64_t prevPhase1 = 0;
- 326              		.loc 1 47 0
- 327 0032 0693     		str	r3, [sp, #24]
- 328 0034 9A46     		mov	r10, r3
- 329              	.LBB11:
- 330              		.loc 1 49 0
- 331 0036 1DE0     		b	.L17
- 332              	.LVL23:
- 333              	.L33:
- 334              	.LBB3:
-  50:Src/PID.c     ****         DAC_cmd(RF_PS_704_OFFSET + DAC_WRITE + PS); 
-  51:Src/PID.c     ****         HAL_Delay(100);
-  52:Src/PID.c     ****         uint64_t Phase1 =(180000 - (((uint64_t)State.ADC_Values[ADC_PD1_Phase_CH] * 1800000) / 0xff
-  53:Src/PID.c     ****         uint64_t Phase2 =(180000 - (((uint64_t)State.ADC_Values[ADC_PD2_Phase_CH] * 1800000) / 0xff
-  54:Src/PID.c     ****         SERIAL_WRITE("Phase1: %lu\n",Phase1);
-  55:Src/PID.c     ****         SERIAL_WRITE("Phase2: %lu\n",Phase2);
-  56:Src/PID.c     ****         int64_t error1 = 90000 - Phase1;
-  57:Src/PID.c     ****         int64_t error2 = 90000 - Phase2;        
-  58:Src/PID.c     ****         int64_t MSE704 = error1*error1 + error2*error2;
-  59:Src/PID.c     ****         SERIAL_WRITE("error1: %li\n",error1);
-  60:Src/PID.c     ****         SERIAL_WRITE("error2: %li\n",error2);
-  61:Src/PID.c     ****         SERIAL_WRITE("MSE704: %li\n",MSE704);
-  62:Src/PID.c     ****         if(MSE704<State.PD1_PD2_MSE ){
-  63:Src/PID.c     ****             State.PD1_PD2_Offset = PS;
-  64:Src/PID.c     ****             State.PD1_PD2_MSE  = MSE704;
-  65:Src/PID.c     ****             State.PD1_Slope = prevPhase1 < Phase1 ? 1 : -1;
- 335              		.loc 1 65 0
- 336 0038 0123     		movs	r3, #1
- 337 003a 5B42     		rsbs	r3, r3, #0
- 338 003c EAE0     		b	.L20
- 339              	.L39:
-  66:Src/PID.c     ****             State.PD2_Slope =  prevPhase2 < Phase2 ? 1 : -1;
- 340              		.loc 1 66 0
- 341 003e 0121     		movs	r1, #1
- 342              	.L22:
-ARM GAS  /tmp/ccH7iQ9o.s 			page 8
+ 370              		.cfi_offset 8, -36
+ 371              		.cfi_offset 9, -32
+ 372              		.cfi_offset 10, -28
+ 373              		.cfi_offset 11, -24
+ 374 000c A7B0     		sub	sp, sp, #156
+ 375              	.LCFI8:
+ 376              		.cfi_def_cfa_offset 192
+  44:Src/PID.c     ****     //704
+  45:Src/PID.c     ****     DAC_cmd(RF_PS_704_OFFSET + DAC_WRITE + 0);
+ 377              		.loc 1 45 5 view .LVU42
+ 378 000e B020     		movs	r0, #176
+ 379 0010 4003     		lsls	r0, r0, #13
+ 380 0012 FFF7FEFF 		bl	DAC_cmd
+ 381              	.LVL18:
+  46:Src/PID.c     ****     DAC_cmd(RF_PS_704_FINE + DAC_WRITE + 0x7fff);
+ 382              		.loc 1 46 5 view .LVU43
+ 383 0016 CA48     		ldr	r0, .L45
+ 384 0018 FFF7FEFF 		bl	DAC_cmd
+ 385              	.LVL19:
+  47:Src/PID.c     ****     State.PD1_PD2_MSE = 16200000000;
+ 386              		.loc 1 47 5 view .LVU44
+ 387              		.loc 1 47 23 is_stmt 0 view .LVU45
+ 388 001c C94B     		ldr	r3, .L45+4
+ 389 001e 9D22     		movs	r2, #157
+ 390 0020 D200     		lsls	r2, r2, #3
+ 391 0022 9446     		mov	ip, r2
+ 392 0024 6344     		add	r3, r3, ip
+ 393 0026 C848     		ldr	r0, .L45+8
+ 394 0028 0321     		movs	r1, #3
+ 395 002a 1860     		str	r0, [r3]
+ 396 002c 5960     		str	r1, [r3, #4]
+  48:Src/PID.c     ****     uint64_t prevPhase1 = 0;
+ 397              		.loc 1 48 5 is_stmt 1 view .LVU46
+ 398              	.LVL20:
+  49:Src/PID.c     ****     uint64_t prevPhase2 = 0;
+ 399              		.loc 1 49 5 view .LVU47
+  50:Src/PID.c     ****     for (uint32_t PS = 0; PS < 0xffff; PS += 0x0700)
+ 400              		.loc 1 50 5 view .LVU48
+ 401              	.LBB2:
+ 402              		.loc 1 50 10 view .LVU49
+ 403              		.loc 1 50 19 is_stmt 0 view .LVU50
+ 404 002e 0023     		movs	r3, #0
+ 405 0030 9946     		mov	r9, r3
+ 406              	.LBE2:
+  49:Src/PID.c     ****     uint64_t prevPhase2 = 0;
+ 407              		.loc 1 49 14 view .LVU51
+ 408 0032 0A93     		str	r3, [sp, #40]
+ 409 0034 0793     		str	r3, [sp, #28]
+  48:Src/PID.c     ****     uint64_t prevPhase1 = 0;
+ 410              		.loc 1 48 14 view .LVU52
+ 411 0036 0893     		str	r3, [sp, #32]
+ 412 0038 0693     		str	r3, [sp, #24]
+ 413              	.LBB11:
+ 414              		.loc 1 50 5 view .LVU53
+ 415 003a 1EE0     		b	.L17
+ 416              	.LVL21:
+ 417              	.L33:
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 10
 
 
- 343              		.loc 1 66 0 is_stmt 0 discriminator 4
- 344 0040 AD4A     		ldr	r2, .L45+4
- 345 0042 1020     		movs	r0, #16
- 346 0044 FF30     		adds	r0, r0, #255
- 347 0046 1154     		strb	r1, [r2, r0]
-  67:Src/PID.c     ****             State.PD1_PD2_SetPoint = (int)State.PD1_Slope * (int)Phase1 +   (int)State.PD2_Slope  *
- 348              		.loc 1 67 0 is_stmt 1 discriminator 4
- 349 0048 0298     		ldr	r0, [sp, #8]
- 350 004a 4343     		muls	r3, r0
- 351 004c 0498     		ldr	r0, [sp, #16]
- 352 004e 4143     		muls	r1, r0
- 353 0050 5B18     		adds	r3, r3, r1
- 354 0052 D917     		asrs	r1, r3, #31
- 355 0054 1932     		adds	r2, r2, #25
- 356 0056 FF32     		adds	r2, r2, #255
- 357 0058 1360     		str	r3, [r2]
- 358 005a 5160     		str	r1, [r2, #4]
- 359              	.L18:
- 360              	.LVL24:
- 361              	.LBE3:
-  49:Src/PID.c     ****         DAC_cmd(RF_PS_704_OFFSET + DAC_WRITE + PS); 
- 362              		.loc 1 49 0 discriminator 2
- 363 005c E023     		movs	r3, #224
- 364 005e DB00     		lsls	r3, r3, #3
- 365 0060 9C46     		mov	ip, r3
- 366 0062 E144     		add	r9, r9, ip
- 367              	.LVL25:
- 368              	.LBB9:
-  68:Src/PID.c     **** 
-  69:Src/PID.c     ****         }
-  70:Src/PID.c     ****         prevPhase1 = Phase1;
-  71:Src/PID.c     ****         prevPhase2 = Phase2;
- 369              		.loc 1 71 0 discriminator 2
- 370 0064 049B     		ldr	r3, [sp, #16]
- 371 0066 059C     		ldr	r4, [sp, #20]
- 372 0068 0793     		str	r3, [sp, #28]
- 373 006a A346     		mov	fp, r4
-  70:Src/PID.c     ****         prevPhase2 = Phase2;
- 374              		.loc 1 70 0 discriminator 2
- 375 006c 029B     		ldr	r3, [sp, #8]
- 376 006e 039C     		ldr	r4, [sp, #12]
- 377 0070 0693     		str	r3, [sp, #24]
- 378 0072 A246     		mov	r10, r4
- 379              	.LVL26:
- 380              	.L17:
- 381              	.LBE9:
-  49:Src/PID.c     ****         DAC_cmd(RF_PS_704_OFFSET + DAC_WRITE + PS); 
- 382              		.loc 1 49 0 discriminator 1
- 383 0074 A24B     		ldr	r3, .L45+12
- 384 0076 9945     		cmp	r9, r3
- 385 0078 00DD     		ble	.LCB331
- 386 007a DDE0     		b	.L43	@long jump
- 387              	.LCB331:
- 388              	.LBB10:
-  50:Src/PID.c     ****         HAL_Delay(100);
- 389              		.loc 1 50 0
- 390 007c B020     		movs	r0, #176
-ARM GAS  /tmp/ccH7iQ9o.s 			page 9
+ 418              	.LBB3:
+  51:Src/PID.c     ****     {
+  52:Src/PID.c     ****         DAC_cmd(RF_PS_704_OFFSET + DAC_WRITE + PS);
+  53:Src/PID.c     ****         HAL_Delay(100);
+  54:Src/PID.c     ****         uint64_t Phase1 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD1_Phase_CH] * 1800000) / 0x
+  55:Src/PID.c     ****         uint64_t Phase2 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD2_Phase_CH] * 1800000) / 0x
+  56:Src/PID.c     **** 
+  57:Src/PID.c     ****         int64_t error1 = 90000 - Phase1;
+  58:Src/PID.c     ****         int64_t error2 = 90000 - Phase2;
+  59:Src/PID.c     ****         int64_t MSE704 = error1 * error1 + error2 * error2;
+  60:Src/PID.c     **** 
+  61:Src/PID.c     ****         if (MSE704 < State.PD1_PD2_MSE)
+  62:Src/PID.c     ****         {
+  63:Src/PID.c     ****             SERIAL_WRITE("Phase1: %lu\n", Phase1);
+  64:Src/PID.c     ****             SERIAL_WRITE("Phase2: %lu\n", Phase2);
+  65:Src/PID.c     ****             SERIAL_WRITE("error1: %li\n", error1);
+  66:Src/PID.c     ****             SERIAL_WRITE("error2: %li\n", error2);
+  67:Src/PID.c     ****             SERIAL_WRITE("MSE704: %li\n\n", MSE704);
+  68:Src/PID.c     ****             State.PD1_PD2_Offset = PS;
+  69:Src/PID.c     ****             State.PD1_PD2_MSE = MSE704;
+  70:Src/PID.c     ****             State.PD1_Slope = prevPhase1 < Phase1 ? 1 : -1;
+ 419              		.loc 1 70 29 view .LVU54
+ 420 003c 0123     		movs	r3, #1
+ 421 003e 5B42     		rsbs	r3, r3, #0
+ 422 0040 FAE0     		b	.L20
+ 423              	.LVL22:
+ 424              	.L39:
+  71:Src/PID.c     ****             State.PD2_Slope = prevPhase2 < Phase2 ? 1 : -1;
+ 425              		.loc 1 71 29 view .LVU55
+ 426 0042 0121     		movs	r1, #1
+ 427              	.L22:
+ 428              		.loc 1 71 29 discriminator 4 view .LVU56
+ 429 0044 BF4A     		ldr	r2, .L45+4
+ 430 0046 C148     		ldr	r0, .L45+12
+ 431 0048 1154     		strb	r1, [r2, r0]
+  72:Src/PID.c     ****             State.PD1_PD2_SetPoint = (int)State.PD1_Slope * (int)Phase1 + (int)State.PD2_Slope * (i
+ 432              		.loc 1 72 13 is_stmt 1 discriminator 4 view .LVU57
+ 433              		.loc 1 72 59 is_stmt 0 discriminator 4 view .LVU58
+ 434 004a 0098     		ldr	r0, [sp]
+ 435 004c 4343     		muls	r3, r0
+ 436              		.loc 1 72 96 discriminator 4 view .LVU59
+ 437 004e 0298     		ldr	r0, [sp, #8]
+ 438 0050 4143     		muls	r1, r0
+ 439              		.loc 1 72 73 discriminator 4 view .LVU60
+ 440 0052 5B18     		adds	r3, r3, r1
+ 441 0054 D917     		asrs	r1, r3, #31
+ 442              		.loc 1 72 36 discriminator 4 view .LVU61
+ 443 0056 9B20     		movs	r0, #155
+ 444 0058 C000     		lsls	r0, r0, #3
+ 445 005a 8446     		mov	ip, r0
+ 446 005c 6244     		add	r2, r2, ip
+ 447 005e 1360     		str	r3, [r2]
+ 448 0060 5160     		str	r1, [r2, #4]
+ 449              	.L18:
+  73:Src/PID.c     ****         }
+  74:Src/PID.c     ****         prevPhase1 = Phase1;
+ 450              		.loc 1 74 9 is_stmt 1 discriminator 2 view .LVU62
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 11
 
 
- 391 007e 4003     		lsls	r0, r0, #13
- 392 0080 4844     		add	r0, r0, r9
- 393 0082 FFF7FEFF 		bl	DAC_cmd
- 394              	.LVL27:
-  51:Src/PID.c     ****         uint64_t Phase1 =(180000 - (((uint64_t)State.ADC_Values[ADC_PD1_Phase_CH] * 1800000) / 0xff
- 395              		.loc 1 51 0
- 396 0086 6420     		movs	r0, #100
- 397 0088 FFF7FEFF 		bl	HAL_Delay
- 398              	.LVL28:
-  52:Src/PID.c     ****         uint64_t Phase2 =(180000 - (((uint64_t)State.ADC_Values[ADC_PD2_Phase_CH] * 1800000) / 0xff
- 399              		.loc 1 52 0
- 400 008c 9A4B     		ldr	r3, .L45+4
- 401 008e 9846     		mov	r8, r3
- 402 0090 9C4A     		ldr	r2, .L45+16
- 403 0092 0023     		movs	r3, #0
- 404 0094 4146     		mov	r1, r8
- 405 0096 486E     		ldr	r0, [r1, #100]
- 406 0098 0021     		movs	r1, #0
- 407 009a FFF7FEFF 		bl	__aeabi_lmul
- 408              	.LVL29:
- 409 009e 9A4A     		ldr	r2, .L45+20
- 410 00a0 0023     		movs	r3, #0
- 411 00a2 FFF7FEFF 		bl	__aeabi_uldivmod
- 412              	.LVL30:
- 413 00a6 0600     		movs	r6, r0
- 414 00a8 0F00     		movs	r7, r1
- 415 00aa 984C     		ldr	r4, .L45+24
- 416 00ac 0025     		movs	r5, #0
- 417 00ae 2200     		movs	r2, r4
- 418 00b0 2B00     		movs	r3, r5
- 419 00b2 921B     		subs	r2, r2, r6
- 420 00b4 BB41     		sbcs	r3, r3, r7
- 421 00b6 0292     		str	r2, [sp, #8]
- 422 00b8 0393     		str	r3, [sp, #12]
- 423              	.LVL31:
-  53:Src/PID.c     ****         SERIAL_WRITE("Phase1: %lu\n",Phase1);
- 424              		.loc 1 53 0
- 425 00ba 924A     		ldr	r2, .L45+16
- 426              	.LVL32:
- 427 00bc 0023     		movs	r3, #0
- 428 00be 4146     		mov	r1, r8
- 429 00c0 C86C     		ldr	r0, [r1, #76]
- 430 00c2 0021     		movs	r1, #0
- 431 00c4 FFF7FEFF 		bl	__aeabi_lmul
- 432              	.LVL33:
- 433 00c8 8F4A     		ldr	r2, .L45+20
- 434 00ca 0023     		movs	r3, #0
- 435 00cc FFF7FEFF 		bl	__aeabi_uldivmod
- 436              	.LVL34:
- 437 00d0 0090     		str	r0, [sp]
- 438 00d2 0191     		str	r1, [sp, #4]
- 439 00d4 0A00     		movs	r2, r1
- 440 00d6 0100     		movs	r1, r0
- 441 00d8 641A     		subs	r4, r4, r1
- 442 00da 9541     		sbcs	r5, r5, r2
- 443 00dc 0494     		str	r4, [sp, #16]
- 444 00de 0595     		str	r5, [sp, #20]
-ARM GAS  /tmp/ccH7iQ9o.s 			page 10
+ 451              	.LVL23:
+  75:Src/PID.c     ****         prevPhase2 = Phase2;
+ 452              		.loc 1 75 9 discriminator 2 view .LVU63
+ 453              		.loc 1 75 9 is_stmt 0 discriminator 2 view .LVU64
+ 454              	.LBE3:
+  50:Src/PID.c     ****     {
+ 455              		.loc 1 50 40 is_stmt 1 discriminator 2 view .LVU65
+  50:Src/PID.c     ****     {
+ 456              		.loc 1 50 43 is_stmt 0 discriminator 2 view .LVU66
+ 457 0062 E023     		movs	r3, #224
+ 458 0064 DB00     		lsls	r3, r3, #3
+ 459 0066 9C46     		mov	ip, r3
+ 460 0068 E144     		add	r9, r9, ip
+ 461              	.LVL24:
+ 462              	.LBB9:
+ 463              		.loc 1 75 20 discriminator 2 view .LVU67
+ 464 006a 029B     		ldr	r3, [sp, #8]
+ 465 006c 039C     		ldr	r4, [sp, #12]
+ 466 006e 0A93     		str	r3, [sp, #40]
+ 467 0070 0794     		str	r4, [sp, #28]
+  74:Src/PID.c     ****         prevPhase2 = Phase2;
+ 468              		.loc 1 74 20 discriminator 2 view .LVU68
+ 469 0072 009B     		ldr	r3, [sp]
+ 470 0074 019C     		ldr	r4, [sp, #4]
+ 471 0076 0893     		str	r3, [sp, #32]
+ 472 0078 0694     		str	r4, [sp, #24]
+ 473              	.LVL25:
+ 474              	.L17:
+  74:Src/PID.c     ****         prevPhase2 = Phase2;
+ 475              		.loc 1 74 20 discriminator 2 view .LVU69
+ 476              	.LBE9:
+  50:Src/PID.c     ****     {
+ 477              		.loc 1 50 27 is_stmt 1 discriminator 1 view .LVU70
+  50:Src/PID.c     ****     {
+ 478              		.loc 1 50 5 is_stmt 0 discriminator 1 view .LVU71
+ 479 007a B54B     		ldr	r3, .L45+16
+ 480 007c 9945     		cmp	r9, r3
+ 481 007e 00D9     		bls	.LCB344
+ 482 0080 ECE0     		b	.L43	@long jump
+ 483              	.LCB344:
+ 484              	.LBB10:
+  52:Src/PID.c     ****         HAL_Delay(100);
+ 485              		.loc 1 52 9 is_stmt 1 view .LVU72
+ 486 0082 B020     		movs	r0, #176
+ 487 0084 4003     		lsls	r0, r0, #13
+ 488 0086 4844     		add	r0, r0, r9
+ 489 0088 FFF7FEFF 		bl	DAC_cmd
+ 490              	.LVL26:
+  53:Src/PID.c     ****         uint64_t Phase1 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD1_Phase_CH] * 1800000) / 0x
+ 491              		.loc 1 53 9 view .LVU73
+ 492 008c 6420     		movs	r0, #100
+ 493 008e FFF7FEFF 		bl	HAL_Delay
+ 494              	.LVL27:
+  54:Src/PID.c     ****         uint64_t Phase2 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD2_Phase_CH] * 1800000) / 0x
+ 495              		.loc 1 54 9 view .LVU74
+  54:Src/PID.c     ****         uint64_t Phase2 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD2_Phase_CH] * 1800000) / 0x
+ 496              		.loc 1 54 66 is_stmt 0 view .LVU75
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 12
 
 
- 445              	.LVL35:
- 446              	.LBB4:
-  54:Src/PID.c     ****         SERIAL_WRITE("Phase2: %lu\n",Phase2);
- 447              		.loc 1 54 0
- 448 00e0 6422     		movs	r2, #100
- 449 00e2 0021     		movs	r1, #0
- 450 00e4 09A8     		add	r0, sp, #36
- 451 00e6 FFF7FEFF 		bl	memset
- 452              	.LVL36:
- 453 00ea 029A     		ldr	r2, [sp, #8]
- 454 00ec 039B     		ldr	r3, [sp, #12]
- 455 00ee 8849     		ldr	r1, .L45+28
- 456 00f0 09A8     		add	r0, sp, #36
- 457 00f2 FFF7FEFF 		bl	sprintf
- 458              	.LVL37:
- 459 00f6 82B2     		uxth	r2, r0
- 460 00f8 FA23     		movs	r3, #250
- 461 00fa 9B00     		lsls	r3, r3, #2
- 462 00fc 09A9     		add	r1, sp, #36
- 463 00fe 8548     		ldr	r0, .L45+32
- 464              	.LVL38:
- 465 0100 FFF7FEFF 		bl	HAL_UART_Transmit
- 466              	.LVL39:
- 467              	.LBE4:
- 468              	.LBB5:
-  55:Src/PID.c     ****         int64_t error1 = 90000 - Phase1;
- 469              		.loc 1 55 0
- 470 0104 6422     		movs	r2, #100
- 471 0106 0021     		movs	r1, #0
- 472 0108 09A8     		add	r0, sp, #36
- 473 010a FFF7FEFF 		bl	memset
- 474              	.LVL40:
- 475 010e 2200     		movs	r2, r4
- 476 0110 2B00     		movs	r3, r5
- 477 0112 8149     		ldr	r1, .L45+36
- 478 0114 09A8     		add	r0, sp, #36
- 479 0116 FFF7FEFF 		bl	sprintf
- 480              	.LVL41:
- 481 011a 82B2     		uxth	r2, r0
- 482 011c FA23     		movs	r3, #250
- 483 011e 9B00     		lsls	r3, r3, #2
- 484 0120 09A9     		add	r1, sp, #36
- 485 0122 7C48     		ldr	r0, .L45+32
- 486              	.LVL42:
- 487 0124 FFF7FEFF 		bl	HAL_UART_Transmit
- 488              	.LVL43:
- 489              	.LBE5:
-  56:Src/PID.c     ****         int64_t error2 = 90000 - Phase2;        
- 490              		.loc 1 56 0
- 491 0128 7C4A     		ldr	r2, .L45+40
- 492 012a 0123     		movs	r3, #1
- 493 012c 5B42     		rsbs	r3, r3, #0
- 494 012e B618     		adds	r6, r6, r2
- 495 0130 5F41     		adcs	r7, r7, r3
- 496              	.LVL44:
-  57:Src/PID.c     ****         int64_t MSE704 = error1*error1 + error2*error2;
- 497              		.loc 1 57 0
-ARM GAS  /tmp/ccH7iQ9o.s 			page 11
+ 497 0092 AC4B     		ldr	r3, .L45+4
+ 498 0094 9846     		mov	r8, r3
+  54:Src/PID.c     ****         uint64_t Phase2 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD2_Phase_CH] * 1800000) / 0x
+ 499              		.loc 1 54 85 view .LVU76
+ 500 0096 AF4A     		ldr	r2, .L45+20
+ 501 0098 0023     		movs	r3, #0
+ 502 009a 4146     		mov	r1, r8
+ 503 009c 486E     		ldr	r0, [r1, #100]
+ 504 009e 0021     		movs	r1, #0
+ 505 00a0 FFF7FEFF 		bl	__aeabi_lmul
+ 506              	.LVL28:
+  54:Src/PID.c     ****         uint64_t Phase2 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD2_Phase_CH] * 1800000) / 0x
+ 507              		.loc 1 54 96 view .LVU77
+ 508 00a4 AC4A     		ldr	r2, .L45+24
+ 509 00a6 0023     		movs	r3, #0
+ 510 00a8 FFF7FEFF 		bl	__aeabi_uldivmod
+ 511              	.LVL29:
+  54:Src/PID.c     ****         uint64_t Phase2 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD2_Phase_CH] * 1800000) / 0x
+ 512              		.loc 1 54 36 view .LVU78
+ 513 00ac A94C     		ldr	r4, .L45+20
+ 514 00ae 0025     		movs	r5, #0
+ 515 00b0 2200     		movs	r2, r4
+ 516 00b2 2B00     		movs	r3, r5
+ 517 00b4 121A     		subs	r2, r2, r0
+ 518 00b6 8B41     		sbcs	r3, r3, r1
+ 519 00b8 1000     		movs	r0, r2
+ 520 00ba 1900     		movs	r1, r3
+  54:Src/PID.c     ****         uint64_t Phase2 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD2_Phase_CH] * 1800000) / 0x
+ 521              		.loc 1 54 18 view .LVU79
+ 522 00bc 0A22     		movs	r2, #10
+ 523 00be 0023     		movs	r3, #0
+ 524 00c0 FFF7FEFF 		bl	__aeabi_uldivmod
+ 525              	.LVL30:
+ 526 00c4 0090     		str	r0, [sp]
+ 527 00c6 0191     		str	r1, [sp, #4]
+ 528              	.LVL31:
+  55:Src/PID.c     **** 
+ 529              		.loc 1 55 9 is_stmt 1 view .LVU80
+  55:Src/PID.c     **** 
+ 530              		.loc 1 55 85 is_stmt 0 view .LVU81
+ 531 00c8 2200     		movs	r2, r4
+ 532 00ca 2B00     		movs	r3, r5
+ 533 00cc 4146     		mov	r1, r8
+ 534 00ce C86C     		ldr	r0, [r1, #76]
+ 535 00d0 0021     		movs	r1, #0
+ 536 00d2 FFF7FEFF 		bl	__aeabi_lmul
+ 537              	.LVL32:
+  55:Src/PID.c     **** 
+ 538              		.loc 1 55 96 view .LVU82
+ 539 00d6 A04A     		ldr	r2, .L45+24
+ 540 00d8 0023     		movs	r3, #0
+ 541 00da FFF7FEFF 		bl	__aeabi_uldivmod
+ 542              	.LVL33:
+  55:Src/PID.c     **** 
+ 543              		.loc 1 55 36 view .LVU83
+ 544 00de 241A     		subs	r4, r4, r0
+ 545 00e0 8D41     		sbcs	r5, r5, r1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 13
 
 
- 498 0132 009C     		ldr	r4, [sp]
- 499 0134 019D     		ldr	r5, [sp, #4]
- 500              	.LVL45:
- 501 0136 A418     		adds	r4, r4, r2
- 502 0138 5D41     		adcs	r5, r5, r3
- 503 013a 0094     		str	r4, [sp]
- 504 013c 0195     		str	r5, [sp, #4]
- 505              	.LVL46:
-  58:Src/PID.c     ****         SERIAL_WRITE("error1: %li\n",error1);
- 506              		.loc 1 58 0
- 507 013e 3200     		movs	r2, r6
- 508 0140 3B00     		movs	r3, r7
- 509 0142 3000     		movs	r0, r6
- 510 0144 3900     		movs	r1, r7
- 511 0146 FFF7FEFF 		bl	__aeabi_lmul
- 512              	.LVL47:
- 513 014a 0400     		movs	r4, r0
- 514              	.LVL48:
- 515 014c 0D00     		movs	r5, r1
- 516 014e 0098     		ldr	r0, [sp]
- 517 0150 0199     		ldr	r1, [sp, #4]
- 518 0152 0200     		movs	r2, r0
- 519 0154 0B00     		movs	r3, r1
- 520 0156 FFF7FEFF 		bl	__aeabi_lmul
- 521              	.LVL49:
- 522 015a 2418     		adds	r4, r4, r0
- 523 015c 4D41     		adcs	r5, r5, r1
- 524              	.LVL50:
- 525              	.LBB6:
-  59:Src/PID.c     ****         SERIAL_WRITE("error2: %li\n",error2);
- 526              		.loc 1 59 0
- 527 015e 6422     		movs	r2, #100
- 528 0160 0021     		movs	r1, #0
- 529 0162 09AB     		add	r3, sp, #36
- 530 0164 1800     		movs	r0, r3
- 531 0166 FFF7FEFF 		bl	memset
- 532              	.LVL51:
- 533 016a 3200     		movs	r2, r6
- 534 016c 3B00     		movs	r3, r7
- 535 016e 6C49     		ldr	r1, .L45+44
- 536 0170 09A8     		add	r0, sp, #36
- 537 0172 FFF7FEFF 		bl	sprintf
- 538              	.LVL52:
- 539 0176 82B2     		uxth	r2, r0
- 540 0178 FA23     		movs	r3, #250
- 541 017a 9B00     		lsls	r3, r3, #2
- 542 017c 09A9     		add	r1, sp, #36
- 543 017e 6548     		ldr	r0, .L45+32
- 544              	.LVL53:
- 545 0180 FFF7FEFF 		bl	HAL_UART_Transmit
- 546              	.LVL54:
- 547              	.LBE6:
- 548              	.LBB7:
-  60:Src/PID.c     ****         SERIAL_WRITE("MSE704: %li\n",MSE704);
- 549              		.loc 1 60 0
- 550 0184 6422     		movs	r2, #100
- 551 0186 0021     		movs	r1, #0
-ARM GAS  /tmp/ccH7iQ9o.s 			page 12
+ 546 00e2 2000     		movs	r0, r4
+ 547 00e4 2900     		movs	r1, r5
+  55:Src/PID.c     **** 
+ 548              		.loc 1 55 18 view .LVU84
+ 549 00e6 0A22     		movs	r2, #10
+ 550 00e8 0023     		movs	r3, #0
+ 551 00ea FFF7FEFF 		bl	__aeabi_uldivmod
+ 552              	.LVL34:
+ 553 00ee 0290     		str	r0, [sp, #8]
+ 554 00f0 0391     		str	r1, [sp, #12]
+ 555              	.LVL35:
+  57:Src/PID.c     ****         int64_t error2 = 90000 - Phase2;
+ 556              		.loc 1 57 9 is_stmt 1 view .LVU85
+  57:Src/PID.c     ****         int64_t error2 = 90000 - Phase2;
+ 557              		.loc 1 57 32 is_stmt 0 view .LVU86
+ 558 00f2 9A4A     		ldr	r2, .L45+28
+ 559 00f4 0023     		movs	r3, #0
+ 560 00f6 1600     		movs	r6, r2
+ 561 00f8 1F00     		movs	r7, r3
+ 562 00fa 0098     		ldr	r0, [sp]
+ 563 00fc 0199     		ldr	r1, [sp, #4]
+ 564 00fe 361A     		subs	r6, r6, r0
+ 565 0100 8F41     		sbcs	r7, r7, r1
+ 566              	.LVL36:
+  58:Src/PID.c     ****         int64_t MSE704 = error1 * error1 + error2 * error2;
+ 567              		.loc 1 58 9 is_stmt 1 view .LVU87
+  58:Src/PID.c     ****         int64_t MSE704 = error1 * error1 + error2 * error2;
+ 568              		.loc 1 58 32 is_stmt 0 view .LVU88
+ 569 0102 0298     		ldr	r0, [sp, #8]
+ 570 0104 0399     		ldr	r1, [sp, #12]
+ 571 0106 121A     		subs	r2, r2, r0
+ 572 0108 8B41     		sbcs	r3, r3, r1
+ 573 010a 0492     		str	r2, [sp, #16]
+ 574 010c 0593     		str	r3, [sp, #20]
+ 575              	.LVL37:
+  59:Src/PID.c     **** 
+ 576              		.loc 1 59 9 is_stmt 1 view .LVU89
+  59:Src/PID.c     **** 
+ 577              		.loc 1 59 33 is_stmt 0 view .LVU90
+ 578 010e 3200     		movs	r2, r6
+ 579              	.LVL38:
+  59:Src/PID.c     **** 
+ 580              		.loc 1 59 33 view .LVU91
+ 581 0110 3B00     		movs	r3, r7
+ 582 0112 3000     		movs	r0, r6
+ 583 0114 3900     		movs	r1, r7
+ 584 0116 FFF7FEFF 		bl	__aeabi_lmul
+ 585              	.LVL39:
+ 586 011a 0400     		movs	r4, r0
+ 587 011c 0D00     		movs	r5, r1
+  59:Src/PID.c     **** 
+ 588              		.loc 1 59 51 view .LVU92
+ 589 011e 0498     		ldr	r0, [sp, #16]
+ 590 0120 0599     		ldr	r1, [sp, #20]
+ 591 0122 0200     		movs	r2, r0
+ 592 0124 0B00     		movs	r3, r1
+ 593 0126 FFF7FEFF 		bl	__aeabi_lmul
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 14
 
 
- 552 0188 09AB     		add	r3, sp, #36
- 553 018a 1800     		movs	r0, r3
- 554 018c FFF7FEFF 		bl	memset
- 555              	.LVL55:
- 556 0190 009A     		ldr	r2, [sp]
- 557 0192 019B     		ldr	r3, [sp, #4]
- 558 0194 6349     		ldr	r1, .L45+48
- 559 0196 09A8     		add	r0, sp, #36
- 560 0198 FFF7FEFF 		bl	sprintf
- 561              	.LVL56:
- 562 019c 82B2     		uxth	r2, r0
- 563 019e FA23     		movs	r3, #250
- 564 01a0 9B00     		lsls	r3, r3, #2
- 565 01a2 09A9     		add	r1, sp, #36
- 566 01a4 5B48     		ldr	r0, .L45+32
- 567              	.LVL57:
- 568 01a6 FFF7FEFF 		bl	HAL_UART_Transmit
- 569              	.LVL58:
- 570              	.LBE7:
- 571              	.LBB8:
-  61:Src/PID.c     ****         if(MSE704<State.PD1_PD2_MSE ){
- 572              		.loc 1 61 0
- 573 01aa 6422     		movs	r2, #100
- 574 01ac 0021     		movs	r1, #0
- 575 01ae 09A8     		add	r0, sp, #36
- 576 01b0 FFF7FEFF 		bl	memset
- 577              	.LVL59:
- 578 01b4 2200     		movs	r2, r4
- 579 01b6 2B00     		movs	r3, r5
- 580 01b8 5B49     		ldr	r1, .L45+52
- 581 01ba 09A8     		add	r0, sp, #36
- 582 01bc FFF7FEFF 		bl	sprintf
- 583              	.LVL60:
- 584 01c0 82B2     		uxth	r2, r0
- 585 01c2 FA23     		movs	r3, #250
- 586 01c4 9B00     		lsls	r3, r3, #2
- 587 01c6 09A9     		add	r1, sp, #36
- 588 01c8 5248     		ldr	r0, .L45+32
- 589              	.LVL61:
- 590 01ca FFF7FEFF 		bl	HAL_UART_Transmit
- 591              	.LVL62:
- 592              	.LBE8:
-  62:Src/PID.c     ****             State.PD1_PD2_Offset = PS;
- 593              		.loc 1 62 0
- 594 01ce 4346     		mov	r3, r8
- 595 01d0 2933     		adds	r3, r3, #41
- 596 01d2 FF33     		adds	r3, r3, #255
- 597 01d4 1A68     		ldr	r2, [r3]
- 598 01d6 5B68     		ldr	r3, [r3, #4]
- 599 01d8 AB42     		cmp	r3, r5
- 600 01da 04DC     		bgt	.L37
- 601 01dc 00D0     		beq	.LCB533
- 602 01de 3DE7     		b	.L18	@long jump
- 603              	.LCB533:
- 604 01e0 A242     		cmp	r2, r4
- 605 01e2 00D8     		bhi	.LCB535
- 606 01e4 3AE7     		b	.L18	@long jump
-ARM GAS  /tmp/ccH7iQ9o.s 			page 13
+ 594              	.LVL40:
+  59:Src/PID.c     **** 
+ 595              		.loc 1 59 17 view .LVU93
+ 596 012a 2418     		adds	r4, r4, r0
+ 597 012c 4D41     		adcs	r5, r5, r1
+ 598              	.LVL41:
+  61:Src/PID.c     ****         {
+ 599              		.loc 1 61 9 is_stmt 1 view .LVU94
+  61:Src/PID.c     ****         {
+ 600              		.loc 1 61 27 is_stmt 0 view .LVU95
+ 601 012e 9D23     		movs	r3, #157
+ 602 0130 DB00     		lsls	r3, r3, #3
+ 603 0132 4344     		add	r3, r3, r8
+ 604 0134 1A68     		ldr	r2, [r3]
+ 605 0136 5B68     		ldr	r3, [r3, #4]
+  61:Src/PID.c     ****         {
+ 606              		.loc 1 61 12 view .LVU96
+ 607 0138 AB42     		cmp	r3, r5
+ 608 013a 02DC     		bgt	.L37
+ 609 013c 91D1     		bne	.L18
+ 610 013e A242     		cmp	r2, r4
+ 611 0140 8FD9     		bls	.L18
+ 612              	.L37:
+ 613              	.LBB4:
+  63:Src/PID.c     ****             SERIAL_WRITE("Phase2: %lu\n", Phase2);
+ 614              		.loc 1 63 13 is_stmt 1 view .LVU97
+ 615 0142 0023     		movs	r3, #0
+ 616 0144 9B46     		mov	fp, r3
+ 617 0146 0D93     		str	r3, [sp, #52]
+ 618 0148 6022     		movs	r2, #96
+ 619 014a 0021     		movs	r1, #0
+ 620 014c 0EA8     		add	r0, sp, #56
+ 621 014e FFF7FEFF 		bl	memset
+ 622              	.LVL42:
+  63:Src/PID.c     ****             SERIAL_WRITE("Phase2: %lu\n", Phase2);
+ 623              		.loc 1 63 13 view .LVU98
+ 624 0152 009A     		ldr	r2, [sp]
+ 625 0154 019B     		ldr	r3, [sp, #4]
+ 626 0156 8249     		ldr	r1, .L45+32
+ 627 0158 0DA8     		add	r0, sp, #52
+ 628 015a FFF7FEFF 		bl	sprintf
+ 629              	.LVL43:
+  63:Src/PID.c     ****             SERIAL_WRITE("Phase2: %lu\n", Phase2);
+ 630              		.loc 1 63 13 view .LVU99
+ 631 015e FA22     		movs	r2, #250
+ 632 0160 9200     		lsls	r2, r2, #2
+ 633 0162 9246     		mov	r10, r2
+ 634 0164 82B2     		uxth	r2, r0
+ 635 0166 7F49     		ldr	r1, .L45+36
+ 636 0168 8846     		mov	r8, r1
+ 637 016a 5346     		mov	r3, r10
+ 638 016c 0DA9     		add	r1, sp, #52
+ 639 016e 4046     		mov	r0, r8
+ 640              	.LVL44:
+  63:Src/PID.c     ****             SERIAL_WRITE("Phase2: %lu\n", Phase2);
+ 641              		.loc 1 63 13 is_stmt 0 view .LVU100
+ 642 0170 FFF7FEFF 		bl	HAL_UART_Transmit
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 15
 
 
- 607              	.LCB535:
- 608              	.L37:
-  63:Src/PID.c     ****             State.PD1_PD2_MSE  = MSE704;
- 609              		.loc 1 63 0
- 610 01e6 444B     		ldr	r3, .L45+4
- 611 01e8 1A00     		movs	r2, r3
- 612 01ea 2132     		adds	r2, r2, #33
- 613 01ec FF32     		adds	r2, r2, #255
- 614 01ee 4946     		mov	r1, r9
- 615 01f0 1160     		str	r1, [r2]
- 616 01f2 C917     		asrs	r1, r1, #31
- 617 01f4 5160     		str	r1, [r2, #4]
-  64:Src/PID.c     ****             State.PD1_Slope = prevPhase1 < Phase1 ? 1 : -1;
- 618              		.loc 1 64 0
- 619 01f6 2933     		adds	r3, r3, #41
- 620 01f8 FF33     		adds	r3, r3, #255
- 621 01fa 1C60     		str	r4, [r3]
- 622 01fc 5D60     		str	r5, [r3, #4]
-  65:Src/PID.c     ****             State.PD2_Slope =  prevPhase2 < Phase2 ? 1 : -1;
- 623              		.loc 1 65 0
- 624 01fe 029B     		ldr	r3, [sp, #8]
- 625 0200 039C     		ldr	r4, [sp, #12]
- 626 0202 5445     		cmp	r4, r10
- 627 0204 05D8     		bhi	.L38
- 628 0206 00D0     		beq	.LCB554
- 629 0208 16E7     		b	.L33	@long jump
- 630              	.LCB554:
- 631 020a 069A     		ldr	r2, [sp, #24]
- 632 020c 9342     		cmp	r3, r2
- 633 020e 00D8     		bhi	.LCB557
- 634 0210 12E7     		b	.L33	@long jump
- 635              	.LCB557:
- 636              	.L38:
- 637 0212 0123     		movs	r3, #1
- 638              	.L20:
-  65:Src/PID.c     ****             State.PD2_Slope =  prevPhase2 < Phase2 ? 1 : -1;
- 639              		.loc 1 65 0 is_stmt 0 discriminator 4
- 640 0214 3849     		ldr	r1, .L45+4
- 641 0216 8722     		movs	r2, #135
- 642 0218 5200     		lsls	r2, r2, #1
- 643 021a 8B54     		strb	r3, [r1, r2]
-  66:Src/PID.c     ****             State.PD1_PD2_SetPoint = (int)State.PD1_Slope * (int)Phase1 +   (int)State.PD2_Slope  *
- 644              		.loc 1 66 0 is_stmt 1 discriminator 4
- 645 021c 0499     		ldr	r1, [sp, #16]
- 646 021e 059A     		ldr	r2, [sp, #20]
- 647 0220 5A45     		cmp	r2, fp
- 648 0222 00D9     		bls	.LCB568
- 649 0224 0BE7     		b	.L39	@long jump
- 650              	.LCB568:
- 651 0226 04D1     		bne	.L34
- 652 0228 0A00     		movs	r2, r1
- 653 022a 0799     		ldr	r1, [sp, #28]
- 654 022c 8A42     		cmp	r2, r1
- 655 022e 00D9     		bls	.LCB574
- 656 0230 05E7     		b	.L39	@long jump
- 657              	.LCB574:
- 658              	.L34:
-ARM GAS  /tmp/ccH7iQ9o.s 			page 14
+ 643              	.LVL45:
+ 644              	.LBE4:
+  63:Src/PID.c     ****             SERIAL_WRITE("Phase2: %lu\n", Phase2);
+ 645              		.loc 1 63 50 is_stmt 1 view .LVU101
+ 646              	.LBB5:
+  64:Src/PID.c     ****             SERIAL_WRITE("error1: %li\n", error1);
+ 647              		.loc 1 64 13 view .LVU102
+ 648 0174 5A46     		mov	r2, fp
+ 649 0176 0D92     		str	r2, [sp, #52]
+ 650 0178 6032     		adds	r2, r2, #96
+ 651 017a 0021     		movs	r1, #0
+ 652 017c 0EA8     		add	r0, sp, #56
+ 653 017e FFF7FEFF 		bl	memset
+ 654              	.LVL46:
+  64:Src/PID.c     ****             SERIAL_WRITE("error1: %li\n", error1);
+ 655              		.loc 1 64 13 view .LVU103
+ 656 0182 029A     		ldr	r2, [sp, #8]
+ 657 0184 039B     		ldr	r3, [sp, #12]
+ 658 0186 7849     		ldr	r1, .L45+40
+ 659 0188 0DA8     		add	r0, sp, #52
+ 660 018a FFF7FEFF 		bl	sprintf
+ 661              	.LVL47:
+  64:Src/PID.c     ****             SERIAL_WRITE("error1: %li\n", error1);
+ 662              		.loc 1 64 13 view .LVU104
+ 663 018e 82B2     		uxth	r2, r0
+ 664 0190 5346     		mov	r3, r10
+ 665 0192 0DA9     		add	r1, sp, #52
+ 666 0194 4046     		mov	r0, r8
+ 667              	.LVL48:
+  64:Src/PID.c     ****             SERIAL_WRITE("error1: %li\n", error1);
+ 668              		.loc 1 64 13 is_stmt 0 view .LVU105
+ 669 0196 FFF7FEFF 		bl	HAL_UART_Transmit
+ 670              	.LVL49:
+ 671              	.LBE5:
+  64:Src/PID.c     ****             SERIAL_WRITE("error1: %li\n", error1);
+ 672              		.loc 1 64 50 is_stmt 1 view .LVU106
+ 673              	.LBB6:
+  65:Src/PID.c     ****             SERIAL_WRITE("error2: %li\n", error2);
+ 674              		.loc 1 65 13 view .LVU107
+ 675 019a 5A46     		mov	r2, fp
+ 676 019c 0D92     		str	r2, [sp, #52]
+ 677 019e 6032     		adds	r2, r2, #96
+ 678 01a0 0021     		movs	r1, #0
+ 679 01a2 0EA8     		add	r0, sp, #56
+ 680 01a4 FFF7FEFF 		bl	memset
+ 681              	.LVL50:
+  65:Src/PID.c     ****             SERIAL_WRITE("error2: %li\n", error2);
+ 682              		.loc 1 65 13 view .LVU108
+ 683 01a8 3200     		movs	r2, r6
+ 684 01aa 3B00     		movs	r3, r7
+ 685 01ac 6F49     		ldr	r1, .L45+44
+ 686 01ae 0DA8     		add	r0, sp, #52
+ 687 01b0 FFF7FEFF 		bl	sprintf
+ 688              	.LVL51:
+  65:Src/PID.c     ****             SERIAL_WRITE("error2: %li\n", error2);
+ 689              		.loc 1 65 13 view .LVU109
+ 690 01b4 82B2     		uxth	r2, r0
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 16
 
 
-  66:Src/PID.c     ****             State.PD1_PD2_SetPoint = (int)State.PD1_Slope * (int)Phase1 +   (int)State.PD2_Slope  *
- 659              		.loc 1 66 0 is_stmt 0
- 660 0232 0121     		movs	r1, #1
- 661 0234 4942     		rsbs	r1, r1, #0
- 662 0236 03E7     		b	.L22
- 663              	.LVL63:
- 664              	.L43:
- 665              	.LBE10:
- 666              	.LBE11:
- 667              	.LBB12:
-  72:Src/PID.c     ****     }
-  73:Src/PID.c     ****     SERIAL_WRITE("PD1+PD2 SETPOINT: %lu\n", State.PD1_PD2_SetPoint);
- 668              		.loc 1 73 0 is_stmt 1
- 669 0238 6422     		movs	r2, #100
- 670 023a 0021     		movs	r1, #0
- 671 023c 09A8     		add	r0, sp, #36
- 672 023e FFF7FEFF 		bl	memset
- 673              	.LVL64:
- 674 0242 2D4C     		ldr	r4, .L45+4
- 675 0244 2300     		movs	r3, r4
- 676 0246 1933     		adds	r3, r3, #25
- 677 0248 FF33     		adds	r3, r3, #255
- 678 024a 1A68     		ldr	r2, [r3]
- 679 024c 5B68     		ldr	r3, [r3, #4]
- 680 024e 3749     		ldr	r1, .L45+56
- 681 0250 09A8     		add	r0, sp, #36
- 682 0252 FFF7FEFF 		bl	sprintf
- 683              	.LVL65:
- 684 0256 FA26     		movs	r6, #250
- 685 0258 B600     		lsls	r6, r6, #2
- 686 025a 82B2     		uxth	r2, r0
- 687 025c 2D4D     		ldr	r5, .L45+32
- 688 025e 3300     		movs	r3, r6
- 689 0260 09A9     		add	r1, sp, #36
- 690 0262 2800     		movs	r0, r5
- 691              	.LVL66:
- 692 0264 FFF7FEFF 		bl	HAL_UART_Transmit
- 693              	.LVL67:
- 694              	.LBE12:
- 695              	.LBB13:
-  74:Src/PID.c     ****     SERIAL_WRITE("PD1 SLOPE: %i\n",State.PD1_Slope);
- 696              		.loc 1 74 0
- 697 0268 6422     		movs	r2, #100
- 698 026a 0021     		movs	r1, #0
- 699 026c 09A8     		add	r0, sp, #36
- 700 026e FFF7FEFF 		bl	memset
- 701              	.LVL68:
- 702 0272 8723     		movs	r3, #135
- 703 0274 5B00     		lsls	r3, r3, #1
- 704 0276 E256     		ldrsb	r2, [r4, r3]
- 705 0278 2D49     		ldr	r1, .L45+60
- 706 027a 09A8     		add	r0, sp, #36
- 707 027c FFF7FEFF 		bl	sprintf
- 708              	.LVL69:
- 709 0280 82B2     		uxth	r2, r0
- 710 0282 3300     		movs	r3, r6
- 711 0284 09A9     		add	r1, sp, #36
-ARM GAS  /tmp/ccH7iQ9o.s 			page 15
+ 691 01b6 5346     		mov	r3, r10
+ 692 01b8 0DA9     		add	r1, sp, #52
+ 693 01ba 4046     		mov	r0, r8
+ 694              	.LVL52:
+  65:Src/PID.c     ****             SERIAL_WRITE("error2: %li\n", error2);
+ 695              		.loc 1 65 13 is_stmt 0 view .LVU110
+ 696 01bc FFF7FEFF 		bl	HAL_UART_Transmit
+ 697              	.LVL53:
+ 698              	.LBE6:
+  65:Src/PID.c     ****             SERIAL_WRITE("error2: %li\n", error2);
+ 699              		.loc 1 65 50 is_stmt 1 view .LVU111
+ 700              	.LBB7:
+  66:Src/PID.c     ****             SERIAL_WRITE("MSE704: %li\n\n", MSE704);
+ 701              		.loc 1 66 13 view .LVU112
+ 702 01c0 5A46     		mov	r2, fp
+ 703 01c2 0D92     		str	r2, [sp, #52]
+ 704 01c4 6032     		adds	r2, r2, #96
+ 705 01c6 0021     		movs	r1, #0
+ 706 01c8 0EA8     		add	r0, sp, #56
+ 707 01ca FFF7FEFF 		bl	memset
+ 708              	.LVL54:
+  66:Src/PID.c     ****             SERIAL_WRITE("MSE704: %li\n\n", MSE704);
+ 709              		.loc 1 66 13 view .LVU113
+ 710 01ce 049A     		ldr	r2, [sp, #16]
+ 711 01d0 059B     		ldr	r3, [sp, #20]
+ 712 01d2 6749     		ldr	r1, .L45+48
+ 713 01d4 0DA8     		add	r0, sp, #52
+ 714 01d6 FFF7FEFF 		bl	sprintf
+ 715              	.LVL55:
+  66:Src/PID.c     ****             SERIAL_WRITE("MSE704: %li\n\n", MSE704);
+ 716              		.loc 1 66 13 view .LVU114
+ 717 01da 82B2     		uxth	r2, r0
+ 718 01dc 5346     		mov	r3, r10
+ 719 01de 0DA9     		add	r1, sp, #52
+ 720 01e0 4046     		mov	r0, r8
+ 721              	.LVL56:
+  66:Src/PID.c     ****             SERIAL_WRITE("MSE704: %li\n\n", MSE704);
+ 722              		.loc 1 66 13 is_stmt 0 view .LVU115
+ 723 01e2 FFF7FEFF 		bl	HAL_UART_Transmit
+ 724              	.LVL57:
+ 725              	.LBE7:
+  66:Src/PID.c     ****             SERIAL_WRITE("MSE704: %li\n\n", MSE704);
+ 726              		.loc 1 66 50 is_stmt 1 view .LVU116
+ 727              	.LBB8:
+  67:Src/PID.c     ****             State.PD1_PD2_Offset = PS;
+ 728              		.loc 1 67 13 view .LVU117
+ 729 01e6 5A46     		mov	r2, fp
+ 730 01e8 0D92     		str	r2, [sp, #52]
+ 731 01ea 6032     		adds	r2, r2, #96
+ 732 01ec 0021     		movs	r1, #0
+ 733 01ee 0EA8     		add	r0, sp, #56
+ 734 01f0 FFF7FEFF 		bl	memset
+ 735              	.LVL58:
+  67:Src/PID.c     ****             State.PD1_PD2_Offset = PS;
+ 736              		.loc 1 67 13 view .LVU118
+ 737 01f4 2200     		movs	r2, r4
+ 738 01f6 2B00     		movs	r3, r5
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 17
 
 
- 712 0286 2800     		movs	r0, r5
- 713              	.LVL70:
- 714 0288 FFF7FEFF 		bl	HAL_UART_Transmit
- 715              	.LVL71:
- 716              	.LBE13:
- 717              	.LBB14:
-  75:Src/PID.c     ****     SERIAL_WRITE("PD2 SLOPE: %i\n",State.PD2_Slope);
- 718              		.loc 1 75 0
- 719 028c 6422     		movs	r2, #100
- 720 028e 0021     		movs	r1, #0
- 721 0290 09A8     		add	r0, sp, #36
- 722 0292 FFF7FEFF 		bl	memset
- 723              	.LVL72:
- 724 0296 1023     		movs	r3, #16
- 725 0298 FF33     		adds	r3, r3, #255
- 726 029a E256     		ldrsb	r2, [r4, r3]
- 727 029c 2549     		ldr	r1, .L45+64
- 728 029e 09A8     		add	r0, sp, #36
- 729 02a0 FFF7FEFF 		bl	sprintf
- 730              	.LVL73:
- 731 02a4 82B2     		uxth	r2, r0
- 732 02a6 3300     		movs	r3, r6
- 733 02a8 09A9     		add	r1, sp, #36
- 734 02aa 2800     		movs	r0, r5
- 735              	.LVL74:
- 736 02ac FFF7FEFF 		bl	HAL_UART_Transmit
- 737              	.LVL75:
- 738              	.LBE14:
-  76:Src/PID.c     ****     DAC_cmd(RF_PS_704_OFFSET + DAC_WRITE + State.PD1_PD2_Offset); 
- 739              		.loc 1 76 0
- 740 02b0 2300     		movs	r3, r4
- 741 02b2 2133     		adds	r3, r3, #33
- 742 02b4 FF33     		adds	r3, r3, #255
- 743 02b6 1868     		ldr	r0, [r3]
- 744 02b8 B023     		movs	r3, #176
- 745 02ba 5B03     		lsls	r3, r3, #13
- 746 02bc 9C46     		mov	ip, r3
- 747 02be 6044     		add	r0, r0, ip
- 748 02c0 FFF7FEFF 		bl	DAC_cmd
- 749              	.LVL76:
-  77:Src/PID.c     ****     //352
-  78:Src/PID.c     ****     DAC_cmd(RF_PS_352_OFFSET + DAC_WRITE + 0); 
- 750              		.loc 1 78 0
- 751 02c4 A020     		movs	r0, #160
- 752 02c6 4003     		lsls	r0, r0, #13
- 753 02c8 FFF7FEFF 		bl	DAC_cmd
- 754              	.LVL77:
-  79:Src/PID.c     ****     DAC_cmd(RF_PS_352_FINE + DAC_WRITE + 0x7fff);    
- 755              		.loc 1 79 0
- 756 02cc 1A48     		ldr	r0, .L45+68
- 757 02ce FFF7FEFF 		bl	DAC_cmd
- 758              	.LVL78:
-  80:Src/PID.c     ****     State.PD3_PD4_MSE = 16200000000;
- 759              		.loc 1 80 0
- 760 02d2 4134     		adds	r4, r4, #65
- 761 02d4 FF34     		adds	r4, r4, #255
- 762 02d6 094A     		ldr	r2, .L45+8
-ARM GAS  /tmp/ccH7iQ9o.s 			page 16
+ 739 01f8 5E49     		ldr	r1, .L45+52
+ 740 01fa 0DA8     		add	r0, sp, #52
+ 741 01fc FFF7FEFF 		bl	sprintf
+ 742              	.LVL59:
+  67:Src/PID.c     ****             State.PD1_PD2_Offset = PS;
+ 743              		.loc 1 67 13 view .LVU119
+ 744 0200 82B2     		uxth	r2, r0
+ 745 0202 5346     		mov	r3, r10
+ 746 0204 0DA9     		add	r1, sp, #52
+ 747 0206 4046     		mov	r0, r8
+ 748              	.LVL60:
+  67:Src/PID.c     ****             State.PD1_PD2_Offset = PS;
+ 749              		.loc 1 67 13 is_stmt 0 view .LVU120
+ 750 0208 FFF7FEFF 		bl	HAL_UART_Transmit
+ 751              	.LVL61:
+ 752              	.LBE8:
+  67:Src/PID.c     ****             State.PD1_PD2_Offset = PS;
+ 753              		.loc 1 67 52 is_stmt 1 view .LVU121
+  68:Src/PID.c     ****             State.PD1_PD2_MSE = MSE704;
+ 754              		.loc 1 68 13 view .LVU122
+  68:Src/PID.c     ****             State.PD1_PD2_MSE = MSE704;
+ 755              		.loc 1 68 34 is_stmt 0 view .LVU123
+ 756 020c 4D4B     		ldr	r3, .L45+4
+ 757 020e 9C22     		movs	r2, #156
+ 758 0210 D200     		lsls	r2, r2, #3
+ 759 0212 4946     		mov	r1, r9
+ 760 0214 9950     		str	r1, [r3, r2]
+  69:Src/PID.c     ****             State.PD1_Slope = prevPhase1 < Phase1 ? 1 : -1;
+ 761              		.loc 1 69 13 is_stmt 1 view .LVU124
+  69:Src/PID.c     ****             State.PD1_Slope = prevPhase1 < Phase1 ? 1 : -1;
+ 762              		.loc 1 69 31 is_stmt 0 view .LVU125
+ 763 0216 0832     		adds	r2, r2, #8
+ 764 0218 9446     		mov	ip, r2
+ 765 021a 6344     		add	r3, r3, ip
+ 766 021c 1C60     		str	r4, [r3]
+ 767 021e 5D60     		str	r5, [r3, #4]
+  70:Src/PID.c     ****             State.PD2_Slope = prevPhase2 < Phase2 ? 1 : -1;
+ 768              		.loc 1 70 13 is_stmt 1 view .LVU126
+  70:Src/PID.c     ****             State.PD2_Slope = prevPhase2 < Phase2 ? 1 : -1;
+ 769              		.loc 1 70 29 is_stmt 0 view .LVU127
+ 770 0220 009B     		ldr	r3, [sp]
+ 771 0222 019C     		ldr	r4, [sp, #4]
+ 772 0224 069A     		ldr	r2, [sp, #24]
+ 773 0226 9442     		cmp	r4, r2
+ 774 0228 05D8     		bhi	.L38
+ 775              	.LVL62:
+  70:Src/PID.c     ****             State.PD2_Slope = prevPhase2 < Phase2 ? 1 : -1;
+ 776              		.loc 1 70 29 view .LVU128
+ 777 022a 00D0     		beq	.LCB597
+ 778 022c 06E7     		b	.L33	@long jump
+ 779              	.LCB597:
+ 780 022e 089A     		ldr	r2, [sp, #32]
+ 781 0230 9342     		cmp	r3, r2
+ 782 0232 00D8     		bhi	.LCB600
+ 783 0234 02E7     		b	.L33	@long jump
+ 784              	.LCB600:
+ 785              	.L38:
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 18
 
 
- 763 02d8 0323     		movs	r3, #3
- 764 02da 2260     		str	r2, [r4]
- 765 02dc 6360     		str	r3, [r4, #4]
- 766              	.LVL79:
- 767              	.LBB15:
-  81:Src/PID.c     ****     uint64_t prevPhase3 = 0;
-  82:Src/PID.c     ****     uint64_t prevPhase4 = 0;
-  83:Src/PID.c     ****     for(int PS = 0;PS<0xffff;PS+=0x0700){
- 768              		.loc 1 83 0
- 769 02de 0023     		movs	r3, #0
- 770 02e0 9946     		mov	r9, r3
- 771              	.LVL80:
- 772              	.LBE15:
-  82:Src/PID.c     ****     for(int PS = 0;PS<0xffff;PS+=0x0700){
- 773              		.loc 1 82 0
- 774 02e2 0793     		str	r3, [sp, #28]
- 775              	.LVL81:
- 776 02e4 9B46     		mov	fp, r3
-  81:Src/PID.c     ****     uint64_t prevPhase3 = 0;
- 777              		.loc 1 81 0
- 778 02e6 0693     		str	r3, [sp, #24]
- 779              	.LVL82:
- 780 02e8 9A46     		mov	r10, r3
- 781              	.LBB24:
- 782              		.loc 1 83 0
- 783 02ea 3FE0     		b	.L25
- 784              	.LVL83:
- 785              	.L35:
- 786              	.LBB16:
-  84:Src/PID.c     ****         DAC_cmd(RF_PS_352_OFFSET + DAC_WRITE + PS); 
-  85:Src/PID.c     ****         HAL_Delay(100);
-  86:Src/PID.c     ****         uint64_t Phase3 =(180000 - (((uint64_t)State.ADC_Values[ADC_PD3_Phase_CH] * 1800000) / 0xff
-  87:Src/PID.c     ****         uint64_t Phase4 =(180000 - (((uint64_t)State.ADC_Values[ADC_PD4_Phase_CH] * 1800000) / 0xff
-  88:Src/PID.c     ****         SERIAL_WRITE("Phase3: %lu\n",Phase3);
-  89:Src/PID.c     ****         SERIAL_WRITE("Phase4: %lu\n",Phase4);
-  90:Src/PID.c     ****         int64_t error3 = 90000 - Phase3;
-  91:Src/PID.c     ****         int64_t error4 = 90000 - Phase4;        
-  92:Src/PID.c     ****         int64_t MSE352 = error3*error3 + error4*error4;
-  93:Src/PID.c     ****         SERIAL_WRITE("error3: %li\n",error3);
-  94:Src/PID.c     ****         SERIAL_WRITE("error3: %li\n",error4);
-  95:Src/PID.c     ****         SERIAL_WRITE("MSE352: %li\n",MSE352);
-  96:Src/PID.c     ****         if(MSE352< State.PD3_PD4_MSE ){           
-  97:Src/PID.c     ****             State.PD3_PD4_Offset = PS; 
-  98:Src/PID.c     ****             State.PD3_PD4_MSE  = MSE352;
-  99:Src/PID.c     ****             State.PD3_Slope = prevPhase3 < Phase3 ? 1 : -1;
- 787              		.loc 1 99 0
- 788 02ec 0123     		movs	r3, #1
- 789 02ee 5B42     		rsbs	r3, r3, #0
- 790 02f0 10E1     		b	.L28
- 791              	.L46:
- 792 02f2 C046     		.align	2
- 793              	.L45:
- 794 02f4 FF7F1700 		.word	1540095
- 795 02f8 00000000 		.word	State
- 796 02fc 006298C5 		.word	-979869184
- 797 0300 FEFF0000 		.word	65534
- 798 0304 40771B00 		.word	1800000
-ARM GAS  /tmp/ccH7iQ9o.s 			page 17
+ 786 0236 0123     		movs	r3, #1
+ 787              	.L20:
+  70:Src/PID.c     ****             State.PD2_Slope = prevPhase2 < Phase2 ? 1 : -1;
+ 788              		.loc 1 70 29 discriminator 4 view .LVU129
+ 789 0238 4249     		ldr	r1, .L45+4
+ 790              	.LVL63:
+  70:Src/PID.c     ****             State.PD2_Slope = prevPhase2 < Phase2 ? 1 : -1;
+ 791              		.loc 1 70 29 discriminator 4 view .LVU130
+ 792 023a 4F4A     		ldr	r2, .L45+56
+ 793 023c 8B54     		strb	r3, [r1, r2]
+  71:Src/PID.c     ****             State.PD1_PD2_SetPoint = (int)State.PD1_Slope * (int)Phase1 + (int)State.PD2_Slope * (i
+ 794              		.loc 1 71 13 is_stmt 1 discriminator 4 view .LVU131
+  71:Src/PID.c     ****             State.PD1_PD2_SetPoint = (int)State.PD1_Slope * (int)Phase1 + (int)State.PD2_Slope * (i
+ 795              		.loc 1 71 29 is_stmt 0 discriminator 4 view .LVU132
+ 796 023e 0299     		ldr	r1, [sp, #8]
+ 797 0240 039A     		ldr	r2, [sp, #12]
+ 798 0242 0798     		ldr	r0, [sp, #28]
+ 799 0244 8242     		cmp	r2, r0
+ 800 0246 00D9     		bls	.LCB613
+ 801 0248 FBE6     		b	.L39	@long jump
+ 802              	.LCB613:
+ 803 024a 04D1     		bne	.L34
+ 804 024c 0A00     		movs	r2, r1
+ 805 024e 0A99     		ldr	r1, [sp, #40]
+ 806 0250 8A42     		cmp	r2, r1
+ 807 0252 00D9     		bls	.LCB619
+ 808 0254 F5E6     		b	.L39	@long jump
+ 809              	.LCB619:
+ 810              	.L34:
+  71:Src/PID.c     ****             State.PD1_PD2_SetPoint = (int)State.PD1_Slope * (int)Phase1 + (int)State.PD2_Slope * (i
+ 811              		.loc 1 71 29 view .LVU133
+ 812 0256 0121     		movs	r1, #1
+ 813 0258 4942     		rsbs	r1, r1, #0
+ 814 025a F3E6     		b	.L22
+ 815              	.LVL64:
+ 816              	.L43:
+  71:Src/PID.c     ****             State.PD1_PD2_SetPoint = (int)State.PD1_Slope * (int)Phase1 + (int)State.PD2_Slope * (i
+ 817              		.loc 1 71 29 view .LVU134
+ 818              	.LBE10:
+ 819              	.LBE11:
+ 820              	.LBB12:
+  76:Src/PID.c     ****     }
+  77:Src/PID.c     ****     SERIAL_WRITE("PD1+PD2 SETPOINT: %li\n", State.PD1_PD2_SetPoint);
+ 821              		.loc 1 77 5 is_stmt 1 view .LVU135
+ 822 025c 0027     		movs	r7, #0
+ 823 025e 0D97     		str	r7, [sp, #52]
+ 824 0260 6022     		movs	r2, #96
+ 825 0262 0021     		movs	r1, #0
+ 826 0264 0EA8     		add	r0, sp, #56
+ 827 0266 FFF7FEFF 		bl	memset
+ 828              	.LVL65:
+ 829              		.loc 1 77 5 view .LVU136
+ 830 026a 364C     		ldr	r4, .L45+4
+ 831 026c 9B23     		movs	r3, #155
+ 832 026e DB00     		lsls	r3, r3, #3
+ 833 0270 E318     		adds	r3, r4, r3
+ 834 0272 1A68     		ldr	r2, [r3]
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 19
 
 
- 799 0308 F6FFFF09 		.word	167772150
- 800 030c 20BF0200 		.word	180000
- 801 0310 00000000 		.word	.LC4
- 802 0314 00000000 		.word	huart2
- 803 0318 10000000 		.word	.LC7
- 804 031c 70A0FEFF 		.word	-90000
- 805 0320 20000000 		.word	.LC9
- 806 0324 30000000 		.word	.LC11
- 807 0328 40000000 		.word	.LC13
- 808 032c 50000000 		.word	.LC15
- 809 0330 68000000 		.word	.LC17
- 810 0334 78000000 		.word	.LC19
- 811 0338 FF7F1500 		.word	1409023
- 812              	.L42:
- 100:Src/PID.c     ****             State.PD4_Slope =  prevPhase4 < Phase4 ? 1 : -1;
- 813              		.loc 1 100 0
- 814 033c 0121     		movs	r1, #1
- 815              	.L30:
- 816              		.loc 1 100 0 is_stmt 0 discriminator 4
- 817 033e A34A     		ldr	r2, .L47
- 818 0340 1220     		movs	r0, #18
- 819 0342 FF30     		adds	r0, r0, #255
- 820 0344 1154     		strb	r1, [r2, r0]
- 101:Src/PID.c     ****             State.PD3_PD4_SetPoint =  (int)State.PD3_Slope * (int)Phase3 + (int)State.PD4_Slope * (
- 821              		.loc 1 101 0 is_stmt 1 discriminator 4
- 822 0346 0298     		ldr	r0, [sp, #8]
- 823 0348 4343     		muls	r3, r0
- 824 034a 6143     		muls	r1, r4
- 825 034c 5B18     		adds	r3, r3, r1
- 826 034e D917     		asrs	r1, r3, #31
- 827 0350 3132     		adds	r2, r2, #49
- 828 0352 FF32     		adds	r2, r2, #255
- 829 0354 1360     		str	r3, [r2]
- 830 0356 5160     		str	r1, [r2, #4]
- 831              	.L26:
- 832              	.LVL84:
- 833              	.LBE16:
-  83:Src/PID.c     ****         DAC_cmd(RF_PS_352_OFFSET + DAC_WRITE + PS); 
- 834              		.loc 1 83 0 discriminator 2
- 835 0358 E023     		movs	r3, #224
- 836 035a DB00     		lsls	r3, r3, #3
- 837 035c 9C46     		mov	ip, r3
- 838 035e E144     		add	r9, r9, ip
- 839              	.LVL85:
- 840              	.LBB22:
- 102:Src/PID.c     **** 
- 103:Src/PID.c     ****         }
- 104:Src/PID.c     ****         prevPhase3 = Phase3;
- 105:Src/PID.c     ****         prevPhase4 = Phase4;
- 841              		.loc 1 105 0 discriminator 2
- 842 0360 0794     		str	r4, [sp, #28]
- 843 0362 AB46     		mov	fp, r5
- 104:Src/PID.c     ****         prevPhase4 = Phase4;
- 844              		.loc 1 104 0 discriminator 2
- 845 0364 029B     		ldr	r3, [sp, #8]
- 846 0366 039C     		ldr	r4, [sp, #12]
- 847 0368 0693     		str	r3, [sp, #24]
-ARM GAS  /tmp/ccH7iQ9o.s 			page 18
+ 835 0274 5B68     		ldr	r3, [r3, #4]
+ 836 0276 4149     		ldr	r1, .L45+60
+ 837 0278 0DA8     		add	r0, sp, #52
+ 838 027a FFF7FEFF 		bl	sprintf
+ 839              	.LVL66:
+ 840              		.loc 1 77 5 view .LVU137
+ 841 027e FA26     		movs	r6, #250
+ 842 0280 B600     		lsls	r6, r6, #2
+ 843 0282 82B2     		uxth	r2, r0
+ 844 0284 374D     		ldr	r5, .L45+36
+ 845 0286 3300     		movs	r3, r6
+ 846 0288 0DA9     		add	r1, sp, #52
+ 847 028a 2800     		movs	r0, r5
+ 848              	.LVL67:
+ 849              		.loc 1 77 5 is_stmt 0 view .LVU138
+ 850 028c FFF7FEFF 		bl	HAL_UART_Transmit
+ 851              	.LVL68:
+ 852              	.LBE12:
+ 853              		.loc 1 77 68 is_stmt 1 view .LVU139
+ 854              	.LBB13:
+  78:Src/PID.c     ****     SERIAL_WRITE("PD1 SLOPE: %i\n", State.PD1_Slope);
+ 855              		.loc 1 78 5 view .LVU140
+ 856 0290 0D97     		str	r7, [sp, #52]
+ 857 0292 6022     		movs	r2, #96
+ 858 0294 0021     		movs	r1, #0
+ 859 0296 0EA8     		add	r0, sp, #56
+ 860 0298 FFF7FEFF 		bl	memset
+ 861              	.LVL69:
+ 862              		.loc 1 78 5 view .LVU141
+ 863 029c 364B     		ldr	r3, .L45+56
+ 864 029e E256     		ldrsb	r2, [r4, r3]
+ 865 02a0 3749     		ldr	r1, .L45+64
+ 866 02a2 0DA8     		add	r0, sp, #52
+ 867 02a4 FFF7FEFF 		bl	sprintf
+ 868              	.LVL70:
+ 869              		.loc 1 78 5 view .LVU142
+ 870 02a8 82B2     		uxth	r2, r0
+ 871 02aa 3300     		movs	r3, r6
+ 872 02ac 0DA9     		add	r1, sp, #52
+ 873 02ae 2800     		movs	r0, r5
+ 874              	.LVL71:
+ 875              		.loc 1 78 5 is_stmt 0 view .LVU143
+ 876 02b0 FFF7FEFF 		bl	HAL_UART_Transmit
+ 877              	.LVL72:
+ 878              	.LBE13:
+ 879              		.loc 1 78 53 is_stmt 1 view .LVU144
+ 880              	.LBB14:
+  79:Src/PID.c     ****     SERIAL_WRITE("PD2 SLOPE: %i\n", State.PD2_Slope);
+ 881              		.loc 1 79 5 view .LVU145
+ 882 02b4 0D97     		str	r7, [sp, #52]
+ 883 02b6 6022     		movs	r2, #96
+ 884 02b8 0021     		movs	r1, #0
+ 885 02ba 0EA8     		add	r0, sp, #56
+ 886 02bc FFF7FEFF 		bl	memset
+ 887              	.LVL73:
+ 888              		.loc 1 79 5 view .LVU146
+ 889 02c0 224B     		ldr	r3, .L45+12
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 20
 
 
- 848 036a A246     		mov	r10, r4
- 849              	.LVL86:
- 850              	.L25:
- 851              	.LBE22:
-  83:Src/PID.c     ****         DAC_cmd(RF_PS_352_OFFSET + DAC_WRITE + PS); 
- 852              		.loc 1 83 0 discriminator 1
- 853 036c 984B     		ldr	r3, .L47+4
- 854 036e 9945     		cmp	r9, r3
- 855 0370 00DD     		ble	.LCB807
- 856 0372 DEE0     		b	.L44	@long jump
- 857              	.LCB807:
- 858              	.LBB23:
-  84:Src/PID.c     ****         HAL_Delay(100);
- 859              		.loc 1 84 0
- 860 0374 A020     		movs	r0, #160
- 861 0376 4003     		lsls	r0, r0, #13
- 862 0378 4844     		add	r0, r0, r9
- 863 037a FFF7FEFF 		bl	DAC_cmd
- 864              	.LVL87:
-  85:Src/PID.c     ****         uint64_t Phase3 =(180000 - (((uint64_t)State.ADC_Values[ADC_PD3_Phase_CH] * 1800000) / 0xff
- 865              		.loc 1 85 0
- 866 037e 6420     		movs	r0, #100
- 867 0380 FFF7FEFF 		bl	HAL_Delay
- 868              	.LVL88:
-  86:Src/PID.c     ****         uint64_t Phase4 =(180000 - (((uint64_t)State.ADC_Values[ADC_PD4_Phase_CH] * 1800000) / 0xff
- 869              		.loc 1 86 0
- 870 0384 914B     		ldr	r3, .L47
- 871 0386 9846     		mov	r8, r3
- 872 0388 8423     		movs	r3, #132
- 873 038a 4246     		mov	r2, r8
- 874 038c D058     		ldr	r0, [r2, r3]
- 875 038e 914A     		ldr	r2, .L47+8
- 876 0390 0023     		movs	r3, #0
- 877 0392 0021     		movs	r1, #0
- 878 0394 FFF7FEFF 		bl	__aeabi_lmul
- 879              	.LVL89:
- 880 0398 8F4A     		ldr	r2, .L47+12
- 881 039a 0023     		movs	r3, #0
- 882 039c FFF7FEFF 		bl	__aeabi_uldivmod
- 883              	.LVL90:
- 884 03a0 0600     		movs	r6, r0
- 885 03a2 0F00     		movs	r7, r1
- 886 03a4 8D4C     		ldr	r4, .L47+16
- 887 03a6 0025     		movs	r5, #0
- 888 03a8 2200     		movs	r2, r4
- 889 03aa 2B00     		movs	r3, r5
- 890 03ac 921B     		subs	r2, r2, r6
- 891 03ae BB41     		sbcs	r3, r3, r7
- 892 03b0 0292     		str	r2, [sp, #8]
- 893 03b2 0393     		str	r3, [sp, #12]
- 894              	.LVL91:
-  87:Src/PID.c     ****         SERIAL_WRITE("Phase3: %lu\n",Phase3);
- 895              		.loc 1 87 0
- 896 03b4 874A     		ldr	r2, .L47+8
- 897              	.LVL92:
- 898 03b6 0023     		movs	r3, #0
- 899 03b8 4146     		mov	r1, r8
-ARM GAS  /tmp/ccH7iQ9o.s 			page 19
+ 890 02c2 E256     		ldrsb	r2, [r4, r3]
+ 891 02c4 2F49     		ldr	r1, .L45+68
+ 892 02c6 0DA8     		add	r0, sp, #52
+ 893 02c8 FFF7FEFF 		bl	sprintf
+ 894              	.LVL74:
+ 895              		.loc 1 79 5 view .LVU147
+ 896 02cc 82B2     		uxth	r2, r0
+ 897 02ce 3300     		movs	r3, r6
+ 898 02d0 0DA9     		add	r1, sp, #52
+ 899 02d2 2800     		movs	r0, r5
+ 900              	.LVL75:
+ 901              		.loc 1 79 5 is_stmt 0 view .LVU148
+ 902 02d4 FFF7FEFF 		bl	HAL_UART_Transmit
+ 903              	.LVL76:
+ 904              	.LBE14:
+ 905              		.loc 1 79 53 is_stmt 1 view .LVU149
+ 906              	.LBB15:
+  80:Src/PID.c     ****     SERIAL_WRITE("PS704 OFFSET: %u\n", State.PD1_PD2_Offset);
+ 907              		.loc 1 80 5 view .LVU150
+ 908 02d8 0D97     		str	r7, [sp, #52]
+ 909 02da 6022     		movs	r2, #96
+ 910 02dc 0021     		movs	r1, #0
+ 911 02de 0EA8     		add	r0, sp, #56
+ 912 02e0 FFF7FEFF 		bl	memset
+ 913              	.LVL77:
+ 914              		.loc 1 80 5 view .LVU151
+ 915 02e4 9C27     		movs	r7, #156
+ 916 02e6 FF00     		lsls	r7, r7, #3
+ 917 02e8 E259     		ldr	r2, [r4, r7]
+ 918 02ea 2749     		ldr	r1, .L45+72
+ 919 02ec 0DA8     		add	r0, sp, #52
+ 920 02ee FFF7FEFF 		bl	sprintf
+ 921              	.LVL78:
+ 922              		.loc 1 80 5 view .LVU152
+ 923 02f2 82B2     		uxth	r2, r0
+ 924 02f4 3300     		movs	r3, r6
+ 925 02f6 0DA9     		add	r1, sp, #52
+ 926 02f8 2800     		movs	r0, r5
+ 927              	.LVL79:
+ 928              		.loc 1 80 5 is_stmt 0 view .LVU153
+ 929 02fa FFF7FEFF 		bl	HAL_UART_Transmit
+ 930              	.LVL80:
+ 931              	.LBE15:
+ 932              		.loc 1 80 61 is_stmt 1 view .LVU154
+  81:Src/PID.c     ****     DAC_cmd(RF_PS_704_OFFSET + DAC_WRITE + State.PD1_PD2_Offset);
+ 933              		.loc 1 81 5 view .LVU155
+ 934              		.loc 1 81 49 is_stmt 0 view .LVU156
+ 935 02fe E059     		ldr	r0, [r4, r7]
+ 936              		.loc 1 81 5 view .LVU157
+ 937 0300 B023     		movs	r3, #176
+ 938 0302 5B03     		lsls	r3, r3, #13
+ 939 0304 9C46     		mov	ip, r3
+ 940 0306 6044     		add	r0, r0, ip
+ 941 0308 FFF7FEFF 		bl	DAC_cmd
+ 942              	.LVL81:
+  82:Src/PID.c     **** 
+  83:Src/PID.c     ****     //352
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 21
 
 
- 900 03ba 486D     		ldr	r0, [r1, #84]
- 901 03bc 0021     		movs	r1, #0
- 902 03be FFF7FEFF 		bl	__aeabi_lmul
- 903              	.LVL93:
- 904 03c2 854A     		ldr	r2, .L47+12
- 905 03c4 0023     		movs	r3, #0
- 906 03c6 FFF7FEFF 		bl	__aeabi_uldivmod
- 907              	.LVL94:
- 908 03ca 0090     		str	r0, [sp]
- 909 03cc 0191     		str	r1, [sp, #4]
- 910 03ce 0A00     		movs	r2, r1
- 911 03d0 0100     		movs	r1, r0
- 912 03d2 641A     		subs	r4, r4, r1
- 913 03d4 9541     		sbcs	r5, r5, r2
- 914              	.LVL95:
- 915              	.LBB17:
-  88:Src/PID.c     ****         SERIAL_WRITE("Phase4: %lu\n",Phase4);
- 916              		.loc 1 88 0
- 917 03d6 6422     		movs	r2, #100
- 918 03d8 0021     		movs	r1, #0
- 919 03da 09AB     		add	r3, sp, #36
- 920 03dc 1800     		movs	r0, r3
- 921 03de FFF7FEFF 		bl	memset
- 922              	.LVL96:
- 923 03e2 029A     		ldr	r2, [sp, #8]
- 924 03e4 039B     		ldr	r3, [sp, #12]
- 925 03e6 7E49     		ldr	r1, .L47+20
- 926 03e8 09A8     		add	r0, sp, #36
- 927 03ea FFF7FEFF 		bl	sprintf
- 928              	.LVL97:
- 929 03ee 82B2     		uxth	r2, r0
- 930 03f0 FA23     		movs	r3, #250
- 931 03f2 9B00     		lsls	r3, r3, #2
- 932 03f4 09A9     		add	r1, sp, #36
- 933 03f6 7B48     		ldr	r0, .L47+24
- 934              	.LVL98:
- 935 03f8 FFF7FEFF 		bl	HAL_UART_Transmit
- 936              	.LVL99:
- 937              	.LBE17:
- 938              	.LBB18:
-  89:Src/PID.c     ****         int64_t error3 = 90000 - Phase3;
- 939              		.loc 1 89 0
- 940 03fc 6422     		movs	r2, #100
- 941 03fe 0021     		movs	r1, #0
- 942 0400 09AB     		add	r3, sp, #36
- 943 0402 1800     		movs	r0, r3
- 944 0404 FFF7FEFF 		bl	memset
- 945              	.LVL100:
- 946 0408 2200     		movs	r2, r4
- 947 040a 2B00     		movs	r3, r5
- 948 040c 7649     		ldr	r1, .L47+28
- 949 040e 09A8     		add	r0, sp, #36
- 950 0410 FFF7FEFF 		bl	sprintf
- 951              	.LVL101:
- 952 0414 82B2     		uxth	r2, r0
- 953 0416 FA23     		movs	r3, #250
- 954 0418 9B00     		lsls	r3, r3, #2
-ARM GAS  /tmp/ccH7iQ9o.s 			page 20
+  84:Src/PID.c     ****     DAC_cmd(RF_PS_352_OFFSET + DAC_WRITE + 0);
+ 943              		.loc 1 84 5 is_stmt 1 view .LVU158
+ 944 030c A020     		movs	r0, #160
+ 945 030e 4003     		lsls	r0, r0, #13
+ 946 0310 FFF7FEFF 		bl	DAC_cmd
+ 947              	.LVL82:
+  85:Src/PID.c     ****     DAC_cmd(RF_PS_352_FINE + DAC_WRITE + 0x7fff);
+ 948              		.loc 1 85 5 view .LVU159
+ 949 0314 1D48     		ldr	r0, .L45+76
+ 950 0316 FFF7FEFF 		bl	DAC_cmd
+ 951              	.LVL83:
+  86:Src/PID.c     ****     State.PD3_PD4_MSE = 16200000000;
+ 952              		.loc 1 86 5 view .LVU160
+ 953              		.loc 1 86 23 is_stmt 0 view .LVU161
+ 954 031a A023     		movs	r3, #160
+ 955 031c DB00     		lsls	r3, r3, #3
+ 956 031e 9C46     		mov	ip, r3
+ 957 0320 6444     		add	r4, r4, ip
+ 958 0322 094A     		ldr	r2, .L45+8
+ 959 0324 0323     		movs	r3, #3
+ 960 0326 2260     		str	r2, [r4]
+ 961 0328 6360     		str	r3, [r4, #4]
+  87:Src/PID.c     ****     uint64_t prevPhase3 = 0;
+ 962              		.loc 1 87 5 is_stmt 1 view .LVU162
+ 963              	.LVL84:
+  88:Src/PID.c     ****     uint64_t prevPhase4 = 0;
+ 964              		.loc 1 88 5 view .LVU163
+  89:Src/PID.c     ****     for (uint32_t PS = 0; PS < 0xffff; PS += 0x0700)
+ 965              		.loc 1 89 5 view .LVU164
+ 966              	.LBB16:
+ 967              		.loc 1 89 10 view .LVU165
+ 968              		.loc 1 89 19 is_stmt 0 view .LVU166
+ 969 032a 0023     		movs	r3, #0
+ 970              	.LBE16:
+  88:Src/PID.c     ****     uint64_t prevPhase4 = 0;
+ 971              		.loc 1 88 14 view .LVU167
+ 972 032c 0B93     		str	r3, [sp, #44]
+ 973 032e 0793     		str	r3, [sp, #28]
+ 974              	.LVL85:
+  87:Src/PID.c     ****     uint64_t prevPhase3 = 0;
+ 975              		.loc 1 87 14 view .LVU168
+ 976 0330 0A93     		str	r3, [sp, #40]
+  87:Src/PID.c     ****     uint64_t prevPhase3 = 0;
+ 977              		.loc 1 87 14 view .LVU169
+ 978 0332 0693     		str	r3, [sp, #24]
+ 979              	.LVL86:
+  87:Src/PID.c     ****     uint64_t prevPhase3 = 0;
+ 980              		.loc 1 87 14 view .LVU170
+ 981 0334 1C00     		movs	r4, r3
+ 982              	.LBB25:
+ 983              		.loc 1 89 5 view .LVU171
+ 984 0336 47E0     		b	.L25
+ 985              	.LVL87:
+ 986              	.L35:
+ 987              	.LBB17:
+  90:Src/PID.c     ****     {
+  91:Src/PID.c     ****         DAC_cmd(RF_PS_352_OFFSET + DAC_WRITE + PS);
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 22
 
 
- 955 041a 09A9     		add	r1, sp, #36
- 956 041c 7148     		ldr	r0, .L47+24
- 957              	.LVL102:
- 958 041e FFF7FEFF 		bl	HAL_UART_Transmit
- 959              	.LVL103:
- 960              	.LBE18:
-  90:Src/PID.c     ****         int64_t error4 = 90000 - Phase4;        
- 961              		.loc 1 90 0
- 962 0422 724A     		ldr	r2, .L47+32
- 963 0424 0123     		movs	r3, #1
- 964 0426 5B42     		rsbs	r3, r3, #0
- 965 0428 B618     		adds	r6, r6, r2
- 966 042a 5F41     		adcs	r7, r7, r3
- 967              	.LVL104:
-  91:Src/PID.c     ****         int64_t MSE352 = error3*error3 + error4*error4;
- 968              		.loc 1 91 0
- 969 042c 0098     		ldr	r0, [sp]
- 970 042e 0199     		ldr	r1, [sp, #4]
- 971 0430 8018     		adds	r0, r0, r2
- 972 0432 5941     		adcs	r1, r1, r3
- 973 0434 0090     		str	r0, [sp]
- 974 0436 0191     		str	r1, [sp, #4]
- 975              	.LVL105:
-  92:Src/PID.c     ****         SERIAL_WRITE("error3: %li\n",error3);
- 976              		.loc 1 92 0
- 977 0438 3200     		movs	r2, r6
- 978 043a 3B00     		movs	r3, r7
- 979 043c 0496     		str	r6, [sp, #16]
- 980 043e 0597     		str	r7, [sp, #20]
- 981 0440 3000     		movs	r0, r6
- 982              	.LVL106:
- 983 0442 3900     		movs	r1, r7
- 984 0444 FFF7FEFF 		bl	__aeabi_lmul
- 985              	.LVL107:
- 986 0448 0600     		movs	r6, r0
- 987              	.LVL108:
- 988 044a 0F00     		movs	r7, r1
- 989 044c 0098     		ldr	r0, [sp]
- 990 044e 0199     		ldr	r1, [sp, #4]
- 991 0450 0200     		movs	r2, r0
- 992 0452 0B00     		movs	r3, r1
- 993 0454 FFF7FEFF 		bl	__aeabi_lmul
- 994              	.LVL109:
- 995 0458 3618     		adds	r6, r6, r0
- 996 045a 4F41     		adcs	r7, r7, r1
- 997              	.LVL110:
- 998              	.LBB19:
-  93:Src/PID.c     ****         SERIAL_WRITE("error3: %li\n",error4);
- 999              		.loc 1 93 0
- 1000 045c 6422     		movs	r2, #100
- 1001 045e 0021     		movs	r1, #0
- 1002 0460 09AB     		add	r3, sp, #36
- 1003 0462 1800     		movs	r0, r3
- 1004 0464 FFF7FEFF 		bl	memset
- 1005              	.LVL111:
- 1006 0468 049A     		ldr	r2, [sp, #16]
- 1007 046a 059B     		ldr	r3, [sp, #20]
-ARM GAS  /tmp/ccH7iQ9o.s 			page 21
+  92:Src/PID.c     ****         HAL_Delay(100);
+  93:Src/PID.c     ****         uint64_t Phase3 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD3_Phase_CH] * 1800000) / 0x
+  94:Src/PID.c     ****         uint64_t Phase4 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD4_Phase_CH] * 1800000) / 0x
+  95:Src/PID.c     **** 
+  96:Src/PID.c     ****         int64_t error3 = 90000 - Phase3;
+  97:Src/PID.c     ****         int64_t error4 = 90000 - Phase4;
+  98:Src/PID.c     ****         int64_t MSE352 = error3 * error3 + error4 * error4;
+  99:Src/PID.c     **** 
+ 100:Src/PID.c     ****         if (MSE352 < State.PD3_PD4_MSE)
+ 101:Src/PID.c     ****         {
+ 102:Src/PID.c     ****             SERIAL_WRITE("Phase3: %lu\n", Phase3);
+ 103:Src/PID.c     ****             SERIAL_WRITE("Phase4: %lu\n", Phase4);
+ 104:Src/PID.c     ****             SERIAL_WRITE("error3: %li\n", error3);
+ 105:Src/PID.c     ****             SERIAL_WRITE("error3: %li\n", error4);
+ 106:Src/PID.c     ****             SERIAL_WRITE("MSE352: %li\n\n", MSE352);
+ 107:Src/PID.c     **** 
+ 108:Src/PID.c     ****             State.PD3_PD4_Offset = PS;
+ 109:Src/PID.c     ****             State.PD3_PD4_MSE = MSE352;
+ 110:Src/PID.c     ****             State.PD3_Slope = prevPhase3 < Phase3 ? 1 : -1;
+ 988              		.loc 1 110 29 view .LVU172
+ 989 0338 0123     		movs	r3, #1
+ 990 033a 5B42     		rsbs	r3, r3, #0
+ 991 033c 23E1     		b	.L28
+ 992              	.L46:
+ 993 033e C046     		.align	2
+ 994              	.L45:
+ 995 0340 FF7F1700 		.word	1540095
+ 996 0344 00000000 		.word	State
+ 997 0348 006298C5 		.word	-979869184
+ 998 034c CF040000 		.word	1231
+ 999 0350 FEFF0000 		.word	65534
+ 1000 0354 40771B00 		.word	1800000
+ 1001 0358 FFFFFF00 		.word	16777215
+ 1002 035c 905F0100 		.word	90000
+ 1003 0360 00000000 		.word	.LC4
+ 1004 0364 00000000 		.word	huart2
+ 1005 0368 10000000 		.word	.LC7
+ 1006 036c 20000000 		.word	.LC9
+ 1007 0370 30000000 		.word	.LC11
+ 1008 0374 40000000 		.word	.LC13
+ 1009 0378 CE040000 		.word	1230
+ 1010 037c 50000000 		.word	.LC15
+ 1011 0380 68000000 		.word	.LC17
+ 1012 0384 78000000 		.word	.LC19
+ 1013 0388 88000000 		.word	.LC21
+ 1014 038c FF7F1500 		.word	1409023
+ 1015              	.L42:
+ 111:Src/PID.c     ****             State.PD4_Slope = prevPhase4 < Phase4 ? 1 : -1;
+ 1016              		.loc 1 111 29 view .LVU173
+ 1017 0390 0121     		movs	r1, #1
+ 1018              	.L30:
+ 1019              		.loc 1 111 29 discriminator 4 view .LVU174
+ 1020 0392 B64A     		ldr	r2, .L47
+ 1021 0394 B648     		ldr	r0, .L47+4
+ 1022 0396 1154     		strb	r1, [r2, r0]
+ 112:Src/PID.c     ****             State.PD3_PD4_SetPoint = (int)State.PD3_Slope * (int)Phase3 + (int)State.PD4_Slope * (i
+ 1023              		.loc 1 112 13 is_stmt 1 discriminator 4 view .LVU175
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 23
 
 
- 1008 046c 6049     		ldr	r1, .L47+36
- 1009 046e 09A8     		add	r0, sp, #36
- 1010 0470 FFF7FEFF 		bl	sprintf
- 1011              	.LVL112:
- 1012 0474 82B2     		uxth	r2, r0
- 1013 0476 FA23     		movs	r3, #250
- 1014 0478 9B00     		lsls	r3, r3, #2
- 1015 047a 09A9     		add	r1, sp, #36
- 1016 047c 5948     		ldr	r0, .L47+24
- 1017              	.LVL113:
- 1018 047e FFF7FEFF 		bl	HAL_UART_Transmit
- 1019              	.LVL114:
- 1020              	.LBE19:
- 1021              	.LBB20:
-  94:Src/PID.c     ****         SERIAL_WRITE("MSE352: %li\n",MSE352);
- 1022              		.loc 1 94 0
- 1023 0482 6422     		movs	r2, #100
- 1024 0484 0021     		movs	r1, #0
- 1025 0486 09AB     		add	r3, sp, #36
- 1026 0488 1800     		movs	r0, r3
- 1027 048a FFF7FEFF 		bl	memset
- 1028              	.LVL115:
- 1029 048e 009A     		ldr	r2, [sp]
- 1030 0490 019B     		ldr	r3, [sp, #4]
- 1031 0492 5749     		ldr	r1, .L47+36
- 1032 0494 09A8     		add	r0, sp, #36
- 1033 0496 FFF7FEFF 		bl	sprintf
- 1034              	.LVL116:
- 1035 049a 82B2     		uxth	r2, r0
- 1036 049c FA23     		movs	r3, #250
- 1037 049e 9B00     		lsls	r3, r3, #2
- 1038 04a0 09A9     		add	r1, sp, #36
- 1039 04a2 5048     		ldr	r0, .L47+24
- 1040              	.LVL117:
- 1041 04a4 FFF7FEFF 		bl	HAL_UART_Transmit
- 1042              	.LVL118:
- 1043              	.LBE20:
- 1044              	.LBB21:
-  95:Src/PID.c     ****         if(MSE352< State.PD3_PD4_MSE ){           
- 1045              		.loc 1 95 0
- 1046 04a8 6422     		movs	r2, #100
- 1047 04aa 0021     		movs	r1, #0
- 1048 04ac 09A8     		add	r0, sp, #36
- 1049 04ae FFF7FEFF 		bl	memset
- 1050              	.LVL119:
- 1051 04b2 3200     		movs	r2, r6
- 1052 04b4 3B00     		movs	r3, r7
- 1053 04b6 4F49     		ldr	r1, .L47+40
- 1054 04b8 09A8     		add	r0, sp, #36
- 1055 04ba FFF7FEFF 		bl	sprintf
- 1056              	.LVL120:
- 1057 04be 82B2     		uxth	r2, r0
- 1058 04c0 FA23     		movs	r3, #250
- 1059 04c2 9B00     		lsls	r3, r3, #2
- 1060 04c4 09A9     		add	r1, sp, #36
- 1061 04c6 4748     		ldr	r0, .L47+24
- 1062              	.LVL121:
-ARM GAS  /tmp/ccH7iQ9o.s 			page 22
+ 1024              		.loc 1 112 59 is_stmt 0 discriminator 4 view .LVU176
+ 1025 0398 0098     		ldr	r0, [sp]
+ 1026 039a 4343     		muls	r3, r0
+ 1027              		.loc 1 112 96 discriminator 4 view .LVU177
+ 1028 039c 0298     		ldr	r0, [sp, #8]
+ 1029 039e 4143     		muls	r1, r0
+ 1030              		.loc 1 112 73 discriminator 4 view .LVU178
+ 1031 03a0 5B18     		adds	r3, r3, r1
+ 1032 03a2 D917     		asrs	r1, r3, #31
+ 1033              		.loc 1 112 36 discriminator 4 view .LVU179
+ 1034 03a4 9E20     		movs	r0, #158
+ 1035 03a6 C000     		lsls	r0, r0, #3
+ 1036 03a8 8446     		mov	ip, r0
+ 1037 03aa 6244     		add	r2, r2, ip
+ 1038 03ac 1360     		str	r3, [r2]
+ 1039 03ae 5160     		str	r1, [r2, #4]
+ 1040              	.L26:
+ 113:Src/PID.c     ****         }
+ 114:Src/PID.c     ****         prevPhase3 = Phase3;
+ 1041              		.loc 1 114 9 is_stmt 1 discriminator 2 view .LVU180
+ 1042              	.LVL88:
+ 115:Src/PID.c     ****         prevPhase4 = Phase4;
+ 1043              		.loc 1 115 9 discriminator 2 view .LVU181
+ 1044              		.loc 1 115 9 is_stmt 0 discriminator 2 view .LVU182
+ 1045              	.LBE17:
+  89:Src/PID.c     ****     {
+ 1046              		.loc 1 89 40 is_stmt 1 discriminator 2 view .LVU183
+  89:Src/PID.c     ****     {
+ 1047              		.loc 1 89 43 is_stmt 0 discriminator 2 view .LVU184
+ 1048 03b0 E023     		movs	r3, #224
+ 1049 03b2 DB00     		lsls	r3, r3, #3
+ 1050 03b4 9C46     		mov	ip, r3
+ 1051 03b6 6444     		add	r4, r4, ip
+ 1052              	.LVL89:
+ 1053              	.LBB23:
+ 1054              		.loc 1 115 20 discriminator 2 view .LVU185
+ 1055 03b8 029A     		ldr	r2, [sp, #8]
+ 1056 03ba 039B     		ldr	r3, [sp, #12]
+ 1057 03bc 0B92     		str	r2, [sp, #44]
+ 1058 03be 0793     		str	r3, [sp, #28]
+ 114:Src/PID.c     ****         prevPhase4 = Phase4;
+ 1059              		.loc 1 114 20 discriminator 2 view .LVU186
+ 1060 03c0 009A     		ldr	r2, [sp]
+ 1061 03c2 019B     		ldr	r3, [sp, #4]
+ 1062 03c4 0A92     		str	r2, [sp, #40]
+ 1063 03c6 0693     		str	r3, [sp, #24]
+ 1064              	.LVL90:
+ 1065              	.L25:
+ 114:Src/PID.c     ****         prevPhase4 = Phase4;
+ 1066              		.loc 1 114 20 discriminator 2 view .LVU187
+ 1067              	.LBE23:
+  89:Src/PID.c     ****     {
+ 1068              		.loc 1 89 27 is_stmt 1 discriminator 1 view .LVU188
+  89:Src/PID.c     ****     {
+ 1069              		.loc 1 89 5 is_stmt 0 discriminator 1 view .LVU189
+ 1070 03c8 AA4B     		ldr	r3, .L47+8
+ 1071 03ca 9C42     		cmp	r4, r3
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 24
 
 
- 1063 04c8 FFF7FEFF 		bl	HAL_UART_Transmit
- 1064              	.LVL122:
- 1065              	.LBE21:
-  96:Src/PID.c     ****             State.PD3_PD4_Offset = PS; 
- 1066              		.loc 1 96 0
- 1067 04cc 4346     		mov	r3, r8
- 1068 04ce 4133     		adds	r3, r3, #65
- 1069 04d0 FF33     		adds	r3, r3, #255
- 1070 04d2 1A68     		ldr	r2, [r3]
- 1071 04d4 5B68     		ldr	r3, [r3, #4]
- 1072 04d6 BB42     		cmp	r3, r7
- 1073 04d8 04DC     		bgt	.L40
- 1074 04da 00D0     		beq	.LCB1012
- 1075 04dc 3CE7     		b	.L26	@long jump
- 1076              	.LCB1012:
- 1077 04de B242     		cmp	r2, r6
- 1078 04e0 00D8     		bhi	.LCB1014
- 1079 04e2 39E7     		b	.L26	@long jump
- 1080              	.LCB1014:
- 1081              	.L40:
-  97:Src/PID.c     ****             State.PD3_PD4_MSE  = MSE352;
- 1082              		.loc 1 97 0
- 1083 04e4 394B     		ldr	r3, .L47
- 1084 04e6 1A00     		movs	r2, r3
- 1085 04e8 3932     		adds	r2, r2, #57
- 1086 04ea FF32     		adds	r2, r2, #255
- 1087 04ec 4946     		mov	r1, r9
- 1088 04ee 1160     		str	r1, [r2]
- 1089 04f0 C917     		asrs	r1, r1, #31
- 1090 04f2 5160     		str	r1, [r2, #4]
-  98:Src/PID.c     ****             State.PD3_Slope = prevPhase3 < Phase3 ? 1 : -1;
- 1091              		.loc 1 98 0
- 1092 04f4 4133     		adds	r3, r3, #65
- 1093 04f6 FF33     		adds	r3, r3, #255
- 1094 04f8 1E60     		str	r6, [r3]
- 1095 04fa 5F60     		str	r7, [r3, #4]
-  99:Src/PID.c     ****             State.PD4_Slope =  prevPhase4 < Phase4 ? 1 : -1;
- 1096              		.loc 1 99 0
- 1097 04fc 029A     		ldr	r2, [sp, #8]
- 1098 04fe 039B     		ldr	r3, [sp, #12]
- 1099 0500 5345     		cmp	r3, r10
- 1100 0502 06D8     		bhi	.L41
- 1101 0504 00D0     		beq	.LCB1033
- 1102 0506 F1E6     		b	.L35	@long jump
- 1103              	.LCB1033:
- 1104 0508 1300     		movs	r3, r2
- 1105 050a 069A     		ldr	r2, [sp, #24]
- 1106 050c 9342     		cmp	r3, r2
- 1107 050e 00D8     		bhi	.LCB1037
- 1108 0510 ECE6     		b	.L35	@long jump
- 1109              	.LCB1037:
- 1110              	.L41:
- 1111 0512 0123     		movs	r3, #1
- 1112              	.L28:
-  99:Src/PID.c     ****             State.PD4_Slope =  prevPhase4 < Phase4 ? 1 : -1;
- 1113              		.loc 1 99 0 is_stmt 0 discriminator 4
- 1114 0514 2D49     		ldr	r1, .L47
-ARM GAS  /tmp/ccH7iQ9o.s 			page 23
+ 1072 03cc 00D9     		bls	.LCB903
+ 1073 03ce EDE0     		b	.L44	@long jump
+ 1074              	.LCB903:
+ 1075              	.LBB24:
+  91:Src/PID.c     ****         HAL_Delay(100);
+ 1076              		.loc 1 91 9 is_stmt 1 view .LVU190
+ 1077 03d0 A023     		movs	r3, #160
+ 1078 03d2 5B03     		lsls	r3, r3, #13
+ 1079 03d4 E018     		adds	r0, r4, r3
+ 1080 03d6 FFF7FEFF 		bl	DAC_cmd
+ 1081              	.LVL91:
+  92:Src/PID.c     ****         uint64_t Phase3 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD3_Phase_CH] * 1800000) / 0x
+ 1082              		.loc 1 92 9 view .LVU191
+ 1083 03da 6420     		movs	r0, #100
+ 1084 03dc FFF7FEFF 		bl	HAL_Delay
+ 1085              	.LVL92:
+  93:Src/PID.c     ****         uint64_t Phase4 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD4_Phase_CH] * 1800000) / 0x
+ 1086              		.loc 1 93 9 view .LVU192
+  93:Src/PID.c     ****         uint64_t Phase4 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD4_Phase_CH] * 1800000) / 0x
+ 1087              		.loc 1 93 66 is_stmt 0 view .LVU193
+ 1088 03e0 A24D     		ldr	r5, .L47
+ 1089 03e2 8423     		movs	r3, #132
+ 1090 03e4 E858     		ldr	r0, [r5, r3]
+  93:Src/PID.c     ****         uint64_t Phase4 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD4_Phase_CH] * 1800000) / 0x
+ 1091              		.loc 1 93 85 view .LVU194
+ 1092 03e6 A44A     		ldr	r2, .L47+12
+ 1093 03e8 0023     		movs	r3, #0
+ 1094 03ea 0021     		movs	r1, #0
+ 1095 03ec FFF7FEFF 		bl	__aeabi_lmul
+ 1096              	.LVL93:
+  93:Src/PID.c     ****         uint64_t Phase4 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD4_Phase_CH] * 1800000) / 0x
+ 1097              		.loc 1 93 96 view .LVU195
+ 1098 03f0 A24A     		ldr	r2, .L47+16
+ 1099 03f2 0023     		movs	r3, #0
+ 1100 03f4 FFF7FEFF 		bl	__aeabi_uldivmod
+ 1101              	.LVL94:
+  93:Src/PID.c     ****         uint64_t Phase4 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD4_Phase_CH] * 1800000) / 0x
+ 1102              		.loc 1 93 36 view .LVU196
+ 1103 03f8 9F4E     		ldr	r6, .L47+12
+ 1104 03fa 0027     		movs	r7, #0
+ 1105 03fc 3200     		movs	r2, r6
+ 1106 03fe 3B00     		movs	r3, r7
+ 1107 0400 121A     		subs	r2, r2, r0
+ 1108 0402 8B41     		sbcs	r3, r3, r1
+ 1109 0404 1000     		movs	r0, r2
+ 1110 0406 1900     		movs	r1, r3
+  93:Src/PID.c     ****         uint64_t Phase4 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD4_Phase_CH] * 1800000) / 0x
+ 1111              		.loc 1 93 18 view .LVU197
+ 1112 0408 0A22     		movs	r2, #10
+ 1113 040a 0023     		movs	r3, #0
+ 1114 040c FFF7FEFF 		bl	__aeabi_uldivmod
+ 1115              	.LVL95:
+ 1116 0410 0090     		str	r0, [sp]
+ 1117 0412 0191     		str	r1, [sp, #4]
+ 1118              	.LVL96:
+  94:Src/PID.c     **** 
+ 1119              		.loc 1 94 9 is_stmt 1 view .LVU198
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 25
 
 
- 1115 0516 8822     		movs	r2, #136
- 1116 0518 5200     		lsls	r2, r2, #1
- 1117 051a 8B54     		strb	r3, [r1, r2]
- 100:Src/PID.c     ****             State.PD3_PD4_SetPoint =  (int)State.PD3_Slope * (int)Phase3 + (int)State.PD4_Slope * (
- 1118              		.loc 1 100 0 is_stmt 1 discriminator 4
- 1119 051c 5D45     		cmp	r5, fp
- 1120 051e 00D9     		bls	.LCB1047
- 1121 0520 0CE7     		b	.L42	@long jump
- 1122              	.LCB1047:
- 1123 0522 03D1     		bne	.L36
- 1124 0524 079A     		ldr	r2, [sp, #28]
- 1125 0526 9442     		cmp	r4, r2
- 1126 0528 00D9     		bls	.LCB1052
- 1127 052a 07E7     		b	.L42	@long jump
- 1128              	.LCB1052:
- 1129              	.L36:
- 100:Src/PID.c     ****             State.PD3_PD4_SetPoint =  (int)State.PD3_Slope * (int)Phase3 + (int)State.PD4_Slope * (
- 1130              		.loc 1 100 0 is_stmt 0
- 1131 052c 0121     		movs	r1, #1
- 1132 052e 4942     		rsbs	r1, r1, #0
- 1133 0530 05E7     		b	.L30
- 1134              	.LVL123:
- 1135              	.L44:
- 1136              	.LBE23:
- 1137              	.LBE24:
- 1138              	.LBB25:
- 106:Src/PID.c     ****     }
- 107:Src/PID.c     ****     SERIAL_WRITE("PD3+PD4 SETPOINT: %lu\n",State.PD3_PD4_SetPoint);
- 1139              		.loc 1 107 0 is_stmt 1
- 1140 0532 6422     		movs	r2, #100
- 1141 0534 0021     		movs	r1, #0
- 1142 0536 09A8     		add	r0, sp, #36
- 1143 0538 FFF7FEFF 		bl	memset
- 1144              	.LVL124:
- 1145 053c 234C     		ldr	r4, .L47
- 1146 053e 2300     		movs	r3, r4
- 1147 0540 3133     		adds	r3, r3, #49
- 1148 0542 FF33     		adds	r3, r3, #255
- 1149 0544 1A68     		ldr	r2, [r3]
- 1150 0546 5B68     		ldr	r3, [r3, #4]
- 1151 0548 2B49     		ldr	r1, .L47+44
- 1152 054a 09A8     		add	r0, sp, #36
- 1153 054c FFF7FEFF 		bl	sprintf
- 1154              	.LVL125:
- 1155 0550 FA26     		movs	r6, #250
- 1156 0552 B600     		lsls	r6, r6, #2
- 1157 0554 82B2     		uxth	r2, r0
- 1158 0556 234D     		ldr	r5, .L47+24
- 1159 0558 3300     		movs	r3, r6
- 1160 055a 09A9     		add	r1, sp, #36
- 1161 055c 2800     		movs	r0, r5
- 1162              	.LVL126:
- 1163 055e FFF7FEFF 		bl	HAL_UART_Transmit
- 1164              	.LVL127:
- 1165              	.LBE25:
- 1166              	.LBB26:
- 108:Src/PID.c     ****     SERIAL_WRITE("PD3 SLOPE: %i\n", State.PD3_Slope);
-ARM GAS  /tmp/ccH7iQ9o.s 			page 24
+  94:Src/PID.c     **** 
+ 1120              		.loc 1 94 85 is_stmt 0 view .LVU199
+ 1121 0414 3200     		movs	r2, r6
+ 1122 0416 3B00     		movs	r3, r7
+ 1123 0418 686D     		ldr	r0, [r5, #84]
+ 1124 041a 0021     		movs	r1, #0
+ 1125 041c FFF7FEFF 		bl	__aeabi_lmul
+ 1126              	.LVL97:
+  94:Src/PID.c     **** 
+ 1127              		.loc 1 94 96 view .LVU200
+ 1128 0420 964A     		ldr	r2, .L47+16
+ 1129 0422 0023     		movs	r3, #0
+ 1130 0424 FFF7FEFF 		bl	__aeabi_uldivmod
+ 1131              	.LVL98:
+  94:Src/PID.c     **** 
+ 1132              		.loc 1 94 36 view .LVU201
+ 1133 0428 361A     		subs	r6, r6, r0
+ 1134 042a 8F41     		sbcs	r7, r7, r1
+ 1135 042c 3000     		movs	r0, r6
+ 1136 042e 3900     		movs	r1, r7
+  94:Src/PID.c     **** 
+ 1137              		.loc 1 94 18 view .LVU202
+ 1138 0430 0A22     		movs	r2, #10
+ 1139 0432 0023     		movs	r3, #0
+ 1140 0434 FFF7FEFF 		bl	__aeabi_uldivmod
+ 1141              	.LVL99:
+ 1142 0438 0290     		str	r0, [sp, #8]
+ 1143 043a 0391     		str	r1, [sp, #12]
+ 1144              	.LVL100:
+  96:Src/PID.c     ****         int64_t error4 = 90000 - Phase4;
+ 1145              		.loc 1 96 9 is_stmt 1 view .LVU203
+  96:Src/PID.c     ****         int64_t error4 = 90000 - Phase4;
+ 1146              		.loc 1 96 32 is_stmt 0 view .LVU204
+ 1147 043c 904A     		ldr	r2, .L47+20
+ 1148 043e 0023     		movs	r3, #0
+ 1149 0440 1000     		movs	r0, r2
+ 1150 0442 1900     		movs	r1, r3
+ 1151 0444 009E     		ldr	r6, [sp]
+ 1152 0446 019F     		ldr	r7, [sp, #4]
+ 1153 0448 801B     		subs	r0, r0, r6
+ 1154 044a B941     		sbcs	r1, r1, r7
+ 1155 044c 0890     		str	r0, [sp, #32]
+ 1156 044e 0991     		str	r1, [sp, #36]
+ 1157              	.LVL101:
+  97:Src/PID.c     ****         int64_t MSE352 = error3 * error3 + error4 * error4;
+ 1158              		.loc 1 97 9 is_stmt 1 view .LVU205
+  97:Src/PID.c     ****         int64_t MSE352 = error3 * error3 + error4 * error4;
+ 1159              		.loc 1 97 32 is_stmt 0 view .LVU206
+ 1160 0450 029E     		ldr	r6, [sp, #8]
+ 1161 0452 039F     		ldr	r7, [sp, #12]
+ 1162 0454 921B     		subs	r2, r2, r6
+ 1163 0456 BB41     		sbcs	r3, r3, r7
+ 1164 0458 0492     		str	r2, [sp, #16]
+ 1165 045a 0593     		str	r3, [sp, #20]
+ 1166              	.LVL102:
+  98:Src/PID.c     **** 
+ 1167              		.loc 1 98 9 is_stmt 1 view .LVU207
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 26
 
 
- 1167              		.loc 1 108 0
- 1168 0562 6422     		movs	r2, #100
- 1169 0564 0021     		movs	r1, #0
- 1170 0566 09A8     		add	r0, sp, #36
- 1171 0568 FFF7FEFF 		bl	memset
- 1172              	.LVL128:
- 1173 056c 8823     		movs	r3, #136
- 1174 056e 5B00     		lsls	r3, r3, #1
- 1175 0570 E256     		ldrsb	r2, [r4, r3]
- 1176 0572 2249     		ldr	r1, .L47+48
- 1177 0574 09A8     		add	r0, sp, #36
- 1178 0576 FFF7FEFF 		bl	sprintf
- 1179              	.LVL129:
- 1180 057a 82B2     		uxth	r2, r0
- 1181 057c 3300     		movs	r3, r6
- 1182 057e 09A9     		add	r1, sp, #36
- 1183 0580 2800     		movs	r0, r5
- 1184              	.LVL130:
- 1185 0582 FFF7FEFF 		bl	HAL_UART_Transmit
- 1186              	.LVL131:
- 1187              	.LBE26:
- 1188              	.LBB27:
- 109:Src/PID.c     ****     SERIAL_WRITE("PD4 SLOPE: %i\n", State.PD4_Slope);
- 1189              		.loc 1 109 0
- 1190 0586 6422     		movs	r2, #100
- 1191 0588 0021     		movs	r1, #0
- 1192 058a 09A8     		add	r0, sp, #36
- 1193 058c FFF7FEFF 		bl	memset
- 1194              	.LVL132:
- 1195 0590 1223     		movs	r3, #18
- 1196 0592 FF33     		adds	r3, r3, #255
- 1197 0594 E256     		ldrsb	r2, [r4, r3]
- 1198 0596 1A49     		ldr	r1, .L47+52
- 1199 0598 09A8     		add	r0, sp, #36
- 1200 059a FFF7FEFF 		bl	sprintf
- 1201              	.LVL133:
- 1202 059e 82B2     		uxth	r2, r0
- 1203 05a0 3300     		movs	r3, r6
- 1204 05a2 09A9     		add	r1, sp, #36
- 1205 05a4 2800     		movs	r0, r5
- 1206              	.LVL134:
- 1207 05a6 FFF7FEFF 		bl	HAL_UART_Transmit
- 1208              	.LVL135:
- 1209              	.LBE27:
- 110:Src/PID.c     ****     DAC_cmd(RF_PS_352_OFFSET + DAC_WRITE + State.PD3_PD4_Offset); 
- 1210              		.loc 1 110 0
- 1211 05aa 3934     		adds	r4, r4, #57
- 1212 05ac FF34     		adds	r4, r4, #255
- 1213 05ae 2068     		ldr	r0, [r4]
- 1214 05b0 A023     		movs	r3, #160
- 1215 05b2 5B03     		lsls	r3, r3, #13
- 1216 05b4 9C46     		mov	ip, r3
- 1217 05b6 6044     		add	r0, r0, ip
- 1218 05b8 FFF7FEFF 		bl	DAC_cmd
- 1219              	.LVL136:
- 111:Src/PID.c     **** }
- 1220              		.loc 1 111 0
-ARM GAS  /tmp/ccH7iQ9o.s 			page 25
+  98:Src/PID.c     **** 
+ 1168              		.loc 1 98 33 is_stmt 0 view .LVU208
+ 1169 045c 0200     		movs	r2, r0
+ 1170              	.LVL103:
+  98:Src/PID.c     **** 
+ 1171              		.loc 1 98 33 view .LVU209
+ 1172 045e 0B00     		movs	r3, r1
+ 1173 0460 FFF7FEFF 		bl	__aeabi_lmul
+ 1174              	.LVL104:
+  98:Src/PID.c     **** 
+ 1175              		.loc 1 98 33 view .LVU210
+ 1176 0464 0600     		movs	r6, r0
+ 1177 0466 0F00     		movs	r7, r1
+  98:Src/PID.c     **** 
+ 1178              		.loc 1 98 51 view .LVU211
+ 1179 0468 0498     		ldr	r0, [sp, #16]
+ 1180 046a 0599     		ldr	r1, [sp, #20]
+ 1181 046c 0200     		movs	r2, r0
+ 1182 046e 0B00     		movs	r3, r1
+ 1183 0470 FFF7FEFF 		bl	__aeabi_lmul
+ 1184              	.LVL105:
+  98:Src/PID.c     **** 
+ 1185              		.loc 1 98 17 view .LVU212
+ 1186 0474 3618     		adds	r6, r6, r0
+ 1187 0476 4F41     		adcs	r7, r7, r1
+ 1188              	.LVL106:
+ 100:Src/PID.c     ****         {
+ 1189              		.loc 1 100 9 is_stmt 1 view .LVU213
+ 100:Src/PID.c     ****         {
+ 1190              		.loc 1 100 27 is_stmt 0 view .LVU214
+ 1191 0478 A023     		movs	r3, #160
+ 1192 047a DB00     		lsls	r3, r3, #3
+ 1193 047c 9C46     		mov	ip, r3
+ 1194 047e 6544     		add	r5, r5, ip
+ 1195 0480 2A68     		ldr	r2, [r5]
+ 1196 0482 6B68     		ldr	r3, [r5, #4]
+ 100:Src/PID.c     ****         {
+ 1197              		.loc 1 100 12 view .LVU215
+ 1198 0484 BB42     		cmp	r3, r7
+ 1199 0486 02DC     		bgt	.L40
+ 1200 0488 92D1     		bne	.L26
+ 1201 048a B242     		cmp	r2, r6
+ 1202 048c 90D9     		bls	.L26
+ 1203              	.L40:
+ 1204              	.LBB18:
+ 102:Src/PID.c     ****             SERIAL_WRITE("Phase4: %lu\n", Phase4);
+ 1205              		.loc 1 102 13 is_stmt 1 view .LVU216
+ 1206 048e 0023     		movs	r3, #0
+ 1207 0490 9946     		mov	r9, r3
+ 1208 0492 0D93     		str	r3, [sp, #52]
+ 1209 0494 6022     		movs	r2, #96
+ 1210 0496 0021     		movs	r1, #0
+ 1211 0498 0EA8     		add	r0, sp, #56
+ 1212 049a FFF7FEFF 		bl	memset
+ 1213              	.LVL107:
+ 102:Src/PID.c     ****             SERIAL_WRITE("Phase4: %lu\n", Phase4);
+ 1214              		.loc 1 102 13 view .LVU217
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 27
 
 
- 1221 05bc 23B0     		add	sp, sp, #140
- 1222              		@ sp needed
- 1223              	.LVL137:
- 1224              	.LVL138:
- 1225              	.LVL139:
- 1226 05be 3CBC     		pop	{r2, r3, r4, r5}
- 1227 05c0 9046     		mov	r8, r2
- 1228 05c2 9946     		mov	r9, r3
- 1229 05c4 A246     		mov	r10, r4
- 1230 05c6 AB46     		mov	fp, r5
- 1231 05c8 F0BD     		pop	{r4, r5, r6, r7, pc}
- 1232              	.L48:
- 1233 05ca C046     		.align	2
- 1234              	.L47:
- 1235 05cc 00000000 		.word	State
- 1236 05d0 FEFF0000 		.word	65534
- 1237 05d4 40771B00 		.word	1800000
- 1238 05d8 F6FFFF09 		.word	167772150
- 1239 05dc 20BF0200 		.word	180000
- 1240 05e0 88000000 		.word	.LC21
- 1241 05e4 00000000 		.word	huart2
- 1242 05e8 98000000 		.word	.LC23
- 1243 05ec 70A0FEFF 		.word	-90000
- 1244 05f0 A8000000 		.word	.LC25
- 1245 05f4 B8000000 		.word	.LC27
- 1246 05f8 C8000000 		.word	.LC29
- 1247 05fc E0000000 		.word	.LC31
- 1248 0600 F0000000 		.word	.LC33
- 1249              		.cfi_endproc
- 1250              	.LFE289:
- 1252              		.section	.text.PID_Init,"ax",%progbits
- 1253              		.align	1
- 1254              		.global	PID_Init
- 1255              		.syntax unified
- 1256              		.code	16
- 1257              		.thumb_func
- 1258              		.fpu softvfp
- 1260              	PID_Init:
- 1261              	.LFB290:
- 112:Src/PID.c     **** 
- 113:Src/PID.c     **** void PID_Init(){
- 1262              		.loc 1 113 0
- 1263              		.cfi_startproc
- 1264              		@ args = 0, pretend = 0, frame = 0
- 1265              		@ frame_needed = 0, uses_anonymous_args = 0
- 1266 0000 F0B5     		push	{r4, r5, r6, r7, lr}
- 1267              	.LCFI9:
- 1268              		.cfi_def_cfa_offset 20
- 1269              		.cfi_offset 4, -20
- 1270              		.cfi_offset 5, -16
- 1271              		.cfi_offset 6, -12
- 1272              		.cfi_offset 7, -8
- 1273              		.cfi_offset 14, -4
- 114:Src/PID.c     ****    State.PID_352_Output = 0;
- 1274              		.loc 1 114 0
- 1275 0002 224E     		ldr	r6, .L50
- 1276 0004 3100     		movs	r1, r6
-ARM GAS  /tmp/ccH7iQ9o.s 			page 26
+ 1215 049e 009A     		ldr	r2, [sp]
+ 1216 04a0 019B     		ldr	r3, [sp, #4]
+ 1217 04a2 7849     		ldr	r1, .L47+24
+ 1218 04a4 0DA8     		add	r0, sp, #52
+ 1219 04a6 FFF7FEFF 		bl	sprintf
+ 1220              	.LVL108:
+ 102:Src/PID.c     ****             SERIAL_WRITE("Phase4: %lu\n", Phase4);
+ 1221              		.loc 1 102 13 view .LVU218
+ 1222 04aa FA23     		movs	r3, #250
+ 1223 04ac 9B00     		lsls	r3, r3, #2
+ 1224 04ae 9846     		mov	r8, r3
+ 1225 04b0 82B2     		uxth	r2, r0
+ 1226 04b2 754D     		ldr	r5, .L47+28
+ 1227 04b4 0DA9     		add	r1, sp, #52
+ 1228 04b6 2800     		movs	r0, r5
+ 1229              	.LVL109:
+ 102:Src/PID.c     ****             SERIAL_WRITE("Phase4: %lu\n", Phase4);
+ 1230              		.loc 1 102 13 is_stmt 0 view .LVU219
+ 1231 04b8 FFF7FEFF 		bl	HAL_UART_Transmit
+ 1232              	.LVL110:
+ 1233              	.LBE18:
+ 102:Src/PID.c     ****             SERIAL_WRITE("Phase4: %lu\n", Phase4);
+ 1234              		.loc 1 102 50 is_stmt 1 view .LVU220
+ 1235              	.LBB19:
+ 103:Src/PID.c     ****             SERIAL_WRITE("error3: %li\n", error3);
+ 1236              		.loc 1 103 13 view .LVU221
+ 1237 04bc 4B46     		mov	r3, r9
+ 1238 04be 0D93     		str	r3, [sp, #52]
+ 1239 04c0 6022     		movs	r2, #96
+ 1240 04c2 0021     		movs	r1, #0
+ 1241 04c4 0EA8     		add	r0, sp, #56
+ 1242 04c6 FFF7FEFF 		bl	memset
+ 1243              	.LVL111:
+ 103:Src/PID.c     ****             SERIAL_WRITE("error3: %li\n", error3);
+ 1244              		.loc 1 103 13 view .LVU222
+ 1245 04ca 029A     		ldr	r2, [sp, #8]
+ 1246 04cc 039B     		ldr	r3, [sp, #12]
+ 1247 04ce 6F49     		ldr	r1, .L47+32
+ 1248 04d0 0DA8     		add	r0, sp, #52
+ 1249 04d2 FFF7FEFF 		bl	sprintf
+ 1250              	.LVL112:
+ 103:Src/PID.c     ****             SERIAL_WRITE("error3: %li\n", error3);
+ 1251              		.loc 1 103 13 view .LVU223
+ 1252 04d6 82B2     		uxth	r2, r0
+ 1253 04d8 4346     		mov	r3, r8
+ 1254 04da 0DA9     		add	r1, sp, #52
+ 1255 04dc 2800     		movs	r0, r5
+ 1256              	.LVL113:
+ 103:Src/PID.c     ****             SERIAL_WRITE("error3: %li\n", error3);
+ 1257              		.loc 1 103 13 is_stmt 0 view .LVU224
+ 1258 04de FFF7FEFF 		bl	HAL_UART_Transmit
+ 1259              	.LVL114:
+ 1260              	.LBE19:
+ 103:Src/PID.c     ****             SERIAL_WRITE("error3: %li\n", error3);
+ 1261              		.loc 1 103 50 is_stmt 1 view .LVU225
+ 1262              	.LBB20:
+ 104:Src/PID.c     ****             SERIAL_WRITE("error3: %li\n", error4);
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 28
 
 
- 1277 0006 4931     		adds	r1, r1, #73
- 1278 0008 FF31     		adds	r1, r1, #255
- 1279 000a 0022     		movs	r2, #0
- 1280 000c 0023     		movs	r3, #0
- 1281 000e 0A60     		str	r2, [r1]
- 1282 0010 4B60     		str	r3, [r1, #4]
- 115:Src/PID.c     ****    State.PID_352_P = -1;
- 1283              		.loc 1 115 0
- 1284 0012 3400     		movs	r4, r6
- 1285 0014 5134     		adds	r4, r4, #81
- 1286 0016 FF34     		adds	r4, r4, #255
- 1287 0018 0120     		movs	r0, #1
- 1288 001a 4042     		rsbs	r0, r0, #0
- 1289 001c C117     		asrs	r1, r0, #31
- 1290 001e 2060     		str	r0, [r4]
- 1291 0020 6160     		str	r1, [r4, #4]
- 116:Src/PID.c     ****    State.PID_352_I = -1;
- 1292              		.loc 1 116 0
- 1293 0022 3400     		movs	r4, r6
- 1294 0024 5934     		adds	r4, r4, #89
- 1295 0026 FF34     		adds	r4, r4, #255
- 1296 0028 2060     		str	r0, [r4]
- 1297 002a 6160     		str	r1, [r4, #4]
- 117:Src/PID.c     ****    State.PID_352_T = 1;
- 1298              		.loc 1 117 0
- 1299 002c 3700     		movs	r7, r6
- 1300 002e 6137     		adds	r7, r7, #97
- 1301 0030 FF37     		adds	r7, r7, #255
- 1302 0032 0124     		movs	r4, #1
- 1303 0034 0025     		movs	r5, #0
- 1304 0036 3C60     		str	r4, [r7]
- 1305 0038 7D60     		str	r5, [r7, #4]
- 118:Src/PID.c     ****    State.PID_352_P_error = 0;
- 1306              		.loc 1 118 0
- 1307 003a 3700     		movs	r7, r6
- 1308 003c 6937     		adds	r7, r7, #105
- 1309 003e FF37     		adds	r7, r7, #255
- 1310 0040 3A60     		str	r2, [r7]
- 1311 0042 7B60     		str	r3, [r7, #4]
- 119:Src/PID.c     ****    State.PID_352_I_error = 0;
- 1312              		.loc 1 119 0
- 1313 0044 3700     		movs	r7, r6
- 1314 0046 7137     		adds	r7, r7, #113
- 1315 0048 FF37     		adds	r7, r7, #255
- 1316 004a 3A60     		str	r2, [r7]
- 1317 004c 7B60     		str	r3, [r7, #4]
- 120:Src/PID.c     **** 
- 121:Src/PID.c     ****    State.PID_704_Output = 0;
- 1318              		.loc 1 121 0
- 1319 004e 3700     		movs	r7, r6
- 1320 0050 7937     		adds	r7, r7, #121
- 1321 0052 FF37     		adds	r7, r7, #255
- 1322 0054 3A60     		str	r2, [r7]
- 1323 0056 7B60     		str	r3, [r7, #4]
- 122:Src/PID.c     ****    State.PID_704_P = -1;
- 1324              		.loc 1 122 0
- 1325 0058 3700     		movs	r7, r6
-ARM GAS  /tmp/ccH7iQ9o.s 			page 27
+ 1263              		.loc 1 104 13 view .LVU226
+ 1264 04e2 4B46     		mov	r3, r9
+ 1265 04e4 0D93     		str	r3, [sp, #52]
+ 1266 04e6 6022     		movs	r2, #96
+ 1267 04e8 0021     		movs	r1, #0
+ 1268 04ea 0EA8     		add	r0, sp, #56
+ 1269 04ec FFF7FEFF 		bl	memset
+ 1270              	.LVL115:
+ 104:Src/PID.c     ****             SERIAL_WRITE("error3: %li\n", error4);
+ 1271              		.loc 1 104 13 view .LVU227
+ 1272 04f0 674B     		ldr	r3, .L47+36
+ 1273 04f2 9A46     		mov	r10, r3
+ 1274 04f4 089A     		ldr	r2, [sp, #32]
+ 1275 04f6 099B     		ldr	r3, [sp, #36]
+ 1276 04f8 5146     		mov	r1, r10
+ 1277 04fa 0DA8     		add	r0, sp, #52
+ 1278 04fc FFF7FEFF 		bl	sprintf
+ 1279              	.LVL116:
+ 104:Src/PID.c     ****             SERIAL_WRITE("error3: %li\n", error4);
+ 1280              		.loc 1 104 13 view .LVU228
+ 1281 0500 82B2     		uxth	r2, r0
+ 1282 0502 4346     		mov	r3, r8
+ 1283 0504 0DA9     		add	r1, sp, #52
+ 1284 0506 2800     		movs	r0, r5
+ 1285              	.LVL117:
+ 104:Src/PID.c     ****             SERIAL_WRITE("error3: %li\n", error4);
+ 1286              		.loc 1 104 13 is_stmt 0 view .LVU229
+ 1287 0508 FFF7FEFF 		bl	HAL_UART_Transmit
+ 1288              	.LVL118:
+ 1289              	.LBE20:
+ 104:Src/PID.c     ****             SERIAL_WRITE("error3: %li\n", error4);
+ 1290              		.loc 1 104 50 is_stmt 1 view .LVU230
+ 1291              	.LBB21:
+ 105:Src/PID.c     ****             SERIAL_WRITE("MSE352: %li\n\n", MSE352);
+ 1292              		.loc 1 105 13 view .LVU231
+ 1293 050c 4B46     		mov	r3, r9
+ 1294 050e 0D93     		str	r3, [sp, #52]
+ 1295 0510 6022     		movs	r2, #96
+ 1296 0512 0021     		movs	r1, #0
+ 1297 0514 0EA8     		add	r0, sp, #56
+ 1298 0516 FFF7FEFF 		bl	memset
+ 1299              	.LVL119:
+ 105:Src/PID.c     ****             SERIAL_WRITE("MSE352: %li\n\n", MSE352);
+ 1300              		.loc 1 105 13 view .LVU232
+ 1301 051a 049A     		ldr	r2, [sp, #16]
+ 1302 051c 059B     		ldr	r3, [sp, #20]
+ 1303 051e 5146     		mov	r1, r10
+ 1304 0520 0DA8     		add	r0, sp, #52
+ 1305 0522 FFF7FEFF 		bl	sprintf
+ 1306              	.LVL120:
+ 105:Src/PID.c     ****             SERIAL_WRITE("MSE352: %li\n\n", MSE352);
+ 1307              		.loc 1 105 13 view .LVU233
+ 1308 0526 82B2     		uxth	r2, r0
+ 1309 0528 4346     		mov	r3, r8
+ 1310 052a 0DA9     		add	r1, sp, #52
+ 1311 052c 2800     		movs	r0, r5
+ 1312              	.LVL121:
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 29
 
 
- 1326 005a 8137     		adds	r7, r7, #129
- 1327 005c FF37     		adds	r7, r7, #255
- 1328 005e 3860     		str	r0, [r7]
- 1329 0060 7960     		str	r1, [r7, #4]
- 123:Src/PID.c     ****    State.PID_704_I = -1;
- 1330              		.loc 1 123 0
- 1331 0062 3700     		movs	r7, r6
- 1332 0064 8937     		adds	r7, r7, #137
- 1333 0066 FF37     		adds	r7, r7, #255
- 1334 0068 3860     		str	r0, [r7]
- 1335 006a 7960     		str	r1, [r7, #4]
- 124:Src/PID.c     ****    State.PID_704_T = 1;
- 1336              		.loc 1 124 0
- 1337 006c 3100     		movs	r1, r6
- 1338 006e 9131     		adds	r1, r1, #145
- 1339 0070 FF31     		adds	r1, r1, #255
- 1340 0072 0C60     		str	r4, [r1]
- 1341 0074 4D60     		str	r5, [r1, #4]
- 125:Src/PID.c     ****    State.PID_704_P_error = 0;
- 1342              		.loc 1 125 0
- 1343 0076 3100     		movs	r1, r6
- 1344 0078 9931     		adds	r1, r1, #153
- 1345 007a FF31     		adds	r1, r1, #255
- 1346 007c 0A60     		str	r2, [r1]
- 1347 007e 4B60     		str	r3, [r1, #4]
- 126:Src/PID.c     ****    State.PID_704_I_error = 0;
- 1348              		.loc 1 126 0
- 1349 0080 A136     		adds	r6, r6, #161
- 1350 0082 FF36     		adds	r6, r6, #255
- 1351 0084 3260     		str	r2, [r6]
- 1352 0086 7360     		str	r3, [r6, #4]
- 127:Src/PID.c     **** }
- 1353              		.loc 1 127 0
- 1354              		@ sp needed
- 1355 0088 F0BD     		pop	{r4, r5, r6, r7, pc}
- 1356              	.L51:
- 1357 008a C046     		.align	2
- 1358              	.L50:
- 1359 008c 00000000 		.word	State
- 1360              		.cfi_endproc
- 1361              	.LFE290:
- 1363              		.section	.text.PID352,"ax",%progbits
- 1364              		.align	1
- 1365              		.global	PID352
- 1366              		.syntax unified
- 1367              		.code	16
- 1368              		.thumb_func
- 1369              		.fpu softvfp
- 1371              	PID352:
- 1372              	.LFB291:
- 128:Src/PID.c     **** void PID352()
- 129:Src/PID.c     **** {
- 1373              		.loc 1 129 0
- 1374              		.cfi_startproc
- 1375              		@ args = 0, pretend = 0, frame = 0
- 1376              		@ frame_needed = 0, uses_anonymous_args = 0
- 1377 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
-ARM GAS  /tmp/ccH7iQ9o.s 			page 28
+ 105:Src/PID.c     ****             SERIAL_WRITE("MSE352: %li\n\n", MSE352);
+ 1313              		.loc 1 105 13 is_stmt 0 view .LVU234
+ 1314 052e FFF7FEFF 		bl	HAL_UART_Transmit
+ 1315              	.LVL122:
+ 1316              	.LBE21:
+ 105:Src/PID.c     ****             SERIAL_WRITE("MSE352: %li\n\n", MSE352);
+ 1317              		.loc 1 105 50 is_stmt 1 view .LVU235
+ 1318              	.LBB22:
+ 106:Src/PID.c     **** 
+ 1319              		.loc 1 106 13 view .LVU236
+ 1320 0532 4B46     		mov	r3, r9
+ 1321 0534 0D93     		str	r3, [sp, #52]
+ 1322 0536 6022     		movs	r2, #96
+ 1323 0538 0021     		movs	r1, #0
+ 1324 053a 0EA8     		add	r0, sp, #56
+ 1325 053c FFF7FEFF 		bl	memset
+ 1326              	.LVL123:
+ 106:Src/PID.c     **** 
+ 1327              		.loc 1 106 13 view .LVU237
+ 1328 0540 3200     		movs	r2, r6
+ 1329 0542 3B00     		movs	r3, r7
+ 1330 0544 5349     		ldr	r1, .L47+40
+ 1331 0546 0DA8     		add	r0, sp, #52
+ 1332 0548 FFF7FEFF 		bl	sprintf
+ 1333              	.LVL124:
+ 106:Src/PID.c     **** 
+ 1334              		.loc 1 106 13 view .LVU238
+ 1335 054c 82B2     		uxth	r2, r0
+ 1336 054e 4346     		mov	r3, r8
+ 1337 0550 0DA9     		add	r1, sp, #52
+ 1338 0552 2800     		movs	r0, r5
+ 1339              	.LVL125:
+ 106:Src/PID.c     **** 
+ 1340              		.loc 1 106 13 is_stmt 0 view .LVU239
+ 1341 0554 FFF7FEFF 		bl	HAL_UART_Transmit
+ 1342              	.LVL126:
+ 1343              	.LBE22:
+ 106:Src/PID.c     **** 
+ 1344              		.loc 1 106 52 is_stmt 1 view .LVU240
+ 108:Src/PID.c     ****             State.PD3_PD4_MSE = MSE352;
+ 1345              		.loc 1 108 13 view .LVU241
+ 108:Src/PID.c     ****             State.PD3_PD4_MSE = MSE352;
+ 1346              		.loc 1 108 34 is_stmt 0 view .LVU242
+ 1347 0558 444B     		ldr	r3, .L47
+ 1348 055a 9F22     		movs	r2, #159
+ 1349 055c D200     		lsls	r2, r2, #3
+ 1350 055e 9C50     		str	r4, [r3, r2]
+ 109:Src/PID.c     ****             State.PD3_Slope = prevPhase3 < Phase3 ? 1 : -1;
+ 1351              		.loc 1 109 13 is_stmt 1 view .LVU243
+ 109:Src/PID.c     ****             State.PD3_Slope = prevPhase3 < Phase3 ? 1 : -1;
+ 1352              		.loc 1 109 31 is_stmt 0 view .LVU244
+ 1353 0560 A021     		movs	r1, #160
+ 1354 0562 C900     		lsls	r1, r1, #3
+ 1355 0564 8C46     		mov	ip, r1
+ 1356 0566 6344     		add	r3, r3, ip
+ 1357 0568 1E60     		str	r6, [r3]
+ 1358 056a 5F60     		str	r7, [r3, #4]
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 30
 
 
- 1378              	.LCFI10:
- 1379              		.cfi_def_cfa_offset 24
- 1380              		.cfi_offset 3, -24
- 1381              		.cfi_offset 4, -20
- 1382              		.cfi_offset 5, -16
- 1383              		.cfi_offset 6, -12
- 1384              		.cfi_offset 7, -8
- 1385              		.cfi_offset 14, -4
- 130:Src/PID.c     ****     State.PID_352_P_error = (int)State.PD3_Slope * (int)Phase(ADC_PD3_Phase_CH) + State.PD4_Slope *
- 1386              		.loc 1 130 0
- 1387 0002 1D4F     		ldr	r7, .L53
- 1388 0004 8823     		movs	r3, #136
- 1389 0006 5B00     		lsls	r3, r3, #1
- 1390 0008 FC56     		ldrsb	r4, [r7, r3]
- 1391 000a 0E20     		movs	r0, #14
- 1392 000c FFF7FEFF 		bl	Phase
- 1393              	.LVL140:
- 1394 0010 4443     		muls	r4, r0
- 1395 0012 1223     		movs	r3, #18
- 1396 0014 FF33     		adds	r3, r3, #255
- 1397 0016 FD56     		ldrsb	r5, [r7, r3]
- 1398 0018 0220     		movs	r0, #2
- 1399 001a FFF7FEFF 		bl	Phase
- 1400              	.LVL141:
- 1401 001e 6843     		muls	r0, r5
- 1402 0020 2418     		adds	r4, r4, r0
- 1403 0022 3B00     		movs	r3, r7
- 1404 0024 3133     		adds	r3, r3, #49
- 1405 0026 FF33     		adds	r3, r3, #255
- 1406 0028 1868     		ldr	r0, [r3]
- 1407 002a 201A     		subs	r0, r4, r0
- 1408 002c C117     		asrs	r1, r0, #31
- 1409 002e 3B00     		movs	r3, r7
- 1410 0030 6933     		adds	r3, r3, #105
- 1411 0032 FF33     		adds	r3, r3, #255
- 1412 0034 1860     		str	r0, [r3]
- 1413 0036 5960     		str	r1, [r3, #4]
- 131:Src/PID.c     ****     // State.PID_352_I_error = State.PID_352_I_error + State.PID_352_P_error *  State.PID_704_T;
+ 110:Src/PID.c     ****             State.PD4_Slope = prevPhase4 < Phase4 ? 1 : -1;
+ 1359              		.loc 1 110 13 is_stmt 1 view .LVU245
+ 110:Src/PID.c     ****             State.PD4_Slope = prevPhase4 < Phase4 ? 1 : -1;
+ 1360              		.loc 1 110 29 is_stmt 0 view .LVU246
+ 1361 056c 009A     		ldr	r2, [sp]
+ 1362 056e 019B     		ldr	r3, [sp, #4]
+ 1363 0570 0699     		ldr	r1, [sp, #24]
+ 1364 0572 8B42     		cmp	r3, r1
+ 1365 0574 06D8     		bhi	.L41
+ 110:Src/PID.c     ****             State.PD4_Slope = prevPhase4 < Phase4 ? 1 : -1;
+ 1366              		.loc 1 110 29 view .LVU247
+ 1367 0576 00D0     		beq	.LCB1153
+ 1368 0578 DEE6     		b	.L35	@long jump
+ 1369              	.LCB1153:
+ 1370 057a 1300     		movs	r3, r2
+ 1371 057c 0A9A     		ldr	r2, [sp, #40]
+ 1372 057e 9342     		cmp	r3, r2
+ 1373 0580 00D8     		bhi	.LCB1157
+ 1374 0582 D9E6     		b	.L35	@long jump
+ 1375              	.LCB1157:
+ 1376              	.L41:
+ 1377 0584 0123     		movs	r3, #1
+ 1378              	.L28:
+ 110:Src/PID.c     ****             State.PD4_Slope = prevPhase4 < Phase4 ? 1 : -1;
+ 1379              		.loc 1 110 29 discriminator 4 view .LVU248
+ 1380 0586 3949     		ldr	r1, .L47
+ 1381 0588 9A22     		movs	r2, #154
+ 1382 058a D200     		lsls	r2, r2, #3
+ 1383 058c 8B54     		strb	r3, [r1, r2]
+ 111:Src/PID.c     ****             State.PD3_PD4_SetPoint = (int)State.PD3_Slope * (int)Phase3 + (int)State.PD4_Slope * (i
+ 1384              		.loc 1 111 13 is_stmt 1 discriminator 4 view .LVU249
+ 111:Src/PID.c     ****             State.PD3_PD4_SetPoint = (int)State.PD3_Slope * (int)Phase3 + (int)State.PD4_Slope * (i
+ 1385              		.loc 1 111 29 is_stmt 0 discriminator 4 view .LVU250
+ 1386 058e 0299     		ldr	r1, [sp, #8]
+ 1387 0590 039A     		ldr	r2, [sp, #12]
+ 1388 0592 0798     		ldr	r0, [sp, #28]
+ 1389 0594 8242     		cmp	r2, r0
+ 1390 0596 00D9     		bls	.LCB1170
+ 1391 0598 FAE6     		b	.L42	@long jump
+ 1392              	.LCB1170:
+ 1393 059a 04D1     		bne	.L36
+ 1394 059c 0A00     		movs	r2, r1
+ 1395 059e 0B99     		ldr	r1, [sp, #44]
+ 1396 05a0 8A42     		cmp	r2, r1
+ 1397 05a2 00D9     		bls	.LCB1176
+ 1398 05a4 F4E6     		b	.L42	@long jump
+ 1399              	.LCB1176:
+ 1400              	.L36:
+ 111:Src/PID.c     ****             State.PD3_PD4_SetPoint = (int)State.PD3_Slope * (int)Phase3 + (int)State.PD4_Slope * (i
+ 1401              		.loc 1 111 29 view .LVU251
+ 1402 05a6 0121     		movs	r1, #1
+ 1403 05a8 4942     		rsbs	r1, r1, #0
+ 1404 05aa F2E6     		b	.L30
+ 1405              	.LVL127:
+ 1406              	.L44:
+ 111:Src/PID.c     ****             State.PD3_PD4_SetPoint = (int)State.PD3_Slope * (int)Phase3 + (int)State.PD4_Slope * (i
+ 1407              		.loc 1 111 29 view .LVU252
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 31
+
+
+ 1408              	.LBE24:
+ 1409              	.LBE25:
+ 1410              	.LBB26:
+ 116:Src/PID.c     ****     }
+ 117:Src/PID.c     ****     SERIAL_WRITE("PD3+PD4 SETPOINT: %li\n", State.PD3_PD4_SetPoint);
+ 1411              		.loc 1 117 5 is_stmt 1 view .LVU253
+ 1412 05ac 0027     		movs	r7, #0
+ 1413 05ae 0D97     		str	r7, [sp, #52]
+ 1414 05b0 6022     		movs	r2, #96
+ 1415 05b2 0021     		movs	r1, #0
+ 1416 05b4 0EA8     		add	r0, sp, #56
+ 1417 05b6 FFF7FEFF 		bl	memset
+ 1418              	.LVL128:
+ 1419              		.loc 1 117 5 view .LVU254
+ 1420 05ba 2C4C     		ldr	r4, .L47
+ 1421              	.LVL129:
+ 1422              		.loc 1 117 5 is_stmt 0 view .LVU255
+ 1423 05bc 9E23     		movs	r3, #158
+ 1424 05be DB00     		lsls	r3, r3, #3
+ 1425 05c0 E318     		adds	r3, r4, r3
+ 1426 05c2 1A68     		ldr	r2, [r3]
+ 1427 05c4 5B68     		ldr	r3, [r3, #4]
+ 1428 05c6 3449     		ldr	r1, .L47+44
+ 1429 05c8 0DA8     		add	r0, sp, #52
+ 1430 05ca FFF7FEFF 		bl	sprintf
+ 1431              	.LVL130:
+ 1432              		.loc 1 117 5 is_stmt 1 view .LVU256
+ 1433 05ce FA26     		movs	r6, #250
+ 1434 05d0 B600     		lsls	r6, r6, #2
+ 1435 05d2 82B2     		uxth	r2, r0
+ 1436 05d4 2C4D     		ldr	r5, .L47+28
+ 1437 05d6 3300     		movs	r3, r6
+ 1438 05d8 0DA9     		add	r1, sp, #52
+ 1439 05da 2800     		movs	r0, r5
+ 1440              	.LVL131:
+ 1441              		.loc 1 117 5 is_stmt 0 view .LVU257
+ 1442 05dc FFF7FEFF 		bl	HAL_UART_Transmit
+ 1443              	.LVL132:
+ 1444              	.LBE26:
+ 1445              		.loc 1 117 68 is_stmt 1 view .LVU258
+ 1446              	.LBB27:
+ 118:Src/PID.c     ****     SERIAL_WRITE("PD3 SLOPE: %i\n", State.PD3_Slope);
+ 1447              		.loc 1 118 5 view .LVU259
+ 1448 05e0 0D97     		str	r7, [sp, #52]
+ 1449 05e2 6022     		movs	r2, #96
+ 1450 05e4 0021     		movs	r1, #0
+ 1451 05e6 0EA8     		add	r0, sp, #56
+ 1452 05e8 FFF7FEFF 		bl	memset
+ 1453              	.LVL133:
+ 1454              		.loc 1 118 5 view .LVU260
+ 1455 05ec 9A23     		movs	r3, #154
+ 1456 05ee DB00     		lsls	r3, r3, #3
+ 1457 05f0 E256     		ldrsb	r2, [r4, r3]
+ 1458 05f2 2A49     		ldr	r1, .L47+48
+ 1459 05f4 0DA8     		add	r0, sp, #52
+ 1460 05f6 FFF7FEFF 		bl	sprintf
+ 1461              	.LVL134:
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 32
+
+
+ 1462              		.loc 1 118 5 view .LVU261
+ 1463 05fa 82B2     		uxth	r2, r0
+ 1464 05fc 3300     		movs	r3, r6
+ 1465 05fe 0DA9     		add	r1, sp, #52
+ 1466 0600 2800     		movs	r0, r5
+ 1467              	.LVL135:
+ 1468              		.loc 1 118 5 is_stmt 0 view .LVU262
+ 1469 0602 FFF7FEFF 		bl	HAL_UART_Transmit
+ 1470              	.LVL136:
+ 1471              	.LBE27:
+ 1472              		.loc 1 118 53 is_stmt 1 view .LVU263
+ 1473              	.LBB28:
+ 119:Src/PID.c     ****     SERIAL_WRITE("PD4 SLOPE: %i\n", State.PD4_Slope);
+ 1474              		.loc 1 119 5 view .LVU264
+ 1475 0606 0D97     		str	r7, [sp, #52]
+ 1476 0608 6022     		movs	r2, #96
+ 1477 060a 0021     		movs	r1, #0
+ 1478 060c 0EA8     		add	r0, sp, #56
+ 1479 060e FFF7FEFF 		bl	memset
+ 1480              	.LVL137:
+ 1481              		.loc 1 119 5 view .LVU265
+ 1482 0612 174B     		ldr	r3, .L47+4
+ 1483 0614 E256     		ldrsb	r2, [r4, r3]
+ 1484 0616 2249     		ldr	r1, .L47+52
+ 1485 0618 0DA8     		add	r0, sp, #52
+ 1486 061a FFF7FEFF 		bl	sprintf
+ 1487              	.LVL138:
+ 1488              		.loc 1 119 5 view .LVU266
+ 1489 061e 82B2     		uxth	r2, r0
+ 1490 0620 3300     		movs	r3, r6
+ 1491 0622 0DA9     		add	r1, sp, #52
+ 1492 0624 2800     		movs	r0, r5
+ 1493              	.LVL139:
+ 1494              		.loc 1 119 5 is_stmt 0 view .LVU267
+ 1495 0626 FFF7FEFF 		bl	HAL_UART_Transmit
+ 1496              	.LVL140:
+ 1497              	.LBE28:
+ 1498              		.loc 1 119 53 is_stmt 1 view .LVU268
+ 1499              	.LBB29:
+ 120:Src/PID.c     ****     SERIAL_WRITE("PS352 OFFSET: %u\n", State.PD3_PD4_Offset);
+ 1500              		.loc 1 120 5 view .LVU269
+ 1501 062a 0D97     		str	r7, [sp, #52]
+ 1502 062c 6022     		movs	r2, #96
+ 1503 062e 0021     		movs	r1, #0
+ 1504 0630 0EA8     		add	r0, sp, #56
+ 1505 0632 FFF7FEFF 		bl	memset
+ 1506              	.LVL141:
+ 1507              		.loc 1 120 5 view .LVU270
+ 1508 0636 9F27     		movs	r7, #159
+ 1509 0638 FF00     		lsls	r7, r7, #3
+ 1510 063a E259     		ldr	r2, [r4, r7]
+ 1511 063c 1949     		ldr	r1, .L47+56
+ 1512 063e 0DA8     		add	r0, sp, #52
+ 1513 0640 FFF7FEFF 		bl	sprintf
+ 1514              	.LVL142:
+ 1515              		.loc 1 120 5 view .LVU271
+ 1516 0644 82B2     		uxth	r2, r0
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 33
+
+
+ 1517 0646 3300     		movs	r3, r6
+ 1518 0648 0DA9     		add	r1, sp, #52
+ 1519 064a 2800     		movs	r0, r5
+ 1520              	.LVL143:
+ 1521              		.loc 1 120 5 is_stmt 0 view .LVU272
+ 1522 064c FFF7FEFF 		bl	HAL_UART_Transmit
+ 1523              	.LVL144:
+ 1524              	.LBE29:
+ 1525              		.loc 1 120 61 is_stmt 1 view .LVU273
+ 121:Src/PID.c     **** 
+ 122:Src/PID.c     ****     DAC_cmd(RF_PS_352_OFFSET + DAC_WRITE + State.PD3_PD4_Offset);
+ 1526              		.loc 1 122 5 view .LVU274
+ 1527              		.loc 1 122 49 is_stmt 0 view .LVU275
+ 1528 0650 E059     		ldr	r0, [r4, r7]
+ 1529              		.loc 1 122 5 view .LVU276
+ 1530 0652 A023     		movs	r3, #160
+ 1531 0654 5B03     		lsls	r3, r3, #13
+ 1532 0656 9C46     		mov	ip, r3
+ 1533 0658 6044     		add	r0, r0, ip
+ 1534 065a FFF7FEFF 		bl	DAC_cmd
+ 1535              	.LVL145:
+ 123:Src/PID.c     **** }
+ 1536              		.loc 1 123 1 view .LVU277
+ 1537 065e 27B0     		add	sp, sp, #156
+ 1538              		@ sp needed
+ 1539 0660 3CBC     		pop	{r2, r3, r4, r5}
+ 1540 0662 9046     		mov	r8, r2
+ 1541 0664 9946     		mov	r9, r3
+ 1542 0666 A246     		mov	r10, r4
+ 1543 0668 AB46     		mov	fp, r5
+ 1544 066a F0BD     		pop	{r4, r5, r6, r7, pc}
+ 1545              	.L48:
+ 1546              		.align	2
+ 1547              	.L47:
+ 1548 066c 00000000 		.word	State
+ 1549 0670 D1040000 		.word	1233
+ 1550 0674 FEFF0000 		.word	65534
+ 1551 0678 40771B00 		.word	1800000
+ 1552 067c FFFFFF00 		.word	16777215
+ 1553 0680 905F0100 		.word	90000
+ 1554 0684 9C000000 		.word	.LC23
+ 1555 0688 00000000 		.word	huart2
+ 1556 068c AC000000 		.word	.LC25
+ 1557 0690 BC000000 		.word	.LC27
+ 1558 0694 CC000000 		.word	.LC29
+ 1559 0698 DC000000 		.word	.LC31
+ 1560 069c F4000000 		.word	.LC33
+ 1561 06a0 04010000 		.word	.LC35
+ 1562 06a4 14010000 		.word	.LC37
+ 1563              		.cfi_endproc
+ 1564              	.LFE289:
+ 1566              		.section	.text.PID_Init,"ax",%progbits
+ 1567              		.align	1
+ 1568              		.global	PID_Init
+ 1569              		.syntax unified
+ 1570              		.code	16
+ 1571              		.thumb_func
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 34
+
+
+ 1572              		.fpu softvfp
+ 1574              	PID_Init:
+ 1575              	.LFB290:
+ 124:Src/PID.c     **** 
+ 125:Src/PID.c     **** void PID_Init()
+ 126:Src/PID.c     **** {
+ 1576              		.loc 1 126 1 is_stmt 1 view -0
+ 1577              		.cfi_startproc
+ 1578              		@ args = 0, pretend = 0, frame = 0
+ 1579              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1580 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 1581              	.LCFI9:
+ 1582              		.cfi_def_cfa_offset 20
+ 1583              		.cfi_offset 4, -20
+ 1584              		.cfi_offset 5, -16
+ 1585              		.cfi_offset 6, -12
+ 1586              		.cfi_offset 7, -8
+ 1587              		.cfi_offset 14, -4
+ 127:Src/PID.c     ****     State.PID_352_Output = 0x7fff;
+ 1588              		.loc 1 127 5 view .LVU279
+ 1589              		.loc 1 127 26 is_stmt 0 view .LVU280
+ 1590 0002 244E     		ldr	r6, .L50
+ 1591 0004 244F     		ldr	r7, .L50+4
+ 1592 0006 A123     		movs	r3, #161
+ 1593 0008 DB00     		lsls	r3, r3, #3
+ 1594 000a F750     		str	r7, [r6, r3]
+ 128:Src/PID.c     ****     State.PID_352_P = -1;
+ 1595              		.loc 1 128 5 is_stmt 1 view .LVU281
+ 1596              		.loc 1 128 21 is_stmt 0 view .LVU282
+ 1597 000c 0833     		adds	r3, r3, #8
+ 1598 000e F318     		adds	r3, r6, r3
+ 1599 0010 0120     		movs	r0, #1
+ 1600 0012 4042     		rsbs	r0, r0, #0
+ 1601 0014 C117     		asrs	r1, r0, #31
+ 1602 0016 1860     		str	r0, [r3]
+ 1603 0018 5960     		str	r1, [r3, #4]
+ 129:Src/PID.c     ****     State.PID_352_I = -1;
+ 1604              		.loc 1 129 5 is_stmt 1 view .LVU283
+ 1605              		.loc 1 129 21 is_stmt 0 view .LVU284
+ 1606 001a A323     		movs	r3, #163
+ 1607 001c DB00     		lsls	r3, r3, #3
+ 1608 001e F318     		adds	r3, r6, r3
+ 1609 0020 1860     		str	r0, [r3]
+ 1610 0022 5960     		str	r1, [r3, #4]
+ 130:Src/PID.c     ****     State.PID_352_T = 1000;
+ 1611              		.loc 1 130 5 is_stmt 1 view .LVU285
+ 1612              		.loc 1 130 21 is_stmt 0 view .LVU286
+ 1613 0024 A423     		movs	r3, #164
+ 1614 0026 DB00     		lsls	r3, r3, #3
+ 1615 0028 F318     		adds	r3, r6, r3
+ 1616 002a FA24     		movs	r4, #250
+ 1617 002c A400     		lsls	r4, r4, #2
+ 1618 002e 0025     		movs	r5, #0
+ 1619 0030 1C60     		str	r4, [r3]
+ 1620 0032 5D60     		str	r5, [r3, #4]
+ 131:Src/PID.c     ****     State.PID_352_P_error = 0;
+ 1621              		.loc 1 131 5 is_stmt 1 view .LVU287
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 35
+
+
+ 1622              		.loc 1 131 27 is_stmt 0 view .LVU288
+ 1623 0034 A523     		movs	r3, #165
+ 1624 0036 DB00     		lsls	r3, r3, #3
+ 1625 0038 9C46     		mov	ip, r3
+ 1626 003a B444     		add	ip, ip, r6
+ 1627 003c 0022     		movs	r2, #0
+ 1628 003e 0023     		movs	r3, #0
+ 1629 0040 6446     		mov	r4, ip
+ 1630 0042 2260     		str	r2, [r4]
+ 1631 0044 6360     		str	r3, [r4, #4]
  132:Src/PID.c     ****     State.PID_352_I_error = 0;
- 1414              		.loc 1 132 0
- 1415 0038 3C00     		movs	r4, r7
- 1416 003a 7134     		adds	r4, r4, #113
- 1417 003c FF34     		adds	r4, r4, #255
- 1418 003e 0022     		movs	r2, #0
- 1419 0040 0023     		movs	r3, #0
- 1420 0042 2260     		str	r2, [r4]
- 1421 0044 6360     		str	r3, [r4, #4]
- 133:Src/PID.c     ****     State.PID_352_Output = (State.PID_352_Output +  State.PID_352_P * State.PID_352_P_error + State
- 1422              		.loc 1 133 0
- 1423 0046 3E00     		movs	r6, r7
- 1424 0048 4936     		adds	r6, r6, #73
- 1425 004a FF36     		adds	r6, r6, #255
- 1426 004c 3468     		ldr	r4, [r6]
- 1427 004e 7568     		ldr	r5, [r6, #4]
- 1428 0050 5137     		adds	r7, r7, #81
- 1429 0052 FF37     		adds	r7, r7, #255
- 1430 0054 3A68     		ldr	r2, [r7]
-ARM GAS  /tmp/ccH7iQ9o.s 			page 29
+ 1632              		.loc 1 132 5 is_stmt 1 view .LVU289
+ 1633              		.loc 1 132 27 is_stmt 0 view .LVU290
+ 1634 0046 A624     		movs	r4, #166
+ 1635 0048 E400     		lsls	r4, r4, #3
+ 1636 004a A446     		mov	ip, r4
+ 1637 004c B444     		add	ip, ip, r6
+ 1638 004e 6446     		mov	r4, ip
+ 1639 0050 2260     		str	r2, [r4]
+ 1640 0052 6360     		str	r3, [r4, #4]
+ 133:Src/PID.c     **** 
+ 134:Src/PID.c     ****     State.PID_704_Output = 0x7fff;
+ 1641              		.loc 1 134 5 is_stmt 1 view .LVU291
+ 1642              		.loc 1 134 26 is_stmt 0 view .LVU292
+ 1643 0054 A724     		movs	r4, #167
+ 1644 0056 E400     		lsls	r4, r4, #3
+ 1645 0058 3751     		str	r7, [r6, r4]
+ 135:Src/PID.c     ****     State.PID_704_P = -1;
+ 1646              		.loc 1 135 5 is_stmt 1 view .LVU293
+ 1647              		.loc 1 135 21 is_stmt 0 view .LVU294
+ 1648 005a 0834     		adds	r4, r4, #8
+ 1649 005c 3719     		adds	r7, r6, r4
+ 1650 005e 3860     		str	r0, [r7]
+ 1651 0060 7960     		str	r1, [r7, #4]
+ 136:Src/PID.c     ****     State.PID_704_I = -1;
+ 1652              		.loc 1 136 5 is_stmt 1 view .LVU295
+ 1653              		.loc 1 136 21 is_stmt 0 view .LVU296
+ 1654 0062 0834     		adds	r4, r4, #8
+ 1655 0064 3719     		adds	r7, r6, r4
+ 1656 0066 3860     		str	r0, [r7]
+ 1657 0068 7960     		str	r1, [r7, #4]
+ 137:Src/PID.c     ****     State.PID_704_T = 1000;
+ 1658              		.loc 1 137 5 is_stmt 1 view .LVU297
+ 1659              		.loc 1 137 21 is_stmt 0 view .LVU298
+ 1660 006a AA21     		movs	r1, #170
+ 1661 006c C900     		lsls	r1, r1, #3
+ 1662 006e 7118     		adds	r1, r6, r1
+ 1663 0070 FA24     		movs	r4, #250
+ 1664 0072 A400     		lsls	r4, r4, #2
+ 1665 0074 0025     		movs	r5, #0
+ 1666 0076 0C60     		str	r4, [r1]
+ 1667 0078 4D60     		str	r5, [r1, #4]
+ 138:Src/PID.c     ****     State.PID_704_P_error = 0;
+ 1668              		.loc 1 138 5 is_stmt 1 view .LVU299
+ 1669              		.loc 1 138 27 is_stmt 0 view .LVU300
+ 1670 007a AB21     		movs	r1, #171
+ 1671 007c C900     		lsls	r1, r1, #3
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 36
 
 
- 1431 0056 7B68     		ldr	r3, [r7, #4]
- 1432 0058 FFF7FEFF 		bl	__aeabi_lmul
- 1433              	.LVL142:
- 1434 005c 2418     		adds	r4, r4, r0
- 1435 005e 4D41     		adcs	r5, r5, r1
- 1436 0060 2404     		lsls	r4, r4, #16
- 1437 0062 240C     		lsrs	r4, r4, #16
- 1438 0064 3460     		str	r4, [r6]
- 1439 0066 0023     		movs	r3, #0
- 1440 0068 7360     		str	r3, [r6, #4]
- 134:Src/PID.c     ****     DAC_cmd(RF_PS_352_FINE+ DAC_WRITE + State.PID_352_Output); 
- 1441              		.loc 1 134 0
- 1442 006a A823     		movs	r3, #168
- 1443 006c 5B03     		lsls	r3, r3, #13
- 1444 006e E018     		adds	r0, r4, r3
- 1445 0070 FFF7FEFF 		bl	DAC_cmd
- 1446              	.LVL143:
- 135:Src/PID.c     ****     // p_Error1 = (-(PD1.value_volts_mean100) +  PD2.value_volts_mean100) - (1.019) # PD1+ PD2+
- 136:Src/PID.c     ****     // i_Error1 = i_Error1 + (p_Error1*dt1)
- 137:Src/PID.c     ****     // if(time.process_time()<36000): PID_output1 = PID_output1 +(Kp1 * p_Error1 +(Ki1 * i_Error1))
- 138:Src/PID.c     ****     // PS704.update(int(PID_output1))
- 139:Src/PID.c     **** }
- 1447              		.loc 1 139 0
- 1448              		@ sp needed
- 1449 0074 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
- 1450              	.L54:
- 1451 0076 C046     		.align	2
- 1452              	.L53:
- 1453 0078 00000000 		.word	State
- 1454              		.cfi_endproc
- 1455              	.LFE291:
- 1457              		.section	.text.PID704,"ax",%progbits
- 1458              		.align	1
- 1459              		.global	PID704
- 1460              		.syntax unified
- 1461              		.code	16
- 1462              		.thumb_func
- 1463              		.fpu softvfp
- 1465              	PID704:
- 1466              	.LFB292:
- 140:Src/PID.c     **** void PID704()
- 141:Src/PID.c     **** {
- 1467              		.loc 1 141 0
- 1468              		.cfi_startproc
- 1469              		@ args = 0, pretend = 0, frame = 0
- 1470              		@ frame_needed = 0, uses_anonymous_args = 0
- 1471 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
- 1472              	.LCFI11:
- 1473              		.cfi_def_cfa_offset 24
- 1474              		.cfi_offset 3, -24
- 1475              		.cfi_offset 4, -20
- 1476              		.cfi_offset 5, -16
- 1477              		.cfi_offset 6, -12
- 1478              		.cfi_offset 7, -8
- 1479              		.cfi_offset 14, -4
- 142:Src/PID.c     ****     State.PID_704_P_error = (int)State.PD1_Slope * (int)Phase(ADC_PD1_Phase_CH) + State.PD2_Slope *
- 1480              		.loc 1 142 0
-ARM GAS  /tmp/ccH7iQ9o.s 			page 30
+ 1672 007e 7118     		adds	r1, r6, r1
+ 1673 0080 0A60     		str	r2, [r1]
+ 1674 0082 4B60     		str	r3, [r1, #4]
+ 139:Src/PID.c     ****     State.PID_704_I_error = 0;
+ 1675              		.loc 1 139 5 is_stmt 1 view .LVU301
+ 1676              		.loc 1 139 27 is_stmt 0 view .LVU302
+ 1677 0084 AC21     		movs	r1, #172
+ 1678 0086 C900     		lsls	r1, r1, #3
+ 1679 0088 8C46     		mov	ip, r1
+ 1680 008a 6644     		add	r6, r6, ip
+ 1681 008c 3260     		str	r2, [r6]
+ 1682 008e 7360     		str	r3, [r6, #4]
+ 140:Src/PID.c     **** }
+ 1683              		.loc 1 140 1 view .LVU303
+ 1684              		@ sp needed
+ 1685 0090 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 1686              	.L51:
+ 1687 0092 C046     		.align	2
+ 1688              	.L50:
+ 1689 0094 00000000 		.word	State
+ 1690 0098 FF7F0000 		.word	32767
+ 1691              		.cfi_endproc
+ 1692              	.LFE290:
+ 1694              		.section	.text.PID352,"ax",%progbits
+ 1695              		.align	1
+ 1696              		.global	PID352
+ 1697              		.syntax unified
+ 1698              		.code	16
+ 1699              		.thumb_func
+ 1700              		.fpu softvfp
+ 1702              	PID352:
+ 1703              	.LFB291:
+ 141:Src/PID.c     **** void PID352()
+ 142:Src/PID.c     **** {
+ 1704              		.loc 1 142 1 is_stmt 1 view -0
+ 1705              		.cfi_startproc
+ 1706              		@ args = 0, pretend = 0, frame = 0
+ 1707              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1708 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 1709              	.LCFI10:
+ 1710              		.cfi_def_cfa_offset 24
+ 1711              		.cfi_offset 3, -24
+ 1712              		.cfi_offset 4, -20
+ 1713              		.cfi_offset 5, -16
+ 1714              		.cfi_offset 6, -12
+ 1715              		.cfi_offset 7, -8
+ 1716              		.cfi_offset 14, -4
+ 143:Src/PID.c     ****     State.PID_352_P_error = (int)State.PD3_Slope * (int)Phase(ADC_PD3_Phase_CH) + (int)State.PD4_Sl
+ 1717              		.loc 1 143 5 view .LVU305
+ 1718              		.loc 1 143 39 is_stmt 0 view .LVU306
+ 1719 0002 224E     		ldr	r6, .L53
+ 1720 0004 9A23     		movs	r3, #154
+ 1721 0006 DB00     		lsls	r3, r3, #3
+ 1722 0008 F456     		ldrsb	r4, [r6, r3]
+ 1723              		.loc 1 143 57 view .LVU307
+ 1724 000a 0E20     		movs	r0, #14
+ 1725 000c FFF7FEFF 		bl	Phase
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 37
 
 
- 1481 0002 1D4F     		ldr	r7, .L56
- 1482 0004 8723     		movs	r3, #135
- 1483 0006 5B00     		lsls	r3, r3, #1
- 1484 0008 FC56     		ldrsb	r4, [r7, r3]
- 1485 000a 0620     		movs	r0, #6
- 1486 000c FFF7FEFF 		bl	Phase
- 1487              	.LVL144:
- 1488 0010 4443     		muls	r4, r0
- 1489 0012 1023     		movs	r3, #16
- 1490 0014 FF33     		adds	r3, r3, #255
- 1491 0016 FD56     		ldrsb	r5, [r7, r3]
- 1492 0018 0020     		movs	r0, #0
- 1493 001a FFF7FEFF 		bl	Phase
- 1494              	.LVL145:
- 1495 001e 6843     		muls	r0, r5
- 1496 0020 2418     		adds	r4, r4, r0
- 1497 0022 3B00     		movs	r3, r7
- 1498 0024 1933     		adds	r3, r3, #25
- 1499 0026 FF33     		adds	r3, r3, #255
- 1500 0028 1868     		ldr	r0, [r3]
- 1501 002a 201A     		subs	r0, r4, r0
- 1502 002c C117     		asrs	r1, r0, #31
- 1503 002e 3B00     		movs	r3, r7
- 1504 0030 9933     		adds	r3, r3, #153
- 1505 0032 FF33     		adds	r3, r3, #255
- 1506 0034 1860     		str	r0, [r3]
- 1507 0036 5960     		str	r1, [r3, #4]
- 143:Src/PID.c     ****     // State.PID_704_I_error = State.PID_704_I_error + State.PID_704_P_error *  State.PID_704_T;
- 144:Src/PID.c     ****     State.PID_704_I_error = 0;
- 1508              		.loc 1 144 0
- 1509 0038 3C00     		movs	r4, r7
- 1510 003a A134     		adds	r4, r4, #161
- 1511 003c FF34     		adds	r4, r4, #255
- 1512 003e 0022     		movs	r2, #0
- 1513 0040 0023     		movs	r3, #0
- 1514 0042 2260     		str	r2, [r4]
- 1515 0044 6360     		str	r3, [r4, #4]
- 145:Src/PID.c     ****     State.PID_704_Output = (State.PID_704_Output +  State.PID_704_P * State.PID_704_P_error + State
- 1516              		.loc 1 145 0
- 1517 0046 3E00     		movs	r6, r7
- 1518 0048 7936     		adds	r6, r6, #121
- 1519 004a FF36     		adds	r6, r6, #255
- 1520 004c 3468     		ldr	r4, [r6]
- 1521 004e 7568     		ldr	r5, [r6, #4]
- 1522 0050 8137     		adds	r7, r7, #129
- 1523 0052 FF37     		adds	r7, r7, #255
- 1524 0054 3A68     		ldr	r2, [r7]
- 1525 0056 7B68     		ldr	r3, [r7, #4]
- 1526 0058 FFF7FEFF 		bl	__aeabi_lmul
- 1527              	.LVL146:
- 1528 005c 2418     		adds	r4, r4, r0
- 1529 005e 4D41     		adcs	r5, r5, r1
- 1530 0060 2404     		lsls	r4, r4, #16
- 1531 0062 240C     		lsrs	r4, r4, #16
- 1532 0064 3460     		str	r4, [r6]
- 1533 0066 0023     		movs	r3, #0
- 1534 0068 7360     		str	r3, [r6, #4]
-ARM GAS  /tmp/ccH7iQ9o.s 			page 31
+ 1726              	.LVL146:
+ 1727              		.loc 1 143 50 view .LVU308
+ 1728 0010 4443     		muls	r4, r0
+ 1729              		.loc 1 143 93 view .LVU309
+ 1730 0012 1F4B     		ldr	r3, .L53+4
+ 1731 0014 F556     		ldrsb	r5, [r6, r3]
+ 1732              		.loc 1 143 111 view .LVU310
+ 1733 0016 0220     		movs	r0, #2
+ 1734 0018 FFF7FEFF 		bl	Phase
+ 1735              	.LVL147:
+ 1736              		.loc 1 143 104 view .LVU311
+ 1737 001c 6843     		muls	r0, r5
+ 1738              		.loc 1 143 81 view .LVU312
+ 1739 001e 2418     		adds	r4, r4, r0
+ 1740              		.loc 1 143 147 view .LVU313
+ 1741 0020 9E23     		movs	r3, #158
+ 1742 0022 DB00     		lsls	r3, r3, #3
+ 1743 0024 F318     		adds	r3, r6, r3
+ 1744 0026 1868     		ldr	r0, [r3]
+ 1745              		.loc 1 143 135 view .LVU314
+ 1746 0028 201A     		subs	r0, r4, r0
+ 1747 002a 0400     		movs	r4, r0
+ 1748 002c C517     		asrs	r5, r0, #31
+ 1749              		.loc 1 143 27 view .LVU315
+ 1750 002e A523     		movs	r3, #165
+ 1751 0030 DB00     		lsls	r3, r3, #3
+ 1752 0032 F318     		adds	r3, r6, r3
+ 1753 0034 1C60     		str	r4, [r3]
+ 1754 0036 5D60     		str	r5, [r3, #4]
+ 144:Src/PID.c     ****     State.PID_352_I_error = (State.PID_352_I_error + State.PID_352_P_error) / State.PID_352_T;
+ 1755              		.loc 1 144 5 is_stmt 1 view .LVU316
+ 1756              		.loc 1 144 35 is_stmt 0 view .LVU317
+ 1757 0038 A623     		movs	r3, #166
+ 1758 003a DB00     		lsls	r3, r3, #3
+ 1759 003c F718     		adds	r7, r6, r3
+ 1760              		.loc 1 144 52 view .LVU318
+ 1761 003e 3868     		ldr	r0, [r7]
+ 1762 0040 7968     		ldr	r1, [r7, #4]
+ 1763 0042 0019     		adds	r0, r0, r4
+ 1764 0044 6941     		adcs	r1, r1, r5
+ 1765              		.loc 1 144 84 view .LVU319
+ 1766 0046 103B     		subs	r3, r3, #16
+ 1767 0048 F318     		adds	r3, r6, r3
+ 1768 004a 1A68     		ldr	r2, [r3]
+ 1769 004c 5B68     		ldr	r3, [r3, #4]
+ 1770              		.loc 1 144 77 view .LVU320
+ 1771 004e FFF7FEFF 		bl	__aeabi_ldivmod
+ 1772              	.LVL148:
+ 1773 0052 0300     		movs	r3, r0
+ 1774              		.loc 1 144 27 view .LVU321
+ 1775 0054 3860     		str	r0, [r7]
+ 1776 0056 7960     		str	r1, [r7, #4]
+ 145:Src/PID.c     ****     State.PID_352_Output = (State.PID_352_Output + State.PID_352_P * State.PID_352_P_error + State.
+ 1777              		.loc 1 145 5 is_stmt 1 view .LVU322
+ 1778              		.loc 1 145 34 is_stmt 0 view .LVU323
+ 1779 0058 A122     		movs	r2, #161
+ 1780 005a D200     		lsls	r2, r2, #3
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 38
 
 
- 146:Src/PID.c     ****     DAC_cmd(RF_PS_704_FINE+ DAC_WRITE + State.PID_704_Output); 
- 1535              		.loc 1 146 0
- 1536 006a B823     		movs	r3, #184
- 1537 006c 5B03     		lsls	r3, r3, #13
- 1538 006e E018     		adds	r0, r4, r3
- 1539 0070 FFF7FEFF 		bl	DAC_cmd
- 1540              	.LVL147:
+ 1781              		.loc 1 145 99 view .LVU324
+ 1782 005c A321     		movs	r1, #163
+ 1783 005e C900     		lsls	r1, r1, #3
+ 1784 0060 7118     		adds	r1, r6, r1
+ 1785 0062 0868     		ldr	r0, [r1]
+ 1786              		.loc 1 145 57 view .LVU325
+ 1787 0064 A221     		movs	r1, #162
+ 1788 0066 C900     		lsls	r1, r1, #3
+ 1789 0068 7118     		adds	r1, r6, r1
+ 1790 006a 0968     		ldr	r1, [r1]
+ 1791              		.loc 1 145 92 view .LVU326
+ 1792 006c 5843     		muls	r0, r3
+ 1793 006e 4C43     		muls	r4, r1
+ 1794 0070 0019     		adds	r0, r0, r4
+ 1795 0072 B358     		ldr	r3, [r6, r2]
+ 1796 0074 9C46     		mov	ip, r3
+ 1797 0076 6044     		add	r0, r0, ip
+ 1798              		.loc 1 145 135 view .LVU327
+ 1799 0078 0004     		lsls	r0, r0, #16
+ 1800 007a 000C     		lsrs	r0, r0, #16
+ 1801              		.loc 1 145 26 view .LVU328
+ 1802 007c B050     		str	r0, [r6, r2]
+ 146:Src/PID.c     ****     DAC_cmd(RF_PS_352_FINE + DAC_WRITE + State.PID_352_Output);
+ 1803              		.loc 1 146 5 is_stmt 1 view .LVU329
+ 1804 007e A823     		movs	r3, #168
+ 1805 0080 5B03     		lsls	r3, r3, #13
+ 1806 0082 9C46     		mov	ip, r3
+ 1807 0084 6044     		add	r0, r0, ip
+ 1808 0086 FFF7FEFF 		bl	DAC_cmd
+ 1809              	.LVL149:
  147:Src/PID.c     **** }
- 1541              		.loc 1 147 0
- 1542              		@ sp needed
- 1543 0074 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
- 1544              	.L57:
- 1545 0076 C046     		.align	2
- 1546              	.L56:
- 1547 0078 00000000 		.word	State
- 1548              		.cfi_endproc
- 1549              	.LFE292:
- 1551              		.section	.text.PID,"ax",%progbits
- 1552              		.align	1
- 1553              		.global	PID
- 1554              		.syntax unified
- 1555              		.code	16
- 1556              		.thumb_func
- 1557              		.fpu softvfp
- 1559              	PID:
- 1560              	.LFB293:
- 148:Src/PID.c     **** 
- 149:Src/PID.c     **** void PID()
- 150:Src/PID.c     **** {
- 1561              		.loc 1 150 0
- 1562              		.cfi_startproc
- 1563              		@ args = 0, pretend = 0, frame = 0
- 1564              		@ frame_needed = 0, uses_anonymous_args = 0
- 1565 0000 10B5     		push	{r4, lr}
- 1566              	.LCFI12:
- 1567              		.cfi_def_cfa_offset 8
- 1568              		.cfi_offset 4, -8
- 1569              		.cfi_offset 14, -4
- 151:Src/PID.c     ****     PID352();
- 1570              		.loc 1 151 0
- 1571 0002 FFF7FEFF 		bl	PID352
- 1572              	.LVL148:
- 152:Src/PID.c     ****     PID704();
- 1573              		.loc 1 152 0
- 1574 0006 FFF7FEFF 		bl	PID704
- 1575              	.LVL149:
- 153:Src/PID.c     **** }
- 1576              		.loc 1 153 0
- 1577              		@ sp needed
- 1578 000a 10BD     		pop	{r4, pc}
- 1579              		.cfi_endproc
- 1580              	.LFE293:
- 1582              		.section	.rodata
- 1583              		.align	3
- 1584              	.LC0:
- 1585 0000 00000000 		.word	0
- 1586 0004 00000000 		.word	0
-ARM GAS  /tmp/ccH7iQ9o.s 			page 32
+ 1810              		.loc 1 147 1 is_stmt 0 view .LVU330
+ 1811              		@ sp needed
+ 1812 008a F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 1813              	.L54:
+ 1814              		.align	2
+ 1815              	.L53:
+ 1816 008c 00000000 		.word	State
+ 1817 0090 D1040000 		.word	1233
+ 1818              		.cfi_endproc
+ 1819              	.LFE291:
+ 1821              		.section	.text.PID704,"ax",%progbits
+ 1822              		.align	1
+ 1823              		.global	PID704
+ 1824              		.syntax unified
+ 1825              		.code	16
+ 1826              		.thumb_func
+ 1827              		.fpu softvfp
+ 1829              	PID704:
+ 1830              	.LFB292:
+ 148:Src/PID.c     **** void PID704()
+ 149:Src/PID.c     **** {
+ 1831              		.loc 1 149 1 is_stmt 1 view -0
+ 1832              		.cfi_startproc
+ 1833              		@ args = 0, pretend = 0, frame = 0
+ 1834              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1835 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 39
 
 
- 1587 0008 00000000 		.word	0
- 1588 000c 00000000 		.word	0
- 1589 0010 00000000 		.word	0
- 1590 0014 00000000 		.word	0
- 1591 0018 00000000 		.word	0
- 1592 001c 00000000 		.word	0
- 1593 0020 021A0600 		.word	399874
- 1594 0024 00000000 		.word	0
- 1595 0028 00000000 		.word	0
- 1596 002c 00000000 		.word	0
- 1597 0030 00000000 		.word	0
- 1598 0034 00000000 		.word	0
- 1599 0038 00000000 		.word	0
- 1600 003c 00000000 		.word	0
- 1601 0040 00000000 		.word	0
- 1602 0044 00000000 		.word	0
- 1603 0048 C6D70600 		.word	448454
- 1604 004c 00000000 		.word	0
- 1605 0050 04860600 		.word	427524
- 1606 0054 00000000 		.word	0
- 1607 0058 00000000 		.word	0
- 1608 005c 00000000 		.word	0
- 1609 0060 00000000 		.word	0
- 1610 0064 00000000 		.word	0
- 1611 0068 00000000 		.word	0
- 1612 006c 00000000 		.word	0
- 1613 0070 00000000 		.word	0
- 1614 0074 00000000 		.word	0
- 1615 0078 DD3A0600 		.word	408285
- 1616 007c 00000000 		.word	0
- 1617              		.section	.rodata.Calib.str1.4,"aMS",%progbits,1
- 1618              		.align	2
- 1619              	.LC4:
- 1620 0000 50686173 		.ascii	"Phase1: %lu\012\000"
- 1620      65313A20 
- 1620      256C750A 
- 1620      00
- 1621 000d 000000   		.space	3
- 1622              	.LC7:
- 1623 0010 50686173 		.ascii	"Phase2: %lu\012\000"
- 1623      65323A20 
- 1623      256C750A 
- 1623      00
- 1624 001d 000000   		.space	3
- 1625              	.LC9:
- 1626 0020 6572726F 		.ascii	"error1: %li\012\000"
- 1626      72313A20 
- 1626      256C690A 
- 1626      00
- 1627 002d 000000   		.space	3
- 1628              	.LC11:
- 1629 0030 6572726F 		.ascii	"error2: %li\012\000"
- 1629      72323A20 
- 1629      256C690A 
- 1629      00
- 1630 003d 000000   		.space	3
- 1631              	.LC13:
-ARM GAS  /tmp/ccH7iQ9o.s 			page 33
+ 1836              	.LCFI11:
+ 1837              		.cfi_def_cfa_offset 24
+ 1838              		.cfi_offset 3, -24
+ 1839              		.cfi_offset 4, -20
+ 1840              		.cfi_offset 5, -16
+ 1841              		.cfi_offset 6, -12
+ 1842              		.cfi_offset 7, -8
+ 1843              		.cfi_offset 14, -4
+ 150:Src/PID.c     ****     State.PID_704_P_error = (int)State.PD1_Slope * (int)Phase(ADC_PD1_Phase_CH) + (int)State.PD2_Sl
+ 1844              		.loc 1 150 5 view .LVU332
+ 1845              		.loc 1 150 39 is_stmt 0 view .LVU333
+ 1846 0002 224E     		ldr	r6, .L56
+ 1847 0004 224B     		ldr	r3, .L56+4
+ 1848 0006 F456     		ldrsb	r4, [r6, r3]
+ 1849              		.loc 1 150 57 view .LVU334
+ 1850 0008 0620     		movs	r0, #6
+ 1851 000a FFF7FEFF 		bl	Phase
+ 1852              	.LVL150:
+ 1853              		.loc 1 150 50 view .LVU335
+ 1854 000e 4443     		muls	r4, r0
+ 1855              		.loc 1 150 93 view .LVU336
+ 1856 0010 204B     		ldr	r3, .L56+8
+ 1857 0012 F556     		ldrsb	r5, [r6, r3]
+ 1858              		.loc 1 150 111 view .LVU337
+ 1859 0014 0020     		movs	r0, #0
+ 1860 0016 FFF7FEFF 		bl	Phase
+ 1861              	.LVL151:
+ 1862              		.loc 1 150 104 view .LVU338
+ 1863 001a 6843     		muls	r0, r5
+ 1864              		.loc 1 150 81 view .LVU339
+ 1865 001c 2418     		adds	r4, r4, r0
+ 1866              		.loc 1 150 147 view .LVU340
+ 1867 001e 9B23     		movs	r3, #155
+ 1868 0020 DB00     		lsls	r3, r3, #3
+ 1869 0022 F318     		adds	r3, r6, r3
+ 1870 0024 1868     		ldr	r0, [r3]
+ 1871              		.loc 1 150 135 view .LVU341
+ 1872 0026 201A     		subs	r0, r4, r0
+ 1873 0028 0400     		movs	r4, r0
+ 1874 002a C517     		asrs	r5, r0, #31
+ 1875              		.loc 1 150 27 view .LVU342
+ 1876 002c AB23     		movs	r3, #171
+ 1877 002e DB00     		lsls	r3, r3, #3
+ 1878 0030 F318     		adds	r3, r6, r3
+ 1879 0032 1C60     		str	r4, [r3]
+ 1880 0034 5D60     		str	r5, [r3, #4]
+ 151:Src/PID.c     ****     State.PID_704_I_error = (State.PID_704_I_error + State.PID_704_P_error) / State.PID_704_T;
+ 1881              		.loc 1 151 5 is_stmt 1 view .LVU343
+ 1882              		.loc 1 151 35 is_stmt 0 view .LVU344
+ 1883 0036 AC23     		movs	r3, #172
+ 1884 0038 DB00     		lsls	r3, r3, #3
+ 1885 003a F718     		adds	r7, r6, r3
+ 1886              		.loc 1 151 52 view .LVU345
+ 1887 003c 3868     		ldr	r0, [r7]
+ 1888 003e 7968     		ldr	r1, [r7, #4]
+ 1889 0040 0019     		adds	r0, r0, r4
+ 1890 0042 6941     		adcs	r1, r1, r5
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 40
 
 
- 1632 0040 4D534537 		.ascii	"MSE704: %li\012\000"
- 1632      30343A20 
- 1632      256C690A 
- 1632      00
- 1633 004d 000000   		.space	3
- 1634              	.LC15:
- 1635 0050 5044312B 		.ascii	"PD1+PD2 SETPOINT: %lu\012\000"
- 1635      50443220 
- 1635      53455450 
- 1635      4F494E54 
- 1635      3A20256C 
- 1636 0067 00       		.space	1
- 1637              	.LC17:
- 1638 0068 50443120 		.ascii	"PD1 SLOPE: %i\012\000"
- 1638      534C4F50 
- 1638      453A2025 
- 1638      690A00
- 1639 0077 00       		.space	1
- 1640              	.LC19:
- 1641 0078 50443220 		.ascii	"PD2 SLOPE: %i\012\000"
- 1641      534C4F50 
- 1641      453A2025 
- 1641      690A00
- 1642 0087 00       		.space	1
- 1643              	.LC21:
- 1644 0088 50686173 		.ascii	"Phase3: %lu\012\000"
- 1644      65333A20 
- 1644      256C750A 
- 1644      00
- 1645 0095 000000   		.space	3
- 1646              	.LC23:
- 1647 0098 50686173 		.ascii	"Phase4: %lu\012\000"
- 1647      65343A20 
- 1647      256C750A 
- 1647      00
- 1648 00a5 000000   		.space	3
- 1649              	.LC25:
- 1650 00a8 6572726F 		.ascii	"error3: %li\012\000"
- 1650      72333A20 
- 1650      256C690A 
- 1650      00
- 1651 00b5 000000   		.space	3
- 1652              	.LC27:
- 1653 00b8 4D534533 		.ascii	"MSE352: %li\012\000"
- 1653      35323A20 
- 1653      256C690A 
- 1653      00
- 1654 00c5 000000   		.space	3
- 1655              	.LC29:
- 1656 00c8 5044332B 		.ascii	"PD3+PD4 SETPOINT: %lu\012\000"
- 1656      50443420 
- 1656      53455450 
- 1656      4F494E54 
- 1656      3A20256C 
- 1657 00df 00       		.space	1
- 1658              	.LC31:
- 1659 00e0 50443320 		.ascii	"PD3 SLOPE: %i\012\000"
-ARM GAS  /tmp/ccH7iQ9o.s 			page 34
+ 1891              		.loc 1 151 84 view .LVU346
+ 1892 0044 103B     		subs	r3, r3, #16
+ 1893 0046 F318     		adds	r3, r6, r3
+ 1894 0048 1A68     		ldr	r2, [r3]
+ 1895 004a 5B68     		ldr	r3, [r3, #4]
+ 1896              		.loc 1 151 77 view .LVU347
+ 1897 004c FFF7FEFF 		bl	__aeabi_ldivmod
+ 1898              	.LVL152:
+ 1899 0050 0300     		movs	r3, r0
+ 1900              		.loc 1 151 27 view .LVU348
+ 1901 0052 3860     		str	r0, [r7]
+ 1902 0054 7960     		str	r1, [r7, #4]
+ 152:Src/PID.c     ****     State.PID_704_Output = (State.PID_704_Output + State.PID_704_P * State.PID_704_P_error + State.
+ 1903              		.loc 1 152 5 is_stmt 1 view .LVU349
+ 1904              		.loc 1 152 34 is_stmt 0 view .LVU350
+ 1905 0056 A722     		movs	r2, #167
+ 1906 0058 D200     		lsls	r2, r2, #3
+ 1907              		.loc 1 152 99 view .LVU351
+ 1908 005a A921     		movs	r1, #169
+ 1909 005c C900     		lsls	r1, r1, #3
+ 1910 005e 7118     		adds	r1, r6, r1
+ 1911 0060 0868     		ldr	r0, [r1]
+ 1912              		.loc 1 152 57 view .LVU352
+ 1913 0062 A821     		movs	r1, #168
+ 1914 0064 C900     		lsls	r1, r1, #3
+ 1915 0066 7118     		adds	r1, r6, r1
+ 1916 0068 0968     		ldr	r1, [r1]
+ 1917              		.loc 1 152 92 view .LVU353
+ 1918 006a 5843     		muls	r0, r3
+ 1919 006c 4C43     		muls	r4, r1
+ 1920 006e 0019     		adds	r0, r0, r4
+ 1921 0070 B358     		ldr	r3, [r6, r2]
+ 1922 0072 9C46     		mov	ip, r3
+ 1923 0074 6044     		add	r0, r0, ip
+ 1924              		.loc 1 152 135 view .LVU354
+ 1925 0076 0004     		lsls	r0, r0, #16
+ 1926 0078 000C     		lsrs	r0, r0, #16
+ 1927              		.loc 1 152 26 view .LVU355
+ 1928 007a B050     		str	r0, [r6, r2]
+ 153:Src/PID.c     ****     DAC_cmd(RF_PS_704_FINE + DAC_WRITE + State.PID_704_Output);
+ 1929              		.loc 1 153 5 is_stmt 1 view .LVU356
+ 1930 007c B823     		movs	r3, #184
+ 1931 007e 5B03     		lsls	r3, r3, #13
+ 1932 0080 9C46     		mov	ip, r3
+ 1933 0082 6044     		add	r0, r0, ip
+ 1934 0084 FFF7FEFF 		bl	DAC_cmd
+ 1935              	.LVL153:
+ 154:Src/PID.c     **** }
+ 1936              		.loc 1 154 1 is_stmt 0 view .LVU357
+ 1937              		@ sp needed
+ 1938 0088 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 1939              	.L57:
+ 1940 008a C046     		.align	2
+ 1941              	.L56:
+ 1942 008c 00000000 		.word	State
+ 1943 0090 CE040000 		.word	1230
+ 1944 0094 CF040000 		.word	1231
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 41
 
 
- 1659      534C4F50 
- 1659      453A2025 
- 1659      690A00
- 1660 00ef 00       		.space	1
- 1661              	.LC33:
- 1662 00f0 50443420 		.ascii	"PD4 SLOPE: %i\012\000"
- 1662      534C4F50 
- 1662      453A2025 
- 1662      690A00
- 1663              		.text
- 1664              	.Letext0:
- 1665              		.file 2 "/usr/include/newlib/machine/_default_types.h"
- 1666              		.file 3 "/usr/include/newlib/sys/_stdint.h"
- 1667              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
- 1668              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
- 1669              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
- 1670              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
- 1671              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
- 1672              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
- 1673              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
- 1674              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
- 1675              		.file 12 "/usr/include/newlib/sys/lock.h"
- 1676              		.file 13 "/usr/include/newlib/sys/_types.h"
- 1677              		.file 14 "/usr/lib/gcc/arm-none-eabi/7.3.1/include/stddef.h"
- 1678              		.file 15 "/usr/include/newlib/sys/reent.h"
- 1679              		.file 16 "Inc/usart.h"
- 1680              		.file 17 "Inc/state.h"
- 1681              		.file 18 "Inc/spi.h"
- 1682              		.file 19 "Inc/DAC.h"
- 1683              		.file 20 "/usr/include/newlib/stdio.h"
- 1684              		.file 21 "<built-in>"
-ARM GAS  /tmp/ccH7iQ9o.s 			page 35
+ 1945              		.cfi_endproc
+ 1946              	.LFE292:
+ 1948              		.section	.text.PID,"ax",%progbits
+ 1949              		.align	1
+ 1950              		.global	PID
+ 1951              		.syntax unified
+ 1952              		.code	16
+ 1953              		.thumb_func
+ 1954              		.fpu softvfp
+ 1956              	PID:
+ 1957              	.LFB293:
+ 155:Src/PID.c     **** 
+ 156:Src/PID.c     **** void PID()
+ 157:Src/PID.c     **** {
+ 1958              		.loc 1 157 1 is_stmt 1 view -0
+ 1959              		.cfi_startproc
+ 1960              		@ args = 0, pretend = 0, frame = 0
+ 1961              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1962 0000 10B5     		push	{r4, lr}
+ 1963              	.LCFI12:
+ 1964              		.cfi_def_cfa_offset 8
+ 1965              		.cfi_offset 4, -8
+ 1966              		.cfi_offset 14, -4
+ 158:Src/PID.c     ****     PID352();
+ 1967              		.loc 1 158 5 view .LVU359
+ 1968 0002 FFF7FEFF 		bl	PID352
+ 1969              	.LVL154:
+ 159:Src/PID.c     ****     PID704();
+ 1970              		.loc 1 159 5 view .LVU360
+ 1971 0006 FFF7FEFF 		bl	PID704
+ 1972              	.LVL155:
+ 160:Src/PID.c     **** }
+ 1973              		.loc 1 160 1 is_stmt 0 view .LVU361
+ 1974              		@ sp needed
+ 1975 000a 10BD     		pop	{r4, pc}
+ 1976              		.cfi_endproc
+ 1977              	.LFE293:
+ 1979              		.section	.rodata
+ 1980              		.align	3
+ 1981              	.LC0:
+ 1982 0000 00000000 		.word	0
+ 1983 0004 00000000 		.word	0
+ 1984 0008 00000000 		.word	0
+ 1985 000c 00000000 		.word	0
+ 1986 0010 00000000 		.word	0
+ 1987 0014 00000000 		.word	0
+ 1988 0018 00000000 		.word	0
+ 1989 001c 00000000 		.word	0
+ 1990 0020 021A0600 		.word	399874
+ 1991 0024 00000000 		.word	0
+ 1992 0028 00000000 		.word	0
+ 1993 002c 00000000 		.word	0
+ 1994 0030 00000000 		.word	0
+ 1995 0034 00000000 		.word	0
+ 1996 0038 00000000 		.word	0
+ 1997 003c 00000000 		.word	0
+ 1998 0040 00000000 		.word	0
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 42
+
+
+ 1999 0044 00000000 		.word	0
+ 2000 0048 C6D70600 		.word	448454
+ 2001 004c 00000000 		.word	0
+ 2002 0050 04860600 		.word	427524
+ 2003 0054 00000000 		.word	0
+ 2004 0058 00000000 		.word	0
+ 2005 005c 00000000 		.word	0
+ 2006 0060 00000000 		.word	0
+ 2007 0064 00000000 		.word	0
+ 2008 0068 00000000 		.word	0
+ 2009 006c 00000000 		.word	0
+ 2010 0070 00000000 		.word	0
+ 2011 0074 00000000 		.word	0
+ 2012 0078 DD3A0600 		.word	408285
+ 2013 007c 00000000 		.word	0
+ 2014              		.text
+ 2015              	.Letext0:
+ 2016              		.file 2 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 2017              		.file 3 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 2018              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
+ 2019              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
+ 2020              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+ 2021              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+ 2022              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
+ 2023              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
+ 2024              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
+ 2025              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
+ 2026              		.file 12 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\lock.h"
+ 2027              		.file 13 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_types.h"
+ 2028              		.file 14 "c:\\gnu tools arm embedded\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\stddef.h"
+ 2029              		.file 15 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\reent.h"
+ 2030              		.file 16 "Inc/usart.h"
+ 2031              		.file 17 "Inc/state.h"
+ 2032              		.file 18 "Inc/spi.h"
+ 2033              		.file 19 "Inc/DAC.h"
+ 2034              		.file 20 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\stdio.h"
+ 2035              		.file 21 "<built-in>"
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s 			page 43
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 PID.c
-     /tmp/ccH7iQ9o.s:18     .text.Voltage:00000000 $t
-     /tmp/ccH7iQ9o.s:25     .text.Voltage:00000000 Voltage
-     /tmp/ccH7iQ9o.s:60     .text.Voltage:00000020 $d
-     /tmp/ccH7iQ9o.s:67     .text.Phase:00000000 $t
-     /tmp/ccH7iQ9o.s:74     .text.Phase:00000000 Phase
-     /tmp/ccH7iQ9o.s:105    .text.Phase:0000001c $d
-     /tmp/ccH7iQ9o.s:110    .text.Temperature:00000000 $t
-     /tmp/ccH7iQ9o.s:117    .text.Temperature:00000000 Temperature
-     /tmp/ccH7iQ9o.s:154    .text.Temperature:00000028 $d
-     /tmp/ccH7iQ9o.s:160    .text.Relative_Power:00000000 $t
-     /tmp/ccH7iQ9o.s:167    .text.Relative_Power:00000000 Relative_Power
-     /tmp/ccH7iQ9o.s:197    .text.Relative_Power:0000001c $d
-     /tmp/ccH7iQ9o.s:203    .text.RMS_Power:00000000 $t
-     /tmp/ccH7iQ9o.s:210    .text.RMS_Power:00000000 RMS_Power
-     /tmp/ccH7iQ9o.s:259    .text.RMS_Power:00000038 $d
-     /tmp/ccH7iQ9o.s:265    .text.Calib:00000000 $t
-     /tmp/ccH7iQ9o.s:272    .text.Calib:00000000 Calib
-     /tmp/ccH7iQ9o.s:794    .text.Calib:000002f4 $d
-     /tmp/ccH7iQ9o.s:814    .text.Calib:0000033c $t
-     /tmp/ccH7iQ9o.s:1235   .text.Calib:000005cc $d
-     /tmp/ccH7iQ9o.s:1253   .text.PID_Init:00000000 $t
-     /tmp/ccH7iQ9o.s:1260   .text.PID_Init:00000000 PID_Init
-     /tmp/ccH7iQ9o.s:1359   .text.PID_Init:0000008c $d
-     /tmp/ccH7iQ9o.s:1364   .text.PID352:00000000 $t
-     /tmp/ccH7iQ9o.s:1371   .text.PID352:00000000 PID352
-     /tmp/ccH7iQ9o.s:1453   .text.PID352:00000078 $d
-     /tmp/ccH7iQ9o.s:1458   .text.PID704:00000000 $t
-     /tmp/ccH7iQ9o.s:1465   .text.PID704:00000000 PID704
-     /tmp/ccH7iQ9o.s:1547   .text.PID704:00000078 $d
-     /tmp/ccH7iQ9o.s:1552   .text.PID:00000000 $t
-     /tmp/ccH7iQ9o.s:1559   .text.PID:00000000 PID
-     /tmp/ccH7iQ9o.s:1583   .rodata:00000000 $d
-     /tmp/ccH7iQ9o.s:1618   .rodata.Calib.str1.4:00000000 $d
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:18     .text.Voltage:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:26     .text.Voltage:00000000 Voltage
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:67     .text.Voltage:00000024 $d
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:74     .text.Phase:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:81     .text.Phase:00000000 Phase
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:116    .text.Phase:0000001c $d
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:121    .text.Temperature:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:128    .text.Temperature:00000000 Temperature
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:167    .text.Temperature:00000028 $d
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:173    .text.Relative_Power:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:180    .text.Relative_Power:00000000 Relative_Power
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:214    .text.Relative_Power:0000001c $d
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:220    .text.RMS_Power:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:227    .text.RMS_Power:00000000 RMS_Power
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:284    .text.RMS_Power:00000038 $d
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:290    .rodata.Calib.str1.4:00000000 $d
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:342    .text.Calib:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:349    .text.Calib:00000000 Calib
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:995    .text.Calib:00000340 $d
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:1017   .text.Calib:00000390 $t
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:1548   .text.Calib:0000066c $d
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:1567   .text.PID_Init:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:1574   .text.PID_Init:00000000 PID_Init
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:1689   .text.PID_Init:00000094 $d
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:1695   .text.PID352:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:1702   .text.PID352:00000000 PID352
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:1816   .text.PID352:0000008c $d
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:1822   .text.PID704:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:1829   .text.PID704:00000000 PID704
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:1942   .text.PID704:0000008c $d
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:1949   .text.PID:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:1956   .text.PID:00000000 PID
+C:\Users\matil\AppData\Local\Temp\ccJtl0Su.s:1980   .rodata:00000000 $d
 
 UNDEFINED SYMBOLS
 __aeabi_lmul

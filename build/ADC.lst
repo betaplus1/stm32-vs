@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc1Vrnhh.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccetSkxK.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -15,16 +15,22 @@ ARM GAS  /tmp/cc1Vrnhh.s 			page 1
   12              		.text
   13              	.Ltext0:
   14              		.cfi_sections	.debug_frame
-  15              		.section	.text.ADC_SPI_WRITE_8,"ax",%progbits
-  16              		.align	1
-  17              		.global	ADC_SPI_WRITE_8
-  18              		.syntax unified
-  19              		.code	16
-  20              		.thumb_func
-  21              		.fpu softvfp
-  23              	ADC_SPI_WRITE_8:
-  24              	.LFB284:
-  25              		.file 1 "Src/ADC.c"
+  15              		.section	.rodata.ADC_SPI_WRITE_8.str1.4,"aMS",%progbits,1
+  16              		.align	2
+  17              	.LC0:
+  18 0000 00       		.ascii	"\000"
+  19              		.section	.text.ADC_SPI_WRITE_8,"ax",%progbits
+  20              		.align	1
+  21              		.global	ADC_SPI_WRITE_8
+  22              		.arch armv6s-m
+  23              		.syntax unified
+  24              		.code	16
+  25              		.thumb_func
+  26              		.fpu softvfp
+  28              	ADC_SPI_WRITE_8:
+  29              	.LVL0:
+  30              	.LFB284:
+  31              		.file 1 "Src/ADC.c"
    1:Src/ADC.c     **** #include "usart.h"
    2:Src/ADC.c     **** #include <stdio.h>
    3:Src/ADC.c     **** #include "state.h"
@@ -37,963 +43,1011 @@ ARM GAS  /tmp/cc1Vrnhh.s 			page 1
   10:Src/ADC.c     **** 
   11:Src/ADC.c     **** uint8_t ADC_SPI_WRITE_8(uint8_t data)
   12:Src/ADC.c     **** {
-  26              		.loc 1 12 0
-  27              		.cfi_startproc
-  28              		@ args = 0, pretend = 0, frame = 8
-  29              		@ frame_needed = 0, uses_anonymous_args = 0
-  30              	.LVL0:
-  31 0000 10B5     		push	{r4, lr}
-  32              	.LCFI0:
-  33              		.cfi_def_cfa_offset 8
-  34              		.cfi_offset 4, -8
-  35              		.cfi_offset 14, -4
-  36 0002 84B0     		sub	sp, sp, #16
-  37              	.LCFI1:
-  38              		.cfi_def_cfa_offset 24
+  32              		.loc 1 12 1 view -0
+  33              		.cfi_startproc
+  34              		@ args = 0, pretend = 0, frame = 8
+  35              		@ frame_needed = 0, uses_anonymous_args = 0
+  36              		.loc 1 12 1 is_stmt 0 view .LVU1
+  37 0000 00B5     		push	{lr}
+  38              	.LCFI0:
+  39              		.cfi_def_cfa_offset 4
+  40              		.cfi_offset 14, -4
+  41 0002 85B0     		sub	sp, sp, #20
+  42              	.LCFI1:
+  43              		.cfi_def_cfa_offset 24
   13:Src/ADC.c     ****     uint8_t txbuffer[1] = {data};
-  39              		.loc 1 13 0
-  40 0004 03A9     		add	r1, sp, #12
-  41 0006 0870     		strb	r0, [r1]
+  44              		.loc 1 13 5 is_stmt 1 view .LVU2
+  45              		.loc 1 13 13 is_stmt 0 view .LVU3
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccetSkxK.s 			page 2
+
+
+  46 0004 03A9     		add	r1, sp, #12
+  47 0006 0870     		strb	r0, [r1]
   14:Src/ADC.c     ****     uint8_t rxbuffer[1] = {0};
-  42              		.loc 1 14 0
-  43 0008 02AC     		add	r4, sp, #8
-  44 000a 0023     		movs	r3, #0
-ARM GAS  /tmp/cc1Vrnhh.s 			page 2
-
-
-  45 000c 2370     		strb	r3, [r4]
+  48              		.loc 1 14 5 is_stmt 1 view .LVU4
+  49              		.loc 1 14 13 is_stmt 0 view .LVU5
+  50 0008 074B     		ldr	r3, .L2
+  51 000a 1B78     		ldrb	r3, [r3]
+  52 000c 6A46     		mov	r2, sp
+  53 000e 1372     		strb	r3, [r2, #8]
   15:Src/ADC.c     ****     HAL_SPI_TransmitReceive(&hspi2, txbuffer, rxbuffer, 1, HAL_MAX_DELAY);
-  46              		.loc 1 15 0
-  47 000e 013B     		subs	r3, r3, #1
-  48 0010 0093     		str	r3, [sp]
-  49 0012 0233     		adds	r3, r3, #2
-  50 0014 2200     		movs	r2, r4
-  51 0016 0348     		ldr	r0, .L2
-  52              	.LVL1:
-  53 0018 FFF7FEFF 		bl	HAL_SPI_TransmitReceive
-  54              	.LVL2:
+  54              		.loc 1 15 5 is_stmt 1 view .LVU6
+  55 0010 0123     		movs	r3, #1
+  56 0012 5B42     		rsbs	r3, r3, #0
+  57 0014 0093     		str	r3, [sp]
+  58 0016 0233     		adds	r3, r3, #2
+  59 0018 02AA     		add	r2, sp, #8
+  60 001a 0448     		ldr	r0, .L2+4
+  61              	.LVL1:
+  62              		.loc 1 15 5 is_stmt 0 view .LVU7
+  63 001c FFF7FEFF 		bl	HAL_SPI_TransmitReceive
+  64              	.LVL2:
   16:Src/ADC.c     ****     uint8_t answer = rxbuffer[0];
-  55              		.loc 1 16 0
-  56 001c 2078     		ldrb	r0, [r4]
-  57              	.LVL3:
+  65              		.loc 1 16 5 is_stmt 1 view .LVU8
+  66              		.loc 1 16 13 is_stmt 0 view .LVU9
+  67 0020 6B46     		mov	r3, sp
+  68 0022 187A     		ldrb	r0, [r3, #8]
+  69              	.LVL3:
   17:Src/ADC.c     ****     return answer;
+  70              		.loc 1 17 5 is_stmt 1 view .LVU10
   18:Src/ADC.c     **** }
-  58              		.loc 1 18 0
-  59 001e 04B0     		add	sp, sp, #16
-  60              		@ sp needed
-  61 0020 10BD     		pop	{r4, pc}
-  62              	.L3:
-  63 0022 C046     		.align	2
-  64              	.L2:
-  65 0024 00000000 		.word	hspi2
-  66              		.cfi_endproc
-  67              	.LFE284:
-  69              		.section	.text.ADC_SPI_WRITE_16,"ax",%progbits
-  70              		.align	1
-  71              		.global	ADC_SPI_WRITE_16
-  72              		.syntax unified
-  73              		.code	16
-  74              		.thumb_func
-  75              		.fpu softvfp
-  77              	ADC_SPI_WRITE_16:
-  78              	.LFB285:
+  71              		.loc 1 18 1 is_stmt 0 view .LVU11
+  72 0024 05B0     		add	sp, sp, #20
+  73              		@ sp needed
+  74 0026 00BD     		pop	{pc}
+  75              	.L3:
+  76              		.align	2
+  77              	.L2:
+  78 0028 00000000 		.word	.LC0
+  79 002c 00000000 		.word	hspi2
+  80              		.cfi_endproc
+  81              	.LFE284:
+  83              		.section	.text.ADC_SPI_WRITE_16,"ax",%progbits
+  84              		.align	1
+  85              		.global	ADC_SPI_WRITE_16
+  86              		.syntax unified
+  87              		.code	16
+  88              		.thumb_func
+  89              		.fpu softvfp
+  91              	ADC_SPI_WRITE_16:
+  92              	.LVL4:
+  93              	.LFB285:
   19:Src/ADC.c     **** 
   20:Src/ADC.c     **** uint8_t ADC_SPI_WRITE_16(uint16_t data)
   21:Src/ADC.c     **** {
-  79              		.loc 1 21 0
-  80              		.cfi_startproc
-  81              		@ args = 0, pretend = 0, frame = 8
-  82              		@ frame_needed = 0, uses_anonymous_args = 0
-  83              	.LVL4:
-  84 0000 10B5     		push	{r4, lr}
-  85              	.LCFI2:
-  86              		.cfi_def_cfa_offset 8
-  87              		.cfi_offset 4, -8
-  88              		.cfi_offset 14, -4
-  89 0002 84B0     		sub	sp, sp, #16
-  90              	.LCFI3:
-  91              		.cfi_def_cfa_offset 24
+  94              		.loc 1 21 1 is_stmt 1 view -0
+  95              		.cfi_startproc
+  96              		@ args = 0, pretend = 0, frame = 8
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccetSkxK.s 			page 3
+
+
+  97              		@ frame_needed = 0, uses_anonymous_args = 0
+  98              		.loc 1 21 1 is_stmt 0 view .LVU13
+  99 0000 00B5     		push	{lr}
+ 100              	.LCFI2:
+ 101              		.cfi_def_cfa_offset 4
+ 102              		.cfi_offset 14, -4
+ 103 0002 85B0     		sub	sp, sp, #20
+ 104              	.LCFI3:
+ 105              		.cfi_def_cfa_offset 24
   22:Src/ADC.c     ****     uint8_t txbuffer[2] = {
+ 106              		.loc 1 22 5 is_stmt 1 view .LVU14
   23:Src/ADC.c     ****         (uint8_t)((data & 0xff00) >> 8),
-  92              		.loc 1 23 0
-  93 0004 030A     		lsrs	r3, r0, #8
+ 107              		.loc 1 23 9 is_stmt 0 view .LVU15
+ 108 0004 030A     		lsrs	r3, r0, #8
   22:Src/ADC.c     ****     uint8_t txbuffer[2] = {
-ARM GAS  /tmp/cc1Vrnhh.s 			page 3
-
-
-  94              		.loc 1 22 0
-  95 0006 03A9     		add	r1, sp, #12
-  96 0008 0B70     		strb	r3, [r1]
-  97 000a 4870     		strb	r0, [r1, #1]
+ 109              		.loc 1 22 13 view .LVU16
+ 110 0006 6A46     		mov	r2, sp
+ 111 0008 1373     		strb	r3, [r2, #12]
+ 112 000a 5073     		strb	r0, [r2, #13]
   24:Src/ADC.c     ****         (uint8_t)((data & 0x00ff))};
   25:Src/ADC.c     ****     uint8_t rxbuffer[2] = {0};
-  98              		.loc 1 25 0
-  99 000c 02AC     		add	r4, sp, #8
- 100 000e 0023     		movs	r3, #0
- 101 0010 2380     		strh	r3, [r4]
+ 113              		.loc 1 25 5 is_stmt 1 view .LVU17
+ 114              		.loc 1 25 13 is_stmt 0 view .LVU18
+ 115 000c 0023     		movs	r3, #0
+ 116 000e 1381     		strh	r3, [r2, #8]
   26:Src/ADC.c     ****     HAL_SPI_TransmitReceive(&hspi2, txbuffer, rxbuffer, 2, HAL_MAX_DELAY);
- 102              		.loc 1 26 0
- 103 0012 013B     		subs	r3, r3, #1
- 104 0014 0093     		str	r3, [sp]
- 105 0016 0333     		adds	r3, r3, #3
- 106 0018 2200     		movs	r2, r4
- 107 001a 0348     		ldr	r0, .L5
- 108              	.LVL5:
- 109 001c FFF7FEFF 		bl	HAL_SPI_TransmitReceive
- 110              	.LVL6:
+ 117              		.loc 1 26 5 is_stmt 1 view .LVU19
+ 118 0010 013B     		subs	r3, r3, #1
+ 119 0012 0093     		str	r3, [sp]
+ 120 0014 0333     		adds	r3, r3, #3
+ 121 0016 02AA     		add	r2, sp, #8
+ 122 0018 03A9     		add	r1, sp, #12
+ 123 001a 0348     		ldr	r0, .L5
+ 124              	.LVL5:
+ 125              		.loc 1 26 5 is_stmt 0 view .LVU20
+ 126 001c FFF7FEFF 		bl	HAL_SPI_TransmitReceive
+ 127              	.LVL6:
   27:Src/ADC.c     ****     uint8_t answer = rxbuffer[0];
- 111              		.loc 1 27 0
- 112 0020 2078     		ldrb	r0, [r4]
- 113              	.LVL7:
+ 128              		.loc 1 27 5 is_stmt 1 view .LVU21
+ 129              		.loc 1 27 13 is_stmt 0 view .LVU22
+ 130 0020 6B46     		mov	r3, sp
+ 131 0022 187A     		ldrb	r0, [r3, #8]
+ 132              	.LVL7:
   28:Src/ADC.c     ****     return answer;
+ 133              		.loc 1 28 5 is_stmt 1 view .LVU23
   29:Src/ADC.c     **** }
- 114              		.loc 1 29 0
- 115 0022 04B0     		add	sp, sp, #16
- 116              		@ sp needed
- 117 0024 10BD     		pop	{r4, pc}
- 118              	.L6:
- 119 0026 C046     		.align	2
- 120              	.L5:
- 121 0028 00000000 		.word	hspi2
- 122              		.cfi_endproc
- 123              	.LFE285:
- 125              		.section	.text.ADC_SPI_READ_16,"ax",%progbits
- 126              		.align	1
- 127              		.global	ADC_SPI_READ_16
- 128              		.syntax unified
- 129              		.code	16
- 130              		.thumb_func
- 131              		.fpu softvfp
- 133              	ADC_SPI_READ_16:
- 134              	.LFB286:
+ 134              		.loc 1 29 1 is_stmt 0 view .LVU24
+ 135 0024 05B0     		add	sp, sp, #20
+ 136              		@ sp needed
+ 137 0026 00BD     		pop	{pc}
+ 138              	.L6:
+ 139              		.align	2
+ 140              	.L5:
+ 141 0028 00000000 		.word	hspi2
+ 142              		.cfi_endproc
+ 143              	.LFE285:
+ 145              		.section	.text.ADC_SPI_READ_16,"ax",%progbits
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccetSkxK.s 			page 4
+
+
+ 146              		.align	1
+ 147              		.global	ADC_SPI_READ_16
+ 148              		.syntax unified
+ 149              		.code	16
+ 150              		.thumb_func
+ 151              		.fpu softvfp
+ 153              	ADC_SPI_READ_16:
+ 154              	.LFB286:
   30:Src/ADC.c     **** 
   31:Src/ADC.c     **** uint16_t ADC_SPI_READ_16()
   32:Src/ADC.c     **** {
- 135              		.loc 1 32 0
- 136              		.cfi_startproc
- 137              		@ args = 0, pretend = 0, frame = 8
- 138              		@ frame_needed = 0, uses_anonymous_args = 0
- 139 0000 10B5     		push	{r4, lr}
- 140              	.LCFI4:
- 141              		.cfi_def_cfa_offset 8
- 142              		.cfi_offset 4, -8
- 143              		.cfi_offset 14, -4
-ARM GAS  /tmp/cc1Vrnhh.s 			page 4
-
-
- 144 0002 82B0     		sub	sp, sp, #8
- 145              	.LCFI5:
- 146              		.cfi_def_cfa_offset 16
+ 155              		.loc 1 32 1 is_stmt 1 view -0
+ 156              		.cfi_startproc
+ 157              		@ args = 0, pretend = 0, frame = 8
+ 158              		@ frame_needed = 0, uses_anonymous_args = 0
+ 159 0000 10B5     		push	{r4, lr}
+ 160              	.LCFI4:
+ 161              		.cfi_def_cfa_offset 8
+ 162              		.cfi_offset 4, -8
+ 163              		.cfi_offset 14, -4
+ 164 0002 82B0     		sub	sp, sp, #8
+ 165              	.LCFI5:
+ 166              		.cfi_def_cfa_offset 16
   33:Src/ADC.c     ****     uint8_t rxbuffer[2] = {0};
- 147              		.loc 1 33 0
- 148 0004 01AC     		add	r4, sp, #4
- 149 0006 0023     		movs	r3, #0
- 150 0008 2380     		strh	r3, [r4]
+ 167              		.loc 1 33 5 view .LVU26
+ 168              		.loc 1 33 13 is_stmt 0 view .LVU27
+ 169 0004 01AC     		add	r4, sp, #4
+ 170 0006 0023     		movs	r3, #0
+ 171 0008 2380     		strh	r3, [r4]
   34:Src/ADC.c     ****     HAL_SPI_Receive(&hspi2, rxbuffer, 2, HAL_MAX_DELAY);
- 151              		.loc 1 34 0
- 152 000a 0133     		adds	r3, r3, #1
- 153 000c 5B42     		rsbs	r3, r3, #0
- 154 000e 0222     		movs	r2, #2
- 155 0010 2100     		movs	r1, r4
- 156 0012 0448     		ldr	r0, .L8
- 157 0014 FFF7FEFF 		bl	HAL_SPI_Receive
- 158              	.LVL8:
+ 172              		.loc 1 34 5 is_stmt 1 view .LVU28
+ 173 000a 0133     		adds	r3, r3, #1
+ 174 000c 5B42     		rsbs	r3, r3, #0
+ 175 000e 0222     		movs	r2, #2
+ 176 0010 2100     		movs	r1, r4
+ 177 0012 0448     		ldr	r0, .L8
+ 178 0014 FFF7FEFF 		bl	HAL_SPI_Receive
+ 179              	.LVL8:
   35:Src/ADC.c     ****     uint16_t answer = (((uint16_t)rxbuffer[0]) << 8) | ((uint16_t)rxbuffer[1]);
- 159              		.loc 1 35 0
- 160 0018 2378     		ldrb	r3, [r4]
- 161 001a 1B02     		lsls	r3, r3, #8
- 162 001c 6078     		ldrb	r0, [r4, #1]
- 163 001e 1843     		orrs	r0, r3
- 164              	.LVL9:
+ 180              		.loc 1 35 5 view .LVU29
+ 181              		.loc 1 35 43 is_stmt 0 view .LVU30
+ 182 0018 2378     		ldrb	r3, [r4]
+ 183              		.loc 1 35 48 view .LVU31
+ 184 001a 1B02     		lsls	r3, r3, #8
+ 185              		.loc 1 35 75 view .LVU32
+ 186 001c 6078     		ldrb	r0, [r4, #1]
+ 187              		.loc 1 35 14 view .LVU33
+ 188 001e 1843     		orrs	r0, r3
+ 189              	.LVL9:
   36:Src/ADC.c     ****     return answer;
+ 190              		.loc 1 36 5 is_stmt 1 view .LVU34
   37:Src/ADC.c     **** }
- 165              		.loc 1 37 0
- 166 0020 02B0     		add	sp, sp, #8
- 167              		@ sp needed
- 168 0022 10BD     		pop	{r4, pc}
- 169              	.L9:
- 170              		.align	2
- 171              	.L8:
- 172 0024 00000000 		.word	hspi2
- 173              		.cfi_endproc
- 174              	.LFE286:
- 176              		.section	.text.ADC_SPI_READ_24,"ax",%progbits
- 177              		.align	1
- 178              		.global	ADC_SPI_READ_24
- 179              		.syntax unified
- 180              		.code	16
- 181              		.thumb_func
- 182              		.fpu softvfp
- 184              	ADC_SPI_READ_24:
- 185              	.LFB287:
+ 191              		.loc 1 37 1 is_stmt 0 view .LVU35
+ 192 0020 02B0     		add	sp, sp, #8
+ 193              		@ sp needed
+ 194 0022 10BD     		pop	{r4, pc}
+ 195              	.L9:
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccetSkxK.s 			page 5
+
+
+ 196              		.align	2
+ 197              	.L8:
+ 198 0024 00000000 		.word	hspi2
+ 199              		.cfi_endproc
+ 200              	.LFE286:
+ 202              		.section	.text.ADC_SPI_READ_24,"ax",%progbits
+ 203              		.align	1
+ 204              		.global	ADC_SPI_READ_24
+ 205              		.syntax unified
+ 206              		.code	16
+ 207              		.thumb_func
+ 208              		.fpu softvfp
+ 210              	ADC_SPI_READ_24:
+ 211              	.LFB287:
   38:Src/ADC.c     **** 
   39:Src/ADC.c     **** uint32_t ADC_SPI_READ_24()
   40:Src/ADC.c     **** {
- 186              		.loc 1 40 0
- 187              		.cfi_startproc
- 188              		@ args = 0, pretend = 0, frame = 8
- 189              		@ frame_needed = 0, uses_anonymous_args = 0
- 190 0000 10B5     		push	{r4, lr}
- 191              	.LCFI6:
- 192              		.cfi_def_cfa_offset 8
- 193              		.cfi_offset 4, -8
- 194              		.cfi_offset 14, -4
-ARM GAS  /tmp/cc1Vrnhh.s 			page 5
-
-
- 195 0002 82B0     		sub	sp, sp, #8
- 196              	.LCFI7:
- 197              		.cfi_def_cfa_offset 16
+ 212              		.loc 1 40 1 is_stmt 1 view -0
+ 213              		.cfi_startproc
+ 214              		@ args = 0, pretend = 0, frame = 8
+ 215              		@ frame_needed = 0, uses_anonymous_args = 0
+ 216 0000 10B5     		push	{r4, lr}
+ 217              	.LCFI6:
+ 218              		.cfi_def_cfa_offset 8
+ 219              		.cfi_offset 4, -8
+ 220              		.cfi_offset 14, -4
+ 221 0002 82B0     		sub	sp, sp, #8
+ 222              	.LCFI7:
+ 223              		.cfi_def_cfa_offset 16
   41:Src/ADC.c     ****     uint8_t rxbuffer[3] = {0};
- 198              		.loc 1 41 0
- 199 0004 01AC     		add	r4, sp, #4
- 200 0006 0322     		movs	r2, #3
- 201 0008 0021     		movs	r1, #0
- 202 000a 2000     		movs	r0, r4
- 203 000c FFF7FEFF 		bl	memset
- 204              	.LVL10:
+ 224              		.loc 1 41 5 view .LVU37
+ 225              		.loc 1 41 13 is_stmt 0 view .LVU38
+ 226 0004 01AC     		add	r4, sp, #4
+ 227 0006 0A4B     		ldr	r3, .L11
+ 228 0008 1B88     		ldrh	r3, [r3]
+ 229 000a 2380     		strh	r3, [r4]
+ 230 000c 0023     		movs	r3, #0
+ 231 000e A370     		strb	r3, [r4, #2]
   42:Src/ADC.c     ****     HAL_SPI_Receive(&hspi2, rxbuffer, 3, HAL_MAX_DELAY);
- 205              		.loc 1 42 0
- 206 0010 0123     		movs	r3, #1
- 207 0012 5B42     		rsbs	r3, r3, #0
- 208 0014 0322     		movs	r2, #3
- 209 0016 2100     		movs	r1, r4
- 210 0018 0548     		ldr	r0, .L11
- 211 001a FFF7FEFF 		bl	HAL_SPI_Receive
- 212              	.LVL11:
+ 232              		.loc 1 42 5 is_stmt 1 view .LVU39
+ 233 0010 0133     		adds	r3, r3, #1
+ 234 0012 5B42     		rsbs	r3, r3, #0
+ 235 0014 0322     		movs	r2, #3
+ 236 0016 2100     		movs	r1, r4
+ 237 0018 0648     		ldr	r0, .L11+4
+ 238 001a FFF7FEFF 		bl	HAL_SPI_Receive
+ 239              	.LVL10:
   43:Src/ADC.c     ****     uint32_t answer = (((uint32_t)rxbuffer[0]) << 16) | (((uint32_t)rxbuffer[1]) << 8) | ((uint32_t
- 213              		.loc 1 43 0
- 214 001e 2078     		ldrb	r0, [r4]
- 215 0020 0004     		lsls	r0, r0, #16
- 216 0022 6378     		ldrb	r3, [r4, #1]
- 217 0024 1B02     		lsls	r3, r3, #8
- 218 0026 1843     		orrs	r0, r3
- 219 0028 A378     		ldrb	r3, [r4, #2]
- 220 002a 1843     		orrs	r0, r3
- 221              	.LVL12:
+ 240              		.loc 1 43 5 view .LVU40
+ 241              		.loc 1 43 43 is_stmt 0 view .LVU41
+ 242 001e 2078     		ldrb	r0, [r4]
+ 243              		.loc 1 43 48 view .LVU42
+ 244 0020 0004     		lsls	r0, r0, #16
+ 245              		.loc 1 43 77 view .LVU43
+ 246 0022 6378     		ldrb	r3, [r4, #1]
+ 247              		.loc 1 43 82 view .LVU44
+ 248 0024 1B02     		lsls	r3, r3, #8
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccetSkxK.s 			page 6
+
+
+ 249              		.loc 1 43 55 view .LVU45
+ 250 0026 1843     		orrs	r0, r3
+ 251              		.loc 1 43 109 view .LVU46
+ 252 0028 A378     		ldrb	r3, [r4, #2]
+ 253              		.loc 1 43 14 view .LVU47
+ 254 002a 1843     		orrs	r0, r3
+ 255              	.LVL11:
   44:Src/ADC.c     ****     return answer;
+ 256              		.loc 1 44 5 is_stmt 1 view .LVU48
   45:Src/ADC.c     **** }
- 222              		.loc 1 45 0
- 223 002c 02B0     		add	sp, sp, #8
- 224              		@ sp needed
- 225 002e 10BD     		pop	{r4, pc}
- 226              	.L12:
- 227              		.align	2
- 228              	.L11:
- 229 0030 00000000 		.word	hspi2
- 230              		.cfi_endproc
- 231              	.LFE287:
- 233              		.section	.text.ADC_SPI_READ_8,"ax",%progbits
- 234              		.align	1
- 235              		.global	ADC_SPI_READ_8
- 236              		.syntax unified
- 237              		.code	16
- 238              		.thumb_func
- 239              		.fpu softvfp
- 241              	ADC_SPI_READ_8:
- 242              	.LFB288:
+ 257              		.loc 1 45 1 is_stmt 0 view .LVU49
+ 258 002c 02B0     		add	sp, sp, #8
+ 259              		@ sp needed
+ 260 002e 10BD     		pop	{r4, pc}
+ 261              	.L12:
+ 262              		.align	2
+ 263              	.L11:
+ 264 0030 00000000 		.word	.LANCHOR0
+ 265 0034 00000000 		.word	hspi2
+ 266              		.cfi_endproc
+ 267              	.LFE287:
+ 269              		.section	.text.ADC_SPI_READ_8,"ax",%progbits
+ 270              		.align	1
+ 271              		.global	ADC_SPI_READ_8
+ 272              		.syntax unified
+ 273              		.code	16
+ 274              		.thumb_func
+ 275              		.fpu softvfp
+ 277              	ADC_SPI_READ_8:
+ 278              	.LFB288:
   46:Src/ADC.c     **** 
   47:Src/ADC.c     **** uint8_t ADC_SPI_READ_8()
   48:Src/ADC.c     **** {
- 243              		.loc 1 48 0
- 244              		.cfi_startproc
- 245              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  /tmp/cc1Vrnhh.s 			page 6
-
-
- 246              		@ frame_needed = 0, uses_anonymous_args = 0
- 247 0000 10B5     		push	{r4, lr}
- 248              	.LCFI8:
- 249              		.cfi_def_cfa_offset 8
- 250              		.cfi_offset 4, -8
- 251              		.cfi_offset 14, -4
- 252 0002 82B0     		sub	sp, sp, #8
- 253              	.LCFI9:
- 254              		.cfi_def_cfa_offset 16
+ 279              		.loc 1 48 1 is_stmt 1 view -0
+ 280              		.cfi_startproc
+ 281              		@ args = 0, pretend = 0, frame = 8
+ 282              		@ frame_needed = 0, uses_anonymous_args = 0
+ 283 0000 00B5     		push	{lr}
+ 284              	.LCFI8:
+ 285              		.cfi_def_cfa_offset 4
+ 286              		.cfi_offset 14, -4
+ 287 0002 83B0     		sub	sp, sp, #12
+ 288              	.LCFI9:
+ 289              		.cfi_def_cfa_offset 16
   49:Src/ADC.c     ****     uint8_t rxbuffer[1] = {0};
- 255              		.loc 1 49 0
- 256 0004 01AC     		add	r4, sp, #4
- 257 0006 0023     		movs	r3, #0
- 258 0008 2370     		strb	r3, [r4]
+ 290              		.loc 1 49 5 view .LVU51
+ 291              		.loc 1 49 13 is_stmt 0 view .LVU52
+ 292 0004 074B     		ldr	r3, .L14
+ 293 0006 1B78     		ldrb	r3, [r3]
+ 294 0008 6A46     		mov	r2, sp
+ 295 000a 1371     		strb	r3, [r2, #4]
   50:Src/ADC.c     ****     HAL_SPI_Receive(&hspi2, rxbuffer, 1, HAL_MAX_DELAY);
- 259              		.loc 1 50 0
- 260 000a 0133     		adds	r3, r3, #1
- 261 000c 5B42     		rsbs	r3, r3, #0
- 262 000e 0122     		movs	r2, #1
- 263 0010 2100     		movs	r1, r4
- 264 0012 0348     		ldr	r0, .L14
- 265 0014 FFF7FEFF 		bl	HAL_SPI_Receive
- 266              	.LVL13:
+ 296              		.loc 1 50 5 is_stmt 1 view .LVU53
+ 297 000c 0123     		movs	r3, #1
+ 298 000e 5B42     		rsbs	r3, r3, #0
+ 299 0010 0122     		movs	r2, #1
+ 300 0012 01A9     		add	r1, sp, #4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccetSkxK.s 			page 7
+
+
+ 301 0014 0448     		ldr	r0, .L14+4
+ 302 0016 FFF7FEFF 		bl	HAL_SPI_Receive
+ 303              	.LVL12:
   51:Src/ADC.c     ****     uint8_t answer = rxbuffer[0];
- 267              		.loc 1 51 0
- 268 0018 2078     		ldrb	r0, [r4]
- 269              	.LVL14:
+ 304              		.loc 1 51 5 view .LVU54
+ 305              		.loc 1 51 13 is_stmt 0 view .LVU55
+ 306 001a 6B46     		mov	r3, sp
+ 307 001c 1879     		ldrb	r0, [r3, #4]
+ 308              	.LVL13:
   52:Src/ADC.c     ****     return answer;
+ 309              		.loc 1 52 5 is_stmt 1 view .LVU56
   53:Src/ADC.c     **** }
- 270              		.loc 1 53 0
- 271 001a 02B0     		add	sp, sp, #8
- 272              		@ sp needed
- 273 001c 10BD     		pop	{r4, pc}
- 274              	.L15:
- 275 001e C046     		.align	2
- 276              	.L14:
- 277 0020 00000000 		.word	hspi2
- 278              		.cfi_endproc
- 279              	.LFE288:
- 281              		.section	.text.ADC_CMD,"ax",%progbits
- 282              		.align	1
- 283              		.global	ADC_CMD
- 284              		.syntax unified
- 285              		.code	16
- 286              		.thumb_func
- 287              		.fpu softvfp
- 289              	ADC_CMD:
- 290              	.LFB289:
+ 310              		.loc 1 53 1 is_stmt 0 view .LVU57
+ 311 001e 03B0     		add	sp, sp, #12
+ 312              		@ sp needed
+ 313 0020 00BD     		pop	{pc}
+ 314              	.L15:
+ 315 0022 C046     		.align	2
+ 316              	.L14:
+ 317 0024 00000000 		.word	.LC0
+ 318 0028 00000000 		.word	hspi2
+ 319              		.cfi_endproc
+ 320              	.LFE288:
+ 322              		.section	.text.ADC_CMD,"ax",%progbits
+ 323              		.align	1
+ 324              		.global	ADC_CMD
+ 325              		.syntax unified
+ 326              		.code	16
+ 327              		.thumb_func
+ 328              		.fpu softvfp
+ 330              	ADC_CMD:
+ 331              	.LVL14:
+ 332              	.LFB289:
   54:Src/ADC.c     **** 
   55:Src/ADC.c     **** uint8_t ADC_CMD(uint8_t read, uint8_t addr)
   56:Src/ADC.c     **** {
- 291              		.loc 1 56 0
- 292              		.cfi_startproc
- 293              		@ args = 0, pretend = 0, frame = 0
- 294              		@ frame_needed = 0, uses_anonymous_args = 0
- 295              	.LVL15:
- 296 0000 10B5     		push	{r4, lr}
-ARM GAS  /tmp/cc1Vrnhh.s 			page 7
-
-
- 297              	.LCFI10:
- 298              		.cfi_def_cfa_offset 8
- 299              		.cfi_offset 4, -8
- 300              		.cfi_offset 14, -4
+ 333              		.loc 1 56 1 is_stmt 1 view -0
+ 334              		.cfi_startproc
+ 335              		@ args = 0, pretend = 0, frame = 0
+ 336              		@ frame_needed = 0, uses_anonymous_args = 0
+ 337              		.loc 1 56 1 is_stmt 0 view .LVU59
+ 338 0000 10B5     		push	{r4, lr}
+ 339              	.LCFI10:
+ 340              		.cfi_def_cfa_offset 8
+ 341              		.cfi_offset 4, -8
+ 342              		.cfi_offset 14, -4
   57:Src/ADC.c     ****     uint8_t command = read | addr;
- 301              		.loc 1 57 0
- 302 0002 0843     		orrs	r0, r1
- 303              	.LVL16:
- 304 0004 0400     		movs	r4, r0
- 305              	.LVL17:
+ 343              		.loc 1 57 5 is_stmt 1 view .LVU60
+ 344              		.loc 1 57 13 is_stmt 0 view .LVU61
+ 345 0002 0843     		orrs	r0, r1
+ 346              	.LVL15:
+ 347              		.loc 1 57 13 view .LVU62
+ 348 0004 0400     		movs	r4, r0
+ 349              	.LVL16:
   58:Src/ADC.c     ****     ADC_SPI_WRITE_8(command);
- 306              		.loc 1 58 0
- 307 0006 FFF7FEFF 		bl	ADC_SPI_WRITE_8
- 308              	.LVL18:
+ 350              		.loc 1 58 5 is_stmt 1 view .LVU63
+ 351 0006 FFF7FEFF 		bl	ADC_SPI_WRITE_8
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccetSkxK.s 			page 8
+
+
+ 352              	.LVL17:
   59:Src/ADC.c     ****     return command;
+ 353              		.loc 1 59 5 view .LVU64
   60:Src/ADC.c     **** }
- 309              		.loc 1 60 0
- 310 000a 2000     		movs	r0, r4
- 311              		@ sp needed
- 312              	.LVL19:
- 313 000c 10BD     		pop	{r4, pc}
- 314              		.cfi_endproc
- 315              	.LFE289:
- 317              		.section	.text.ADC_ID,"ax",%progbits
- 318              		.align	1
- 319              		.global	ADC_ID
- 320              		.syntax unified
- 321              		.code	16
- 322              		.thumb_func
- 323              		.fpu softvfp
- 325              	ADC_ID:
- 326              	.LFB290:
+ 354              		.loc 1 60 1 is_stmt 0 view .LVU65
+ 355 000a 2000     		movs	r0, r4
+ 356              		@ sp needed
+ 357              	.LVL18:
+ 358              		.loc 1 60 1 view .LVU66
+ 359 000c 10BD     		pop	{r4, pc}
+ 360              		.cfi_endproc
+ 361              	.LFE289:
+ 363              		.section	.text.ADC_ID,"ax",%progbits
+ 364              		.align	1
+ 365              		.global	ADC_ID
+ 366              		.syntax unified
+ 367              		.code	16
+ 368              		.thumb_func
+ 369              		.fpu softvfp
+ 371              	ADC_ID:
+ 372              	.LFB290:
   61:Src/ADC.c     **** 
   62:Src/ADC.c     **** uint16_t ADC_ID()
   63:Src/ADC.c     **** {
- 327              		.loc 1 63 0
- 328              		.cfi_startproc
- 329              		@ args = 0, pretend = 0, frame = 0
- 330              		@ frame_needed = 0, uses_anonymous_args = 0
- 331 0000 70B5     		push	{r4, r5, r6, lr}
- 332              	.LCFI11:
- 333              		.cfi_def_cfa_offset 16
- 334              		.cfi_offset 4, -16
- 335              		.cfi_offset 5, -12
- 336              		.cfi_offset 6, -8
- 337              		.cfi_offset 14, -4
+ 373              		.loc 1 63 1 is_stmt 1 view -0
+ 374              		.cfi_startproc
+ 375              		@ args = 0, pretend = 0, frame = 0
+ 376              		@ frame_needed = 0, uses_anonymous_args = 0
+ 377 0000 70B5     		push	{r4, r5, r6, lr}
+ 378              	.LCFI11:
+ 379              		.cfi_def_cfa_offset 16
+ 380              		.cfi_offset 4, -16
+ 381              		.cfi_offset 5, -12
+ 382              		.cfi_offset 6, -8
+ 383              		.cfi_offset 14, -4
   64:Src/ADC.c     ****     ADC_DATA_READY_EXTI_deInit();
- 338              		.loc 1 64 0
- 339 0002 FFF7FEFF 		bl	ADC_DATA_READY_EXTI_deInit
- 340              	.LVL20:
+ 384              		.loc 1 64 5 view .LVU68
+ 385 0002 FFF7FEFF 		bl	ADC_DATA_READY_EXTI_deInit
+ 386              	.LVL19:
   65:Src/ADC.c     ****     HAL_SPI_MspInit(&hspi2);
- 341              		.loc 1 65 0
- 342 0006 094C     		ldr	r4, .L18
- 343 0008 2000     		movs	r0, r4
- 344 000a FFF7FEFF 		bl	HAL_SPI_MspInit
- 345              	.LVL21:
+ 387              		.loc 1 65 5 view .LVU69
+ 388 0006 094D     		ldr	r5, .L18
+ 389 0008 2800     		movs	r0, r5
+ 390 000a FFF7FEFF 		bl	HAL_SPI_MspInit
+ 391              	.LVL20:
   66:Src/ADC.c     ****     ADC_CMD(ADC_READ, ADC_ID_REG);
-ARM GAS  /tmp/cc1Vrnhh.s 			page 8
-
-
- 346              		.loc 1 66 0
- 347 000e 0721     		movs	r1, #7
- 348 0010 4020     		movs	r0, #64
- 349 0012 FFF7FEFF 		bl	ADC_CMD
- 350              	.LVL22:
+ 392              		.loc 1 66 5 view .LVU70
+ 393 000e 0721     		movs	r1, #7
+ 394 0010 4020     		movs	r0, #64
+ 395 0012 FFF7FEFF 		bl	ADC_CMD
+ 396              	.LVL21:
   67:Src/ADC.c     ****     uint16_t answer = ADC_SPI_READ_16();
- 351              		.loc 1 67 0
- 352 0016 FFF7FEFF 		bl	ADC_SPI_READ_16
- 353              	.LVL23:
- 354 001a 0500     		movs	r5, r0
- 355              	.LVL24:
+ 397              		.loc 1 67 5 view .LVU71
+ 398              		.loc 1 67 23 is_stmt 0 view .LVU72
+ 399 0016 FFF7FEFF 		bl	ADC_SPI_READ_16
+ 400              	.LVL22:
+ 401 001a 0400     		movs	r4, r0
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccetSkxK.s 			page 9
+
+
+ 402              	.LVL23:
   68:Src/ADC.c     ****     HAL_SPI_MspDeInit(&hspi2);
- 356              		.loc 1 68 0
- 357 001c 2000     		movs	r0, r4
- 358 001e FFF7FEFF 		bl	HAL_SPI_MspDeInit
- 359              	.LVL25:
+ 403              		.loc 1 68 5 is_stmt 1 view .LVU73
+ 404 001c 2800     		movs	r0, r5
+ 405 001e FFF7FEFF 		bl	HAL_SPI_MspDeInit
+ 406              	.LVL24:
   69:Src/ADC.c     ****     ADC_DATA_READY_EXTI_Init();
- 360              		.loc 1 69 0
- 361 0022 FFF7FEFF 		bl	ADC_DATA_READY_EXTI_Init
- 362              	.LVL26:
+ 407              		.loc 1 69 5 view .LVU74
+ 408 0022 FFF7FEFF 		bl	ADC_DATA_READY_EXTI_Init
+ 409              	.LVL25:
   70:Src/ADC.c     ****     return answer;
+ 410              		.loc 1 70 5 view .LVU75
   71:Src/ADC.c     **** }
- 363              		.loc 1 71 0
- 364 0026 2800     		movs	r0, r5
- 365              		@ sp needed
- 366              	.LVL27:
- 367 0028 70BD     		pop	{r4, r5, r6, pc}
- 368              	.L19:
- 369 002a C046     		.align	2
- 370              	.L18:
- 371 002c 00000000 		.word	hspi2
- 372              		.cfi_endproc
- 373              	.LFE290:
- 375              		.section	.text.ADC_DATA,"ax",%progbits
- 376              		.align	1
- 377              		.global	ADC_DATA
- 378              		.syntax unified
- 379              		.code	16
- 380              		.thumb_func
- 381              		.fpu softvfp
- 383              	ADC_DATA:
- 384              	.LFB291:
+ 411              		.loc 1 71 1 is_stmt 0 view .LVU76
+ 412 0026 2000     		movs	r0, r4
+ 413              		@ sp needed
+ 414              	.LVL26:
+ 415              		.loc 1 71 1 view .LVU77
+ 416 0028 70BD     		pop	{r4, r5, r6, pc}
+ 417              	.L19:
+ 418 002a C046     		.align	2
+ 419              	.L18:
+ 420 002c 00000000 		.word	hspi2
+ 421              		.cfi_endproc
+ 422              	.LFE290:
+ 424              		.section	.text.ADC_DATA,"ax",%progbits
+ 425              		.align	1
+ 426              		.global	ADC_DATA
+ 427              		.syntax unified
+ 428              		.code	16
+ 429              		.thumb_func
+ 430              		.fpu softvfp
+ 432              	ADC_DATA:
+ 433              	.LFB291:
   72:Src/ADC.c     **** 
   73:Src/ADC.c     **** uint32_t ADC_DATA()
   74:Src/ADC.c     **** {
- 385              		.loc 1 74 0
- 386              		.cfi_startproc
- 387              		@ args = 0, pretend = 0, frame = 0
- 388              		@ frame_needed = 0, uses_anonymous_args = 0
- 389 0000 10B5     		push	{r4, lr}
- 390              	.LCFI12:
- 391              		.cfi_def_cfa_offset 8
- 392              		.cfi_offset 4, -8
- 393              		.cfi_offset 14, -4
+ 434              		.loc 1 74 1 is_stmt 1 view -0
+ 435              		.cfi_startproc
+ 436              		@ args = 0, pretend = 0, frame = 0
+ 437              		@ frame_needed = 0, uses_anonymous_args = 0
+ 438 0000 10B5     		push	{r4, lr}
+ 439              	.LCFI12:
+ 440              		.cfi_def_cfa_offset 8
+ 441              		.cfi_offset 4, -8
+ 442              		.cfi_offset 14, -4
   75:Src/ADC.c     ****     ADC_CMD(ADC_READ, ADC_DATA_REG);
- 394              		.loc 1 75 0
- 395 0002 0421     		movs	r1, #4
-ARM GAS  /tmp/cc1Vrnhh.s 			page 9
-
-
- 396 0004 4020     		movs	r0, #64
- 397 0006 FFF7FEFF 		bl	ADC_CMD
- 398              	.LVL28:
+ 443              		.loc 1 75 5 view .LVU79
+ 444 0002 0421     		movs	r1, #4
+ 445 0004 4020     		movs	r0, #64
+ 446 0006 FFF7FEFF 		bl	ADC_CMD
+ 447              	.LVL27:
   76:Src/ADC.c     ****     uint32_t answer = ADC_SPI_READ_24();
- 399              		.loc 1 76 0
- 400 000a FFF7FEFF 		bl	ADC_SPI_READ_24
- 401              	.LVL29:
+ 448              		.loc 1 76 5 view .LVU80
+ 449              		.loc 1 76 23 is_stmt 0 view .LVU81
+ 450 000a FFF7FEFF 		bl	ADC_SPI_READ_24
+ 451              	.LVL28:
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccetSkxK.s 			page 10
+
+
   77:Src/ADC.c     ****     return answer;
+ 452              		.loc 1 77 5 is_stmt 1 view .LVU82
   78:Src/ADC.c     **** }
- 402              		.loc 1 78 0
- 403              		@ sp needed
- 404 000e 10BD     		pop	{r4, pc}
- 405              		.cfi_endproc
- 406              	.LFE291:
- 408              		.global	__aeabi_lmul
- 409              		.global	__aeabi_uldivmod
- 410              		.section	.text.ADC_update,"ax",%progbits
- 411              		.align	1
- 412              		.global	ADC_update
- 413              		.syntax unified
- 414              		.code	16
- 415              		.thumb_func
- 416              		.fpu softvfp
- 418              	ADC_update:
- 419              	.LFB292:
+ 453              		.loc 1 78 1 is_stmt 0 view .LVU83
+ 454              		@ sp needed
+ 455 000e 10BD     		pop	{r4, pc}
+ 456              		.cfi_endproc
+ 457              	.LFE291:
+ 459              		.section	.text.ADC_update,"ax",%progbits
+ 460              		.align	1
+ 461              		.global	ADC_update
+ 462              		.syntax unified
+ 463              		.code	16
+ 464              		.thumb_func
+ 465              		.fpu softvfp
+ 467              	ADC_update:
+ 468              	.LFB292:
   79:Src/ADC.c     **** 
   80:Src/ADC.c     **** void ADC_update()
   81:Src/ADC.c     **** {
- 420              		.loc 1 81 0
- 421              		.cfi_startproc
- 422              		@ args = 0, pretend = 0, frame = 0
- 423              		@ frame_needed = 0, uses_anonymous_args = 0
- 424 0000 70B5     		push	{r4, r5, r6, lr}
- 425              	.LCFI13:
- 426              		.cfi_def_cfa_offset 16
- 427              		.cfi_offset 4, -16
- 428              		.cfi_offset 5, -12
- 429              		.cfi_offset 6, -8
- 430              		.cfi_offset 14, -4
+ 469              		.loc 1 81 1 is_stmt 1 view -0
+ 470              		.cfi_startproc
+ 471              		@ args = 0, pretend = 0, frame = 0
+ 472              		@ frame_needed = 0, uses_anonymous_args = 0
+ 473 0000 70B5     		push	{r4, r5, r6, lr}
+ 474              	.LCFI13:
+ 475              		.cfi_def_cfa_offset 16
+ 476              		.cfi_offset 4, -16
+ 477              		.cfi_offset 5, -12
+ 478              		.cfi_offset 6, -8
+ 479              		.cfi_offset 14, -4
   82:Src/ADC.c     ****     ADC_DATA_READY_EXTI_deInit();
- 431              		.loc 1 82 0
- 432 0002 FFF7FEFF 		bl	ADC_DATA_READY_EXTI_deInit
- 433              	.LVL30:
+ 480              		.loc 1 82 5 view .LVU85
+ 481 0002 FFF7FEFF 		bl	ADC_DATA_READY_EXTI_deInit
+ 482              	.LVL29:
   83:Src/ADC.c     ****     HAL_SPI_MspInit(&hspi2);
- 434              		.loc 1 83 0
- 435 0006 2E48     		ldr	r0, .L28
- 436 0008 FFF7FEFF 		bl	HAL_SPI_MspInit
- 437              	.LVL31:
+ 483              		.loc 1 83 5 view .LVU86
+ 484 0006 2048     		ldr	r0, .L27
+ 485 0008 FFF7FEFF 		bl	HAL_SPI_MspInit
+ 486              	.LVL30:
   84:Src/ADC.c     ****     if (State.ADC_Channel == ADC_DEFAULT_CH)
- 438              		.loc 1 84 0
- 439 000c 2D4A     		ldr	r2, .L28+4
- 440 000e 4A23     		movs	r3, #74
- 441 0010 D35C     		ldrb	r3, [r2, r3]
- 442 0012 102B     		cmp	r3, #16
- 443 0014 23D0     		beq	.L25
+ 487              		.loc 1 84 5 view .LVU87
+ 488              		.loc 1 84 14 is_stmt 0 view .LVU88
+ 489 000c 1F4A     		ldr	r2, .L27+4
+ 490 000e 4A23     		movs	r3, #74
+ 491 0010 D35C     		ldrb	r3, [r2, r3]
+ 492              		.loc 1 84 8 view .LVU89
+ 493 0012 102B     		cmp	r3, #16
+ 494 0014 20D0     		beq	.L25
   85:Src/ADC.c     ****     {
   86:Src/ADC.c     ****         HAL_GPIO_WritePin(ADC_nSYNC_GPIO_Port, ADC_nSYNC_Pin, 0);
-ARM GAS  /tmp/cc1Vrnhh.s 			page 10
-
-
   87:Src/ADC.c     ****         HAL_Delay(1);
   88:Src/ADC.c     ****         HAL_GPIO_WritePin(ADC_nSYNC_GPIO_Port, ADC_nSYNC_Pin, 1);
   89:Src/ADC.c     ****         State.ADC_Channel = 0;
   90:Src/ADC.c     ****     }
   91:Src/ADC.c     ****     else
   92:Src/ADC.c     ****     {
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccetSkxK.s 			page 11
+
+
   93:Src/ADC.c     ****         ADC_CMD(ADC_READ, ADC_STATUS_REG);
- 444              		.loc 1 93 0
- 445 0016 0021     		movs	r1, #0
- 446 0018 4020     		movs	r0, #64
- 447 001a FFF7FEFF 		bl	ADC_CMD
- 448              	.LVL32:
+ 495              		.loc 1 93 9 is_stmt 1 view .LVU90
+ 496 0016 0021     		movs	r1, #0
+ 497 0018 4020     		movs	r0, #64
+ 498 001a FFF7FEFF 		bl	ADC_CMD
+ 499              	.LVL31:
   94:Src/ADC.c     ****         State.ADC_Channel = ADC_SPI_READ_8() & 0xf;
- 449              		.loc 1 94 0
- 450 001e FFF7FEFF 		bl	ADC_SPI_READ_8
- 451              	.LVL33:
- 452 0022 0F23     		movs	r3, #15
- 453 0024 1840     		ands	r0, r3
- 454 0026 274D     		ldr	r5, .L28+4
- 455 0028 4A26     		movs	r6, #74
- 456 002a A855     		strb	r0, [r5, r6]
+ 500              		.loc 1 94 9 view .LVU91
+ 501              		.loc 1 94 29 is_stmt 0 view .LVU92
+ 502 001e FFF7FEFF 		bl	ADC_SPI_READ_8
+ 503              	.LVL32:
+ 504              		.loc 1 94 46 view .LVU93
+ 505 0022 0F23     		movs	r3, #15
+ 506 0024 0340     		ands	r3, r0
+ 507              		.loc 1 94 27 view .LVU94
+ 508 0026 194C     		ldr	r4, .L27+4
+ 509 0028 4A25     		movs	r5, #74
+ 510 002a 6355     		strb	r3, [r4, r5]
   95:Src/ADC.c     **** 
   96:Src/ADC.c     ****         ADC_CMD(ADC_READ, ADC_DATA_REG);
- 457              		.loc 1 96 0
- 458 002c 0421     		movs	r1, #4
- 459 002e 4020     		movs	r0, #64
- 460 0030 FFF7FEFF 		bl	ADC_CMD
- 461              	.LVL34:
+ 511              		.loc 1 96 9 is_stmt 1 view .LVU95
+ 512 002c 0421     		movs	r1, #4
+ 513 002e 4020     		movs	r0, #64
+ 514 0030 FFF7FEFF 		bl	ADC_CMD
+ 515              	.LVL33:
   97:Src/ADC.c     ****         State.ADC_Values[State.ADC_Channel] = (uint32_t)ADC_SPI_READ_24();
- 462              		.loc 1 97 0
- 463 0034 AC5D     		ldrb	r4, [r5, r6]
- 464 0036 FFF7FEFF 		bl	ADC_SPI_READ_24
- 465              	.LVL35:
- 466 003a 1234     		adds	r4, r4, #18
- 467 003c A400     		lsls	r4, r4, #2
- 468 003e 2C19     		adds	r4, r5, r4
- 469 0040 6060     		str	r0, [r4, #4]
+ 516              		.loc 1 97 9 view .LVU96
+ 517              		.loc 1 97 31 is_stmt 0 view .LVU97
+ 518 0034 655D     		ldrb	r5, [r4, r5]
+ 519              		.loc 1 97 57 view .LVU98
+ 520 0036 FFF7FEFF 		bl	ADC_SPI_READ_24
+ 521              	.LVL34:
+ 522              		.loc 1 97 45 view .LVU99
+ 523 003a 1235     		adds	r5, r5, #18
+ 524 003c AD00     		lsls	r5, r5, #2
+ 525 003e 6419     		adds	r4, r4, r5
+ 526 0040 6060     		str	r0, [r4, #4]
+ 527              	.L23:
   98:Src/ADC.c     ****         // ADC_SPI_READ_24();
   99:Src/ADC.c     ****         // State.ADC_Values[State.ADC_Channel] = 100;
- 100:Src/ADC.c     **** 
- 101:Src/ADC.c     ****         if (State.ADC_Channel == ADC_T_CH)
- 470              		.loc 1 101 0
- 471 0042 AB5D     		ldrb	r3, [r5, r6]
- 472 0044 072B     		cmp	r3, #7
- 473 0046 1ED0     		beq	.L26
- 474              	.L23:
- 102:Src/ADC.c     ****         {
- 103:Src/ADC.c     ****             uint64_t voltage_uV = (((uint64_t)State.ADC_Values[ADC_T_CH] * 1800000) / 0xffffff);
- 104:Src/ADC.c     ****             State.temperature = -45000000 - 175000000 / 8 + 17500 * voltage_uV / 264;
- 105:Src/ADC.c     ****         }
- 106:Src/ADC.c     ****     }
- 107:Src/ADC.c     ****     if (State.ADC_Channel == 15)
- 475              		.loc 1 107 0
- 476 0048 1E4A     		ldr	r2, .L28+4
- 477 004a 4A23     		movs	r3, #74
- 478 004c D35C     		ldrb	r3, [r2, r3]
- 479 004e 0F2B     		cmp	r3, #15
-ARM GAS  /tmp/cc1Vrnhh.s 			page 11
+ 100:Src/ADC.c     ****     }
+ 101:Src/ADC.c     ****     if (State.ADC_Channel == 15)
+ 528              		.loc 1 101 5 is_stmt 1 view .LVU100
+ 529              		.loc 1 101 14 is_stmt 0 view .LVU101
+ 530 0042 124A     		ldr	r2, .L27+4
+ 531 0044 4A23     		movs	r3, #74
+ 532 0046 D35C     		ldrb	r3, [r2, r3]
+ 533              		.loc 1 101 8 view .LVU102
+ 534 0048 0F2B     		cmp	r3, #15
+ 535 004a 19D0     		beq	.L26
+ 536              	.L24:
+ 102:Src/ADC.c     ****     {
+ 103:Src/ADC.c     ****         State.ADC_Updated = 1;
+ 104:Src/ADC.c     ****     }
+ 105:Src/ADC.c     ****     HAL_SPI_MspDeInit(&hspi2);
+ 537              		.loc 1 105 5 is_stmt 1 view .LVU103
+ 538 004c 0E48     		ldr	r0, .L27
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccetSkxK.s 			page 12
 
 
- 480 0050 32D0     		beq	.L27
- 481              	.L24:
- 108:Src/ADC.c     ****     {
- 109:Src/ADC.c     ****         State.ADC_Updated = 1;
- 110:Src/ADC.c     ****     }
- 111:Src/ADC.c     ****     HAL_SPI_MspDeInit(&hspi2);
- 482              		.loc 1 111 0
- 483 0052 1B48     		ldr	r0, .L28
- 484 0054 FFF7FEFF 		bl	HAL_SPI_MspDeInit
- 485              	.LVL36:
- 112:Src/ADC.c     ****     ADC_DATA_READY_EXTI_Init();
- 486              		.loc 1 112 0
- 487 0058 FFF7FEFF 		bl	ADC_DATA_READY_EXTI_Init
- 488              	.LVL37:
- 113:Src/ADC.c     **** }
- 489              		.loc 1 113 0
- 490              		@ sp needed
- 491 005c 70BD     		pop	{r4, r5, r6, pc}
- 492              	.L25:
+ 539 004e FFF7FEFF 		bl	HAL_SPI_MspDeInit
+ 540              	.LVL35:
+ 106:Src/ADC.c     ****     ADC_DATA_READY_EXTI_Init();
+ 541              		.loc 1 106 5 view .LVU104
+ 542 0052 FFF7FEFF 		bl	ADC_DATA_READY_EXTI_Init
+ 543              	.LVL36:
+ 107:Src/ADC.c     **** }
+ 544              		.loc 1 107 1 is_stmt 0 view .LVU105
+ 545              		@ sp needed
+ 546 0056 70BD     		pop	{r4, r5, r6, pc}
+ 547              	.L25:
   86:Src/ADC.c     ****         HAL_Delay(1);
- 493              		.loc 1 86 0
- 494 005e A024     		movs	r4, #160
- 495 0060 E405     		lsls	r4, r4, #23
- 496 0062 0022     		movs	r2, #0
- 497 0064 8021     		movs	r1, #128
- 498 0066 2000     		movs	r0, r4
- 499 0068 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 500              	.LVL38:
+ 548              		.loc 1 86 9 is_stmt 1 view .LVU106
+ 549 0058 A024     		movs	r4, #160
+ 550 005a E405     		lsls	r4, r4, #23
+ 551 005c 0022     		movs	r2, #0
+ 552 005e 8021     		movs	r1, #128
+ 553 0060 2000     		movs	r0, r4
+ 554 0062 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 555              	.LVL37:
   87:Src/ADC.c     ****         HAL_GPIO_WritePin(ADC_nSYNC_GPIO_Port, ADC_nSYNC_Pin, 1);
- 501              		.loc 1 87 0
- 502 006c 0120     		movs	r0, #1
- 503 006e FFF7FEFF 		bl	HAL_Delay
- 504              	.LVL39:
+ 556              		.loc 1 87 9 view .LVU107
+ 557 0066 0120     		movs	r0, #1
+ 558 0068 FFF7FEFF 		bl	HAL_Delay
+ 559              	.LVL38:
   88:Src/ADC.c     ****         State.ADC_Channel = 0;
- 505              		.loc 1 88 0
- 506 0072 0122     		movs	r2, #1
- 507 0074 8021     		movs	r1, #128
- 508 0076 2000     		movs	r0, r4
- 509 0078 FFF7FEFF 		bl	HAL_GPIO_WritePin
- 510              	.LVL40:
+ 560              		.loc 1 88 9 view .LVU108
+ 561 006c 0122     		movs	r2, #1
+ 562 006e 8021     		movs	r1, #128
+ 563 0070 2000     		movs	r0, r4
+ 564 0072 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 565              	.LVL39:
   89:Src/ADC.c     ****     }
- 511              		.loc 1 89 0
- 512 007c 114A     		ldr	r2, .L28+4
- 513 007e 4A23     		movs	r3, #74
- 514 0080 0021     		movs	r1, #0
- 515 0082 D154     		strb	r1, [r2, r3]
- 516 0084 E0E7     		b	.L23
- 517              	.L26:
- 518              	.LBB2:
- 103:Src/ADC.c     ****             State.temperature = -45000000 - 175000000 / 8 + 17500 * voltage_uV / 264;
- 519              		.loc 1 103 0
- 520 0086 0F4C     		ldr	r4, .L28+4
- 521 0088 0F4A     		ldr	r2, .L28+8
- 522 008a 0023     		movs	r3, #0
- 523 008c A06E     		ldr	r0, [r4, #104]
- 524 008e 0021     		movs	r1, #0
- 525 0090 FFF7FEFF 		bl	__aeabi_lmul
-ARM GAS  /tmp/cc1Vrnhh.s 			page 12
+ 566              		.loc 1 89 9 view .LVU109
+  89:Src/ADC.c     ****     }
+ 567              		.loc 1 89 27 is_stmt 0 view .LVU110
+ 568 0076 054A     		ldr	r2, .L27+4
+ 569 0078 4A23     		movs	r3, #74
+ 570 007a 0021     		movs	r1, #0
+ 571 007c D154     		strb	r1, [r2, r3]
+ 572 007e E0E7     		b	.L23
+ 573              	.L26:
+ 103:Src/ADC.c     ****     }
+ 574              		.loc 1 103 9 is_stmt 1 view .LVU111
+ 103:Src/ADC.c     ****     }
+ 575              		.loc 1 103 27 is_stmt 0 view .LVU112
+ 576 0080 3C33     		adds	r3, r3, #60
+ 577 0082 0121     		movs	r1, #1
+ 578 0084 D154     		strb	r1, [r2, r3]
+ 579 0086 E1E7     		b	.L24
+ 580              	.L28:
+ 581              		.align	2
+ 582              	.L27:
+ 583 0088 00000000 		.word	hspi2
+ 584 008c 00000000 		.word	State
+ 585              		.cfi_endproc
+ 586              	.LFE292:
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccetSkxK.s 			page 13
 
 
- 526              	.LVL41:
- 527 0094 0D4A     		ldr	r2, .L28+12
- 528 0096 0023     		movs	r3, #0
- 529 0098 FFF7FEFF 		bl	__aeabi_uldivmod
- 530              	.LVL42:
- 104:Src/ADC.c     ****         }
- 531              		.loc 1 104 0
- 532 009c 0C4A     		ldr	r2, .L28+16
- 533 009e 0023     		movs	r3, #0
- 534 00a0 FFF7FEFF 		bl	__aeabi_lmul
- 535              	.LVL43:
- 536 00a4 8422     		movs	r2, #132
- 537 00a6 5200     		lsls	r2, r2, #1
- 538 00a8 0023     		movs	r3, #0
- 539 00aa FFF7FEFF 		bl	__aeabi_uldivmod
- 540              	.LVL44:
- 541 00ae 094B     		ldr	r3, .L28+20
- 542 00b0 9C46     		mov	ip, r3
- 543 00b2 6044     		add	r0, r0, ip
- 544 00b4 6060     		str	r0, [r4, #4]
- 545 00b6 C7E7     		b	.L23
- 546              	.L27:
- 547              	.LBE2:
- 109:Src/ADC.c     ****     }
- 548              		.loc 1 109 0
- 549 00b8 3C33     		adds	r3, r3, #60
- 550 00ba 0121     		movs	r1, #1
- 551 00bc D154     		strb	r1, [r2, r3]
- 552 00be C8E7     		b	.L24
- 553              	.L29:
- 554              		.align	2
- 555              	.L28:
- 556 00c0 00000000 		.word	hspi2
- 557 00c4 00000000 		.word	State
- 558 00c8 40771B00 		.word	1800000
- 559 00cc FFFFFF00 		.word	16777215
- 560 00d0 5C440000 		.word	17500
- 561 00d4 889103FC 		.word	-66875000
- 562              		.cfi_endproc
- 563              	.LFE292:
- 565              		.section	.text.ADC_config,"ax",%progbits
- 566              		.align	1
- 567              		.global	ADC_config
- 568              		.syntax unified
- 569              		.code	16
- 570              		.thumb_func
- 571              		.fpu softvfp
- 573              	ADC_config:
- 574              	.LFB293:
- 114:Src/ADC.c     **** 
- 115:Src/ADC.c     **** void ADC_config()
- 116:Src/ADC.c     **** {
- 575              		.loc 1 116 0
- 576              		.cfi_startproc
- 577              		@ args = 0, pretend = 0, frame = 0
- 578              		@ frame_needed = 0, uses_anonymous_args = 0
- 579 0000 10B5     		push	{r4, lr}
-ARM GAS  /tmp/cc1Vrnhh.s 			page 13
+ 588              		.section	.text.ADC_config,"ax",%progbits
+ 589              		.align	1
+ 590              		.global	ADC_config
+ 591              		.syntax unified
+ 592              		.code	16
+ 593              		.thumb_func
+ 594              		.fpu softvfp
+ 596              	ADC_config:
+ 597              	.LFB293:
+ 108:Src/ADC.c     **** 
+ 109:Src/ADC.c     **** void ADC_config()
+ 110:Src/ADC.c     **** {
+ 598              		.loc 1 110 1 is_stmt 1 view -0
+ 599              		.cfi_startproc
+ 600              		@ args = 0, pretend = 0, frame = 0
+ 601              		@ frame_needed = 0, uses_anonymous_args = 0
+ 602 0000 10B5     		push	{r4, lr}
+ 603              	.LCFI14:
+ 604              		.cfi_def_cfa_offset 8
+ 605              		.cfi_offset 4, -8
+ 606              		.cfi_offset 14, -4
+ 111:Src/ADC.c     **** 
+ 112:Src/ADC.c     ****     for (int i = 0; i < 16; i++)
+ 607              		.loc 1 112 5 view .LVU114
+ 608              	.LBB2:
+ 609              		.loc 1 112 10 view .LVU115
+ 610              	.LVL40:
+ 611              		.loc 1 112 14 is_stmt 0 view .LVU116
+ 612 0002 0024     		movs	r4, #0
+ 613              	.LVL41:
+ 614              	.L30:
+ 615              		.loc 1 112 21 is_stmt 1 discriminator 1 view .LVU117
+ 616              		.loc 1 112 5 is_stmt 0 discriminator 1 view .LVU118
+ 617 0004 0F2C     		cmp	r4, #15
+ 618 0006 0EDC     		bgt	.L32
+ 113:Src/ADC.c     ****     {
+ 114:Src/ADC.c     ****         ADC_CMD(ADC_WRITE, ADC_CHx_REG(i));
+ 619              		.loc 1 114 9 is_stmt 1 discriminator 3 view .LVU119
+ 620              		.loc 1 114 28 is_stmt 0 discriminator 3 view .LVU120
+ 621 0008 2100     		movs	r1, r4
+ 622 000a 1031     		adds	r1, r1, #16
+ 623              		.loc 1 114 9 discriminator 3 view .LVU121
+ 624 000c C9B2     		uxtb	r1, r1
+ 625 000e 0020     		movs	r0, #0
+ 626 0010 FFF7FEFF 		bl	ADC_CMD
+ 627              	.LVL42:
+ 115:Src/ADC.c     ****         ADC_SPI_WRITE_16(ADC_CH_EN + ADC_AINPOS(i) + ADC_AINNEG);
+ 628              		.loc 1 115 9 is_stmt 1 discriminator 3 view .LVU122
+ 629              		.loc 1 115 38 is_stmt 0 discriminator 3 view .LVU123
+ 630 0014 6001     		lsls	r0, r4, #5
+ 631              		.loc 1 115 52 discriminator 3 view .LVU124
+ 632 0016 0E4B     		ldr	r3, .L33
+ 633 0018 9C46     		mov	ip, r3
+ 634 001a 6044     		add	r0, r0, ip
+ 635              		.loc 1 115 9 discriminator 3 view .LVU125
+ 636 001c 80B2     		uxth	r0, r0
+ 637 001e FFF7FEFF 		bl	ADC_SPI_WRITE_16
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccetSkxK.s 			page 14
 
 
- 580              	.LCFI14:
- 581              		.cfi_def_cfa_offset 8
- 582              		.cfi_offset 4, -8
- 583              		.cfi_offset 14, -4
- 584              	.LVL45:
- 585              	.LBB3:
+ 638              	.LVL43:
+ 112:Src/ADC.c     ****     {
+ 639              		.loc 1 112 29 is_stmt 1 discriminator 3 view .LVU126
+ 112:Src/ADC.c     ****     {
+ 640              		.loc 1 112 30 is_stmt 0 discriminator 3 view .LVU127
+ 641 0022 0134     		adds	r4, r4, #1
+ 642              	.LVL44:
+ 112:Src/ADC.c     ****     {
+ 643              		.loc 1 112 30 discriminator 3 view .LVU128
+ 644 0024 EEE7     		b	.L30
+ 645              	.L32:
+ 112:Src/ADC.c     ****     {
+ 646              		.loc 1 112 30 discriminator 3 view .LVU129
+ 647              	.LBE2:
+ 116:Src/ADC.c     ****     }
  117:Src/ADC.c     **** 
- 118:Src/ADC.c     ****     for (int i = 0; i < 16; i++)
- 586              		.loc 1 118 0
- 587 0002 0024     		movs	r4, #0
- 588 0004 0DE0     		b	.L31
- 589              	.LVL46:
- 590              	.L32:
- 119:Src/ADC.c     ****     {
- 120:Src/ADC.c     ****         ADC_CMD(ADC_WRITE, ADC_CHx_REG(i));
- 591              		.loc 1 120 0 discriminator 3
- 592 0006 2100     		movs	r1, r4
- 593 0008 1031     		adds	r1, r1, #16
- 594 000a C9B2     		uxtb	r1, r1
- 595 000c 0020     		movs	r0, #0
- 596 000e FFF7FEFF 		bl	ADC_CMD
- 597              	.LVL47:
- 121:Src/ADC.c     ****         ADC_SPI_WRITE_16(ADC_CH_EN + ADC_AINPOS(i) + ADC_AINNEG);
- 598              		.loc 1 121 0 discriminator 3
- 599 0012 6001     		lsls	r0, r4, #5
- 600 0014 0E4B     		ldr	r3, .L33
- 601 0016 9C46     		mov	ip, r3
- 602 0018 6044     		add	r0, r0, ip
- 603 001a 80B2     		uxth	r0, r0
- 604 001c FFF7FEFF 		bl	ADC_SPI_WRITE_16
- 605              	.LVL48:
- 118:Src/ADC.c     ****     {
- 606              		.loc 1 118 0 discriminator 3
- 607 0020 0134     		adds	r4, r4, #1
- 608              	.LVL49:
- 609              	.L31:
- 118:Src/ADC.c     ****     {
- 610              		.loc 1 118 0 is_stmt 0 discriminator 1
- 611 0022 0F2C     		cmp	r4, #15
- 612 0024 EFDD     		ble	.L32
- 613              	.LBE3:
- 122:Src/ADC.c     ****     }
- 123:Src/ADC.c     **** 
- 124:Src/ADC.c     ****     ADC_CMD(ADC_WRITE, ADC_SETUPCONx_REG(0));
- 614              		.loc 1 124 0 is_stmt 1
- 615 0026 2021     		movs	r1, #32
- 616 0028 0020     		movs	r0, #0
- 617 002a FFF7FEFF 		bl	ADC_CMD
- 618              	.LVL50:
- 125:Src/ADC.c     ****     ADC_SPI_WRITE_16(ADC_SETUP_BI_UNIPOLAR0 + ADC_SETUP_REF_BUF + ADC_SETUP_AIN_BUF);
- 619              		.loc 1 125 0
- 620 002e F020     		movs	r0, #240
- 621 0030 0001     		lsls	r0, r0, #4
- 622 0032 FFF7FEFF 		bl	ADC_SPI_WRITE_16
- 623              	.LVL51:
- 126:Src/ADC.c     ****     ADC_CMD(ADC_WRITE, ADC_FILTCONx_REG(0));
- 624              		.loc 1 126 0
-ARM GAS  /tmp/cc1Vrnhh.s 			page 14
+ 118:Src/ADC.c     ****     ADC_CMD(ADC_WRITE, ADC_SETUPCONx_REG(0));
+ 648              		.loc 1 118 5 is_stmt 1 view .LVU130
+ 649 0026 2021     		movs	r1, #32
+ 650 0028 0020     		movs	r0, #0
+ 651 002a FFF7FEFF 		bl	ADC_CMD
+ 652              	.LVL45:
+ 119:Src/ADC.c     ****     ADC_SPI_WRITE_16(ADC_SETUP_BI_UNIPOLAR0 + ADC_SETUP_REF_BUF + ADC_SETUP_AIN_BUF);
+ 653              		.loc 1 119 5 view .LVU131
+ 654 002e F020     		movs	r0, #240
+ 655 0030 0001     		lsls	r0, r0, #4
+ 656 0032 FFF7FEFF 		bl	ADC_SPI_WRITE_16
+ 657              	.LVL46:
+ 120:Src/ADC.c     ****     ADC_CMD(ADC_WRITE, ADC_FILTCONx_REG(0));
+ 658              		.loc 1 120 5 view .LVU132
+ 659 0036 2821     		movs	r1, #40
+ 660 0038 0020     		movs	r0, #0
+ 661 003a FFF7FEFF 		bl	ADC_CMD
+ 662              	.LVL47:
+ 121:Src/ADC.c     ****     ADC_SPI_WRITE_16(ADC_SPS_200);
+ 663              		.loc 1 121 5 view .LVU133
+ 664 003e 0D20     		movs	r0, #13
+ 665 0040 FFF7FEFF 		bl	ADC_SPI_WRITE_16
+ 666              	.LVL48:
+ 122:Src/ADC.c     ****     State.ADC_Channel = ADC_DEFAULT_CH;
+ 667              		.loc 1 122 5 view .LVU134
+ 668              		.loc 1 122 23 is_stmt 0 view .LVU135
+ 669 0044 034A     		ldr	r2, .L33+4
+ 670 0046 4A23     		movs	r3, #74
+ 671 0048 1021     		movs	r1, #16
+ 672 004a D154     		strb	r1, [r2, r3]
+ 123:Src/ADC.c     **** }
+ 673              		.loc 1 123 1 view .LVU136
+ 674              		@ sp needed
+ 675              	.LVL49:
+ 676              		.loc 1 123 1 view .LVU137
+ 677 004c 10BD     		pop	{r4, pc}
+ 678              	.L34:
+ 679 004e C046     		.align	2
+ 680              	.L33:
+ 681 0050 16800000 		.word	32790
+ 682 0054 00000000 		.word	State
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccetSkxK.s 			page 15
 
 
- 625 0036 2821     		movs	r1, #40
- 626 0038 0020     		movs	r0, #0
- 627 003a FFF7FEFF 		bl	ADC_CMD
- 628              	.LVL52:
- 127:Src/ADC.c     ****     ADC_SPI_WRITE_16(ADC_SPS_200);
- 629              		.loc 1 127 0
- 630 003e 0D20     		movs	r0, #13
- 631 0040 FFF7FEFF 		bl	ADC_SPI_WRITE_16
- 632              	.LVL53:
- 128:Src/ADC.c     ****     State.ADC_Channel = ADC_DEFAULT_CH;
- 633              		.loc 1 128 0
- 634 0044 034A     		ldr	r2, .L33+4
- 635 0046 4A23     		movs	r3, #74
- 636 0048 1021     		movs	r1, #16
- 637 004a D154     		strb	r1, [r2, r3]
- 129:Src/ADC.c     **** }
- 638              		.loc 1 129 0
- 639              		@ sp needed
- 640              	.LVL54:
- 641 004c 10BD     		pop	{r4, pc}
- 642              	.L34:
- 643 004e C046     		.align	2
- 644              	.L33:
- 645 0050 16800000 		.word	32790
- 646 0054 00000000 		.word	State
- 647              		.cfi_endproc
- 648              	.LFE293:
- 650              		.section	.text.ADC_reset,"ax",%progbits
- 651              		.align	1
- 652              		.global	ADC_reset
- 653              		.syntax unified
- 654              		.code	16
- 655              		.thumb_func
- 656              		.fpu softvfp
- 658              	ADC_reset:
- 659              	.LFB294:
- 130:Src/ADC.c     **** 
- 131:Src/ADC.c     **** void ADC_reset()
- 132:Src/ADC.c     **** {
- 660              		.loc 1 132 0
- 661              		.cfi_startproc
- 662              		@ args = 0, pretend = 0, frame = 24
- 663              		@ frame_needed = 0, uses_anonymous_args = 0
- 664 0000 10B5     		push	{r4, lr}
- 665              	.LCFI15:
- 666              		.cfi_def_cfa_offset 8
- 667              		.cfi_offset 4, -8
- 668              		.cfi_offset 14, -4
- 669 0002 86B0     		sub	sp, sp, #24
- 670              	.LCFI16:
- 671              		.cfi_def_cfa_offset 32
- 133:Src/ADC.c     ****     GPIO_InitTypeDef GPIO_InitStruct = {0};
- 672              		.loc 1 133 0
- 673 0004 0C22     		movs	r2, #12
- 674 0006 0021     		movs	r1, #0
- 675 0008 03A8     		add	r0, sp, #12
- 676 000a FFF7FEFF 		bl	memset
-ARM GAS  /tmp/cc1Vrnhh.s 			page 15
+ 683              		.cfi_endproc
+ 684              	.LFE293:
+ 686              		.section	.text.ADC_reset,"ax",%progbits
+ 687              		.align	1
+ 688              		.global	ADC_reset
+ 689              		.syntax unified
+ 690              		.code	16
+ 691              		.thumb_func
+ 692              		.fpu softvfp
+ 694              	ADC_reset:
+ 695              	.LFB294:
+ 124:Src/ADC.c     **** 
+ 125:Src/ADC.c     **** void ADC_reset()
+ 126:Src/ADC.c     **** {
+ 696              		.loc 1 126 1 is_stmt 1 view -0
+ 697              		.cfi_startproc
+ 698              		@ args = 0, pretend = 0, frame = 24
+ 699              		@ frame_needed = 0, uses_anonymous_args = 0
+ 700 0000 10B5     		push	{r4, lr}
+ 701              	.LCFI15:
+ 702              		.cfi_def_cfa_offset 8
+ 703              		.cfi_offset 4, -8
+ 704              		.cfi_offset 14, -4
+ 705 0002 86B0     		sub	sp, sp, #24
+ 706              	.LCFI16:
+ 707              		.cfi_def_cfa_offset 32
+ 127:Src/ADC.c     ****     GPIO_InitTypeDef GPIO_InitStruct = {0};
+ 708              		.loc 1 127 5 view .LVU139
+ 709              		.loc 1 127 22 is_stmt 0 view .LVU140
+ 710 0004 0023     		movs	r3, #0
+ 711 0006 0593     		str	r3, [sp, #20]
+ 128:Src/ADC.c     ****     GPIO_InitStruct.Pin = ADC_MOSI_Pin | ADC_SCK_Pin;
+ 712              		.loc 1 128 5 is_stmt 1 view .LVU141
+ 713              		.loc 1 128 25 is_stmt 0 view .LVU142
+ 714 0008 C022     		movs	r2, #192
+ 715 000a 5200     		lsls	r2, r2, #1
+ 716 000c 0192     		str	r2, [sp, #4]
+ 129:Src/ADC.c     ****     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 717              		.loc 1 129 5 is_stmt 1 view .LVU143
+ 718              		.loc 1 129 26 is_stmt 0 view .LVU144
+ 719 000e 803A     		subs	r2, r2, #128
+ 720 0010 FF3A     		subs	r2, r2, #255
+ 721 0012 0292     		str	r2, [sp, #8]
+ 130:Src/ADC.c     ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 722              		.loc 1 130 5 is_stmt 1 view .LVU145
+ 723              		.loc 1 130 26 is_stmt 0 view .LVU146
+ 724 0014 0393     		str	r3, [sp, #12]
+ 131:Src/ADC.c     ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 725              		.loc 1 131 5 is_stmt 1 view .LVU147
+ 726              		.loc 1 131 27 is_stmt 0 view .LVU148
+ 727 0016 0493     		str	r3, [sp, #16]
+ 132:Src/ADC.c     ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 728              		.loc 1 132 5 is_stmt 1 view .LVU149
+ 729 0018 0D4C     		ldr	r4, .L39
+ 730 001a 01A9     		add	r1, sp, #4
+ 731 001c 2000     		movs	r0, r4
+ 732 001e FFF7FEFF 		bl	HAL_GPIO_Init
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccetSkxK.s 			page 16
 
 
- 677              	.LVL55:
- 134:Src/ADC.c     ****     GPIO_InitStruct.Pin = ADC_MOSI_Pin | ADC_SCK_Pin;
- 678              		.loc 1 134 0
- 679 000e C023     		movs	r3, #192
- 680 0010 5B00     		lsls	r3, r3, #1
- 681 0012 0193     		str	r3, [sp, #4]
- 135:Src/ADC.c     ****     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
- 682              		.loc 1 135 0
- 683 0014 803B     		subs	r3, r3, #128
- 684 0016 FF3B     		subs	r3, r3, #255
- 685 0018 0293     		str	r3, [sp, #8]
- 136:Src/ADC.c     ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
- 137:Src/ADC.c     ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
- 138:Src/ADC.c     ****     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
- 686              		.loc 1 138 0
- 687 001a 0E4C     		ldr	r4, .L38
- 688 001c 01A9     		add	r1, sp, #4
- 689 001e 2000     		movs	r0, r4
- 690 0020 FFF7FEFF 		bl	HAL_GPIO_Init
- 691              	.LVL56:
- 139:Src/ADC.c     **** 
- 140:Src/ADC.c     ****     HAL_GPIO_WritePin(ADC_MOSI_GPIO_Port, ADC_MOSI_Pin, 1);
- 692              		.loc 1 140 0
- 693 0024 0122     		movs	r2, #1
- 694 0026 8021     		movs	r1, #128
- 695 0028 2000     		movs	r0, r4
- 696 002a FFF7FEFF 		bl	HAL_GPIO_WritePin
- 697              	.LVL57:
- 698              	.LBB4:
- 141:Src/ADC.c     ****     for (int i = 0; i < 200; i++)
- 699              		.loc 1 141 0
- 700 002e 0024     		movs	r4, #0
- 701 0030 08E0     		b	.L36
- 702              	.LVL58:
- 703              	.L37:
- 142:Src/ADC.c     ****     {
- 143:Src/ADC.c     ****         HAL_GPIO_TogglePin(ADC_SCK_GPIO_Port, ADC_SCK_Pin);
- 704              		.loc 1 143 0 discriminator 3
- 705 0032 8021     		movs	r1, #128
- 706 0034 4900     		lsls	r1, r1, #1
- 707 0036 0748     		ldr	r0, .L38
- 708 0038 FFF7FEFF 		bl	HAL_GPIO_TogglePin
- 709              	.LVL59:
- 144:Src/ADC.c     ****         HAL_Delay(1);
- 710              		.loc 1 144 0 discriminator 3
- 711 003c 0120     		movs	r0, #1
- 712 003e FFF7FEFF 		bl	HAL_Delay
- 713              	.LVL60:
- 141:Src/ADC.c     ****     for (int i = 0; i < 200; i++)
- 714              		.loc 1 141 0 discriminator 3
- 715 0042 0134     		adds	r4, r4, #1
- 716              	.LVL61:
- 717              	.L36:
- 141:Src/ADC.c     ****     for (int i = 0; i < 200; i++)
- 718              		.loc 1 141 0 is_stmt 0 discriminator 1
- 719 0044 C72C     		cmp	r4, #199
- 720 0046 F4DD     		ble	.L37
-ARM GAS  /tmp/cc1Vrnhh.s 			page 16
+ 733              	.LVL50:
+ 133:Src/ADC.c     **** 
+ 134:Src/ADC.c     ****     HAL_GPIO_WritePin(ADC_MOSI_GPIO_Port, ADC_MOSI_Pin, 1);
+ 734              		.loc 1 134 5 view .LVU150
+ 735 0022 0122     		movs	r2, #1
+ 736 0024 8021     		movs	r1, #128
+ 737 0026 2000     		movs	r0, r4
+ 738 0028 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 739              	.LVL51:
+ 135:Src/ADC.c     ****     for (int i = 0; i < 200; i++)
+ 740              		.loc 1 135 5 view .LVU151
+ 741              	.LBB3:
+ 742              		.loc 1 135 10 view .LVU152
+ 743              		.loc 1 135 14 is_stmt 0 view .LVU153
+ 744 002c 0024     		movs	r4, #0
+ 745              	.LVL52:
+ 746              	.L36:
+ 747              		.loc 1 135 21 is_stmt 1 discriminator 1 view .LVU154
+ 748              		.loc 1 135 5 is_stmt 0 discriminator 1 view .LVU155
+ 749 002e C72C     		cmp	r4, #199
+ 750 0030 09DC     		bgt	.L38
+ 136:Src/ADC.c     ****     {
+ 137:Src/ADC.c     ****         HAL_GPIO_TogglePin(ADC_SCK_GPIO_Port, ADC_SCK_Pin);
+ 751              		.loc 1 137 9 is_stmt 1 discriminator 3 view .LVU156
+ 752 0032 8021     		movs	r1, #128
+ 753 0034 4900     		lsls	r1, r1, #1
+ 754 0036 0648     		ldr	r0, .L39
+ 755 0038 FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ 756              	.LVL53:
+ 138:Src/ADC.c     ****         HAL_Delay(1);
+ 757              		.loc 1 138 9 discriminator 3 view .LVU157
+ 758 003c 0120     		movs	r0, #1
+ 759 003e FFF7FEFF 		bl	HAL_Delay
+ 760              	.LVL54:
+ 135:Src/ADC.c     ****     for (int i = 0; i < 200; i++)
+ 761              		.loc 1 135 30 discriminator 3 view .LVU158
+ 135:Src/ADC.c     ****     for (int i = 0; i < 200; i++)
+ 762              		.loc 1 135 31 is_stmt 0 discriminator 3 view .LVU159
+ 763 0042 0134     		adds	r4, r4, #1
+ 764              	.LVL55:
+ 135:Src/ADC.c     ****     for (int i = 0; i < 200; i++)
+ 765              		.loc 1 135 31 discriminator 3 view .LVU160
+ 766 0044 F3E7     		b	.L36
+ 767              	.L38:
+ 135:Src/ADC.c     ****     for (int i = 0; i < 200; i++)
+ 768              		.loc 1 135 31 discriminator 3 view .LVU161
+ 769              	.LBE3:
+ 139:Src/ADC.c     ****     }
+ 140:Src/ADC.c     ****     HAL_SPI_MspInit(&hspi2);
+ 770              		.loc 1 140 5 is_stmt 1 view .LVU162
+ 771 0046 0348     		ldr	r0, .L39+4
+ 772 0048 FFF7FEFF 		bl	HAL_SPI_MspInit
+ 773              	.LVL56:
+ 141:Src/ADC.c     **** 
+ 142:Src/ADC.c     ****     // uint8_t tx[16] = {0xff};
+ 143:Src/ADC.c     ****     // HAL_SPI_Transmit(&hspi2, tx, sizeof tx, HAL_MAX_DELAY);
+ 144:Src/ADC.c     **** };
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccetSkxK.s 			page 17
 
 
- 721              	.LBE4:
- 145:Src/ADC.c     ****     }
- 146:Src/ADC.c     ****     HAL_SPI_MspInit(&hspi2);
- 722              		.loc 1 146 0 is_stmt 1
- 723 0048 0348     		ldr	r0, .L38+4
- 724 004a FFF7FEFF 		bl	HAL_SPI_MspInit
- 725              	.LVL62:
- 147:Src/ADC.c     **** 
- 148:Src/ADC.c     ****     // uint8_t tx[16] = {0xff};
- 149:Src/ADC.c     ****     // HAL_SPI_Transmit(&hspi2, tx, sizeof tx, HAL_MAX_DELAY);
- 150:Src/ADC.c     **** };
- 726              		.loc 1 150 0
- 727 004e 06B0     		add	sp, sp, #24
- 728              		@ sp needed
- 729              	.LVL63:
- 730 0050 10BD     		pop	{r4, pc}
- 731              	.L39:
- 732 0052 C046     		.align	2
- 733              	.L38:
- 734 0054 00040050 		.word	1342178304
- 735 0058 00000000 		.word	hspi2
- 736              		.cfi_endproc
- 737              	.LFE294:
- 739              		.text
- 740              	.Letext0:
- 741              		.file 2 "/usr/include/newlib/machine/_default_types.h"
- 742              		.file 3 "/usr/include/newlib/sys/_stdint.h"
- 743              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
- 744              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
- 745              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
- 746              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
- 747              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
- 748              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
- 749              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
- 750              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
- 751              		.file 12 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
- 752              		.file 13 "/usr/include/newlib/sys/lock.h"
- 753              		.file 14 "/usr/include/newlib/sys/_types.h"
- 754              		.file 15 "/usr/lib/gcc/arm-none-eabi/7.3.1/include/stddef.h"
- 755              		.file 16 "/usr/include/newlib/sys/reent.h"
- 756              		.file 17 "Inc/usart.h"
- 757              		.file 18 "Inc/state.h"
- 758              		.file 19 "Inc/spi.h"
- 759              		.file 20 "Inc/ADC.h"
- 760              		.file 21 "<built-in>"
-ARM GAS  /tmp/cc1Vrnhh.s 			page 17
+ 774              		.loc 1 144 1 is_stmt 0 view .LVU163
+ 775 004c 06B0     		add	sp, sp, #24
+ 776              		@ sp needed
+ 777              	.LVL57:
+ 778              		.loc 1 144 1 view .LVU164
+ 779 004e 10BD     		pop	{r4, pc}
+ 780              	.L40:
+ 781              		.align	2
+ 782              	.L39:
+ 783 0050 00040050 		.word	1342178304
+ 784 0054 00000000 		.word	hspi2
+ 785              		.cfi_endproc
+ 786              	.LFE294:
+ 788              		.section	.rodata
+ 789              		.align	2
+ 790              		.set	.LANCHOR0,. + 0
+ 791              	.LC5:
+ 792 0000 0000     		.ascii	"\000\000"
+ 793 0002 00       		.space	1
+ 794              		.text
+ 795              	.Letext0:
+ 796              		.file 2 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 797              		.file 3 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 798              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
+ 799              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
+ 800              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+ 801              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
+ 802              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+ 803              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
+ 804              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
+ 805              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
+ 806              		.file 12 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
+ 807              		.file 13 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\lock.h"
+ 808              		.file 14 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_types.h"
+ 809              		.file 15 "c:\\gnu tools arm embedded\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\stddef.h"
+ 810              		.file 16 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\reent.h"
+ 811              		.file 17 "Inc/usart.h"
+ 812              		.file 18 "Inc/state.h"
+ 813              		.file 19 "Inc/spi.h"
+ 814              		.file 20 "Inc/ADC.h"
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccetSkxK.s 			page 18
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ADC.c
-     /tmp/cc1Vrnhh.s:16     .text.ADC_SPI_WRITE_8:00000000 $t
-     /tmp/cc1Vrnhh.s:23     .text.ADC_SPI_WRITE_8:00000000 ADC_SPI_WRITE_8
-     /tmp/cc1Vrnhh.s:65     .text.ADC_SPI_WRITE_8:00000024 $d
-     /tmp/cc1Vrnhh.s:70     .text.ADC_SPI_WRITE_16:00000000 $t
-     /tmp/cc1Vrnhh.s:77     .text.ADC_SPI_WRITE_16:00000000 ADC_SPI_WRITE_16
-     /tmp/cc1Vrnhh.s:121    .text.ADC_SPI_WRITE_16:00000028 $d
-     /tmp/cc1Vrnhh.s:126    .text.ADC_SPI_READ_16:00000000 $t
-     /tmp/cc1Vrnhh.s:133    .text.ADC_SPI_READ_16:00000000 ADC_SPI_READ_16
-     /tmp/cc1Vrnhh.s:172    .text.ADC_SPI_READ_16:00000024 $d
-     /tmp/cc1Vrnhh.s:177    .text.ADC_SPI_READ_24:00000000 $t
-     /tmp/cc1Vrnhh.s:184    .text.ADC_SPI_READ_24:00000000 ADC_SPI_READ_24
-     /tmp/cc1Vrnhh.s:229    .text.ADC_SPI_READ_24:00000030 $d
-     /tmp/cc1Vrnhh.s:234    .text.ADC_SPI_READ_8:00000000 $t
-     /tmp/cc1Vrnhh.s:241    .text.ADC_SPI_READ_8:00000000 ADC_SPI_READ_8
-     /tmp/cc1Vrnhh.s:277    .text.ADC_SPI_READ_8:00000020 $d
-     /tmp/cc1Vrnhh.s:282    .text.ADC_CMD:00000000 $t
-     /tmp/cc1Vrnhh.s:289    .text.ADC_CMD:00000000 ADC_CMD
-     /tmp/cc1Vrnhh.s:318    .text.ADC_ID:00000000 $t
-     /tmp/cc1Vrnhh.s:325    .text.ADC_ID:00000000 ADC_ID
-     /tmp/cc1Vrnhh.s:371    .text.ADC_ID:0000002c $d
-     /tmp/cc1Vrnhh.s:376    .text.ADC_DATA:00000000 $t
-     /tmp/cc1Vrnhh.s:383    .text.ADC_DATA:00000000 ADC_DATA
-     /tmp/cc1Vrnhh.s:411    .text.ADC_update:00000000 $t
-     /tmp/cc1Vrnhh.s:418    .text.ADC_update:00000000 ADC_update
-     /tmp/cc1Vrnhh.s:556    .text.ADC_update:000000c0 $d
-     /tmp/cc1Vrnhh.s:566    .text.ADC_config:00000000 $t
-     /tmp/cc1Vrnhh.s:573    .text.ADC_config:00000000 ADC_config
-     /tmp/cc1Vrnhh.s:645    .text.ADC_config:00000050 $d
-     /tmp/cc1Vrnhh.s:651    .text.ADC_reset:00000000 $t
-     /tmp/cc1Vrnhh.s:658    .text.ADC_reset:00000000 ADC_reset
-     /tmp/cc1Vrnhh.s:734    .text.ADC_reset:00000054 $d
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:16     .rodata.ADC_SPI_WRITE_8.str1.4:00000000 $d
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:20     .text.ADC_SPI_WRITE_8:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:28     .text.ADC_SPI_WRITE_8:00000000 ADC_SPI_WRITE_8
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:78     .text.ADC_SPI_WRITE_8:00000028 $d
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:84     .text.ADC_SPI_WRITE_16:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:91     .text.ADC_SPI_WRITE_16:00000000 ADC_SPI_WRITE_16
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:141    .text.ADC_SPI_WRITE_16:00000028 $d
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:146    .text.ADC_SPI_READ_16:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:153    .text.ADC_SPI_READ_16:00000000 ADC_SPI_READ_16
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:198    .text.ADC_SPI_READ_16:00000024 $d
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:203    .text.ADC_SPI_READ_24:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:210    .text.ADC_SPI_READ_24:00000000 ADC_SPI_READ_24
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:264    .text.ADC_SPI_READ_24:00000030 $d
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:270    .text.ADC_SPI_READ_8:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:277    .text.ADC_SPI_READ_8:00000000 ADC_SPI_READ_8
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:317    .text.ADC_SPI_READ_8:00000024 $d
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:323    .text.ADC_CMD:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:330    .text.ADC_CMD:00000000 ADC_CMD
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:364    .text.ADC_ID:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:371    .text.ADC_ID:00000000 ADC_ID
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:420    .text.ADC_ID:0000002c $d
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:425    .text.ADC_DATA:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:432    .text.ADC_DATA:00000000 ADC_DATA
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:460    .text.ADC_update:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:467    .text.ADC_update:00000000 ADC_update
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:583    .text.ADC_update:00000088 $d
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:589    .text.ADC_config:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:596    .text.ADC_config:00000000 ADC_config
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:681    .text.ADC_config:00000050 $d
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:687    .text.ADC_reset:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:694    .text.ADC_reset:00000000 ADC_reset
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:783    .text.ADC_reset:00000050 $d
+C:\Users\matil\AppData\Local\Temp\ccetSkxK.s:789    .rodata:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_SPI_TransmitReceive
 hspi2
 HAL_SPI_Receive
-memset
 ADC_DATA_READY_EXTI_deInit
 HAL_SPI_MspInit
 HAL_SPI_MspDeInit
 ADC_DATA_READY_EXTI_Init
-__aeabi_lmul
-__aeabi_uldivmod
 HAL_GPIO_WritePin
 HAL_Delay
 State
