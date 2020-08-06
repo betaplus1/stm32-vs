@@ -108,6 +108,7 @@ int main(void)
   HAL_SPI_MspInit(&hspi2);
   HAL_SPI_MspInit(&hspi1);
 
+  SERIAL_WRITE(SERIAL_CLS);
   SERIAL_WRITE(RESET);
 
   ADC_reset();
@@ -144,10 +145,7 @@ int main(void)
     if (State.cmd && (State.uptime_flag || !State.cmdLoop))
     {
       State.uptime_flag = 0;
-      if (State.cmdLoop)
-      {
-        SERIAL_WRITE("\n")
-      }
+      SERIAL_WRITE(SERIAL_CLS);
       cmd();
     };
     if (State.ADC_Updated)

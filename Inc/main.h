@@ -63,6 +63,7 @@ extern "C"
 #define SERIAL_YELLOW "\033[0;33m"
 #define SERIAL_BLUE "\033[0;34m"
 #define SERIAL_COLOR_RESET "\033[0m"
+#define SERIAL_CLS "\e[1;1H\e[2J"
 
 #define SERIAL_WRITE_RED(f_, ...)         \
 	{                                     \
