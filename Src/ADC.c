@@ -92,11 +92,8 @@ void ADC_update()
     {
         ADC_CMD(ADC_READ, ADC_STATUS_REG);
         State.ADC_Channel = ADC_SPI_READ_8() & 0xf;
-
         ADC_CMD(ADC_READ, ADC_DATA_REG);
         State.ADC_Values[State.ADC_Channel] = (uint32_t)ADC_SPI_READ_24();
-        // ADC_SPI_READ_24();
-        // State.ADC_Values[State.ADC_Channel] = 100;
     }
     if (State.ADC_Channel == 15)
     {
@@ -106,9 +103,10 @@ void ADC_update()
     ADC_DATA_READY_EXTI_Init();
 }
 
-void ADC_config()
+void ADC_config(ADC_SPS sps)
 {
-
+    ADC_DATA_READY_EXTI_deInit();
+    HAL_SPI_MspInit(&hspi2);
     for (int i = 0; i < 16; i++)
     {
         ADC_CMD(ADC_WRITE, ADC_CHx_REG(i));
@@ -118,8 +116,10 @@ void ADC_config()
     ADC_CMD(ADC_WRITE, ADC_SETUPCONx_REG(0));
     ADC_SPI_WRITE_16(ADC_SETUP_BI_UNIPOLAR0 + ADC_SETUP_REF_BUF + ADC_SETUP_AIN_BUF);
     ADC_CMD(ADC_WRITE, ADC_FILTCONx_REG(0));
-    ADC_SPI_WRITE_16(ADC_SPS_200);
+    ADC_SPI_WRITE_16(sps);
     State.ADC_Channel = ADC_DEFAULT_CH;
+    HAL_SPI_MspDeInit(&hspi2);
+    ADC_DATA_READY_EXTI_Init();
 }
 
 void ADC_reset()

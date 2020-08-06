@@ -16,6 +16,8 @@
 	*
 	******************************************************************************
 	*/
+// asd
+////asdf
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
@@ -109,12 +111,12 @@ int main(void)
   SERIAL_WRITE(RESET);
 
   ADC_reset();
-  ADC_config();
+  ADC_config(ADC_SPS_200);
   HAL_UART_Receive_DMA(&huart2, State.UART_RX_BUFF, UART_RX_BUFFER_LENGTH);
 
   DAC_reset();
 
-  //PRIORITY OVERRIDES:
+  //IRQ PRIORITY OVERRIDES:
   HAL_InitTick(0);
   HAL_NVIC_SetPriority(EXTI4_15_IRQn, 1, 0);
   HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 2, 0);
@@ -148,42 +150,9 @@ int main(void)
       counter++;
       Filter();
 
-      if (counter % (FilterLength) == 0)
+      if (counter % FilterLength == 0 && State.ADC_Filter_Valid)
       {
-        if (State.ADC_Filter_Valid)
-        {
-          PID();
-        }
-
-        SERIAL_WRITE("\n\n")
-        // SERIAL_WRITE("PD1 %i\n", State.PD1_Slope);
-        // SERIAL_WRITE("PD2 %i\n", State.PD2_Slope);
-        // SERIAL_WRITE("PD3 %i\n", State.PD3_Slope);
-        // SERIAL_WRITE("PD4 %i\n", State.PD4_Slope);
-
-        SERIAL_WRITE("PD1+PD2 SETPOINT: %li\n", State.PD1_PD2_SetPoint);
-        SERIAL_WRITE("PID 704 Output: %li\n", State.PID_704_Output);
-        SERIAL_WRITE("PID_704_P_error %i\n", State.PID_704_P_error);
-
-        SERIAL_WRITE("PD1 Phase:\t\t");
-        SERIAL_WRITE("%3i.", Phase(ADC_PD1_Phase_CH) / 1000);
-        SERIAL_WRITE("%03li deg\t\t\n", Phase(ADC_PD1_Phase_CH) % 1000);
-
-        SERIAL_WRITE("PD2 Phase:\t\t");
-        SERIAL_WRITE("%3i.", Phase(ADC_PD2_Phase_CH) / 1000);
-        SERIAL_WRITE("%03li deg\t\t\n\n", Phase(ADC_PD2_Phase_CH) % 1000);
-
-        SERIAL_WRITE("PD3+PD4 SETPOINT: %li\n", State.PD3_PD4_SetPoint);
-        SERIAL_WRITE("PID 352 Output: %li\n", State.PID_352_Output);
-        SERIAL_WRITE("PID_352_P_error %i\n", State.PID_352_P_error);
-
-        SERIAL_WRITE("PD3 Phase:\t\t");
-        SERIAL_WRITE("%3i.", Phase(ADC_PD3_Phase_CH) / 1000);
-        SERIAL_WRITE("%03li deg\t\t\n", Phase(ADC_PD3_Phase_CH) % 1000);
-
-        SERIAL_WRITE("PD4 Phase:\t\t");
-        SERIAL_WRITE("%3i.", Phase(ADC_PD4_Phase_CH) / 1000);
-        SERIAL_WRITE("%03li deg\t\t\n", Phase(ADC_PD4_Phase_CH) % 1000);
+        PID();
       }
     };
     /* USER CODE END WHILE */

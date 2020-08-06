@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccxJaoIz.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -41,220 +41,217 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccxJaoIz.s 			page 1
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 72
   30              		@ frame_needed = 0, uses_anonymous_args = 0
-  31 0000 10B5     		push	{r4, lr}
+  31 0000 30B5     		push	{r4, r5, lr}
   32              	.LCFI0:
-  33              		.cfi_def_cfa_offset 8
-  34              		.cfi_offset 4, -8
-  35              		.cfi_offset 14, -4
-  36 0002 92B0     		sub	sp, sp, #72
-  37              	.LCFI1:
-  38              		.cfi_def_cfa_offset 80
+  33              		.cfi_def_cfa_offset 12
+  34              		.cfi_offset 4, -12
+  35              		.cfi_offset 5, -8
+  36              		.cfi_offset 14, -4
+  37 0002 93B0     		sub	sp, sp, #76
+  38              	.LCFI1:
+  39              		.cfi_def_cfa_offset 88
   12:Src/Filter.c  ****     State.ADC_Updated = 0;  //reset flag
-  39              		.loc 1 12 5 view .LVU1
-  40              		.loc 1 12 23 is_stmt 0 view .LVU2
-  41 0004 2E4A     		ldr	r2, .L13
-  42 0006 4B23     		movs	r3, #75
-  43 0008 0021     		movs	r1, #0
-  44 000a D154     		strb	r1, [r2, r3]
+  40              		.loc 1 12 5 view .LVU1
+  41              		.loc 1 12 23 is_stmt 0 view .LVU2
+  42 0004 2C4A     		ldr	r2, .L13
+  43 0006 4723     		movs	r3, #71
+  44 0008 0021     		movs	r1, #0
+  45 000a D154     		strb	r1, [r2, r3]
   13:Src/Filter.c  ****     uint32_t acc[16] = {0}; //Accumulator for moving average
-  45              		.loc 1 13 5 is_stmt 1 view .LVU3
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccxJaoIz.s 			page 2
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 2
 
 
-  46              		.loc 1 13 14 is_stmt 0 view .LVU4
-  47 000c 4022     		movs	r2, #64
-  48 000e 02A8     		add	r0, sp, #8
-  49 0010 FFF7FEFF 		bl	memset
-  50              	.LVL0:
+  46              		.loc 1 13 5 is_stmt 1 view .LVU3
+  47              		.loc 1 13 14 is_stmt 0 view .LVU4
+  48 000c 4022     		movs	r2, #64
+  49 000e 02A8     		add	r0, sp, #8
+  50 0010 FFF7FEFF 		bl	memset
+  51              	.LVL0:
   14:Src/Filter.c  **** 
   15:Src/Filter.c  ****     //FilterFifo:
   16:Src/Filter.c  ****     for (int y = FilterLength - 1; y > 0; y--) // enumerate through buffer
-  51              		.loc 1 16 5 is_stmt 1 view .LVU5
-  52              	.LBB2:
-  53              		.loc 1 16 10 view .LVU6
-  54              		.loc 1 16 14 is_stmt 0 view .LVU7
-  55 0014 0F24     		movs	r4, #15
-  56              		.loc 1 16 5 view .LVU8
-  57 0016 00E0     		b	.L2
-  58              	.LVL1:
-  59              	.L12:
-  60              		.loc 1 16 43 is_stmt 1 discriminator 2 view .LVU9
-  61              		.loc 1 16 44 is_stmt 0 discriminator 2 view .LVU10
-  62 0018 013C     		subs	r4, r4, #1
-  63              	.LVL2:
-  64              	.L2:
-  65              		.loc 1 16 36 is_stmt 1 discriminator 1 view .LVU11
-  66              		.loc 1 16 5 is_stmt 0 discriminator 1 view .LVU12
-  67 001a 002C     		cmp	r4, #0
-  68 001c 1BDD     		ble	.L11
-  69              	.LBB3:
+  52              		.loc 1 16 5 is_stmt 1 view .LVU5
+  53              	.LBB2:
+  54              		.loc 1 16 10 view .LVU6
+  55              		.loc 1 16 14 is_stmt 0 view .LVU7
+  56 0014 0F20     		movs	r0, #15
+  57              		.loc 1 16 5 view .LVU8
+  58 0016 00E0     		b	.L2
+  59              	.LVL1:
+  60              	.L12:
+  61              		.loc 1 16 43 is_stmt 1 discriminator 2 view .LVU9
+  62              		.loc 1 16 44 is_stmt 0 discriminator 2 view .LVU10
+  63 0018 0138     		subs	r0, r0, #1
+  64              	.LVL2:
+  65              	.L2:
+  66              		.loc 1 16 36 is_stmt 1 discriminator 1 view .LVU11
+  67              		.loc 1 16 5 is_stmt 0 discriminator 1 view .LVU12
+  68 001a 0028     		cmp	r0, #0
+  69 001c 19DD     		ble	.L11
+  70              	.LBB3:
   17:Src/Filter.c  ****     {
   18:Src/Filter.c  ****         for (int x = 0; x < 16; x++) // enumerate through values
-  70              		.loc 1 18 18 view .LVU13
-  71 001e 0021     		movs	r1, #0
-  72              	.L4:
-  73              	.LVL3:
-  74              		.loc 1 18 25 is_stmt 1 discriminator 1 view .LVU14
-  75              		.loc 1 18 9 is_stmt 0 discriminator 1 view .LVU15
-  76 0020 0F29     		cmp	r1, #15
-  77 0022 F9DC     		bgt	.L12
+  71              		.loc 1 18 18 view .LVU13
+  72 001e 0021     		movs	r1, #0
+  73              	.L4:
+  74              	.LVL3:
+  75              		.loc 1 18 25 is_stmt 1 discriminator 1 view .LVU14
+  76              		.loc 1 18 9 is_stmt 0 discriminator 1 view .LVU15
+  77 0020 0F29     		cmp	r1, #15
+  78 0022 F9DC     		bgt	.L12
   19:Src/Filter.c  ****         {
   20:Src/Filter.c  ****             State.ADC_ValuesBuffer[y][x] = State.ADC_ValuesBuffer[y - 1][x]; //move by +1 index
-  78              		.loc 1 20 13 is_stmt 1 discriminator 3 view .LVU16
-  79              		.loc 1 20 69 is_stmt 0 discriminator 3 view .LVU17
-  80 0024 631E     		subs	r3, r4, #1
-  81              		.loc 1 20 73 discriminator 3 view .LVU18
-  82 0026 2648     		ldr	r0, .L13
-  83 0028 1B01     		lsls	r3, r3, #4
-  84 002a 5B18     		adds	r3, r3, r1
-  85 002c 2233     		adds	r3, r3, #34
-  86 002e 9B00     		lsls	r3, r3, #2
-  87 0030 C318     		adds	r3, r0, r3
+  79              		.loc 1 20 13 is_stmt 1 discriminator 3 view .LVU16
+  80              		.loc 1 20 69 is_stmt 0 discriminator 3 view .LVU17
+  81 0024 431E     		subs	r3, r0, #1
+  82              		.loc 1 20 73 discriminator 3 view .LVU18
+  83 0026 244C     		ldr	r4, .L13
+  84 0028 1B01     		lsls	r3, r3, #4
+  85 002a 5B18     		adds	r3, r3, r1
+  86 002c 2233     		adds	r3, r3, #34
+  87 002e 9B00     		lsls	r3, r3, #2
   88              		.loc 1 20 42 discriminator 3 view .LVU19
-  89 0032 2201     		lsls	r2, r4, #4
-  90 0034 5218     		adds	r2, r2, r1
-  91 0036 2232     		adds	r2, r2, #34
-  92 0038 9200     		lsls	r2, r2, #2
-  93 003a 8218     		adds	r2, r0, r2
-  94 003c 5868     		ldr	r0, [r3, #4]
-  95 003e 5060     		str	r0, [r2, #4]
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccxJaoIz.s 			page 3
-
-
+  89 0030 0201     		lsls	r2, r0, #4
+  90 0032 5218     		adds	r2, r2, r1
+  91 0034 2232     		adds	r2, r2, #34
+  92 0036 9200     		lsls	r2, r2, #2
+  93 0038 1D59     		ldr	r5, [r3, r4]
+  94 003a 1551     		str	r5, [r2, r4]
   21:Src/Filter.c  ****             acc[x] = acc[x] + State.ADC_ValuesBuffer[y - 1][x];              //accumulate
-  96              		.loc 1 21 13 is_stmt 1 discriminator 3 view .LVU20
-  97              		.loc 1 21 25 is_stmt 0 discriminator 3 view .LVU21
-  98 0040 8A00     		lsls	r2, r1, #2
-  99 0042 02A8     		add	r0, sp, #8
- 100 0044 1058     		ldr	r0, [r2, r0]
- 101 0046 0190     		str	r0, [sp, #4]
- 102              		.loc 1 21 60 discriminator 3 view .LVU22
- 103 0048 5B68     		ldr	r3, [r3, #4]
- 104              		.loc 1 21 29 discriminator 3 view .LVU23
- 105 004a 8446     		mov	ip, r0
- 106 004c 6344     		add	r3, r3, ip
- 107              		.loc 1 21 20 discriminator 3 view .LVU24
- 108 004e 02A8     		add	r0, sp, #8
- 109 0050 1350     		str	r3, [r2, r0]
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 3
+
+
+  95              		.loc 1 21 13 is_stmt 1 discriminator 3 view .LVU20
+  96              		.loc 1 21 25 is_stmt 0 discriminator 3 view .LVU21
+  97 003c 8A00     		lsls	r2, r1, #2
+  98 003e 02AD     		add	r5, sp, #8
+  99 0040 5559     		ldr	r5, [r2, r5]
+ 100 0042 0195     		str	r5, [sp, #4]
+ 101              		.loc 1 21 60 discriminator 3 view .LVU22
+ 102 0044 1B59     		ldr	r3, [r3, r4]
+ 103              		.loc 1 21 29 discriminator 3 view .LVU23
+ 104 0046 AC46     		mov	ip, r5
+ 105 0048 6344     		add	r3, r3, ip
+ 106              		.loc 1 21 20 discriminator 3 view .LVU24
+ 107 004a 02AC     		add	r4, sp, #8
+ 108 004c 1351     		str	r3, [r2, r4]
   18:Src/Filter.c  ****         {
- 110              		.loc 1 18 33 is_stmt 1 discriminator 3 view .LVU25
+ 109              		.loc 1 18 33 is_stmt 1 discriminator 3 view .LVU25
   18:Src/Filter.c  ****         {
- 111              		.loc 1 18 34 is_stmt 0 discriminator 3 view .LVU26
- 112 0052 0131     		adds	r1, r1, #1
- 113              	.LVL4:
+ 110              		.loc 1 18 34 is_stmt 0 discriminator 3 view .LVU26
+ 111 004e 0131     		adds	r1, r1, #1
+ 112              	.LVL4:
   18:Src/Filter.c  ****         {
- 114              		.loc 1 18 34 discriminator 3 view .LVU27
- 115 0054 E4E7     		b	.L4
- 116              	.LVL5:
- 117              	.L11:
+ 113              		.loc 1 18 34 discriminator 3 view .LVU27
+ 114 0050 E6E7     		b	.L4
+ 115              	.LVL5:
+ 116              	.L11:
   18:Src/Filter.c  ****         {
- 118              		.loc 1 18 34 discriminator 3 view .LVU28
- 119              	.LBE3:
- 120              	.LBE2:
- 121              	.LBB4:
+ 117              		.loc 1 18 34 discriminator 3 view .LVU28
+ 118              	.LBE3:
+ 119              	.LBE2:
+ 120              	.LBB4:
   22:Src/Filter.c  ****         }
   23:Src/Filter.c  ****     }
   24:Src/Filter.c  ****     for (int x = 0; x < 16; x++) // enumerate through new values
- 122              		.loc 1 24 14 view .LVU29
- 123 0056 0022     		movs	r2, #0
- 124 0058 1AE0     		b	.L5
- 125              	.LVL6:
- 126              	.L6:
+ 121              		.loc 1 24 14 view .LVU29
+ 122 0052 0022     		movs	r2, #0
+ 123 0054 17E0     		b	.L5
+ 124              	.LVL6:
+ 125              	.L6:
   25:Src/Filter.c  ****     {
   26:Src/Filter.c  ****         State.ADC_ValuesBuffer[0][x] = State.ADC_Values[x];  //Insert new values to the front of th
- 127              		.loc 1 26 9 is_stmt 1 discriminator 3 view .LVU30
- 128              		.loc 1 26 56 is_stmt 0 discriminator 3 view .LVU31
- 129 005a 1949     		ldr	r1, .L13
- 130 005c 1300     		movs	r3, r2
- 131 005e 1233     		adds	r3, r3, #18
- 132 0060 9B00     		lsls	r3, r3, #2
- 133 0062 CB18     		adds	r3, r1, r3
- 134 0064 5B68     		ldr	r3, [r3, #4]
- 135              		.loc 1 26 38 discriminator 3 view .LVU32
- 136 0066 1000     		movs	r0, r2
- 137 0068 2230     		adds	r0, r0, #34
- 138 006a 8000     		lsls	r0, r0, #2
- 139 006c 0818     		adds	r0, r1, r0
- 140 006e 4360     		str	r3, [r0, #4]
+ 126              		.loc 1 26 9 is_stmt 1 discriminator 3 view .LVU30
+ 127              		.loc 1 26 56 is_stmt 0 discriminator 3 view .LVU31
+ 128 0056 1849     		ldr	r1, .L13
+ 129 0058 1300     		movs	r3, r2
+ 130 005a 1233     		adds	r3, r3, #18
+ 131 005c 9B00     		lsls	r3, r3, #2
+ 132 005e 5B58     		ldr	r3, [r3, r1]
+ 133              		.loc 1 26 38 discriminator 3 view .LVU32
+ 134 0060 1000     		movs	r0, r2
+ 135 0062 2230     		adds	r0, r0, #34
+ 136 0064 8000     		lsls	r0, r0, #2
+ 137 0066 4350     		str	r3, [r0, r1]
   27:Src/Filter.c  ****         acc[x] = (acc[x] + State.ADC_Values[x]);             //accumulate new value
- 141              		.loc 1 27 9 is_stmt 1 discriminator 3 view .LVU33
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccxJaoIz.s 			page 4
+ 138              		.loc 1 27 9 is_stmt 1 discriminator 3 view .LVU33
+ 139              		.loc 1 27 22 is_stmt 0 discriminator 3 view .LVU34
+ 140 0068 9000     		lsls	r0, r2, #2
+ 141 006a 02AC     		add	r4, sp, #8
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 4
 
 
- 142              		.loc 1 27 22 is_stmt 0 discriminator 3 view .LVU34
- 143 0070 9000     		lsls	r0, r2, #2
- 144 0072 02AC     		add	r4, sp, #8
- 145 0074 0459     		ldr	r4, [r0, r4]
- 146 0076 0194     		str	r4, [sp, #4]
- 147              		.loc 1 27 26 discriminator 3 view .LVU35
- 148 0078 A446     		mov	ip, r4
- 149 007a 6344     		add	r3, r3, ip
- 150              		.loc 1 27 16 discriminator 3 view .LVU36
- 151 007c 02AC     		add	r4, sp, #8
- 152 007e 0351     		str	r3, [r0, r4]
+ 142 006c 0459     		ldr	r4, [r0, r4]
+ 143 006e 0194     		str	r4, [sp, #4]
+ 144              		.loc 1 27 26 discriminator 3 view .LVU35
+ 145 0070 A446     		mov	ip, r4
+ 146 0072 6344     		add	r3, r3, ip
+ 147              		.loc 1 27 16 discriminator 3 view .LVU36
+ 148 0074 02AC     		add	r4, sp, #8
+ 149 0076 0351     		str	r3, [r0, r4]
   28:Src/Filter.c  ****         State.ADC_ValuesFiltered[x] = acc[x] / FilterLength; //calculate average
- 153              		.loc 1 28 9 is_stmt 1 discriminator 3 view .LVU37
- 154              		.loc 1 28 46 is_stmt 0 discriminator 3 view .LVU38
- 155 0080 1B09     		lsrs	r3, r3, #4
- 156              		.loc 1 28 37 discriminator 3 view .LVU39
- 157 0082 1000     		movs	r0, r2
- 158 0084 2330     		adds	r0, r0, #35
- 159 0086 FF30     		adds	r0, r0, #255
- 160 0088 8000     		lsls	r0, r0, #2
- 161 008a 0918     		adds	r1, r1, r0
- 162 008c 4B60     		str	r3, [r1, #4]
+ 150              		.loc 1 28 9 is_stmt 1 discriminator 3 view .LVU37
+ 151              		.loc 1 28 46 is_stmt 0 discriminator 3 view .LVU38
+ 152 0078 1B09     		lsrs	r3, r3, #4
+ 153              		.loc 1 28 37 discriminator 3 view .LVU39
+ 154 007a 1000     		movs	r0, r2
+ 155 007c 2330     		adds	r0, r0, #35
+ 156 007e FF30     		adds	r0, r0, #255
+ 157 0080 8000     		lsls	r0, r0, #2
+ 158 0082 4350     		str	r3, [r0, r1]
   24:Src/Filter.c  ****     {
- 163              		.loc 1 24 29 is_stmt 1 discriminator 3 view .LVU40
+ 159              		.loc 1 24 29 is_stmt 1 discriminator 3 view .LVU40
   24:Src/Filter.c  ****     {
- 164              		.loc 1 24 30 is_stmt 0 discriminator 3 view .LVU41
- 165 008e 0132     		adds	r2, r2, #1
- 166              	.LVL7:
- 167              	.L5:
+ 160              		.loc 1 24 30 is_stmt 0 discriminator 3 view .LVU41
+ 161 0084 0132     		adds	r2, r2, #1
+ 162              	.LVL7:
+ 163              	.L5:
   24:Src/Filter.c  ****     {
- 168              		.loc 1 24 21 is_stmt 1 discriminator 1 view .LVU42
+ 164              		.loc 1 24 21 is_stmt 1 discriminator 1 view .LVU42
   24:Src/Filter.c  ****     {
- 169              		.loc 1 24 5 is_stmt 0 discriminator 1 view .LVU43
- 170 0090 0F2A     		cmp	r2, #15
- 171 0092 E2DD     		ble	.L6
- 172              	.LBE4:
+ 165              		.loc 1 24 5 is_stmt 0 discriminator 1 view .LVU43
+ 166 0086 0F2A     		cmp	r2, #15
+ 167 0088 E5DD     		ble	.L6
+ 168              	.LBE4:
   29:Src/Filter.c  ****     }
   30:Src/Filter.c  **** 
   31:Src/Filter.c  ****     State.ADC_Filter_Iteration++;                                                                 /
- 173              		.loc 1 31 5 is_stmt 1 view .LVU44
- 174              		.loc 1 31 10 is_stmt 0 view .LVU45
- 175 0094 0A49     		ldr	r1, .L13
- 176 0096 0B4A     		ldr	r2, .L13+4
- 177              	.LVL8:
- 178              		.loc 1 31 10 view .LVU46
- 179 0098 8B5C     		ldrb	r3, [r1, r2]
- 180              		.loc 1 31 31 view .LVU47
- 181 009a 0133     		adds	r3, r3, #1
- 182 009c DBB2     		uxtb	r3, r3
- 183 009e 8B54     		strb	r3, [r1, r2]
+ 169              		.loc 1 31 5 is_stmt 1 view .LVU44
+ 170              		.loc 1 31 10 is_stmt 0 view .LVU45
+ 171 008a 0B49     		ldr	r1, .L13
+ 172 008c 9922     		movs	r2, #153
+ 173              	.LVL8:
+ 174              		.loc 1 31 10 view .LVU46
+ 175 008e D200     		lsls	r2, r2, #3
+ 176 0090 8B5C     		ldrb	r3, [r1, r2]
+ 177              		.loc 1 31 31 view .LVU47
+ 178 0092 0133     		adds	r3, r3, #1
+ 179 0094 DBB2     		uxtb	r3, r3
+ 180 0096 8B54     		strb	r3, [r1, r2]
   32:Src/Filter.c  ****     State.ADC_Filter_Valid = State.ADC_Filter_Iteration > FilterLength || State.ADC_Filter_Valid; /
- 184              		.loc 1 32 5 is_stmt 1 view .LVU48
- 185              		.loc 1 32 72 is_stmt 0 view .LVU49
- 186 00a0 102B     		cmp	r3, #16
- 187 00a2 05D8     		bhi	.L9
- 188              		.loc 1 32 80 discriminator 2 view .LVU50
- 189 00a4 084B     		ldr	r3, .L13+8
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccxJaoIz.s 			page 5
+ 181              		.loc 1 32 5 is_stmt 1 view .LVU48
+ 182              		.loc 1 32 72 is_stmt 0 view .LVU49
+ 183 0098 102B     		cmp	r3, #16
+ 184 009a 05D8     		bhi	.L9
+ 185              		.loc 1 32 80 discriminator 2 view .LVU50
+ 186 009c 074B     		ldr	r3, .L13+4
+ 187 009e CB5C     		ldrb	r3, [r1, r3]
+ 188              		.loc 1 32 72 discriminator 2 view .LVU51
+ 189 00a0 002B     		cmp	r3, #0
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 5
 
 
- 190 00a6 CB5C     		ldrb	r3, [r1, r3]
- 191              		.loc 1 32 72 discriminator 2 view .LVU51
- 192 00a8 002B     		cmp	r3, #0
- 193 00aa 07D0     		beq	.L10
- 194              		.loc 1 32 72 view .LVU52
- 195 00ac 0123     		movs	r3, #1
- 196 00ae 00E0     		b	.L7
- 197              	.L9:
- 198 00b0 0123     		movs	r3, #1
- 199              	.L7:
- 200              		.loc 1 32 28 discriminator 6 view .LVU53
- 201 00b2 0349     		ldr	r1, .L13
- 202 00b4 044A     		ldr	r2, .L13+8
- 203 00b6 8B54     		strb	r3, [r1, r2]
+ 190 00a2 07D0     		beq	.L10
+ 191              		.loc 1 32 72 view .LVU52
+ 192 00a4 0123     		movs	r3, #1
+ 193 00a6 00E0     		b	.L7
+ 194              	.L9:
+ 195 00a8 0123     		movs	r3, #1
+ 196              	.L7:
+ 197              		.loc 1 32 28 discriminator 6 view .LVU53
+ 198 00aa 0349     		ldr	r1, .L13
+ 199 00ac 034A     		ldr	r2, .L13+4
+ 200 00ae 8B54     		strb	r3, [r1, r2]
   33:Src/Filter.c  **** 
   34:Src/Filter.c  ****     //Output:                                                 //Uncomment to test
   35:Src/Filter.c  ****     // SERIAL_WRITE("Filtered:\n");                              //
@@ -277,54 +274,53 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccxJaoIz.s 			page 1
   52:Src/Filter.c  ****     // SERIAL_WRITE("\nFilter contains initial zeros!\n\n"); //
   53:Src/Filter.c  ****     // }                                                         //
   54:Src/Filter.c  **** }
- 204              		.loc 1 54 1 discriminator 6 view .LVU54
- 205 00b8 12B0     		add	sp, sp, #72
- 206              		@ sp needed
- 207 00ba 10BD     		pop	{r4, pc}
- 208              	.L10:
+ 201              		.loc 1 54 1 discriminator 6 view .LVU54
+ 202 00b0 13B0     		add	sp, sp, #76
+ 203              		@ sp needed
+ 204 00b2 30BD     		pop	{r4, r5, pc}
+ 205              	.L10:
   32:Src/Filter.c  ****     State.ADC_Filter_Valid = State.ADC_Filter_Iteration > FilterLength || State.ADC_Filter_Valid; /
- 209              		.loc 1 32 72 view .LVU55
- 210 00bc 0023     		movs	r3, #0
- 211 00be F8E7     		b	.L7
- 212              	.L14:
- 213              		.align	2
- 214              	.L13:
- 215 00c0 00000000 		.word	State
- 216 00c4 CC040000 		.word	1228
- 217 00c8 CD040000 		.word	1229
- 218              		.cfi_endproc
- 219              	.LFE284:
- 221              		.text
- 222              	.Letext0:
- 223              		.file 2 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\machine\\_default_types.h"
- 224              		.file 3 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_stdint.h"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccxJaoIz.s 			page 6
+ 206              		.loc 1 32 72 view .LVU55
+ 207 00b4 0023     		movs	r3, #0
+ 208 00b6 F8E7     		b	.L7
+ 209              	.L14:
+ 210              		.align	2
+ 211              	.L13:
+ 212 00b8 00000000 		.word	State
+ 213 00bc C9040000 		.word	1225
+ 214              		.cfi_endproc
+ 215              	.LFE284:
+ 217              		.text
+ 218              	.Letext0:
+ 219              		.file 2 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 220              		.file 3 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 221              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
+ 222              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
+ 223              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+ 224              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 6
 
 
- 225              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
- 226              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
- 227              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
- 228              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
- 229              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
- 230              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
- 231              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
- 232              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
- 233              		.file 12 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\lock.h"
- 234              		.file 13 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_types.h"
- 235              		.file 14 "c:\\gnu tools arm embedded\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\stddef.h"
- 236              		.file 15 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\reent.h"
- 237              		.file 16 "Inc/usart.h"
- 238              		.file 17 "Inc/state.h"
- 239              		.file 18 "Inc/spi.h"
- 240              		.file 19 "<built-in>"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccxJaoIz.s 			page 7
+ 225              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
+ 226              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
+ 227              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
+ 228              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
+ 229              		.file 12 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\lock.h"
+ 230              		.file 13 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_types.h"
+ 231              		.file 14 "c:\\gnu tools arm embedded\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\stddef.h"
+ 232              		.file 15 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\reent.h"
+ 233              		.file 16 "Inc/usart.h"
+ 234              		.file 17 "Inc/state.h"
+ 235              		.file 18 "Inc/spi.h"
+ 236              		.file 19 "<built-in>"
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 Filter.c
-C:\Users\matil\AppData\Local\Temp\ccxJaoIz.s:16     .text.Filter:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccxJaoIz.s:24     .text.Filter:00000000 Filter
-C:\Users\matil\AppData\Local\Temp\ccxJaoIz.s:215    .text.Filter:000000c0 $d
+C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s:16     .text.Filter:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s:24     .text.Filter:00000000 Filter
+C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s:212    .text.Filter:000000b8 $d
 
 UNDEFINED SYMBOLS
 memset

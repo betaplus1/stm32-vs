@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cczm6azb.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 1
   43              		.section	.text.UART_PARSE,"ax",%progbits
   44              		.align	1
   45              		.global	UART_PARSE
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 2
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cczm6azb.s 			page 2
 
 
   46              		.arch armv6s-m
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 1
   91 0020 0422     		movs	r2, #4
   92 0022 2900     		movs	r1, r5
   93 0024 3548     		ldr	r0, .L12+4
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 3
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cczm6azb.s 			page 3
 
 
   94 0026 FFF7FEFF 		bl	HAL_UART_Transmit
@@ -142,7 +142,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 1
  109              		.loc 1 13 19 is_stmt 0 view .LVU11
  110 0036 334B     		ldr	r3, .L12+12
  111 0038 0122     		movs	r2, #1
- 112 003a 5A72     		strb	r2, [r3, #9]
+ 112 003a 5A71     		strb	r2, [r3, #5]
  113              	.LVL6:
  114              	.L1:
  115              		.loc 1 13 19 view .LVU12
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 1
   42:Src/usart_utils.c ****         State.cmd = cmd_rf_state;
   43:Src/usart_utils.c ****     }
   44:Src/usart_utils.c ****     else
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cczm6azb.s 			page 4
 
 
   45:Src/usart_utils.c ****     {
@@ -210,7 +210,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 1
  134              		.loc 1 17 19 is_stmt 0 view .LVU18
  135 004c 2D4B     		ldr	r3, .L12+12
  136 004e 0222     		movs	r2, #2
- 137 0050 5A72     		strb	r2, [r3, #9]
+ 137 0050 5A71     		strb	r2, [r3, #5]
  138 0052 F3E7     		b	.L1
  139              	.L4:
   19:Src/usart_utils.c ****     else if (strcmp(buffer, "adc reset") == 0)
@@ -231,14 +231,14 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 1
  150              		.loc 1 21 19 is_stmt 0 view .LVU23
  151 0060 284B     		ldr	r3, .L12+12
  152 0062 0322     		movs	r2, #3
- 153 0064 5A72     		strb	r2, [r3, #9]
+ 153 0064 5A71     		strb	r2, [r3, #5]
  154 0066 E9E7     		b	.L1
  155              	.L5:
   23:Src/usart_utils.c ****     else if (strcmp(buffer, "adc debug") == 0)
  156              		.loc 1 23 10 is_stmt 1 view .LVU24
   23:Src/usart_utils.c ****     else if (strcmp(buffer, "adc debug") == 0)
  157              		.loc 1 23 14 is_stmt 0 view .LVU25
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 5
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cczm6azb.s 			page 5
 
 
  158 0068 2949     		ldr	r1, .L12+24
@@ -255,7 +255,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 1
  166              		.loc 1 25 19 is_stmt 0 view .LVU28
  167 0074 234B     		ldr	r3, .L12+12
  168 0076 0422     		movs	r2, #4
- 169 0078 5A72     		strb	r2, [r3, #9]
+ 169 0078 5A71     		strb	r2, [r3, #5]
  170 007a DFE7     		b	.L1
  171              	.L6:
   27:Src/usart_utils.c ****     else if (strcmp(buffer, "adc values") == 0)
@@ -288,7 +288,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 1
  191              		.loc 1 34 19 is_stmt 0 view .LVU36
  192 0094 1B4B     		ldr	r3, .L12+12
  193 0096 0722     		movs	r2, #7
- 194 0098 5A72     		strb	r2, [r3, #9]
+ 194 0098 5A71     		strb	r2, [r3, #5]
  195 009a CFE7     		b	.L1
  196              	.L11:
  197              	.LBB4:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 1
  200              	.LVL13:
   29:Src/usart_utils.c ****         SERIAL_WRITE("\n");
  201              		.loc 1 29 9 is_stmt 0 view .LVU38
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 6
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cczm6azb.s 			page 6
 
 
  202 009e 0023     		movs	r3, #0
@@ -331,7 +331,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 1
  224              		.loc 1 30 19 is_stmt 0 view .LVU43
  225 00be 114B     		ldr	r3, .L12+12
  226 00c0 0622     		movs	r2, #6
- 227 00c2 5A72     		strb	r2, [r3, #9]
+ 227 00c2 5A71     		strb	r2, [r3, #5]
  228 00c4 BAE7     		b	.L1
  229              	.LVL17:
  230              	.L8:
@@ -353,12 +353,12 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 1
  241              		.loc 1 38 19 is_stmt 0 view .LVU48
  242 00d2 0C4B     		ldr	r3, .L12+12
  243 00d4 0822     		movs	r2, #8
- 244 00d6 5A72     		strb	r2, [r3, #9]
+ 244 00d6 5A71     		strb	r2, [r3, #5]
  245 00d8 B0E7     		b	.L1
  246              	.L9:
   40:Src/usart_utils.c ****     else if (strcmp(buffer, "rf") == 0)
  247              		.loc 1 40 10 is_stmt 1 view .LVU49
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 7
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cczm6azb.s 			page 7
 
 
   40:Src/usart_utils.c ****     else if (strcmp(buffer, "rf") == 0)
@@ -377,7 +377,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 1
  257              		.loc 1 42 19 is_stmt 0 view .LVU53
  258 00e6 074B     		ldr	r3, .L12+12
  259 00e8 0922     		movs	r2, #9
- 260 00ea 5A72     		strb	r2, [r3, #9]
+ 260 00ea 5A71     		strb	r2, [r3, #5]
  261 00ec A6E7     		b	.L1
  262              	.L10:
   46:Src/usart_utils.c ****         State.cmd = cmd_undefined;
@@ -386,7 +386,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 1
  264              		.loc 1 46 19 is_stmt 0 view .LVU55
  265 00ee 054B     		ldr	r3, .L12+12
  266 00f0 FF22     		movs	r2, #255
- 267 00f2 5A72     		strb	r2, [r3, #9]
+ 267 00f2 5A71     		strb	r2, [r3, #5]
  268              	.LBE5:
  269              		.loc 1 48 1 view .LVU56
  270 00f4 A2E7     		b	.L1
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 1
  297              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
  298              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
  299              		.file 11 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\lock.h"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 8
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cczm6azb.s 			page 8
 
 
  300              		.file 12 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_types.h"
@@ -427,15 +427,15 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 1
  303              		.file 15 "Inc/usart.h"
  304              		.file 16 "Inc/state.h"
  305              		.file 17 "<built-in>"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s 			page 9
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cczm6azb.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usart_utils.c
-C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s:16     .rodata.UART_PARSE.str1.4:00000000 $d
-C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s:44     .text.UART_PARSE:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s:52     .text.UART_PARSE:00000000 UART_PARSE
-C:\Users\matil\AppData\Local\Temp\ccG9G4Gf.s:274    .text.UART_PARSE:000000f8 $d
+C:\Users\matil\AppData\Local\Temp\cczm6azb.s:16     .rodata.UART_PARSE.str1.4:00000000 $d
+C:\Users\matil\AppData\Local\Temp\cczm6azb.s:44     .text.UART_PARSE:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cczm6azb.s:52     .text.UART_PARSE:00000000 UART_PARSE
+C:\Users\matil\AppData\Local\Temp\cczm6azb.s:274    .text.UART_PARSE:000000f8 $d
 
 UNDEFINED SYMBOLS
 memset

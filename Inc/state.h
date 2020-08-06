@@ -5,7 +5,6 @@
 typedef struct state
 {
     int uptime;
-    long int temperature;
 
     uint8_t error;
     uint8_t cmd;
