@@ -41,6 +41,14 @@ void UART_PARSE(uint8_t buffer[UART_RX_BUFFER_LENGTH])
     {
         State.cmd = cmd_rf_state;
     }
+    else if (strcmp(buffer, "pid") == 0)
+    {
+        State.cmd = cmd_rf_pid;
+    }
+    else if (strcmp(buffer, "loop") == 0)
+    {
+        State.cmd = cmd_loop;
+    }
     else
     {
         State.cmd = cmd_undefined;

@@ -58,6 +58,40 @@ extern "C"
 		HAL_UART_Transmit(&huart2, ___buff, ___len, 1000);        \
 	}
 
+#define SERIAL_RED "\033[0;31m"
+#define SERIAL_GREEN "\033[0;32m"
+#define SERIAL_YELLOW "\033[0;33m"
+#define SERIAL_BLUE "\033[0;34m"
+#define SERIAL_COLOR_RESET "\033[0m"
+
+#define SERIAL_WRITE_RED(f_, ...)         \
+	{                                     \
+		SERIAL_WRITE(SERIAL_RED);         \
+		SERIAL_WRITE(f_, ##__VA_ARGS__);  \
+		SERIAL_WRITE(SERIAL_COLOR_RESET); \
+	}
+
+#define SERIAL_WRITE_GREEN(f_, ...)       \
+	{                                     \
+		SERIAL_WRITE(SERIAL_GREEN);       \
+		SERIAL_WRITE(f_, ##__VA_ARGS__);  \
+		SERIAL_WRITE(SERIAL_COLOR_RESET); \
+	}
+
+#define SERIAL_WRITE_YELLOW(f_, ...)      \
+	{                                     \
+		SERIAL_WRITE(SERIAL_YELLOW);      \
+		SERIAL_WRITE(f_, ##__VA_ARGS__);  \
+		SERIAL_WRITE(SERIAL_COLOR_RESET); \
+	}
+
+#define SERIAL_WRITE_BLUE(f_, ...)        \
+	{                                     \
+		SERIAL_WRITE(SERIAL_BLUE);        \
+		SERIAL_WRITE(f_, ##__VA_ARGS__);  \
+		SERIAL_WRITE(SERIAL_COLOR_RESET); \
+	}
+
 #define BYTE_TO_BINARY_PATTERN "%c%c%c%c%c%c%c%c"
 #define BYTE_TO_BINARY(byte)       \
 	(byte & 0x80 ? '1' : '0'),     \
@@ -78,7 +112,7 @@ extern "C"
 	/* Exported functions prototypes ---------------------------------------------*/
 	void Error_Handler(void);
 
-	/* USER CODE BEGIN EFP */
+/* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */
 

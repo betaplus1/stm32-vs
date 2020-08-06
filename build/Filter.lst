@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccVaKWOy.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -54,11 +54,11 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 1
   40              		.loc 1 12 5 view .LVU1
   41              		.loc 1 12 23 is_stmt 0 view .LVU2
   42 0004 2C4A     		ldr	r2, .L13
-  43 0006 4723     		movs	r3, #71
+  43 0006 4D23     		movs	r3, #77
   44 0008 0021     		movs	r1, #0
   45 000a D154     		strb	r1, [r2, r3]
   13:Src/Filter.c  ****     uint32_t acc[16] = {0}; //Accumulator for moving average
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 2
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccVaKWOy.s 			page 2
 
 
   46              		.loc 1 13 5 is_stmt 1 view .LVU3
@@ -108,17 +108,17 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 1
   83 0026 244C     		ldr	r4, .L13
   84 0028 1B01     		lsls	r3, r3, #4
   85 002a 5B18     		adds	r3, r3, r1
-  86 002c 2233     		adds	r3, r3, #34
+  86 002c 2433     		adds	r3, r3, #36
   87 002e 9B00     		lsls	r3, r3, #2
   88              		.loc 1 20 42 discriminator 3 view .LVU19
   89 0030 0201     		lsls	r2, r0, #4
   90 0032 5218     		adds	r2, r2, r1
-  91 0034 2232     		adds	r2, r2, #34
+  91 0034 2432     		adds	r2, r2, #36
   92 0036 9200     		lsls	r2, r2, #2
   93 0038 1D59     		ldr	r5, [r3, r4]
   94 003a 1551     		str	r5, [r2, r4]
   21:Src/Filter.c  ****             acc[x] = acc[x] + State.ADC_ValuesBuffer[y - 1][x];              //accumulate
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 3
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccVaKWOy.s 			page 3
 
 
   95              		.loc 1 21 13 is_stmt 1 discriminator 3 view .LVU20
@@ -165,12 +165,12 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 1
  127              		.loc 1 26 56 is_stmt 0 discriminator 3 view .LVU31
  128 0056 1849     		ldr	r1, .L13
  129 0058 1300     		movs	r3, r2
- 130 005a 1233     		adds	r3, r3, #18
+ 130 005a 1433     		adds	r3, r3, #20
  131 005c 9B00     		lsls	r3, r3, #2
  132 005e 5B58     		ldr	r3, [r3, r1]
  133              		.loc 1 26 38 discriminator 3 view .LVU32
  134 0060 1000     		movs	r0, r2
- 135 0062 2230     		adds	r0, r0, #34
+ 135 0062 2430     		adds	r0, r0, #36
  136 0064 8000     		lsls	r0, r0, #2
  137 0066 4350     		str	r3, [r0, r1]
   27:Src/Filter.c  ****         acc[x] = (acc[x] + State.ADC_Values[x]);             //accumulate new value
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 1
  139              		.loc 1 27 22 is_stmt 0 discriminator 3 view .LVU34
  140 0068 9000     		lsls	r0, r2, #2
  141 006a 02AC     		add	r4, sp, #8
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccVaKWOy.s 			page 4
 
 
  142 006c 0459     		ldr	r4, [r0, r4]
@@ -195,7 +195,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 1
  152 0078 1B09     		lsrs	r3, r3, #4
  153              		.loc 1 28 37 discriminator 3 view .LVU39
  154 007a 1000     		movs	r0, r2
- 155 007c 2330     		adds	r0, r0, #35
+ 155 007c 2530     		adds	r0, r0, #37
  156 007e FF30     		adds	r0, r0, #255
  157 0080 8000     		lsls	r0, r0, #2
  158 0082 4350     		str	r3, [r0, r1]
@@ -219,7 +219,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 1
  169              		.loc 1 31 5 is_stmt 1 view .LVU44
  170              		.loc 1 31 10 is_stmt 0 view .LVU45
  171 008a 0B49     		ldr	r1, .L13
- 172 008c 9922     		movs	r2, #153
+ 172 008c 9A22     		movs	r2, #154
  173              	.LVL8:
  174              		.loc 1 31 10 view .LVU46
  175 008e D200     		lsls	r2, r2, #3
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 1
  187 009e CB5C     		ldrb	r3, [r1, r3]
  188              		.loc 1 32 72 discriminator 2 view .LVU51
  189 00a0 002B     		cmp	r3, #0
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 5
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccVaKWOy.s 			page 5
 
 
  190 00a2 07D0     		beq	.L10
@@ -287,7 +287,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 1
  210              		.align	2
  211              	.L13:
  212 00b8 00000000 		.word	State
- 213 00bc C9040000 		.word	1225
+ 213 00bc D1040000 		.word	1233
  214              		.cfi_endproc
  215              	.LFE284:
  217              		.text
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 1
  222              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
  223              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
  224              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 6
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccVaKWOy.s 			page 6
 
 
  225              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
@@ -313,14 +313,14 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 1
  234              		.file 17 "Inc/state.h"
  235              		.file 18 "Inc/spi.h"
  236              		.file 19 "<built-in>"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s 			page 7
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccVaKWOy.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 Filter.c
-C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s:16     .text.Filter:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s:24     .text.Filter:00000000 Filter
-C:\Users\matil\AppData\Local\Temp\ccnGJ0Ai.s:212    .text.Filter:000000b8 $d
+C:\Users\matil\AppData\Local\Temp\ccVaKWOy.s:16     .text.Filter:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccVaKWOy.s:24     .text.Filter:00000000 Filter
+C:\Users\matil\AppData\Local\Temp\ccVaKWOy.s:212    .text.Filter:000000b8 $d
 
 UNDEFINED SYMBOLS
 memset

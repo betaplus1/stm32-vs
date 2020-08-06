@@ -4,10 +4,12 @@
 #define FilterLength 16
 typedef struct state
 {
-    int uptime;
+    uint64_t uptime;
+    uint8_t uptime_flag;
 
     uint8_t error;
     uint8_t cmd;
+    uint8_t cmdLoop;
     uint8_t UART_RX_BUFF[UART_RX_BUFFER_LENGTH];
 
     uint8_t ADC_Channel;
@@ -35,6 +37,7 @@ typedef struct state
     int64_t PID_352_T;
     int64_t PID_352_P_error;
     int64_t PID_352_I_error;
+    int8_t PID_352_LOCK;
 
     uint32_t PID_704_Output;
     int64_t PID_704_P;
@@ -42,6 +45,8 @@ typedef struct state
     int64_t PID_704_T;
     int64_t PID_704_P_error;
     int64_t PID_704_I_error;
+    int8_t PID_704_LOCK;
+
 } state;
 
 #endif /* __STATE */

@@ -53,6 +53,8 @@ int64_t RMS_Power(uint8_t ADC_CH)
 //Determines optimal setpoints of Phase shifters and detectors slope.
 void Calib()
 {
+    SERIAL_WRITE(SERIAL_YELLOW);
+    SERIAL_WRITE("[CALIBRATION] ...")
     //704
     DAC_cmd(RF_PS_704_OFFSET + DAC_WRITE + 0);
     DAC_cmd(RF_PS_704_FINE + DAC_WRITE + 0x7fff);
@@ -72,11 +74,11 @@ void Calib()
 
         if (MSE704 < State.PD1_PD2_MSE)
         {
-            SERIAL_WRITE("Phase1: %lu\n", Phase1);
-            SERIAL_WRITE("Phase2: %lu\n", Phase2);
-            SERIAL_WRITE("error1: %li\n", error1);
-            SERIAL_WRITE("error2: %li\n", error2);
-            SERIAL_WRITE("MSE704: %li\n\n", MSE704);
+            // SERIAL_WRITE("Phase1: %lu\n", Phase1);
+            // SERIAL_WRITE("Phase2: %lu\n", Phase2);
+            // SERIAL_WRITE("error1: %li\n", error1);
+            // SERIAL_WRITE("error2: %li\n", error2);
+            // SERIAL_WRITE("MSE704: %li\n\n", MSE704);
             State.PD1_PD2_Offset = PS;
             State.PD1_PD2_MSE = MSE704;
             State.PD1_Slope = prevPhase1 < Phase1 ? 1 : -1;
@@ -86,13 +88,15 @@ void Calib()
         prevPhase1 = Phase1;
         prevPhase2 = Phase2;
     }
-    SERIAL_WRITE("PD1+PD2 SETPOINT: %li\n", State.PD1_PD2_SetPoint);
-    SERIAL_WRITE("PD1 SLOPE: %i\n", State.PD1_Slope);
-    SERIAL_WRITE("PD2 SLOPE: %i\n", State.PD2_Slope);
-    SERIAL_WRITE("PS704 OFFSET: %u\n", State.PD1_PD2_Offset);
+    SERIAL_WRITE("\b\b\bPD1+PD2 SETPOINT: %li\n", State.PD1_PD2_SetPoint);
+    SERIAL_WRITE("[CALIBRATION] PD1 SLOPE: %i\n", State.PD1_Slope);
+    SERIAL_WRITE("[CALIBRATION] PD2 SLOPE: %i\n", State.PD2_Slope);
+    SERIAL_WRITE("[CALIBRATION] PS704 OFFSET: %u\n", State.PD1_PD2_Offset);
     DAC_cmd(RF_PS_704_OFFSET + DAC_WRITE + State.PD1_PD2_Offset);
 
     //352
+    SERIAL_WRITE("[CALIBRATION] ...")
+
     DAC_cmd(RF_PS_352_OFFSET + DAC_WRITE + 0);
     DAC_cmd(RF_PS_352_FINE + DAC_WRITE + 0x7fff);
     State.PD3_PD4_MSE = 16200000000;
@@ -111,11 +115,11 @@ void Calib()
 
         if (MSE352 < State.PD3_PD4_MSE)
         {
-            SERIAL_WRITE("Phase3: %lu\n", Phase3);
-            SERIAL_WRITE("Phase4: %lu\n", Phase4);
-            SERIAL_WRITE("error3: %li\n", error3);
-            SERIAL_WRITE("error3: %li\n", error4);
-            SERIAL_WRITE("MSE352: %li\n\n", MSE352);
+            // SERIAL_WRITE("Phase3: %lu\n", Phase3);
+            // SERIAL_WRITE("Phase4: %lu\n", Phase4);
+            // SERIAL_WRITE("error3: %li\n", error3);
+            // SERIAL_WRITE("error3: %li\n", error4);
+            // SERIAL_WRITE("MSE352: %li\n\n", MSE352);
 
             State.PD3_PD4_Offset = PS;
             State.PD3_PD4_MSE = MSE352;
@@ -126,10 +130,11 @@ void Calib()
         prevPhase3 = Phase3;
         prevPhase4 = Phase4;
     }
-    SERIAL_WRITE("PD3+PD4 SETPOINT: %li\n", State.PD3_PD4_SetPoint);
-    SERIAL_WRITE("PD3 SLOPE: %i\n", State.PD3_Slope);
-    SERIAL_WRITE("PD4 SLOPE: %i\n", State.PD4_Slope);
-    SERIAL_WRITE("PS352 OFFSET: %u\n", State.PD3_PD4_Offset);
+    SERIAL_WRITE("\b\b\bPD3+PD4 SETPOINT: %li\n", State.PD3_PD4_SetPoint);
+    SERIAL_WRITE("[CALIBRATION] PD3 SLOPE: %i\n", State.PD3_Slope);
+    SERIAL_WRITE("[CALIBRATION] PD4 SLOPE: %i\n", State.PD4_Slope);
+    SERIAL_WRITE("[CALIBRATION] PS352 OFFSET: %u\n", State.PD3_PD4_Offset);
+    SERIAL_WRITE(SERIAL_COLOR_RESET);
 
     DAC_cmd(RF_PS_352_OFFSET + DAC_WRITE + State.PD3_PD4_Offset);
 }
@@ -152,6 +157,7 @@ void PID_Init()
 }
 void PID352()
 {
+    int64_t prevErr = State.PID_352_P_error;
     State.PID_352_P_error = (State.PD3_Slope * Phase_u(ADC_PD3_Phase_CH)) + (State.PD4_Slope * Phase_u(ADC_PD4_Phase_CH)) - (State.PD3_PD4_SetPoint * 1000);
     State.PID_352_I_error = (State.PID_352_I_error + State.PID_352_P_error) / State.PID_352_T;
     State.PID_352_Output = State.PID_352_Output + (State.PID_352_P * State.PID_352_P_error) / 1000 + (State.PID_352_I * State.PID_352_I_error);
@@ -161,9 +167,30 @@ void PID352()
     }
 
     DAC_cmd(RF_PS_352_FINE + DAC_WRITE + State.PID_352_Output);
+
+    if (State.PID_352_P_error < 50000 && prevErr < 50000 && State.PID_352_LOCK == 1)
+    {
+        return;
+    }
+    else if (State.PID_352_P_error < 50000 && prevErr < 50000 && State.PID_352_LOCK == 0)
+    {
+        State.PID_352_LOCK = 1;
+        SERIAL_WRITE_GREEN("[PID_PHASE_352] LOCKED\n");
+    }
+    else if ((State.PID_352_P_error >= 50000 || prevErr >= 50000) && State.PID_352_LOCK == 1)
+    {
+        State.PID_352_LOCK = 0;
+        SERIAL_WRITE_RED("[PID_PHASE_352] UNLOCKED!!!\n");
+    }
+    else
+    {
+        State.PID_352_LOCK = 0;
+    }
 }
 void PID704()
 {
+    int64_t prevErr = State.PID_704_P_error;
+
     State.PID_704_P_error = (State.PD1_Slope * Phase_u(ADC_PD1_Phase_CH)) + (State.PD2_Slope * Phase_u(ADC_PD2_Phase_CH)) - (State.PD1_PD2_SetPoint * 1000);
     State.PID_704_I_error = (State.PID_704_I_error + State.PID_704_P_error) / State.PID_704_T;
     State.PID_704_Output = State.PID_704_Output + (State.PID_704_P * State.PID_704_P_error) / 1000 + (State.PID_704_I * State.PID_704_I_error);
@@ -173,35 +200,29 @@ void PID704()
         State.PID_704_Output = 0xffff;
     }
     DAC_cmd(RF_PS_704_FINE + DAC_WRITE + State.PID_704_Output);
+
+    if (State.PID_704_P_error < 50000 && prevErr < 50000 && State.PID_704_LOCK == 1)
+    {
+        return;
+    }
+    else if (State.PID_704_P_error < 50000 && prevErr < 50000 && State.PID_704_LOCK == 0)
+    {
+        State.PID_704_LOCK = 1;
+        SERIAL_WRITE_GREEN("[PID_PHASE_704] LOCKED\n");
+    }
+    else if ((State.PID_704_P_error >= 50000 || prevErr >= 50000) && State.PID_704_LOCK == 1)
+    {
+        State.PID_704_LOCK = 0;
+        SERIAL_WRITE_RED("[PID_PHASE_704] UNLOCKED!!!\n");
+    }
+    else
+    {
+        State.PID_704_LOCK = 0;
+    }
 }
 
 void PID()
 {
     PID352();
     PID704();
-
-    SERIAL_WRITE("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
-    SERIAL_WRITE("PD1+PD2 SETPOINT: %li\n", State.PD1_PD2_SetPoint * 1000);
-    SERIAL_WRITE("PID 704 Output: %li\n", State.PID_704_Output);
-    SERIAL_WRITE("PID_704_P_error %i\n", State.PID_704_P_error);
-
-    SERIAL_WRITE("PD1 Phase:\t\t");
-    SERIAL_WRITE("%3i.", Phase_u(ADC_PD1_Phase_CH) / 1000000);
-    SERIAL_WRITE("%06li deg\t\t\n", Phase_u(ADC_PD1_Phase_CH) % 1000000);
-
-    SERIAL_WRITE("PD2 Phase:\t\t");
-    SERIAL_WRITE("%3i.", Phase_u(ADC_PD2_Phase_CH) / 1000000);
-    SERIAL_WRITE("%03li deg\t\t\n\n", Phase_u(ADC_PD2_Phase_CH) % 1000000);
-
-    SERIAL_WRITE("PD3+PD4 SETPOINT: %li\n", State.PD3_PD4_SetPoint * 1000);
-    SERIAL_WRITE("PID 352 Output: %li\n", State.PID_352_Output);
-    SERIAL_WRITE("PID_352_P_error %i\n", State.PID_352_P_error);
-
-    SERIAL_WRITE("PD3 Phase:\t\t");
-    SERIAL_WRITE("%3i.", Phase_u(ADC_PD3_Phase_CH) / 1000000);
-    SERIAL_WRITE("%06li deg\t\t\n", Phase_u(ADC_PD3_Phase_CH) % 1000000);
-
-    SERIAL_WRITE("PD4 Phase:\t\t");
-    SERIAL_WRITE("%3i.", Phase_u(ADC_PD4_Phase_CH) / 1000000);
-    SERIAL_WRITE("%06li deg\t\t\n", Phase_u(ADC_PD4_Phase_CH) % 1000000);
 }

@@ -16,7 +16,10 @@ void cmd()
     {
     case cmd_blink:
     {
-        State.cmd = 0;
+        if (!State.cmdLoop)
+        {
+            State.cmd = 0;
+        }
         SERIAL_WRITE("ok\n");
         for (int i = 0; i < 10; i++)
         {
@@ -28,21 +31,24 @@ void cmd()
     case cmd_adc_id:
     {
         SERIAL_WRITE("0x%06x\n", ADC_ID());
-        State.cmd = 0;
+        if (!State.cmdLoop)
+        {
+            State.cmd = 0;
+        }
         break;
     }
     // case cmd_adc_data:
     // {
     //     ADC_CMD(ADC_READ, ADC_DATA_REG);
     //     SERIAL_WRITE("0x%06x\n", ADC_SPI_READ_24());
-    //     State.cmd = 0;
+    //    if(!State.cmdLoop){ State.cmd = 0;}
     //     break;
     // }
     // case cmd_adc_reset:
     // {
     //     SERIAL_WRITE("ADC RESET\n");
     //     ADC_reset();
-    //     State.cmd = 0;
+    //    if(!State.cmdLoop){ State.cmd = 0;}
     //     break;
     // }
     case cmd_adc_debug:
@@ -89,7 +95,10 @@ void cmd()
             ADC_CMD(ADC_READ, ADC_GAINx_REG(i));
             SERIAL_WRITE("\tADC_GAIN%i_REG:\t\t0x%04x\n", i, ADC_SPI_READ_24());
         }
-        State.cmd = 0;
+        if (!State.cmdLoop)
+        {
+            State.cmd = 0;
+        }
         HAL_SPI_MspDeInit(&hspi2);
         ADC_DATA_READY_EXTI_Init();
         break;
@@ -103,21 +112,30 @@ void cmd()
             SERIAL_WRITE("%10i uV\t\t", voltage_uV);
             SERIAL_WRITE("0x%06x\n", State.ADC_Values[i]);
         }
-        State.cmd = 0;
+        if (!State.cmdLoop)
+        {
+            State.cmd = 0;
+        }
         break;
     }
     case cmd_temperature:
     {
         SERIAL_WRITE("%i.", Temperature() / 1000000);             //-66.875 to +52.443 C
         SERIAL_WRITE("%03u *C\n", (Temperature() / 1000) % 1000); //-66.875 to +52.443 C
-        State.cmd = 0;
+        if (!State.cmdLoop)
+        {
+            State.cmd = 0;
+        }
         break;
     }
     case cmd_dac_test:
     {
         SERIAL_WRITE("\n");
         DAC_test();
-        State.cmd = 0;
+        if (!State.cmdLoop)
+        {
+            State.cmd = 0;
+        }
         break;
     }
     case cmd_rf_state:
@@ -178,7 +196,58 @@ void cmd()
         SERIAL_WRITE("PWD3 Power:\t\t");
         SERIAL_WRITE("%3li.", RMS_Power(ADC_PWD3_Power_CH) / 1000);
         SERIAL_WRITE("%03u dBm\t\t\n", abs(RMS_Power(ADC_PWD3_Power_CH)) % 1000);
+        if (!State.cmdLoop)
+        {
+            State.cmd = 0;
+        }
+
+        break;
+    }
+    case cmd_loop:
+    {
         State.cmd = 0;
+        State.cmdLoop = !State.cmdLoop;
+        if (State.cmdLoop)
+        {
+            SERIAL_WRITE("enabled\n")
+        }
+        else
+        {
+            SERIAL_WRITE("disabled\n")
+        }
+        break;
+    }
+    case cmd_rf_pid:
+    {
+        if (!State.cmdLoop)
+        {
+            State.cmd = 0;
+        }
+        SERIAL_WRITE("\n")
+        SERIAL_WRITE("PD1+PD2 SETPOINT: %li\n", State.PD1_PD2_SetPoint * 1000);
+        SERIAL_WRITE("PID 704 Output: %li\n", State.PID_704_Output);
+        SERIAL_WRITE("PID_704_P_error %i\n", State.PID_704_P_error);
+
+        SERIAL_WRITE("PD1 Phase:\t\t");
+        SERIAL_WRITE("%3i.", Phase_u(ADC_PD1_Phase_CH) / 1000000);
+        SERIAL_WRITE("%06li deg\t\t\n", Phase_u(ADC_PD1_Phase_CH) % 1000000);
+
+        SERIAL_WRITE("PD2 Phase:\t\t");
+        SERIAL_WRITE("%3i.", Phase_u(ADC_PD2_Phase_CH) / 1000000);
+        SERIAL_WRITE("%03li deg\t\t\n\n", Phase_u(ADC_PD2_Phase_CH) % 1000000);
+
+        SERIAL_WRITE("PD3+PD4 SETPOINT: %li\n", State.PD3_PD4_SetPoint * 1000);
+        SERIAL_WRITE("PID 352 Output: %li\n", State.PID_352_Output);
+        SERIAL_WRITE("PID_352_P_error %i\n", State.PID_352_P_error);
+
+        SERIAL_WRITE("PD3 Phase:\t\t");
+        SERIAL_WRITE("%3i.", Phase_u(ADC_PD3_Phase_CH) / 1000000);
+        SERIAL_WRITE("%06li deg\t\t\n", Phase_u(ADC_PD3_Phase_CH) % 1000000);
+
+        SERIAL_WRITE("PD4 Phase:\t\t");
+        SERIAL_WRITE("%3i.", Phase_u(ADC_PD4_Phase_CH) / 1000000);
+        SERIAL_WRITE("%06li deg\t\t\n", Phase_u(ADC_PD4_Phase_CH) % 1000000);
+        SERIAL_WRITE("\n")
 
         break;
     }

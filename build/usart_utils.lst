@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cczm6azb.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccCmhSXl.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -55,21 +55,28 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cczm6azb.s 			page 1
   40 004d 000000   		.align	2
   41              	.LC18:
   42 0050 726600   		.ascii	"rf\000"
-  43              		.section	.text.UART_PARSE,"ax",%progbits
-  44              		.align	1
-  45              		.global	UART_PARSE
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cczm6azb.s 			page 2
+  43 0053 00       		.align	2
+  44              	.LC20:
+  45 0054 70696400 		.ascii	"pid\000"
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccCmhSXl.s 			page 2
 
 
-  46              		.arch armv6s-m
-  47              		.syntax unified
-  48              		.code	16
-  49              		.thumb_func
-  50              		.fpu softvfp
-  52              	UART_PARSE:
-  53              	.LVL0:
-  54              	.LFB284:
-  55              		.file 1 "Src/usart_utils.c"
+  46              		.align	2
+  47              	.LC22:
+  48 0058 6C6F6F70 		.ascii	"loop\000"
+  48      00
+  49              		.section	.text.UART_PARSE,"ax",%progbits
+  50              		.align	1
+  51              		.global	UART_PARSE
+  52              		.arch armv6s-m
+  53              		.syntax unified
+  54              		.code	16
+  55              		.thumb_func
+  56              		.fpu softvfp
+  58              	UART_PARSE:
+  59              	.LVL0:
+  60              	.LFB284:
+  61              		.file 1 "Src/usart_utils.c"
    1:Src/usart_utils.c **** #include "usart.h"
    2:Src/usart_utils.c **** #include <stdio.h>
    3:Src/usart_utils.c **** #include "state.h"
@@ -79,74 +86,74 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cczm6azb.s 			page 1
    7:Src/usart_utils.c **** 
    8:Src/usart_utils.c **** void UART_PARSE(uint8_t buffer[UART_RX_BUFFER_LENGTH])
    9:Src/usart_utils.c **** {
-  56              		.loc 1 9 1 view -0
-  57              		.cfi_startproc
-  58              		@ args = 0, pretend = 0, frame = 104
-  59              		@ frame_needed = 0, uses_anonymous_args = 0
-  60              		.loc 1 9 1 is_stmt 0 view .LVU1
-  61 0000 30B5     		push	{r4, r5, lr}
-  62              	.LCFI0:
-  63              		.cfi_def_cfa_offset 12
-  64              		.cfi_offset 4, -12
-  65              		.cfi_offset 5, -8
-  66              		.cfi_offset 14, -4
-  67 0002 9BB0     		sub	sp, sp, #108
-  68              	.LCFI1:
-  69              		.cfi_def_cfa_offset 120
-  70 0004 0400     		movs	r4, r0
-  71              	.LBB2:
+  62              		.loc 1 9 1 view -0
+  63              		.cfi_startproc
+  64              		@ args = 0, pretend = 0, frame = 104
+  65              		@ frame_needed = 0, uses_anonymous_args = 0
+  66              		.loc 1 9 1 is_stmt 0 view .LVU1
+  67 0000 30B5     		push	{r4, r5, lr}
+  68              	.LCFI0:
+  69              		.cfi_def_cfa_offset 12
+  70              		.cfi_offset 4, -12
+  71              		.cfi_offset 5, -8
+  72              		.cfi_offset 14, -4
+  73 0002 9BB0     		sub	sp, sp, #108
+  74              	.LCFI1:
+  75              		.cfi_def_cfa_offset 120
+  76 0004 0400     		movs	r4, r0
+  77              	.LBB2:
   10:Src/usart_utils.c ****     SERIAL_WRITE(" => ");
-  72              		.loc 1 10 5 is_stmt 1 view .LVU2
-  73 0006 01AD     		add	r5, sp, #4
-  74 0008 6022     		movs	r2, #96
-  75 000a 0021     		movs	r1, #0
-  76 000c 02A8     		add	r0, sp, #8
-  77              	.LVL1:
-  78              		.loc 1 10 5 is_stmt 0 view .LVU3
-  79 000e FFF7FEFF 		bl	memset
-  80              	.LVL2:
-  81              		.loc 1 10 5 is_stmt 1 view .LVU4
-  82 0012 394B     		ldr	r3, .L12
-  83 0014 1A68     		ldr	r2, [r3]
-  84 0016 0192     		str	r2, [sp, #4]
-  85 0018 1B79     		ldrb	r3, [r3, #4]
-  86 001a 2B71     		strb	r3, [r5, #4]
-  87              	.LVL3:
-  88              		.loc 1 10 5 view .LVU5
-  89 001c FA23     		movs	r3, #250
-  90 001e 9B00     		lsls	r3, r3, #2
-  91 0020 0422     		movs	r2, #4
-  92 0022 2900     		movs	r1, r5
-  93 0024 3548     		ldr	r0, .L12+4
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cczm6azb.s 			page 3
+  78              		.loc 1 10 5 is_stmt 1 view .LVU2
+  79 0006 01AD     		add	r5, sp, #4
+  80 0008 6022     		movs	r2, #96
+  81 000a 0021     		movs	r1, #0
+  82 000c 02A8     		add	r0, sp, #8
+  83              	.LVL1:
+  84              		.loc 1 10 5 is_stmt 0 view .LVU3
+  85 000e FFF7FEFF 		bl	memset
+  86              	.LVL2:
+  87              		.loc 1 10 5 is_stmt 1 view .LVU4
+  88 0012 434B     		ldr	r3, .L14
+  89 0014 1A68     		ldr	r2, [r3]
+  90 0016 0192     		str	r2, [sp, #4]
+  91 0018 1B79     		ldrb	r3, [r3, #4]
+  92 001a 2B71     		strb	r3, [r5, #4]
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccCmhSXl.s 			page 3
 
 
-  94 0026 FFF7FEFF 		bl	HAL_UART_Transmit
-  95              	.LVL4:
-  96              	.LBE2:
-  97              		.loc 1 10 25 view .LVU6
+  93              	.LVL3:
+  94              		.loc 1 10 5 view .LVU5
+  95 001c FA23     		movs	r3, #250
+  96 001e 9B00     		lsls	r3, r3, #2
+  97 0020 0422     		movs	r2, #4
+  98 0022 2900     		movs	r1, r5
+  99 0024 3F48     		ldr	r0, .L14+4
+ 100 0026 FFF7FEFF 		bl	HAL_UART_Transmit
+ 101              	.LVL4:
+ 102              	.LBE2:
+ 103              		.loc 1 10 25 view .LVU6
   11:Src/usart_utils.c ****     if (strcmp(buffer, "blink") == 0)
-  98              		.loc 1 11 5 view .LVU7
-  99              	.LBB3:
- 100              		.loc 1 11 9 is_stmt 0 view .LVU8
- 101 002a 3549     		ldr	r1, .L12+8
- 102 002c 2000     		movs	r0, r4
- 103 002e FFF7FEFF 		bl	strcmp
- 104              	.LVL5:
- 105              		.loc 1 11 8 view .LVU9
- 106 0032 0028     		cmp	r0, #0
- 107 0034 04D1     		bne	.L2
+ 104              		.loc 1 11 5 view .LVU7
+ 105              	.LBB3:
+ 106              		.loc 1 11 9 is_stmt 0 view .LVU8
+ 107 002a 3F49     		ldr	r1, .L14+8
+ 108 002c 2000     		movs	r0, r4
+ 109 002e FFF7FEFF 		bl	strcmp
+ 110              	.LVL5:
+ 111              		.loc 1 11 8 view .LVU9
+ 112 0032 0028     		cmp	r0, #0
+ 113 0034 04D1     		bne	.L2
   12:Src/usart_utils.c ****     {
   13:Src/usart_utils.c ****         State.cmd = cmd_blink;
- 108              		.loc 1 13 9 is_stmt 1 view .LVU10
- 109              		.loc 1 13 19 is_stmt 0 view .LVU11
- 110 0036 334B     		ldr	r3, .L12+12
- 111 0038 0122     		movs	r2, #1
- 112 003a 5A71     		strb	r2, [r3, #5]
- 113              	.LVL6:
- 114              	.L1:
- 115              		.loc 1 13 19 view .LVU12
- 116              	.LBE3:
+ 114              		.loc 1 13 9 is_stmt 1 view .LVU10
+ 115              		.loc 1 13 19 is_stmt 0 view .LVU11
+ 116 0036 3D4B     		ldr	r3, .L14+12
+ 117 0038 0122     		movs	r2, #1
+ 118 003a 9A72     		strb	r2, [r3, #10]
+ 119              	.LVL6:
+ 120              	.L1:
+ 121              		.loc 1 13 19 view .LVU12
+ 122              	.LBE3:
   14:Src/usart_utils.c ****     }
   15:Src/usart_utils.c ****     else if (strcmp(buffer, "adc id") == 0)
   16:Src/usart_utils.c ****     {
@@ -171,271 +178,326 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cczm6azb.s 			page 1
   35:Src/usart_utils.c ****     }
   36:Src/usart_utils.c ****     else if (strcmp(buffer, "dac test") == 0)
   37:Src/usart_utils.c ****     {
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccCmhSXl.s 			page 4
+
+
   38:Src/usart_utils.c ****         State.cmd = cmd_dac_test;
   39:Src/usart_utils.c ****     }
   40:Src/usart_utils.c ****     else if (strcmp(buffer, "rf") == 0)
   41:Src/usart_utils.c ****     {
   42:Src/usart_utils.c ****         State.cmd = cmd_rf_state;
   43:Src/usart_utils.c ****     }
-  44:Src/usart_utils.c ****     else
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cczm6azb.s 			page 4
-
-
+  44:Src/usart_utils.c ****     else if (strcmp(buffer, "pid") == 0)
   45:Src/usart_utils.c ****     {
-  46:Src/usart_utils.c ****         State.cmd = cmd_undefined;
+  46:Src/usart_utils.c ****         State.cmd = cmd_rf_pid;
   47:Src/usart_utils.c ****     }
-  48:Src/usart_utils.c **** }...
- 117              		.loc 1 48 1 view .LVU13
- 118 003c 1BB0     		add	sp, sp, #108
- 119              		@ sp needed
- 120 003e 30BD     		pop	{r4, r5, pc}
- 121              	.LVL7:
- 122              	.L2:
- 123              	.LBB5:
+  48:Src/usart_utils.c ****     else if (strcmp(buffer, "loop") == 0)
+  49:Src/usart_utils.c ****     {
+  50:Src/usart_utils.c ****         State.cmd = cmd_loop;
+  51:Src/usart_utils.c ****     }
+  52:Src/usart_utils.c ****     else
+  53:Src/usart_utils.c ****     {
+  54:Src/usart_utils.c ****         State.cmd = cmd_undefined;
+  55:Src/usart_utils.c ****     }
+  56:Src/usart_utils.c **** }...
+ 123              		.loc 1 56 1 view .LVU13
+ 124 003c 1BB0     		add	sp, sp, #108
+ 125              		@ sp needed
+ 126 003e 30BD     		pop	{r4, r5, pc}
+ 127              	.LVL7:
+ 128              	.L2:
+ 129              	.LBB5:
   15:Src/usart_utils.c ****     else if (strcmp(buffer, "adc id") == 0)
- 124              		.loc 1 15 10 is_stmt 1 view .LVU14
+ 130              		.loc 1 15 10 is_stmt 1 view .LVU14
   15:Src/usart_utils.c ****     else if (strcmp(buffer, "adc id") == 0)
- 125              		.loc 1 15 14 is_stmt 0 view .LVU15
- 126 0040 3149     		ldr	r1, .L12+16
- 127 0042 2000     		movs	r0, r4
- 128 0044 FFF7FEFF 		bl	strcmp
- 129              	.LVL8:
+ 131              		.loc 1 15 14 is_stmt 0 view .LVU15
+ 132 0040 3B49     		ldr	r1, .L14+16
+ 133 0042 2000     		movs	r0, r4
+ 134 0044 FFF7FEFF 		bl	strcmp
+ 135              	.LVL8:
   15:Src/usart_utils.c ****     else if (strcmp(buffer, "adc id") == 0)
- 130              		.loc 1 15 13 view .LVU16
- 131 0048 0028     		cmp	r0, #0
- 132 004a 03D1     		bne	.L4
+ 136              		.loc 1 15 13 view .LVU16
+ 137 0048 0028     		cmp	r0, #0
+ 138 004a 03D1     		bne	.L4
   17:Src/usart_utils.c ****         State.cmd = cmd_adc_id;
- 133              		.loc 1 17 9 is_stmt 1 view .LVU17
+ 139              		.loc 1 17 9 is_stmt 1 view .LVU17
   17:Src/usart_utils.c ****         State.cmd = cmd_adc_id;
- 134              		.loc 1 17 19 is_stmt 0 view .LVU18
- 135 004c 2D4B     		ldr	r3, .L12+12
- 136 004e 0222     		movs	r2, #2
- 137 0050 5A71     		strb	r2, [r3, #5]
- 138 0052 F3E7     		b	.L1
- 139              	.L4:
+ 140              		.loc 1 17 19 is_stmt 0 view .LVU18
+ 141 004c 374B     		ldr	r3, .L14+12
+ 142 004e 0222     		movs	r2, #2
+ 143 0050 9A72     		strb	r2, [r3, #10]
+ 144 0052 F3E7     		b	.L1
+ 145              	.L4:
   19:Src/usart_utils.c ****     else if (strcmp(buffer, "adc reset") == 0)
- 140              		.loc 1 19 10 is_stmt 1 view .LVU19
+ 146              		.loc 1 19 10 is_stmt 1 view .LVU19
   19:Src/usart_utils.c ****     else if (strcmp(buffer, "adc reset") == 0)
- 141              		.loc 1 19 14 is_stmt 0 view .LVU20
- 142 0054 2D49     		ldr	r1, .L12+20
- 143 0056 2000     		movs	r0, r4
- 144 0058 FFF7FEFF 		bl	strcmp
- 145              	.LVL9:
+ 147              		.loc 1 19 14 is_stmt 0 view .LVU20
+ 148 0054 3749     		ldr	r1, .L14+20
+ 149 0056 2000     		movs	r0, r4
+ 150 0058 FFF7FEFF 		bl	strcmp
+ 151              	.LVL9:
   19:Src/usart_utils.c ****     else if (strcmp(buffer, "adc reset") == 0)
- 146              		.loc 1 19 13 view .LVU21
- 147 005c 0028     		cmp	r0, #0
- 148 005e 03D1     		bne	.L5
+ 152              		.loc 1 19 13 view .LVU21
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccCmhSXl.s 			page 5
+
+
+ 153 005c 0028     		cmp	r0, #0
+ 154 005e 03D1     		bne	.L5
   21:Src/usart_utils.c ****         State.cmd = cmd_adc_reset;
- 149              		.loc 1 21 9 is_stmt 1 view .LVU22
+ 155              		.loc 1 21 9 is_stmt 1 view .LVU22
   21:Src/usart_utils.c ****         State.cmd = cmd_adc_reset;
- 150              		.loc 1 21 19 is_stmt 0 view .LVU23
- 151 0060 284B     		ldr	r3, .L12+12
- 152 0062 0322     		movs	r2, #3
- 153 0064 5A71     		strb	r2, [r3, #5]
- 154 0066 E9E7     		b	.L1
- 155              	.L5:
+ 156              		.loc 1 21 19 is_stmt 0 view .LVU23
+ 157 0060 324B     		ldr	r3, .L14+12
+ 158 0062 0322     		movs	r2, #3
+ 159 0064 9A72     		strb	r2, [r3, #10]
+ 160 0066 E9E7     		b	.L1
+ 161              	.L5:
   23:Src/usart_utils.c ****     else if (strcmp(buffer, "adc debug") == 0)
- 156              		.loc 1 23 10 is_stmt 1 view .LVU24
+ 162              		.loc 1 23 10 is_stmt 1 view .LVU24
   23:Src/usart_utils.c ****     else if (strcmp(buffer, "adc debug") == 0)
- 157              		.loc 1 23 14 is_stmt 0 view .LVU25
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cczm6azb.s 			page 5
-
-
- 158 0068 2949     		ldr	r1, .L12+24
- 159 006a 2000     		movs	r0, r4
- 160 006c FFF7FEFF 		bl	strcmp
- 161              	.LVL10:
+ 163              		.loc 1 23 14 is_stmt 0 view .LVU25
+ 164 0068 3349     		ldr	r1, .L14+24
+ 165 006a 2000     		movs	r0, r4
+ 166 006c FFF7FEFF 		bl	strcmp
+ 167              	.LVL10:
   23:Src/usart_utils.c ****     else if (strcmp(buffer, "adc debug") == 0)
- 162              		.loc 1 23 13 view .LVU26
- 163 0070 0028     		cmp	r0, #0
- 164 0072 03D1     		bne	.L6
+ 168              		.loc 1 23 13 view .LVU26
+ 169 0070 0028     		cmp	r0, #0
+ 170 0072 03D1     		bne	.L6
   25:Src/usart_utils.c ****         State.cmd = cmd_adc_debug;
- 165              		.loc 1 25 9 is_stmt 1 view .LVU27
+ 171              		.loc 1 25 9 is_stmt 1 view .LVU27
   25:Src/usart_utils.c ****         State.cmd = cmd_adc_debug;
- 166              		.loc 1 25 19 is_stmt 0 view .LVU28
- 167 0074 234B     		ldr	r3, .L12+12
- 168 0076 0422     		movs	r2, #4
- 169 0078 5A71     		strb	r2, [r3, #5]
- 170 007a DFE7     		b	.L1
- 171              	.L6:
+ 172              		.loc 1 25 19 is_stmt 0 view .LVU28
+ 173 0074 2D4B     		ldr	r3, .L14+12
+ 174 0076 0422     		movs	r2, #4
+ 175 0078 9A72     		strb	r2, [r3, #10]
+ 176 007a DFE7     		b	.L1
+ 177              	.L6:
   27:Src/usart_utils.c ****     else if (strcmp(buffer, "adc values") == 0)
- 172              		.loc 1 27 10 is_stmt 1 view .LVU29
+ 178              		.loc 1 27 10 is_stmt 1 view .LVU29
   27:Src/usart_utils.c ****     else if (strcmp(buffer, "adc values") == 0)
- 173              		.loc 1 27 14 is_stmt 0 view .LVU30
- 174 007c 2549     		ldr	r1, .L12+28
- 175 007e 2000     		movs	r0, r4
- 176 0080 FFF7FEFF 		bl	strcmp
- 177              	.LVL11:
+ 179              		.loc 1 27 14 is_stmt 0 view .LVU30
+ 180 007c 2F49     		ldr	r1, .L14+28
+ 181 007e 2000     		movs	r0, r4
+ 182 0080 FFF7FEFF 		bl	strcmp
+ 183              	.LVL11:
   27:Src/usart_utils.c ****     else if (strcmp(buffer, "adc values") == 0)
- 178              		.loc 1 27 13 view .LVU31
- 179 0084 0028     		cmp	r0, #0
- 180 0086 09D0     		beq	.L11
+ 184              		.loc 1 27 13 view .LVU31
+ 185 0084 0028     		cmp	r0, #0
+ 186 0086 09D0     		beq	.L13
   32:Src/usart_utils.c ****     else if (strcmp(buffer, "temp") == 0)
- 181              		.loc 1 32 10 is_stmt 1 view .LVU32
+ 187              		.loc 1 32 10 is_stmt 1 view .LVU32
   32:Src/usart_utils.c ****     else if (strcmp(buffer, "temp") == 0)
- 182              		.loc 1 32 14 is_stmt 0 view .LVU33
- 183 0088 2349     		ldr	r1, .L12+32
- 184 008a 2000     		movs	r0, r4
- 185 008c FFF7FEFF 		bl	strcmp
- 186              	.LVL12:
+ 188              		.loc 1 32 14 is_stmt 0 view .LVU33
+ 189 0088 2D49     		ldr	r1, .L14+32
+ 190 008a 2000     		movs	r0, r4
+ 191 008c FFF7FEFF 		bl	strcmp
+ 192              	.LVL12:
   32:Src/usart_utils.c ****     else if (strcmp(buffer, "temp") == 0)
- 187              		.loc 1 32 13 view .LVU34
- 188 0090 0028     		cmp	r0, #0
- 189 0092 18D1     		bne	.L8
+ 193              		.loc 1 32 13 view .LVU34
+ 194 0090 0028     		cmp	r0, #0
+ 195 0092 18D1     		bne	.L8
   34:Src/usart_utils.c ****         State.cmd = cmd_temperature;
- 190              		.loc 1 34 9 is_stmt 1 view .LVU35
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccCmhSXl.s 			page 6
+
+
+ 196              		.loc 1 34 9 is_stmt 1 view .LVU35
   34:Src/usart_utils.c ****         State.cmd = cmd_temperature;
- 191              		.loc 1 34 19 is_stmt 0 view .LVU36
- 192 0094 1B4B     		ldr	r3, .L12+12
- 193 0096 0722     		movs	r2, #7
- 194 0098 5A71     		strb	r2, [r3, #5]
- 195 009a CFE7     		b	.L1
- 196              	.L11:
- 197              	.LBB4:
+ 197              		.loc 1 34 19 is_stmt 0 view .LVU36
+ 198 0094 254B     		ldr	r3, .L14+12
+ 199 0096 0722     		movs	r2, #7
+ 200 0098 9A72     		strb	r2, [r3, #10]
+ 201 009a CFE7     		b	.L1
+ 202              	.L13:
+ 203              	.LBB4:
   29:Src/usart_utils.c ****         SERIAL_WRITE("\n");
- 198              		.loc 1 29 9 is_stmt 1 view .LVU37
- 199 009c 01AC     		add	r4, sp, #4
- 200              	.LVL13:
+ 204              		.loc 1 29 9 is_stmt 1 view .LVU37
+ 205 009c 01AC     		add	r4, sp, #4
+ 206              	.LVL13:
   29:Src/usart_utils.c ****         SERIAL_WRITE("\n");
- 201              		.loc 1 29 9 is_stmt 0 view .LVU38
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cczm6azb.s 			page 6
-
-
- 202 009e 0023     		movs	r3, #0
- 203 00a0 0193     		str	r3, [sp, #4]
- 204 00a2 6022     		movs	r2, #96
- 205 00a4 0021     		movs	r1, #0
- 206 00a6 02A8     		add	r0, sp, #8
- 207 00a8 FFF7FEFF 		bl	memset
- 208              	.LVL14:
+ 207              		.loc 1 29 9 is_stmt 0 view .LVU38
+ 208 009e 0023     		movs	r3, #0
+ 209 00a0 0193     		str	r3, [sp, #4]
+ 210 00a2 6022     		movs	r2, #96
+ 211 00a4 0021     		movs	r1, #0
+ 212 00a6 02A8     		add	r0, sp, #8
+ 213 00a8 FFF7FEFF 		bl	memset
+ 214              	.LVL14:
   29:Src/usart_utils.c ****         SERIAL_WRITE("\n");
- 209              		.loc 1 29 9 is_stmt 1 view .LVU39
- 210 00ac 0A23     		movs	r3, #10
- 211 00ae 2380     		strh	r3, [r4]
- 212              	.LVL15:
+ 215              		.loc 1 29 9 is_stmt 1 view .LVU39
+ 216 00ac 0A23     		movs	r3, #10
+ 217 00ae 2380     		strh	r3, [r4]
+ 218              	.LVL15:
   29:Src/usart_utils.c ****         SERIAL_WRITE("\n");
- 213              		.loc 1 29 9 view .LVU40
- 214 00b0 F033     		adds	r3, r3, #240
- 215 00b2 9B00     		lsls	r3, r3, #2
- 216 00b4 0122     		movs	r2, #1
- 217 00b6 2100     		movs	r1, r4
- 218 00b8 1048     		ldr	r0, .L12+4
- 219 00ba FFF7FEFF 		bl	HAL_UART_Transmit
- 220              	.LVL16:
- 221              	.LBE4:
+ 219              		.loc 1 29 9 view .LVU40
+ 220 00b0 F033     		adds	r3, r3, #240
+ 221 00b2 9B00     		lsls	r3, r3, #2
+ 222 00b4 0122     		movs	r2, #1
+ 223 00b6 2100     		movs	r1, r4
+ 224 00b8 1A48     		ldr	r0, .L14+4
+ 225 00ba FFF7FEFF 		bl	HAL_UART_Transmit
+ 226              	.LVL16:
+ 227              	.LBE4:
   29:Src/usart_utils.c ****         SERIAL_WRITE("\n");
- 222              		.loc 1 29 27 view .LVU41
+ 228              		.loc 1 29 27 view .LVU41
   30:Src/usart_utils.c ****         State.cmd = cmd_adc_values;
- 223              		.loc 1 30 9 view .LVU42
+ 229              		.loc 1 30 9 view .LVU42
   30:Src/usart_utils.c ****         State.cmd = cmd_adc_values;
- 224              		.loc 1 30 19 is_stmt 0 view .LVU43
- 225 00be 114B     		ldr	r3, .L12+12
- 226 00c0 0622     		movs	r2, #6
- 227 00c2 5A71     		strb	r2, [r3, #5]
- 228 00c4 BAE7     		b	.L1
- 229              	.LVL17:
- 230              	.L8:
+ 230              		.loc 1 30 19 is_stmt 0 view .LVU43
+ 231 00be 1B4B     		ldr	r3, .L14+12
+ 232 00c0 0622     		movs	r2, #6
+ 233 00c2 9A72     		strb	r2, [r3, #10]
+ 234 00c4 BAE7     		b	.L1
+ 235              	.LVL17:
+ 236              	.L8:
   36:Src/usart_utils.c ****     else if (strcmp(buffer, "dac test") == 0)
- 231              		.loc 1 36 10 is_stmt 1 view .LVU44
+ 237              		.loc 1 36 10 is_stmt 1 view .LVU44
   36:Src/usart_utils.c ****     else if (strcmp(buffer, "dac test") == 0)
- 232              		.loc 1 36 14 is_stmt 0 view .LVU45
- 233 00c6 1549     		ldr	r1, .L12+36
- 234 00c8 2000     		movs	r0, r4
- 235 00ca FFF7FEFF 		bl	strcmp
- 236              	.LVL18:
+ 238              		.loc 1 36 14 is_stmt 0 view .LVU45
+ 239 00c6 1F49     		ldr	r1, .L14+36
+ 240 00c8 2000     		movs	r0, r4
+ 241 00ca FFF7FEFF 		bl	strcmp
+ 242              	.LVL18:
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccCmhSXl.s 			page 7
+
+
   36:Src/usart_utils.c ****     else if (strcmp(buffer, "dac test") == 0)
- 237              		.loc 1 36 13 view .LVU46
- 238 00ce 0028     		cmp	r0, #0
- 239 00d0 03D1     		bne	.L9
+ 243              		.loc 1 36 13 view .LVU46
+ 244 00ce 0028     		cmp	r0, #0
+ 245 00d0 03D1     		bne	.L9
   38:Src/usart_utils.c ****         State.cmd = cmd_dac_test;
- 240              		.loc 1 38 9 is_stmt 1 view .LVU47
+ 246              		.loc 1 38 9 is_stmt 1 view .LVU47
   38:Src/usart_utils.c ****         State.cmd = cmd_dac_test;
- 241              		.loc 1 38 19 is_stmt 0 view .LVU48
- 242 00d2 0C4B     		ldr	r3, .L12+12
- 243 00d4 0822     		movs	r2, #8
- 244 00d6 5A71     		strb	r2, [r3, #5]
- 245 00d8 B0E7     		b	.L1
- 246              	.L9:
+ 247              		.loc 1 38 19 is_stmt 0 view .LVU48
+ 248 00d2 164B     		ldr	r3, .L14+12
+ 249 00d4 0822     		movs	r2, #8
+ 250 00d6 9A72     		strb	r2, [r3, #10]
+ 251 00d8 B0E7     		b	.L1
+ 252              	.L9:
   40:Src/usart_utils.c ****     else if (strcmp(buffer, "rf") == 0)
- 247              		.loc 1 40 10 is_stmt 1 view .LVU49
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cczm6azb.s 			page 7
-
-
+ 253              		.loc 1 40 10 is_stmt 1 view .LVU49
   40:Src/usart_utils.c ****     else if (strcmp(buffer, "rf") == 0)
- 248              		.loc 1 40 14 is_stmt 0 view .LVU50
- 249 00da 1149     		ldr	r1, .L12+40
- 250 00dc 2000     		movs	r0, r4
- 251 00de FFF7FEFF 		bl	strcmp
- 252              	.LVL19:
+ 254              		.loc 1 40 14 is_stmt 0 view .LVU50
+ 255 00da 1B49     		ldr	r1, .L14+40
+ 256 00dc 2000     		movs	r0, r4
+ 257 00de FFF7FEFF 		bl	strcmp
+ 258              	.LVL19:
   40:Src/usart_utils.c ****     else if (strcmp(buffer, "rf") == 0)
- 253              		.loc 1 40 13 view .LVU51
- 254 00e2 0028     		cmp	r0, #0
- 255 00e4 03D1     		bne	.L10
+ 259              		.loc 1 40 13 view .LVU51
+ 260 00e2 0028     		cmp	r0, #0
+ 261 00e4 03D1     		bne	.L10
   42:Src/usart_utils.c ****         State.cmd = cmd_rf_state;
- 256              		.loc 1 42 9 is_stmt 1 view .LVU52
+ 262              		.loc 1 42 9 is_stmt 1 view .LVU52
   42:Src/usart_utils.c ****         State.cmd = cmd_rf_state;
- 257              		.loc 1 42 19 is_stmt 0 view .LVU53
- 258 00e6 074B     		ldr	r3, .L12+12
- 259 00e8 0922     		movs	r2, #9
- 260 00ea 5A71     		strb	r2, [r3, #5]
- 261 00ec A6E7     		b	.L1
- 262              	.L10:
-  46:Src/usart_utils.c ****         State.cmd = cmd_undefined;
- 263              		.loc 1 46 9 is_stmt 1 view .LVU54
-  46:Src/usart_utils.c ****         State.cmd = cmd_undefined;
- 264              		.loc 1 46 19 is_stmt 0 view .LVU55
- 265 00ee 054B     		ldr	r3, .L12+12
- 266 00f0 FF22     		movs	r2, #255
- 267 00f2 5A71     		strb	r2, [r3, #5]
- 268              	.LBE5:
- 269              		.loc 1 48 1 view .LVU56
- 270 00f4 A2E7     		b	.L1
- 271              	.L13:
- 272 00f6 C046     		.align	2
- 273              	.L12:
- 274 00f8 00000000 		.word	.LC0
- 275 00fc 00000000 		.word	huart2
- 276 0100 08000000 		.word	.LC3
- 277 0104 00000000 		.word	State
- 278 0108 10000000 		.word	.LC6
- 279 010c 18000000 		.word	.LC8
- 280 0110 24000000 		.word	.LC10
- 281 0114 30000000 		.word	.LC12
- 282 0118 3C000000 		.word	.LC14
- 283 011c 44000000 		.word	.LC16
- 284 0120 50000000 		.word	.LC18
- 285              		.cfi_endproc
- 286              	.LFE284:
- 288              		.text
- 289              	.Letext0:
- 290              		.file 2 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\machine\\_default_types.h"
- 291              		.file 3 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_stdint.h"
- 292              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
- 293              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
- 294              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
- 295              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
- 296              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
- 297              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
- 298              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
- 299              		.file 11 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\lock.h"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cczm6azb.s 			page 8
+ 263              		.loc 1 42 19 is_stmt 0 view .LVU53
+ 264 00e6 114B     		ldr	r3, .L14+12
+ 265 00e8 0922     		movs	r2, #9
+ 266 00ea 9A72     		strb	r2, [r3, #10]
+ 267 00ec A6E7     		b	.L1
+ 268              	.L10:
+  44:Src/usart_utils.c ****     else if (strcmp(buffer, "pid") == 0)
+ 269              		.loc 1 44 10 is_stmt 1 view .LVU54
+  44:Src/usart_utils.c ****     else if (strcmp(buffer, "pid") == 0)
+ 270              		.loc 1 44 14 is_stmt 0 view .LVU55
+ 271 00ee 1749     		ldr	r1, .L14+44
+ 272 00f0 2000     		movs	r0, r4
+ 273 00f2 FFF7FEFF 		bl	strcmp
+ 274              	.LVL20:
+  44:Src/usart_utils.c ****     else if (strcmp(buffer, "pid") == 0)
+ 275              		.loc 1 44 13 view .LVU56
+ 276 00f6 0028     		cmp	r0, #0
+ 277 00f8 03D1     		bne	.L11
+  46:Src/usart_utils.c ****         State.cmd = cmd_rf_pid;
+ 278              		.loc 1 46 9 is_stmt 1 view .LVU57
+  46:Src/usart_utils.c ****         State.cmd = cmd_rf_pid;
+ 279              		.loc 1 46 19 is_stmt 0 view .LVU58
+ 280 00fa 0C4B     		ldr	r3, .L14+12
+ 281 00fc 0A22     		movs	r2, #10
+ 282 00fe 9A72     		strb	r2, [r3, #10]
+ 283 0100 9CE7     		b	.L1
+ 284              	.L11:
+  48:Src/usart_utils.c ****     else if (strcmp(buffer, "loop") == 0)
+ 285              		.loc 1 48 10 is_stmt 1 view .LVU59
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccCmhSXl.s 			page 8
 
 
- 300              		.file 12 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_types.h"
- 301              		.file 13 "c:\\gnu tools arm embedded\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\stddef.h"
- 302              		.file 14 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\reent.h"
- 303              		.file 15 "Inc/usart.h"
- 304              		.file 16 "Inc/state.h"
- 305              		.file 17 "<built-in>"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cczm6azb.s 			page 9
+  48:Src/usart_utils.c ****     else if (strcmp(buffer, "loop") == 0)
+ 286              		.loc 1 48 14 is_stmt 0 view .LVU60
+ 287 0102 1349     		ldr	r1, .L14+48
+ 288 0104 2000     		movs	r0, r4
+ 289 0106 FFF7FEFF 		bl	strcmp
+ 290              	.LVL21:
+  48:Src/usart_utils.c ****     else if (strcmp(buffer, "loop") == 0)
+ 291              		.loc 1 48 13 view .LVU61
+ 292 010a 0028     		cmp	r0, #0
+ 293 010c 03D1     		bne	.L12
+  50:Src/usart_utils.c ****         State.cmd = cmd_loop;
+ 294              		.loc 1 50 9 is_stmt 1 view .LVU62
+  50:Src/usart_utils.c ****         State.cmd = cmd_loop;
+ 295              		.loc 1 50 19 is_stmt 0 view .LVU63
+ 296 010e 074B     		ldr	r3, .L14+12
+ 297 0110 0B22     		movs	r2, #11
+ 298 0112 9A72     		strb	r2, [r3, #10]
+ 299 0114 92E7     		b	.L1
+ 300              	.L12:
+  54:Src/usart_utils.c ****         State.cmd = cmd_undefined;
+ 301              		.loc 1 54 9 is_stmt 1 view .LVU64
+  54:Src/usart_utils.c ****         State.cmd = cmd_undefined;
+ 302              		.loc 1 54 19 is_stmt 0 view .LVU65
+ 303 0116 054B     		ldr	r3, .L14+12
+ 304 0118 FF22     		movs	r2, #255
+ 305 011a 9A72     		strb	r2, [r3, #10]
+ 306              	.LBE5:
+ 307              		.loc 1 56 1 view .LVU66
+ 308 011c 8EE7     		b	.L1
+ 309              	.L15:
+ 310 011e C046     		.align	2
+ 311              	.L14:
+ 312 0120 00000000 		.word	.LC0
+ 313 0124 00000000 		.word	huart2
+ 314 0128 08000000 		.word	.LC3
+ 315 012c 00000000 		.word	State
+ 316 0130 10000000 		.word	.LC6
+ 317 0134 18000000 		.word	.LC8
+ 318 0138 24000000 		.word	.LC10
+ 319 013c 30000000 		.word	.LC12
+ 320 0140 3C000000 		.word	.LC14
+ 321 0144 44000000 		.word	.LC16
+ 322 0148 50000000 		.word	.LC18
+ 323 014c 54000000 		.word	.LC20
+ 324 0150 58000000 		.word	.LC22
+ 325              		.cfi_endproc
+ 326              	.LFE284:
+ 328              		.text
+ 329              	.Letext0:
+ 330              		.file 2 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 331              		.file 3 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 332              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
+ 333              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
+ 334              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+ 335              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+ 336              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
+ 337              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccCmhSXl.s 			page 9
+
+
+ 338              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
+ 339              		.file 11 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\lock.h"
+ 340              		.file 12 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_types.h"
+ 341              		.file 13 "c:\\gnu tools arm embedded\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\stddef.h"
+ 342              		.file 14 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\reent.h"
+ 343              		.file 15 "Inc/usart.h"
+ 344              		.file 16 "Inc/state.h"
+ 345              		.file 17 "<built-in>"
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccCmhSXl.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usart_utils.c
-C:\Users\matil\AppData\Local\Temp\cczm6azb.s:16     .rodata.UART_PARSE.str1.4:00000000 $d
-C:\Users\matil\AppData\Local\Temp\cczm6azb.s:44     .text.UART_PARSE:00000000 $t
-C:\Users\matil\AppData\Local\Temp\cczm6azb.s:52     .text.UART_PARSE:00000000 UART_PARSE
-C:\Users\matil\AppData\Local\Temp\cczm6azb.s:274    .text.UART_PARSE:000000f8 $d
+C:\Users\matil\AppData\Local\Temp\ccCmhSXl.s:16     .rodata.UART_PARSE.str1.4:00000000 $d
+C:\Users\matil\AppData\Local\Temp\ccCmhSXl.s:50     .text.UART_PARSE:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccCmhSXl.s:58     .text.UART_PARSE:00000000 UART_PARSE
+C:\Users\matil\AppData\Local\Temp\ccCmhSXl.s:312    .text.UART_PARSE:00000120 $d
 
 UNDEFINED SYMBOLS
 memset

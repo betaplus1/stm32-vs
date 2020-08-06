@@ -141,8 +141,13 @@ int main(void)
   uint32_t counter = 0;
   while (1)
   {
-    if (State.cmd)
+    if (State.cmd && (State.uptime_flag || !State.cmdLoop))
     {
+      State.uptime_flag = 0;
+      if (State.cmdLoop)
+      {
+        SERIAL_WRITE("\n")
+      }
       cmd();
     };
     if (State.ADC_Updated)
