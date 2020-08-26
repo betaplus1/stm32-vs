@@ -224,6 +224,7 @@ void cmd()
             State.cmd = 0;
         }
         SERIAL_WRITE("\n")
+
         SERIAL_WRITE("PD1+PD2 SETPOINT: %li\n", State.PD1_PD2_SetPoint * 1000);
         SERIAL_WRITE("PID 704 Output: %li\n", State.PID_704_Output);
         SERIAL_WRITE("PID_704_P_error %i\n", State.PID_704_P_error);
@@ -246,7 +247,18 @@ void cmd()
 
         SERIAL_WRITE("PD4 Phase:\t\t");
         SERIAL_WRITE("%3i.", Phase_u(ADC_PD4_Phase_CH) / 1000000);
-        SERIAL_WRITE("%06li deg\t\t\n", Phase_u(ADC_PD4_Phase_CH) % 1000000);
+        SERIAL_WRITE("%06li deg\t\t\n\n", Phase_u(ADC_PD4_Phase_CH) % 1000000);
+
+        SERIAL_WRITE("POWER 352 SETPOINT: 0x%06x\n", State.POWER_PID_352_SetPoint);
+        SERIAL_WRITE("POWER 352 Output: 0x%04x\n", State.POWER_PID_352_Output);
+        SERIAL_WRITE("POWER 352 error: %i\n", State.ADC_ValuesFiltered[RF_POWER_AMP352] - State.POWER_PID_352_SetPoint);
+        SERIAL_WRITE("POWER 352: 0x%06x\n\n", State.ADC_ValuesFiltered[RF_POWER_AMP352]);
+
+        SERIAL_WRITE("POWER 704 SETPOINT: 0x%06x\n", State.POWER_PID_704_SetPoint);
+        SERIAL_WRITE("POWER 704 Output: 0x%04x\n", State.POWER_PID_704_Output);
+        SERIAL_WRITE("POWER 704 error: %i\n", State.ADC_ValuesFiltered[RF_POWER_AMP704] - State.POWER_PID_704_SetPoint);
+        SERIAL_WRITE("POWER 704: 0x%06x\n", State.ADC_ValuesFiltered[RF_POWER_AMP704]);
+
         SERIAL_WRITE("\n")
 
         break;

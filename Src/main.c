@@ -16,8 +16,7 @@
 	*
 	******************************************************************************
 	*/
-// asd
-////asdf
+
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
@@ -142,9 +141,9 @@ int main(void)
   uint32_t counter = 0;
   while (1)
   {
-    if (State.cmd && (State.uptime_flag || !State.cmdLoop))
+    if (State.cmd && (State.timer_1s_flag || !State.cmdLoop))
     {
-      State.uptime_flag = 0;
+      State.timer_1s_flag = 0;
       SERIAL_WRITE(SERIAL_CLS);
       cmd();
     };

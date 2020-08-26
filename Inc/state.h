@@ -5,7 +5,7 @@
 typedef struct state
 {
     uint64_t uptime;
-    uint8_t uptime_flag;
+    uint8_t timer_1s_flag;
 
     uint8_t error;
     uint8_t cmd;
@@ -19,6 +19,8 @@ typedef struct state
     uint32_t ADC_ValuesFiltered[16];
     uint8_t ADC_Filter_Iteration;
     uint8_t ADC_Filter_Valid;
+
+    //PHASE PIDS
 
     int8_t PD1_Slope;
     int8_t PD2_Slope;
@@ -46,6 +48,30 @@ typedef struct state
     int64_t PID_704_P_error;
     int64_t PID_704_I_error;
     int8_t PID_704_LOCK;
+
+    //POWER PIDS:
+
+    uint32_t POWER_PID_352_SetPoint;
+    uint32_t POWER_PID_704_SetPoint;
+
+    uint32_t POWER_PID_352_Output;
+
+    int64_t POWER_PID_352_P;
+    int64_t POWER_PID_352_I;
+    int64_t POWER_PID_352_T;
+    int64_t POWER_PID_352_P_error;
+    int64_t POWER_PID_352_I_error;
+    int8_t POWER_PID_352_LOCK;
+
+    uint32_t POWER_PID_704_Output;
+    uint32_t POWER_PID_704_OutputFINE;
+
+    int64_t POWER_PID_704_P;
+    int64_t POWER_PID_704_I;
+    int64_t POWER_PID_704_T;
+    int64_t POWER_PID_704_P_error;
+    int64_t POWER_PID_704_I_error;
+    int8_t POWER_PID_704_LOCK;
 
 } state;
 
