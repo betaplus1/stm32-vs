@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 1
   30:Src/main.c    **** /* Private includes ----------------------------------------------------------*/
   31:Src/main.c    **** /* USER CODE BEGIN Includes */
   32:Src/main.c    **** #include "ADC.h"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 2
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s 			page 2
 
 
   33:Src/main.c    **** #include "DAC.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 1
   87:Src/main.c    **** 
   88:Src/main.c    ****   /* USER CODE END Init */
   89:Src/main.c    **** 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 3
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s 			page 3
 
 
   90:Src/main.c    ****   /* Configure the system clock */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 1
  144:Src/main.c    ****     if (State.cmd && (State.timer_1s_flag || !State.cmdLoop))
  145:Src/main.c    ****     {
  146:Src/main.c    ****       State.timer_1s_flag = 0;
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s 			page 4
 
 
  147:Src/main.c    ****       SERIAL_WRITE(SERIAL_CLS);
@@ -216,7 +216,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 1
  179:Src/main.c    ****   HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1);
  180:Src/main.c    ****   /** Initializes the CPU, AHB and APB busses clocks 
  181:Src/main.c    ****   */
- 182:Src/main.c    ****   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI | RCC_OSCILLATORTYPE_LSI;
+ 182:Src/main.c    ****   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_LSI;
  183:Src/main.c    ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
  184:Src/main.c    ****   RCC_OscInitStruct.HSIDiv = RCC_HSI_DIV1;
  185:Src/main.c    ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
@@ -234,40 +234,41 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 1
  197:Src/main.c    ****   }
  198:Src/main.c    ****   /** Initializes the CPU, AHB and APB busses clocks 
  199:Src/main.c    ****   */
- 200:Src/main.c    ****   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1;
- 201:Src/main.c    ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
- 202:Src/main.c    ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
- 203:Src/main.c    ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 5
+ 200:Src/main.c    ****   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+ 201:Src/main.c    ****                               |RCC_CLOCKTYPE_PCLK1;
+ 202:Src/main.c    ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+ 203:Src/main.c    ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s 			page 5
 
 
- 204:Src/main.c    **** 
- 205:Src/main.c    ****   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
- 206:Src/main.c    ****   {
- 207:Src/main.c    ****     Error_Handler();
- 208:Src/main.c    ****   }
- 209:Src/main.c    ****   /** Initializes the peripherals clocks 
- 210:Src/main.c    ****   */
- 211:Src/main.c    ****   PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2 | RCC_PERIPHCLK_LPTIM1;
- 212:Src/main.c    ****   PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_PCLK1;
- 213:Src/main.c    ****   PeriphClkInit.Lptim1ClockSelection = RCC_LPTIM1CLKSOURCE_LSI;
- 214:Src/main.c    ****   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
- 215:Src/main.c    ****   {
- 216:Src/main.c    ****     Error_Handler();
- 217:Src/main.c    ****   }
- 218:Src/main.c    **** }
- 219:Src/main.c    **** 
- 220:Src/main.c    **** /* USER CODE BEGIN 4 */
- 221:Src/main.c    **** 
- 222:Src/main.c    **** /* USER CODE END 4 */
- 223:Src/main.c    **** 
- 224:Src/main.c    **** /**
- 225:Src/main.c    ****   * @brief  This function is executed in case of error occurrence.
- 226:Src/main.c    ****   * @retval None
- 227:Src/main.c    ****   */
- 228:Src/main.c    **** void Error_Handler(void)
- 229:Src/main.c    **** {
-  27              		.loc 1 229 1 view -0
+ 204:Src/main.c    ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 205:Src/main.c    **** 
+ 206:Src/main.c    ****   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+ 207:Src/main.c    ****   {
+ 208:Src/main.c    ****     Error_Handler();
+ 209:Src/main.c    ****   }
+ 210:Src/main.c    ****   /** Initializes the peripherals clocks 
+ 211:Src/main.c    ****   */
+ 212:Src/main.c    ****   PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2|RCC_PERIPHCLK_LPTIM1;
+ 213:Src/main.c    ****   PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_PCLK1;
+ 214:Src/main.c    ****   PeriphClkInit.Lptim1ClockSelection = RCC_LPTIM1CLKSOURCE_LSI;
+ 215:Src/main.c    ****   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+ 216:Src/main.c    ****   {
+ 217:Src/main.c    ****     Error_Handler();
+ 218:Src/main.c    ****   }
+ 219:Src/main.c    **** }
+ 220:Src/main.c    **** 
+ 221:Src/main.c    **** /* USER CODE BEGIN 4 */
+ 222:Src/main.c    **** 
+ 223:Src/main.c    **** /* USER CODE END 4 */
+ 224:Src/main.c    **** 
+ 225:Src/main.c    **** /**
+ 226:Src/main.c    ****   * @brief  This function is executed in case of error occurrence.
+ 227:Src/main.c    ****   * @retval None
+ 228:Src/main.c    ****   */
+ 229:Src/main.c    **** void Error_Handler(void)
+ 230:Src/main.c    **** {
+  27              		.loc 1 230 1 view -0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
   30              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -276,67 +277,67 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 1
   33              		.cfi_def_cfa_offset 8
   34              		.cfi_offset 4, -8
   35              		.cfi_offset 14, -4
- 230:Src/main.c    ****   /* USER CODE BEGIN Error_Handler_Debug */
- 231:Src/main.c    ****   for (int i = 0; i < 10; i++)
-  36              		.loc 1 231 3 view .LVU1
+ 231:Src/main.c    ****   /* USER CODE BEGIN Error_Handler_Debug */
+ 232:Src/main.c    ****   for (int i = 0; i < 10; i++)
+  36              		.loc 1 232 3 view .LVU1
   37              	.LBB2:
-  38              		.loc 1 231 8 view .LVU2
+  38              		.loc 1 232 8 view .LVU2
   39              	.LVL0:
-  40              		.loc 1 231 12 is_stmt 0 view .LVU3
+  40              		.loc 1 232 12 is_stmt 0 view .LVU3
   41 0002 0024     		movs	r4, #0
   42              	.LVL1:
   43              	.L2:
-  44              		.loc 1 231 19 is_stmt 1 discriminator 1 view .LVU4
-  45              		.loc 1 231 3 is_stmt 0 discriminator 1 view .LVU5
+  44              		.loc 1 232 19 is_stmt 1 discriminator 1 view .LVU4
+  45              		.loc 1 232 3 is_stmt 0 discriminator 1 view .LVU5
   46 0004 092C     		cmp	r4, #9
   47 0006 09DC     		bgt	.L4
- 232:Src/main.c    ****   {
- 233:Src/main.c    ****     HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
-  48              		.loc 1 233 5 is_stmt 1 discriminator 3 view .LVU6
+ 233:Src/main.c    ****   {
+ 234:Src/main.c    ****     HAL_GPIO_TogglePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin);
+  48              		.loc 1 234 5 is_stmt 1 discriminator 3 view .LVU6
   49 0008 A020     		movs	r0, #160
   50 000a 0121     		movs	r1, #1
   51 000c C005     		lsls	r0, r0, #23
   52 000e FFF7FEFF 		bl	HAL_GPIO_TogglePin
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s 			page 6
+
+
   53              	.LVL2:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 6
-
-
- 234:Src/main.c    ****     HAL_Delay(100);
-  54              		.loc 1 234 5 discriminator 3 view .LVU7
+ 235:Src/main.c    ****     HAL_Delay(100);
+  54              		.loc 1 235 5 discriminator 3 view .LVU7
   55 0012 6420     		movs	r0, #100
   56 0014 FFF7FEFF 		bl	HAL_Delay
   57              	.LVL3:
- 231:Src/main.c    ****   {
-  58              		.loc 1 231 27 discriminator 3 view .LVU8
- 231:Src/main.c    ****   {
-  59              		.loc 1 231 28 is_stmt 0 discriminator 3 view .LVU9
+ 232:Src/main.c    ****   {
+  58              		.loc 1 232 27 discriminator 3 view .LVU8
+ 232:Src/main.c    ****   {
+  59              		.loc 1 232 28 is_stmt 0 discriminator 3 view .LVU9
   60 0018 0134     		adds	r4, r4, #1
   61              	.LVL4:
- 231:Src/main.c    ****   {
-  62              		.loc 1 231 28 discriminator 3 view .LVU10
+ 232:Src/main.c    ****   {
+  62              		.loc 1 232 28 discriminator 3 view .LVU10
   63 001a F3E7     		b	.L2
   64              	.L4:
- 231:Src/main.c    ****   {
-  65              		.loc 1 231 28 discriminator 3 view .LVU11
+ 232:Src/main.c    ****   {
+  65              		.loc 1 232 28 discriminator 3 view .LVU11
   66              	.LBE2:
- 235:Src/main.c    ****   }
- 236:Src/main.c    ****   HAL_GPIO_WritePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin, 0);
-  67              		.loc 1 236 3 is_stmt 1 view .LVU12
+ 236:Src/main.c    ****   }
+ 237:Src/main.c    ****   HAL_GPIO_WritePin(LED_PHASE_GPIO_Port, LED_PHASE_Pin, 0);
+  67              		.loc 1 237 3 is_stmt 1 view .LVU12
   68 001c A020     		movs	r0, #160
   69 001e 0022     		movs	r2, #0
   70 0020 0121     		movs	r1, #1
   71 0022 C005     		lsls	r0, r0, #23
   72 0024 FFF7FEFF 		bl	HAL_GPIO_WritePin
   73              	.LVL5:
- 237:Src/main.c    **** 
- 238:Src/main.c    ****   /* User can add his own implementation to report the HAL error return state */
- 239:Src/main.c    **** 
- 240:Src/main.c    ****   /* USER CODE END Error_Handler_Debug */
- 241:Src/main.c    **** }
-  74              		.loc 1 241 1 is_stmt 0 view .LVU13
+ 238:Src/main.c    **** 
+ 239:Src/main.c    ****   /* User can add his own implementation to report the HAL error return state */
+ 240:Src/main.c    **** 
+ 241:Src/main.c    ****   /* USER CODE END Error_Handler_Debug */
+ 242:Src/main.c    **** }
+  74              		.loc 1 242 1 is_stmt 0 view .LVU13
   75              		@ sp needed
   76              	.LVL6:
-  77              		.loc 1 241 1 view .LVU14
+  77              		.loc 1 242 1 view .LVU14
   78 0028 10BD     		pop	{r4, pc}
   79              		.cfi_endproc
   80              	.LFE286:
@@ -357,10 +358,10 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 1
   96 0000 00B5     		push	{lr}
   97              	.LCFI1:
   98              		.cfi_def_cfa_offset 4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s 			page 7
+
+
   99              		.cfi_offset 14, -4
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 7
-
-
  100 0002 A1B0     		sub	sp, sp, #132
  101              	.LCFI2:
  102              		.cfi_def_cfa_offset 136
@@ -417,10 +418,10 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 1
  140 0034 1693     		str	r3, [sp, #88]
  185:Src/main.c    ****   RCC_OscInitStruct.LSIState = RCC_LSI_ON;
  141              		.loc 1 185 3 is_stmt 1 view .LVU29
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s 			page 8
+
+
  185:Src/main.c    ****   RCC_OscInitStruct.LSIState = RCC_LSI_ON;
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 8
-
-
  142              		.loc 1 185 41 is_stmt 0 view .LVU30
  143 0036 4022     		movs	r2, #64
  144 0038 1792     		str	r2, [sp, #92]
@@ -477,10 +478,10 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 1
  178              		.loc 1 194 3 is_stmt 1 view .LVU47
  194:Src/main.c    ****   {
  179              		.loc 1 194 7 is_stmt 0 view .LVU48
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s 			page 9
+
+
  180 005c 12A8     		add	r0, sp, #72
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 9
-
-
  181 005e FFF7FEFF 		bl	HAL_RCC_OscConfig
  182              	.LVL11:
  194:Src/main.c    ****   {
@@ -488,78 +489,78 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 1
  184 0062 0028     		cmp	r0, #0
  185 0064 1AD1     		bne	.L9
  186              	.L6:
- 200:Src/main.c    ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+ 200:Src/main.c    ****                               |RCC_CLOCKTYPE_PCLK1;
  187              		.loc 1 200 3 is_stmt 1 view .LVU50
- 200:Src/main.c    ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+ 200:Src/main.c    ****                               |RCC_CLOCKTYPE_PCLK1;
  188              		.loc 1 200 31 is_stmt 0 view .LVU51
  189 0066 0723     		movs	r3, #7
  190 0068 0E93     		str	r3, [sp, #56]
- 201:Src/main.c    ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
- 191              		.loc 1 201 3 is_stmt 1 view .LVU52
- 201:Src/main.c    ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
- 192              		.loc 1 201 34 is_stmt 0 view .LVU53
+ 202:Src/main.c    ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 191              		.loc 1 202 3 is_stmt 1 view .LVU52
+ 202:Src/main.c    ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 192              		.loc 1 202 34 is_stmt 0 view .LVU53
  193 006a 053B     		subs	r3, r3, #5
  194 006c 0F93     		str	r3, [sp, #60]
- 202:Src/main.c    ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
- 195              		.loc 1 202 3 is_stmt 1 view .LVU54
- 202:Src/main.c    ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
- 196              		.loc 1 202 35 is_stmt 0 view .LVU55
+ 203:Src/main.c    ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 195              		.loc 1 203 3 is_stmt 1 view .LVU54
+ 203:Src/main.c    ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+ 196              		.loc 1 203 35 is_stmt 0 view .LVU55
  197 006e 0023     		movs	r3, #0
  198 0070 1093     		str	r3, [sp, #64]
- 203:Src/main.c    **** 
- 199              		.loc 1 203 3 is_stmt 1 view .LVU56
- 203:Src/main.c    **** 
- 200              		.loc 1 203 36 is_stmt 0 view .LVU57
+ 204:Src/main.c    **** 
+ 199              		.loc 1 204 3 is_stmt 1 view .LVU56
+ 204:Src/main.c    **** 
+ 200              		.loc 1 204 36 is_stmt 0 view .LVU57
  201 0072 1193     		str	r3, [sp, #68]
- 205:Src/main.c    ****   {
- 202              		.loc 1 205 3 is_stmt 1 view .LVU58
- 205:Src/main.c    ****   {
- 203              		.loc 1 205 7 is_stmt 0 view .LVU59
+ 206:Src/main.c    ****   {
+ 202              		.loc 1 206 3 is_stmt 1 view .LVU58
+ 206:Src/main.c    ****   {
+ 203              		.loc 1 206 7 is_stmt 0 view .LVU59
  204 0074 0221     		movs	r1, #2
  205 0076 0EA8     		add	r0, sp, #56
  206 0078 FFF7FEFF 		bl	HAL_RCC_ClockConfig
  207              	.LVL12:
- 205:Src/main.c    ****   {
- 208              		.loc 1 205 6 view .LVU60
+ 206:Src/main.c    ****   {
+ 208              		.loc 1 206 6 view .LVU60
  209 007c 0028     		cmp	r0, #0
  210 007e 10D1     		bne	.L10
  211              	.L7:
- 211:Src/main.c    ****   PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_PCLK1;
- 212              		.loc 1 211 3 is_stmt 1 view .LVU61
- 211:Src/main.c    ****   PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_PCLK1;
- 213              		.loc 1 211 38 is_stmt 0 view .LVU62
+ 212:Src/main.c    ****   PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_PCLK1;
+ 212              		.loc 1 212 3 is_stmt 1 view .LVU61
+ 212:Src/main.c    ****   PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_PCLK1;
+ 213              		.loc 1 212 38 is_stmt 0 view .LVU62
  214 0080 0B4B     		ldr	r3, .L12
  215 0082 0193     		str	r3, [sp, #4]
- 212:Src/main.c    ****   PeriphClkInit.Lptim1ClockSelection = RCC_LPTIM1CLKSOURCE_LSI;
- 216              		.loc 1 212 3 is_stmt 1 view .LVU63
- 212:Src/main.c    ****   PeriphClkInit.Lptim1ClockSelection = RCC_LPTIM1CLKSOURCE_LSI;
- 217              		.loc 1 212 38 is_stmt 0 view .LVU64
+ 213:Src/main.c    ****   PeriphClkInit.Lptim1ClockSelection = RCC_LPTIM1CLKSOURCE_LSI;
+ 216              		.loc 1 213 3 is_stmt 1 view .LVU63
+ 213:Src/main.c    ****   PeriphClkInit.Lptim1ClockSelection = RCC_LPTIM1CLKSOURCE_LSI;
+ 217              		.loc 1 213 38 is_stmt 0 view .LVU64
  218 0084 0023     		movs	r3, #0
  219 0086 0393     		str	r3, [sp, #12]
- 213:Src/main.c    ****   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
- 220              		.loc 1 213 3 is_stmt 1 view .LVU65
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 10
+ 214:Src/main.c    ****   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s 			page 10
 
 
- 213:Src/main.c    ****   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
- 221              		.loc 1 213 38 is_stmt 0 view .LVU66
+ 220              		.loc 1 214 3 is_stmt 1 view .LVU65
+ 214:Src/main.c    ****   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+ 221              		.loc 1 214 38 is_stmt 0 view .LVU66
  222 0088 8023     		movs	r3, #128
  223 008a DB02     		lsls	r3, r3, #11
  224 008c 0793     		str	r3, [sp, #28]
- 214:Src/main.c    ****   {
- 225              		.loc 1 214 3 is_stmt 1 view .LVU67
- 214:Src/main.c    ****   {
- 226              		.loc 1 214 7 is_stmt 0 view .LVU68
+ 215:Src/main.c    ****   {
+ 225              		.loc 1 215 3 is_stmt 1 view .LVU67
+ 215:Src/main.c    ****   {
+ 226              		.loc 1 215 7 is_stmt 0 view .LVU68
  227 008e 01A8     		add	r0, sp, #4
  228 0090 FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
  229              	.LVL13:
- 214:Src/main.c    ****   {
- 230              		.loc 1 214 6 view .LVU69
+ 215:Src/main.c    ****   {
+ 230              		.loc 1 215 6 view .LVU69
  231 0094 0028     		cmp	r0, #0
  232 0096 07D1     		bne	.L11
  233              	.L5:
- 218:Src/main.c    **** 
- 234              		.loc 1 218 1 view .LVU70
+ 219:Src/main.c    **** 
+ 234              		.loc 1 219 1 view .LVU70
  235 0098 21B0     		add	sp, sp, #132
  236              		@ sp needed
  237 009a 00BD     		pop	{pc}
@@ -570,18 +571,18 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 1
  241              	.LVL14:
  242 00a0 E1E7     		b	.L6
  243              	.L10:
- 207:Src/main.c    ****   }
- 244              		.loc 1 207 5 view .LVU72
+ 208:Src/main.c    ****   }
+ 244              		.loc 1 208 5 view .LVU72
  245 00a2 FFF7FEFF 		bl	Error_Handler
  246              	.LVL15:
  247 00a6 EBE7     		b	.L7
  248              	.L11:
- 216:Src/main.c    ****   }
- 249              		.loc 1 216 5 view .LVU73
+ 217:Src/main.c    ****   }
+ 249              		.loc 1 217 5 view .LVU73
  250 00a8 FFF7FEFF 		bl	Error_Handler
  251              	.LVL16:
- 218:Src/main.c    **** 
- 252              		.loc 1 218 1 is_stmt 0 view .LVU74
+ 219:Src/main.c    **** 
+ 252              		.loc 1 219 1 is_stmt 0 view .LVU74
  253 00ac F4E7     		b	.L5
  254              	.L13:
  255 00ae C046     		.align	2
@@ -597,10 +598,10 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 1
  264      324A00
  265 000b 00       		.align	2
  266              	.LC6:
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s 			page 11
+
+
  267 000c 0D3C3C3C 		.ascii	"\015<<<<<<<<<<RESET>>>>>>>>\012\000"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 11
-
-
  267      3C3C3C3C 
  267      3C3C3C52 
  267      45534554 
@@ -657,10 +658,10 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 1
  101:Src/main.c    ****   MX_SPI1_Init();
  311              		.loc 1 101 3 view .LVU82
  312 001c FFF7FEFF 		bl	MX_SPI2_Init
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s 			page 12
+
+
  313              	.LVL23:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 12
-
-
  102:Src/main.c    ****   /* USER CODE BEGIN 2 */
  314              		.loc 1 102 3 view .LVU83
  315 0020 FFF7FEFF 		bl	MX_SPI1_Init
@@ -717,10 +718,10 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 1
  359 0066 2100     		movs	r1, r4
  360 0068 2800     		movs	r0, r5
  361 006a FFF7FEFF 		bl	HAL_UART_Transmit
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s 			page 13
+
+
  362              	.LVL31:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 13
-
-
  363              	.LBE3:
  110:Src/main.c    ****   SERIAL_WRITE(RESET);
  364              		.loc 1 110 27 view .LVU91
@@ -777,10 +778,10 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 1
  120:Src/main.c    ****   HAL_NVIC_SetPriority(EXTI4_15_IRQn, 1, 0);
  407              		.loc 1 120 3 view .LVU100
  408 00ac 0020     		movs	r0, #0
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s 			page 14
+
+
  409 00ae FFF7FEFF 		bl	HAL_InitTick
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 14
-
-
  410              	.LVL39:
  121:Src/main.c    ****   HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 2, 0);
  411              		.loc 1 121 3 view .LVU101
@@ -837,10 +838,10 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 1
  454 00f6 2C48     		ldr	r0, .L21+40
  455 00f8 FFF7FEFF 		bl	DAC_cmd
  456              	.LVL48:
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s 			page 15
+
+
  137:Src/main.c    ****   PID_Init();
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 15
-
-
  457              		.loc 1 137 3 view .LVU110
  458 00fc FFF7FEFF 		bl	ADC_update
  459              	.LVL49:
@@ -897,10 +898,10 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 1
  501 0138 FFF7FEFF 		bl	HAL_UART_Transmit
  502              	.LVL55:
  503              	.LBE5:
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s 			page 16
+
+
  147:Src/main.c    ****       cmd();
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 16
-
-
  504              		.loc 1 147 31 view .LVU120
  148:Src/main.c    ****     };
  505              		.loc 1 148 7 view .LVU121
@@ -957,10 +958,10 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 1
  152:Src/main.c    ****       Filter();
  543              		.loc 1 152 14 is_stmt 0 view .LVU135
  544 0164 0134     		adds	r4, r4, #1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s 			page 17
+
+
  545              	.LVL58:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 17
-
-
  153:Src/main.c    **** 
  546              		.loc 1 153 7 is_stmt 1 view .LVU136
  547 0166 FFF7FEFF 		bl	Filter
@@ -1009,7 +1010,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 1
  586              		.section	.bss.State,"aw",%nobits
  587              		.align	3
  590              	State:
- 591 0000 00000000 		.space	1504
+ 591 0000 00000000 		.space	1560
  591      00000000 
  591      00000000 
  591      00000000 
@@ -1017,10 +1018,10 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 1
  592              		.text
  593              	.Letext0:
  594              		.file 2 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\machine\\_default_types.h"
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s 			page 18
+
+
  595              		.file 3 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_stdint.h"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 18
-
-
  596              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
  597              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
  598              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
@@ -1050,22 +1051,22 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 1
  622              		.file 30 "Inc/cmd.h"
  623              		.file 31 "Inc/Filter.h"
  624              		.file 32 "<built-in>"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLf4rae.s 			page 19
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s 			page 19
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\Users\matil\AppData\Local\Temp\ccLf4rae.s:16     .text.Error_Handler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccLf4rae.s:24     .text.Error_Handler:00000000 Error_Handler
-C:\Users\matil\AppData\Local\Temp\ccLf4rae.s:83     .text.SystemClock_Config:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccLf4rae.s:90     .text.SystemClock_Config:00000000 SystemClock_Config
-C:\Users\matil\AppData\Local\Temp\ccLf4rae.s:257    .text.SystemClock_Config:000000b0 $d
-C:\Users\matil\AppData\Local\Temp\ccLf4rae.s:262    .rodata.main.str1.4:00000000 $d
-C:\Users\matil\AppData\Local\Temp\ccLf4rae.s:269    .text.main:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccLf4rae.s:276    .text.main:00000000 main
-C:\Users\matil\AppData\Local\Temp\ccLf4rae.s:568    .text.main:00000180 $d
-C:\Users\matil\AppData\Local\Temp\ccLf4rae.s:590    .bss.State:00000000 State
-C:\Users\matil\AppData\Local\Temp\ccLf4rae.s:587    .bss.State:00000000 $d
+C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s:16     .text.Error_Handler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s:24     .text.Error_Handler:00000000 Error_Handler
+C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s:83     .text.SystemClock_Config:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s:90     .text.SystemClock_Config:00000000 SystemClock_Config
+C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s:257    .text.SystemClock_Config:000000b0 $d
+C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s:262    .rodata.main.str1.4:00000000 $d
+C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s:269    .text.main:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s:276    .text.main:00000000 main
+C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s:568    .text.main:00000180 $d
+C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s:590    .bss.State:00000000 State
+C:\Users\matil\AppData\Local\Temp\ccXmdQdJ.s:587    .bss.State:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_TogglePin

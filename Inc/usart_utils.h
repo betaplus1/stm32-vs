@@ -15,6 +15,7 @@
 #define cmd_rf_state 9
 #define cmd_rf_pid 10
 #define cmd_loop 11
+#define cmd_bootloader_enable 12
 
 void UART_PARSE(uint8_t buffer[UART_RX_BUFFER_LENGTH]);
 #endif /* __USART_UTILS_H */

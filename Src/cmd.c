@@ -269,6 +269,13 @@ void cmd()
         SERIAL_WRITE("undefined\n");
         break;
     }
+    case cmd_bootloader_enable:
+    {
+        State.cmd = 0;
+        HAL_GPIO_WritePin(BOOTLOADER_GPIO_Port, BOOTLOADER_Pin, 1);
+        SERIAL_WRITE("bootloader enabled\n");
+        break;
+    }
     default:
     {
         break;

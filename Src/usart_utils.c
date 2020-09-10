@@ -49,6 +49,10 @@ void UART_PARSE(uint8_t buffer[UART_RX_BUFFER_LENGTH])
     {
         State.cmd = cmd_loop;
     }
+    else if (strcmp(buffer, "boot") == 0)
+    {
+        State.cmd = cmd_bootloader_enable;
+    }
     else
     {
         State.cmd = cmd_undefined;

@@ -28,7 +28,7 @@ typedef struct state
     int8_t PD4_Slope;
     int64_t PD1_PD2_SetPoint;
     uint32_t PD1_PD2_Offset; //offset dac value
-    int64_t PD1_PD2_MSE;
+    int64_t PD1_PD2_MSE;     //MEAN SQUARE ERROR from the middle of the characteristics slope
     int64_t PD3_PD4_SetPoint;
     uint32_t PD3_PD4_Offset; //offset dac value
     int64_t PD3_PD4_MSE;
@@ -40,7 +40,6 @@ typedef struct state
     int64_t PID_352_P_error;
     int64_t PID_352_I_error;
     int8_t PID_352_LOCK;
-
     uint32_t PID_704_Output;
     int64_t PID_704_P;
     int64_t PID_704_I;
@@ -53,25 +52,32 @@ typedef struct state
 
     uint32_t POWER_PID_352_SetPoint;
     uint32_t POWER_PID_704_SetPoint;
-
     uint32_t POWER_PID_352_Output;
-
     int64_t POWER_PID_352_P;
     int64_t POWER_PID_352_I;
     int64_t POWER_PID_352_T;
     int64_t POWER_PID_352_P_error;
     int64_t POWER_PID_352_I_error;
     int8_t POWER_PID_352_LOCK;
-
     uint32_t POWER_PID_704_Output;
     uint32_t POWER_PID_704_OutputFINE;
-
     int64_t POWER_PID_704_P;
     int64_t POWER_PID_704_I;
     int64_t POWER_PID_704_T;
     int64_t POWER_PID_704_P_error;
     int64_t POWER_PID_704_I_error;
     int8_t POWER_PID_704_LOCK;
+
+    //TEMPERATURE PID:
+
+    uint32_t TEMP_PID_SetPoint;
+    uint32_t TEMP_PID_Output;
+    int64_t TEMP_PID_P;
+    int64_t TEMP_PID_I;
+    int64_t TEMP_PID_T;
+    int64_t TEMP_PID_P_error;
+    int64_t TEMP_PID_I_error;
+    int8_t TEMP_PID_LOCK;
 
 } state;
 

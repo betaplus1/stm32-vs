@@ -45,7 +45,8 @@ void MX_USART2_UART_Init(void)
   huart2.Init.OverSampling = UART_OVERSAMPLING_16;
   huart2.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
   huart2.Init.ClockPrescaler = UART_PRESCALER_DIV1;
-  huart2.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+  huart2.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_SWAP_INIT;
+  huart2.AdvancedInit.Swap = UART_ADVFEATURE_SWAP_ENABLE;
   if (HAL_UART_Init(&huart2) != HAL_OK)
   {
     Error_Handler();
@@ -165,7 +166,7 @@ void CHECK_IF_END()
       HAL_UART_Receive_DMA(&huart2, State.UART_RX_BUFF, UART_RX_BUFFER_LENGTH);
       break;
     }
-    else if (State.UART_RX_BUFF[i] == 8)
+    else if (State.UART_RX_BUFF[i] == 8 || State.UART_RX_BUFF[i] == 127) //127 for linux
     {
       State.UART_RX_BUFF[i] = '\0';
       if (i > 0)

@@ -24,8 +24,7 @@
 #define __MAIN_H
 
 #ifdef __cplusplus
-extern "C"
-{
+extern "C" {
 #endif
 
 /* Includes ------------------------------------------------------------------*/
@@ -36,20 +35,20 @@ extern "C"
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
 #include "usart.h"
-	/* USER CODE END Includes */
+/* USER CODE END Includes */
 
-	/* Exported types ------------------------------------------------------------*/
-	/* USER CODE BEGIN ET */
+/* Exported types ------------------------------------------------------------*/
+/* USER CODE BEGIN ET */
 
-	/* USER CODE END ET */
+/* USER CODE END ET */
 
-	/* Exported constants --------------------------------------------------------*/
-	/* USER CODE BEGIN EC */
+/* Exported constants --------------------------------------------------------*/
+/* USER CODE BEGIN EC */
 
-	/* USER CODE END EC */
+/* USER CODE END EC */
 
-	/* Exported macro ------------------------------------------------------------*/
-	/* USER CODE BEGIN EM */
+/* Exported macro ------------------------------------------------------------*/
+/* USER CODE BEGIN EM */
 
 #define SERIAL_WRITE(f_, ...)                                     \
 	{                                                             \
@@ -108,10 +107,10 @@ extern "C"
 #define LPTIM_PRESCALER_1s_LSE 255
 #define LPTIM_PRESCALER_1s_LSI 250
 
-	/* USER CODE END EM */
+/* USER CODE END EM */
 
-	/* Exported functions prototypes ---------------------------------------------*/
-	void Error_Handler(void);
+/* Exported functions prototypes ---------------------------------------------*/
+void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
 
@@ -134,6 +133,8 @@ extern "C"
 #define DAC_nLOAD_GPIO_Port GPIOB
 #define DAC_nRESET_Pin GPIO_PIN_6
 #define DAC_nRESET_GPIO_Port GPIOC
+#define BOOTLOADER_Pin GPIO_PIN_14
+#define BOOTLOADER_GPIO_Port GPIOA
 #define DAC_nSYNC_Pin GPIO_PIN_15
 #define DAC_nSYNC_GPIO_Port GPIOA
 #define DAC_SCK_Pin GPIO_PIN_3
@@ -148,9 +149,9 @@ extern "C"
 #define ADC_MOSI_GPIO_Port GPIOB
 #define ADC_SCK_Pin GPIO_PIN_8
 #define ADC_SCK_GPIO_Port GPIOB
-	/* USER CODE BEGIN Private defines */
+/* USER CODE BEGIN Private defines */
 
-	/* USER CODE END Private defines */
+/* USER CODE END Private defines */
 
 #ifdef __cplusplus
 }

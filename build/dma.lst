@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cck8fM67.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccCfSG9G.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cck8fM67.s 			page 1
   30:Src/dma.c     **** /* Configure DMA                                                              */
   31:Src/dma.c     **** /*----------------------------------------------------------------------------*/
   32:Src/dma.c     **** 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cck8fM67.s 			page 2
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccCfSG9G.s 			page 2
 
 
   33:Src/dma.c     **** /* USER CODE BEGIN 1 */
@@ -68,7 +68,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cck8fM67.s 			page 1
   37:Src/dma.c     **** /** 
   38:Src/dma.c     ****   * Enable DMA controller clock
   39:Src/dma.c     ****   */
-  40:Src/dma.c     **** void MX_DMA_Init(void)
+  40:Src/dma.c     **** void MX_DMA_Init(void) 
   41:Src/dma.c     **** {
   27              		.loc 1 41 1 view -0
   28              		.cfi_startproc
@@ -116,11 +116,12 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cck8fM67.s 			page 1
   62 0020 0920     		movs	r0, #9
   63 0022 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
   64              	.LVL1:
-  50:Src/dma.c     **** }
-  65              		.loc 1 50 1 is_stmt 0 view .LVU9
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cck8fM67.s 			page 3
+  50:Src/dma.c     **** 
+  51:Src/dma.c     **** }
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccCfSG9G.s 			page 3
 
 
+  65              		.loc 1 51 1 is_stmt 0 view .LVU9
   66 0026 03B0     		add	sp, sp, #12
   67              		@ sp needed
   68 0028 00BD     		pop	{pc}
@@ -148,14 +149,14 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cck8fM67.s 			page 1
   91              		.file 15 "Inc/usart.h"
   92              		.file 16 "Inc/state.h"
   93              		.file 17 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cck8fM67.s 			page 4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccCfSG9G.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 dma.c
-C:\Users\matil\AppData\Local\Temp\cck8fM67.s:16     .text.MX_DMA_Init:00000000 $t
-C:\Users\matil\AppData\Local\Temp\cck8fM67.s:24     .text.MX_DMA_Init:00000000 MX_DMA_Init
-C:\Users\matil\AppData\Local\Temp\cck8fM67.s:72     .text.MX_DMA_Init:0000002c $d
+C:\Users\matil\AppData\Local\Temp\ccCfSG9G.s:16     .text.MX_DMA_Init:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccCfSG9G.s:24     .text.MX_DMA_Init:00000000 MX_DMA_Init
+C:\Users\matil\AppData\Local\Temp\ccCfSG9G.s:72     .text.MX_DMA_Init:0000002c $d
 
 UNDEFINED SYMBOLS
 HAL_NVIC_SetPriority

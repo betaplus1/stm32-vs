@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
   42 0002 2530     		adds	r0, r0, #37
   43              	.LVL1:
   44              		.loc 1 14 48 view .LVU4
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 2
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 2
 
 
   45 0004 FF30     		adds	r0, r0, #255
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
   95 0002 2530     		adds	r0, r0, #37
   96              	.LVL5:
   97              		.loc 1 20 48 view .LVU12
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 3
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 3
 
 
   98 0004 FF30     		adds	r0, r0, #255
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  148 0002 FFF7FEFF 		bl	Voltage_nV
  149              	.LVL9:
  150              		.loc 1 26 24 view .LVU20
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 4
 
 
  151 0006 054A     		ldr	r2, .L8
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  201 000a 121A     		subs	r2, r2, r0
  202 000c 8B41     		sbcs	r3, r3, r1
  203 000e 1000     		movs	r0, r2
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 5
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 5
 
 
  204 0010 1900     		movs	r1, r3
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  254              	.LVL16:
  255              		.loc 1 38 39 view .LVU35
  256 001a 044A     		ldr	r2, .L14+4
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 6
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 6
 
 
  257 001c 0123     		movs	r3, #1
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  307 0016 5941     		adcs	r1, r1, r3
   45:Src/PID.c     **** };
  308              		.loc 1 45 1 view .LVU43
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 7
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 7
 
 
  309              		@ sp needed
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  360 0018 6C44     		add	r4, r4, sp
  361 001a 2268     		ldr	r2, [r4]
  362 001c 6368     		ldr	r3, [r4, #4]
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 8
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 8
 
 
  363              		.loc 1 50 38 view .LVU52
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  401      3420534C 
  402 006d 000000   		.align	2
  403              	.LC14:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 9
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 9
 
 
  404 0070 5B43414C 		.ascii	"[CALIBRATION] PS352 OFFSET: %u\012\000"
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  450 001a 9B4B     		ldr	r3, .L37
  451 001c 2200     		movs	r2, r4
  452 001e 23CB     		ldmia	r3!, {r0, r1, r5}
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 10
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 10
 
 
  453 0020 23C2     		stmia	r2!, {r0, r1, r5}
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  500 005e 9B46     		mov	fp, r3
   60:Src/PID.c     ****     uint64_t prevPhase3 = 0;
  501              		.loc 1 60 14 view .LVU70
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 11
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 11
 
 
  502 0060 0493     		str	r3, [sp, #16]
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  533 007c C117     		asrs	r1, r0, #31
  534              		.loc 1 85 54 discriminator 4 view .LVU79
  535 007e 009A     		ldr	r2, [sp]
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 12
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 12
 
 
  536 0080 019B     		ldr	r3, [sp, #4]
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  584 00b6 0493     		str	r3, [sp, #16]
  585 00b8 A246     		mov	r10, r4
  586              	.LVL41:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 13
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 13
 
 
  587              	.L23:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  631 00f6 121A     		subs	r2, r2, r0
  632 00f8 8B41     		sbcs	r3, r3, r1
  633 00fa 1000     		movs	r0, r2
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 14
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 14
 
 
  634 00fc 1900     		movs	r1, r3
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  680              	.LVL52:
   70:Src/PID.c     ****         int64_t MSE352 = error3 * error3 + error4 * error4;
  681              		.loc 1 70 9 is_stmt 1 view .LVU112
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 15
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 15
 
 
   70:Src/PID.c     ****         int64_t MSE352 = error3 * error3 + error4 * error4;
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  725              		.loc 1 81 34 is_stmt 0 view .LVU123
  726 0180 444B     		ldr	r3, .L37+12
  727 0182 9F22     		movs	r2, #159
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 16
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 16
 
 
  728 0184 D200     		lsls	r2, r2, #3
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  773 01bc 00D9     		bls	.LCB586
  774 01be 55E7     		b	.L35	@long jump
  775              	.LCB586:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 17
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 17
 
 
  776              	.L32:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  824              		.loc 1 91 5 view .LVU141
  825 01fc 0797     		str	r7, [sp, #28]
  826 01fe 6022     		movs	r2, #96
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 18
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 18
 
 
  827 0200 0021     		movs	r1, #0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  879 0248 0021     		movs	r1, #0
  880 024a 08A8     		add	r0, sp, #32
  881 024c FFF7FEFF 		bl	memset
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 19
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 19
 
 
  882              	.LVL74:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  934 02a0 FEFF0000 		.word	65534
  935 02a4 40771B00 		.word	1800000
  936 02a8 FFFFFF00 		.word	16777215
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 20
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 20
 
 
  937 02ac 905F0100 		.word	90000
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  973 0000 F0B5     		push	{r4, r5, r6, r7, lr}
  974              	.LCFI11:
  975              		.cfi_def_cfa_offset 20
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 21
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 21
 
 
  976              		.cfi_offset 4, -20
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  1027              		.loc 1 102 5 view .LVU166
  1028 0040 9248     		ldr	r0, .L54+8
  1029 0042 FFF7FEFF 		bl	DAC_cmd
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 22
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 22
 
 
  1030              	.LVL86:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  121:Src/PID.c     ****             // SERIAL_WRITE("error1: %li\n", error1);
  122:Src/PID.c     ****             // SERIAL_WRITE("error2: %li\n", error2);
  123:Src/PID.c     ****             // SERIAL_WRITE("MSE704: %li\n\n", MSE704);
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 23
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 23
 
 
  124:Src/PID.c     ****             State.PD1_PD2_Offset = PS;
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  1113 009c 9B23     		movs	r3, #155
  1114 009e DB00     		lsls	r3, r3, #3
  1115 00a0 4344     		add	r3, r3, r8
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 24
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 24
 
 
  1116 00a2 1C60     		str	r4, [r3]
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  1159 00cc 6420     		movs	r0, #100
  1160 00ce FFF7FEFF 		bl	HAL_Delay
  1161              	.LVL100:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 25
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 25
 
 
  110:Src/PID.c     ****         uint64_t Phase2 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD2_Phase_CH] * 1800000) / 0x
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  1207 0118 0023     		movs	r3, #0
  1208 011a FFF7FEFF 		bl	__aeabi_uldivmod
  1209              	.LVL106:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 26
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 26
 
 
  111:Src/PID.c     **** 
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  1254              	.LVL112:
  115:Src/PID.c     **** 
  1255              		.loc 1 115 17 view .LVU223
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 27
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 27
 
 
  1256 015e 029B     		ldr	r3, [sp, #8]
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  126:Src/PID.c     ****             State.PD2_Slope = prevPhase2 < Phase2 ? 1 : -1;
  1300              		.loc 1 126 29 view .LVU234
  1301 019a 00D0     		beq	.LCB1054
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 28
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 28
 
 
  1302 019c 63E7     		b	.L48	@long jump
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  1348 01ce 08A8     		add	r0, sp, #32
  1349 01d0 FFF7FEFF 		bl	memset
  1350              	.LVL119:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 29
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 29
 
 
  1351              		.loc 1 133 5 view .LVU242
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  1403              		.loc 1 135 5 view .LVU251
  1404 021e 0797     		str	r7, [sp, #28]
  1405 0220 6022     		movs	r2, #96
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 30
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 30
 
 
  1406 0222 0021     		movs	r1, #0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  1458              		.loc 1 137 5 view .LVU263
  1459 026a B023     		movs	r3, #176
  1460 026c 5B03     		lsls	r3, r3, #13
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 31
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 31
 
 
  1461 026e 9C46     		mov	ip, r3
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  1512              	.LFB293:
  139:Src/PID.c     **** 
  140:Src/PID.c     **** //Determines optimal setpoints of attenuators.
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 32
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 32
 
 
  141:Src/PID.c     **** void POWER_Calib352()
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  1562 0038 1148     		ldr	r0, .L57+12
  1563 003a FFF7FEFF 		bl	DAC_cmd
  1564              	.LVL143:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 33
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 33
 
 
  146:Src/PID.c     ****     HAL_Delay(100);
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  1615 008c 00000000 		.word	.LC34
  1616              		.cfi_endproc
  1617              	.LFE293:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 34
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 34
 
 
  1619              		.section	.rodata.POWER_Calib704.str1.4,"aMS",%progbits,1
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  1666              		.loc 1 153 5 view .LVU285
  1667 0020 FA26     		movs	r6, #250
  1668 0022 B600     		lsls	r6, r6, #2
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 35
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 35
 
 
  1669 0024 154D     		ldr	r5, .L60+4
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  1718              		.loc 1 158 5 is_stmt 0 view .LVU295
  1719 006e FFF7FEFF 		bl	HAL_UART_Transmit
  1720              	.LVL158:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 36
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 36
 
 
  1721              	.LBE25:
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  163:Src/PID.c     ****     SERIAL_WRITE(SERIAL_YELLOW);
  1771              		.loc 1 163 5 view .LVU299
  1772 0004 01AC     		add	r4, sp, #4
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 37
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 37
 
 
  1773 0006 6022     		movs	r2, #96
@@ -2167,7 +2167,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  1776 000c FFF7FEFF 		bl	memset
  1777              	.LVL159:
  1778              		.loc 1 163 5 view .LVU300
- 1779 0010 134B     		ldr	r3, .L63
+ 1779 0010 114B     		ldr	r3, .L63
  1780 0012 2200     		movs	r2, r4
  1781 0014 03CB     		ldmia	r3!, {r0, r1}
  1782 0016 03C2     		stmia	r2!, {r0, r1}
@@ -2175,7 +2175,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  1784              		.loc 1 163 5 view .LVU301
  1785 0018 FA26     		movs	r6, #250
  1786 001a B600     		lsls	r6, r6, #2
- 1787 001c 114D     		ldr	r5, .L63+4
+ 1787 001c 0F4D     		ldr	r5, .L63+4
  1788 001e 3300     		movs	r3, r6
  1789 0020 0722     		movs	r2, #7
  1790 0022 2100     		movs	r1, r4
@@ -2192,604 +2192,598 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  1799              		.loc 1 165 5 view .LVU304
  1800 002e FFF7FEFF 		bl	Calib704
  1801              	.LVL163:
- 166:Src/PID.c     ****     POWER_Calib352();
- 1802              		.loc 1 166 5 view .LVU305
- 1803 0032 FFF7FEFF 		bl	POWER_Calib352
- 1804              	.LVL164:
- 167:Src/PID.c     ****     POWER_Calib704();
- 1805              		.loc 1 167 5 view .LVU306
- 1806 0036 FFF7FEFF 		bl	POWER_Calib704
- 1807              	.LVL165:
- 1808              	.LBB27:
+ 1802              	.LBB27:
+ 166:Src/PID.c     ****     // POWER_Calib352();
+ 167:Src/PID.c     ****     // POWER_Calib704();
  168:Src/PID.c     ****     SERIAL_WRITE(SERIAL_COLOR_RESET);
- 1809              		.loc 1 168 5 view .LVU307
- 1810 003a 6022     		movs	r2, #96
- 1811 003c 0021     		movs	r1, #0
- 1812 003e 02A8     		add	r0, sp, #8
- 1813 0040 FFF7FEFF 		bl	memset
- 1814              	.LVL166:
- 1815              		.loc 1 168 5 view .LVU308
- 1816 0044 084B     		ldr	r3, .L63+8
- 1817 0046 1A68     		ldr	r2, [r3]
- 1818 0048 0192     		str	r2, [sp, #4]
- 1819 004a 1B79     		ldrb	r3, [r3, #4]
- 1820 004c 2371     		strb	r3, [r4, #4]
- 1821              	.LVL167:
- 1822              		.loc 1 168 5 view .LVU309
- 1823 004e 3300     		movs	r3, r6
- 1824 0050 0422     		movs	r2, #4
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 38
+ 1803              		.loc 1 168 5 view .LVU305
+ 1804 0032 6022     		movs	r2, #96
+ 1805 0034 0021     		movs	r1, #0
+ 1806 0036 02A8     		add	r0, sp, #8
+ 1807 0038 FFF7FEFF 		bl	memset
+ 1808              	.LVL164:
+ 1809              		.loc 1 168 5 view .LVU306
+ 1810 003c 084B     		ldr	r3, .L63+8
+ 1811 003e 1A68     		ldr	r2, [r3]
+ 1812 0040 0192     		str	r2, [sp, #4]
+ 1813 0042 1B79     		ldrb	r3, [r3, #4]
+ 1814 0044 2371     		strb	r3, [r4, #4]
+ 1815              	.LVL165:
+ 1816              		.loc 1 168 5 view .LVU307
+ 1817 0046 3300     		movs	r3, r6
+ 1818 0048 0422     		movs	r2, #4
+ 1819 004a 2100     		movs	r1, r4
+ 1820 004c 2800     		movs	r0, r5
+ 1821 004e FFF7FEFF 		bl	HAL_UART_Transmit
+ 1822              	.LVL166:
+ 1823              	.LBE27:
+ 1824              		.loc 1 168 37 view .LVU308
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 38
 
 
- 1825 0052 2100     		movs	r1, r4
- 1826 0054 2800     		movs	r0, r5
- 1827 0056 FFF7FEFF 		bl	HAL_UART_Transmit
- 1828              	.LVL168:
- 1829              	.LBE27:
- 1830              		.loc 1 168 37 view .LVU310
  169:Src/PID.c     **** }
- 1831              		.loc 1 169 1 is_stmt 0 view .LVU311
- 1832 005a 1AB0     		add	sp, sp, #104
- 1833              		@ sp needed
- 1834 005c 70BD     		pop	{r4, r5, r6, pc}
- 1835              	.L64:
- 1836 005e C046     		.align	2
- 1837              	.L63:
- 1838 0060 00000000 		.word	.LC41
- 1839 0064 00000000 		.word	huart2
- 1840 0068 08000000 		.word	.LC44
- 1841              		.cfi_endproc
- 1842              	.LFE295:
- 1844              		.section	.text.PID_Init,"ax",%progbits
- 1845              		.align	1
- 1846              		.global	PID_Init
- 1847              		.syntax unified
- 1848              		.code	16
- 1849              		.thumb_func
- 1850              		.fpu softvfp
- 1852              	PID_Init:
- 1853              	.LFB296:
+ 1825              		.loc 1 169 1 is_stmt 0 view .LVU309
+ 1826 0052 1AB0     		add	sp, sp, #104
+ 1827              		@ sp needed
+ 1828 0054 70BD     		pop	{r4, r5, r6, pc}
+ 1829              	.L64:
+ 1830 0056 C046     		.align	2
+ 1831              	.L63:
+ 1832 0058 00000000 		.word	.LC41
+ 1833 005c 00000000 		.word	huart2
+ 1834 0060 08000000 		.word	.LC44
+ 1835              		.cfi_endproc
+ 1836              	.LFE295:
+ 1838              		.section	.text.PID_Init,"ax",%progbits
+ 1839              		.align	1
+ 1840              		.global	PID_Init
+ 1841              		.syntax unified
+ 1842              		.code	16
+ 1843              		.thumb_func
+ 1844              		.fpu softvfp
+ 1846              	PID_Init:
+ 1847              	.LFB296:
  170:Src/PID.c     **** 
  171:Src/PID.c     **** void PID_Init()
  172:Src/PID.c     **** {
- 1854              		.loc 1 172 1 is_stmt 1 view -0
- 1855              		.cfi_startproc
- 1856              		@ args = 0, pretend = 0, frame = 0
- 1857              		@ frame_needed = 0, uses_anonymous_args = 0
- 1858 0000 F0B5     		push	{r4, r5, r6, r7, lr}
- 1859              	.LCFI20:
- 1860              		.cfi_def_cfa_offset 20
- 1861              		.cfi_offset 4, -20
- 1862              		.cfi_offset 5, -16
- 1863              		.cfi_offset 6, -12
- 1864              		.cfi_offset 7, -8
- 1865              		.cfi_offset 14, -4
+ 1848              		.loc 1 172 1 is_stmt 1 view -0
+ 1849              		.cfi_startproc
+ 1850              		@ args = 0, pretend = 0, frame = 0
+ 1851              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1852 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 1853              	.LCFI20:
+ 1854              		.cfi_def_cfa_offset 20
+ 1855              		.cfi_offset 4, -20
+ 1856              		.cfi_offset 5, -16
+ 1857              		.cfi_offset 6, -12
+ 1858              		.cfi_offset 7, -8
+ 1859              		.cfi_offset 14, -4
  173:Src/PID.c     ****     State.PID_352_Output = 0x7fff;
- 1866              		.loc 1 173 5 view .LVU313
- 1867              		.loc 1 173 26 is_stmt 0 view .LVU314
- 1868 0002 304E     		ldr	r6, .L66
- 1869 0004 304F     		ldr	r7, .L66+4
- 1870 0006 A123     		movs	r3, #161
- 1871 0008 DB00     		lsls	r3, r3, #3
- 1872 000a F750     		str	r7, [r6, r3]
+ 1860              		.loc 1 173 5 view .LVU311
+ 1861              		.loc 1 173 26 is_stmt 0 view .LVU312
+ 1862 0002 304E     		ldr	r6, .L66
+ 1863 0004 304F     		ldr	r7, .L66+4
+ 1864 0006 A123     		movs	r3, #161
+ 1865 0008 DB00     		lsls	r3, r3, #3
+ 1866 000a F750     		str	r7, [r6, r3]
  174:Src/PID.c     ****     State.PID_352_P = -1;
- 1873              		.loc 1 174 5 is_stmt 1 view .LVU315
- 1874              		.loc 1 174 21 is_stmt 0 view .LVU316
- 1875 000c 0833     		adds	r3, r3, #8
- 1876 000e F318     		adds	r3, r6, r3
- 1877 0010 0120     		movs	r0, #1
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 39
-
-
- 1878 0012 4042     		rsbs	r0, r0, #0
- 1879 0014 C117     		asrs	r1, r0, #31
- 1880 0016 1860     		str	r0, [r3]
- 1881 0018 5960     		str	r1, [r3, #4]
+ 1867              		.loc 1 174 5 is_stmt 1 view .LVU313
+ 1868              		.loc 1 174 21 is_stmt 0 view .LVU314
+ 1869 000c 0833     		adds	r3, r3, #8
+ 1870 000e F318     		adds	r3, r6, r3
+ 1871 0010 0120     		movs	r0, #1
+ 1872 0012 4042     		rsbs	r0, r0, #0
+ 1873 0014 C117     		asrs	r1, r0, #31
+ 1874 0016 1860     		str	r0, [r3]
+ 1875 0018 5960     		str	r1, [r3, #4]
  175:Src/PID.c     ****     State.PID_352_I = -1;
- 1882              		.loc 1 175 5 is_stmt 1 view .LVU317
- 1883              		.loc 1 175 21 is_stmt 0 view .LVU318
- 1884 001a A323     		movs	r3, #163
- 1885 001c DB00     		lsls	r3, r3, #3
- 1886 001e F318     		adds	r3, r6, r3
- 1887 0020 1860     		str	r0, [r3]
- 1888 0022 5960     		str	r1, [r3, #4]
+ 1876              		.loc 1 175 5 is_stmt 1 view .LVU315
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 39
+
+
+ 1877              		.loc 1 175 21 is_stmt 0 view .LVU316
+ 1878 001a A323     		movs	r3, #163
+ 1879 001c DB00     		lsls	r3, r3, #3
+ 1880 001e F318     		adds	r3, r6, r3
+ 1881 0020 1860     		str	r0, [r3]
+ 1882 0022 5960     		str	r1, [r3, #4]
  176:Src/PID.c     ****     State.PID_352_T = 1000000;
- 1889              		.loc 1 176 5 is_stmt 1 view .LVU319
- 1890              		.loc 1 176 21 is_stmt 0 view .LVU320
- 1891 0024 A423     		movs	r3, #164
- 1892 0026 DB00     		lsls	r3, r3, #3
- 1893 0028 F318     		adds	r3, r6, r3
- 1894 002a 284C     		ldr	r4, .L66+8
- 1895 002c 0025     		movs	r5, #0
- 1896 002e 1C60     		str	r4, [r3]
- 1897 0030 5D60     		str	r5, [r3, #4]
+ 1883              		.loc 1 176 5 is_stmt 1 view .LVU317
+ 1884              		.loc 1 176 21 is_stmt 0 view .LVU318
+ 1885 0024 A423     		movs	r3, #164
+ 1886 0026 DB00     		lsls	r3, r3, #3
+ 1887 0028 F318     		adds	r3, r6, r3
+ 1888 002a 284C     		ldr	r4, .L66+8
+ 1889 002c 0025     		movs	r5, #0
+ 1890 002e 1C60     		str	r4, [r3]
+ 1891 0030 5D60     		str	r5, [r3, #4]
  177:Src/PID.c     ****     State.PID_352_P_error = 0;
- 1898              		.loc 1 177 5 is_stmt 1 view .LVU321
- 1899              		.loc 1 177 27 is_stmt 0 view .LVU322
- 1900 0032 A523     		movs	r3, #165
- 1901 0034 DB00     		lsls	r3, r3, #3
- 1902 0036 9C46     		mov	ip, r3
- 1903 0038 B444     		add	ip, ip, r6
- 1904 003a 0022     		movs	r2, #0
- 1905 003c 0023     		movs	r3, #0
- 1906 003e 6446     		mov	r4, ip
- 1907 0040 2260     		str	r2, [r4]
- 1908 0042 6360     		str	r3, [r4, #4]
+ 1892              		.loc 1 177 5 is_stmt 1 view .LVU319
+ 1893              		.loc 1 177 27 is_stmt 0 view .LVU320
+ 1894 0032 A523     		movs	r3, #165
+ 1895 0034 DB00     		lsls	r3, r3, #3
+ 1896 0036 9C46     		mov	ip, r3
+ 1897 0038 B444     		add	ip, ip, r6
+ 1898 003a 0022     		movs	r2, #0
+ 1899 003c 0023     		movs	r3, #0
+ 1900 003e 6446     		mov	r4, ip
+ 1901 0040 2260     		str	r2, [r4]
+ 1902 0042 6360     		str	r3, [r4, #4]
  178:Src/PID.c     ****     State.PID_352_I_error = 0;
- 1909              		.loc 1 178 5 is_stmt 1 view .LVU323
- 1910              		.loc 1 178 27 is_stmt 0 view .LVU324
- 1911 0044 A624     		movs	r4, #166
- 1912 0046 E400     		lsls	r4, r4, #3
- 1913 0048 A446     		mov	ip, r4
- 1914 004a B444     		add	ip, ip, r6
- 1915 004c 6446     		mov	r4, ip
- 1916 004e 2260     		str	r2, [r4]
- 1917 0050 6360     		str	r3, [r4, #4]
+ 1903              		.loc 1 178 5 is_stmt 1 view .LVU321
+ 1904              		.loc 1 178 27 is_stmt 0 view .LVU322
+ 1905 0044 A624     		movs	r4, #166
+ 1906 0046 E400     		lsls	r4, r4, #3
+ 1907 0048 A446     		mov	ip, r4
+ 1908 004a B444     		add	ip, ip, r6
+ 1909 004c 6446     		mov	r4, ip
+ 1910 004e 2260     		str	r2, [r4]
+ 1911 0050 6360     		str	r3, [r4, #4]
  179:Src/PID.c     **** 
  180:Src/PID.c     ****     State.PID_704_Output = 0x7fff;
- 1918              		.loc 1 180 5 is_stmt 1 view .LVU325
- 1919              		.loc 1 180 26 is_stmt 0 view .LVU326
- 1920 0052 1F4C     		ldr	r4, .L66+12
- 1921 0054 3751     		str	r7, [r6, r4]
+ 1912              		.loc 1 180 5 is_stmt 1 view .LVU323
+ 1913              		.loc 1 180 26 is_stmt 0 view .LVU324
+ 1914 0052 1F4C     		ldr	r4, .L66+12
+ 1915 0054 3751     		str	r7, [r6, r4]
  181:Src/PID.c     ****     State.PID_704_P = -1;
- 1922              		.loc 1 181 5 is_stmt 1 view .LVU327
- 1923              		.loc 1 181 21 is_stmt 0 view .LVU328
- 1924 0056 0434     		adds	r4, r4, #4
- 1925 0058 A446     		mov	ip, r4
- 1926 005a B444     		add	ip, ip, r6
- 1927 005c 6446     		mov	r4, ip
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 40
-
-
- 1928 005e 2060     		str	r0, [r4]
- 1929 0060 6160     		str	r1, [r4, #4]
+ 1916              		.loc 1 181 5 is_stmt 1 view .LVU325
+ 1917              		.loc 1 181 21 is_stmt 0 view .LVU326
+ 1918 0056 0434     		adds	r4, r4, #4
+ 1919 0058 A446     		mov	ip, r4
+ 1920 005a B444     		add	ip, ip, r6
+ 1921 005c 6446     		mov	r4, ip
+ 1922 005e 2060     		str	r0, [r4]
+ 1923 0060 6160     		str	r1, [r4, #4]
  182:Src/PID.c     ****     State.PID_704_I = -1;
- 1930              		.loc 1 182 5 is_stmt 1 view .LVU329
- 1931              		.loc 1 182 21 is_stmt 0 view .LVU330
- 1932 0062 A924     		movs	r4, #169
- 1933 0064 E400     		lsls	r4, r4, #3
- 1934 0066 A446     		mov	ip, r4
- 1935 0068 B444     		add	ip, ip, r6
- 1936 006a 6446     		mov	r4, ip
- 1937 006c 2060     		str	r0, [r4]
- 1938 006e 6160     		str	r1, [r4, #4]
+ 1924              		.loc 1 182 5 is_stmt 1 view .LVU327
+ 1925              		.loc 1 182 21 is_stmt 0 view .LVU328
+ 1926 0062 A924     		movs	r4, #169
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 40
+
+
+ 1927 0064 E400     		lsls	r4, r4, #3
+ 1928 0066 A446     		mov	ip, r4
+ 1929 0068 B444     		add	ip, ip, r6
+ 1930 006a 6446     		mov	r4, ip
+ 1931 006c 2060     		str	r0, [r4]
+ 1932 006e 6160     		str	r1, [r4, #4]
  183:Src/PID.c     ****     State.PID_704_T = 1000000;
- 1939              		.loc 1 183 5 is_stmt 1 view .LVU331
- 1940              		.loc 1 183 21 is_stmt 0 view .LVU332
- 1941 0070 AA21     		movs	r1, #170
- 1942 0072 C900     		lsls	r1, r1, #3
- 1943 0074 7118     		adds	r1, r6, r1
- 1944 0076 154C     		ldr	r4, .L66+8
- 1945 0078 0025     		movs	r5, #0
- 1946 007a 0C60     		str	r4, [r1]
- 1947 007c 4D60     		str	r5, [r1, #4]
+ 1933              		.loc 1 183 5 is_stmt 1 view .LVU329
+ 1934              		.loc 1 183 21 is_stmt 0 view .LVU330
+ 1935 0070 AA21     		movs	r1, #170
+ 1936 0072 C900     		lsls	r1, r1, #3
+ 1937 0074 7118     		adds	r1, r6, r1
+ 1938 0076 154C     		ldr	r4, .L66+8
+ 1939 0078 0025     		movs	r5, #0
+ 1940 007a 0C60     		str	r4, [r1]
+ 1941 007c 4D60     		str	r5, [r1, #4]
  184:Src/PID.c     ****     State.PID_704_P_error = 0;
- 1948              		.loc 1 184 5 is_stmt 1 view .LVU333
- 1949              		.loc 1 184 27 is_stmt 0 view .LVU334
- 1950 007e AB21     		movs	r1, #171
- 1951 0080 C900     		lsls	r1, r1, #3
- 1952 0082 7118     		adds	r1, r6, r1
- 1953 0084 0A60     		str	r2, [r1]
- 1954 0086 4B60     		str	r3, [r1, #4]
+ 1942              		.loc 1 184 5 is_stmt 1 view .LVU331
+ 1943              		.loc 1 184 27 is_stmt 0 view .LVU332
+ 1944 007e AB21     		movs	r1, #171
+ 1945 0080 C900     		lsls	r1, r1, #3
+ 1946 0082 7118     		adds	r1, r6, r1
+ 1947 0084 0A60     		str	r2, [r1]
+ 1948 0086 4B60     		str	r3, [r1, #4]
  185:Src/PID.c     ****     State.PID_704_I_error = 0;
- 1955              		.loc 1 185 5 is_stmt 1 view .LVU335
- 1956              		.loc 1 185 27 is_stmt 0 view .LVU336
- 1957 0088 AC21     		movs	r1, #172
- 1958 008a C900     		lsls	r1, r1, #3
- 1959 008c 7118     		adds	r1, r6, r1
- 1960 008e 0A60     		str	r2, [r1]
- 1961 0090 4B60     		str	r3, [r1, #4]
+ 1949              		.loc 1 185 5 is_stmt 1 view .LVU333
+ 1950              		.loc 1 185 27 is_stmt 0 view .LVU334
+ 1951 0088 AC21     		movs	r1, #172
+ 1952 008a C900     		lsls	r1, r1, #3
+ 1953 008c 7118     		adds	r1, r6, r1
+ 1954 008e 0A60     		str	r2, [r1]
+ 1955 0090 4B60     		str	r3, [r1, #4]
  186:Src/PID.c     **** 
  187:Src/PID.c     ****     State.POWER_PID_352_Output = 0x7fff;
- 1962              		.loc 1 187 5 is_stmt 1 view .LVU337
- 1963              		.loc 1 187 32 is_stmt 0 view .LVU338
- 1964 0092 1049     		ldr	r1, .L66+16
- 1965 0094 7750     		str	r7, [r6, r1]
+ 1956              		.loc 1 187 5 is_stmt 1 view .LVU335
+ 1957              		.loc 1 187 32 is_stmt 0 view .LVU336
+ 1958 0092 1049     		ldr	r1, .L66+16
+ 1959 0094 7750     		str	r7, [r6, r1]
  188:Src/PID.c     ****     State.POWER_PID_352_P_error = 0;
- 1966              		.loc 1 188 5 is_stmt 1 view .LVU339
- 1967              		.loc 1 188 33 is_stmt 0 view .LVU340
- 1968 0096 1C31     		adds	r1, r1, #28
- 1969 0098 7118     		adds	r1, r6, r1
- 1970 009a 0A60     		str	r2, [r1]
- 1971 009c 4B60     		str	r3, [r1, #4]
+ 1960              		.loc 1 188 5 is_stmt 1 view .LVU337
+ 1961              		.loc 1 188 33 is_stmt 0 view .LVU338
+ 1962 0096 1C31     		adds	r1, r1, #28
+ 1963 0098 7118     		adds	r1, r6, r1
+ 1964 009a 0A60     		str	r2, [r1]
+ 1965 009c 4B60     		str	r3, [r1, #4]
  189:Src/PID.c     ****     State.POWER_PID_352_I_error = 0;
- 1972              		.loc 1 189 5 is_stmt 1 view .LVU341
- 1973              		.loc 1 189 33 is_stmt 0 view .LVU342
- 1974 009e B321     		movs	r1, #179
- 1975 00a0 C900     		lsls	r1, r1, #3
- 1976 00a2 7118     		adds	r1, r6, r1
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 41
-
-
- 1977 00a4 0A60     		str	r2, [r1]
- 1978 00a6 4B60     		str	r3, [r1, #4]
+ 1966              		.loc 1 189 5 is_stmt 1 view .LVU339
+ 1967              		.loc 1 189 33 is_stmt 0 view .LVU340
+ 1968 009e B321     		movs	r1, #179
+ 1969 00a0 C900     		lsls	r1, r1, #3
+ 1970 00a2 7118     		adds	r1, r6, r1
+ 1971 00a4 0A60     		str	r2, [r1]
+ 1972 00a6 4B60     		str	r3, [r1, #4]
  190:Src/PID.c     **** 
  191:Src/PID.c     ****     State.POWER_PID_704_Output = 0x7fff;
- 1979              		.loc 1 191 5 is_stmt 1 view .LVU343
- 1980              		.loc 1 191 32 is_stmt 0 view .LVU344
- 1981 00a8 0B49     		ldr	r1, .L66+20
- 1982 00aa 7750     		str	r7, [r6, r1]
+ 1973              		.loc 1 191 5 is_stmt 1 view .LVU341
+ 1974              		.loc 1 191 32 is_stmt 0 view .LVU342
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 41
+
+
+ 1975 00a8 0B49     		ldr	r1, .L66+20
+ 1976 00aa 7750     		str	r7, [r6, r1]
  192:Src/PID.c     ****     State.POWER_PID_704_P_error = 0;
- 1983              		.loc 1 192 5 is_stmt 1 view .LVU345
- 1984              		.loc 1 192 33 is_stmt 0 view .LVU346
- 1985 00ac 2431     		adds	r1, r1, #36
- 1986 00ae 7118     		adds	r1, r6, r1
- 1987 00b0 0A60     		str	r2, [r1]
- 1988 00b2 4B60     		str	r3, [r1, #4]
+ 1977              		.loc 1 192 5 is_stmt 1 view .LVU343
+ 1978              		.loc 1 192 33 is_stmt 0 view .LVU344
+ 1979 00ac 2431     		adds	r1, r1, #36
+ 1980 00ae 7118     		adds	r1, r6, r1
+ 1981 00b0 0A60     		str	r2, [r1]
+ 1982 00b2 4B60     		str	r3, [r1, #4]
  193:Src/PID.c     ****     State.POWER_PID_704_I_error = 0;
- 1989              		.loc 1 193 5 is_stmt 1 view .LVU347
- 1990              		.loc 1 193 33 is_stmt 0 view .LVU348
- 1991 00b4 BA21     		movs	r1, #186
- 1992 00b6 C900     		lsls	r1, r1, #3
- 1993 00b8 8C46     		mov	ip, r1
- 1994 00ba 6644     		add	r6, r6, ip
- 1995 00bc 3260     		str	r2, [r6]
- 1996 00be 7360     		str	r3, [r6, #4]
+ 1983              		.loc 1 193 5 is_stmt 1 view .LVU345
+ 1984              		.loc 1 193 33 is_stmt 0 view .LVU346
+ 1985 00b4 BA21     		movs	r1, #186
+ 1986 00b6 C900     		lsls	r1, r1, #3
+ 1987 00b8 8C46     		mov	ip, r1
+ 1988 00ba 6644     		add	r6, r6, ip
+ 1989 00bc 3260     		str	r2, [r6]
+ 1990 00be 7360     		str	r3, [r6, #4]
  194:Src/PID.c     **** }
- 1997              		.loc 1 194 1 view .LVU349
- 1998              		@ sp needed
- 1999 00c0 F0BD     		pop	{r4, r5, r6, r7, pc}
- 2000              	.L67:
- 2001 00c2 C046     		.align	2
- 2002              	.L66:
- 2003 00c4 00000000 		.word	State
- 2004 00c8 FF7F0000 		.word	32767
- 2005 00cc 40420F00 		.word	1000000
- 2006 00d0 3C050000 		.word	1340
- 2007 00d4 74050000 		.word	1396
- 2008 00d8 A4050000 		.word	1444
- 2009              		.cfi_endproc
- 2010              	.LFE296:
- 2012              		.section	.rodata.PID352.str1.4,"aMS",%progbits,1
+ 1991              		.loc 1 194 1 view .LVU347
+ 1992              		@ sp needed
+ 1993 00c0 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 1994              	.L67:
+ 1995 00c2 C046     		.align	2
+ 1996              	.L66:
+ 1997 00c4 00000000 		.word	State
+ 1998 00c8 FF7F0000 		.word	32767
+ 1999 00cc 40420F00 		.word	1000000
+ 2000 00d0 3C050000 		.word	1340
+ 2001 00d4 74050000 		.word	1396
+ 2002 00d8 A4050000 		.word	1444
+ 2003              		.cfi_endproc
+ 2004              	.LFE296:
+ 2006              		.section	.rodata.PID352.str1.4,"aMS",%progbits,1
+ 2007              		.align	2
+ 2008              	.LC62:
+ 2009 0000 1B5B303B 		.ascii	"\033[0;32m\000"
+ 2009      33326D00 
+ 2010              		.align	2
+ 2011              	.LC65:
+ 2012 0008 5B504944 		.ascii	"[PID_PHASE_352] LOCKED\012\000"
+ 2012      5F504841 
+ 2012      53455F33 
+ 2012      35325D20 
+ 2012      4C4F434B 
  2013              		.align	2
- 2014              	.LC62:
- 2015 0000 1B5B303B 		.ascii	"\033[0;32m\000"
- 2015      33326D00 
+ 2014              	.LC68:
+ 2015 0020 1B5B303B 		.ascii	"\033[0;31m\000"
+ 2015      33316D00 
  2016              		.align	2
- 2017              	.LC65:
- 2018 0008 5B504944 		.ascii	"[PID_PHASE_352] LOCKED\012\000"
+ 2017              	.LC70:
+ 2018 0028 5B504944 		.ascii	"[PID_PHASE_352] UNLOCKED!!!\012\000"
  2018      5F504841 
  2018      53455F33 
  2018      35325D20 
- 2018      4C4F434B 
- 2019              		.align	2
- 2020              	.LC68:
- 2021 0020 1B5B303B 		.ascii	"\033[0;31m\000"
- 2021      33316D00 
- 2022              		.align	2
- 2023              	.LC70:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 42
+ 2018      554E4C4F 
+ 2019              		.section	.text.PID352,"ax",%progbits
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 42
 
 
- 2024 0028 5B504944 		.ascii	"[PID_PHASE_352] UNLOCKED!!!\012\000"
- 2024      5F504841 
- 2024      53455F33 
- 2024      35325D20 
- 2024      554E4C4F 
- 2025              		.section	.text.PID352,"ax",%progbits
- 2026              		.align	1
- 2027              		.global	PID352
- 2028              		.syntax unified
- 2029              		.code	16
- 2030              		.thumb_func
- 2031              		.fpu softvfp
- 2033              	PID352:
- 2034              	.LFB297:
+ 2020              		.align	1
+ 2021              		.global	PID352
+ 2022              		.syntax unified
+ 2023              		.code	16
+ 2024              		.thumb_func
+ 2025              		.fpu softvfp
+ 2027              	PID352:
+ 2028              	.LFB297:
  195:Src/PID.c     **** void PID352()
  196:Src/PID.c     **** {
- 2035              		.loc 1 196 1 is_stmt 1 view -0
- 2036              		.cfi_startproc
- 2037              		@ args = 0, pretend = 0, frame = 104
- 2038              		@ frame_needed = 0, uses_anonymous_args = 0
- 2039 0000 F0B5     		push	{r4, r5, r6, r7, lr}
- 2040              	.LCFI21:
- 2041              		.cfi_def_cfa_offset 20
- 2042              		.cfi_offset 4, -20
- 2043              		.cfi_offset 5, -16
- 2044              		.cfi_offset 6, -12
- 2045              		.cfi_offset 7, -8
- 2046              		.cfi_offset 14, -4
- 2047 0002 DE46     		mov	lr, fp
- 2048 0004 5746     		mov	r7, r10
- 2049 0006 4E46     		mov	r6, r9
- 2050 0008 4546     		mov	r5, r8
- 2051 000a E0B5     		push	{r5, r6, r7, lr}
- 2052              	.LCFI22:
- 2053              		.cfi_def_cfa_offset 36
- 2054              		.cfi_offset 8, -36
- 2055              		.cfi_offset 9, -32
- 2056              		.cfi_offset 10, -28
- 2057              		.cfi_offset 11, -24
- 2058 000c 9BB0     		sub	sp, sp, #108
- 2059              	.LCFI23:
- 2060              		.cfi_def_cfa_offset 144
+ 2029              		.loc 1 196 1 is_stmt 1 view -0
+ 2030              		.cfi_startproc
+ 2031              		@ args = 0, pretend = 0, frame = 104
+ 2032              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2033 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 2034              	.LCFI21:
+ 2035              		.cfi_def_cfa_offset 20
+ 2036              		.cfi_offset 4, -20
+ 2037              		.cfi_offset 5, -16
+ 2038              		.cfi_offset 6, -12
+ 2039              		.cfi_offset 7, -8
+ 2040              		.cfi_offset 14, -4
+ 2041 0002 DE46     		mov	lr, fp
+ 2042 0004 5746     		mov	r7, r10
+ 2043 0006 4E46     		mov	r6, r9
+ 2044 0008 4546     		mov	r5, r8
+ 2045 000a E0B5     		push	{r5, r6, r7, lr}
+ 2046              	.LCFI22:
+ 2047              		.cfi_def_cfa_offset 36
+ 2048              		.cfi_offset 8, -36
+ 2049              		.cfi_offset 9, -32
+ 2050              		.cfi_offset 10, -28
+ 2051              		.cfi_offset 11, -24
+ 2052 000c 9BB0     		sub	sp, sp, #108
+ 2053              	.LCFI23:
+ 2054              		.cfi_def_cfa_offset 144
  197:Src/PID.c     ****     int64_t prevErr = State.PID_352_P_error;
- 2061              		.loc 1 197 5 view .LVU351
- 2062              		.loc 1 197 13 is_stmt 0 view .LVU352
- 2063 000e 974E     		ldr	r6, .L88
- 2064 0010 A523     		movs	r3, #165
- 2065 0012 DB00     		lsls	r3, r3, #3
- 2066 0014 F718     		adds	r7, r6, r3
- 2067 0016 3B68     		ldr	r3, [r7]
- 2068 0018 9946     		mov	r9, r3
- 2069 001a 7B68     		ldr	r3, [r7, #4]
- 2070 001c 9846     		mov	r8, r3
- 2071              	.LVL169:
+ 2055              		.loc 1 197 5 view .LVU349
+ 2056              		.loc 1 197 13 is_stmt 0 view .LVU350
+ 2057 000e 974E     		ldr	r6, .L88
+ 2058 0010 A523     		movs	r3, #165
+ 2059 0012 DB00     		lsls	r3, r3, #3
+ 2060 0014 F718     		adds	r7, r6, r3
+ 2061 0016 3B68     		ldr	r3, [r7]
+ 2062 0018 9946     		mov	r9, r3
+ 2063 001a 7B68     		ldr	r3, [r7, #4]
+ 2064 001c 9846     		mov	r8, r3
+ 2065              	.LVL167:
  198:Src/PID.c     ****     State.PID_352_P_error = (State.PD3_Slope * Phase_u(ADC_PD3_Phase_CH)) + (State.PD4_Slope * Phas
- 2072              		.loc 1 198 5 is_stmt 1 view .LVU353
- 2073              		.loc 1 198 35 is_stmt 0 view .LVU354
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 43
+ 2066              		.loc 1 198 5 is_stmt 1 view .LVU351
+ 2067              		.loc 1 198 35 is_stmt 0 view .LVU352
+ 2068 001e 944B     		ldr	r3, .L88+4
+ 2069              	.LVL168:
+ 2070              		.loc 1 198 35 view .LVU353
+ 2071 0020 F456     		ldrsb	r4, [r6, r3]
+ 2072 0022 E517     		asrs	r5, r4, #31
+ 2073              		.loc 1 198 48 view .LVU354
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 43
 
 
- 2074 001e 944B     		ldr	r3, .L88+4
- 2075              	.LVL170:
- 2076              		.loc 1 198 35 view .LVU355
- 2077 0020 F456     		ldrsb	r4, [r6, r3]
- 2078 0022 E517     		asrs	r5, r4, #31
- 2079              		.loc 1 198 48 view .LVU356
- 2080 0024 0E20     		movs	r0, #14
- 2081 0026 FFF7FEFF 		bl	Phase_u
- 2082              	.LVL171:
- 2083 002a 0200     		movs	r2, r0
- 2084 002c 0B00     		movs	r3, r1
- 2085              		.loc 1 198 46 view .LVU357
- 2086 002e 2000     		movs	r0, r4
- 2087 0030 2900     		movs	r1, r5
- 2088 0032 FFF7FEFF 		bl	__aeabi_lmul
- 2089              	.LVL172:
- 2090 0036 0400     		movs	r4, r0
- 2091 0038 0D00     		movs	r5, r1
- 2092              		.loc 1 198 83 view .LVU358
- 2093 003a 8E4B     		ldr	r3, .L88+8
- 2094 003c F356     		ldrsb	r3, [r6, r3]
- 2095 003e 9A46     		mov	r10, r3
- 2096 0040 DB17     		asrs	r3, r3, #31
- 2097 0042 9B46     		mov	fp, r3
- 2098              		.loc 1 198 96 view .LVU359
- 2099 0044 0220     		movs	r0, #2
- 2100 0046 FFF7FEFF 		bl	Phase_u
- 2101              	.LVL173:
- 2102 004a 0200     		movs	r2, r0
- 2103 004c 0B00     		movs	r3, r1
- 2104              		.loc 1 198 94 view .LVU360
- 2105 004e 5046     		mov	r0, r10
- 2106 0050 5946     		mov	r1, fp
- 2107 0052 FFF7FEFF 		bl	__aeabi_lmul
- 2108              	.LVL174:
- 2109              		.loc 1 198 75 view .LVU361
- 2110 0056 2418     		adds	r4, r4, r0
- 2111 0058 4D41     		adcs	r5, r5, r1
- 2112              		.loc 1 198 131 view .LVU362
- 2113 005a 9E23     		movs	r3, #158
- 2114 005c DB00     		lsls	r3, r3, #3
- 2115 005e F318     		adds	r3, r6, r3
- 2116 0060 1868     		ldr	r0, [r3]
- 2117 0062 5968     		ldr	r1, [r3, #4]
- 2118              		.loc 1 198 149 view .LVU363
- 2119 0064 FA22     		movs	r2, #250
- 2120 0066 9200     		lsls	r2, r2, #2
- 2121 0068 0023     		movs	r3, #0
- 2122 006a FFF7FEFF 		bl	__aeabi_lmul
- 2123              	.LVL175:
- 2124              		.loc 1 198 123 view .LVU364
- 2125 006e 241A     		subs	r4, r4, r0
- 2126 0070 8D41     		sbcs	r5, r5, r1
- 2127              		.loc 1 198 27 view .LVU365
- 2128 0072 3C60     		str	r4, [r7]
- 2129 0074 7D60     		str	r5, [r7, #4]
+ 2074 0024 0E20     		movs	r0, #14
+ 2075 0026 FFF7FEFF 		bl	Phase_u
+ 2076              	.LVL169:
+ 2077 002a 0200     		movs	r2, r0
+ 2078 002c 0B00     		movs	r3, r1
+ 2079              		.loc 1 198 46 view .LVU355
+ 2080 002e 2000     		movs	r0, r4
+ 2081 0030 2900     		movs	r1, r5
+ 2082 0032 FFF7FEFF 		bl	__aeabi_lmul
+ 2083              	.LVL170:
+ 2084 0036 0400     		movs	r4, r0
+ 2085 0038 0D00     		movs	r5, r1
+ 2086              		.loc 1 198 83 view .LVU356
+ 2087 003a 8E4B     		ldr	r3, .L88+8
+ 2088 003c F356     		ldrsb	r3, [r6, r3]
+ 2089 003e 9A46     		mov	r10, r3
+ 2090 0040 DB17     		asrs	r3, r3, #31
+ 2091 0042 9B46     		mov	fp, r3
+ 2092              		.loc 1 198 96 view .LVU357
+ 2093 0044 0220     		movs	r0, #2
+ 2094 0046 FFF7FEFF 		bl	Phase_u
+ 2095              	.LVL171:
+ 2096 004a 0200     		movs	r2, r0
+ 2097 004c 0B00     		movs	r3, r1
+ 2098              		.loc 1 198 94 view .LVU358
+ 2099 004e 5046     		mov	r0, r10
+ 2100 0050 5946     		mov	r1, fp
+ 2101 0052 FFF7FEFF 		bl	__aeabi_lmul
+ 2102              	.LVL172:
+ 2103              		.loc 1 198 75 view .LVU359
+ 2104 0056 2418     		adds	r4, r4, r0
+ 2105 0058 4D41     		adcs	r5, r5, r1
+ 2106              		.loc 1 198 131 view .LVU360
+ 2107 005a 9E23     		movs	r3, #158
+ 2108 005c DB00     		lsls	r3, r3, #3
+ 2109 005e F318     		adds	r3, r6, r3
+ 2110 0060 1868     		ldr	r0, [r3]
+ 2111 0062 5968     		ldr	r1, [r3, #4]
+ 2112              		.loc 1 198 149 view .LVU361
+ 2113 0064 FA22     		movs	r2, #250
+ 2114 0066 9200     		lsls	r2, r2, #2
+ 2115 0068 0023     		movs	r3, #0
+ 2116 006a FFF7FEFF 		bl	__aeabi_lmul
+ 2117              	.LVL173:
+ 2118              		.loc 1 198 123 view .LVU362
+ 2119 006e 241A     		subs	r4, r4, r0
+ 2120 0070 8D41     		sbcs	r5, r5, r1
+ 2121              		.loc 1 198 27 view .LVU363
+ 2122 0072 3C60     		str	r4, [r7]
+ 2123 0074 7D60     		str	r5, [r7, #4]
  199:Src/PID.c     ****     State.PID_352_I_error = (State.PID_352_I_error + State.PID_352_P_error) / State.PID_352_T;
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 44
+ 2124              		.loc 1 199 5 is_stmt 1 view .LVU364
+ 2125              		.loc 1 199 35 is_stmt 0 view .LVU365
+ 2126 0076 A623     		movs	r3, #166
+ 2127 0078 DB00     		lsls	r3, r3, #3
+ 2128 007a F718     		adds	r7, r6, r3
+ 2129              		.loc 1 199 52 view .LVU366
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 44
 
 
- 2130              		.loc 1 199 5 is_stmt 1 view .LVU366
- 2131              		.loc 1 199 35 is_stmt 0 view .LVU367
- 2132 0076 A623     		movs	r3, #166
- 2133 0078 DB00     		lsls	r3, r3, #3
- 2134 007a F718     		adds	r7, r6, r3
- 2135              		.loc 1 199 52 view .LVU368
- 2136 007c 3868     		ldr	r0, [r7]
- 2137 007e 7968     		ldr	r1, [r7, #4]
- 2138 0080 0019     		adds	r0, r0, r4
- 2139 0082 6941     		adcs	r1, r1, r5
- 2140              		.loc 1 199 84 view .LVU369
- 2141 0084 103B     		subs	r3, r3, #16
- 2142 0086 F318     		adds	r3, r6, r3
- 2143 0088 1A68     		ldr	r2, [r3]
- 2144 008a 5B68     		ldr	r3, [r3, #4]
- 2145              		.loc 1 199 77 view .LVU370
- 2146 008c FFF7FEFF 		bl	__aeabi_ldivmod
- 2147              	.LVL176:
- 2148 0090 8246     		mov	r10, r0
- 2149              		.loc 1 199 27 view .LVU371
- 2150 0092 3860     		str	r0, [r7]
- 2151 0094 7960     		str	r1, [r7, #4]
+ 2130 007c 3868     		ldr	r0, [r7]
+ 2131 007e 7968     		ldr	r1, [r7, #4]
+ 2132 0080 0019     		adds	r0, r0, r4
+ 2133 0082 6941     		adcs	r1, r1, r5
+ 2134              		.loc 1 199 84 view .LVU367
+ 2135 0084 103B     		subs	r3, r3, #16
+ 2136 0086 F318     		adds	r3, r6, r3
+ 2137 0088 1A68     		ldr	r2, [r3]
+ 2138 008a 5B68     		ldr	r3, [r3, #4]
+ 2139              		.loc 1 199 77 view .LVU368
+ 2140 008c FFF7FEFF 		bl	__aeabi_ldivmod
+ 2141              	.LVL174:
+ 2142 0090 8246     		mov	r10, r0
+ 2143              		.loc 1 199 27 view .LVU369
+ 2144 0092 3860     		str	r0, [r7]
+ 2145 0094 7960     		str	r1, [r7, #4]
  200:Src/PID.c     ****     State.PID_352_Output = State.PID_352_Output + (State.PID_352_P * State.PID_352_P_error) / 1000 
- 2152              		.loc 1 200 5 is_stmt 1 view .LVU372
- 2153              		.loc 1 200 33 is_stmt 0 view .LVU373
- 2154 0096 A127     		movs	r7, #161
- 2155 0098 FF00     		lsls	r7, r7, #3
- 2156 009a F359     		ldr	r3, [r6, r7]
- 2157 009c 9B46     		mov	fp, r3
- 2158              		.loc 1 200 57 view .LVU374
- 2159 009e A223     		movs	r3, #162
- 2160 00a0 DB00     		lsls	r3, r3, #3
- 2161 00a2 F318     		adds	r3, r6, r3
- 2162 00a4 1A68     		ldr	r2, [r3]
- 2163 00a6 5B68     		ldr	r3, [r3, #4]
- 2164              		.loc 1 200 68 view .LVU375
- 2165 00a8 2000     		movs	r0, r4
- 2166 00aa 2900     		movs	r1, r5
- 2167 00ac FFF7FEFF 		bl	__aeabi_lmul
- 2168              	.LVL177:
- 2169              		.loc 1 200 93 view .LVU376
- 2170 00b0 FA22     		movs	r2, #250
- 2171 00b2 9200     		lsls	r2, r2, #2
- 2172 00b4 0023     		movs	r3, #0
- 2173 00b6 FFF7FEFF 		bl	__aeabi_ldivmod
- 2174              	.LVL178:
- 2175              		.loc 1 200 49 view .LVU377
- 2176 00ba 0300     		movs	r3, r0
- 2177 00bc 5B44     		add	r3, r3, fp
- 2178              		.loc 1 200 108 view .LVU378
- 2179 00be A322     		movs	r2, #163
- 2180 00c0 D200     		lsls	r2, r2, #3
- 2181 00c2 B218     		adds	r2, r6, r2
- 2182 00c4 1068     		ldr	r0, [r2]
- 2183              		.loc 1 200 100 view .LVU379
- 2184 00c6 5246     		mov	r2, r10
- 2185 00c8 5043     		muls	r0, r2
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 45
-
-
- 2186 00ca C018     		adds	r0, r0, r3
- 2187              		.loc 1 200 26 view .LVU380
- 2188 00cc F051     		str	r0, [r6, r7]
+ 2146              		.loc 1 200 5 is_stmt 1 view .LVU370
+ 2147              		.loc 1 200 33 is_stmt 0 view .LVU371
+ 2148 0096 A127     		movs	r7, #161
+ 2149 0098 FF00     		lsls	r7, r7, #3
+ 2150 009a F359     		ldr	r3, [r6, r7]
+ 2151 009c 9B46     		mov	fp, r3
+ 2152              		.loc 1 200 57 view .LVU372
+ 2153 009e A223     		movs	r3, #162
+ 2154 00a0 DB00     		lsls	r3, r3, #3
+ 2155 00a2 F318     		adds	r3, r6, r3
+ 2156 00a4 1A68     		ldr	r2, [r3]
+ 2157 00a6 5B68     		ldr	r3, [r3, #4]
+ 2158              		.loc 1 200 68 view .LVU373
+ 2159 00a8 2000     		movs	r0, r4
+ 2160 00aa 2900     		movs	r1, r5
+ 2161 00ac FFF7FEFF 		bl	__aeabi_lmul
+ 2162              	.LVL175:
+ 2163              		.loc 1 200 93 view .LVU374
+ 2164 00b0 FA22     		movs	r2, #250
+ 2165 00b2 9200     		lsls	r2, r2, #2
+ 2166 00b4 0023     		movs	r3, #0
+ 2167 00b6 FFF7FEFF 		bl	__aeabi_ldivmod
+ 2168              	.LVL176:
+ 2169              		.loc 1 200 49 view .LVU375
+ 2170 00ba 0300     		movs	r3, r0
+ 2171 00bc 5B44     		add	r3, r3, fp
+ 2172              		.loc 1 200 108 view .LVU376
+ 2173 00be A322     		movs	r2, #163
+ 2174 00c0 D200     		lsls	r2, r2, #3
+ 2175 00c2 B218     		adds	r2, r6, r2
+ 2176 00c4 1068     		ldr	r0, [r2]
+ 2177              		.loc 1 200 100 view .LVU377
+ 2178 00c6 5246     		mov	r2, r10
+ 2179 00c8 5043     		muls	r0, r2
+ 2180 00ca C018     		adds	r0, r0, r3
+ 2181              		.loc 1 200 26 view .LVU378
+ 2182 00cc F051     		str	r0, [r6, r7]
  201:Src/PID.c     ****     if (State.PID_352_Output >= 0xffff)
- 2189              		.loc 1 201 5 is_stmt 1 view .LVU381
- 2190              		.loc 1 201 8 is_stmt 0 view .LVU382
- 2191 00ce 6A4B     		ldr	r3, .L88+12
- 2192 00d0 9842     		cmp	r0, r3
- 2193 00d2 01D9     		bls	.L69
+ 2183              		.loc 1 201 5 is_stmt 1 view .LVU379
+ 2184              		.loc 1 201 8 is_stmt 0 view .LVU380
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 45
+
+
+ 2185 00ce 6A4B     		ldr	r3, .L88+12
+ 2186 00d0 9842     		cmp	r0, r3
+ 2187 00d2 01D9     		bls	.L69
  202:Src/PID.c     ****     {
  203:Src/PID.c     ****         State.PID_352_Output = 0xffff;
- 2194              		.loc 1 203 9 is_stmt 1 view .LVU383
- 2195              		.loc 1 203 30 is_stmt 0 view .LVU384
- 2196 00d4 6949     		ldr	r1, .L88+16
- 2197 00d6 F151     		str	r1, [r6, r7]
- 2198              	.L69:
+ 2188              		.loc 1 203 9 is_stmt 1 view .LVU381
+ 2189              		.loc 1 203 30 is_stmt 0 view .LVU382
+ 2190 00d4 6949     		ldr	r1, .L88+16
+ 2191 00d6 F151     		str	r1, [r6, r7]
+ 2192              	.L69:
  204:Src/PID.c     ****     }
  205:Src/PID.c     **** 
  206:Src/PID.c     ****     DAC_cmd(RF_PS_352_FINE + DAC_WRITE + State.PID_352_Output);
- 2199              		.loc 1 206 5 is_stmt 1 view .LVU385
- 2200              		.loc 1 206 47 is_stmt 0 view .LVU386
- 2201 00d8 644C     		ldr	r4, .L88
- 2202 00da A123     		movs	r3, #161
- 2203 00dc DB00     		lsls	r3, r3, #3
- 2204 00de E058     		ldr	r0, [r4, r3]
- 2205              		.loc 1 206 5 view .LVU387
- 2206 00e0 A823     		movs	r3, #168
- 2207 00e2 5B03     		lsls	r3, r3, #13
- 2208 00e4 9C46     		mov	ip, r3
- 2209 00e6 6044     		add	r0, r0, ip
- 2210 00e8 FFF7FEFF 		bl	DAC_cmd
- 2211              	.LVL179:
+ 2193              		.loc 1 206 5 is_stmt 1 view .LVU383
+ 2194              		.loc 1 206 47 is_stmt 0 view .LVU384
+ 2195 00d8 644C     		ldr	r4, .L88
+ 2196 00da A123     		movs	r3, #161
+ 2197 00dc DB00     		lsls	r3, r3, #3
+ 2198 00de E058     		ldr	r0, [r4, r3]
+ 2199              		.loc 1 206 5 view .LVU385
+ 2200 00e0 A823     		movs	r3, #168
+ 2201 00e2 5B03     		lsls	r3, r3, #13
+ 2202 00e4 9C46     		mov	ip, r3
+ 2203 00e6 6044     		add	r0, r0, ip
+ 2204 00e8 FFF7FEFF 		bl	DAC_cmd
+ 2205              	.LVL177:
  207:Src/PID.c     **** 
  208:Src/PID.c     ****     if (State.PID_352_P_error < 50000 && prevErr < 50000 && State.PID_352_LOCK == 1)
- 2212              		.loc 1 208 5 is_stmt 1 view .LVU388
- 2213              		.loc 1 208 14 is_stmt 0 view .LVU389
- 2214 00ec A523     		movs	r3, #165
- 2215 00ee DB00     		lsls	r3, r3, #3
- 2216 00f0 9C46     		mov	ip, r3
- 2217 00f2 6444     		add	r4, r4, ip
- 2218 00f4 2268     		ldr	r2, [r4]
- 2219 00f6 6368     		ldr	r3, [r4, #4]
- 2220              		.loc 1 208 8 view .LVU390
- 2221 00f8 002B     		cmp	r3, #0
- 2222 00fa 10DC     		bgt	.L70
- 2223 00fc 02D1     		bne	.L81
- 2224 00fe 6049     		ldr	r1, .L88+20
- 2225 0100 8A42     		cmp	r2, r1
- 2226 0102 0CD8     		bhi	.L70
- 2227              	.L81:
- 2228              		.loc 1 208 39 discriminator 1 view .LVU391
- 2229 0104 4146     		mov	r1, r8
- 2230 0106 0029     		cmp	r1, #0
- 2231 0108 09DC     		bgt	.L70
- 2232              	.LVL180:
- 2233              		.loc 1 208 39 discriminator 1 view .LVU392
- 2234 010a 02D1     		bne	.L82
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 46
+ 2206              		.loc 1 208 5 is_stmt 1 view .LVU386
+ 2207              		.loc 1 208 14 is_stmt 0 view .LVU387
+ 2208 00ec A523     		movs	r3, #165
+ 2209 00ee DB00     		lsls	r3, r3, #3
+ 2210 00f0 9C46     		mov	ip, r3
+ 2211 00f2 6444     		add	r4, r4, ip
+ 2212 00f4 2268     		ldr	r2, [r4]
+ 2213 00f6 6368     		ldr	r3, [r4, #4]
+ 2214              		.loc 1 208 8 view .LVU388
+ 2215 00f8 002B     		cmp	r3, #0
+ 2216 00fa 10DC     		bgt	.L70
+ 2217 00fc 02D1     		bne	.L81
+ 2218 00fe 6049     		ldr	r1, .L88+20
+ 2219 0100 8A42     		cmp	r2, r1
+ 2220 0102 0CD8     		bhi	.L70
+ 2221              	.L81:
+ 2222              		.loc 1 208 39 discriminator 1 view .LVU389
+ 2223 0104 4146     		mov	r1, r8
+ 2224 0106 0029     		cmp	r1, #0
+ 2225 0108 09DC     		bgt	.L70
+ 2226              	.LVL178:
+ 2227              		.loc 1 208 39 discriminator 1 view .LVU390
+ 2228 010a 02D1     		bne	.L82
+ 2229 010c 5C49     		ldr	r1, .L88+20
+ 2230              	.LVL179:
+ 2231              		.loc 1 208 39 discriminator 1 view .LVU391
+ 2232 010e 8945     		cmp	r9, r1
+ 2233 0110 05D8     		bhi	.L70
+ 2234              	.L82:
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 46
 
 
- 2235 010c 5C49     		ldr	r1, .L88+20
- 2236              	.LVL181:
- 2237              		.loc 1 208 39 discriminator 1 view .LVU393
- 2238 010e 8945     		cmp	r9, r1
- 2239 0110 05D8     		bhi	.L70
- 2240              	.L82:
- 2241              		.loc 1 208 66 discriminator 2 view .LVU394
- 2242 0112 5648     		ldr	r0, .L88
- 2243 0114 A721     		movs	r1, #167
- 2244 0116 C900     		lsls	r1, r1, #3
- 2245 0118 4156     		ldrsb	r1, [r0, r1]
- 2246              		.loc 1 208 58 discriminator 2 view .LVU395
- 2247 011a 0129     		cmp	r1, #1
- 2248 011c 2AD0     		beq	.L68
- 2249              	.L70:
+ 2235              		.loc 1 208 66 discriminator 2 view .LVU392
+ 2236 0112 5648     		ldr	r0, .L88
+ 2237 0114 A721     		movs	r1, #167
+ 2238 0116 C900     		lsls	r1, r1, #3
+ 2239 0118 4156     		ldrsb	r1, [r0, r1]
+ 2240              		.loc 1 208 58 discriminator 2 view .LVU393
+ 2241 011a 0129     		cmp	r1, #1
+ 2242 011c 2AD0     		beq	.L68
+ 2243              	.L70:
  209:Src/PID.c     ****     {
  210:Src/PID.c     ****         return;
  211:Src/PID.c     ****     }
  212:Src/PID.c     ****     else if (State.PID_352_P_error < 50000 && prevErr < 50000 && State.PID_352_LOCK == 0)
- 2250              		.loc 1 212 10 is_stmt 1 view .LVU396
- 2251              		.loc 1 212 13 is_stmt 0 view .LVU397
- 2252 011e 002B     		cmp	r3, #0
- 2253 0120 10DC     		bgt	.L74
- 2254 0122 02D1     		bne	.L83
- 2255 0124 5649     		ldr	r1, .L88+20
- 2256 0126 8A42     		cmp	r2, r1
- 2257 0128 0CD8     		bhi	.L74
- 2258              	.L83:
- 2259              		.loc 1 212 44 discriminator 1 view .LVU398
- 2260 012a 4146     		mov	r1, r8
- 2261 012c 0029     		cmp	r1, #0
- 2262 012e 09DC     		bgt	.L74
- 2263              	.LVL182:
- 2264              		.loc 1 212 44 discriminator 1 view .LVU399
- 2265 0130 02D1     		bne	.L84
- 2266 0132 5349     		ldr	r1, .L88+20
- 2267              	.LVL183:
- 2268              		.loc 1 212 44 discriminator 1 view .LVU400
- 2269 0134 8945     		cmp	r9, r1
- 2270 0136 05D8     		bhi	.L74
- 2271              	.L84:
- 2272              		.loc 1 212 71 discriminator 2 view .LVU401
- 2273 0138 4C48     		ldr	r0, .L88
- 2274 013a A721     		movs	r1, #167
- 2275 013c C900     		lsls	r1, r1, #3
- 2276 013e 4156     		ldrsb	r1, [r0, r1]
- 2277              		.loc 1 212 63 discriminator 2 view .LVU402
- 2278 0140 0029     		cmp	r1, #0
- 2279 0142 1ED0     		beq	.L86
- 2280              	.L74:
+ 2244              		.loc 1 212 10 is_stmt 1 view .LVU394
+ 2245              		.loc 1 212 13 is_stmt 0 view .LVU395
+ 2246 011e 002B     		cmp	r3, #0
+ 2247 0120 10DC     		bgt	.L74
+ 2248 0122 02D1     		bne	.L83
+ 2249 0124 5649     		ldr	r1, .L88+20
+ 2250 0126 8A42     		cmp	r2, r1
+ 2251 0128 0CD8     		bhi	.L74
+ 2252              	.L83:
+ 2253              		.loc 1 212 44 discriminator 1 view .LVU396
+ 2254 012a 4146     		mov	r1, r8
+ 2255 012c 0029     		cmp	r1, #0
+ 2256 012e 09DC     		bgt	.L74
+ 2257              	.LVL180:
+ 2258              		.loc 1 212 44 discriminator 1 view .LVU397
+ 2259 0130 02D1     		bne	.L84
+ 2260 0132 5349     		ldr	r1, .L88+20
+ 2261              	.LVL181:
+ 2262              		.loc 1 212 44 discriminator 1 view .LVU398
+ 2263 0134 8945     		cmp	r9, r1
+ 2264 0136 05D8     		bhi	.L74
+ 2265              	.L84:
+ 2266              		.loc 1 212 71 discriminator 2 view .LVU399
+ 2267 0138 4C48     		ldr	r0, .L88
+ 2268 013a A721     		movs	r1, #167
+ 2269 013c C900     		lsls	r1, r1, #3
+ 2270 013e 4156     		ldrsb	r1, [r0, r1]
+ 2271              		.loc 1 212 63 discriminator 2 view .LVU400
+ 2272 0140 0029     		cmp	r1, #0
+ 2273 0142 1ED0     		beq	.L86
+ 2274              	.L74:
  213:Src/PID.c     ****     {
  214:Src/PID.c     ****         State.PID_352_LOCK = 1;
  215:Src/PID.c     ****         SERIAL_WRITE_GREEN("[PID_PHASE_352] LOCKED\n");
  216:Src/PID.c     ****     }
  217:Src/PID.c     ****     else if ((State.PID_352_P_error >= 50000 || prevErr >= 50000) && State.PID_352_LOCK == 1)
- 2281              		.loc 1 217 10 is_stmt 1 view .LVU403
- 2282              		.loc 1 217 13 is_stmt 0 view .LVU404
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 47
+ 2275              		.loc 1 217 10 is_stmt 1 view .LVU401
+ 2276              		.loc 1 217 13 is_stmt 0 view .LVU402
+ 2277 0144 002B     		cmp	r3, #0
+ 2278 0146 0ADC     		bgt	.L77
+ 2279 0148 02D1     		bne	.L85
+ 2280 014a 4D4B     		ldr	r3, .L88+20
+ 2281 014c 9A42     		cmp	r2, r3
+ 2282 014e 06D8     		bhi	.L77
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 47
 
 
- 2283 0144 002B     		cmp	r3, #0
- 2284 0146 0ADC     		bgt	.L77
- 2285 0148 02D1     		bne	.L85
- 2286 014a 4D4B     		ldr	r3, .L88+20
- 2287 014c 9A42     		cmp	r2, r3
- 2288 014e 06D8     		bhi	.L77
- 2289              	.L85:
- 2290              		.loc 1 217 46 discriminator 2 view .LVU405
- 2291 0150 4346     		mov	r3, r8
- 2292 0152 002B     		cmp	r3, #0
- 2293 0154 03DC     		bgt	.L77
- 2294              	.LVL184:
- 2295              		.loc 1 217 46 discriminator 2 view .LVU406
- 2296 0156 08D1     		bne	.L79
- 2297 0158 494B     		ldr	r3, .L88+20
- 2298              	.LVL185:
- 2299              		.loc 1 217 46 discriminator 2 view .LVU407
- 2300 015a 9945     		cmp	r9, r3
- 2301 015c 05D9     		bls	.L79
- 2302              	.L77:
- 2303              		.loc 1 217 75 discriminator 3 view .LVU408
- 2304 015e 434A     		ldr	r2, .L88
- 2305 0160 A723     		movs	r3, #167
- 2306 0162 DB00     		lsls	r3, r3, #3
- 2307 0164 D356     		ldrsb	r3, [r2, r3]
- 2308              		.loc 1 217 67 discriminator 3 view .LVU409
- 2309 0166 012B     		cmp	r3, #1
- 2310 0168 44D0     		beq	.L87
- 2311              	.L79:
+ 2283              	.L85:
+ 2284              		.loc 1 217 46 discriminator 2 view .LVU403
+ 2285 0150 4346     		mov	r3, r8
+ 2286 0152 002B     		cmp	r3, #0
+ 2287 0154 03DC     		bgt	.L77
+ 2288              	.LVL182:
+ 2289              		.loc 1 217 46 discriminator 2 view .LVU404
+ 2290 0156 08D1     		bne	.L79
+ 2291 0158 494B     		ldr	r3, .L88+20
+ 2292              	.LVL183:
+ 2293              		.loc 1 217 46 discriminator 2 view .LVU405
+ 2294 015a 9945     		cmp	r9, r3
+ 2295 015c 05D9     		bls	.L79
+ 2296              	.L77:
+ 2297              		.loc 1 217 75 discriminator 3 view .LVU406
+ 2298 015e 434A     		ldr	r2, .L88
+ 2299 0160 A723     		movs	r3, #167
+ 2300 0162 DB00     		lsls	r3, r3, #3
+ 2301 0164 D356     		ldrsb	r3, [r2, r3]
+ 2302              		.loc 1 217 67 discriminator 3 view .LVU407
+ 2303 0166 012B     		cmp	r3, #1
+ 2304 0168 44D0     		beq	.L87
+ 2305              	.L79:
  218:Src/PID.c     ****     {
  219:Src/PID.c     ****         State.PID_352_LOCK = 0;
  220:Src/PID.c     ****         SERIAL_WRITE_RED("[PID_PHASE_352] UNLOCKED!!!\n");
@@ -2797,600 +2791,600 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  222:Src/PID.c     ****     else
  223:Src/PID.c     ****     {
  224:Src/PID.c     ****         State.PID_352_LOCK = 0;
- 2312              		.loc 1 224 9 is_stmt 1 view .LVU410
- 2313              		.loc 1 224 28 is_stmt 0 view .LVU411
- 2314 016a 404A     		ldr	r2, .L88
- 2315 016c A723     		movs	r3, #167
- 2316 016e DB00     		lsls	r3, r3, #3
- 2317 0170 0021     		movs	r1, #0
- 2318 0172 D154     		strb	r1, [r2, r3]
- 2319              	.L68:
+ 2306              		.loc 1 224 9 is_stmt 1 view .LVU408
+ 2307              		.loc 1 224 28 is_stmt 0 view .LVU409
+ 2308 016a 404A     		ldr	r2, .L88
+ 2309 016c A723     		movs	r3, #167
+ 2310 016e DB00     		lsls	r3, r3, #3
+ 2311 0170 0021     		movs	r1, #0
+ 2312 0172 D154     		strb	r1, [r2, r3]
+ 2313              	.L68:
  225:Src/PID.c     ****     }
  226:Src/PID.c     **** }
- 2320              		.loc 1 226 1 view .LVU412
- 2321 0174 1BB0     		add	sp, sp, #108
- 2322              		@ sp needed
- 2323              	.LVL186:
- 2324              		.loc 1 226 1 view .LVU413
- 2325 0176 3CBC     		pop	{r2, r3, r4, r5}
- 2326 0178 9046     		mov	r8, r2
- 2327 017a 9946     		mov	r9, r3
- 2328 017c A246     		mov	r10, r4
- 2329 017e AB46     		mov	fp, r5
- 2330 0180 F0BD     		pop	{r4, r5, r6, r7, pc}
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 48
-
-
- 2331              	.LVL187:
- 2332              	.L86:
+ 2314              		.loc 1 226 1 view .LVU410
+ 2315 0174 1BB0     		add	sp, sp, #108
+ 2316              		@ sp needed
+ 2317              	.LVL184:
+ 2318              		.loc 1 226 1 view .LVU411
+ 2319 0176 3CBC     		pop	{r2, r3, r4, r5}
+ 2320 0178 9046     		mov	r8, r2
+ 2321 017a 9946     		mov	r9, r3
+ 2322 017c A246     		mov	r10, r4
+ 2323 017e AB46     		mov	fp, r5
+ 2324 0180 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 2325              	.LVL185:
+ 2326              	.L86:
  214:Src/PID.c     ****         SERIAL_WRITE_GREEN("[PID_PHASE_352] LOCKED\n");
- 2333              		.loc 1 214 9 is_stmt 1 view .LVU414
+ 2327              		.loc 1 214 9 is_stmt 1 view .LVU412
  214:Src/PID.c     ****         SERIAL_WRITE_GREEN("[PID_PHASE_352] LOCKED\n");
- 2334              		.loc 1 214 28 is_stmt 0 view .LVU415
- 2335 0182 A723     		movs	r3, #167
- 2336 0184 DB00     		lsls	r3, r3, #3
- 2337 0186 0131     		adds	r1, r1, #1
- 2338 0188 C154     		strb	r1, [r0, r3]
- 2339              	.LBB28:
- 215:Src/PID.c     ****     }
- 2340              		.loc 1 215 9 is_stmt 1 view .LVU416
- 2341 018a 01AC     		add	r4, sp, #4
- 2342 018c 6022     		movs	r2, #96
- 2343 018e 0021     		movs	r1, #0
- 2344 0190 02A8     		add	r0, sp, #8
- 2345 0192 FFF7FEFF 		bl	memset
- 2346              	.LVL188:
- 215:Src/PID.c     ****     }
- 2347              		.loc 1 215 9 view .LVU417
- 2348 0196 3B4B     		ldr	r3, .L88+24
- 2349 0198 2200     		movs	r2, r4
- 2350 019a 03CB     		ldmia	r3!, {r0, r1}
- 2351 019c 03C2     		stmia	r2!, {r0, r1}
- 2352              	.LVL189:
- 215:Src/PID.c     ****     }
- 2353              		.loc 1 215 9 view .LVU418
- 2354 019e FA26     		movs	r6, #250
- 2355 01a0 B600     		lsls	r6, r6, #2
- 2356 01a2 394D     		ldr	r5, .L88+28
- 2357 01a4 3300     		movs	r3, r6
- 2358 01a6 0722     		movs	r2, #7
- 2359 01a8 2100     		movs	r1, r4
- 2360 01aa 2800     		movs	r0, r5
- 2361 01ac FFF7FEFF 		bl	HAL_UART_Transmit
- 2362              	.LVL190:
- 2363              	.LBE28:
- 215:Src/PID.c     ****     }
- 2364              		.loc 1 215 9 view .LVU419
- 2365              	.LBB29:
- 215:Src/PID.c     ****     }
- 2366              		.loc 1 215 9 view .LVU420
- 2367 01b0 6022     		movs	r2, #96
- 2368 01b2 0021     		movs	r1, #0
- 2369 01b4 02A8     		add	r0, sp, #8
- 2370 01b6 FFF7FEFF 		bl	memset
- 2371              	.LVL191:
- 215:Src/PID.c     ****     }
- 2372              		.loc 1 215 9 view .LVU421
- 2373 01ba 344B     		ldr	r3, .L88+32
- 2374 01bc 2200     		movs	r2, r4
- 2375 01be 83CB     		ldmia	r3!, {r0, r1, r7}
- 2376 01c0 83C2     		stmia	r2!, {r0, r1, r7}
- 2377 01c2 83CB     		ldmia	r3!, {r0, r1, r7}
- 2378 01c4 83C2     		stmia	r2!, {r0, r1, r7}
- 2379              	.LVL192:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 49
+ 2328              		.loc 1 214 28 is_stmt 0 view .LVU413
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 48
 
 
+ 2329 0182 A723     		movs	r3, #167
+ 2330 0184 DB00     		lsls	r3, r3, #3
+ 2331 0186 0131     		adds	r1, r1, #1
+ 2332 0188 C154     		strb	r1, [r0, r3]
+ 2333              	.LBB28:
  215:Src/PID.c     ****     }
- 2380              		.loc 1 215 9 view .LVU422
- 2381 01c6 3300     		movs	r3, r6
- 2382 01c8 1722     		movs	r2, #23
- 2383 01ca 2100     		movs	r1, r4
- 2384 01cc 2800     		movs	r0, r5
- 2385 01ce FFF7FEFF 		bl	HAL_UART_Transmit
- 2386              	.LVL193:
- 2387              	.LBE29:
+ 2334              		.loc 1 215 9 is_stmt 1 view .LVU414
+ 2335 018a 01AC     		add	r4, sp, #4
+ 2336 018c 6022     		movs	r2, #96
+ 2337 018e 0021     		movs	r1, #0
+ 2338 0190 02A8     		add	r0, sp, #8
+ 2339 0192 FFF7FEFF 		bl	memset
+ 2340              	.LVL186:
  215:Src/PID.c     ****     }
- 2388              		.loc 1 215 9 view .LVU423
- 2389              	.LBB30:
+ 2341              		.loc 1 215 9 view .LVU415
+ 2342 0196 3B4B     		ldr	r3, .L88+24
+ 2343 0198 2200     		movs	r2, r4
+ 2344 019a 03CB     		ldmia	r3!, {r0, r1}
+ 2345 019c 03C2     		stmia	r2!, {r0, r1}
+ 2346              	.LVL187:
  215:Src/PID.c     ****     }
- 2390              		.loc 1 215 9 view .LVU424
- 2391 01d2 6022     		movs	r2, #96
- 2392 01d4 0021     		movs	r1, #0
- 2393 01d6 02A8     		add	r0, sp, #8
- 2394 01d8 FFF7FEFF 		bl	memset
- 2395              	.LVL194:
+ 2347              		.loc 1 215 9 view .LVU416
+ 2348 019e FA26     		movs	r6, #250
+ 2349 01a0 B600     		lsls	r6, r6, #2
+ 2350 01a2 394D     		ldr	r5, .L88+28
+ 2351 01a4 3300     		movs	r3, r6
+ 2352 01a6 0722     		movs	r2, #7
+ 2353 01a8 2100     		movs	r1, r4
+ 2354 01aa 2800     		movs	r0, r5
+ 2355 01ac FFF7FEFF 		bl	HAL_UART_Transmit
+ 2356              	.LVL188:
+ 2357              	.LBE28:
  215:Src/PID.c     ****     }
- 2396              		.loc 1 215 9 view .LVU425
- 2397 01dc 2C4B     		ldr	r3, .L88+36
- 2398 01de 1A68     		ldr	r2, [r3]
- 2399 01e0 0192     		str	r2, [sp, #4]
- 2400 01e2 1B79     		ldrb	r3, [r3, #4]
- 2401 01e4 2371     		strb	r3, [r4, #4]
- 2402              	.LVL195:
+ 2358              		.loc 1 215 9 view .LVU417
+ 2359              	.LBB29:
  215:Src/PID.c     ****     }
- 2403              		.loc 1 215 9 view .LVU426
- 2404 01e6 3300     		movs	r3, r6
- 2405 01e8 0422     		movs	r2, #4
- 2406 01ea 2100     		movs	r1, r4
- 2407 01ec 2800     		movs	r0, r5
- 2408 01ee FFF7FEFF 		bl	HAL_UART_Transmit
- 2409              	.LVL196:
- 2410              	.LBE30:
+ 2360              		.loc 1 215 9 view .LVU418
+ 2361 01b0 6022     		movs	r2, #96
+ 2362 01b2 0021     		movs	r1, #0
+ 2363 01b4 02A8     		add	r0, sp, #8
+ 2364 01b6 FFF7FEFF 		bl	memset
+ 2365              	.LVL189:
  215:Src/PID.c     ****     }
- 2411              		.loc 1 215 9 view .LVU427
+ 2366              		.loc 1 215 9 view .LVU419
+ 2367 01ba 344B     		ldr	r3, .L88+32
+ 2368 01bc 2200     		movs	r2, r4
+ 2369 01be 83CB     		ldmia	r3!, {r0, r1, r7}
+ 2370 01c0 83C2     		stmia	r2!, {r0, r1, r7}
+ 2371 01c2 83CB     		ldmia	r3!, {r0, r1, r7}
+ 2372 01c4 83C2     		stmia	r2!, {r0, r1, r7}
+ 2373              	.LVL190:
  215:Src/PID.c     ****     }
- 2412              		.loc 1 215 55 view .LVU428
+ 2374              		.loc 1 215 9 view .LVU420
+ 2375 01c6 3300     		movs	r3, r6
+ 2376 01c8 1722     		movs	r2, #23
+ 2377 01ca 2100     		movs	r1, r4
+ 2378 01cc 2800     		movs	r0, r5
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 49
+
+
+ 2379 01ce FFF7FEFF 		bl	HAL_UART_Transmit
+ 2380              	.LVL191:
+ 2381              	.LBE29:
  215:Src/PID.c     ****     }
- 2413              		.loc 1 215 9 is_stmt 0 view .LVU429
- 2414 01f2 BFE7     		b	.L68
- 2415              	.LVL197:
- 2416              	.L87:
+ 2382              		.loc 1 215 9 view .LVU421
+ 2383              	.LBB30:
+ 215:Src/PID.c     ****     }
+ 2384              		.loc 1 215 9 view .LVU422
+ 2385 01d2 6022     		movs	r2, #96
+ 2386 01d4 0021     		movs	r1, #0
+ 2387 01d6 02A8     		add	r0, sp, #8
+ 2388 01d8 FFF7FEFF 		bl	memset
+ 2389              	.LVL192:
+ 215:Src/PID.c     ****     }
+ 2390              		.loc 1 215 9 view .LVU423
+ 2391 01dc 2C4B     		ldr	r3, .L88+36
+ 2392 01de 1A68     		ldr	r2, [r3]
+ 2393 01e0 0192     		str	r2, [sp, #4]
+ 2394 01e2 1B79     		ldrb	r3, [r3, #4]
+ 2395 01e4 2371     		strb	r3, [r4, #4]
+ 2396              	.LVL193:
+ 215:Src/PID.c     ****     }
+ 2397              		.loc 1 215 9 view .LVU424
+ 2398 01e6 3300     		movs	r3, r6
+ 2399 01e8 0422     		movs	r2, #4
+ 2400 01ea 2100     		movs	r1, r4
+ 2401 01ec 2800     		movs	r0, r5
+ 2402 01ee FFF7FEFF 		bl	HAL_UART_Transmit
+ 2403              	.LVL194:
+ 2404              	.LBE30:
+ 215:Src/PID.c     ****     }
+ 2405              		.loc 1 215 9 view .LVU425
+ 215:Src/PID.c     ****     }
+ 2406              		.loc 1 215 55 view .LVU426
+ 215:Src/PID.c     ****     }
+ 2407              		.loc 1 215 9 is_stmt 0 view .LVU427
+ 2408 01f2 BFE7     		b	.L68
+ 2409              	.LVL195:
+ 2410              	.L87:
  219:Src/PID.c     ****         SERIAL_WRITE_RED("[PID_PHASE_352] UNLOCKED!!!\n");
- 2417              		.loc 1 219 9 is_stmt 1 discriminator 2 view .LVU430
+ 2411              		.loc 1 219 9 is_stmt 1 discriminator 2 view .LVU428
  219:Src/PID.c     ****         SERIAL_WRITE_RED("[PID_PHASE_352] UNLOCKED!!!\n");
- 2418              		.loc 1 219 28 is_stmt 0 discriminator 2 view .LVU431
- 2419 01f4 A723     		movs	r3, #167
- 2420 01f6 DB00     		lsls	r3, r3, #3
- 2421 01f8 0021     		movs	r1, #0
- 2422 01fa D154     		strb	r1, [r2, r3]
- 2423              	.LBB31:
+ 2412              		.loc 1 219 28 is_stmt 0 discriminator 2 view .LVU429
+ 2413 01f4 A723     		movs	r3, #167
+ 2414 01f6 DB00     		lsls	r3, r3, #3
+ 2415 01f8 0021     		movs	r1, #0
+ 2416 01fa D154     		strb	r1, [r2, r3]
+ 2417              	.LBB31:
  220:Src/PID.c     ****     }
- 2424              		.loc 1 220 9 is_stmt 1 discriminator 2 view .LVU432
- 2425 01fc 01AC     		add	r4, sp, #4
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 50
+ 2418              		.loc 1 220 9 is_stmt 1 discriminator 2 view .LVU430
+ 2419 01fc 01AC     		add	r4, sp, #4
+ 2420 01fe 6022     		movs	r2, #96
+ 2421 0200 02A8     		add	r0, sp, #8
+ 2422 0202 FFF7FEFF 		bl	memset
+ 2423              	.LVL196:
+ 220:Src/PID.c     ****     }
+ 2424              		.loc 1 220 9 discriminator 2 view .LVU431
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 50
 
 
- 2426 01fe 6022     		movs	r2, #96
- 2427 0200 02A8     		add	r0, sp, #8
- 2428 0202 FFF7FEFF 		bl	memset
- 2429              	.LVL198:
+ 2425 0206 234B     		ldr	r3, .L88+40
+ 2426 0208 2200     		movs	r2, r4
+ 2427 020a 03CB     		ldmia	r3!, {r0, r1}
+ 2428 020c 03C2     		stmia	r2!, {r0, r1}
+ 2429              	.LVL197:
  220:Src/PID.c     ****     }
- 2430              		.loc 1 220 9 discriminator 2 view .LVU433
- 2431 0206 234B     		ldr	r3, .L88+40
- 2432 0208 2200     		movs	r2, r4
- 2433 020a 03CB     		ldmia	r3!, {r0, r1}
- 2434 020c 03C2     		stmia	r2!, {r0, r1}
- 2435              	.LVL199:
+ 2430              		.loc 1 220 9 discriminator 2 view .LVU432
+ 2431 020e FA26     		movs	r6, #250
+ 2432 0210 B600     		lsls	r6, r6, #2
+ 2433 0212 1D4D     		ldr	r5, .L88+28
+ 2434 0214 3300     		movs	r3, r6
+ 2435 0216 0722     		movs	r2, #7
+ 2436 0218 2100     		movs	r1, r4
+ 2437 021a 2800     		movs	r0, r5
+ 2438 021c FFF7FEFF 		bl	HAL_UART_Transmit
+ 2439              	.LVL198:
+ 2440              	.LBE31:
  220:Src/PID.c     ****     }
- 2436              		.loc 1 220 9 discriminator 2 view .LVU434
- 2437 020e FA26     		movs	r6, #250
- 2438 0210 B600     		lsls	r6, r6, #2
- 2439 0212 1D4D     		ldr	r5, .L88+28
- 2440 0214 3300     		movs	r3, r6
- 2441 0216 0722     		movs	r2, #7
- 2442 0218 2100     		movs	r1, r4
- 2443 021a 2800     		movs	r0, r5
- 2444 021c FFF7FEFF 		bl	HAL_UART_Transmit
- 2445              	.LVL200:
- 2446              	.LBE31:
+ 2441              		.loc 1 220 9 discriminator 2 view .LVU433
+ 2442              	.LBB32:
  220:Src/PID.c     ****     }
- 2447              		.loc 1 220 9 discriminator 2 view .LVU435
- 2448              	.LBB32:
+ 2443              		.loc 1 220 9 discriminator 2 view .LVU434
+ 2444 0220 6022     		movs	r2, #96
+ 2445 0222 0021     		movs	r1, #0
+ 2446 0224 02A8     		add	r0, sp, #8
+ 2447 0226 FFF7FEFF 		bl	memset
+ 2448              	.LVL199:
  220:Src/PID.c     ****     }
- 2449              		.loc 1 220 9 discriminator 2 view .LVU436
- 2450 0220 6022     		movs	r2, #96
- 2451 0222 0021     		movs	r1, #0
- 2452 0224 02A8     		add	r0, sp, #8
- 2453 0226 FFF7FEFF 		bl	memset
- 2454              	.LVL201:
+ 2449              		.loc 1 220 9 discriminator 2 view .LVU435
+ 2450 022a 1B4B     		ldr	r3, .L88+44
+ 2451 022c 2200     		movs	r2, r4
+ 2452 022e 83CB     		ldmia	r3!, {r0, r1, r7}
+ 2453 0230 83C2     		stmia	r2!, {r0, r1, r7}
+ 2454 0232 83CB     		ldmia	r3!, {r0, r1, r7}
+ 2455 0234 83C2     		stmia	r2!, {r0, r1, r7}
+ 2456 0236 1968     		ldr	r1, [r3]
+ 2457 0238 1160     		str	r1, [r2]
+ 2458 023a 1B79     		ldrb	r3, [r3, #4]
+ 2459 023c 1371     		strb	r3, [r2, #4]
+ 2460              	.LVL200:
  220:Src/PID.c     ****     }
- 2455              		.loc 1 220 9 discriminator 2 view .LVU437
- 2456 022a 1B4B     		ldr	r3, .L88+44
- 2457 022c 2200     		movs	r2, r4
- 2458 022e 83CB     		ldmia	r3!, {r0, r1, r7}
- 2459 0230 83C2     		stmia	r2!, {r0, r1, r7}
- 2460 0232 83CB     		ldmia	r3!, {r0, r1, r7}
- 2461 0234 83C2     		stmia	r2!, {r0, r1, r7}
- 2462 0236 1968     		ldr	r1, [r3]
- 2463 0238 1160     		str	r1, [r2]
- 2464 023a 1B79     		ldrb	r3, [r3, #4]
- 2465 023c 1371     		strb	r3, [r2, #4]
- 2466              	.LVL202:
+ 2461              		.loc 1 220 9 discriminator 2 view .LVU436
+ 2462 023e 3300     		movs	r3, r6
+ 2463 0240 1C22     		movs	r2, #28
+ 2464 0242 2100     		movs	r1, r4
+ 2465 0244 2800     		movs	r0, r5
+ 2466 0246 FFF7FEFF 		bl	HAL_UART_Transmit
+ 2467              	.LVL201:
+ 2468              	.LBE32:
  220:Src/PID.c     ****     }
- 2467              		.loc 1 220 9 discriminator 2 view .LVU438
- 2468 023e 3300     		movs	r3, r6
- 2469 0240 1C22     		movs	r2, #28
- 2470 0242 2100     		movs	r1, r4
- 2471 0244 2800     		movs	r0, r5
- 2472 0246 FFF7FEFF 		bl	HAL_UART_Transmit
- 2473              	.LVL203:
- 2474              	.LBE32:
+ 2469              		.loc 1 220 9 discriminator 2 view .LVU437
+ 2470              	.LBB33:
  220:Src/PID.c     ****     }
- 2475              		.loc 1 220 9 discriminator 2 view .LVU439
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 51
+ 2471              		.loc 1 220 9 discriminator 2 view .LVU438
+ 2472 024a 6022     		movs	r2, #96
+ 2473 024c 0021     		movs	r1, #0
+ 2474 024e 02A8     		add	r0, sp, #8
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 51
 
 
- 2476              	.LBB33:
+ 2475 0250 FFF7FEFF 		bl	memset
+ 2476              	.LVL202:
  220:Src/PID.c     ****     }
- 2477              		.loc 1 220 9 discriminator 2 view .LVU440
- 2478 024a 6022     		movs	r2, #96
- 2479 024c 0021     		movs	r1, #0
- 2480 024e 02A8     		add	r0, sp, #8
- 2481 0250 FFF7FEFF 		bl	memset
- 2482              	.LVL204:
+ 2477              		.loc 1 220 9 discriminator 2 view .LVU439
+ 2478 0254 0E4B     		ldr	r3, .L88+36
+ 2479 0256 1A68     		ldr	r2, [r3]
+ 2480 0258 0192     		str	r2, [sp, #4]
+ 2481 025a 1B79     		ldrb	r3, [r3, #4]
+ 2482 025c 2371     		strb	r3, [r4, #4]
+ 2483              	.LVL203:
  220:Src/PID.c     ****     }
- 2483              		.loc 1 220 9 discriminator 2 view .LVU441
- 2484 0254 0E4B     		ldr	r3, .L88+36
- 2485 0256 1A68     		ldr	r2, [r3]
- 2486 0258 0192     		str	r2, [sp, #4]
- 2487 025a 1B79     		ldrb	r3, [r3, #4]
- 2488 025c 2371     		strb	r3, [r4, #4]
- 2489              	.LVL205:
+ 2484              		.loc 1 220 9 discriminator 2 view .LVU440
+ 2485 025e 3300     		movs	r3, r6
+ 2486 0260 0422     		movs	r2, #4
+ 2487 0262 2100     		movs	r1, r4
+ 2488 0264 2800     		movs	r0, r5
+ 2489 0266 FFF7FEFF 		bl	HAL_UART_Transmit
+ 2490              	.LVL204:
+ 2491              	.LBE33:
  220:Src/PID.c     ****     }
- 2490              		.loc 1 220 9 discriminator 2 view .LVU442
- 2491 025e 3300     		movs	r3, r6
- 2492 0260 0422     		movs	r2, #4
- 2493 0262 2100     		movs	r1, r4
- 2494 0264 2800     		movs	r0, r5
- 2495 0266 FFF7FEFF 		bl	HAL_UART_Transmit
- 2496              	.LVL206:
- 2497              	.LBE33:
+ 2492              		.loc 1 220 9 discriminator 2 view .LVU441
  220:Src/PID.c     ****     }
- 2498              		.loc 1 220 9 discriminator 2 view .LVU443
+ 2493              		.loc 1 220 58 discriminator 2 view .LVU442
  220:Src/PID.c     ****     }
- 2499              		.loc 1 220 58 discriminator 2 view .LVU444
- 220:Src/PID.c     ****     }
- 2500              		.loc 1 220 9 is_stmt 0 discriminator 2 view .LVU445
- 2501 026a 83E7     		b	.L68
- 2502              	.L89:
- 2503              		.align	2
- 2504              	.L88:
- 2505 026c 00000000 		.word	State
- 2506 0270 D4040000 		.word	1236
- 2507 0274 D5040000 		.word	1237
- 2508 0278 FEFF0000 		.word	65534
- 2509 027c FFFF0000 		.word	65535
- 2510 0280 4FC30000 		.word	49999
- 2511 0284 00000000 		.word	.LC62
- 2512 0288 00000000 		.word	huart2
- 2513 028c 08000000 		.word	.LC65
- 2514 0290 08000000 		.word	.LC44
- 2515 0294 20000000 		.word	.LC68
- 2516 0298 28000000 		.word	.LC70
- 2517              		.cfi_endproc
- 2518              	.LFE297:
- 2520              		.section	.rodata.PID704.str1.4,"aMS",%progbits,1
- 2521              		.align	2
- 2522              	.LC81:
- 2523 0000 5B504944 		.ascii	"[PID_PHASE_704] LOCKED\012\000"
- 2523      5F504841 
- 2523      53455F37 
- 2523      30345D20 
- 2523      4C4F434B 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 52
+ 2494              		.loc 1 220 9 is_stmt 0 discriminator 2 view .LVU443
+ 2495 026a 83E7     		b	.L68
+ 2496              	.L89:
+ 2497              		.align	2
+ 2498              	.L88:
+ 2499 026c 00000000 		.word	State
+ 2500 0270 D4040000 		.word	1236
+ 2501 0274 D5040000 		.word	1237
+ 2502 0278 FEFF0000 		.word	65534
+ 2503 027c FFFF0000 		.word	65535
+ 2504 0280 4FC30000 		.word	49999
+ 2505 0284 00000000 		.word	.LC62
+ 2506 0288 00000000 		.word	huart2
+ 2507 028c 08000000 		.word	.LC65
+ 2508 0290 08000000 		.word	.LC44
+ 2509 0294 20000000 		.word	.LC68
+ 2510 0298 28000000 		.word	.LC70
+ 2511              		.cfi_endproc
+ 2512              	.LFE297:
+ 2514              		.section	.rodata.PID704.str1.4,"aMS",%progbits,1
+ 2515              		.align	2
+ 2516              	.LC81:
+ 2517 0000 5B504944 		.ascii	"[PID_PHASE_704] LOCKED\012\000"
+ 2517      5F504841 
+ 2517      53455F37 
+ 2517      30345D20 
+ 2517      4C4F434B 
+ 2518              		.align	2
+ 2519              	.LC85:
+ 2520 0018 5B504944 		.ascii	"[PID_PHASE_704] UNLOCKED!!!\012\000"
+ 2520      5F504841 
+ 2520      53455F37 
+ 2520      30345D20 
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 52
 
 
- 2524              		.align	2
- 2525              	.LC85:
- 2526 0018 5B504944 		.ascii	"[PID_PHASE_704] UNLOCKED!!!\012\000"
- 2526      5F504841 
- 2526      53455F37 
- 2526      30345D20 
- 2526      554E4C4F 
- 2527              		.section	.text.PID704,"ax",%progbits
- 2528              		.align	1
- 2529              		.global	PID704
- 2530              		.syntax unified
- 2531              		.code	16
- 2532              		.thumb_func
- 2533              		.fpu softvfp
- 2535              	PID704:
- 2536              	.LFB298:
+ 2520      554E4C4F 
+ 2521              		.section	.text.PID704,"ax",%progbits
+ 2522              		.align	1
+ 2523              		.global	PID704
+ 2524              		.syntax unified
+ 2525              		.code	16
+ 2526              		.thumb_func
+ 2527              		.fpu softvfp
+ 2529              	PID704:
+ 2530              	.LFB298:
  227:Src/PID.c     **** void PID704()
  228:Src/PID.c     **** {
- 2537              		.loc 1 228 1 is_stmt 1 view -0
- 2538              		.cfi_startproc
- 2539              		@ args = 0, pretend = 0, frame = 104
- 2540              		@ frame_needed = 0, uses_anonymous_args = 0
- 2541 0000 F0B5     		push	{r4, r5, r6, r7, lr}
- 2542              	.LCFI24:
- 2543              		.cfi_def_cfa_offset 20
- 2544              		.cfi_offset 4, -20
- 2545              		.cfi_offset 5, -16
- 2546              		.cfi_offset 6, -12
- 2547              		.cfi_offset 7, -8
- 2548              		.cfi_offset 14, -4
- 2549 0002 DE46     		mov	lr, fp
- 2550 0004 5746     		mov	r7, r10
- 2551 0006 4E46     		mov	r6, r9
- 2552 0008 4546     		mov	r5, r8
- 2553 000a E0B5     		push	{r5, r6, r7, lr}
- 2554              	.LCFI25:
- 2555              		.cfi_def_cfa_offset 36
- 2556              		.cfi_offset 8, -36
- 2557              		.cfi_offset 9, -32
- 2558              		.cfi_offset 10, -28
- 2559              		.cfi_offset 11, -24
- 2560 000c 9BB0     		sub	sp, sp, #108
- 2561              	.LCFI26:
- 2562              		.cfi_def_cfa_offset 144
+ 2531              		.loc 1 228 1 is_stmt 1 view -0
+ 2532              		.cfi_startproc
+ 2533              		@ args = 0, pretend = 0, frame = 104
+ 2534              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2535 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 2536              	.LCFI24:
+ 2537              		.cfi_def_cfa_offset 20
+ 2538              		.cfi_offset 4, -20
+ 2539              		.cfi_offset 5, -16
+ 2540              		.cfi_offset 6, -12
+ 2541              		.cfi_offset 7, -8
+ 2542              		.cfi_offset 14, -4
+ 2543 0002 DE46     		mov	lr, fp
+ 2544 0004 5746     		mov	r7, r10
+ 2545 0006 4E46     		mov	r6, r9
+ 2546 0008 4546     		mov	r5, r8
+ 2547 000a E0B5     		push	{r5, r6, r7, lr}
+ 2548              	.LCFI25:
+ 2549              		.cfi_def_cfa_offset 36
+ 2550              		.cfi_offset 8, -36
+ 2551              		.cfi_offset 9, -32
+ 2552              		.cfi_offset 10, -28
+ 2553              		.cfi_offset 11, -24
+ 2554 000c 9BB0     		sub	sp, sp, #108
+ 2555              	.LCFI26:
+ 2556              		.cfi_def_cfa_offset 144
  229:Src/PID.c     ****     int64_t prevErr = State.PID_704_P_error;
- 2563              		.loc 1 229 5 view .LVU447
- 2564              		.loc 1 229 13 is_stmt 0 view .LVU448
- 2565 000e 964E     		ldr	r6, .L110
- 2566 0010 AB23     		movs	r3, #171
- 2567 0012 DB00     		lsls	r3, r3, #3
- 2568 0014 F718     		adds	r7, r6, r3
- 2569 0016 3B68     		ldr	r3, [r7]
- 2570 0018 9946     		mov	r9, r3
- 2571 001a 7B68     		ldr	r3, [r7, #4]
- 2572 001c 9846     		mov	r8, r3
- 2573              	.LVL207:
+ 2557              		.loc 1 229 5 view .LVU445
+ 2558              		.loc 1 229 13 is_stmt 0 view .LVU446
+ 2559 000e 964E     		ldr	r6, .L110
+ 2560 0010 AB23     		movs	r3, #171
+ 2561 0012 DB00     		lsls	r3, r3, #3
+ 2562 0014 F718     		adds	r7, r6, r3
+ 2563 0016 3B68     		ldr	r3, [r7]
+ 2564 0018 9946     		mov	r9, r3
+ 2565 001a 7B68     		ldr	r3, [r7, #4]
+ 2566 001c 9846     		mov	r8, r3
+ 2567              	.LVL205:
  230:Src/PID.c     **** 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 53
-
-
  231:Src/PID.c     ****     State.PID_704_P_error = (State.PD1_Slope * Phase_u(ADC_PD1_Phase_CH)) + (State.PD2_Slope * Phas
- 2574              		.loc 1 231 5 is_stmt 1 view .LVU449
- 2575              		.loc 1 231 35 is_stmt 0 view .LVU450
- 2576 001e 934B     		ldr	r3, .L110+4
- 2577              	.LVL208:
- 2578              		.loc 1 231 35 view .LVU451
- 2579 0020 F456     		ldrsb	r4, [r6, r3]
- 2580 0022 E517     		asrs	r5, r4, #31
- 2581              		.loc 1 231 48 view .LVU452
- 2582 0024 0620     		movs	r0, #6
- 2583 0026 FFF7FEFF 		bl	Phase_u
- 2584              	.LVL209:
- 2585 002a 0200     		movs	r2, r0
- 2586 002c 0B00     		movs	r3, r1
- 2587              		.loc 1 231 46 view .LVU453
- 2588 002e 2000     		movs	r0, r4
- 2589 0030 2900     		movs	r1, r5
- 2590 0032 FFF7FEFF 		bl	__aeabi_lmul
- 2591              	.LVL210:
- 2592 0036 0400     		movs	r4, r0
- 2593 0038 0D00     		movs	r5, r1
- 2594              		.loc 1 231 83 view .LVU454
- 2595 003a 8D4B     		ldr	r3, .L110+8
- 2596 003c F356     		ldrsb	r3, [r6, r3]
- 2597 003e 9A46     		mov	r10, r3
- 2598 0040 DB17     		asrs	r3, r3, #31
- 2599 0042 9B46     		mov	fp, r3
- 2600              		.loc 1 231 96 view .LVU455
- 2601 0044 0020     		movs	r0, #0
- 2602 0046 FFF7FEFF 		bl	Phase_u
- 2603              	.LVL211:
- 2604 004a 0200     		movs	r2, r0
- 2605 004c 0B00     		movs	r3, r1
- 2606              		.loc 1 231 94 view .LVU456
- 2607 004e 5046     		mov	r0, r10
- 2608 0050 5946     		mov	r1, fp
- 2609 0052 FFF7FEFF 		bl	__aeabi_lmul
- 2610              	.LVL212:
- 2611              		.loc 1 231 75 view .LVU457
- 2612 0056 2418     		adds	r4, r4, r0
- 2613 0058 4D41     		adcs	r5, r5, r1
- 2614              		.loc 1 231 131 view .LVU458
- 2615 005a 9B23     		movs	r3, #155
- 2616 005c DB00     		lsls	r3, r3, #3
- 2617 005e F318     		adds	r3, r6, r3
- 2618 0060 1868     		ldr	r0, [r3]
- 2619 0062 5968     		ldr	r1, [r3, #4]
- 2620              		.loc 1 231 149 view .LVU459
- 2621 0064 FA22     		movs	r2, #250
- 2622 0066 9200     		lsls	r2, r2, #2
- 2623 0068 0023     		movs	r3, #0
- 2624 006a FFF7FEFF 		bl	__aeabi_lmul
- 2625              	.LVL213:
- 2626              		.loc 1 231 123 view .LVU460
- 2627 006e 241A     		subs	r4, r4, r0
- 2628 0070 8D41     		sbcs	r5, r5, r1
- 2629              		.loc 1 231 27 view .LVU461
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 54
+ 2568              		.loc 1 231 5 is_stmt 1 view .LVU447
+ 2569              		.loc 1 231 35 is_stmt 0 view .LVU448
+ 2570 001e 934B     		ldr	r3, .L110+4
+ 2571              	.LVL206:
+ 2572              		.loc 1 231 35 view .LVU449
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 53
 
 
- 2630 0072 3C60     		str	r4, [r7]
- 2631 0074 7D60     		str	r5, [r7, #4]
+ 2573 0020 F456     		ldrsb	r4, [r6, r3]
+ 2574 0022 E517     		asrs	r5, r4, #31
+ 2575              		.loc 1 231 48 view .LVU450
+ 2576 0024 0620     		movs	r0, #6
+ 2577 0026 FFF7FEFF 		bl	Phase_u
+ 2578              	.LVL207:
+ 2579 002a 0200     		movs	r2, r0
+ 2580 002c 0B00     		movs	r3, r1
+ 2581              		.loc 1 231 46 view .LVU451
+ 2582 002e 2000     		movs	r0, r4
+ 2583 0030 2900     		movs	r1, r5
+ 2584 0032 FFF7FEFF 		bl	__aeabi_lmul
+ 2585              	.LVL208:
+ 2586 0036 0400     		movs	r4, r0
+ 2587 0038 0D00     		movs	r5, r1
+ 2588              		.loc 1 231 83 view .LVU452
+ 2589 003a 8D4B     		ldr	r3, .L110+8
+ 2590 003c F356     		ldrsb	r3, [r6, r3]
+ 2591 003e 9A46     		mov	r10, r3
+ 2592 0040 DB17     		asrs	r3, r3, #31
+ 2593 0042 9B46     		mov	fp, r3
+ 2594              		.loc 1 231 96 view .LVU453
+ 2595 0044 0020     		movs	r0, #0
+ 2596 0046 FFF7FEFF 		bl	Phase_u
+ 2597              	.LVL209:
+ 2598 004a 0200     		movs	r2, r0
+ 2599 004c 0B00     		movs	r3, r1
+ 2600              		.loc 1 231 94 view .LVU454
+ 2601 004e 5046     		mov	r0, r10
+ 2602 0050 5946     		mov	r1, fp
+ 2603 0052 FFF7FEFF 		bl	__aeabi_lmul
+ 2604              	.LVL210:
+ 2605              		.loc 1 231 75 view .LVU455
+ 2606 0056 2418     		adds	r4, r4, r0
+ 2607 0058 4D41     		adcs	r5, r5, r1
+ 2608              		.loc 1 231 131 view .LVU456
+ 2609 005a 9B23     		movs	r3, #155
+ 2610 005c DB00     		lsls	r3, r3, #3
+ 2611 005e F318     		adds	r3, r6, r3
+ 2612 0060 1868     		ldr	r0, [r3]
+ 2613 0062 5968     		ldr	r1, [r3, #4]
+ 2614              		.loc 1 231 149 view .LVU457
+ 2615 0064 FA22     		movs	r2, #250
+ 2616 0066 9200     		lsls	r2, r2, #2
+ 2617 0068 0023     		movs	r3, #0
+ 2618 006a FFF7FEFF 		bl	__aeabi_lmul
+ 2619              	.LVL211:
+ 2620              		.loc 1 231 123 view .LVU458
+ 2621 006e 241A     		subs	r4, r4, r0
+ 2622 0070 8D41     		sbcs	r5, r5, r1
+ 2623              		.loc 1 231 27 view .LVU459
+ 2624 0072 3C60     		str	r4, [r7]
+ 2625 0074 7D60     		str	r5, [r7, #4]
  232:Src/PID.c     ****     State.PID_704_I_error = (State.PID_704_I_error + State.PID_704_P_error) / State.PID_704_T;
- 2632              		.loc 1 232 5 is_stmt 1 view .LVU462
- 2633              		.loc 1 232 35 is_stmt 0 view .LVU463
- 2634 0076 AC23     		movs	r3, #172
- 2635 0078 DB00     		lsls	r3, r3, #3
- 2636 007a F718     		adds	r7, r6, r3
- 2637              		.loc 1 232 52 view .LVU464
- 2638 007c 3868     		ldr	r0, [r7]
- 2639 007e 7968     		ldr	r1, [r7, #4]
- 2640 0080 0019     		adds	r0, r0, r4
- 2641 0082 6941     		adcs	r1, r1, r5
- 2642              		.loc 1 232 84 view .LVU465
- 2643 0084 103B     		subs	r3, r3, #16
- 2644 0086 F318     		adds	r3, r6, r3
- 2645 0088 1A68     		ldr	r2, [r3]
- 2646 008a 5B68     		ldr	r3, [r3, #4]
- 2647              		.loc 1 232 77 view .LVU466
- 2648 008c FFF7FEFF 		bl	__aeabi_ldivmod
- 2649              	.LVL214:
- 2650 0090 8246     		mov	r10, r0
- 2651              		.loc 1 232 27 view .LVU467
- 2652 0092 3860     		str	r0, [r7]
- 2653 0094 7960     		str	r1, [r7, #4]
+ 2626              		.loc 1 232 5 is_stmt 1 view .LVU460
+ 2627              		.loc 1 232 35 is_stmt 0 view .LVU461
+ 2628 0076 AC23     		movs	r3, #172
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 54
+
+
+ 2629 0078 DB00     		lsls	r3, r3, #3
+ 2630 007a F718     		adds	r7, r6, r3
+ 2631              		.loc 1 232 52 view .LVU462
+ 2632 007c 3868     		ldr	r0, [r7]
+ 2633 007e 7968     		ldr	r1, [r7, #4]
+ 2634 0080 0019     		adds	r0, r0, r4
+ 2635 0082 6941     		adcs	r1, r1, r5
+ 2636              		.loc 1 232 84 view .LVU463
+ 2637 0084 103B     		subs	r3, r3, #16
+ 2638 0086 F318     		adds	r3, r6, r3
+ 2639 0088 1A68     		ldr	r2, [r3]
+ 2640 008a 5B68     		ldr	r3, [r3, #4]
+ 2641              		.loc 1 232 77 view .LVU464
+ 2642 008c FFF7FEFF 		bl	__aeabi_ldivmod
+ 2643              	.LVL212:
+ 2644 0090 8246     		mov	r10, r0
+ 2645              		.loc 1 232 27 view .LVU465
+ 2646 0092 3860     		str	r0, [r7]
+ 2647 0094 7960     		str	r1, [r7, #4]
  233:Src/PID.c     ****     State.PID_704_Output = State.PID_704_Output + (State.PID_704_P * State.PID_704_P_error) / 1000 
- 2654              		.loc 1 233 5 is_stmt 1 view .LVU468
- 2655              		.loc 1 233 33 is_stmt 0 view .LVU469
- 2656 0096 774F     		ldr	r7, .L110+12
- 2657 0098 F359     		ldr	r3, [r6, r7]
- 2658 009a 9B46     		mov	fp, r3
- 2659              		.loc 1 233 57 view .LVU470
- 2660 009c A823     		movs	r3, #168
- 2661 009e DB00     		lsls	r3, r3, #3
- 2662 00a0 F318     		adds	r3, r6, r3
- 2663 00a2 1A68     		ldr	r2, [r3]
- 2664 00a4 5B68     		ldr	r3, [r3, #4]
- 2665              		.loc 1 233 68 view .LVU471
- 2666 00a6 2000     		movs	r0, r4
- 2667 00a8 2900     		movs	r1, r5
- 2668 00aa FFF7FEFF 		bl	__aeabi_lmul
- 2669              	.LVL215:
- 2670              		.loc 1 233 93 view .LVU472
- 2671 00ae FA22     		movs	r2, #250
- 2672 00b0 9200     		lsls	r2, r2, #2
- 2673 00b2 0023     		movs	r3, #0
- 2674 00b4 FFF7FEFF 		bl	__aeabi_ldivmod
- 2675              	.LVL216:
- 2676              		.loc 1 233 49 view .LVU473
- 2677 00b8 0300     		movs	r3, r0
- 2678 00ba 5B44     		add	r3, r3, fp
- 2679              		.loc 1 233 108 view .LVU474
- 2680 00bc A922     		movs	r2, #169
- 2681 00be D200     		lsls	r2, r2, #3
- 2682 00c0 B218     		adds	r2, r6, r2
- 2683 00c2 1068     		ldr	r0, [r2]
- 2684              		.loc 1 233 100 view .LVU475
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 55
-
-
- 2685 00c4 5246     		mov	r2, r10
- 2686 00c6 5043     		muls	r0, r2
- 2687 00c8 C018     		adds	r0, r0, r3
- 2688              		.loc 1 233 26 view .LVU476
- 2689 00ca F051     		str	r0, [r6, r7]
+ 2648              		.loc 1 233 5 is_stmt 1 view .LVU466
+ 2649              		.loc 1 233 33 is_stmt 0 view .LVU467
+ 2650 0096 774F     		ldr	r7, .L110+12
+ 2651 0098 F359     		ldr	r3, [r6, r7]
+ 2652 009a 9B46     		mov	fp, r3
+ 2653              		.loc 1 233 57 view .LVU468
+ 2654 009c A823     		movs	r3, #168
+ 2655 009e DB00     		lsls	r3, r3, #3
+ 2656 00a0 F318     		adds	r3, r6, r3
+ 2657 00a2 1A68     		ldr	r2, [r3]
+ 2658 00a4 5B68     		ldr	r3, [r3, #4]
+ 2659              		.loc 1 233 68 view .LVU469
+ 2660 00a6 2000     		movs	r0, r4
+ 2661 00a8 2900     		movs	r1, r5
+ 2662 00aa FFF7FEFF 		bl	__aeabi_lmul
+ 2663              	.LVL213:
+ 2664              		.loc 1 233 93 view .LVU470
+ 2665 00ae FA22     		movs	r2, #250
+ 2666 00b0 9200     		lsls	r2, r2, #2
+ 2667 00b2 0023     		movs	r3, #0
+ 2668 00b4 FFF7FEFF 		bl	__aeabi_ldivmod
+ 2669              	.LVL214:
+ 2670              		.loc 1 233 49 view .LVU471
+ 2671 00b8 0300     		movs	r3, r0
+ 2672 00ba 5B44     		add	r3, r3, fp
+ 2673              		.loc 1 233 108 view .LVU472
+ 2674 00bc A922     		movs	r2, #169
+ 2675 00be D200     		lsls	r2, r2, #3
+ 2676 00c0 B218     		adds	r2, r6, r2
+ 2677 00c2 1068     		ldr	r0, [r2]
+ 2678              		.loc 1 233 100 view .LVU473
+ 2679 00c4 5246     		mov	r2, r10
+ 2680 00c6 5043     		muls	r0, r2
+ 2681 00c8 C018     		adds	r0, r0, r3
+ 2682              		.loc 1 233 26 view .LVU474
+ 2683 00ca F051     		str	r0, [r6, r7]
  234:Src/PID.c     **** 
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 55
+
+
  235:Src/PID.c     ****     if (State.PID_704_Output >= 0xffff)
- 2690              		.loc 1 235 5 is_stmt 1 view .LVU477
- 2691              		.loc 1 235 8 is_stmt 0 view .LVU478
- 2692 00cc 6A4B     		ldr	r3, .L110+16
- 2693 00ce 9842     		cmp	r0, r3
- 2694 00d0 01D9     		bls	.L91
+ 2684              		.loc 1 235 5 is_stmt 1 view .LVU475
+ 2685              		.loc 1 235 8 is_stmt 0 view .LVU476
+ 2686 00cc 6A4B     		ldr	r3, .L110+16
+ 2687 00ce 9842     		cmp	r0, r3
+ 2688 00d0 01D9     		bls	.L91
  236:Src/PID.c     ****     {
  237:Src/PID.c     ****         State.PID_704_Output = 0xffff;
- 2695              		.loc 1 237 9 is_stmt 1 view .LVU479
- 2696              		.loc 1 237 30 is_stmt 0 view .LVU480
- 2697 00d2 6A49     		ldr	r1, .L110+20
- 2698 00d4 F151     		str	r1, [r6, r7]
- 2699              	.L91:
+ 2689              		.loc 1 237 9 is_stmt 1 view .LVU477
+ 2690              		.loc 1 237 30 is_stmt 0 view .LVU478
+ 2691 00d2 6A49     		ldr	r1, .L110+20
+ 2692 00d4 F151     		str	r1, [r6, r7]
+ 2693              	.L91:
  238:Src/PID.c     ****     }
  239:Src/PID.c     ****     DAC_cmd(RF_PS_704_FINE + DAC_WRITE + State.PID_704_Output);
- 2700              		.loc 1 239 5 is_stmt 1 view .LVU481
- 2701              		.loc 1 239 47 is_stmt 0 view .LVU482
- 2702 00d6 644C     		ldr	r4, .L110
- 2703 00d8 664B     		ldr	r3, .L110+12
- 2704 00da E058     		ldr	r0, [r4, r3]
- 2705              		.loc 1 239 5 view .LVU483
- 2706 00dc B823     		movs	r3, #184
- 2707 00de 5B03     		lsls	r3, r3, #13
- 2708 00e0 9C46     		mov	ip, r3
- 2709 00e2 6044     		add	r0, r0, ip
- 2710 00e4 FFF7FEFF 		bl	DAC_cmd
- 2711              	.LVL217:
+ 2694              		.loc 1 239 5 is_stmt 1 view .LVU479
+ 2695              		.loc 1 239 47 is_stmt 0 view .LVU480
+ 2696 00d6 644C     		ldr	r4, .L110
+ 2697 00d8 664B     		ldr	r3, .L110+12
+ 2698 00da E058     		ldr	r0, [r4, r3]
+ 2699              		.loc 1 239 5 view .LVU481
+ 2700 00dc B823     		movs	r3, #184
+ 2701 00de 5B03     		lsls	r3, r3, #13
+ 2702 00e0 9C46     		mov	ip, r3
+ 2703 00e2 6044     		add	r0, r0, ip
+ 2704 00e4 FFF7FEFF 		bl	DAC_cmd
+ 2705              	.LVL215:
  240:Src/PID.c     **** 
  241:Src/PID.c     ****     if (State.PID_704_P_error < 50000 && prevErr < 50000 && State.PID_704_LOCK == 1)
- 2712              		.loc 1 241 5 is_stmt 1 view .LVU484
- 2713              		.loc 1 241 14 is_stmt 0 view .LVU485
- 2714 00e8 AB23     		movs	r3, #171
- 2715 00ea DB00     		lsls	r3, r3, #3
- 2716 00ec 9C46     		mov	ip, r3
- 2717 00ee 6444     		add	r4, r4, ip
- 2718 00f0 2268     		ldr	r2, [r4]
- 2719 00f2 6368     		ldr	r3, [r4, #4]
- 2720              		.loc 1 241 8 view .LVU486
- 2721 00f4 002B     		cmp	r3, #0
- 2722 00f6 10DC     		bgt	.L92
- 2723 00f8 02D1     		bne	.L103
- 2724 00fa 6149     		ldr	r1, .L110+24
- 2725 00fc 8A42     		cmp	r2, r1
- 2726 00fe 0CD8     		bhi	.L92
- 2727              	.L103:
- 2728              		.loc 1 241 39 discriminator 1 view .LVU487
- 2729 0100 4146     		mov	r1, r8
- 2730 0102 0029     		cmp	r1, #0
- 2731 0104 09DC     		bgt	.L92
- 2732              	.LVL218:
- 2733              		.loc 1 241 39 discriminator 1 view .LVU488
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 56
+ 2706              		.loc 1 241 5 is_stmt 1 view .LVU482
+ 2707              		.loc 1 241 14 is_stmt 0 view .LVU483
+ 2708 00e8 AB23     		movs	r3, #171
+ 2709 00ea DB00     		lsls	r3, r3, #3
+ 2710 00ec 9C46     		mov	ip, r3
+ 2711 00ee 6444     		add	r4, r4, ip
+ 2712 00f0 2268     		ldr	r2, [r4]
+ 2713 00f2 6368     		ldr	r3, [r4, #4]
+ 2714              		.loc 1 241 8 view .LVU484
+ 2715 00f4 002B     		cmp	r3, #0
+ 2716 00f6 10DC     		bgt	.L92
+ 2717 00f8 02D1     		bne	.L103
+ 2718 00fa 6149     		ldr	r1, .L110+24
+ 2719 00fc 8A42     		cmp	r2, r1
+ 2720 00fe 0CD8     		bhi	.L92
+ 2721              	.L103:
+ 2722              		.loc 1 241 39 discriminator 1 view .LVU485
+ 2723 0100 4146     		mov	r1, r8
+ 2724 0102 0029     		cmp	r1, #0
+ 2725 0104 09DC     		bgt	.L92
+ 2726              	.LVL216:
+ 2727              		.loc 1 241 39 discriminator 1 view .LVU486
+ 2728 0106 02D1     		bne	.L104
+ 2729 0108 5D49     		ldr	r1, .L110+24
+ 2730              	.LVL217:
+ 2731              		.loc 1 241 39 discriminator 1 view .LVU487
+ 2732 010a 8945     		cmp	r9, r1
+ 2733 010c 05D8     		bhi	.L92
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 56
 
 
- 2734 0106 02D1     		bne	.L104
- 2735 0108 5D49     		ldr	r1, .L110+24
- 2736              	.LVL219:
- 2737              		.loc 1 241 39 discriminator 1 view .LVU489
- 2738 010a 8945     		cmp	r9, r1
- 2739 010c 05D8     		bhi	.L92
- 2740              	.L104:
- 2741              		.loc 1 241 66 discriminator 2 view .LVU490
- 2742 010e 5648     		ldr	r0, .L110
- 2743 0110 AD21     		movs	r1, #173
- 2744 0112 C900     		lsls	r1, r1, #3
- 2745 0114 4156     		ldrsb	r1, [r0, r1]
- 2746              		.loc 1 241 58 discriminator 2 view .LVU491
- 2747 0116 0129     		cmp	r1, #1
- 2748 0118 2AD0     		beq	.L90
- 2749              	.L92:
+ 2734              	.L104:
+ 2735              		.loc 1 241 66 discriminator 2 view .LVU488
+ 2736 010e 5648     		ldr	r0, .L110
+ 2737 0110 AD21     		movs	r1, #173
+ 2738 0112 C900     		lsls	r1, r1, #3
+ 2739 0114 4156     		ldrsb	r1, [r0, r1]
+ 2740              		.loc 1 241 58 discriminator 2 view .LVU489
+ 2741 0116 0129     		cmp	r1, #1
+ 2742 0118 2AD0     		beq	.L90
+ 2743              	.L92:
  242:Src/PID.c     ****     {
  243:Src/PID.c     ****         return;
  244:Src/PID.c     ****     }
  245:Src/PID.c     ****     else if (State.PID_704_P_error < 50000 && prevErr < 50000 && State.PID_704_LOCK == 0)
- 2750              		.loc 1 245 10 is_stmt 1 view .LVU492
- 2751              		.loc 1 245 13 is_stmt 0 view .LVU493
- 2752 011a 002B     		cmp	r3, #0
- 2753 011c 10DC     		bgt	.L96
- 2754 011e 02D1     		bne	.L105
- 2755 0120 5749     		ldr	r1, .L110+24
- 2756 0122 8A42     		cmp	r2, r1
- 2757 0124 0CD8     		bhi	.L96
- 2758              	.L105:
- 2759              		.loc 1 245 44 discriminator 1 view .LVU494
- 2760 0126 4146     		mov	r1, r8
- 2761 0128 0029     		cmp	r1, #0
- 2762 012a 09DC     		bgt	.L96
- 2763              	.LVL220:
- 2764              		.loc 1 245 44 discriminator 1 view .LVU495
- 2765 012c 02D1     		bne	.L106
- 2766 012e 5449     		ldr	r1, .L110+24
- 2767              	.LVL221:
- 2768              		.loc 1 245 44 discriminator 1 view .LVU496
- 2769 0130 8945     		cmp	r9, r1
- 2770 0132 05D8     		bhi	.L96
- 2771              	.L106:
- 2772              		.loc 1 245 71 discriminator 2 view .LVU497
- 2773 0134 4C48     		ldr	r0, .L110
- 2774 0136 AD21     		movs	r1, #173
- 2775 0138 C900     		lsls	r1, r1, #3
- 2776 013a 4156     		ldrsb	r1, [r0, r1]
- 2777              		.loc 1 245 63 discriminator 2 view .LVU498
- 2778 013c 0029     		cmp	r1, #0
- 2779 013e 1ED0     		beq	.L108
- 2780              	.L96:
+ 2744              		.loc 1 245 10 is_stmt 1 view .LVU490
+ 2745              		.loc 1 245 13 is_stmt 0 view .LVU491
+ 2746 011a 002B     		cmp	r3, #0
+ 2747 011c 10DC     		bgt	.L96
+ 2748 011e 02D1     		bne	.L105
+ 2749 0120 5749     		ldr	r1, .L110+24
+ 2750 0122 8A42     		cmp	r2, r1
+ 2751 0124 0CD8     		bhi	.L96
+ 2752              	.L105:
+ 2753              		.loc 1 245 44 discriminator 1 view .LVU492
+ 2754 0126 4146     		mov	r1, r8
+ 2755 0128 0029     		cmp	r1, #0
+ 2756 012a 09DC     		bgt	.L96
+ 2757              	.LVL218:
+ 2758              		.loc 1 245 44 discriminator 1 view .LVU493
+ 2759 012c 02D1     		bne	.L106
+ 2760 012e 5449     		ldr	r1, .L110+24
+ 2761              	.LVL219:
+ 2762              		.loc 1 245 44 discriminator 1 view .LVU494
+ 2763 0130 8945     		cmp	r9, r1
+ 2764 0132 05D8     		bhi	.L96
+ 2765              	.L106:
+ 2766              		.loc 1 245 71 discriminator 2 view .LVU495
+ 2767 0134 4C48     		ldr	r0, .L110
+ 2768 0136 AD21     		movs	r1, #173
+ 2769 0138 C900     		lsls	r1, r1, #3
+ 2770 013a 4156     		ldrsb	r1, [r0, r1]
+ 2771              		.loc 1 245 63 discriminator 2 view .LVU496
+ 2772 013c 0029     		cmp	r1, #0
+ 2773 013e 1ED0     		beq	.L108
+ 2774              	.L96:
  246:Src/PID.c     ****     {
  247:Src/PID.c     ****         State.PID_704_LOCK = 1;
  248:Src/PID.c     ****         SERIAL_WRITE_GREEN("[PID_PHASE_704] LOCKED\n");
  249:Src/PID.c     ****     }
  250:Src/PID.c     ****     else if ((State.PID_704_P_error >= 50000 || prevErr >= 50000) && State.PID_704_LOCK == 1)
- 2781              		.loc 1 250 10 is_stmt 1 view .LVU499
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 57
+ 2775              		.loc 1 250 10 is_stmt 1 view .LVU497
+ 2776              		.loc 1 250 13 is_stmt 0 view .LVU498
+ 2777 0140 002B     		cmp	r3, #0
+ 2778 0142 0ADC     		bgt	.L99
+ 2779 0144 02D1     		bne	.L107
+ 2780 0146 4E4B     		ldr	r3, .L110+24
+ 2781 0148 9A42     		cmp	r2, r3
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 57
 
 
- 2782              		.loc 1 250 13 is_stmt 0 view .LVU500
- 2783 0140 002B     		cmp	r3, #0
- 2784 0142 0ADC     		bgt	.L99
- 2785 0144 02D1     		bne	.L107
- 2786 0146 4E4B     		ldr	r3, .L110+24
- 2787 0148 9A42     		cmp	r2, r3
- 2788 014a 06D8     		bhi	.L99
- 2789              	.L107:
- 2790              		.loc 1 250 46 discriminator 2 view .LVU501
- 2791 014c 4346     		mov	r3, r8
- 2792 014e 002B     		cmp	r3, #0
- 2793 0150 03DC     		bgt	.L99
- 2794              	.LVL222:
- 2795              		.loc 1 250 46 discriminator 2 view .LVU502
- 2796 0152 08D1     		bne	.L101
- 2797 0154 4A4B     		ldr	r3, .L110+24
- 2798              	.LVL223:
- 2799              		.loc 1 250 46 discriminator 2 view .LVU503
- 2800 0156 9945     		cmp	r9, r3
- 2801 0158 05D9     		bls	.L101
- 2802              	.L99:
- 2803              		.loc 1 250 75 discriminator 3 view .LVU504
- 2804 015a 434A     		ldr	r2, .L110
- 2805 015c AD23     		movs	r3, #173
- 2806 015e DB00     		lsls	r3, r3, #3
- 2807 0160 D356     		ldrsb	r3, [r2, r3]
- 2808              		.loc 1 250 67 discriminator 3 view .LVU505
- 2809 0162 012B     		cmp	r3, #1
- 2810 0164 44D0     		beq	.L109
- 2811              	.L101:
+ 2782 014a 06D8     		bhi	.L99
+ 2783              	.L107:
+ 2784              		.loc 1 250 46 discriminator 2 view .LVU499
+ 2785 014c 4346     		mov	r3, r8
+ 2786 014e 002B     		cmp	r3, #0
+ 2787 0150 03DC     		bgt	.L99
+ 2788              	.LVL220:
+ 2789              		.loc 1 250 46 discriminator 2 view .LVU500
+ 2790 0152 08D1     		bne	.L101
+ 2791 0154 4A4B     		ldr	r3, .L110+24
+ 2792              	.LVL221:
+ 2793              		.loc 1 250 46 discriminator 2 view .LVU501
+ 2794 0156 9945     		cmp	r9, r3
+ 2795 0158 05D9     		bls	.L101
+ 2796              	.L99:
+ 2797              		.loc 1 250 75 discriminator 3 view .LVU502
+ 2798 015a 434A     		ldr	r2, .L110
+ 2799 015c AD23     		movs	r3, #173
+ 2800 015e DB00     		lsls	r3, r3, #3
+ 2801 0160 D356     		ldrsb	r3, [r2, r3]
+ 2802              		.loc 1 250 67 discriminator 3 view .LVU503
+ 2803 0162 012B     		cmp	r3, #1
+ 2804 0164 44D0     		beq	.L109
+ 2805              	.L101:
  251:Src/PID.c     ****     {
  252:Src/PID.c     ****         State.PID_704_LOCK = 0;
  253:Src/PID.c     ****         SERIAL_WRITE_RED("[PID_PHASE_704] UNLOCKED!!!\n");
@@ -3398,710 +3392,757 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 1
  255:Src/PID.c     ****     else
  256:Src/PID.c     ****     {
  257:Src/PID.c     ****         State.PID_704_LOCK = 0;
- 2812              		.loc 1 257 9 is_stmt 1 view .LVU506
- 2813              		.loc 1 257 28 is_stmt 0 view .LVU507
- 2814 0166 404A     		ldr	r2, .L110
- 2815 0168 AD23     		movs	r3, #173
- 2816 016a DB00     		lsls	r3, r3, #3
- 2817 016c 0021     		movs	r1, #0
- 2818 016e D154     		strb	r1, [r2, r3]
- 2819              	.L90:
+ 2806              		.loc 1 257 9 is_stmt 1 view .LVU504
+ 2807              		.loc 1 257 28 is_stmt 0 view .LVU505
+ 2808 0166 404A     		ldr	r2, .L110
+ 2809 0168 AD23     		movs	r3, #173
+ 2810 016a DB00     		lsls	r3, r3, #3
+ 2811 016c 0021     		movs	r1, #0
+ 2812 016e D154     		strb	r1, [r2, r3]
+ 2813              	.L90:
  258:Src/PID.c     ****     }
  259:Src/PID.c     **** }
- 2820              		.loc 1 259 1 view .LVU508
- 2821 0170 1BB0     		add	sp, sp, #108
- 2822              		@ sp needed
- 2823              	.LVL224:
- 2824              		.loc 1 259 1 view .LVU509
- 2825 0172 3CBC     		pop	{r2, r3, r4, r5}
- 2826 0174 9046     		mov	r8, r2
- 2827 0176 9946     		mov	r9, r3
- 2828 0178 A246     		mov	r10, r4
- 2829 017a AB46     		mov	fp, r5
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 58
-
-
- 2830 017c F0BD     		pop	{r4, r5, r6, r7, pc}
- 2831              	.LVL225:
- 2832              	.L108:
+ 2814              		.loc 1 259 1 view .LVU506
+ 2815 0170 1BB0     		add	sp, sp, #108
+ 2816              		@ sp needed
+ 2817              	.LVL222:
+ 2818              		.loc 1 259 1 view .LVU507
+ 2819 0172 3CBC     		pop	{r2, r3, r4, r5}
+ 2820 0174 9046     		mov	r8, r2
+ 2821 0176 9946     		mov	r9, r3
+ 2822 0178 A246     		mov	r10, r4
+ 2823 017a AB46     		mov	fp, r5
+ 2824 017c F0BD     		pop	{r4, r5, r6, r7, pc}
+ 2825              	.LVL223:
+ 2826              	.L108:
  247:Src/PID.c     ****         SERIAL_WRITE_GREEN("[PID_PHASE_704] LOCKED\n");
- 2833              		.loc 1 247 9 is_stmt 1 view .LVU510
+ 2827              		.loc 1 247 9 is_stmt 1 view .LVU508
  247:Src/PID.c     ****         SERIAL_WRITE_GREEN("[PID_PHASE_704] LOCKED\n");
- 2834              		.loc 1 247 28 is_stmt 0 view .LVU511
- 2835 017e AD23     		movs	r3, #173
- 2836 0180 DB00     		lsls	r3, r3, #3
- 2837 0182 0131     		adds	r1, r1, #1
- 2838 0184 C154     		strb	r1, [r0, r3]
- 2839              	.LBB34:
- 248:Src/PID.c     ****     }
- 2840              		.loc 1 248 9 is_stmt 1 view .LVU512
- 2841 0186 01AC     		add	r4, sp, #4
- 2842 0188 6022     		movs	r2, #96
- 2843 018a 0021     		movs	r1, #0
- 2844 018c 02A8     		add	r0, sp, #8
- 2845 018e FFF7FEFF 		bl	memset
- 2846              	.LVL226:
- 248:Src/PID.c     ****     }
- 2847              		.loc 1 248 9 view .LVU513
- 2848 0192 3C4B     		ldr	r3, .L110+28
- 2849 0194 2200     		movs	r2, r4
- 2850 0196 03CB     		ldmia	r3!, {r0, r1}
- 2851 0198 03C2     		stmia	r2!, {r0, r1}
- 2852              	.LVL227:
- 248:Src/PID.c     ****     }
- 2853              		.loc 1 248 9 view .LVU514
- 2854 019a FA26     		movs	r6, #250
- 2855 019c B600     		lsls	r6, r6, #2
- 2856 019e 3A4D     		ldr	r5, .L110+32
- 2857 01a0 3300     		movs	r3, r6
- 2858 01a2 0722     		movs	r2, #7
- 2859 01a4 2100     		movs	r1, r4
- 2860 01a6 2800     		movs	r0, r5
- 2861 01a8 FFF7FEFF 		bl	HAL_UART_Transmit
- 2862              	.LVL228:
- 2863              	.LBE34:
- 248:Src/PID.c     ****     }
- 2864              		.loc 1 248 9 view .LVU515
- 2865              	.LBB35:
- 248:Src/PID.c     ****     }
- 2866              		.loc 1 248 9 view .LVU516
- 2867 01ac 6022     		movs	r2, #96
- 2868 01ae 0021     		movs	r1, #0
- 2869 01b0 02A8     		add	r0, sp, #8
- 2870 01b2 FFF7FEFF 		bl	memset
- 2871              	.LVL229:
- 248:Src/PID.c     ****     }
- 2872              		.loc 1 248 9 view .LVU517
- 2873 01b6 354B     		ldr	r3, .L110+36
- 2874 01b8 2200     		movs	r2, r4
- 2875 01ba 83CB     		ldmia	r3!, {r0, r1, r7}
- 2876 01bc 83C2     		stmia	r2!, {r0, r1, r7}
- 2877 01be 83CB     		ldmia	r3!, {r0, r1, r7}
- 2878 01c0 83C2     		stmia	r2!, {r0, r1, r7}
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 59
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 58
 
 
- 2879              	.LVL230:
+ 2828              		.loc 1 247 28 is_stmt 0 view .LVU509
+ 2829 017e AD23     		movs	r3, #173
+ 2830 0180 DB00     		lsls	r3, r3, #3
+ 2831 0182 0131     		adds	r1, r1, #1
+ 2832 0184 C154     		strb	r1, [r0, r3]
+ 2833              	.LBB34:
  248:Src/PID.c     ****     }
- 2880              		.loc 1 248 9 view .LVU518
- 2881 01c2 3300     		movs	r3, r6
- 2882 01c4 1722     		movs	r2, #23
- 2883 01c6 2100     		movs	r1, r4
- 2884 01c8 2800     		movs	r0, r5
- 2885 01ca FFF7FEFF 		bl	HAL_UART_Transmit
- 2886              	.LVL231:
- 2887              	.LBE35:
+ 2834              		.loc 1 248 9 is_stmt 1 view .LVU510
+ 2835 0186 01AC     		add	r4, sp, #4
+ 2836 0188 6022     		movs	r2, #96
+ 2837 018a 0021     		movs	r1, #0
+ 2838 018c 02A8     		add	r0, sp, #8
+ 2839 018e FFF7FEFF 		bl	memset
+ 2840              	.LVL224:
  248:Src/PID.c     ****     }
- 2888              		.loc 1 248 9 view .LVU519
- 2889              	.LBB36:
+ 2841              		.loc 1 248 9 view .LVU511
+ 2842 0192 3C4B     		ldr	r3, .L110+28
+ 2843 0194 2200     		movs	r2, r4
+ 2844 0196 03CB     		ldmia	r3!, {r0, r1}
+ 2845 0198 03C2     		stmia	r2!, {r0, r1}
+ 2846              	.LVL225:
  248:Src/PID.c     ****     }
- 2890              		.loc 1 248 9 view .LVU520
- 2891 01ce 6022     		movs	r2, #96
- 2892 01d0 0021     		movs	r1, #0
- 2893 01d2 02A8     		add	r0, sp, #8
- 2894 01d4 FFF7FEFF 		bl	memset
- 2895              	.LVL232:
+ 2847              		.loc 1 248 9 view .LVU512
+ 2848 019a FA26     		movs	r6, #250
+ 2849 019c B600     		lsls	r6, r6, #2
+ 2850 019e 3A4D     		ldr	r5, .L110+32
+ 2851 01a0 3300     		movs	r3, r6
+ 2852 01a2 0722     		movs	r2, #7
+ 2853 01a4 2100     		movs	r1, r4
+ 2854 01a6 2800     		movs	r0, r5
+ 2855 01a8 FFF7FEFF 		bl	HAL_UART_Transmit
+ 2856              	.LVL226:
+ 2857              	.LBE34:
  248:Src/PID.c     ****     }
- 2896              		.loc 1 248 9 view .LVU521
- 2897 01d8 2D4B     		ldr	r3, .L110+40
- 2898 01da 1A68     		ldr	r2, [r3]
- 2899 01dc 0192     		str	r2, [sp, #4]
- 2900 01de 1B79     		ldrb	r3, [r3, #4]
- 2901 01e0 2371     		strb	r3, [r4, #4]
- 2902              	.LVL233:
+ 2858              		.loc 1 248 9 view .LVU513
+ 2859              	.LBB35:
  248:Src/PID.c     ****     }
- 2903              		.loc 1 248 9 view .LVU522
- 2904 01e2 3300     		movs	r3, r6
- 2905 01e4 0422     		movs	r2, #4
- 2906 01e6 2100     		movs	r1, r4
- 2907 01e8 2800     		movs	r0, r5
- 2908 01ea FFF7FEFF 		bl	HAL_UART_Transmit
- 2909              	.LVL234:
- 2910              	.LBE36:
+ 2860              		.loc 1 248 9 view .LVU514
+ 2861 01ac 6022     		movs	r2, #96
+ 2862 01ae 0021     		movs	r1, #0
+ 2863 01b0 02A8     		add	r0, sp, #8
+ 2864 01b2 FFF7FEFF 		bl	memset
+ 2865              	.LVL227:
  248:Src/PID.c     ****     }
- 2911              		.loc 1 248 9 view .LVU523
+ 2866              		.loc 1 248 9 view .LVU515
+ 2867 01b6 354B     		ldr	r3, .L110+36
+ 2868 01b8 2200     		movs	r2, r4
+ 2869 01ba 83CB     		ldmia	r3!, {r0, r1, r7}
+ 2870 01bc 83C2     		stmia	r2!, {r0, r1, r7}
+ 2871 01be 83CB     		ldmia	r3!, {r0, r1, r7}
+ 2872 01c0 83C2     		stmia	r2!, {r0, r1, r7}
+ 2873              	.LVL228:
  248:Src/PID.c     ****     }
- 2912              		.loc 1 248 55 view .LVU524
+ 2874              		.loc 1 248 9 view .LVU516
+ 2875 01c2 3300     		movs	r3, r6
+ 2876 01c4 1722     		movs	r2, #23
+ 2877 01c6 2100     		movs	r1, r4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 59
+
+
+ 2878 01c8 2800     		movs	r0, r5
+ 2879 01ca FFF7FEFF 		bl	HAL_UART_Transmit
+ 2880              	.LVL229:
+ 2881              	.LBE35:
  248:Src/PID.c     ****     }
- 2913              		.loc 1 248 9 is_stmt 0 view .LVU525
- 2914 01ee BFE7     		b	.L90
- 2915              	.LVL235:
- 2916              	.L109:
+ 2882              		.loc 1 248 9 view .LVU517
+ 2883              	.LBB36:
+ 248:Src/PID.c     ****     }
+ 2884              		.loc 1 248 9 view .LVU518
+ 2885 01ce 6022     		movs	r2, #96
+ 2886 01d0 0021     		movs	r1, #0
+ 2887 01d2 02A8     		add	r0, sp, #8
+ 2888 01d4 FFF7FEFF 		bl	memset
+ 2889              	.LVL230:
+ 248:Src/PID.c     ****     }
+ 2890              		.loc 1 248 9 view .LVU519
+ 2891 01d8 2D4B     		ldr	r3, .L110+40
+ 2892 01da 1A68     		ldr	r2, [r3]
+ 2893 01dc 0192     		str	r2, [sp, #4]
+ 2894 01de 1B79     		ldrb	r3, [r3, #4]
+ 2895 01e0 2371     		strb	r3, [r4, #4]
+ 2896              	.LVL231:
+ 248:Src/PID.c     ****     }
+ 2897              		.loc 1 248 9 view .LVU520
+ 2898 01e2 3300     		movs	r3, r6
+ 2899 01e4 0422     		movs	r2, #4
+ 2900 01e6 2100     		movs	r1, r4
+ 2901 01e8 2800     		movs	r0, r5
+ 2902 01ea FFF7FEFF 		bl	HAL_UART_Transmit
+ 2903              	.LVL232:
+ 2904              	.LBE36:
+ 248:Src/PID.c     ****     }
+ 2905              		.loc 1 248 9 view .LVU521
+ 248:Src/PID.c     ****     }
+ 2906              		.loc 1 248 55 view .LVU522
+ 248:Src/PID.c     ****     }
+ 2907              		.loc 1 248 9 is_stmt 0 view .LVU523
+ 2908 01ee BFE7     		b	.L90
+ 2909              	.LVL233:
+ 2910              	.L109:
  252:Src/PID.c     ****         SERIAL_WRITE_RED("[PID_PHASE_704] UNLOCKED!!!\n");
- 2917              		.loc 1 252 9 is_stmt 1 discriminator 2 view .LVU526
+ 2911              		.loc 1 252 9 is_stmt 1 discriminator 2 view .LVU524
  252:Src/PID.c     ****         SERIAL_WRITE_RED("[PID_PHASE_704] UNLOCKED!!!\n");
- 2918              		.loc 1 252 28 is_stmt 0 discriminator 2 view .LVU527
- 2919 01f0 AD23     		movs	r3, #173
- 2920 01f2 DB00     		lsls	r3, r3, #3
- 2921 01f4 0021     		movs	r1, #0
- 2922 01f6 D154     		strb	r1, [r2, r3]
- 2923              	.LBB37:
+ 2912              		.loc 1 252 28 is_stmt 0 discriminator 2 view .LVU525
+ 2913 01f0 AD23     		movs	r3, #173
+ 2914 01f2 DB00     		lsls	r3, r3, #3
+ 2915 01f4 0021     		movs	r1, #0
+ 2916 01f6 D154     		strb	r1, [r2, r3]
+ 2917              	.LBB37:
  253:Src/PID.c     ****     }
- 2924              		.loc 1 253 9 is_stmt 1 discriminator 2 view .LVU528
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 60
+ 2918              		.loc 1 253 9 is_stmt 1 discriminator 2 view .LVU526
+ 2919 01f8 01AC     		add	r4, sp, #4
+ 2920 01fa 6022     		movs	r2, #96
+ 2921 01fc 02A8     		add	r0, sp, #8
+ 2922 01fe FFF7FEFF 		bl	memset
+ 2923              	.LVL234:
+ 253:Src/PID.c     ****     }
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 60
 
 
- 2925 01f8 01AC     		add	r4, sp, #4
- 2926 01fa 6022     		movs	r2, #96
- 2927 01fc 02A8     		add	r0, sp, #8
- 2928 01fe FFF7FEFF 		bl	memset
- 2929              	.LVL236:
+ 2924              		.loc 1 253 9 discriminator 2 view .LVU527
+ 2925 0202 244B     		ldr	r3, .L110+44
+ 2926 0204 2200     		movs	r2, r4
+ 2927 0206 03CB     		ldmia	r3!, {r0, r1}
+ 2928 0208 03C2     		stmia	r2!, {r0, r1}
+ 2929              	.LVL235:
  253:Src/PID.c     ****     }
- 2930              		.loc 1 253 9 discriminator 2 view .LVU529
- 2931 0202 244B     		ldr	r3, .L110+44
- 2932 0204 2200     		movs	r2, r4
- 2933 0206 03CB     		ldmia	r3!, {r0, r1}
- 2934 0208 03C2     		stmia	r2!, {r0, r1}
- 2935              	.LVL237:
+ 2930              		.loc 1 253 9 discriminator 2 view .LVU528
+ 2931 020a FA26     		movs	r6, #250
+ 2932 020c B600     		lsls	r6, r6, #2
+ 2933 020e 1E4D     		ldr	r5, .L110+32
+ 2934 0210 3300     		movs	r3, r6
+ 2935 0212 0722     		movs	r2, #7
+ 2936 0214 2100     		movs	r1, r4
+ 2937 0216 2800     		movs	r0, r5
+ 2938 0218 FFF7FEFF 		bl	HAL_UART_Transmit
+ 2939              	.LVL236:
+ 2940              	.LBE37:
  253:Src/PID.c     ****     }
- 2936              		.loc 1 253 9 discriminator 2 view .LVU530
- 2937 020a FA26     		movs	r6, #250
- 2938 020c B600     		lsls	r6, r6, #2
- 2939 020e 1E4D     		ldr	r5, .L110+32
- 2940 0210 3300     		movs	r3, r6
- 2941 0212 0722     		movs	r2, #7
- 2942 0214 2100     		movs	r1, r4
- 2943 0216 2800     		movs	r0, r5
- 2944 0218 FFF7FEFF 		bl	HAL_UART_Transmit
- 2945              	.LVL238:
- 2946              	.LBE37:
+ 2941              		.loc 1 253 9 discriminator 2 view .LVU529
+ 2942              	.LBB38:
  253:Src/PID.c     ****     }
- 2947              		.loc 1 253 9 discriminator 2 view .LVU531
- 2948              	.LBB38:
+ 2943              		.loc 1 253 9 discriminator 2 view .LVU530
+ 2944 021c 6022     		movs	r2, #96
+ 2945 021e 0021     		movs	r1, #0
+ 2946 0220 02A8     		add	r0, sp, #8
+ 2947 0222 FFF7FEFF 		bl	memset
+ 2948              	.LVL237:
  253:Src/PID.c     ****     }
- 2949              		.loc 1 253 9 discriminator 2 view .LVU532
- 2950 021c 6022     		movs	r2, #96
- 2951 021e 0021     		movs	r1, #0
- 2952 0220 02A8     		add	r0, sp, #8
- 2953 0222 FFF7FEFF 		bl	memset
- 2954              	.LVL239:
+ 2949              		.loc 1 253 9 discriminator 2 view .LVU531
+ 2950 0226 1C4B     		ldr	r3, .L110+48
+ 2951 0228 2200     		movs	r2, r4
+ 2952 022a 83CB     		ldmia	r3!, {r0, r1, r7}
+ 2953 022c 83C2     		stmia	r2!, {r0, r1, r7}
+ 2954 022e 83CB     		ldmia	r3!, {r0, r1, r7}
+ 2955 0230 83C2     		stmia	r2!, {r0, r1, r7}
+ 2956 0232 1968     		ldr	r1, [r3]
+ 2957 0234 1160     		str	r1, [r2]
+ 2958 0236 1B79     		ldrb	r3, [r3, #4]
+ 2959 0238 1371     		strb	r3, [r2, #4]
+ 2960              	.LVL238:
  253:Src/PID.c     ****     }
- 2955              		.loc 1 253 9 discriminator 2 view .LVU533
- 2956 0226 1C4B     		ldr	r3, .L110+48
- 2957 0228 2200     		movs	r2, r4
- 2958 022a 83CB     		ldmia	r3!, {r0, r1, r7}
- 2959 022c 83C2     		stmia	r2!, {r0, r1, r7}
- 2960 022e 83CB     		ldmia	r3!, {r0, r1, r7}
- 2961 0230 83C2     		stmia	r2!, {r0, r1, r7}
- 2962 0232 1968     		ldr	r1, [r3]
- 2963 0234 1160     		str	r1, [r2]
- 2964 0236 1B79     		ldrb	r3, [r3, #4]
- 2965 0238 1371     		strb	r3, [r2, #4]
- 2966              	.LVL240:
+ 2961              		.loc 1 253 9 discriminator 2 view .LVU532
+ 2962 023a 3300     		movs	r3, r6
+ 2963 023c 1C22     		movs	r2, #28
+ 2964 023e 2100     		movs	r1, r4
+ 2965 0240 2800     		movs	r0, r5
+ 2966 0242 FFF7FEFF 		bl	HAL_UART_Transmit
+ 2967              	.LVL239:
+ 2968              	.LBE38:
  253:Src/PID.c     ****     }
- 2967              		.loc 1 253 9 discriminator 2 view .LVU534
- 2968 023a 3300     		movs	r3, r6
- 2969 023c 1C22     		movs	r2, #28
- 2970 023e 2100     		movs	r1, r4
- 2971 0240 2800     		movs	r0, r5
- 2972 0242 FFF7FEFF 		bl	HAL_UART_Transmit
- 2973              	.LVL241:
- 2974              	.LBE38:
+ 2969              		.loc 1 253 9 discriminator 2 view .LVU533
+ 2970              	.LBB39:
  253:Src/PID.c     ****     }
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 61
+ 2971              		.loc 1 253 9 discriminator 2 view .LVU534
+ 2972 0246 6022     		movs	r2, #96
+ 2973 0248 0021     		movs	r1, #0
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 61
 
 
- 2975              		.loc 1 253 9 discriminator 2 view .LVU535
- 2976              	.LBB39:
+ 2974 024a 02A8     		add	r0, sp, #8
+ 2975 024c FFF7FEFF 		bl	memset
+ 2976              	.LVL240:
  253:Src/PID.c     ****     }
- 2977              		.loc 1 253 9 discriminator 2 view .LVU536
- 2978 0246 6022     		movs	r2, #96
- 2979 0248 0021     		movs	r1, #0
- 2980 024a 02A8     		add	r0, sp, #8
- 2981 024c FFF7FEFF 		bl	memset
- 2982              	.LVL242:
+ 2977              		.loc 1 253 9 discriminator 2 view .LVU535
+ 2978 0250 0F4B     		ldr	r3, .L110+40
+ 2979 0252 1A68     		ldr	r2, [r3]
+ 2980 0254 0192     		str	r2, [sp, #4]
+ 2981 0256 1B79     		ldrb	r3, [r3, #4]
+ 2982 0258 2371     		strb	r3, [r4, #4]
+ 2983              	.LVL241:
  253:Src/PID.c     ****     }
- 2983              		.loc 1 253 9 discriminator 2 view .LVU537
- 2984 0250 0F4B     		ldr	r3, .L110+40
- 2985 0252 1A68     		ldr	r2, [r3]
- 2986 0254 0192     		str	r2, [sp, #4]
- 2987 0256 1B79     		ldrb	r3, [r3, #4]
- 2988 0258 2371     		strb	r3, [r4, #4]
- 2989              	.LVL243:
+ 2984              		.loc 1 253 9 discriminator 2 view .LVU536
+ 2985 025a 3300     		movs	r3, r6
+ 2986 025c 0422     		movs	r2, #4
+ 2987 025e 2100     		movs	r1, r4
+ 2988 0260 2800     		movs	r0, r5
+ 2989 0262 FFF7FEFF 		bl	HAL_UART_Transmit
+ 2990              	.LVL242:
+ 2991              	.LBE39:
  253:Src/PID.c     ****     }
- 2990              		.loc 1 253 9 discriminator 2 view .LVU538
- 2991 025a 3300     		movs	r3, r6
- 2992 025c 0422     		movs	r2, #4
- 2993 025e 2100     		movs	r1, r4
- 2994 0260 2800     		movs	r0, r5
- 2995 0262 FFF7FEFF 		bl	HAL_UART_Transmit
- 2996              	.LVL244:
- 2997              	.LBE39:
+ 2992              		.loc 1 253 9 discriminator 2 view .LVU537
  253:Src/PID.c     ****     }
- 2998              		.loc 1 253 9 discriminator 2 view .LVU539
+ 2993              		.loc 1 253 58 discriminator 2 view .LVU538
  253:Src/PID.c     ****     }
- 2999              		.loc 1 253 58 discriminator 2 view .LVU540
- 253:Src/PID.c     ****     }
- 3000              		.loc 1 253 9 is_stmt 0 discriminator 2 view .LVU541
- 3001 0266 83E7     		b	.L90
- 3002              	.L111:
- 3003              		.align	2
- 3004              	.L110:
- 3005 0268 00000000 		.word	State
- 3006 026c D2040000 		.word	1234
- 3007 0270 D3040000 		.word	1235
- 3008 0274 3C050000 		.word	1340
- 3009 0278 FEFF0000 		.word	65534
- 3010 027c FFFF0000 		.word	65535
- 3011 0280 4FC30000 		.word	49999
- 3012 0284 00000000 		.word	.LC62
- 3013 0288 00000000 		.word	huart2
- 3014 028c 00000000 		.word	.LC81
- 3015 0290 08000000 		.word	.LC44
- 3016 0294 20000000 		.word	.LC68
- 3017 0298 18000000 		.word	.LC85
- 3018              		.cfi_endproc
- 3019              	.LFE298:
- 3021              		.section	.text.POWER_PID352,"ax",%progbits
- 3022              		.align	1
- 3023              		.global	POWER_PID352
- 3024              		.syntax unified
- 3025              		.code	16
- 3026              		.thumb_func
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 62
-
-
- 3027              		.fpu softvfp
- 3029              	POWER_PID352:
- 3030              	.LFB299:
+ 2994              		.loc 1 253 9 is_stmt 0 discriminator 2 view .LVU539
+ 2995 0266 83E7     		b	.L90
+ 2996              	.L111:
+ 2997              		.align	2
+ 2998              	.L110:
+ 2999 0268 00000000 		.word	State
+ 3000 026c D2040000 		.word	1234
+ 3001 0270 D3040000 		.word	1235
+ 3002 0274 3C050000 		.word	1340
+ 3003 0278 FEFF0000 		.word	65534
+ 3004 027c FFFF0000 		.word	65535
+ 3005 0280 4FC30000 		.word	49999
+ 3006 0284 00000000 		.word	.LC62
+ 3007 0288 00000000 		.word	huart2
+ 3008 028c 00000000 		.word	.LC81
+ 3009 0290 08000000 		.word	.LC44
+ 3010 0294 20000000 		.word	.LC68
+ 3011 0298 18000000 		.word	.LC85
+ 3012              		.cfi_endproc
+ 3013              	.LFE298:
+ 3015              		.section	.text.POWER_PID352,"ax",%progbits
+ 3016              		.align	1
+ 3017              		.global	POWER_PID352
+ 3018              		.syntax unified
+ 3019              		.code	16
+ 3020              		.thumb_func
+ 3021              		.fpu softvfp
+ 3023              	POWER_PID352:
+ 3024              	.LFB299:
  260:Src/PID.c     **** 
  261:Src/PID.c     **** void POWER_PID352()
  262:Src/PID.c     **** {
- 3031              		.loc 1 262 1 is_stmt 1 view -0
- 3032              		.cfi_startproc
- 3033              		@ args = 0, pretend = 0, frame = 0
- 3034              		@ frame_needed = 0, uses_anonymous_args = 0
- 3035 0000 70B5     		push	{r4, r5, r6, lr}
- 3036              	.LCFI27:
- 3037              		.cfi_def_cfa_offset 16
- 3038              		.cfi_offset 4, -16
- 3039              		.cfi_offset 5, -12
- 3040              		.cfi_offset 6, -8
- 3041              		.cfi_offset 14, -4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 62
+
+
+ 3025              		.loc 1 262 1 is_stmt 1 view -0
+ 3026              		.cfi_startproc
+ 3027              		@ args = 0, pretend = 0, frame = 0
+ 3028              		@ frame_needed = 0, uses_anonymous_args = 0
+ 3029 0000 70B5     		push	{r4, r5, r6, lr}
+ 3030              	.LCFI27:
+ 3031              		.cfi_def_cfa_offset 16
+ 3032              		.cfi_offset 4, -16
+ 3033              		.cfi_offset 5, -12
+ 3034              		.cfi_offset 6, -8
+ 3035              		.cfi_offset 14, -4
  263:Src/PID.c     ****     State.POWER_PID_352_P_error = (int64_t)State.ADC_ValuesFiltered[RF_POWER_AMP352] - (int64_t)Sta
- 3042              		.loc 1 263 5 view .LVU543
- 3043              		.loc 1 263 68 is_stmt 0 view .LVU544
- 3044 0002 1A4B     		ldr	r3, .L119
- 3045              		.loc 1 263 35 view .LVU545
- 3046 0004 1A4A     		ldr	r2, .L119+4
- 3047 0006 9858     		ldr	r0, [r3, r2]
- 3048 0008 0021     		movs	r1, #0
- 3049              		.loc 1 263 88 view .LVU546
- 3050 000a 1A4A     		ldr	r2, .L119+8
- 3051 000c 9C58     		ldr	r4, [r3, r2]
- 3052 000e 0025     		movs	r5, #0
- 3053              		.loc 1 263 86 view .LVU547
- 3054 0010 001B     		subs	r0, r0, r4
- 3055 0012 A941     		sbcs	r1, r1, r5
- 3056              		.loc 1 263 33 view .LVU548
- 3057 0014 2432     		adds	r2, r2, #36
- 3058 0016 9A18     		adds	r2, r3, r2
- 3059 0018 1060     		str	r0, [r2]
- 3060 001a 5160     		str	r1, [r2, #4]
+ 3036              		.loc 1 263 5 view .LVU541
+ 3037              		.loc 1 263 68 is_stmt 0 view .LVU542
+ 3038 0002 1A4B     		ldr	r3, .L119
+ 3039              		.loc 1 263 35 view .LVU543
+ 3040 0004 1A4A     		ldr	r2, .L119+4
+ 3041 0006 9858     		ldr	r0, [r3, r2]
+ 3042 0008 0021     		movs	r1, #0
+ 3043              		.loc 1 263 88 view .LVU544
+ 3044 000a 1A4A     		ldr	r2, .L119+8
+ 3045 000c 9C58     		ldr	r4, [r3, r2]
+ 3046 000e 0025     		movs	r5, #0
+ 3047              		.loc 1 263 86 view .LVU545
+ 3048 0010 001B     		subs	r0, r0, r4
+ 3049 0012 A941     		sbcs	r1, r1, r5
+ 3050              		.loc 1 263 33 view .LVU546
+ 3051 0014 2432     		adds	r2, r2, #36
+ 3052 0016 9A18     		adds	r2, r3, r2
+ 3053 0018 1060     		str	r0, [r2]
+ 3054 001a 5160     		str	r1, [r2, #4]
  264:Src/PID.c     ****     int64_t output = (int64_t)State.POWER_PID_352_Output + (State.POWER_PID_352_P_error / 1000);
- 3061              		.loc 1 264 5 is_stmt 1 view .LVU549
- 3062              		.loc 1 264 22 is_stmt 0 view .LVU550
- 3063 001c 164A     		ldr	r2, .L119+12
- 3064 001e 9C58     		ldr	r4, [r3, r2]
- 3065 0020 0025     		movs	r5, #0
- 3066              		.loc 1 264 89 view .LVU551
- 3067 0022 FA22     		movs	r2, #250
- 3068 0024 9200     		lsls	r2, r2, #2
- 3069 0026 0023     		movs	r3, #0
- 3070 0028 FFF7FEFF 		bl	__aeabi_ldivmod
- 3071              	.LVL245:
- 3072              		.loc 1 264 13 view .LVU552
- 3073 002c 0019     		adds	r0, r0, r4
- 3074 002e 6941     		adcs	r1, r1, r5
- 3075              	.LVL246:
+ 3055              		.loc 1 264 5 is_stmt 1 view .LVU547
+ 3056              		.loc 1 264 22 is_stmt 0 view .LVU548
+ 3057 001c 164A     		ldr	r2, .L119+12
+ 3058 001e 9C58     		ldr	r4, [r3, r2]
+ 3059 0020 0025     		movs	r5, #0
+ 3060              		.loc 1 264 89 view .LVU549
+ 3061 0022 FA22     		movs	r2, #250
+ 3062 0024 9200     		lsls	r2, r2, #2
+ 3063 0026 0023     		movs	r3, #0
+ 3064 0028 FFF7FEFF 		bl	__aeabi_ldivmod
+ 3065              	.LVL243:
+ 3066              		.loc 1 264 13 view .LVU550
+ 3067 002c 0019     		adds	r0, r0, r4
+ 3068 002e 6941     		adcs	r1, r1, r5
+ 3069              	.LVL244:
  265:Src/PID.c     ****     if (output > 0xffff)
- 3076              		.loc 1 265 5 is_stmt 1 view .LVU553
- 3077              		.loc 1 265 8 is_stmt 0 view .LVU554
- 3078 0030 0029     		cmp	r1, #0
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 63
+ 3070              		.loc 1 265 5 is_stmt 1 view .LVU551
+ 3071              		.loc 1 265 8 is_stmt 0 view .LVU552
+ 3072 0030 0029     		cmp	r1, #0
+ 3073 0032 08DC     		bgt	.L116
+ 3074 0034 03D1     		bne	.L118
+ 3075 0036 8023     		movs	r3, #128
+ 3076 0038 5B02     		lsls	r3, r3, #9
+ 3077 003a 9842     		cmp	r0, r3
+ 3078 003c 03D2     		bcs	.L116
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 63
 
 
- 3079 0032 08DC     		bgt	.L116
- 3080 0034 03D1     		bne	.L118
- 3081 0036 8023     		movs	r3, #128
- 3082 0038 5B02     		lsls	r3, r3, #9
- 3083 003a 9842     		cmp	r0, r3
- 3084 003c 03D2     		bcs	.L116
- 3085              	.L118:
+ 3079              	.L118:
  266:Src/PID.c     ****     {
  267:Src/PID.c     ****         output = 0xffff;
  268:Src/PID.c     ****     }
  269:Src/PID.c     ****     else if (output < 0)
- 3086              		.loc 1 269 10 is_stmt 1 view .LVU555
- 3087              		.loc 1 269 13 is_stmt 0 view .LVU556
- 3088 003e 0029     		cmp	r1, #0
- 3089 0040 02DA     		bge	.L113
+ 3080              		.loc 1 269 10 is_stmt 1 view .LVU553
+ 3081              		.loc 1 269 13 is_stmt 0 view .LVU554
+ 3082 003e 0029     		cmp	r1, #0
+ 3083 0040 02DA     		bge	.L113
  270:Src/PID.c     ****     {
  271:Src/PID.c     ****         output = 0;
- 3090              		.loc 1 271 16 view .LVU557
- 3091 0042 0020     		movs	r0, #0
- 3092              	.LVL247:
- 3093              		.loc 1 271 16 view .LVU558
- 3094 0044 00E0     		b	.L113
- 3095              	.LVL248:
- 3096              	.L116:
+ 3084              		.loc 1 271 16 view .LVU555
+ 3085 0042 0020     		movs	r0, #0
+ 3086              	.LVL245:
+ 3087              		.loc 1 271 16 view .LVU556
+ 3088 0044 00E0     		b	.L113
+ 3089              	.LVL246:
+ 3090              	.L116:
  267:Src/PID.c     ****     }
- 3097              		.loc 1 267 16 view .LVU559
- 3098 0046 0D48     		ldr	r0, .L119+16
- 3099              	.LVL249:
- 3100              	.L113:
+ 3091              		.loc 1 267 16 view .LVU557
+ 3092 0046 0D48     		ldr	r0, .L119+16
+ 3093              	.LVL247:
+ 3094              	.L113:
  272:Src/PID.c     ****     }
  273:Src/PID.c     ****     State.POWER_PID_352_Output = (uint32_t)output;
- 3101              		.loc 1 273 5 is_stmt 1 view .LVU560
- 3102              		.loc 1 273 32 is_stmt 0 view .LVU561
- 3103 0048 084D     		ldr	r5, .L119
- 3104 004a 0B4C     		ldr	r4, .L119+12
- 3105 004c 2851     		str	r0, [r5, r4]
+ 3095              		.loc 1 273 5 is_stmt 1 view .LVU558
+ 3096              		.loc 1 273 32 is_stmt 0 view .LVU559
+ 3097 0048 084D     		ldr	r5, .L119
+ 3098 004a 0B4C     		ldr	r4, .L119+12
+ 3099 004c 2851     		str	r0, [r5, r4]
  274:Src/PID.c     ****     DAC_cmd(RF_ATT_352_OFFSET + DAC_WRITE + State.POWER_PID_352_Output);
- 3106              		.loc 1 274 5 is_stmt 1 view .LVU562
- 3107 004e 9823     		movs	r3, #152
- 3108 0050 5B03     		lsls	r3, r3, #13
- 3109 0052 9C46     		mov	ip, r3
- 3110 0054 6044     		add	r0, r0, ip
- 3111 0056 FFF7FEFF 		bl	DAC_cmd
- 3112              	.LVL250:
+ 3100              		.loc 1 274 5 is_stmt 1 view .LVU560
+ 3101 004e 9823     		movs	r3, #152
+ 3102 0050 5B03     		lsls	r3, r3, #13
+ 3103 0052 9C46     		mov	ip, r3
+ 3104 0054 6044     		add	r0, r0, ip
+ 3105 0056 FFF7FEFF 		bl	DAC_cmd
+ 3106              	.LVL248:
  275:Src/PID.c     ****     DAC_cmd(RF_ATT_352_FINE + DAC_WRITE + State.POWER_PID_352_Output);
- 3113              		.loc 1 275 5 view .LVU563
- 3114              		.loc 1 275 48 is_stmt 0 view .LVU564
- 3115 005a 2859     		ldr	r0, [r5, r4]
- 3116              		.loc 1 275 5 view .LVU565
- 3117 005c 9023     		movs	r3, #144
- 3118 005e 5B03     		lsls	r3, r3, #13
- 3119 0060 9C46     		mov	ip, r3
- 3120 0062 6044     		add	r0, r0, ip
- 3121 0064 FFF7FEFF 		bl	DAC_cmd
- 3122              	.LVL251:
+ 3107              		.loc 1 275 5 view .LVU561
+ 3108              		.loc 1 275 48 is_stmt 0 view .LVU562
+ 3109 005a 2859     		ldr	r0, [r5, r4]
+ 3110              		.loc 1 275 5 view .LVU563
+ 3111 005c 9023     		movs	r3, #144
+ 3112 005e 5B03     		lsls	r3, r3, #13
+ 3113 0060 9C46     		mov	ip, r3
+ 3114 0062 6044     		add	r0, r0, ip
+ 3115 0064 FFF7FEFF 		bl	DAC_cmd
+ 3116              	.LVL249:
  276:Src/PID.c     **** }
- 3123              		.loc 1 276 1 view .LVU566
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 64
+ 3117              		.loc 1 276 1 view .LVU564
+ 3118              		@ sp needed
+ 3119 0068 70BD     		pop	{r4, r5, r6, pc}
+ 3120              	.L120:
+ 3121 006a C046     		.align	2
+ 3122              	.L119:
+ 3123 006c 00000000 		.word	State
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 64
 
 
- 3124              		@ sp needed
- 3125 0068 70BD     		pop	{r4, r5, r6, pc}
- 3126              	.L120:
- 3127 006a C046     		.align	2
- 3128              	.L119:
- 3129 006c 00000000 		.word	State
- 3130 0070 B4040000 		.word	1204
- 3131 0074 6C050000 		.word	1388
- 3132 0078 74050000 		.word	1396
- 3133 007c FFFF0000 		.word	65535
- 3134              		.cfi_endproc
- 3135              	.LFE299:
- 3137              		.section	.text.POWER_PID704,"ax",%progbits
- 3138              		.align	1
- 3139              		.global	POWER_PID704
- 3140              		.syntax unified
- 3141              		.code	16
- 3142              		.thumb_func
- 3143              		.fpu softvfp
- 3145              	POWER_PID704:
- 3146              	.LFB300:
+ 3124 0070 B4040000 		.word	1204
+ 3125 0074 6C050000 		.word	1388
+ 3126 0078 74050000 		.word	1396
+ 3127 007c FFFF0000 		.word	65535
+ 3128              		.cfi_endproc
+ 3129              	.LFE299:
+ 3131              		.section	.text.POWER_PID704,"ax",%progbits
+ 3132              		.align	1
+ 3133              		.global	POWER_PID704
+ 3134              		.syntax unified
+ 3135              		.code	16
+ 3136              		.thumb_func
+ 3137              		.fpu softvfp
+ 3139              	POWER_PID704:
+ 3140              	.LFB300:
  277:Src/PID.c     **** 
  278:Src/PID.c     **** void POWER_PID704()
  279:Src/PID.c     **** {
- 3147              		.loc 1 279 1 is_stmt 1 view -0
- 3148              		.cfi_startproc
- 3149              		@ args = 0, pretend = 0, frame = 0
- 3150              		@ frame_needed = 0, uses_anonymous_args = 0
- 3151 0000 70B5     		push	{r4, r5, r6, lr}
- 3152              	.LCFI28:
- 3153              		.cfi_def_cfa_offset 16
- 3154              		.cfi_offset 4, -16
- 3155              		.cfi_offset 5, -12
- 3156              		.cfi_offset 6, -8
- 3157              		.cfi_offset 14, -4
+ 3141              		.loc 1 279 1 is_stmt 1 view -0
+ 3142              		.cfi_startproc
+ 3143              		@ args = 0, pretend = 0, frame = 0
+ 3144              		@ frame_needed = 0, uses_anonymous_args = 0
+ 3145 0000 70B5     		push	{r4, r5, r6, lr}
+ 3146              	.LCFI28:
+ 3147              		.cfi_def_cfa_offset 16
+ 3148              		.cfi_offset 4, -16
+ 3149              		.cfi_offset 5, -12
+ 3150              		.cfi_offset 6, -8
+ 3151              		.cfi_offset 14, -4
  280:Src/PID.c     ****     State.POWER_PID_704_P_error = (int64_t)State.ADC_ValuesFiltered[RF_POWER_AMP704] - (int64_t)Sta
- 3158              		.loc 1 280 5 view .LVU568
- 3159              		.loc 1 280 68 is_stmt 0 view .LVU569
- 3160 0002 1A4B     		ldr	r3, .L128
- 3161              		.loc 1 280 35 view .LVU570
- 3162 0004 9722     		movs	r2, #151
- 3163 0006 D200     		lsls	r2, r2, #3
- 3164 0008 9858     		ldr	r0, [r3, r2]
- 3165 000a 0021     		movs	r1, #0
- 3166              		.loc 1 280 88 view .LVU571
- 3167 000c B832     		adds	r2, r2, #184
- 3168 000e 9C58     		ldr	r4, [r3, r2]
- 3169 0010 0025     		movs	r5, #0
- 3170              		.loc 1 280 86 view .LVU572
- 3171 0012 001B     		subs	r0, r0, r4
- 3172 0014 A941     		sbcs	r1, r1, r5
- 3173              		.loc 1 280 33 view .LVU573
- 3174 0016 5832     		adds	r2, r2, #88
- 3175 0018 9A18     		adds	r2, r3, r2
- 3176 001a 1060     		str	r0, [r2]
- 3177 001c 5160     		str	r1, [r2, #4]
+ 3152              		.loc 1 280 5 view .LVU566
+ 3153              		.loc 1 280 68 is_stmt 0 view .LVU567
+ 3154 0002 1A4B     		ldr	r3, .L128
+ 3155              		.loc 1 280 35 view .LVU568
+ 3156 0004 9722     		movs	r2, #151
+ 3157 0006 D200     		lsls	r2, r2, #3
+ 3158 0008 9858     		ldr	r0, [r3, r2]
+ 3159 000a 0021     		movs	r1, #0
+ 3160              		.loc 1 280 88 view .LVU569
+ 3161 000c B832     		adds	r2, r2, #184
+ 3162 000e 9C58     		ldr	r4, [r3, r2]
+ 3163 0010 0025     		movs	r5, #0
+ 3164              		.loc 1 280 86 view .LVU570
+ 3165 0012 001B     		subs	r0, r0, r4
+ 3166 0014 A941     		sbcs	r1, r1, r5
+ 3167              		.loc 1 280 33 view .LVU571
+ 3168 0016 5832     		adds	r2, r2, #88
+ 3169 0018 9A18     		adds	r2, r3, r2
+ 3170 001a 1060     		str	r0, [r2]
+ 3171 001c 5160     		str	r1, [r2, #4]
  281:Src/PID.c     ****     int64_t output = (int64_t)State.POWER_PID_704_Output + (State.POWER_PID_704_P_error / 1000);
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 65
+ 3172              		.loc 1 281 5 is_stmt 1 view .LVU572
+ 3173              		.loc 1 281 22 is_stmt 0 view .LVU573
+ 3174 001e 144A     		ldr	r2, .L128+4
+ 3175 0020 9C58     		ldr	r4, [r3, r2]
+ 3176 0022 0025     		movs	r5, #0
+ 3177              		.loc 1 281 89 view .LVU574
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 65
 
 
- 3178              		.loc 1 281 5 is_stmt 1 view .LVU574
- 3179              		.loc 1 281 22 is_stmt 0 view .LVU575
- 3180 001e 144A     		ldr	r2, .L128+4
- 3181 0020 9C58     		ldr	r4, [r3, r2]
- 3182 0022 0025     		movs	r5, #0
- 3183              		.loc 1 281 89 view .LVU576
- 3184 0024 FA22     		movs	r2, #250
- 3185 0026 9200     		lsls	r2, r2, #2
- 3186 0028 0023     		movs	r3, #0
- 3187 002a FFF7FEFF 		bl	__aeabi_ldivmod
- 3188              	.LVL252:
- 3189              		.loc 1 281 13 view .LVU577
- 3190 002e 0019     		adds	r0, r0, r4
- 3191 0030 6941     		adcs	r1, r1, r5
- 3192              	.LVL253:
+ 3178 0024 FA22     		movs	r2, #250
+ 3179 0026 9200     		lsls	r2, r2, #2
+ 3180 0028 0023     		movs	r3, #0
+ 3181 002a FFF7FEFF 		bl	__aeabi_ldivmod
+ 3182              	.LVL250:
+ 3183              		.loc 1 281 13 view .LVU575
+ 3184 002e 0019     		adds	r0, r0, r4
+ 3185 0030 6941     		adcs	r1, r1, r5
+ 3186              	.LVL251:
  282:Src/PID.c     ****     if (output > 0xffff)
- 3193              		.loc 1 282 5 is_stmt 1 view .LVU578
- 3194              		.loc 1 282 8 is_stmt 0 view .LVU579
- 3195 0032 0029     		cmp	r1, #0
- 3196 0034 08DC     		bgt	.L125
- 3197 0036 03D1     		bne	.L127
- 3198 0038 8023     		movs	r3, #128
- 3199 003a 5B02     		lsls	r3, r3, #9
- 3200 003c 9842     		cmp	r0, r3
- 3201 003e 03D2     		bcs	.L125
- 3202              	.L127:
+ 3187              		.loc 1 282 5 is_stmt 1 view .LVU576
+ 3188              		.loc 1 282 8 is_stmt 0 view .LVU577
+ 3189 0032 0029     		cmp	r1, #0
+ 3190 0034 08DC     		bgt	.L125
+ 3191 0036 03D1     		bne	.L127
+ 3192 0038 8023     		movs	r3, #128
+ 3193 003a 5B02     		lsls	r3, r3, #9
+ 3194 003c 9842     		cmp	r0, r3
+ 3195 003e 03D2     		bcs	.L125
+ 3196              	.L127:
  283:Src/PID.c     ****     {
  284:Src/PID.c     ****         output = 0xffff;
  285:Src/PID.c     ****     }
  286:Src/PID.c     ****     else if (output < 0)
- 3203              		.loc 1 286 10 is_stmt 1 view .LVU580
- 3204              		.loc 1 286 13 is_stmt 0 view .LVU581
- 3205 0040 0029     		cmp	r1, #0
- 3206 0042 02DA     		bge	.L122
+ 3197              		.loc 1 286 10 is_stmt 1 view .LVU578
+ 3198              		.loc 1 286 13 is_stmt 0 view .LVU579
+ 3199 0040 0029     		cmp	r1, #0
+ 3200 0042 02DA     		bge	.L122
  287:Src/PID.c     ****     {
  288:Src/PID.c     ****         output = 0;
- 3207              		.loc 1 288 16 view .LVU582
- 3208 0044 0020     		movs	r0, #0
- 3209              	.LVL254:
- 3210              		.loc 1 288 16 view .LVU583
- 3211 0046 00E0     		b	.L122
- 3212              	.LVL255:
- 3213              	.L125:
+ 3201              		.loc 1 288 16 view .LVU580
+ 3202 0044 0020     		movs	r0, #0
+ 3203              	.LVL252:
+ 3204              		.loc 1 288 16 view .LVU581
+ 3205 0046 00E0     		b	.L122
+ 3206              	.LVL253:
+ 3207              	.L125:
  284:Src/PID.c     ****     }
- 3214              		.loc 1 284 16 view .LVU584
- 3215 0048 0A48     		ldr	r0, .L128+8
- 3216              	.LVL256:
- 3217              	.L122:
+ 3208              		.loc 1 284 16 view .LVU582
+ 3209 0048 0A48     		ldr	r0, .L128+8
+ 3210              	.LVL254:
+ 3211              	.L122:
  289:Src/PID.c     ****     }
  290:Src/PID.c     ****     State.POWER_PID_704_Output = (uint32_t)output;
- 3218              		.loc 1 290 5 is_stmt 1 view .LVU585
- 3219              		.loc 1 290 32 is_stmt 0 view .LVU586
- 3220 004a 084D     		ldr	r5, .L128
- 3221 004c 084C     		ldr	r4, .L128+4
- 3222 004e 2851     		str	r0, [r5, r4]
+ 3212              		.loc 1 290 5 is_stmt 1 view .LVU583
+ 3213              		.loc 1 290 32 is_stmt 0 view .LVU584
+ 3214 004a 084D     		ldr	r5, .L128
+ 3215 004c 084C     		ldr	r4, .L128+4
+ 3216 004e 2851     		str	r0, [r5, r4]
  291:Src/PID.c     ****     DAC_cmd(RF_ATT_704_OFFSET + DAC_WRITE + State.POWER_PID_704_Output);
- 3223              		.loc 1 291 5 is_stmt 1 view .LVU587
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 66
+ 3217              		.loc 1 291 5 is_stmt 1 view .LVU585
+ 3218 0050 8023     		movs	r3, #128
+ 3219 0052 5B03     		lsls	r3, r3, #13
+ 3220 0054 9C46     		mov	ip, r3
+ 3221 0056 6044     		add	r0, r0, ip
+ 3222 0058 FFF7FEFF 		bl	DAC_cmd
+ 3223              	.LVL255:
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 66
 
 
- 3224 0050 8023     		movs	r3, #128
- 3225 0052 5B03     		lsls	r3, r3, #13
- 3226 0054 9C46     		mov	ip, r3
- 3227 0056 6044     		add	r0, r0, ip
- 3228 0058 FFF7FEFF 		bl	DAC_cmd
- 3229              	.LVL257:
  292:Src/PID.c     ****     DAC_cmd(RF_ATT_704_FINE + DAC_WRITE + State.POWER_PID_704_Output);
- 3230              		.loc 1 292 5 view .LVU588
- 3231              		.loc 1 292 48 is_stmt 0 view .LVU589
- 3232 005c 2859     		ldr	r0, [r5, r4]
- 3233              		.loc 1 292 5 view .LVU590
- 3234 005e 8823     		movs	r3, #136
- 3235 0060 5B03     		lsls	r3, r3, #13
- 3236 0062 9C46     		mov	ip, r3
- 3237 0064 6044     		add	r0, r0, ip
- 3238 0066 FFF7FEFF 		bl	DAC_cmd
- 3239              	.LVL258:
+ 3224              		.loc 1 292 5 view .LVU586
+ 3225              		.loc 1 292 48 is_stmt 0 view .LVU587
+ 3226 005c 2859     		ldr	r0, [r5, r4]
+ 3227              		.loc 1 292 5 view .LVU588
+ 3228 005e 8823     		movs	r3, #136
+ 3229 0060 5B03     		lsls	r3, r3, #13
+ 3230 0062 9C46     		mov	ip, r3
+ 3231 0064 6044     		add	r0, r0, ip
+ 3232 0066 FFF7FEFF 		bl	DAC_cmd
+ 3233              	.LVL256:
  293:Src/PID.c     **** }
- 3240              		.loc 1 293 1 view .LVU591
- 3241              		@ sp needed
- 3242 006a 70BD     		pop	{r4, r5, r6, pc}
- 3243              	.L129:
- 3244              		.align	2
- 3245              	.L128:
- 3246 006c 00000000 		.word	State
- 3247 0070 A4050000 		.word	1444
- 3248 0074 FFFF0000 		.word	65535
- 3249              		.cfi_endproc
- 3250              	.LFE300:
- 3252              		.section	.text.PID,"ax",%progbits
- 3253              		.align	1
- 3254              		.global	PID
- 3255              		.syntax unified
- 3256              		.code	16
- 3257              		.thumb_func
- 3258              		.fpu softvfp
- 3260              	PID:
- 3261              	.LFB301:
+ 3234              		.loc 1 293 1 view .LVU589
+ 3235              		@ sp needed
+ 3236 006a 70BD     		pop	{r4, r5, r6, pc}
+ 3237              	.L129:
+ 3238              		.align	2
+ 3239              	.L128:
+ 3240 006c 00000000 		.word	State
+ 3241 0070 A4050000 		.word	1444
+ 3242 0074 FFFF0000 		.word	65535
+ 3243              		.cfi_endproc
+ 3244              	.LFE300:
+ 3246              		.section	.text.TEMP_PID,"ax",%progbits
+ 3247              		.align	1
+ 3248              		.global	TEMP_PID
+ 3249              		.syntax unified
+ 3250              		.code	16
+ 3251              		.thumb_func
+ 3252              		.fpu softvfp
+ 3254              	TEMP_PID:
+ 3255              	.LFB301:
  294:Src/PID.c     **** 
- 295:Src/PID.c     **** void PID()
+ 295:Src/PID.c     **** void TEMP_PID()
  296:Src/PID.c     **** {
- 3262              		.loc 1 296 1 is_stmt 1 view -0
- 3263              		.cfi_startproc
- 3264              		@ args = 0, pretend = 0, frame = 0
- 3265              		@ frame_needed = 0, uses_anonymous_args = 0
- 3266 0000 10B5     		push	{r4, lr}
- 3267              	.LCFI29:
- 3268              		.cfi_def_cfa_offset 8
- 3269              		.cfi_offset 4, -8
- 3270              		.cfi_offset 14, -4
- 297:Src/PID.c     ****     PID352();
- 3271              		.loc 1 297 5 view .LVU593
- 3272 0002 FFF7FEFF 		bl	PID352
- 3273              	.LVL259:
- 298:Src/PID.c     ****     PID704();
- 3274              		.loc 1 298 5 view .LVU594
- 3275 0006 FFF7FEFF 		bl	PID704
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 67
+ 3256              		.loc 1 296 1 is_stmt 1 view -0
+ 3257              		.cfi_startproc
+ 3258              		@ args = 0, pretend = 0, frame = 0
+ 3259              		@ frame_needed = 0, uses_anonymous_args = 0
+ 3260              		@ link register save eliminated.
+ 297:Src/PID.c     **** }
+ 3261              		.loc 1 297 1 view .LVU591
+ 3262              		@ sp needed
+ 3263 0000 7047     		bx	lr
+ 3264              		.cfi_endproc
+ 3265              	.LFE301:
+ 3267              		.section	.text.TEMP_PID_Init,"ax",%progbits
+ 3268              		.align	1
+ 3269              		.global	TEMP_PID_Init
+ 3270              		.syntax unified
+ 3271              		.code	16
+ 3272              		.thumb_func
+ 3273              		.fpu softvfp
+ 3275              	TEMP_PID_Init:
+ 3276              	.LFB302:
+ 298:Src/PID.c     **** 
+ 299:Src/PID.c     **** void TEMP_PID_Init()
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 67
 
 
- 3276              	.LVL260:
- 299:Src/PID.c     ****     // POWER_PID352();
- 300:Src/PID.c     ****     POWER_PID704();
- 3277              		.loc 1 300 5 view .LVU595
- 3278 000a FFF7FEFF 		bl	POWER_PID704
- 3279              	.LVL261:
+ 300:Src/PID.c     **** {
+ 3277              		.loc 1 300 1 view -0
+ 3278              		.cfi_startproc
+ 3279              		@ args = 0, pretend = 0, frame = 0
+ 3280              		@ frame_needed = 0, uses_anonymous_args = 0
+ 3281              		@ link register save eliminated.
  301:Src/PID.c     **** }
- 3280              		.loc 1 301 1 is_stmt 0 view .LVU596
- 3281              		@ sp needed
- 3282 000e 10BD     		pop	{r4, pc}
- 3283              		.cfi_endproc
- 3284              	.LFE301:
- 3286              		.section	.rodata
- 3287              		.align	3
- 3288              	.LC0:
- 3289 0000 00000000 		.word	0
- 3290 0004 00000000 		.word	0
- 3291 0008 00000000 		.word	0
- 3292 000c 00000000 		.word	0
- 3293 0010 00000000 		.word	0
- 3294 0014 00000000 		.word	0
- 3295 0018 00000000 		.word	0
- 3296 001c 00000000 		.word	0
- 3297 0020 021A0600 		.word	399874
- 3298 0024 00000000 		.word	0
- 3299 0028 00000000 		.word	0
- 3300 002c 00000000 		.word	0
- 3301 0030 00000000 		.word	0
- 3302 0034 00000000 		.word	0
- 3303 0038 00000000 		.word	0
- 3304 003c 00000000 		.word	0
- 3305 0040 00000000 		.word	0
- 3306 0044 00000000 		.word	0
- 3307 0048 C6D70600 		.word	448454
- 3308 004c 00000000 		.word	0
- 3309 0050 04860600 		.word	427524
- 3310 0054 00000000 		.word	0
- 3311 0058 00000000 		.word	0
- 3312 005c 00000000 		.word	0
- 3313 0060 00000000 		.word	0
- 3314 0064 00000000 		.word	0
- 3315 0068 00000000 		.word	0
- 3316 006c 00000000 		.word	0
- 3317 0070 00000000 		.word	0
- 3318 0074 00000000 		.word	0
- 3319 0078 DD3A0600 		.word	408285
- 3320 007c 00000000 		.word	0
- 3321              		.text
- 3322              	.Letext0:
- 3323              		.file 2 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\machine\\_default_types.h"
- 3324              		.file 3 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_stdint.h"
- 3325              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
- 3326              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
- 3327              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
- 3328              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
- 3329              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
- 3330              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 68
+ 3282              		.loc 1 301 1 view .LVU593
+ 3283              		@ sp needed
+ 3284 0000 7047     		bx	lr
+ 3285              		.cfi_endproc
+ 3286              	.LFE302:
+ 3288              		.section	.text.PID,"ax",%progbits
+ 3289              		.align	1
+ 3290              		.global	PID
+ 3291              		.syntax unified
+ 3292              		.code	16
+ 3293              		.thumb_func
+ 3294              		.fpu softvfp
+ 3296              	PID:
+ 3297              	.LFB303:
+ 302:Src/PID.c     **** 
+ 303:Src/PID.c     **** void PID()
+ 304:Src/PID.c     **** {
+ 3298              		.loc 1 304 1 view -0
+ 3299              		.cfi_startproc
+ 3300              		@ args = 0, pretend = 0, frame = 0
+ 3301              		@ frame_needed = 0, uses_anonymous_args = 0
+ 3302 0000 10B5     		push	{r4, lr}
+ 3303              	.LCFI29:
+ 3304              		.cfi_def_cfa_offset 8
+ 3305              		.cfi_offset 4, -8
+ 3306              		.cfi_offset 14, -4
+ 305:Src/PID.c     ****     PID352();
+ 3307              		.loc 1 305 5 view .LVU595
+ 3308 0002 FFF7FEFF 		bl	PID352
+ 3309              	.LVL257:
+ 306:Src/PID.c     ****     PID704();
+ 3310              		.loc 1 306 5 view .LVU596
+ 3311 0006 FFF7FEFF 		bl	PID704
+ 3312              	.LVL258:
+ 307:Src/PID.c     ****     // POWER_PID352();
+ 308:Src/PID.c     ****     // POWER_PID704();
+ 309:Src/PID.c     **** }
+ 3313              		.loc 1 309 1 is_stmt 0 view .LVU597
+ 3314              		@ sp needed
+ 3315 000a 10BD     		pop	{r4, pc}
+ 3316              		.cfi_endproc
+ 3317              	.LFE303:
+ 3319              		.section	.rodata
+ 3320              		.align	3
+ 3321              	.LC0:
+ 3322 0000 00000000 		.word	0
+ 3323 0004 00000000 		.word	0
+ 3324 0008 00000000 		.word	0
+ 3325 000c 00000000 		.word	0
+ 3326 0010 00000000 		.word	0
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 68
 
 
- 3331              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
- 3332              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
- 3333              		.file 12 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\lock.h"
- 3334              		.file 13 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_types.h"
- 3335              		.file 14 "c:\\gnu tools arm embedded\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\stddef.h"
- 3336              		.file 15 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\reent.h"
- 3337              		.file 16 "Inc/usart.h"
- 3338              		.file 17 "Inc/state.h"
- 3339              		.file 18 "Inc/spi.h"
- 3340              		.file 19 "Inc/DAC.h"
- 3341              		.file 20 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\stdio.h"
- 3342              		.file 21 "<built-in>"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 69
+ 3327 0014 00000000 		.word	0
+ 3328 0018 00000000 		.word	0
+ 3329 001c 00000000 		.word	0
+ 3330 0020 021A0600 		.word	399874
+ 3331 0024 00000000 		.word	0
+ 3332 0028 00000000 		.word	0
+ 3333 002c 00000000 		.word	0
+ 3334 0030 00000000 		.word	0
+ 3335 0034 00000000 		.word	0
+ 3336 0038 00000000 		.word	0
+ 3337 003c 00000000 		.word	0
+ 3338 0040 00000000 		.word	0
+ 3339 0044 00000000 		.word	0
+ 3340 0048 C6D70600 		.word	448454
+ 3341 004c 00000000 		.word	0
+ 3342 0050 04860600 		.word	427524
+ 3343 0054 00000000 		.word	0
+ 3344 0058 00000000 		.word	0
+ 3345 005c 00000000 		.word	0
+ 3346 0060 00000000 		.word	0
+ 3347 0064 00000000 		.word	0
+ 3348 0068 00000000 		.word	0
+ 3349 006c 00000000 		.word	0
+ 3350 0070 00000000 		.word	0
+ 3351 0074 00000000 		.word	0
+ 3352 0078 DD3A0600 		.word	408285
+ 3353 007c 00000000 		.word	0
+ 3354              		.text
+ 3355              	.Letext0:
+ 3356              		.file 2 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 3357              		.file 3 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 3358              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
+ 3359              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
+ 3360              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+ 3361              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+ 3362              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_flash.h"
+ 3363              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
+ 3364              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
+ 3365              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
+ 3366              		.file 12 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\lock.h"
+ 3367              		.file 13 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\_types.h"
+ 3368              		.file 14 "c:\\gnu tools arm embedded\\lib\\gcc\\arm-none-eabi\\9.2.1\\include\\stddef.h"
+ 3369              		.file 15 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\sys\\reent.h"
+ 3370              		.file 16 "Inc/usart.h"
+ 3371              		.file 17 "Inc/state.h"
+ 3372              		.file 18 "Inc/spi.h"
+ 3373              		.file 19 "Inc/DAC.h"
+ 3374              		.file 20 "c:\\gnu tools arm embedded\\arm-none-eabi\\include\\stdio.h"
+ 3375              		.file 21 "<built-in>"
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 69
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 PID.c
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:18     .text.Voltage_nV:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:26     .text.Voltage_nV:00000000 Voltage_nV
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:66     .text.Voltage_nV:00000020 $d
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:73     .text.Voltage:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:80     .text.Voltage:00000000 Voltage
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:119    .text.Voltage:00000020 $d
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:126    .text.Phase:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:133    .text.Phase:00000000 Phase
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:168    .text.Phase:0000001c $d
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:174    .text.Phase_u:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:181    .text.Phase_u:00000000 Phase_u
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:216    .text.Phase_u:0000001c $d
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:221    .text.Temperature:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:228    .text.Temperature:00000000 Temperature
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:267    .text.Temperature:00000028 $d
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:273    .text.Relative_Power:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:280    .text.Relative_Power:00000000 Relative_Power
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:314    .text.Relative_Power:0000001c $d
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:320    .text.RMS_Power:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:327    .text.RMS_Power:00000000 RMS_Power
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:384    .text.RMS_Power:00000038 $d
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:390    .rodata.Calib352.str1.4:00000000 $d
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:406    .text.Calib352:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:413    .text.Calib352:00000000 Calib352
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:928    .text.Calib352:00000288 $d
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:947    .rodata.Calib704.str1.4:00000000 $d
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:960    .text.Calib704:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:967    .text.Calib704:00000000 Calib704
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:1481   .text.Calib704:00000284 $d
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:1500   .rodata.POWER_Calib352.str1.4:00000000 $d
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:1504   .text.POWER_Calib352:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:1511   .text.POWER_Calib352:00000000 POWER_Calib352
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:1609   .text.POWER_Calib352:00000074 $d
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:1620   .rodata.POWER_Calib704.str1.4:00000000 $d
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:1624   .text.POWER_Calib704:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:1631   .text.POWER_Calib704:00000000 POWER_Calib704
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:1730   .text.POWER_Calib704:00000078 $d
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:1740   .rodata.Calib.str1.4:00000000 $d
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:1747   .text.Calib:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:1754   .text.Calib:00000000 Calib
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:1838   .text.Calib:00000060 $d
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:1845   .text.PID_Init:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:1852   .text.PID_Init:00000000 PID_Init
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:2003   .text.PID_Init:000000c4 $d
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:2013   .rodata.PID352.str1.4:00000000 $d
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:2026   .text.PID352:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:2033   .text.PID352:00000000 PID352
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:2505   .text.PID352:0000026c $d
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:2521   .rodata.PID704.str1.4:00000000 $d
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:2528   .text.PID704:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:2535   .text.PID704:00000000 PID704
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:3005   .text.PID704:00000268 $d
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:3022   .text.POWER_PID352:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:3029   .text.POWER_PID352:00000000 POWER_PID352
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:3129   .text.POWER_PID352:0000006c $d
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s 			page 70
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:18     .text.Voltage_nV:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:26     .text.Voltage_nV:00000000 Voltage_nV
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:66     .text.Voltage_nV:00000020 $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:73     .text.Voltage:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:80     .text.Voltage:00000000 Voltage
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:119    .text.Voltage:00000020 $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:126    .text.Phase:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:133    .text.Phase:00000000 Phase
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:168    .text.Phase:0000001c $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:174    .text.Phase_u:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:181    .text.Phase_u:00000000 Phase_u
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:216    .text.Phase_u:0000001c $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:221    .text.Temperature:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:228    .text.Temperature:00000000 Temperature
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:267    .text.Temperature:00000028 $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:273    .text.Relative_Power:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:280    .text.Relative_Power:00000000 Relative_Power
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:314    .text.Relative_Power:0000001c $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:320    .text.RMS_Power:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:327    .text.RMS_Power:00000000 RMS_Power
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:384    .text.RMS_Power:00000038 $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:390    .rodata.Calib352.str1.4:00000000 $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:406    .text.Calib352:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:413    .text.Calib352:00000000 Calib352
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:928    .text.Calib352:00000288 $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:947    .rodata.Calib704.str1.4:00000000 $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:960    .text.Calib704:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:967    .text.Calib704:00000000 Calib704
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:1481   .text.Calib704:00000284 $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:1500   .rodata.POWER_Calib352.str1.4:00000000 $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:1504   .text.POWER_Calib352:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:1511   .text.POWER_Calib352:00000000 POWER_Calib352
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:1609   .text.POWER_Calib352:00000074 $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:1620   .rodata.POWER_Calib704.str1.4:00000000 $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:1624   .text.POWER_Calib704:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:1631   .text.POWER_Calib704:00000000 POWER_Calib704
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:1730   .text.POWER_Calib704:00000078 $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:1740   .rodata.Calib.str1.4:00000000 $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:1747   .text.Calib:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:1754   .text.Calib:00000000 Calib
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:1832   .text.Calib:00000058 $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:1839   .text.PID_Init:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:1846   .text.PID_Init:00000000 PID_Init
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:1997   .text.PID_Init:000000c4 $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:2007   .rodata.PID352.str1.4:00000000 $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:2020   .text.PID352:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:2027   .text.PID352:00000000 PID352
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:2499   .text.PID352:0000026c $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:2515   .rodata.PID704.str1.4:00000000 $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:2522   .text.PID704:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:2529   .text.PID704:00000000 PID704
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:2999   .text.PID704:00000268 $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:3016   .text.POWER_PID352:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:3023   .text.POWER_PID352:00000000 POWER_PID352
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:3123   .text.POWER_PID352:0000006c $d
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cc5p382g.s 			page 70
 
 
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:3138   .text.POWER_PID704:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:3145   .text.POWER_PID704:00000000 POWER_PID704
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:3246   .text.POWER_PID704:0000006c $d
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:3253   .text.PID:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:3260   .text.PID:00000000 PID
-C:\Users\matil\AppData\Local\Temp\ccQWtqyJ.s:3287   .rodata:00000000 $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:3132   .text.POWER_PID704:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:3139   .text.POWER_PID704:00000000 POWER_PID704
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:3240   .text.POWER_PID704:0000006c $d
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:3247   .text.TEMP_PID:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:3254   .text.TEMP_PID:00000000 TEMP_PID
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:3268   .text.TEMP_PID_Init:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:3275   .text.TEMP_PID_Init:00000000 TEMP_PID_Init
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:3289   .text.PID:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:3296   .text.PID:00000000 PID
+C:\Users\matil\AppData\Local\Temp\cc5p382g.s:3320   .rodata:00000000 $d
 
 UNDEFINED SYMBOLS
 __aeabi_lmul
