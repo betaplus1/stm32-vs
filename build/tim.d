@@ -1,5 +1,4 @@
-build/stm32g0xx_hal_spi_ex.o: \
- Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_spi_ex.c \
+build/tim.o: Src/tim.c Inc/tim.h Inc/main.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h \
  Inc/stm32g0xx_hal_conf.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h \
@@ -30,7 +29,12 @@ build/stm32g0xx_hal_spi_ex.o: \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h \
- Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h
+ Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h \
+ Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_system.h Inc/usart.h
+
+Inc/tim.h:
+
+Inc/main.h:
 
 Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:
 
@@ -95,3 +99,7 @@ Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h:
 Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h:
 
 Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h:
+
+Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_system.h:
+
+Inc/usart.h:

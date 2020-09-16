@@ -69,15 +69,13 @@ typedef struct state
     int8_t POWER_PID_704_LOCK;
 
     //TEMPERATURE PID:
-
-    uint32_t TEMP_PID_SetPoint;
-    uint32_t TEMP_PID_Output;
-    int64_t TEMP_PID_P;
-    int64_t TEMP_PID_I;
-    int64_t TEMP_PID_T;
-    int64_t TEMP_PID_P_error;
-    int64_t TEMP_PID_I_error;
-    int8_t TEMP_PID_LOCK;
+    int TEMP;
+    int TEMP_PID_SetPoint;
+    int TEMP_PID_P_Error;
+    int TEMP_PID_I_Error;
+    int TEMP_PID_PWM;
+    int TEMP_PID_DIR;
+    int TEMP_PID_INITIALISED;
 
 } state;
 

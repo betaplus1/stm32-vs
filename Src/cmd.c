@@ -273,7 +273,37 @@ void cmd()
     {
         State.cmd = 0;
         HAL_GPIO_WritePin(BOOTLOADER_GPIO_Port, BOOTLOADER_Pin, 1);
-        SERIAL_WRITE("bootloader enabled\n");
+        SERIAL_WRITE("bootloader available in 3s!\n");
+        HAL_Delay(1000);
+        SERIAL_WRITE("bootloader available in 2s!\n");
+        HAL_Delay(1000);
+        SERIAL_WRITE("bootloader available in 1s!\n");
+        HAL_Delay(1000);
+        SERIAL_WRITE("bootloader available until reset\n");
+        HAL_NVIC_SystemReset();
+
+        break;
+    }
+    case cmd_temp_pid:
+    {
+        SERIAL_WRITE("Dir: \t");
+        SERIAL_WRITE("%d\n", State.TEMP_PID_DIR);
+        SERIAL_WRITE("PWM: \t");
+        SERIAL_WRITE("%d\n", State.TEMP_PID_PWM);
+        SERIAL_WRITE("Temp: \t");
+        SERIAL_WRITE("%d.", Temperature() / 1000000);
+        SERIAL_WRITE("%03u *C\n", abs(Temperature() / 1000) % 1000);
+        SERIAL_WRITE("Setpoint: \t");
+        SERIAL_WRITE("%d.", State.TEMP_PID_SetPoint / 1000000);
+        SERIAL_WRITE("%03u *C\n", abs(State.TEMP_PID_SetPoint / 1000) % 1000);
+        SERIAL_WRITE("error P: \t");
+        SERIAL_WRITE("%d\n", State.TEMP_PID_P_Error);
+        SERIAL_WRITE("error I: \t");
+        SERIAL_WRITE("%d\n", State.TEMP_PID_I_Error);
+        if (!State.cmdLoop)
+        {
+            State.cmd = 0;
+        }
         break;
     }
     default:

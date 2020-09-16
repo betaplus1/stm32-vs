@@ -5,6 +5,7 @@
 #include "ADC.h"
 #include "spi.h"
 #include "DAC.h"
+#include "tim.h"
 
 extern state State;
 
@@ -292,12 +293,26 @@ void POWER_PID704()
     DAC_cmd(RF_ATT_704_FINE + DAC_WRITE + State.POWER_PID_704_Output);
 }
 
-void TEMP_PID()
-{
-}
-
 void TEMP_PID_Init()
 {
+    State.TEMP = Temperature();
+    State.TEMP_PID_PWM = 20;
+    State.TEMP_PID_DIR = 0;
+    State.TEMP_PID_SetPoint = 25000;
+}
+
+void TEMP_PID()
+{
+    State.TEMP = Temperature();
+    if (State.TEMP > 40000)
+    {
+        TIM1->CCR1 = 0;
+        return;
+    }
+    State.TEMP_PID_Error = State.TEMP - State.TEMP_PID_SetPoint;
+    State.TEMP_PID_DIR = State.TEMP_PID_Error < 0;
+    HAL_GPIO_WritePin(PEL_DIR_GPIO_Port, PEL_DIR_Pin, State.TEMP_PID_DIR);
+    TIM1->CCR1 = State.TEMP_PID_PWM;
 }
 
 void PID()

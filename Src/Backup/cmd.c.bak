@@ -273,7 +273,25 @@ void cmd()
     {
         State.cmd = 0;
         HAL_GPIO_WritePin(BOOTLOADER_GPIO_Port, BOOTLOADER_Pin, 1);
-        SERIAL_WRITE("bootloader enabled\n");
+        SERIAL_WRITE("bootloader available in 3s!\n");
+        HAL_Delay(1000);
+        SERIAL_WRITE("bootloader available in 2s!\n");
+        HAL_Delay(1000);
+        SERIAL_WRITE("bootloader available in 1s!\n");
+        HAL_Delay(1000);
+        SERIAL_WRITE("bootloader available until reset\n");
+        HAL_NVIC_SystemReset();
+
+        break;
+    }
+    case cmd_temp_pid:
+    {
+        SERIAL_WRITE("%i.", Temperature() / 1000000);             //-66.875 to +52.443 C
+        SERIAL_WRITE("%03u *C\n", (Temperature() / 1000) % 1000); //-66.875 to +52.443 C
+        if (!State.cmdLoop)
+        {
+            State.cmd = 0;
+        }
         break;
     }
     default:

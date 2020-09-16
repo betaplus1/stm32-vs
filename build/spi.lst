@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cceAmpRy.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 1
   30:Src/spi.c     **** /* SPI1 init function */
   31:Src/spi.c     **** void MX_SPI1_Init(void)
   32:Src/spi.c     **** {
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 2
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cceAmpRy.s 			page 2
 
 
   27              		.loc 1 32 1 view -0
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 1
   42:Src/spi.c     ****   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
   72              		.loc 1 42 3 is_stmt 1 view .LVU17
   73              		.loc 1 42 23 is_stmt 0 view .LVU18
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 3
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cceAmpRy.s 			page 3
 
 
   74 002a 0362     		str	r3, [r0, #32]
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 1
  117              		.section	.text.MX_SPI2_Init,"ax",%progbits
  118              		.align	1
  119              		.global	MX_SPI2_Init
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cceAmpRy.s 			page 4
 
 
  120              		.syntax unified
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 1
  164 001e 9200     		lsls	r2, r2, #2
  165 0020 8261     		str	r2, [r0, #24]
   65:Src/spi.c     ****   hspi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_128;
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 5
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cceAmpRy.s 			page 5
 
 
  166              		.loc 1 65 3 is_stmt 1 view .LVU50
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 1
  207 0046 FBE7     		b	.L6
  208              	.L10:
  209              		.align	2
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 6
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cceAmpRy.s 			page 6
 
 
  210              	.L9:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 1
   85:Src/spi.c     ****   /* USER CODE BEGIN SPI1_MspInit 0 */
   86:Src/spi.c     **** 
   87:Src/spi.c     ****   /* USER CODE END SPI1_MspInit 0 */
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 7
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cceAmpRy.s 			page 7
 
 
   88:Src/spi.c     ****     /* SPI1 clock enable */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 1
  135:Src/spi.c     **** 
  136:Src/spi.c     ****     /* SPI2 interrupt Init */
  137:Src/spi.c     ****     HAL_NVIC_SetPriority(SPI2_IRQn, 0, 0);
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 8
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cceAmpRy.s 			page 8
 
 
  138:Src/spi.c     ****     HAL_NVIC_EnableIRQ(SPI2_IRQn);
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 1
  303 0044 029B     		ldr	r3, [sp, #8]
  304              	.LBE3:
   91:Src/spi.c     ****     /**SPI1 GPIO Configuration    
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 9
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cceAmpRy.s 			page 9
 
 
  305              		.loc 1 91 5 view .LVU92
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 1
  114:Src/spi.c     ****   
  344              		.loc 1 114 5 view .LVU108
  345 0070 039A     		ldr	r2, [sp, #12]
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 10
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cceAmpRy.s 			page 10
 
 
  346              	.LBE4:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 1
  382 008e 3C3B     		subs	r3, r3, #60
  383 0090 0993     		str	r3, [sp, #36]
  127:Src/spi.c     **** 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 11
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cceAmpRy.s 			page 11
 
 
  384              		.loc 1 127 5 is_stmt 1 view .LVU127
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 1
  425 00c6 AAE7     		b	.L11
  426              	.L17:
  427              		.align	2
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 12
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cceAmpRy.s 			page 12
 
 
  428              	.L16:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 1
  164:Src/spi.c     **** 
  165:Src/spi.c     ****   /* USER CODE END SPI1_MspDeInit 1 */
  166:Src/spi.c     ****   }
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 13
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cceAmpRy.s 			page 13
 
 
  167:Src/spi.c     ****   else if(spiHandle->Instance==SPI2)
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 1
  492              		.loc 1 173 5 is_stmt 1 view .LVU153
  493 0026 094A     		ldr	r2, .L23+8
  494 0028 D36B     		ldr	r3, [r2, #60]
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 14
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cceAmpRy.s 			page 14
 
 
  495 002a 0B49     		ldr	r1, .L23+20
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 1
  544              		.cfi_def_cfa_offset 32
  193:Src/spi.c     ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
  545              		.loc 1 193 3 view .LVU159
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 15
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cceAmpRy.s 			page 15
 
 
  546              		.loc 1 193 20 is_stmt 0 view .LVU160
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 1
  592 0038 0720     		movs	r0, #7
  593 003a FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
  594              	.LVL26:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 16
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cceAmpRy.s 			page 16
 
 
  202:Src/spi.c     **** }
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 1
  646              		.comm	hspi2,100,4
  647              		.comm	hspi1,100,4
  648              		.text
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 17
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cceAmpRy.s 			page 17
 
 
  649              	.Letext0:
@@ -982,31 +982,31 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 1
  667              		.file 19 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_cortex.h"
  668              		.file 20 "Inc/main.h"
  669              		.file 21 "<built-in>"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s 			page 18
+ARM GAS  C:\Users\matil\AppData\Local\Temp\cceAmpRy.s 			page 18
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 spi.c
-C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s:16     .text.MX_SPI1_Init:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s:24     .text.MX_SPI1_Init:00000000 MX_SPI1_Init
-C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s:112    .text.MX_SPI1_Init:0000004c $d
+C:\Users\matil\AppData\Local\Temp\cceAmpRy.s:16     .text.MX_SPI1_Init:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cceAmpRy.s:24     .text.MX_SPI1_Init:00000000 MX_SPI1_Init
+C:\Users\matil\AppData\Local\Temp\cceAmpRy.s:112    .text.MX_SPI1_Init:0000004c $d
                             *COM*:00000064 hspi1
-C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s:118    .text.MX_SPI2_Init:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s:125    .text.MX_SPI2_Init:00000000 MX_SPI2_Init
-C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s:211    .text.MX_SPI2_Init:00000048 $d
+C:\Users\matil\AppData\Local\Temp\cceAmpRy.s:118    .text.MX_SPI2_Init:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cceAmpRy.s:125    .text.MX_SPI2_Init:00000000 MX_SPI2_Init
+C:\Users\matil\AppData\Local\Temp\cceAmpRy.s:211    .text.MX_SPI2_Init:00000048 $d
                             *COM*:00000064 hspi2
-C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s:217    .text.HAL_SPI_MspInit:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s:224    .text.HAL_SPI_MspInit:00000000 HAL_SPI_MspInit
-C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s:429    .text.HAL_SPI_MspInit:000000c8 $d
-C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s:437    .text.HAL_SPI_MspDeInit:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s:444    .text.HAL_SPI_MspDeInit:00000000 HAL_SPI_MspDeInit
-C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s:515    .text.HAL_SPI_MspDeInit:00000044 $d
-C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s:525    .text.ADC_DATA_READY_EXTI_Init:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s:532    .text.ADC_DATA_READY_EXTI_Init:00000000 ADC_DATA_READY_EXTI_Init
-C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s:602    .text.ADC_DATA_READY_EXTI_Init:00000044 $d
-C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s:609    .text.ADC_DATA_READY_EXTI_deInit:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s:616    .text.ADC_DATA_READY_EXTI_deInit:00000000 ADC_DATA_READY_EXTI_deInit
-C:\Users\matil\AppData\Local\Temp\ccpVhdIC.s:642    .text.ADC_DATA_READY_EXTI_deInit:00000014 $d
+C:\Users\matil\AppData\Local\Temp\cceAmpRy.s:217    .text.HAL_SPI_MspInit:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cceAmpRy.s:224    .text.HAL_SPI_MspInit:00000000 HAL_SPI_MspInit
+C:\Users\matil\AppData\Local\Temp\cceAmpRy.s:429    .text.HAL_SPI_MspInit:000000c8 $d
+C:\Users\matil\AppData\Local\Temp\cceAmpRy.s:437    .text.HAL_SPI_MspDeInit:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cceAmpRy.s:444    .text.HAL_SPI_MspDeInit:00000000 HAL_SPI_MspDeInit
+C:\Users\matil\AppData\Local\Temp\cceAmpRy.s:515    .text.HAL_SPI_MspDeInit:00000044 $d
+C:\Users\matil\AppData\Local\Temp\cceAmpRy.s:525    .text.ADC_DATA_READY_EXTI_Init:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cceAmpRy.s:532    .text.ADC_DATA_READY_EXTI_Init:00000000 ADC_DATA_READY_EXTI_Init
+C:\Users\matil\AppData\Local\Temp\cceAmpRy.s:602    .text.ADC_DATA_READY_EXTI_Init:00000044 $d
+C:\Users\matil\AppData\Local\Temp\cceAmpRy.s:609    .text.ADC_DATA_READY_EXTI_deInit:00000000 $t
+C:\Users\matil\AppData\Local\Temp\cceAmpRy.s:616    .text.ADC_DATA_READY_EXTI_deInit:00000000 ADC_DATA_READY_EXTI_deInit
+C:\Users\matil\AppData\Local\Temp\cceAmpRy.s:642    .text.ADC_DATA_READY_EXTI_deInit:00000014 $d
 
 UNDEFINED SYMBOLS
 HAL_SPI_Init

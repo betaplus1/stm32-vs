@@ -5,6 +5,8 @@
 #include "ADC.h"
 #include "spi.h"
 #include "DAC.h"
+#include "tim.h"
+#include <stdlib.h>
 
 extern state State;
 
@@ -32,7 +34,7 @@ uint64_t Phase_u(uint8_t ADC_CH)
     return (1800000000 - Voltage_nV(ADC_CH)) / 10;
 };
 
-//Returns Temperature in [deg C e-3] measured by adc thermometer channel.
+//Returns Temperature in [deg C e-6] measured by adc thermometer channel.
 int64_t Temperature()
 {
     return (-45000000 - 175000000 / 8 + 17500 * Voltage(ADC_T_CH) / 264);
@@ -292,18 +294,59 @@ void POWER_PID704()
     DAC_cmd(RF_ATT_704_FINE + DAC_WRITE + State.POWER_PID_704_Output);
 }
 
-void TEMP_PID()
-{
-}
-
 void TEMP_PID_Init()
 {
+    State.TEMP = Temperature();
+    State.TEMP_PID_PWM = 0;
+    State.TEMP_PID_DIR = 1;
+    State.TEMP_PID_P_Error = 0;
+    State.TEMP_PID_I_Error = 0;
+    State.TEMP_PID_SetPoint = Temperature() - 2000000;
+    State.TEMP_PID_INITIALISED = 1;
+}
+
+void TEMP_PID()
+{
+    if (!State.TEMP_PID_INITIALISED)
+    {
+        TEMP_PID_Init();
+    }
+
+    State.TEMP = Temperature();
+    if (State.TEMP > 40000000)
+    {
+        TIM1->CCR1 = 0;
+        return;
+    }
+
+    State.TEMP_PID_P_Error = (State.TEMP - State.TEMP_PID_SetPoint) / 1000;
+    State.TEMP_PID_I_Error = State.TEMP_PID_I_Error + State.TEMP_PID_P_Error;
+
+    int sat = -(State.TEMP_PID_P_Error / 50 + State.TEMP_PID_I_Error / 200);
+
+    State.TEMP_PID_DIR = sat > 0;
+
+    sat = abs(sat);
+
+    if (sat > 100)
+    {
+        sat = 100;
+    }
+    else if (sat < 0)
+    {
+        sat = 0;
+    }
+    State.TEMP_PID_PWM = sat;
+    TIM1->CCR1 = State.TEMP_PID_PWM;
+
+    HAL_GPIO_WritePin(PEL_DIR_GPIO_Port, PEL_DIR_Pin, State.TEMP_PID_DIR);
 }
 
 void PID()
 {
-    PID352();
-    PID704();
+    TEMP_PID();
+    // PID352();
+    // PID704();
     // POWER_PID352();
     // POWER_PID704();
 }

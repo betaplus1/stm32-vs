@@ -131,6 +131,10 @@ void Error_Handler(void);
 #define ADC_nSYNC_GPIO_Port GPIOA
 #define DAC_nLOAD_Pin GPIO_PIN_0
 #define DAC_nLOAD_GPIO_Port GPIOB
+#define PEL_DIR_Pin GPIO_PIN_1
+#define PEL_DIR_GPIO_Port GPIOB
+#define PEL_PWM_Pin GPIO_PIN_8
+#define PEL_PWM_GPIO_Port GPIOA
 #define DAC_nRESET_Pin GPIO_PIN_6
 #define DAC_nRESET_GPIO_Port GPIOC
 #define BOOTLOADER_Pin GPIO_PIN_14

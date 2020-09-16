@@ -53,6 +53,10 @@ void UART_PARSE(uint8_t buffer[UART_RX_BUFFER_LENGTH])
     {
         State.cmd = cmd_bootloader_enable;
     }
+    else if (strcmp(buffer, "temp pid") == 0)
+    {
+        State.cmd = cmd_temp_pid;
+    }
     else
     {
         State.cmd = cmd_undefined;

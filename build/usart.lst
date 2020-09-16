@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 1
   30:Src/usart.c   **** UART_HandleTypeDef huart2;
   31:Src/usart.c   **** DMA_HandleTypeDef hdma_usart2_rx;
   32:Src/usart.c   **** 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 2
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s 			page 2
 
 
   33:Src/usart.c   **** /* USART2 init function */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 1
   67              		.loc 1 46 30 is_stmt 0 view .LVU18
   68 001e 0362     		str	r3, [r0, #32]
   47:Src/usart.c   ****   huart2.Init.ClockPrescaler = UART_PRESCALER_DIV1;
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 3
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s 			page 3
 
 
   69              		.loc 1 47 3 is_stmt 1 view .LVU19
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 1
  109 004a 0028     		cmp	r0, #0
  110 004c 09D1     		bne	.L9
  111              	.L1:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s 			page 4
 
 
   62:Src/usart.c   ****   {
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 1
  156              		.cfi_startproc
  157              		@ args = 0, pretend = 0, frame = 32
  158              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 5
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s 			page 5
 
 
  159              		.loc 1 69 1 is_stmt 0 view .LVU42
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 1
   97:Src/usart.c   ****     hdma_usart2_rx.Init.PeriphInc = DMA_PINC_DISABLE;
   98:Src/usart.c   ****     hdma_usart2_rx.Init.MemInc = DMA_MINC_ENABLE;
   99:Src/usart.c   ****     hdma_usart2_rx.Init.PeriphDataAlignment = DMA_PDATAALIGN_BYTE;
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 6
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s 			page 6
 
 
  100:Src/usart.c   ****     hdma_usart2_rx.Init.MemDataAlignment = DMA_MDATAALIGN_BYTE;
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 1
  214              		.loc 1 80 5 view .LVU57
   80:Src/usart.c   ****     /**USART2 GPIO Configuration    
  215              		.loc 1 80 5 view .LVU58
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 7
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s 			page 7
 
 
  216 0030 596B     		ldr	r1, [r3, #52]
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 1
  254 005a 1548     		ldr	r0, .L17+8
  255 005c 154B     		ldr	r3, .L17+12
  256 005e 0360     		str	r3, [r0]
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 8
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s 			page 8
 
 
   95:Src/usart.c   ****     hdma_usart2_rx.Init.Direction = DMA_PERIPH_TO_MEMORY;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 1
  108:Src/usart.c   **** 
  292              		.loc 1 108 5 is_stmt 1 view .LVU94
  108:Src/usart.c   **** 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 9
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s 			page 9
 
 
  293              		.loc 1 108 5 view .LVU95
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 1
  343              	.LVL18:
  344              	.LFB286:
  118:Src/usart.c   **** 
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 10
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s 			page 10
 
 
  119:Src/usart.c   **** void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 1
  371              		.loc 1 128 5 is_stmt 1 view .LVU109
  372 000e 094A     		ldr	r2, .L22+4
  373 0010 D36B     		ldr	r3, [r2, #60]
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 11
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s 			page 11
 
 
  374 0012 0949     		ldr	r1, .L22+8
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 1
  149:Src/usart.c   **** void CHECK_IF_END()
  150:Src/usart.c   **** {
  421              		.loc 1 150 1 is_stmt 1 view -0
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 12
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s 			page 12
 
 
  422              		.cfi_startproc
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 1
  163:Src/usart.c   ****         State.UART_RX_BUFF[i] = '\0';
  463              		.loc 1 163 9 discriminator 2 view .LVU127
  464              		.loc 1 163 31 is_stmt 0 discriminator 2 view .LVU128
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 13
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s 			page 13
 
 
  465 001e 344B     		ldr	r3, .L36
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 1
  153:Src/usart.c   ****   {
  495              		.loc 1 153 3 is_stmt 0 discriminator 1 view .LVU139
  496 003a 3F2C     		cmp	r4, #63
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 14
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s 			page 14
 
 
  497 003c 20DC     		bgt	.L33
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 1
  537              	.LVL34:
  176:Src/usart.c   ****       break;
  538              		.loc 1 176 7 view .LVU154
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 15
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s 			page 15
 
 
  176:Src/usart.c   ****       break;
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 1
  587 00b0 02A8     		add	r0, sp, #8
  588 00b2 FFF7FEFF 		bl	memset
  589              	.LVL40:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 16
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s 			page 16
 
 
  590              		.loc 1 183 5 view .LVU165
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 1
  641 0100 08000000 		.word	.LC8
  642              		.cfi_endproc
  643              	.LFE287:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 17
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s 			page 17
 
 
  645              		.section	.text.IDLE_UART_IRQHandler,"ax",%progbits
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 1
  685 0010 D206     		lsls	r2, r2, #27
  686 0012 FBD5     		bpl	.L38
  194:Src/usart.c   ****       CHECK_IF_END();
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 18
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s 			page 18
 
 
  687              		.loc 1 194 7 is_stmt 1 view .LVU183
@@ -1063,29 +1063,29 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 1
  726              		.file 21 "Inc/main.h"
  727              		.file 22 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h"
  728              		.file 23 "<built-in>"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s 			page 19
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s 			page 19
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usart.c
-C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s:16     .text.MX_USART2_UART_Init:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s:24     .text.MX_USART2_UART_Init:00000000 MX_USART2_UART_Init
-C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s:139    .text.MX_USART2_UART_Init:00000068 $d
+C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s:16     .text.MX_USART2_UART_Init:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s:24     .text.MX_USART2_UART_Init:00000000 MX_USART2_UART_Init
+C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s:139    .text.MX_USART2_UART_Init:00000068 $d
                             *COM*:0000008c huart2
-C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s:145    .text.HAL_UART_MspInit:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s:152    .text.HAL_UART_MspInit:00000000 HAL_UART_MspInit
-C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s:326    .text.HAL_UART_MspInit:000000a8 $d
+C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s:145    .text.HAL_UART_MspInit:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s:152    .text.HAL_UART_MspInit:00000000 HAL_UART_MspInit
+C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s:326    .text.HAL_UART_MspInit:000000a8 $d
                             *COM*:0000005c hdma_usart2_rx
-C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s:335    .text.HAL_UART_MspDeInit:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s:342    .text.HAL_UART_MspDeInit:00000000 HAL_UART_MspDeInit
-C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s:398    .text.HAL_UART_MspDeInit:00000030 $d
-C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s:405    .rodata.CHECK_IF_END.str1.4:00000000 $d
-C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s:412    .text.CHECK_IF_END:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s:419    .text.CHECK_IF_END:00000000 CHECK_IF_END
-C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s:637    .text.CHECK_IF_END:000000f0 $d
-C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s:646    .text.IDLE_UART_IRQHandler:00000000 $t
-C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s:653    .text.IDLE_UART_IRQHandler:00000000 IDLE_UART_IRQHandler
-C:\Users\matil\AppData\Local\Temp\ccLQSHzx.s:698    .text.IDLE_UART_IRQHandler:00000020 $d
+C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s:335    .text.HAL_UART_MspDeInit:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s:342    .text.HAL_UART_MspDeInit:00000000 HAL_UART_MspDeInit
+C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s:398    .text.HAL_UART_MspDeInit:00000030 $d
+C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s:405    .rodata.CHECK_IF_END.str1.4:00000000 $d
+C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s:412    .text.CHECK_IF_END:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s:419    .text.CHECK_IF_END:00000000 CHECK_IF_END
+C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s:637    .text.CHECK_IF_END:000000f0 $d
+C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s:646    .text.IDLE_UART_IRQHandler:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s:653    .text.IDLE_UART_IRQHandler:00000000 IDLE_UART_IRQHandler
+C:\Users\matil\AppData\Local\Temp\ccOjbyVI.s:698    .text.IDLE_UART_IRQHandler:00000020 $d
 
 UNDEFINED SYMBOLS
 HAL_UART_Init
