@@ -33,7 +33,7 @@ build/main.o: Src/main.c Inc/main.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_system.h Inc/usart.h \
  Inc/main.h Inc/dma.h Inc/lptim.h Inc/spi.h Inc/tim.h Inc/usart.h \
  Inc/gpio.h Inc/ADC.h Inc/gpio.h Inc/DAC.h Inc/state.h Inc/usart_utils.h \
- Inc/cmd.h Inc/Filter.h
+ Inc/cmd.h Inc/Filter.h Inc/PID704.h Inc/values.h Inc/TEMP_PID.h
 
 Inc/main.h:
 
@@ -132,3 +132,9 @@ Inc/usart_utils.h:
 Inc/cmd.h:
 
 Inc/Filter.h:
+
+Inc/PID704.h:
+
+Inc/values.h:
+
+Inc/TEMP_PID.h:

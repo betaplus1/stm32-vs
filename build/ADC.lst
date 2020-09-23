@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 1
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 1
   13:Src/ADC.c     ****     uint8_t txbuffer[1] = {data};
   44              		.loc 1 13 5 is_stmt 1 view .LVU2
   45              		.loc 1 13 13 is_stmt 0 view .LVU3
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 2
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s 			page 2
 
 
   46 0004 03A9     		add	r1, sp, #12
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 1
   94              		.loc 1 21 1 is_stmt 1 view -0
   95              		.cfi_startproc
   96              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 3
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s 			page 3
 
 
   97              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 1
  142              		.cfi_endproc
  143              	.LFE285:
  145              		.section	.text.ADC_SPI_READ_16,"ax",%progbits
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 4
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s 			page 4
 
 
  146              		.align	1
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 1
  193              		@ sp needed
  194 0022 10BD     		pop	{r4, pc}
  195              	.L9:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 5
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s 			page 5
 
 
  196              		.align	2
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 1
  246 0022 6378     		ldrb	r3, [r4, #1]
  247              		.loc 1 43 82 view .LVU44
  248 0024 1B02     		lsls	r3, r3, #8
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 6
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s 			page 6
 
 
  249              		.loc 1 43 55 view .LVU45
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 1
  298 000e 5B42     		rsbs	r3, r3, #0
  299 0010 0122     		movs	r2, #1
  300 0012 01A9     		add	r1, sp, #4
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 7
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s 			page 7
 
 
  301 0014 0448     		ldr	r0, .L14+4
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 1
   58:Src/ADC.c     ****     ADC_SPI_WRITE_8(command);
  350              		.loc 1 58 5 is_stmt 1 view .LVU63
  351 0006 FFF7FEFF 		bl	ADC_SPI_WRITE_8
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 8
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s 			page 8
 
 
  352              	.LVL17:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 1
  399 0016 FFF7FEFF 		bl	ADC_SPI_READ_16
  400              	.LVL22:
  401 001a 0400     		movs	r4, r0
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 9
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s 			page 9
 
 
  402              	.LVL23:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 1
  449              		.loc 1 76 23 is_stmt 0 view .LVU81
  450 000a FFF7FEFF 		bl	ADC_SPI_READ_24
  451              	.LVL28:
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 10
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s 			page 10
 
 
   77:Src/ADC.c     ****     return answer;
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 1
   90:Src/ADC.c     ****     }
   91:Src/ADC.c     ****     else
   92:Src/ADC.c     ****     {
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 11
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s 			page 11
 
 
   93:Src/ADC.c     ****         ADC_CMD(ADC_READ, ADC_STATUS_REG);
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 1
  539              	.LVL35:
  103:Src/ADC.c     ****     ADC_DATA_READY_EXTI_Init();
  540              		.loc 1 103 5 view .LVU104
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 12
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s 			page 12
 
 
  541 0050 FFF7FEFF 		bl	ADC_DATA_READY_EXTI_Init
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 1
  588              		.align	1
  589              		.global	ADC_config
  590              		.syntax unified
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 13
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s 			page 13
 
 
  591              		.code	16
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 1
  113:Src/ADC.c     ****         ADC_SPI_WRITE_16(ADC_CH_EN + ADC_AINPOS(i) + ADC_AINNEG);
  638              		.loc 1 113 9 is_stmt 1 discriminator 3 view .LVU125
  639              		.loc 1 113 38 is_stmt 0 discriminator 3 view .LVU126
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 14
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s 			page 14
 
 
  640 0020 6801     		lsls	r0, r5, #5
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 1
  121:Src/ADC.c     ****     HAL_SPI_MspDeInit(&hspi2);
  683              		.loc 1 121 5 is_stmt 1 view .LVU139
  684 0058 0248     		ldr	r0, .L33
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 15
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s 			page 15
 
 
  685 005a FFF7FEFF 		bl	HAL_SPI_MspDeInit
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 1
  734 000c 0192     		str	r2, [sp, #4]
  129:Src/ADC.c     ****     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
  735              		.loc 1 129 5 is_stmt 1 view .LVU148
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 16
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s 			page 16
 
 
  736              		.loc 1 129 26 is_stmt 0 view .LVU149
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 1
  135:Src/ADC.c     ****     for (int i = 0; i < 200; i++)
  780              		.loc 1 135 31 is_stmt 0 discriminator 3 view .LVU164
  781 0042 0134     		adds	r4, r4, #1
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 17
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s 			page 17
 
 
  782              	.LVL59:
@@ -1018,48 +1018,48 @@ ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 1
  829              		.file 17 "Inc/usart.h"
  830              		.file 18 "Inc/state.h"
  831              		.file 19 "Inc/spi.h"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 18
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s 			page 18
 
 
  832              		.file 20 "Inc/ADC.h"
-ARM GAS  C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s 			page 19
+ARM GAS  C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s 			page 19
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 ADC.c
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:16     .rodata.ADC_SPI_WRITE_8.str1.4:00000000 $d
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:20     .text.ADC_SPI_WRITE_8:00000000 $t
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:28     .text.ADC_SPI_WRITE_8:00000000 ADC_SPI_WRITE_8
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:78     .text.ADC_SPI_WRITE_8:00000028 $d
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:84     .text.ADC_SPI_WRITE_16:00000000 $t
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:91     .text.ADC_SPI_WRITE_16:00000000 ADC_SPI_WRITE_16
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:141    .text.ADC_SPI_WRITE_16:00000028 $d
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:146    .text.ADC_SPI_READ_16:00000000 $t
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:153    .text.ADC_SPI_READ_16:00000000 ADC_SPI_READ_16
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:198    .text.ADC_SPI_READ_16:00000024 $d
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:203    .text.ADC_SPI_READ_24:00000000 $t
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:210    .text.ADC_SPI_READ_24:00000000 ADC_SPI_READ_24
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:264    .text.ADC_SPI_READ_24:00000030 $d
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:270    .text.ADC_SPI_READ_8:00000000 $t
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:277    .text.ADC_SPI_READ_8:00000000 ADC_SPI_READ_8
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:317    .text.ADC_SPI_READ_8:00000024 $d
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:323    .text.ADC_CMD:00000000 $t
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:330    .text.ADC_CMD:00000000 ADC_CMD
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:364    .text.ADC_ID:00000000 $t
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:371    .text.ADC_ID:00000000 ADC_ID
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:420    .text.ADC_ID:0000002c $d
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:425    .text.ADC_DATA:00000000 $t
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:432    .text.ADC_DATA:00000000 ADC_DATA
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:460    .text.ADC_update:00000000 $t
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:467    .text.ADC_update:00000000 ADC_update
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:582    .text.ADC_update:00000088 $d
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:588    .text.ADC_config:00000000 $t
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:595    .text.ADC_config:00000000 ADC_config
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:698    .text.ADC_config:00000064 $d
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:705    .text.ADC_reset:00000000 $t
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:712    .text.ADC_reset:00000000 ADC_reset
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:801    .text.ADC_reset:00000050 $d
-C:\Users\matil\AppData\Local\Temp\cc2MOyw1.s:807    .rodata:00000000 $d
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:16     .rodata.ADC_SPI_WRITE_8.str1.4:00000000 $d
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:20     .text.ADC_SPI_WRITE_8:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:28     .text.ADC_SPI_WRITE_8:00000000 ADC_SPI_WRITE_8
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:78     .text.ADC_SPI_WRITE_8:00000028 $d
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:84     .text.ADC_SPI_WRITE_16:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:91     .text.ADC_SPI_WRITE_16:00000000 ADC_SPI_WRITE_16
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:141    .text.ADC_SPI_WRITE_16:00000028 $d
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:146    .text.ADC_SPI_READ_16:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:153    .text.ADC_SPI_READ_16:00000000 ADC_SPI_READ_16
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:198    .text.ADC_SPI_READ_16:00000024 $d
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:203    .text.ADC_SPI_READ_24:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:210    .text.ADC_SPI_READ_24:00000000 ADC_SPI_READ_24
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:264    .text.ADC_SPI_READ_24:00000030 $d
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:270    .text.ADC_SPI_READ_8:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:277    .text.ADC_SPI_READ_8:00000000 ADC_SPI_READ_8
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:317    .text.ADC_SPI_READ_8:00000024 $d
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:323    .text.ADC_CMD:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:330    .text.ADC_CMD:00000000 ADC_CMD
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:364    .text.ADC_ID:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:371    .text.ADC_ID:00000000 ADC_ID
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:420    .text.ADC_ID:0000002c $d
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:425    .text.ADC_DATA:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:432    .text.ADC_DATA:00000000 ADC_DATA
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:460    .text.ADC_update:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:467    .text.ADC_update:00000000 ADC_update
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:582    .text.ADC_update:00000088 $d
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:588    .text.ADC_config:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:595    .text.ADC_config:00000000 ADC_config
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:698    .text.ADC_config:00000064 $d
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:705    .text.ADC_reset:00000000 $t
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:712    .text.ADC_reset:00000000 ADC_reset
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:801    .text.ADC_reset:00000050 $d
+C:\Users\matil\AppData\Local\Temp\ccFgpXLl.s:807    .rodata:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_SPI_TransmitReceive

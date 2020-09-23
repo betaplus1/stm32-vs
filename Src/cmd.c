@@ -6,6 +6,7 @@
 #include "spi.h"
 #include "DAC.h"
 #include "PID.h"
+#include "values.h"
 #include <stdlib.h>
 extern state State;
 
@@ -224,41 +225,37 @@ void cmd()
             State.cmd = 0;
         }
         SERIAL_WRITE("\n")
-
-        SERIAL_WRITE("PD1+PD2 SETPOINT: %li\n", State.PD1_PD2_SetPoint * 1000);
-        SERIAL_WRITE("PID 704 Output: %li\n", State.PID_704_Output);
-        SERIAL_WRITE("PID_704_P_error %i\n", State.PID_704_P_error);
-
-        SERIAL_WRITE("PD1 Phase:\t\t");
+        SERIAL_WRITE("PD1 SLOPE: %i\n", State.PD1_Slope);
+        SERIAL_WRITE("PD2 SLOPE: %i\n", State.PD2_Slope);
+        SERIAL_WRITE("PS704 OFFSET: %d\n", State.PD1_PD2_Offset);
+        SERIAL_WRITE("PD1+PD2 SETPOINT: %d\n", State.PD1_PD2_SetPoint);
+        SERIAL_WRITE("PID 704 Output_Coarse: %d\n", State.PID_704_Output_Coarse);
+        SERIAL_WRITE("PID 704 Output_Fine: %d\n", State.PID_704_Output_Fine);
+        SERIAL_WRITE("PID_704_P_error %d\n", State.PID_704_P_error);
+        SERIAL_WRITE("PID_704_I_error %d\n", State.PID_704_I_error);
+        SERIAL_WRITE("PD1 Phase:\t");
         SERIAL_WRITE("%3i.", Phase_u(ADC_PD1_Phase_CH) / 1000000);
-        SERIAL_WRITE("%06li deg\t\t\n", Phase_u(ADC_PD1_Phase_CH) % 1000000);
+        SERIAL_WRITE("%06li deg\n", Phase_u(ADC_PD1_Phase_CH) % 1000000);
 
-        SERIAL_WRITE("PD2 Phase:\t\t");
+        SERIAL_WRITE("PD2 Phase:\t");
         SERIAL_WRITE("%3i.", Phase_u(ADC_PD2_Phase_CH) / 1000000);
         SERIAL_WRITE("%03li deg\t\t\n\n", Phase_u(ADC_PD2_Phase_CH) % 1000000);
 
-        SERIAL_WRITE("PD3+PD4 SETPOINT: %li\n", State.PD3_PD4_SetPoint * 1000);
-        SERIAL_WRITE("PID 352 Output: %li\n", State.PID_352_Output);
-        SERIAL_WRITE("PID_352_P_error %i\n", State.PID_352_P_error);
-
-        SERIAL_WRITE("PD3 Phase:\t\t");
+        SERIAL_WRITE("PD3 SLOPE: %i\n", State.PD3_Slope);
+        SERIAL_WRITE("PD4 SLOPE: %i\n", State.PD4_Slope);
+        SERIAL_WRITE("PS352 OFFSET: %d\n", State.PD3_PD4_Offset);
+        SERIAL_WRITE("PD3+PD4 SETPOINT: %d\n", State.PD3_PD4_SetPoint);
+        SERIAL_WRITE("PID 352 Output_Coarse: %d\n", State.PID_352_Output_Coarse);
+        SERIAL_WRITE("PID 352 Output_Fine: %d\n", State.PID_352_Output_Fine);
+        SERIAL_WRITE("PID_352_P_error %d\n", State.PID_352_P_error);
+        SERIAL_WRITE("PID_352_I_error %d\n", State.PID_352_I_error);
+        SERIAL_WRITE("PD3 Phase:\t");
         SERIAL_WRITE("%3i.", Phase_u(ADC_PD3_Phase_CH) / 1000000);
-        SERIAL_WRITE("%06li deg\t\t\n", Phase_u(ADC_PD3_Phase_CH) % 1000000);
+        SERIAL_WRITE("%06li deg\n", Phase_u(ADC_PD3_Phase_CH) % 1000000);
 
-        SERIAL_WRITE("PD4 Phase:\t\t");
+        SERIAL_WRITE("PD4 Phase:\t");
         SERIAL_WRITE("%3i.", Phase_u(ADC_PD4_Phase_CH) / 1000000);
-        SERIAL_WRITE("%06li deg\t\t\n\n", Phase_u(ADC_PD4_Phase_CH) % 1000000);
-
-        SERIAL_WRITE("POWER 352 SETPOINT: 0x%06x\n", State.POWER_PID_352_SetPoint);
-        SERIAL_WRITE("POWER 352 Output: 0x%04x\n", State.POWER_PID_352_Output);
-        SERIAL_WRITE("POWER 352 error: %i\n", State.ADC_ValuesFiltered[RF_POWER_AMP352] - State.POWER_PID_352_SetPoint);
-        SERIAL_WRITE("POWER 352: 0x%06x\n\n", State.ADC_ValuesFiltered[RF_POWER_AMP352]);
-
-        SERIAL_WRITE("POWER 704 SETPOINT: 0x%06x\n", State.POWER_PID_704_SetPoint);
-        SERIAL_WRITE("POWER 704 Output: 0x%04x\n", State.POWER_PID_704_Output);
-        SERIAL_WRITE("POWER 704 error: %i\n", State.ADC_ValuesFiltered[RF_POWER_AMP704] - State.POWER_PID_704_SetPoint);
-        SERIAL_WRITE("POWER 704: 0x%06x\n", State.ADC_ValuesFiltered[RF_POWER_AMP704]);
-
+        SERIAL_WRITE("%03li deg\t\t\n\n", Phase_u(ADC_PD4_Phase_CH) % 1000000);
         SERIAL_WRITE("\n")
 
         break;
@@ -272,16 +269,8 @@ void cmd()
     case cmd_bootloader_enable:
     {
         State.cmd = 0;
-        HAL_GPIO_WritePin(BOOTLOADER_GPIO_Port, BOOTLOADER_Pin, 1);
-        SERIAL_WRITE("bootloader available in 3s!\n");
-        HAL_Delay(1000);
-        SERIAL_WRITE("bootloader available in 2s!\n");
-        HAL_Delay(1000);
-        SERIAL_WRITE("bootloader available in 1s!\n");
-        HAL_Delay(1000);
         SERIAL_WRITE("bootloader available until reset\n");
         HAL_NVIC_SystemReset();
-
         break;
     }
     case cmd_temp_pid:
@@ -300,6 +289,14 @@ void cmd()
         SERIAL_WRITE("%d\n", State.TEMP_PID_P_Error);
         SERIAL_WRITE("error I: \t");
         SERIAL_WRITE("%d\n", State.TEMP_PID_I_Error);
+        if (State.TEMP_PID_LOCK)
+        {
+            SERIAL_WRITE_GREEN("Temperature locked\n");
+        }
+        else
+        {
+            SERIAL_WRITE_RED("Temperature unlocked\n");
+        }
         if (!State.cmdLoop)
         {
             State.cmd = 0;

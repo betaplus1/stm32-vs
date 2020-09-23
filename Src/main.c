@@ -36,6 +36,9 @@
 #include "usart_utils.h"
 #include "cmd.h"
 #include "Filter.h"
+#include "PID704.h"
+#include "values.h"
+#include "TEMP_PID.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -123,6 +126,8 @@ int main(void)
   DAC_reset();
 
   //IRQ PRIORITY OVERRIDES:
+  /* EXTI interrupt init*/
+  HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);
   HAL_InitTick(0);
   HAL_NVIC_SetPriority(EXTI4_15_IRQn, 1, 0);
   HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 2, 0);
@@ -141,10 +146,19 @@ int main(void)
   DAC_cmd(RF_ATT_704_OFFSET + DAC_WRITE + 0xffff);
 
   ADC_update();
-  PID_Init();
+
+  TEMP_PID_Init();
   // Calib();
+  // Calib704();
+  // Calib352();
+
+  // PID_Init();
+  // PID704_Init();
+  // PID352_Init();
+
+  State.cmd = cmd_rf_pid;
   State.cmdLoop = 1;
-  State.cmd = cmd_temp_pid;
+
   uint32_t counter = 0;
   while (1)
   {
@@ -161,7 +175,9 @@ int main(void)
 
       if (counter % FilterLength == 0 && State.ADC_Filter_Valid)
       {
-        PID();
+        // PID704();
+        // PID352();
+        TEMP_PID();
       }
     };
     /* USER CODE END WHILE */

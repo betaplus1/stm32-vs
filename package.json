@@ -9,6 +9,7 @@
         "Src"
       ],
       "clearBuffer": true,
+      "delay": 1000,
       "extensions": [
         "c",
         "h"

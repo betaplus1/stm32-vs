@@ -1,352 +1,262 @@
-#include "usart.h"
-#include <stdio.h>
-#include "state.h"
-#include "usart_utils.h"
-#include "ADC.h"
-#include "spi.h"
-#include "DAC.h"
-#include "tim.h"
-#include <stdlib.h>
+// #include "usart.h"
+// #include <stdio.h>
+// #include "state.h"
+// #include "usart_utils.h"
+// #include "ADC.h"
+// #include "spi.h"
+// #include "DAC.h"
+// #include "tim.h"
+// #include <stdlib.h>
+// #include "values.h"
 
-extern state State;
+// extern state State;
 
-//Returns voltage in [nV] measured by adc channel ADC_CH.
-uint64_t Voltage_nV(uint8_t ADC_CH)
-{
-    return (((uint64_t)State.ADC_ValuesFiltered[ADC_CH] * 1800000000) / 0xffffff);
-};
+// //Determines optimal setpoints of Phase shifters, detectors slopes
+// void Calib352()
+// {
+//     SERIAL_WRITE("[CALIBRATION] ...")
+//     DAC_cmd(RF_PS_352_OFFSET + DAC_WRITE + 0);
+//     DAC_cmd(RF_PS_352_FINE + DAC_WRITE + 0x7fff);
+//     State.PD3_PD4_MSE = 16200000000;
+//     uint64_t prevPhase3 = 0;
+//     uint64_t prevPhase4 = 0;
+//     for (uint32_t PS = 0; PS < 0xffff; PS += 0x0700)
+//     {
+//         DAC_cmd(RF_PS_352_OFFSET + DAC_WRITE + PS);
+//         HAL_Delay(100);
+//         uint64_t Phase3 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD3_Phase_CH] * 1800000) / 0xffffff)) / 10;
+//         uint64_t Phase4 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD4_Phase_CH] * 1800000) / 0xffffff)) / 10;
 
-//Returns voltage in [uV] measured by adc channel ADC_CH.
-uint64_t Voltage(uint8_t ADC_CH)
-{
-    return (((uint64_t)State.ADC_ValuesFiltered[ADC_CH] * 1800000) / 0xffffff);
-};
+//         int64_t error3 = 90000 - Phase3;
+//         int64_t error4 = 90000 - Phase4;
+//         int64_t MSE352 = error3 * error3 + error4 * error4;
 
-//Returns Phase absolute value in [deg e-3] measured by adc channel ADC_CH.
-uint64_t Phase(uint8_t ADC_CH)
-{
-    return (1800000000 - Voltage_nV(ADC_CH)) / 10000;
-};
+//         if (MSE352 < State.PD3_PD4_MSE)
+//         {
+//             // SERIAL_WRITE("Phase3: %lu\n", Phase3);
+//             // SERIAL_WRITE("Phase4: %lu\n", Phase4);
+//             // SERIAL_WRITE("error3: %li\n", error3);
+//             // SERIAL_WRITE("error3: %li\n", error4);
+//             // SERIAL_WRITE("MSE352: %li\n\n", MSE352);
 
-//Returns Phase absolute value in [deg e-6] measured by adc channel ADC_CH.
-uint64_t Phase_u(uint8_t ADC_CH)
-{
-    return (1800000000 - Voltage_nV(ADC_CH)) / 10;
-};
+//             State.PD3_PD4_Offset = PS;
+//             State.PD3_PD4_MSE = MSE352;
+//             State.PD3_Slope = prevPhase3 < Phase3 ? 1 : -1;
+//             State.PD4_Slope = prevPhase4 < Phase4 ? 1 : -1;
+//             State.PD3_PD4_SetPoint = State.PD3_Slope * Phase3 + State.PD4_Slope * Phase4;
+//         }
+//         prevPhase3 = Phase3;
+//         prevPhase4 = Phase4;
+//     }
+//     SERIAL_WRITE("\b\b\bPD3+PD4 SETPOINT: %li\n", State.PD3_PD4_SetPoint);
+//     SERIAL_WRITE("[CALIBRATION] PD3 SLOPE: %i\n", State.PD3_Slope);
+//     SERIAL_WRITE("[CALIBRATION] PD4 SLOPE: %i\n", State.PD4_Slope);
+//     SERIAL_WRITE("[CALIBRATION] PS352 OFFSET: %u\n", State.PD3_PD4_Offset);
+//     DAC_cmd(RF_PS_352_OFFSET + DAC_WRITE + State.PD3_PD4_Offset);
+// }
 
-//Returns Temperature in [deg C e-6] measured by adc thermometer channel.
-int64_t Temperature()
-{
-    return (-45000000 - 175000000 / 8 + 17500 * Voltage(ADC_T_CH) / 264);
-};
+// //Determines optimal setpoints of Phase shifters, detectors slopes
+// void Calib704()
+// {
+//     SERIAL_WRITE("[CALIBRATION] ...")
+//     DAC_cmd(RF_PS_704_OFFSET + DAC_WRITE + 0);
+//     DAC_cmd(RF_PS_704_FINE + DAC_WRITE + 0x7fff);
+//     State.PD1_PD2_MSE = 16200000000;
+//     uint64_t prevPhase1 = 0;
+//     uint64_t prevPhase2 = 0;
+//     for (uint32_t PS = 0; PS < 0xffff; PS += 0x0700)
+//     {
+//         DAC_cmd(RF_PS_704_OFFSET + DAC_WRITE + PS);
+//         HAL_Delay(100);
+//         uint64_t Phase1 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD1_Phase_CH] * 1800000) / 0xffffff)) / 10;
+//         uint64_t Phase2 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD2_Phase_CH] * 1800000) / 0xffffff)) / 10;
 
-//Returns Relative Power in [dB e-3] measured by adc channel ADC_CH.
-int64_t Relative_Power(uint8_t ADC_CH)
-{
-    return ((Voltage(ADC_CH) / 30) - 30000);
-};
-//Returns Power in [dBm  e-3] measured by adc channel ADC_CH.
-int64_t RMS_Power(uint8_t ADC_CH)
-{
-    const int64_t cal[16] = {0, 0, 0, 0, 399874, 0, 0, 0, 0, 448454, 427524, 0, 0, 0, 0, 408285}; //offset values
-    return (int64_t)(Voltage(ADC_CH) - cal[ADC_CH]) / 20 - 65000;
-};
+//         int64_t error1 = 90000 - Phase1;
+//         int64_t error2 = 90000 - Phase2;
+//         int64_t MSE704 = error1 * error1 + error2 * error2;
 
-//Determines optimal setpoints of Phase shifters, detectors slopes
-void Calib352()
-{
-    SERIAL_WRITE("[CALIBRATION] ...")
-    DAC_cmd(RF_PS_352_OFFSET + DAC_WRITE + 0);
-    DAC_cmd(RF_PS_352_FINE + DAC_WRITE + 0x7fff);
-    State.PD3_PD4_MSE = 16200000000;
-    uint64_t prevPhase3 = 0;
-    uint64_t prevPhase4 = 0;
-    for (uint32_t PS = 0; PS < 0xffff; PS += 0x0700)
-    {
-        DAC_cmd(RF_PS_352_OFFSET + DAC_WRITE + PS);
-        HAL_Delay(100);
-        uint64_t Phase3 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD3_Phase_CH] * 1800000) / 0xffffff)) / 10;
-        uint64_t Phase4 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD4_Phase_CH] * 1800000) / 0xffffff)) / 10;
+//         if (MSE704 < State.PD1_PD2_MSE)
+//         {
+//             // SERIAL_WRITE("Phase1: %lu\n", Phase1);
+//             // SERIAL_WRITE("Phase2: %lu\n", Phase2);
+//             // SERIAL_WRITE("error1: %li\n", error1);
+//             // SERIAL_WRITE("error2: %li\n", error2);
+//             // SERIAL_WRITE("MSE704: %li\n\n", MSE704);
+//             State.PD1_PD2_Offset = PS;
+//             State.PD1_PD2_MSE = MSE704;
+//             State.PD1_Slope = prevPhase1 < Phase1 ? 1 : -1;
+//             State.PD2_Slope = prevPhase2 < Phase2 ? 1 : -1;
+//             State.PD1_PD2_SetPoint = State.PD1_Slope * Phase1 + State.PD2_Slope * Phase2;
+//         }
+//         prevPhase1 = Phase1;
+//         prevPhase2 = Phase2;
+//     }
+//     SERIAL_WRITE("\b\b\bPD1+PD2 SETPOINT: %li\n", State.PD1_PD2_SetPoint);
+//     SERIAL_WRITE("[CALIBRATION] PD1 SLOPE: %i\n", State.PD1_Slope);
+//     SERIAL_WRITE("[CALIBRATION] PD2 SLOPE: %i\n", State.PD2_Slope);
+//     SERIAL_WRITE("[CALIBRATION] PS704 OFFSET: %u\n", State.PD1_PD2_Offset);
+//     DAC_cmd(RF_PS_704_OFFSET + DAC_WRITE + State.PD1_PD2_Offset);
+// }
 
-        int64_t error3 = 90000 - Phase3;
-        int64_t error4 = 90000 - Phase4;
-        int64_t MSE352 = error3 * error3 + error4 * error4;
+// //Determines optimal setpoints of attenuators.
+// void POWER_Calib352()
+// {
+//     SERIAL_WRITE("[CALIBRATION] ...")
+//     DAC_cmd(RF_ATT_352_FINE + DAC_WRITE + 0x7fff);
+//     DAC_cmd(RF_ATT_352_OFFSET + DAC_WRITE + 0x7fff);
+//     HAL_Delay(100);
+//     State.POWER_PID_352_SetPoint = State.ADC_Values[RF_POWER_AMP352];
+//     SERIAL_WRITE("\b\b\bPOWER 352 SETPOINT: 0x%06x\n", State.POWER_PID_352_SetPoint);
+// }
+// //Determines optimal setpoints of attenuators.
+// void POWER_Calib704()
+// {
+//     SERIAL_WRITE("[CALIBRATION] ...")
+//     DAC_cmd(RF_ATT_704_FINE + DAC_WRITE + 0x7fff);
+//     DAC_cmd(RF_ATT_704_OFFSET + DAC_WRITE + 0x7fff);
+//     HAL_Delay(100);
+//     State.POWER_PID_704_SetPoint = State.ADC_Values[RF_POWER_AMP704];
+//     SERIAL_WRITE("\b\b\bPOWER 704 SETPOINT: 0x%06x\n", State.POWER_PID_704_SetPoint);
+// }
+// //Determines optimal setpoints of Phase shifters, detectors slopes, attenuators.
+// void Calib()
+// {
+//     SERIAL_WRITE(SERIAL_YELLOW);
+//     Calib352();
+//     Calib704();
+//     // POWER_Calib352();
+//     // POWER_Calib704();
+//     SERIAL_WRITE(SERIAL_COLOR_RESET);
+// }
 
-        if (MSE352 < State.PD3_PD4_MSE)
-        {
-            // SERIAL_WRITE("Phase3: %lu\n", Phase3);
-            // SERIAL_WRITE("Phase4: %lu\n", Phase4);
-            // SERIAL_WRITE("error3: %li\n", error3);
-            // SERIAL_WRITE("error3: %li\n", error4);
-            // SERIAL_WRITE("MSE352: %li\n\n", MSE352);
+// void PID_Init()
+// {
+//     State.PID_352_Output = 0x7fff;
+//     State.PID_352_P = -1;
+//     State.PID_352_I = -1;
+//     State.PID_352_T = 1000000;
+//     State.PID_352_P_error = 0;
+//     State.PID_352_I_error = 0;
 
-            State.PD3_PD4_Offset = PS;
-            State.PD3_PD4_MSE = MSE352;
-            State.PD3_Slope = prevPhase3 < Phase3 ? 1 : -1;
-            State.PD4_Slope = prevPhase4 < Phase4 ? 1 : -1;
-            State.PD3_PD4_SetPoint = State.PD3_Slope * Phase3 + State.PD4_Slope * Phase4;
-        }
-        prevPhase3 = Phase3;
-        prevPhase4 = Phase4;
-    }
-    SERIAL_WRITE("\b\b\bPD3+PD4 SETPOINT: %li\n", State.PD3_PD4_SetPoint);
-    SERIAL_WRITE("[CALIBRATION] PD3 SLOPE: %i\n", State.PD3_Slope);
-    SERIAL_WRITE("[CALIBRATION] PD4 SLOPE: %i\n", State.PD4_Slope);
-    SERIAL_WRITE("[CALIBRATION] PS352 OFFSET: %u\n", State.PD3_PD4_Offset);
-    DAC_cmd(RF_PS_352_OFFSET + DAC_WRITE + State.PD3_PD4_Offset);
-}
+//     State.PID_704_Output = 0x7fff;
+//     State.PID_704_P = -1;
+//     State.PID_704_I = -1;
+//     State.PID_704_T = 1000000;
+//     State.PID_704_P_error = 0;
+//     State.PID_704_I_error = 0;
 
-//Determines optimal setpoints of Phase shifters, detectors slopes
-void Calib704()
-{
-    SERIAL_WRITE("[CALIBRATION] ...")
-    DAC_cmd(RF_PS_704_OFFSET + DAC_WRITE + 0);
-    DAC_cmd(RF_PS_704_FINE + DAC_WRITE + 0x7fff);
-    State.PD1_PD2_MSE = 16200000000;
-    uint64_t prevPhase1 = 0;
-    uint64_t prevPhase2 = 0;
-    for (uint32_t PS = 0; PS < 0xffff; PS += 0x0700)
-    {
-        DAC_cmd(RF_PS_704_OFFSET + DAC_WRITE + PS);
-        HAL_Delay(100);
-        uint64_t Phase1 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD1_Phase_CH] * 1800000) / 0xffffff)) / 10;
-        uint64_t Phase2 = (1800000 - (((uint64_t)State.ADC_Values[ADC_PD2_Phase_CH] * 1800000) / 0xffffff)) / 10;
+//     State.POWER_PID_352_Output = 0x7fff;
+//     State.POWER_PID_352_P_error = 0;
+//     State.POWER_PID_352_I_error = 0;
 
-        int64_t error1 = 90000 - Phase1;
-        int64_t error2 = 90000 - Phase2;
-        int64_t MSE704 = error1 * error1 + error2 * error2;
+//     State.POWER_PID_704_Output = 0x7fff;
+//     State.POWER_PID_704_P_error = 0;
+//     State.POWER_PID_704_I_error = 0;
+// }
+// // void PID352()
+// // {
+// //     int64_t prevErr = State.PID_352_P_error;
+// //     State.PID_352_P_error = (State.PD3_Slope * Phase_u(ADC_PD3_Phase_CH)) + (State.PD4_Slope * Phase_u(ADC_PD4_Phase_CH)) - (State.PD3_PD4_SetPoint * 1000);
+// //     State.PID_352_I_error = (State.PID_352_I_error + State.PID_352_P_error) / State.PID_352_T;
+// //     State.PID_352_Output = State.PID_352_Output + (State.PID_352_P * State.PID_352_P_error) / 1000 + (State.PID_352_I * State.PID_352_I_error);
+// //     if (State.PID_352_Output >= 0xffff)
+// //     {
+// //         State.PID_352_Output = 0xffff;
+// //     }
 
-        if (MSE704 < State.PD1_PD2_MSE)
-        {
-            // SERIAL_WRITE("Phase1: %lu\n", Phase1);
-            // SERIAL_WRITE("Phase2: %lu\n", Phase2);
-            // SERIAL_WRITE("error1: %li\n", error1);
-            // SERIAL_WRITE("error2: %li\n", error2);
-            // SERIAL_WRITE("MSE704: %li\n\n", MSE704);
-            State.PD1_PD2_Offset = PS;
-            State.PD1_PD2_MSE = MSE704;
-            State.PD1_Slope = prevPhase1 < Phase1 ? 1 : -1;
-            State.PD2_Slope = prevPhase2 < Phase2 ? 1 : -1;
-            State.PD1_PD2_SetPoint = State.PD1_Slope * Phase1 + State.PD2_Slope * Phase2;
-        }
-        prevPhase1 = Phase1;
-        prevPhase2 = Phase2;
-    }
-    SERIAL_WRITE("\b\b\bPD1+PD2 SETPOINT: %li\n", State.PD1_PD2_SetPoint);
-    SERIAL_WRITE("[CALIBRATION] PD1 SLOPE: %i\n", State.PD1_Slope);
-    SERIAL_WRITE("[CALIBRATION] PD2 SLOPE: %i\n", State.PD2_Slope);
-    SERIAL_WRITE("[CALIBRATION] PS704 OFFSET: %u\n", State.PD1_PD2_Offset);
-    DAC_cmd(RF_PS_704_OFFSET + DAC_WRITE + State.PD1_PD2_Offset);
-}
+// //     DAC_cmd(RF_PS_352_FINE + DAC_WRITE + State.PID_352_Output);
 
-//Determines optimal setpoints of attenuators.
-void POWER_Calib352()
-{
-    SERIAL_WRITE("[CALIBRATION] ...")
-    DAC_cmd(RF_ATT_352_FINE + DAC_WRITE + 0x7fff);
-    DAC_cmd(RF_ATT_352_OFFSET + DAC_WRITE + 0x7fff);
-    HAL_Delay(100);
-    State.POWER_PID_352_SetPoint = State.ADC_Values[RF_POWER_AMP352];
-    SERIAL_WRITE("\b\b\bPOWER 352 SETPOINT: 0x%06x\n", State.POWER_PID_352_SetPoint);
-}
-//Determines optimal setpoints of attenuators.
-void POWER_Calib704()
-{
-    SERIAL_WRITE("[CALIBRATION] ...")
-    DAC_cmd(RF_ATT_704_FINE + DAC_WRITE + 0x7fff);
-    DAC_cmd(RF_ATT_704_OFFSET + DAC_WRITE + 0x7fff);
-    HAL_Delay(100);
-    State.POWER_PID_704_SetPoint = State.ADC_Values[RF_POWER_AMP704];
-    SERIAL_WRITE("\b\b\bPOWER 704 SETPOINT: 0x%06x\n", State.POWER_PID_704_SetPoint);
-}
-//Determines optimal setpoints of Phase shifters, detectors slopes, attenuators.
-void Calib()
-{
-    SERIAL_WRITE(SERIAL_YELLOW);
-    Calib352();
-    Calib704();
-    // POWER_Calib352();
-    // POWER_Calib704();
-    SERIAL_WRITE(SERIAL_COLOR_RESET);
-}
+// //     if (State.PID_352_P_error < 50000 && prevErr < 50000 && State.PID_352_LOCK == 1)
+// //     {
+// //         return;
+// //     }
+// //     else if (State.PID_352_P_error < 50000 && prevErr < 50000 && State.PID_352_LOCK == 0)
+// //     {
+// //         State.PID_352_LOCK = 1;
+// //         SERIAL_WRITE_GREEN("[PID_PHASE_352] LOCKED\n");
+// //     }
+// //     else if ((State.PID_352_P_error >= 50000 || prevErr >= 50000) && State.PID_352_LOCK == 1)
+// //     {
+// //         State.PID_352_LOCK = 0;
+// //         SERIAL_WRITE_RED("[PID_PHASE_352] UNLOCKED!!!\n");
+// //     }
+// //     else
+// //     {
+// //         State.PID_352_LOCK = 0;
+// //     }
+// // }
+// void PID704()
+// {
+//     int64_t prevErr = State.PID_704_P_error;
 
-void PID_Init()
-{
-    State.PID_352_Output = 0x7fff;
-    State.PID_352_P = -1;
-    State.PID_352_I = -1;
-    State.PID_352_T = 1000000;
-    State.PID_352_P_error = 0;
-    State.PID_352_I_error = 0;
+//     State.PID_704_P_error = (State.PD1_Slope * Phase_u(ADC_PD1_Phase_CH)) + (State.PD2_Slope * Phase_u(ADC_PD2_Phase_CH)) - (State.PD1_PD2_SetPoint * 1000);
+//     State.PID_704_I_error = (State.PID_704_I_error + State.PID_704_P_error) / State.PID_704_T;
+//     State.PID_704_Output = State.PID_704_Output + (State.PID_704_P * State.PID_704_P_error) / 1000 + (State.PID_704_I * State.PID_704_I_error);
 
-    State.PID_704_Output = 0x7fff;
-    State.PID_704_P = -1;
-    State.PID_704_I = -1;
-    State.PID_704_T = 1000000;
-    State.PID_704_P_error = 0;
-    State.PID_704_I_error = 0;
+//     if (State.PID_704_Output >= 0xffff)
+//     {
+//         State.PID_704_Output = 0xffff;
+//     }
+//     DAC_cmd(RF_PS_704_FINE + DAC_WRITE + State.PID_704_Output);
 
-    State.POWER_PID_352_Output = 0x7fff;
-    State.POWER_PID_352_P_error = 0;
-    State.POWER_PID_352_I_error = 0;
+//     if (State.PID_704_P_error < 50000 && prevErr < 50000 && State.PID_704_LOCK == 1)
+//     {
+//         return;
+//     }
+//     else if (State.PID_704_P_error < 50000 && prevErr < 50000 && State.PID_704_LOCK == 0)
+//     {
+//         State.PID_704_LOCK = 1;
+//         SERIAL_WRITE_GREEN("[PID_PHASE_704] LOCKED\n");
+//     }
+//     else if ((State.PID_704_P_error >= 50000 || prevErr >= 50000) && State.PID_704_LOCK == 1)
+//     {
+//         State.PID_704_LOCK = 0;
+//         SERIAL_WRITE_RED("[PID_PHASE_704] UNLOCKED!!!\n");
+//     }
+//     else
+//     {
+//         State.PID_704_LOCK = 0;
+//     }
+// }
 
-    State.POWER_PID_704_Output = 0x7fff;
-    State.POWER_PID_704_P_error = 0;
-    State.POWER_PID_704_I_error = 0;
-}
-void PID352()
-{
-    int64_t prevErr = State.PID_352_P_error;
-    State.PID_352_P_error = (State.PD3_Slope * Phase_u(ADC_PD3_Phase_CH)) + (State.PD4_Slope * Phase_u(ADC_PD4_Phase_CH)) - (State.PD3_PD4_SetPoint * 1000);
-    State.PID_352_I_error = (State.PID_352_I_error + State.PID_352_P_error) / State.PID_352_T;
-    State.PID_352_Output = State.PID_352_Output + (State.PID_352_P * State.PID_352_P_error) / 1000 + (State.PID_352_I * State.PID_352_I_error);
-    if (State.PID_352_Output >= 0xffff)
-    {
-        State.PID_352_Output = 0xffff;
-    }
+// void POWER_PID352()
+// {
+//     State.POWER_PID_352_P_error = (int64_t)State.ADC_ValuesFiltered[RF_POWER_AMP352] - (int64_t)State.POWER_PID_352_SetPoint;
+//     int64_t output = (int64_t)State.POWER_PID_352_Output + (State.POWER_PID_352_P_error / 1000);
+//     if (output > 0xffff)
+//     {
+//         output = 0xffff;
+//     }
+//     else if (output < 0)
+//     {
+//         output = 0;
+//     }
+//     State.POWER_PID_352_Output = (uint32_t)output;
+//     DAC_cmd(RF_ATT_352_OFFSET + DAC_WRITE + State.POWER_PID_352_Output);
+//     DAC_cmd(RF_ATT_352_FINE + DAC_WRITE + State.POWER_PID_352_Output);
+// }
 
-    DAC_cmd(RF_PS_352_FINE + DAC_WRITE + State.PID_352_Output);
+// void POWER_PID704()
+// {
+//     State.POWER_PID_704_P_error = (int64_t)State.ADC_ValuesFiltered[RF_POWER_AMP704] - (int64_t)State.POWER_PID_704_SetPoint;
+//     int64_t output = (int64_t)State.POWER_PID_704_Output + (State.POWER_PID_704_P_error / 1000);
+//     if (output > 0xffff)
+//     {
+//         output = 0xffff;
+//     }
+//     else if (output < 0)
+//     {
+//         output = 0;
+//     }
+//     State.POWER_PID_704_Output = (uint32_t)output;
+//     DAC_cmd(RF_ATT_704_OFFSET + DAC_WRITE + State.POWER_PID_704_Output);
+//     DAC_cmd(RF_ATT_704_FINE + DAC_WRITE + State.POWER_PID_704_Output);
+// }
 
-    if (State.PID_352_P_error < 50000 && prevErr < 50000 && State.PID_352_LOCK == 1)
-    {
-        return;
-    }
-    else if (State.PID_352_P_error < 50000 && prevErr < 50000 && State.PID_352_LOCK == 0)
-    {
-        State.PID_352_LOCK = 1;
-        SERIAL_WRITE_GREEN("[PID_PHASE_352] LOCKED\n");
-    }
-    else if ((State.PID_352_P_error >= 50000 || prevErr >= 50000) && State.PID_352_LOCK == 1)
-    {
-        State.PID_352_LOCK = 0;
-        SERIAL_WRITE_RED("[PID_PHASE_352] UNLOCKED!!!\n");
-    }
-    else
-    {
-        State.PID_352_LOCK = 0;
-    }
-}
-void PID704()
-{
-    int64_t prevErr = State.PID_704_P_error;
-
-    State.PID_704_P_error = (State.PD1_Slope * Phase_u(ADC_PD1_Phase_CH)) + (State.PD2_Slope * Phase_u(ADC_PD2_Phase_CH)) - (State.PD1_PD2_SetPoint * 1000);
-    State.PID_704_I_error = (State.PID_704_I_error + State.PID_704_P_error) / State.PID_704_T;
-    State.PID_704_Output = State.PID_704_Output + (State.PID_704_P * State.PID_704_P_error) / 1000 + (State.PID_704_I * State.PID_704_I_error);
-
-    if (State.PID_704_Output >= 0xffff)
-    {
-        State.PID_704_Output = 0xffff;
-    }
-    DAC_cmd(RF_PS_704_FINE + DAC_WRITE + State.PID_704_Output);
-
-    if (State.PID_704_P_error < 50000 && prevErr < 50000 && State.PID_704_LOCK == 1)
-    {
-        return;
-    }
-    else if (State.PID_704_P_error < 50000 && prevErr < 50000 && State.PID_704_LOCK == 0)
-    {
-        State.PID_704_LOCK = 1;
-        SERIAL_WRITE_GREEN("[PID_PHASE_704] LOCKED\n");
-    }
-    else if ((State.PID_704_P_error >= 50000 || prevErr >= 50000) && State.PID_704_LOCK == 1)
-    {
-        State.PID_704_LOCK = 0;
-        SERIAL_WRITE_RED("[PID_PHASE_704] UNLOCKED!!!\n");
-    }
-    else
-    {
-        State.PID_704_LOCK = 0;
-    }
-}
-
-void POWER_PID352()
-{
-    State.POWER_PID_352_P_error = (int64_t)State.ADC_ValuesFiltered[RF_POWER_AMP352] - (int64_t)State.POWER_PID_352_SetPoint;
-    int64_t output = (int64_t)State.POWER_PID_352_Output + (State.POWER_PID_352_P_error / 1000);
-    if (output > 0xffff)
-    {
-        output = 0xffff;
-    }
-    else if (output < 0)
-    {
-        output = 0;
-    }
-    State.POWER_PID_352_Output = (uint32_t)output;
-    DAC_cmd(RF_ATT_352_OFFSET + DAC_WRITE + State.POWER_PID_352_Output);
-    DAC_cmd(RF_ATT_352_FINE + DAC_WRITE + State.POWER_PID_352_Output);
-}
-
-void POWER_PID704()
-{
-    State.POWER_PID_704_P_error = (int64_t)State.ADC_ValuesFiltered[RF_POWER_AMP704] - (int64_t)State.POWER_PID_704_SetPoint;
-    int64_t output = (int64_t)State.POWER_PID_704_Output + (State.POWER_PID_704_P_error / 1000);
-    if (output > 0xffff)
-    {
-        output = 0xffff;
-    }
-    else if (output < 0)
-    {
-        output = 0;
-    }
-    State.POWER_PID_704_Output = (uint32_t)output;
-    DAC_cmd(RF_ATT_704_OFFSET + DAC_WRITE + State.POWER_PID_704_Output);
-    DAC_cmd(RF_ATT_704_FINE + DAC_WRITE + State.POWER_PID_704_Output);
-}
-
-void TEMP_PID_Init()
-{
-    State.TEMP = Temperature();
-    State.TEMP_PID_PWM = 0;
-    State.TEMP_PID_DIR = 1;
-    State.TEMP_PID_P_Error = 0;
-    State.TEMP_PID_I_Error = 0;
-    State.TEMP_PID_SetPoint = Temperature() - 2000000;
-    State.TEMP_PID_INITIALISED = 1;
-}
-
-void TEMP_PID()
-{
-    if (!State.TEMP_PID_INITIALISED)
-    {
-        TEMP_PID_Init();
-    }
-
-    State.TEMP = Temperature();
-    if (State.TEMP > 40000000)
-    {
-        TIM1->CCR1 = 0;
-        return;
-    }
-
-    State.TEMP_PID_P_Error = (State.TEMP - State.TEMP_PID_SetPoint) / 1000;
-    State.TEMP_PID_I_Error = State.TEMP_PID_I_Error + State.TEMP_PID_P_Error;
-
-    int sat = -(State.TEMP_PID_P_Error / 50 + State.TEMP_PID_I_Error / 200);
-
-    State.TEMP_PID_DIR = sat > 0;
-
-    sat = abs(sat);
-
-    if (sat > 100)
-    {
-        sat = 100;
-    }
-    else if (sat < 0)
-    {
-        sat = 0;
-    }
-    State.TEMP_PID_PWM = sat;
-    TIM1->CCR1 = State.TEMP_PID_PWM;
-
-    HAL_GPIO_WritePin(PEL_DIR_GPIO_Port, PEL_DIR_Pin, State.TEMP_PID_DIR);
-}
-
-void PID()
-{
-    TEMP_PID();
-    // PID352();
-    // PID704();
-    // POWER_PID352();
-    // POWER_PID704();
-}
+// void PID()
+// {
+//     // PID352();
+//     // PID704();
+//     // POWER_PID352();
+//     // POWER_PID704();
+// }

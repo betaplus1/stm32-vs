@@ -32,7 +32,7 @@ build/cmd.o: Src/cmd.c Inc/usart.h Inc/main.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_system.h Inc/usart.h \
  Inc/state.h Inc/usart_utils.h Inc/ADC.h Inc/gpio.h Inc/spi.h Inc/DAC.h \
- Inc/PID.h
+ Inc/PID.h Inc/values.h
 
 Inc/usart.h:
 
@@ -119,3 +119,5 @@ Inc/spi.h:
 Inc/DAC.h:
 
 Inc/PID.h:
+
+Inc/values.h:

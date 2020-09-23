@@ -125,6 +125,8 @@ void Error_Handler(void);
 #define UART_TX_GPIO_Port GPIOA
 #define UART_RX_Pin GPIO_PIN_3
 #define UART_RX_GPIO_Port GPIOA
+#define LED_STATUS_Pin GPIO_PIN_5
+#define LED_STATUS_GPIO_Port GPIOA
 #define ADC_nError_Pin GPIO_PIN_6
 #define ADC_nError_GPIO_Port GPIOA
 #define ADC_nSYNC_Pin GPIO_PIN_7
@@ -137,8 +139,6 @@ void Error_Handler(void);
 #define PEL_PWM_GPIO_Port GPIOA
 #define DAC_nRESET_Pin GPIO_PIN_6
 #define DAC_nRESET_GPIO_Port GPIOC
-#define BOOTLOADER_Pin GPIO_PIN_14
-#define BOOTLOADER_GPIO_Port GPIOA
 #define DAC_nSYNC_Pin GPIO_PIN_15
 #define DAC_nSYNC_GPIO_Port GPIOA
 #define DAC_SCK_Pin GPIO_PIN_3

@@ -68,7 +68,7 @@ extern UART_HandleTypeDef huart2;
 /* USER CODE END EV */
 
 /******************************************************************************/
-/*           Cortex-M0+ Processor Interruption and Exception Handlers          */ 
+/*           Cortex-M0+ Processor Interruption and Exception Handlers          */
 /******************************************************************************/
 /**
   * @brief This function handles Non maskable interrupt.
@@ -173,21 +173,6 @@ void RCC_IRQHandler(void)
 }
 
 /**
-  * @brief This function handles EXTI line 4 to 15 interrupts.
-  */
-void EXTI4_15_IRQHandler(void)
-{
-  /* USER CODE BEGIN EXTI4_15_IRQn 0 */
-  HAL_GPIO_EXTI_IRQHandler(ADC_MISO_Pin);
-
-  /* USER CODE END EXTI4_15_IRQn 0 */
-  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_11);
-  /* USER CODE BEGIN EXTI4_15_IRQn 1 */
-
-  /* USER CODE END EXTI4_15_IRQn 1 */
-}
-
-/**
   * @brief This function handles DMA1 channel 1 interrupt.
   */
 void DMA1_Channel1_IRQHandler(void)
@@ -209,7 +194,25 @@ void TIM6_DAC_LPTIM1_IRQHandler(void)
   /* USER CODE BEGIN TIM6_DAC_LPTIM1_IRQn 0 */
   State.uptime++;
   State.timer_1s_flag = 1;
-  HAL_GPIO_TogglePin(LED_TEMP_GPIO_Port, LED_TEMP_Pin);
+
+  if (State.TEMP_PID_LOCK)
+  {
+    HAL_GPIO_WritePin(LED_TEMP_GPIO_Port, LED_TEMP_Pin, 1);
+  }
+  else
+  {
+    HAL_GPIO_TogglePin(LED_TEMP_GPIO_Port, LED_TEMP_Pin);
+  }
+
+  if (State.TEMP_PID_LOCK) //&& phase && power lock
+  {
+    HAL_GPIO_WritePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin, 1);
+  }
+  else
+  {
+    HAL_GPIO_TogglePin(LED_STATUS_GPIO_Port, LED_STATUS_Pin);
+  }
+
   /* USER CODE END TIM6_DAC_LPTIM1_IRQn 0 */
   HAL_LPTIM_IRQHandler(&hlptim1);
   /* USER CODE BEGIN TIM6_DAC_LPTIM1_IRQn 1 */
@@ -245,6 +248,21 @@ void USART2_IRQHandler(void)
 }
 
 /* USER CODE BEGIN 1 */
+/**
+  * @brief This function handles EXTI line 4 to 15 interrupts.
+  */
+void EXTI4_15_IRQHandler(void)
+{
+  /* USER CODE BEGIN EXTI4_15_IRQn 0 */
+  HAL_GPIO_EXTI_IRQHandler(ADC_MISO_Pin);
+
+  /* USER CODE END EXTI4_15_IRQn 0 */
+  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_11);
+  /* USER CODE BEGIN EXTI4_15_IRQn 1 */
+
+  /* USER CODE END EXTI4_15_IRQn 1 */
+}
+
 void HAL_GPIO_EXTI_Falling_Callback(uint16_t GPIO_Pin)
 {
   if (GPIO_Pin == ADC_MISO_Pin)
