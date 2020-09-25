@@ -67,7 +67,7 @@ void PID704()
     State.PID_704_P_error = (State.PD1_Slope * Phase_u(ADC_PD1_Phase_CH)) + (State.PD2_Slope * Phase_u(ADC_PD2_Phase_CH)) - (State.PD1_PD2_SetPoint * 1000);
     State.PID_704_I_error = State.PID_704_I_error + State.PID_704_P_error;
 
-    int sat = State.PID_704_Output_Fine - State.PID_704_P_error / 100;
+    int sat = State.PID_704_Output_Fine - State.PID_704_P_error / 5000;
 
     sat = abs(sat);
 
@@ -83,7 +83,7 @@ void PID704()
     State.PID_704_Output_Fine = sat;
     DAC_cmd(RF_PS_704_FINE + DAC_WRITE + State.PID_704_Output_Fine);
 
-    sat = State.PID_704_Output_Coarse - State.PID_704_I_error / 50000;
+    sat = State.PID_704_Output_Coarse - State.PID_704_I_error / 1000000;
 
     if (sat > 0xffff)
     {

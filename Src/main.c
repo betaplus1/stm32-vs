@@ -148,17 +148,14 @@ int main(void)
   ADC_update();
 
   TEMP_PID_Init();
-  // Calib();
-  // Calib704();
-  // Calib352();
+  Calib704();
+  Calib352();
 
-  // PID_Init();
-  // PID704_Init();
-  // PID352_Init();
+  PID704_Init();
+  PID352_Init();
 
   State.cmd = cmd_rf_pid;
   State.cmdLoop = 1;
-
   uint32_t counter = 0;
   while (1)
   {
@@ -175,8 +172,8 @@ int main(void)
 
       if (counter % FilterLength == 0 && State.ADC_Filter_Valid)
       {
-        // PID704();
-        // PID352();
+        PID704();
+        PID352();
         TEMP_PID();
       }
     };
